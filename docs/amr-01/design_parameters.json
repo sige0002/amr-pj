@@ -1,0 +1,184 @@
+{
+  "version": "0.2.1",
+  "updated": "2026-09-20",
+  "status": "concept_only_not_manufacturing_release",
+  "requirements": {
+    "cargo_limit_kg": 2.0,
+    "base_target_kg": 5.0,
+    "base_upper_budget_kg": 6.0,
+    "arm_system_upper_budget_kg": 2.0,
+    "gross_mass_calculation_limit_kg": 10.0,
+    "arm_object_lifting_limit_kg": null,
+    "note_ja": "運搬物2kgはアーム自重とは別。把持物と荷台の物体の合計が2kg以下。アームが持ち上げられる物体質量は未確定。"
+  },
+  "geometry": {
+    "body_length_mm": 350.0,
+    "body_width_mm": 280.0,
+    "body_height_target_range_mm": [
+      160.0,
+      180.0
+    ],
+    "frame_length_mm": 320.0,
+    "frame_width_mm": 200.0,
+    "extrusion_size_mm": 20.0,
+    "drive_axle_x_mm": 90.0,
+    "drive_track_mm": 240.0,
+    "wheel_diameter_mm": 100.0,
+    "wheel_width_mm": 25.0,
+    "caster_swivel_xy_mm": [
+      -110.0,
+      0.0
+    ],
+    "caster_diameter_mm": 50.0,
+    "caster_trail_mm": 15.0,
+    "caster_assembly_sweep_radius_mm": 45.0,
+    "caster_orientation_samples": 1440,
+    "arm_mount_xyz_mm": [
+      60.0,
+      0.0,
+      170.0
+    ],
+    "arm_plate_LWT_mm": [
+      140.0,
+      180.0,
+      4.0
+    ],
+    "minimum_ground_clearance_target_mm": 25.0,
+    "note_ja": "車輪・ガード込みの外形。部品実寸、配線、電池脱着、アーム収納外形のCAD検証は未実施。"
+  },
+  "drive": {
+    "initial_speed_m_s": 0.15,
+    "later_speed_limit_m_s": 0.3,
+    "initial_yaw_rate_rad_s": 0.3,
+    "later_yaw_rate_limit_rad_s": 0.6,
+    "acceleration_m_s2": 0.2,
+    "slope_for_sizing_deg": 5.0,
+    "rolling_resistance_coefficient_assumed": 0.03,
+    "torque_margin_factor": 1.5,
+    "continuous_wheel_torque_target_range_Nm": [
+      0.8,
+      1.0
+    ],
+    "loaded_wheel_speed_target_rpm": 80.0,
+    "note_ja": "0.8〜1N·mは車輪側の連続トルク目標。最低使用電圧で約80rpm時の同時成立を確認。拘束トルクではない。坂・段差は未許可。"
+  },
+  "frame": {
+    "reference_extrusion": "MISUMI HFS5-2020",
+    "reference_mass_kg_per_m": 0.5,
+    "reference_second_moment_mm4": 7420.0,
+    "elastic_modulus_assumed_N_mm2": 69000.0,
+    "cuts_mm_count": [
+      [
+        320.0,
+        2
+      ],
+      [
+        160.0,
+        4
+      ],
+      [
+        100.0,
+        4
+      ]
+    ],
+    "beam_example_span_mm": 160.0,
+    "beam_example_total_force_N": 100.0,
+    "beam_example_load_sharing_count": 2,
+    "note_ja": "切断長は質量見積り用の仮構成。発注指示ではない。100Nは梁たわみ例で、アーム取付部の認定荷重ではない。"
+  },
+  "mass_budget_target_kg": {
+    "frame_plates_fasteners": 1.5,
+    "complete_drive_and_support_and_holding": 1.15,
+    "battery_and_adapter": 0.75,
+    "power_conversion_protection_emergency_stop": 0.4,
+    "onboard_compute_sensors_cooling": 0.5,
+    "wiring_covers_handles": 0.4,
+    "contingency": 0.3
+  },
+  "stopping_example": {
+    "latency_s": 0.2,
+    "deceleration_m_s2": 0.5,
+    "note_ja": "水平床での理想化された制御停止例。非常停止性能の保証ではない。"
+  },
+  "runtime_example": {
+    "voltage_V": 18.0,
+    "capacity_Ah": 6.0,
+    "usable_fraction_assumed": 0.8,
+    "average_power_examples_W": [
+      30.0,
+      50.0
+    ],
+    "note_ja": "18V6Ahも消費電力も仮定。電池の採用、重量予算適合、実測稼働時間、アーム込み稼働時間を意味しない。"
+  },
+  "reach_example": {
+    "shoulder_xyz_mm": [
+      60.0,
+      0.0,
+      240.0
+    ],
+    "tcp_xyz_mm": [
+      280.0,
+      0.0,
+      30.0
+    ],
+    "note_ja": "参考距離のみ。実アームの逆運動学、手先姿勢、床と車体との干渉は未検証。"
+  },
+  "stability_example": {
+    "base_mass_cases_kg": [
+      5.0,
+      6.0
+    ],
+    "base_cg_xyz_mm": [
+      0.0,
+      0.0,
+      85.0
+    ],
+    "cargo_kg_xyz_mm": [
+      2.0,
+      -10.0,
+      0.0,
+      190.0
+    ],
+    "arm_system_without_gripper_kg": 1.7,
+    "gripper_kg": 0.3,
+    "arm_folded_cg_xyz_mm": [
+      40.0,
+      0.0,
+      200.0
+    ],
+    "gripper_folded_cg_xyz_mm": [
+      20.0,
+      0.0,
+      180.0
+    ],
+    "arm_forward_cg_xyz_mm": [
+      160.0,
+      0.0,
+      240.0
+    ],
+    "gripper_forward_cg_xyz_mm": [
+      280.0,
+      0.0,
+      40.0
+    ],
+    "object_cg_xyz_mm": [
+      280.0,
+      0.0,
+      40.0
+    ],
+    "object_mass_sensitivity_cases_kg": [
+      0.0,
+      0.5,
+      2.0
+    ],
+    "note_ja": "実測ではない仮の質量・重心分布。アーム系1.7kgには取付・専用電装等を含めて仮集約。0.5kgも2kgも把持許可値ではない。"
+  },
+  "calculation_baseline_version": "0.2",
+  "design_policy": {
+    "internal_structure_first": true,
+    "cosmetic_exterior_required": false,
+    "functional_guards_required": true,
+    "concept_image_is_manufacturing_drawing": false,
+    "note_ja": "外面をよくする必要はない。化粧外装は不要。内部構造、支持、配置、配線、放熱、保守を優先し、機能上の保護ガードは残す。寸法・質量・計算条件はv0.2から変更なし。"
+  }
+}

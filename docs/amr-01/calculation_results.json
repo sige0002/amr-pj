@@ -1,0 +1,521 @@
+{
+  "version": "0.2.1",
+  "status": "concept_only_not_manufacturing_release",
+  "note_ja": "数値は設計仮定からの再計算。部品選定・CAD・実機検証・安全認証ではない。",
+  "envelope_LW_mm": [
+    350.0,
+    280.0
+  ],
+  "mass_budget_sum_kg": 5.0,
+  "max_config_mass_at_target_kg": 9.0,
+  "max_config_mass_at_upper_budget_kg": 10.0,
+  "turning": {
+    "body_only_pivot_swept_diameter_mm": 599.4163828258284,
+    "body_only_pivot_swept_radius_mm": 299.7081914129142,
+    "area_ratio_to_v0p1": 0.44871794871794873,
+    "note_ja": "車軸中心で理想的にその場旋回。アームのはみ出し・誤差・安全離隔を含まない。"
+  },
+  "envelope_checks_simplified": {
+    "wheel_rectangles_inside": true,
+    "caster_assembly_swept_circle_inside": true,
+    "note_ja": "車輪の矩形とキャスター包絡円だけの概算。干渉なしの保証ではない。"
+  },
+  "drive": {
+    "gross_mass_kg": 10.0,
+    "force_N": 13.481779360029273,
+    "wheel_torque_Nm": 0.33704448400073184,
+    "wheel_torque_with_margin_Nm": 0.5055667260010978,
+    "straight_wheel_rpm": 57.29577951308232,
+    "outer_wheel_rpm": 71.04676659622208,
+    "continuous_torque_target_range_Nm": [
+      0.8,
+      1.0
+    ],
+    "loaded_wheel_speed_target_rpm": 80.0
+  },
+  "frame": {
+    "extrusion_total_m": 1.68,
+    "extrusion_mass_kg": 0.84,
+    "beam_only_deflection_example_mm": 0.008333658866882821,
+    "note_ja": "接合部・取付板・ねじれ・アームモーメントを含まない。"
+  },
+  "stopping_examples": {
+    "0.15_m_s": 0.0525,
+    "0.3_m_s": 0.15
+  },
+  "runtime_examples": {
+    "nominal_Wh": 108.0,
+    "hours_by_assumed_W": {
+      "30.0": 2.8800000000000003,
+      "50.0": 1.7280000000000002
+    }
+  },
+  "reach_example_distance_mm": 304.138126514911,
+  "stability_cases": {
+    "base_5kg/base_only": {
+      "components_kg_xyz_m": [
+        [
+          5.0,
+          0.0,
+          0.0,
+          0.085
+        ]
+      ],
+      "total_mass_kg": 5.0,
+      "cg_xyz_mm": [
+        0.0,
+        0.0,
+        85.0
+      ],
+      "front_edge_margin_mm": 90.0,
+      "worst_sampled_caster_support_margin_mm": 47.543563630140405,
+      "front_tip": {
+        "restoring_Nm": 4.4145,
+        "overturning_Nm": 0.0,
+        "static_moment_ratio": null
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_5kg/base_plus_cargo": {
+      "components_kg_xyz_m": [
+        [
+          5.0,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          2.0,
+          -0.01,
+          0.0,
+          0.19
+        ]
+      ],
+      "total_mass_kg": 7.0,
+      "cg_xyz_mm": [
+        -2.857142857142857,
+        0.0,
+        115.0
+      ],
+      "front_edge_margin_mm": 92.85714285714286,
+      "worst_sampled_caster_support_margin_mm": 45.91905606432703,
+      "front_tip": {
+        "restoring_Nm": 6.3765,
+        "overturning_Nm": 0.0,
+        "static_moment_ratio": null
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_5kg/future_transport": {
+      "components_kg_xyz_m": [
+        [
+          5.0,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          1.7,
+          0.04,
+          0.0,
+          0.2
+        ],
+        [
+          0.3,
+          0.02,
+          0.0,
+          0.18
+        ],
+        [
+          2.0,
+          -0.01,
+          0.0,
+          0.19
+        ]
+      ],
+      "total_mass_kg": 9.0,
+      "cg_xyz_mm": [
+        6.000000000000001,
+        0.0,
+        133.22222222222223
+      ],
+      "front_edge_margin_mm": 83.99999999999999,
+      "worst_sampled_caster_support_margin_mm": 50.955029518348475,
+      "front_tip": {
+        "restoring_Nm": 7.41636,
+        "overturning_Nm": 0.0,
+        "static_moment_ratio": null
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_5kg/forward_object_0kg_NOT_APPROVED": {
+      "components_kg_xyz_m": [
+        [
+          5.0,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          1.7,
+          0.16,
+          0.0,
+          0.24
+        ],
+        [
+          0.3,
+          0.28,
+          0.0,
+          0.04
+        ]
+      ],
+      "total_mass_kg": 7.0,
+      "cg_xyz_mm": [
+        50.85714285714286,
+        0.0,
+        120.71428571428571
+      ],
+      "front_edge_margin_mm": 39.14285714285713,
+      "worst_sampled_caster_support_margin_mm": 39.14285714285713,
+      "front_tip": {
+        "restoring_Nm": 4.4145,
+        "overturning_Nm": 1.72656,
+        "static_moment_ratio": 2.5568181818181817
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_5kg/forward_object_0.5kg_NOT_APPROVED": {
+      "components_kg_xyz_m": [
+        [
+          5.0,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          1.7,
+          0.16,
+          0.0,
+          0.24
+        ],
+        [
+          0.3,
+          0.28,
+          0.0,
+          0.04
+        ],
+        [
+          0.5,
+          0.28,
+          0.0,
+          0.04
+        ]
+      ],
+      "total_mass_kg": 7.5,
+      "cg_xyz_mm": [
+        66.13333333333334,
+        0.0,
+        115.33333333333333
+      ],
+      "front_edge_margin_mm": 23.86666666666666,
+      "worst_sampled_caster_support_margin_mm": 23.86666666666666,
+      "front_tip": {
+        "restoring_Nm": 4.4145,
+        "overturning_Nm": 2.6585100000000006,
+        "static_moment_ratio": 1.6605166051660514
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_5kg/forward_object_2kg_NOT_APPROVED": {
+      "components_kg_xyz_m": [
+        [
+          5.0,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          1.7,
+          0.16,
+          0.0,
+          0.24
+        ],
+        [
+          0.3,
+          0.28,
+          0.0,
+          0.04
+        ],
+        [
+          2.0,
+          0.28,
+          0.0,
+          0.04
+        ]
+      ],
+      "total_mass_kg": 9.0,
+      "cg_xyz_mm": [
+        101.77777777777779,
+        0.0,
+        102.77777777777779
+      ],
+      "front_edge_margin_mm": -11.77777777777779,
+      "worst_sampled_caster_support_margin_mm": -11.77777777777779,
+      "front_tip": {
+        "restoring_Nm": 4.4145,
+        "overturning_Nm": 5.454360000000001,
+        "static_moment_ratio": 0.8093525179856114
+      },
+      "sampled_flat_static_cg_inside": false,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_6kg/base_only": {
+      "components_kg_xyz_m": [
+        [
+          6.0,
+          0.0,
+          0.0,
+          0.085
+        ]
+      ],
+      "total_mass_kg": 6.0,
+      "cg_xyz_mm": [
+        0.0,
+        0.0,
+        85.0
+      ],
+      "front_edge_margin_mm": 90.0,
+      "worst_sampled_caster_support_margin_mm": 47.543563630140405,
+      "front_tip": {
+        "restoring_Nm": 5.2974,
+        "overturning_Nm": 0.0,
+        "static_moment_ratio": null
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_6kg/base_plus_cargo": {
+      "components_kg_xyz_m": [
+        [
+          6.0,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          2.0,
+          -0.01,
+          0.0,
+          0.19
+        ]
+      ],
+      "total_mass_kg": 8.0,
+      "cg_xyz_mm": [
+        -2.5,
+        0.0,
+        111.25
+      ],
+      "front_edge_margin_mm": 92.5,
+      "worst_sampled_caster_support_margin_mm": 46.1221195100537,
+      "front_tip": {
+        "restoring_Nm": 7.259399999999999,
+        "overturning_Nm": 0.0,
+        "static_moment_ratio": null
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_6kg/future_transport": {
+      "components_kg_xyz_m": [
+        [
+          6.0,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          1.7,
+          0.04,
+          0.0,
+          0.2
+        ],
+        [
+          0.3,
+          0.02,
+          0.0,
+          0.18
+        ],
+        [
+          2.0,
+          -0.01,
+          0.0,
+          0.19
+        ]
+      ],
+      "total_mass_kg": 10.0,
+      "cg_xyz_mm": [
+        5.4,
+        0.0,
+        128.4
+      ],
+      "front_edge_margin_mm": 84.6,
+      "worst_sampled_caster_support_margin_mm": 50.61388292952767,
+      "front_tip": {
+        "restoring_Nm": 8.29926,
+        "overturning_Nm": 0.0,
+        "static_moment_ratio": null
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_6kg/forward_object_0kg_NOT_APPROVED": {
+      "components_kg_xyz_m": [
+        [
+          6.0,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          1.7,
+          0.16,
+          0.0,
+          0.24
+        ],
+        [
+          0.3,
+          0.28,
+          0.0,
+          0.04
+        ]
+      ],
+      "total_mass_kg": 8.0,
+      "cg_xyz_mm": [
+        44.50000000000001,
+        0.0,
+        116.24999999999999
+      ],
+      "front_edge_margin_mm": 45.49999999999999,
+      "worst_sampled_caster_support_margin_mm": 45.49999999999999,
+      "front_tip": {
+        "restoring_Nm": 5.2974,
+        "overturning_Nm": 1.72656,
+        "static_moment_ratio": 3.068181818181818
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_6kg/forward_object_0.5kg_NOT_APPROVED": {
+      "components_kg_xyz_m": [
+        [
+          6.0,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          1.7,
+          0.16,
+          0.0,
+          0.24
+        ],
+        [
+          0.3,
+          0.28,
+          0.0,
+          0.04
+        ],
+        [
+          0.5,
+          0.28,
+          0.0,
+          0.04
+        ]
+      ],
+      "total_mass_kg": 8.5,
+      "cg_xyz_mm": [
+        58.352941176470594,
+        0.0,
+        111.76470588235293
+      ],
+      "front_edge_margin_mm": 31.647058823529402,
+      "worst_sampled_caster_support_margin_mm": 31.647058823529402,
+      "front_tip": {
+        "restoring_Nm": 5.2974,
+        "overturning_Nm": 2.6585100000000006,
+        "static_moment_ratio": 1.9926199261992614
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_6kg/forward_object_2kg_NOT_APPROVED": {
+      "components_kg_xyz_m": [
+        [
+          6.0,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          1.7,
+          0.16,
+          0.0,
+          0.24
+        ],
+        [
+          0.3,
+          0.28,
+          0.0,
+          0.04
+        ],
+        [
+          2.0,
+          0.28,
+          0.0,
+          0.04
+        ]
+      ],
+      "total_mass_kg": 10.0,
+      "cg_xyz_mm": [
+        91.6,
+        0.0,
+        101.0
+      ],
+      "front_edge_margin_mm": -1.600000000000004,
+      "worst_sampled_caster_support_margin_mm": -1.600000000000004,
+      "front_tip": {
+        "restoring_Nm": 5.2974,
+        "overturning_Nm": 5.454360000000001,
+        "static_moment_ratio": 0.9712230215827335
+      },
+      "sampled_flat_static_cg_inside": false,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    }
+  },
+  "unverified": [
+    "部品の入手性・実寸・総質量",
+    "部屋の通路・収納場所・旋回空間",
+    "構造・接合部・支持軸の強度",
+    "保持・非常停止・タイヤ摩擦",
+    "アーム全姿勢・把持重量・逆運動学",
+    "電池保護・回生処理",
+    "実機性能・無監督家庭内運用"
+  ]
+}
