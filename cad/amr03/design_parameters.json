@@ -1,0 +1,162 @@
+{
+  "version": "0.6.0",
+  "design": "AMR01_Revision_A2",
+  "updated": "2026-09-20",
+  "status": "revised_first_design_no_spacers_no_belt",
+  "requirements": {
+    "base_upper_budget_kg": 10,
+    "cargo_limit_kg": 2,
+    "arm_system_upper_budget_kg": 2,
+    "gross_mass_calculation_limit_kg": 14,
+    "body_envelope_target_mm": [
+      500,
+      400,
+      180
+    ],
+    "minimum_ground_clearance_mm": 25,
+    "frame_stock_must_remain_mm": [
+      300,
+      400
+    ],
+    "cost_target_ja": "第一案の簡素さを維持。自加工34159円/外注40159円と同範囲で比較。第二案B/Cは不採用。",
+    "printer": "Bambu Lab P1S",
+    "printer_build_volume_mm": [
+      256,
+      256,
+      256
+    ],
+    "printed_material": "PLA"
+  },
+  "geometry": {
+    "frame_outer_LW_mm": [
+      460,
+      300
+    ],
+    "frame_bottom_z_mm": 69,
+    "frame_top_z_mm": 99,
+    "drive_axle_x_mm": 90,
+    "drive_track_mm": 354,
+    "wheel_diameter_mm": 100,
+    "wheel_width_mm": 25.4,
+    "wheel_axis_z_mm": 50,
+    "wheel_shaft_y_start_end_mm": [
+      97,
+      197
+    ],
+    "bearing_support_y_mm": [
+      118,
+      145
+    ],
+    "wheel_center_y_mm": 177,
+    "plate_bottom_top_z_mm": [
+      65,
+      69
+    ],
+    "motor_body_xz_mm": [
+      85.05025253169417,
+      45.05025253169417
+    ],
+    "motor_clocking_deg_from_A": 45,
+    "drive_mount_spacer_count": 0,
+    "caster_mount_spacer_count": 0,
+    "caster_pivot_xy_mm": [
+      -150,
+      0
+    ],
+    "caster_trail_mm": 16,
+    "caster_assembly_sweep_radius_mm": 45,
+    "battery_cradle_floor_bottom_top_z_mm": [
+      32,
+      35
+    ],
+    "battery_space_xyz_size_mm": [
+      -90,
+      -40,
+      35,
+      120,
+      80,
+      65
+    ],
+    "battery_space_note_ja": "電池未選定の予約空間。容量・質量・固定条件の保証ではない。"
+  },
+  "drive": {
+    "selected_motor": "DFRobot FIT0185",
+    "no_load_rpm": 83,
+    "stall_torque_kgfcm": 45,
+    "continuous_torque_verified": false,
+    "wheel_command_cap_rpm": 65,
+    "initial_v_m_s": 0.15,
+    "initial_omega_rad_s": 0.3,
+    "later_v_m_s": 0.3,
+    "later_omega_rad_s": 0.6,
+    "acceleration_m_s2": 0.2,
+    "slope_for_sizing_deg": 5,
+    "rolling_resistance_assumed": 0.03,
+    "torque_margin": 1.5,
+    "selection_status": "provisional_geometry_and_cost_candidate_continuous_duty_unverified",
+    "selection_review": "MOTOR_SELECTION.ja.md"
+  },
+  "shaft_comparison": {
+    "diameter_mm": 8,
+    "elastic_modulus_assumed_N_mm2": 205000,
+    "new_bearing_y_mm": [
+      118,
+      145
+    ],
+    "new_load_y_mm": 177,
+    "old_bearing_y_mm": [
+      118,
+      145
+    ],
+    "old_load_y_mm": 177,
+    "comparison_wheel_loads_N": [
+      100,
+      200
+    ],
+    "note_ja": "Aと同じ車軸配置。スペーサ撤去で軸の曲げ・軸受反力が改善したとは扱わない。"
+  },
+  "mass_electrical_budget_kg": {
+    "battery_and_adapter": 0.75,
+    "power_conversion_protection_emergency_stop": 0.4,
+    "onboard_compute_sensors_cooling": 0.5,
+    "wiring_guards": 0.4
+  },
+  "stability": {
+    "base_mass_cases_kg": [
+      6.6826641913528135,
+      10
+    ],
+    "base_cg_xyz_mm": [
+      0,
+      0,
+      85
+    ],
+    "caster_orientation_samples": 720,
+    "note_ja": "台車CG=(0,0,85)mmは静的感度計算用の仮定で、CAD実重心ではない。評価質量はvalidation_results.jsonの電装込み推計と上限10kgから読む。電池/フレーム高さの個別寄与は別に示し、完成機A→A2の全体CG差と扱わない。"
+  },
+  "bearing": {
+    "model": "KP08",
+    "reference_source": "https://www.amazon.co.jp/dp/B0DSKB5QQN",
+    "axis_to_foot_mm": 15,
+    "mount_pitch_mm": 42,
+    "orientation": "inverted, foot against plate underside at z65",
+    "vendor_dimensions_verified": false
+  },
+  "frame_joints": {
+    "model": "MISUMI HBLFSN6-SET",
+    "count": 8,
+    "included_bolts": "CBM6-12 x16",
+    "included_nuts": "HNTT6-6 x16",
+    "source": "https://jp.misumi-ec.com/vona2/detail/110300442340/",
+    "procurement_status": "Individual purchase channel and delivered price unverified"
+  },
+  "unverified": [
+    "FIT0185 continuous torque and exact gearbox/encoder dimensions",
+    "KP08 vendor foot dimensions, bolt seats, housing retention and load rating",
+    "Wheel web, hub hole pattern and load rating",
+    "MISUMI connectors personal purchasing channel",
+    "PLA tray creep/temperature, exact battery choice and frame-anchored retention",
+    "Countersunk screw head dimensions, aluminum angle inside corner radius and tool access",
+    "No wheel-shaft strength improvement claimed versus A; overhang remains32mm"
+  ]
+}

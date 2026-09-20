@@ -1,6 +1,6 @@
 # FreeCAD + Codex MCP
 
-AMRの第二案は[amr02/README.ja.md](amr02/README.ja.md)へ。下置きの箱形車輪支持と上置き比較案、FCStd・STEP・実CAD画面・PLA部品STL・費用・検証結果を収録しています。[第一案](amr01/README.ja.md)も比較用に残しています。
+AMRの現行案は[第一案改A2](amr03/README.ja.md)です。同軸駆動を維持し、駆動部・キャスターのスペーサー12本を撤去しました。FCStd・STEP・実CAD画面・PLA部品STL・費用・検証結果を収録しています。[元の第一案](amr01/README.ja.md)と[旧第二案B・却下したベルト案C](amr02/README.ja.md)は比較履歴です。
 
 導入日: 2026-09-20。Ubuntu 24.04 / ARM64。
 

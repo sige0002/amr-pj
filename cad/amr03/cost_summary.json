@@ -1,0 +1,185 @@
+{
+  "version": "0.6.0",
+  "design": "AMR01_Revision_A2",
+  "checked_on": "2026-09-20",
+  "currency": "JPY",
+  "all_amounts_include_tax": true,
+  "status": "planning_budget_with_unquoted_items_not_purchase_quote",
+  "source_bom": "bom.json",
+  "scope_ja": "第一案改良の機械骨格、PLAクレードル/電装トレイ、電池固定ストラップの予算。電池・アダプター・ドライバ・制御基板・センサー・非常停止回路・完成用機能ガード・荷台・アームは別。未発注。候補部品を流用できる構成でも、費用比較では必要購入単位の新規購入額を計上する。PLAのみ既所有材の消費分。",
+  "price_kinds_ja": {
+    "observed_carried_from_A": "第一案cad/amr01/bom.jsonの2026-09-20確認価格を引継ぎ。この作業では現価格・在庫・配送を再照合していない。",
+    "manufacturer_catalog_reference": "2026年7月の公式価格表を2026-09-20に確認した第二案の記録から引継ぎ。税換算参考値で、個人購入・請求単価・送料は未確定。",
+    "allowance": "販売単位や見積が未確定の材料・部品・消費分の予算。実在する販売パックを意味しない行がある。"
+  },
+  "purchase_subtotals_by_price_kind_jpy": {
+    "observed_carried_from_A": 21829.0,
+    "manufacturer_catalog_reference": 1540.0,
+    "allowance": 6800
+  },
+  "parts_and_consumables_subtotal_jpy": 30169.0,
+  "shipping_budget_jpy": 4350,
+  "self_fabrication_cash_budget_jpy": 34519.0,
+  "outsourced_fabrication_cash_budget_jpy": 40519.0,
+  "contingency_fraction": 0.1,
+  "self_fabrication_with_10pct_contingency_jpy": 37971,
+  "outsourced_with_10pct_contingency_jpy": 44571,
+  "fabrication": {
+    "outsourced_increment_allowance_jpy": 6000,
+    "kind": "allowance_not_quotation",
+    "note": "Aと同じ6000円の未見積追加枠。支持板2枚、キャスター板1枚、モーターアングル2個、ガセット4枚の金属部材数を維持し、皿もみの追加に対してスペーサー12本の切断を撤去する前提。切断・切欠き・取付穴・皿もみ・バリ取り・軸平面・車輪ハブ穴加工と必要な外注配送を見積で更新する。6000円は価格保証/上限ではなく、素材代P01〜P03は別計上済み。自加工は既所有工具と自己作業を前提に、工具購入代と作業時間を含まない。"
+  },
+  "shipping": [
+    {
+      "id": "S01",
+      "name": "DigiKey モーター2個を単独注文",
+      "amount_jpy": 2200,
+      "kind": "allowance_carried_from_A",
+      "note": "Aの税別商品小計5490円に対する送料枠を引継ぎ。最終注文条件で確認する。"
+    },
+    {
+      "id": "S02",
+      "name": "タナカ金物 本州配送",
+      "amount_jpy": 650,
+      "kind": "observed_condition_carried_from_A",
+      "note": "Aの本州・4900円未満条件を引継ぎ。配送先・決済条件で更新。"
+    },
+    {
+      "id": "S03",
+      "name": "Amazon・素材の追加送料枠",
+      "amount_jpy": 1000,
+      "kind": "allowance_carried_from_A",
+      "note": "Aの枠を維持。Amazonフレームは同一販売者3000円以上送料無料としたA記録を引継ぐが、住所と注文条件の確定額ではない。"
+    },
+    {
+      "id": "S04",
+      "name": "純正接合部・追加溝ナットの送料追加枠",
+      "amount_jpy": 500,
+      "kind": "allowance",
+      "note": "個人購入経路未確定のため500円を仮置き。実送料や購入可能性を確認した数字ではない。複数配送や手数料が生じる場合は枠を差替え、同じ費用を二重加算しない。"
+    }
+  ],
+  "quantity_checks": {
+    "slot_nuts_total": 44,
+    "slot_nuts_included_in_sets": 16,
+    "slot_nuts_additional": 28,
+    "slot_nuts_by_use": {
+      "frame_joints": 16,
+      "gussets": 8,
+      "drive_plates": 8,
+      "caster_plate": 4,
+      "electronics_tray": 4,
+      "low_battery_cradle": 4
+    },
+    "removed_drive_spacers_40mm": 8,
+    "removed_caster_spacers_6mm": 4,
+    "spacer_stock_purchase": false,
+    "kp08_used": 4,
+    "motor_angle_40x20x3_cut_list_mm_count": [
+      [
+        50,
+        2
+      ]
+    ],
+    "t4_plate_blanks_LW_mm_count": [
+      [
+        84,
+        108,
+        2
+      ],
+      [
+        80,
+        170,
+        1
+      ]
+    ],
+    "printed_parts_planned_LWH_mm_count": [
+      [
+        130,
+        160,
+        37,
+        1
+      ],
+      [
+        85,
+        180,
+        4.4,
+        1
+      ]
+    ],
+    "battery_straps_planned": 2,
+    "fastener_source": "fasteners.csv",
+    "fastener_status_ja": "fasteners.csvを最終CADから生成し、使用数量を確認済み。購入パック・単価・実部品適合は未確定。ストラップはCAD未モデル化の2本仮枠。",
+    "printed_parts_CAD_solid_PLA_mass_kg": 0.17396229604974056,
+    "M4_countersunk_screws_installed": {
+      "bearing_M4x16": 8,
+      "motor_foot_M4x12": 4
+    }
+  },
+  "comparison_with_A": {
+    "source_bom": "../amr01/bom.json",
+    "source_summary": "../amr01/cost_summary.json",
+    "first_self_fabrication_jpy": 34159.0,
+    "first_outsourced_jpy": 40159.0,
+    "self_difference_jpy": 360.0,
+    "outsourced_difference_jpy": 360.0,
+    "delta_breakdown": [
+      {
+        "group_ja": "3030定尺",
+        "first_A_jpy": 3419,
+        "revised_A_jpy": 3419,
+        "difference_jpy": 0
+      },
+      {
+        "group_ja": "接合金具・溝ナット",
+        "first_A_jpy": 2580,
+        "revised_A_jpy": 2740.0,
+        "difference_jpy": 160.0
+      },
+      {
+        "group_ja": "駆動系",
+        "first_A_jpy": 18037.0,
+        "revised_A_jpy": 18037.0,
+        "difference_jpy": 0.0
+      },
+      {
+        "group_ja": "キャスター",
+        "first_A_jpy": 373,
+        "revised_A_jpy": 373,
+        "difference_jpy": 0
+      },
+      {
+        "group_ja": "金属素材",
+        "first_A_jpy": 4100,
+        "revised_A_jpy": 2600,
+        "difference_jpy": -1500
+      },
+      {
+        "group_ja": "既所有PLAの消費分",
+        "first_A_jpy": 0,
+        "revised_A_jpy": 500,
+        "difference_jpy": 500
+      },
+      {
+        "group_ja": "追加一般締結材",
+        "first_A_jpy": 1800,
+        "revised_A_jpy": 2000,
+        "difference_jpy": 200
+      },
+      {
+        "group_ja": "電池固定ストラップ",
+        "first_A_jpy": 0,
+        "revised_A_jpy": 500,
+        "difference_jpy": 500
+      },
+      {
+        "group_ja": "部材配送",
+        "first_A_jpy": 3850,
+        "revised_A_jpy": 4350,
+        "difference_jpy": 500
+      }
+    ],
+    "note_ja": "両案とも未見積の素材・締結材・加工・送料を含む機械骨格予算。スペーサー撤去だけで大幅に安くなるとはしない。第一案も改良案も候補部品の新規購入単位全体を計上する。改良案のPLAだけは既所有材の消費分。ユーザー指定の絶対予算はない。"
+  },
+  "budget_note_ja": "合計は参考価格と仮枠を含む試算で、支払確定額ではない。スペーサーと金属トレイの削減に対し、純正金具・固定ストラップ・追加締結材・送料を加算する。工具購入代・自己作業費・印刷電気代は含まない。PLA新規スプールが必要なら購入単位全額に更新する。10%予備費は別表示し通常合計へ重複加算しない。電池の予約空間やストラップ予算は、電池の選定・価格・保持性能を確定した意味ではない。"
+}

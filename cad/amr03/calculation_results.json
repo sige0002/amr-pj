@@ -1,0 +1,575 @@
+{
+  "version": "0.6.0",
+  "design": "AMR01_Revision_A2",
+  "status": "A2_calculations_with_assumed_CG_not_operation_approval",
+  "note_ja": "CAD質量と電装仮枠の合計を使用。軸の定格、締結剛性、段差衝撃、実機重心、動的転倒、アーム把持能力を認定する結果ではない。",
+  "mass_inputs": {
+    "mechanical_estimate_kg": 4.632664191352814,
+    "electrical_budget_kg": 2.05,
+    "estimated_complete_base_kg": 6.6826641913528135,
+    "base_upper_budget_kg": 10.0,
+    "note_ja": "台車質量は実測前の積上げ値。10kgは上限であり、実在する復元質量として推計機体へ加算しない。"
+  },
+  "drive": {
+    "gross_mass_kg": 14.0,
+    "force_N": 18.874491104040985,
+    "wheel_torque_Nm": 0.4718622776010246,
+    "wheel_torque_with_margin_Nm": 0.7077934164015369,
+    "torque_margin": 1.5,
+    "selected_motor": "DFRobot FIT0185",
+    "motor_no_load_rpm_NOT_LOADED_RATING": 83,
+    "motor_stall_torque_Nm_NOT_CONTINUOUS_RATING": 4.4129925,
+    "continuous_torque_verified": false,
+    "wheel_command_cap_rpm_NOT_RATING": 65.0,
+    "initial_outer_wheel_rpm": 38.78924273035673,
+    "later_outer_wheel_rpm": 77.57848546071347,
+    "speed_cases": {
+      "initial": {
+        "v_m_s": 0.15,
+        "omega_rad_s": 0.3,
+        "inner_wheel_rpm": 18.50653678272559,
+        "outer_wheel_rpm": 38.78924273035673,
+        "straight_wheel_rpm": 28.64788975654116,
+        "combined_command_fits_cap": true,
+        "max_abs_omega_at_this_v_rad_s": 1.0753627352479904,
+        "v_alone_fits_cap": true
+      },
+      "later": {
+        "v_m_s": 0.3,
+        "omega_rad_s": 0.6,
+        "inner_wheel_rpm": 37.01307356545118,
+        "outer_wheel_rpm": 77.57848546071347,
+        "straight_wheel_rpm": 57.29577951308232,
+        "combined_command_fits_cap": false,
+        "max_abs_omega_at_this_v_rad_s": 0.22790510812934636,
+        "v_alone_fits_cap": true
+      }
+    },
+    "coupled_command_limit": {
+      "formula": "abs(v_m_s) + half_track_m * abs(omega_rad_s) <= wheel_rim_speed_cap_m_s",
+      "half_track_m": 0.177,
+      "wheel_rim_speed_cap_m_s": 0.3403392041388943
+    },
+    "note_ja": "必要駆動力を左右へ均等配分したトルク計算。輪荷重の均等配分を意味しない。5度は選定計算条件、65rpmは指令上限であり負荷時性能・連続定格・坂道走行許可ではない。",
+    "sizing_inputs": {
+      "gravity_m_s2": 9.81,
+      "slope_deg": 5,
+      "acceleration_m_s2": 0.2,
+      "rolling_resistance_assumed": 0.03,
+      "wheel_diameter_mm": 100,
+      "track_mm": 354
+    }
+  },
+  "shaft": {
+    "diameter_mm": 8,
+    "elastic_modulus_assumed_N_mm2": 205000,
+    "same_as_original_A": true,
+    "cases": [
+      {
+        "load_N": 100,
+        "bearing_support_y_mm": [
+          118,
+          145
+        ],
+        "load_y_mm": 177,
+        "bearing_span_mm": 27,
+        "arrangement": "overhung",
+        "inner_outer_signed_reaction_N": [
+          -118.51851851851852,
+          218.5185185185185
+        ],
+        "max_abs_bearing_reaction_N": 218.5185185185185,
+        "max_bending_moment_Nm": 3.2,
+        "max_bending_stress_MPa": 63.66197723675813,
+        "load_point_deflection_mm": 0.04885927358658511
+      },
+      {
+        "load_N": 200,
+        "bearing_support_y_mm": [
+          118,
+          145
+        ],
+        "load_y_mm": 177,
+        "bearing_span_mm": 27,
+        "arrangement": "overhung",
+        "inner_outer_signed_reaction_N": [
+          -237.03703703703704,
+          437.037037037037
+        ],
+        "max_abs_bearing_reaction_N": 437.037037037037,
+        "max_bending_moment_Nm": 6.4,
+        "max_bending_stress_MPa": 127.32395447351627,
+        "load_point_deflection_mm": 0.09771854717317022
+      }
+    ],
+    "note_ja": "軸受中心118/145mm、輪中心177mm、張出し32mmはAと同じ。反転・スペーサー撤去によってこの軸の曲げ応力や反力増幅は減らない。100/200Nは剛支持の配置比較荷重であり、実機の定格輪荷重・試験荷重ではない。負反力は反対方向の支持を示す。"
+  },
+  "static_support": {
+    "contact_geometry": {
+      "drive_axle_x_mm": 90,
+      "drive_track_mm": 354,
+      "caster_pivot_xy_mm": [
+        -150,
+        0
+      ],
+      "caster_trail_mm": 16
+    },
+    "same_xy_support_as_original_A": true,
+    "base_mass_cases_kg": [
+      6.6826641913528135,
+      10.0
+    ],
+    "mass_case_source": "validation_results.json mass.estimated_complete_base_kg and requirements.base_upper_budget_kg",
+    "base_cg_assumed_xyz_mm": [
+      0,
+      0,
+      85
+    ],
+    "component_assumptions_from_original_A": {
+      "cargo_kg_xyz_mm": [
+        2.0,
+        -10.0,
+        0.0,
+        190.0
+      ],
+      "arm_system_without_gripper_kg": 1.7,
+      "gripper_kg": 0.3,
+      "arm_folded_cg_xyz_mm": [
+        40.0,
+        0.0,
+        200.0
+      ],
+      "gripper_folded_cg_xyz_mm": [
+        20.0,
+        0.0,
+        180.0
+      ],
+      "arm_forward_cg_xyz_mm": [
+        160.0,
+        0.0,
+        240.0
+      ],
+      "gripper_forward_cg_xyz_mm": [
+        280.0,
+        0.0,
+        40.0
+      ],
+      "object_cg_xyz_mm": [
+        280.0,
+        0.0,
+        40.0
+      ],
+      "object_mass_sensitivity_cases_kg": [
+        0.0,
+        0.5,
+        2.0
+      ]
+    },
+    "caster_orientation_samples_per_case": 720,
+    "caster_angle_step_deg": 0.5,
+    "caster_angle_convention": "contact = pivot + trail*(cos(theta), sin(theta)); theta in [0, 360) deg",
+    "note_ja": "CG=(0,0,85)mmは台車全体の未測定の仮定。電池を下げた後の実機CGではない。各姿勢で平床・重力・剛体・点接触を仮定しキャスター720方位を標本化。CG高さの低下は平床静止のXY支持余裕には反映されない。負の反力は接地離脱を示す。AとA2を同じ質量・同じCGで評価したときだけ静的結果が一致する。",
+    "cases": [
+      {
+        "base_mass_kg": 6.6826641913528135,
+        "scenario": "base_only",
+        "gross_mass_kg": 6.6826641913528135,
+        "assumed_cg_xyz_mm": [
+          0.0,
+          0.0,
+          85.0
+        ],
+        "worst_sampled_support_margin_mm": 79.38015972597648,
+        "worst_margin_caster_angle_deg": 50.5,
+        "wheel_reaction_min_max_N": {
+          "left": [
+            19.04687246237929,
+            21.816457645316532
+          ],
+          "right": [
+            19.046872462379287,
+            21.81645764531653
+          ],
+          "caster": [
+            23.047360213067964,
+            26.339840243506245
+          ]
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "front_static_moment_ratio": null,
+        "operation_approved": false
+      },
+      {
+        "base_mass_kg": 6.6826641913528135,
+        "scenario": "base_plus_cargo",
+        "gross_mass_kg": 8.682664191352814,
+        "assumed_cg_xyz_mm": [
+          -2.3034404601203256,
+          0.0,
+          109.18612483126343
+        ],
+        "worst_sampled_support_margin_mm": 77.91547627507933,
+        "worst_margin_caster_angle_deg": 50.5,
+        "wheel_reaction_min_max_N": {
+          "left": [
+            24.29063128038198,
+            27.98120150216413
+          ],
+          "right": [
+            24.29063128038198,
+            27.98120150216414
+          ],
+          "caster": [
+            30.711422713067968,
+            35.09876881493482
+          ]
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "front_static_moment_ratio": null,
+        "operation_approved": false
+      },
+      {
+        "base_mass_kg": 6.6826641913528135,
+        "scenario": "future_transport",
+        "gross_mass_kg": 10.682664191352814,
+        "assumed_cg_xyz_mm": [
+          5.054918794855578,
+          0.0,
+          125.6265695734689
+        ],
+        "worst_sampled_support_margin_mm": 82.59441945295339,
+        "worst_margin_caster_angle_deg": 309.5,
+        "wheel_reaction_min_max_N": {
+          "left": [
+            31.68052345392342,
+            35.85921574629337
+          ],
+          "right": [
+            31.68052345392342,
+            35.859215746293366
+          ],
+          "caster": [
+            34.77337583806796,
+            39.74100095779196
+          ]
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "front_static_moment_ratio": null,
+        "operation_approved": false
+      },
+      {
+        "base_mass_kg": 6.6826641913528135,
+        "scenario": "forward_object_0kg_NOT_APPROVED",
+        "gross_mass_kg": 8.682664191352814,
+        "assumed_cg_xyz_mm": [
+          41.00124019014179,
+          0.0,
+          113.79300575150407
+        ],
+        "worst_sampled_support_margin_mm": 48.9987598098582,
+        "worst_margin_caster_angle_deg": 0.0,
+        "wheel_reaction_min_max_N": {
+          "left": [
+            32.87516470253691,
+            34.83428305129064
+          ],
+          "right": [
+            32.87516470253691,
+            34.83428305129064
+          ],
+          "caster": [
+            16.302985213067966,
+            18.631983100649105
+          ]
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "front_static_moment_ratio": 3.4172714614872346,
+        "operation_approved": false
+      },
+      {
+        "base_mass_kg": 6.6826641913528135,
+        "scenario": "forward_object_0.5kg_NOT_APPROVED",
+        "gross_mass_kg": 9.182664191352814,
+        "assumed_cg_xyz_mm": [
+          54.01482507299747,
+          0.0,
+          109.77494496795751
+        ],
+        "worst_sampled_support_margin_mm": 35.98517492700253,
+        "worst_margin_caster_angle_deg": 0.0,
+        "wheel_reaction_min_max_N": {
+          "left": [
+            37.49662926398563,
+            39.018279719288024
+          ],
+          "right": [
+            37.49662926398563,
+            39.018279719288024
+          ],
+          "caster": [
+            12.662555525567967,
+            14.471492029220533
+          ]
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "front_static_moment_ratio": 2.219334971297983,
+        "operation_approved": false
+      },
+      {
+        "base_mass_kg": 6.6826641913528135,
+        "scenario": "forward_object_2kg_NOT_APPROVED",
+        "gross_mass_kg": 10.682664191352814,
+        "assumed_cg_xyz_mm": [
+          85.74640029792054,
+          0.0,
+          99.97753716994245
+        ],
+        "worst_sampled_support_margin_mm": 4.253599702079455,
+        "worst_margin_caster_angle_deg": 0.0,
+        "wheel_reaction_min_max_N": {
+          "left": [
+            51.361022948331794,
+            51.57026972328019
+          ],
+          "right": [
+            51.361022948331794,
+            51.570269723280184
+          ],
+          "caster": [
+            1.7412664630679644,
+            1.9900188149348164
+          ]
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "front_static_moment_ratio": 1.081726218024736,
+        "operation_approved": false
+      },
+      {
+        "base_mass_kg": 10.0,
+        "scenario": "base_only",
+        "gross_mass_kg": 10.0,
+        "assumed_cg_xyz_mm": [
+          0.0,
+          0.0,
+          85.0
+        ],
+        "worst_sampled_support_margin_mm": 79.38015972597648,
+        "worst_margin_caster_angle_deg": 50.5,
+        "wheel_reaction_min_max_N": {
+          "left": [
+            28.50191468101214,
+            32.64634735581422
+          ],
+          "right": [
+            28.50191468101214,
+            32.64634735581423
+          ],
+          "caster": [
+            34.48828125,
+            39.41517857142857
+          ]
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "front_static_moment_ratio": null,
+        "operation_approved": false
+      },
+      {
+        "base_mass_kg": 10.0,
+        "scenario": "base_plus_cargo",
+        "gross_mass_kg": 12.0,
+        "assumed_cg_xyz_mm": [
+          -1.6666666666666667,
+          0.0,
+          102.5
+        ],
+        "worst_sampled_support_margin_mm": 78.32038018007883,
+        "worst_margin_caster_angle_deg": 309.5,
+        "wheel_reaction_min_max_N": {
+          "left": [
+            33.745673499014835,
+            38.81109121266182
+          ],
+          "right": [
+            33.745673499014835,
+            38.81109121266182
+          ],
+          "caster": [
+            42.15234375,
+            48.174107142857146
+          ]
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "front_static_moment_ratio": null,
+        "operation_approved": false
+      },
+      {
+        "base_mass_kg": 10.0,
+        "scenario": "future_transport",
+        "gross_mass_kg": 14.0,
+        "assumed_cg_xyz_mm": [
+          3.857142857142857,
+          0.0,
+          116.0
+        ],
+        "worst_sampled_support_margin_mm": 81.83279238933962,
+        "worst_margin_caster_angle_deg": 50.5,
+        "wheel_reaction_min_max_N": {
+          "left": [
+            41.13556567255627,
+            46.68910545679105
+          ],
+          "right": [
+            41.13556567255627,
+            46.68910545679105
+          ],
+          "caster": [
+            46.214296875,
+            52.816339285714285
+          ]
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "front_static_moment_ratio": null,
+        "operation_approved": false
+      },
+      {
+        "base_mass_kg": 10.0,
+        "scenario": "forward_object_0kg_NOT_APPROVED",
+        "gross_mass_kg": 12.0,
+        "assumed_cg_xyz_mm": [
+          29.666666666666668,
+          0.0,
+          105.83333333333333
+        ],
+        "worst_sampled_support_margin_mm": 60.333333333333336,
+        "worst_margin_caster_angle_deg": 0.0,
+        "wheel_reaction_min_max_N": {
+          "left": [
+            42.33020692116977,
+            45.66417276178832
+          ],
+          "right": [
+            42.33020692116977,
+            45.66417276178833
+          ],
+          "caster": [
+            27.74390625,
+            31.707321428571426
+          ]
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "front_static_moment_ratio": 5.113636363636364,
+        "operation_approved": false
+      },
+      {
+        "base_mass_kg": 10.0,
+        "scenario": "forward_object_0.5kg_NOT_APPROVED",
+        "gross_mass_kg": 12.5,
+        "assumed_cg_xyz_mm": [
+          39.68,
+          0.0,
+          103.2
+        ],
+        "worst_sampled_support_margin_mm": 50.31999999999999,
+        "worst_margin_caster_angle_deg": 0.0,
+        "wheel_reaction_min_max_N": {
+          "left": [
+            46.95167148261848,
+            49.84816942978572
+          ],
+          "right": [
+            46.95167148261848,
+            49.84816942978571
+          ],
+          "caster": [
+            24.1034765625,
+            27.546830357142856
+          ]
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "front_static_moment_ratio": 3.321033210332104,
+        "operation_approved": false
+      },
+      {
+        "base_mass_kg": 10.0,
+        "scenario": "forward_object_2kg_NOT_APPROVED",
+        "gross_mass_kg": 14.0,
+        "assumed_cg_xyz_mm": [
+          65.42857142857143,
+          0.0,
+          96.42857142857143
+        ],
+        "worst_sampled_support_margin_mm": 24.57142857142857,
+        "worst_margin_caster_angle_deg": 0.0,
+        "wheel_reaction_min_max_N": {
+          "left": [
+            60.81606516696464,
+            62.400159433777894
+          ],
+          "right": [
+            60.81606516696465,
+            62.40015943377788
+          ],
+          "caster": [
+            13.1821875,
+            15.065357142857142
+          ]
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "front_static_moment_ratio": 1.618705035971223,
+        "operation_approved": false
+      }
+    ]
+  },
+  "isolated_cg_relocation_sensitivity": {
+    "battery_and_adapter_mass_assumed_kg": 0.75,
+    "battery_cg_old_new_assumed_z_mm": [
+      139.5,
+      67.5
+    ],
+    "battery_only_mass_moment_change_kg_mm": -54.0,
+    "frame_mass_kg": 1.672,
+    "frame_cg_old_new_z_mm": [
+      90.0,
+      84.0
+    ],
+    "frame_only_mass_moment_change_kg_mm": -10.032,
+    "cases": [
+      {
+        "assumed_fixed_total_mass_kg": 6.6826641913528135,
+        "battery_only_contribution_mm": -8.080609537416908,
+        "frame_only_contribution_mm": -1.5011976829512301,
+        "sum_of_only_these_two_terms_mm": -9.58180722036814
+      },
+      {
+        "assumed_fixed_total_mass_kg": 10.0,
+        "battery_only_contribution_mm": -5.4,
+        "frame_only_contribution_mm": -1.0032,
+        "sum_of_only_these_two_terms_mm": -6.4032
+      }
+    ],
+    "not_the_total_vehicle_cg_change": true,
+    "note_ja": "同じ総質量Mの中で指定部品だけを移す感度例。電池/アダプター0.75kgが一体で高さ139.5→67.5mmへ動く仮定の寄与は−54/M mm、フレーム1.672kgを6mm下げる寄与は−10.032/M mm。元の139.5mmはAのトレイ上面107mm＋同じ65mm高さの予約電池の半高で、実選定電池のCGではない。この二項の和はA→A2の真の全体CG差ではない。支持板上昇、軸受反転、モーター位置、部品撤去/交換、質量差、配線・機器位置を全て積み上げていない。静的評価のCG=85mmからこの和を引いた計算もしていない。"
+  },
+  "self_checks": {
+    "100N_shaft_moment_is_3p2_Nm": true,
+    "100N_max_bearing_reaction_is_218p518519_N": true,
+    "shaft_response_equals_original_A": true,
+    "same_xy_support_and_same_mass_CG_give_identical_static_results": true,
+    "14kg_margin_torque_is_0p707793_Nm": true,
+    "battery_only_moment_change_is_minus54_kg_mm": true,
+    "frame_only_moment_change_is_minus10p032_kg_mm": true,
+    "force_and_moment_equilibrium": true
+  },
+  "equilibrium_max_abs_residual": {
+    "vertical_force_N": 1.4210854715202004e-14,
+    "x_weight_moment_Nmm": 3.410605131648481e-12,
+    "y_weight_moment_Nmm": 3.637978807091713e-12
+  },
+  "operation_approved": false,
+  "sources": {
+    "config": "cad/amr03/design_parameters.json",
+    "original_component_assumptions": "docs/amr-01/design_parameters.json",
+    "CAD_mass": "cad/amr03/validation_results.json",
+    "reused_numerical_functions": "cad/amr02/calculate_design.py"
+  }
+}
