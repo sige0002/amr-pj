@@ -1,4 +1,4 @@
-"""AMR-01 v0.2 の概念設計計算。Python 3.10+、標準ライブラリのみ。
+"""AMR-01 の概念設計計算。Python 3.10+、標準ライブラリのみ。
 入力値は設計仮定。実機、部品強度、動的安定性、停止性能の適合判定ではない。
 Run: python3 check_design.py [--config path] [--output path]
 """
@@ -66,10 +66,52 @@ def component(mass: float, xyz_mm: list[float]) -> Component:
     return (mass, *(v / 1000 for v in xyz_mm))
 
 
+def frame_stock_plan(config: dict[str, Any]) -> dict[str, Any]:
+    """指定した定尺を切断せずに使えるかと、組立外寸・購入数量を確認する。"""
+    geo, frame, procurement = config["geometry"], config["frame"], config["procurement"]
+    assembly = frame["assembly"]
+    lengths = [assembly[k] for k in ("longitudinal_length_mm", "crossmember_length_mm")]
+    counts = [assembly["longitudinal_count"], assembly["crossmember_count"]]
+    if any(v <= 0 for v in [*lengths, geo["extrusion_size_mm"]]) or any(
+            not isinstance(n, int) or isinstance(n, bool) or n <= 0 for n in counts):
+        raise ValueError("フレーム長さ・断面と使用本数は正にしてください。")
+    if assembly["joint_layout"] != "longitudinals_between_crossmembers" or counts[0] < 2 or counts[1] != 2:
+        raise ValueError("前後2本の横桟の間に左右の長手材を入れる構成が必要です。")
+    if counts[0] * geo["extrusion_size_mm"] >= lengths[1]:
+        raise ValueError("長手材の本数が多すぎて横桟の幅に収まりません。")
+    outer = [lengths[0] + 2 * geo["extrusion_size_mm"], lengths[1]]
+    if outer != [geo["frame_length_mm"], geo["frame_width_mm"]]:
+        raise ValueError("定尺と断面から求めた組立外寸がフレーム寸法と一致しません。")
+    if frame["cuts_mm_count"] != [[length, count] for length, count in zip(lengths, counts)]:
+        raise ValueError("重量計算用の使用材一覧と組立構成が一致しません。")
+    if any(size > body for size, body in zip(outer, [geo["body_length_mm"], geo["body_width_mm"]])):
+        raise ValueError("主フレームが車体外形を超えています。")
+    if procurement["frame_channel"] != "Amazon.co.jp" or procurement["frame_cutting_required"]:
+        raise ValueError("Amazonの定尺材を切断せずに使う条件が必要です。")
+    available = {}
+    for item in procurement["frame_stock"]:
+        if item["length_mm"] <= 0 or any(not isinstance(n, int) or isinstance(n, bool) or n <= 0
+                                       for n in [item["pieces_per_pack"], item["packs"]]):
+            raise ValueError("購入定尺・パック数・本数は正にしてください。")
+        available[item["length_mm"]] = available.get(item["length_mm"], 0) + item["pieces_per_pack"] * item["packs"]
+    needed = {}
+    for length, count in zip(lengths, counts):
+        needed[length] = needed.get(length, 0) + count
+    if any(available.get(length, 0) < count for length, count in needed.items()):
+        raise ValueError("必要な定尺の購入本数が不足しています。切断での代用はしません。")
+    return {"assembled_outer_LW_mm": outer, "cutting_required": False,
+            "purchase_material_subtotal_incl_tax_jpy": sum(item["pack_price_incl_tax_jpy"] * item["packs"]
+                                                          for item in procurement["frame_stock"]),
+            "cost_note_ja": "フレーム材の購入小計のみ。送料・金具・板材は別。予備材も購入費には含む。",
+            "stock": [{"length_mm": length, "purchased": count, "used": needed.get(length, 0),
+                       "spare": count - needed.get(length, 0)} for length, count in sorted(available.items(), reverse=True)]}
+
+
 def evaluate(config: dict[str, Any]) -> dict[str, Any]:
     validate_finite(config)
     req, geo, drive = config["requirements"], config["geometry"], config["drive"]
     frame, stability = config["frame"], config["stability_example"]
+    stock_plan = frame_stock_plan(config)
     required_positive = [req["base_target_kg"], req["base_upper_budget_kg"],
                          req["gross_mass_calculation_limit_kg"], geo["wheel_diameter_mm"],
                          geo["drive_track_mm"], geo["body_length_mm"], geo["body_width_mm"],
@@ -78,13 +120,15 @@ def evaluate(config: dict[str, Any]) -> dict[str, Any]:
     if any(v <= 0 for v in required_positive):
         raise ValueError("寸法、質量、弾性係数、負担梁数、減速度は正である必要があります。")
     for field in ("initial_speed_m_s", "later_speed_limit_m_s", "acceleration_m_s2",
-                  "rolling_resistance_coefficient_assumed", "later_yaw_rate_limit_rad_s"):
+                  "rolling_resistance_coefficient_assumed", "later_yaw_rate_limit_rad_s", "initial_yaw_rate_rad_s"):
         if drive[field] < 0:
             raise ValueError(f"drive.{field} は非負にしてください。")
     if not 0 <= drive["slope_for_sizing_deg"] < 90 or drive["torque_margin_factor"] < 1:
         raise ValueError("勾配は0〜90度未満、トルク余裕係数は1以上にしてください。")
     if geo["caster_trail_mm"] < 0:
         raise ValueError("キャスタートレールは非負です。")
+    if drive["planned_wheel_rpm_cap"] <= 0:
+        raise ValueError("車輪の指令回転数上限は正にしてください。")
     samples = geo["caster_orientation_samples"]
     if not isinstance(samples, int) or isinstance(samples, bool) or samples < 16:
         raise ValueError("キャスター角度サンプル数は16以上の整数です。")
@@ -106,6 +150,7 @@ def evaluate(config: dict[str, Any]) -> dict[str, Any]:
     speed, omega = drive["later_speed_limit_m_s"], drive["later_yaw_rate_limit_rad_s"]
     rpm = speed / (2 * math.pi * radius) * 60
     outer_rpm = (speed + omega * track / 2) / (2 * math.pi * radius) * 60
+    initial_outer_rpm = (drive["initial_speed_m_s"] + drive["initial_yaw_rate_rad_s"] * track / 2) / (2 * math.pi * radius) * 60
     l, w = geo["body_length_mm"], geo["body_width_mm"]
     pivot_x = geo["drive_axle_x_mm"]
     diameter = 2 * max(math.hypot(x - pivot_x, y) for x in (-l / 2, l / 2) for y in (-w / 2, w / 2))
@@ -145,6 +190,10 @@ def evaluate(config: dict[str, Any]) -> dict[str, Any]:
     length = sum(mm * count for mm, count in frame["cuts_mm_count"]) / 1000
     per_beam_force = frame["beam_example_total_force_N"] / frame["beam_example_load_sharing_count"]
     deflection = per_beam_force * frame["beam_example_span_mm"] ** 3 / (48 * frame["elastic_modulus_assumed_N_mm2"] * frame["reference_second_moment_mm4"])
+    section_modulus = frame["reference_second_moment_mm4"] / (geo["extrusion_size_mm"] / 2)
+    bending_stress = per_beam_force * frame["beam_example_span_mm"] / (4 * section_modulus)
+    comparison = frame["comparison_4040"]
+    stiffness_ratio = comparison["second_moment_mm4"] / frame["reference_second_moment_mm4"]
     stop = config["stopping_example"]
     runtime = config["runtime_example"]
     if not 0 < runtime["usable_fraction_assumed"] <= 1 or any(p <= 0 for p in runtime["average_power_examples_W"]):
@@ -156,7 +205,7 @@ def evaluate(config: dict[str, Any]) -> dict[str, Any]:
     sr = geo["caster_assembly_sweep_radius_mm"]
     return {
         "version": config["version"], "status": config["status"],
-        "note_ja": "数値は設計仮定からの再計算。部品選定・CAD・実機検証・安全認証ではない。",
+        "note_ja": "数値は設計仮定からの再計算。第一案CAD・BOMはcad/amr01に別置。5/6kg重心例は仮定で、CAD部品積上げ重量での実機評価ではない。",
         "envelope_LW_mm": [l, w], "mass_budget_sum_kg": sum(config["mass_budget_target_kg"].values()),
         "max_config_mass_at_target_kg": req["base_target_kg"] + req["arm_system_upper_budget_kg"] + req["cargo_limit_kg"],
         "max_config_mass_at_upper_budget_kg": req["base_upper_budget_kg"] + req["arm_system_upper_budget_kg"] + req["cargo_limit_kg"],
@@ -171,17 +220,34 @@ def evaluate(config: dict[str, Any]) -> dict[str, Any]:
         "drive": {"gross_mass_kg": mass, "force_N": force,
                   "wheel_torque_Nm": torque, "wheel_torque_with_margin_Nm": torque * drive["torque_margin_factor"],
                   "straight_wheel_rpm": rpm, "outer_wheel_rpm": outer_rpm,
+                  "initial_outer_wheel_rpm": initial_outer_rpm,
+                  "selected_motor": drive["selected_motor"],
+                  "selected_motor_continuous_rating_verified": False,
+                  "planned_wheel_rpm_cap_NOT_RATING": drive["planned_wheel_rpm_cap"],
+                  "initial_combined_command_fits_cap": initial_outer_rpm <= drive["planned_wheel_rpm_cap"],
+                  "later_combined_command_fits_cap": outer_rpm <= drive["planned_wheel_rpm_cap"],
+                  "selection_note_ja": "連続トルク0.8〜1Nm/80rpmは従来の探索目標。FIT0185が満たすと認定していない。最高並進・旋回は結合制限する。",
                   "continuous_torque_target_range_Nm": drive["continuous_wheel_torque_target_range_Nm"],
                   "loaded_wheel_speed_target_rpm": drive["loaded_wheel_speed_target_rpm"]},
         "frame": {"extrusion_total_m": length, "extrusion_mass_kg": length * frame["reference_mass_kg_per_m"],
+                  "stock_plan": stock_plan,
+                  "beam_example_span_mm": frame["beam_example_span_mm"],
+                  "beam_example_central_force_per_beam_N": per_beam_force,
                   "beam_only_deflection_example_mm": deflection,
+                  "beam_only_bending_stress_example_MPa": bending_stress,
+                  "comparison_4040": {
+                      "model": comparison["model"], "bending_stiffness_ratio_to_selected": stiffness_ratio,
+                      "same_load_deflection_mm": deflection / stiffness_ratio,
+                      "same_stock_lengths_mass_kg": length * comparison["mass_kg_per_m"],
+                      "extra_mass_kg": length * (comparison["mass_kg_per_m"] - frame["reference_mass_kg_per_m"]),
+                      "note_ja": "同じ材長・同じEを仮定した梁単体の比較。4040は未採用。"},
                   "note_ja": "接合部・取付板・ねじれ・アームモーメントを含まない。"},
         "stopping_examples": {f"{v:g}_m_s": v * stop["latency_s"] + v * v / (2 * stop["deceleration_m_s2"])
                               for v in (drive["initial_speed_m_s"], speed)},
         "runtime_examples": {"nominal_Wh": wh, "hours_by_assumed_W": {str(p): wh * runtime["usable_fraction_assumed"] / p for p in runtime["average_power_examples_W"]}},
         "reach_example_distance_mm": math.dist(config["reach_example"]["shoulder_xyz_mm"], config["reach_example"]["tcp_xyz_mm"]),
         "stability_cases": cases,
-        "unverified": ["部品の入手性・実寸・総質量", "部屋の通路・収納場所・旋回空間", "構造・接合部・支持軸の強度",
+        "unverified": ["選定部品の未公開寸法・連続定格・実測総質量と注文時の在庫納期（第一案CADは6kg目標未達）", "部屋の通路・収納場所・旋回空間", "構造・接合部・支持軸の強度",
                        "保持・非常停止・タイヤ摩擦", "アーム全姿勢・把持重量・逆運動学", "電池保護・回生処理", "実機性能・無監督家庭内運用"]}
 
 

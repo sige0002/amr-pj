@@ -1,36 +1,36 @@
 {
-  "version": "0.2.1",
+  "version": "0.4.0",
   "updated": "2026-09-20",
-  "status": "concept_only_not_manufacturing_release",
+  "status": "first_cad_concept_not_manufacturing_release",
   "requirements": {
     "cargo_limit_kg": 2.0,
-    "base_target_kg": 5.0,
+    "base_target_kg": 6.0,
     "base_upper_budget_kg": 6.0,
     "arm_system_upper_budget_kg": 2.0,
     "gross_mass_calculation_limit_kg": 10.0,
     "arm_object_lifting_limit_kg": null,
-    "note_ja": "運搬物2kgはアーム自重とは別。把持物と荷台の物体の合計が2kg以下。アームが持ち上げられる物体質量は未確定。"
+    "note_ja": "運搬物2kgはアーム自重とは別。30角化の重量配分は目標・上限とも6kgへ再配分。把持能力と5〜10kg運搬の拡張は未確定。"
   },
   "geometry": {
-    "body_length_mm": 350.0,
-    "body_width_mm": 280.0,
+    "body_length_mm": 500.0,
+    "body_width_mm": 400.0,
     "body_height_target_range_mm": [
       160.0,
       180.0
     ],
-    "frame_length_mm": 320.0,
-    "frame_width_mm": 200.0,
-    "extrusion_size_mm": 20.0,
+    "frame_length_mm": 460.0,
+    "frame_width_mm": 300.0,
+    "extrusion_size_mm": 30.0,
     "drive_axle_x_mm": 90.0,
-    "drive_track_mm": 240.0,
+    "drive_track_mm": 354.0,
     "wheel_diameter_mm": 100.0,
-    "wheel_width_mm": 25.0,
+    "wheel_width_mm": 25.4,
     "caster_swivel_xy_mm": [
-      -110.0,
+      -150.0,
       0.0
     ],
     "caster_diameter_mm": 50.0,
-    "caster_trail_mm": 15.0,
+    "caster_trail_mm": 16.0,
     "caster_assembly_sweep_radius_mm": 45.0,
     "caster_orientation_samples": 1440,
     "arm_mount_xyz_mm": [
@@ -44,7 +44,7 @@
       4.0
     ],
     "minimum_ground_clearance_target_mm": 25.0,
-    "note_ja": "車輪・ガード込みの外形。部品実寸、配線、電池脱着、アーム収納外形のCAD検証は未実施。"
+    "note_ja": "フレーム外寸460×300mm。第一案CADあり。輪距354mmは軸カラーとホイール取付ねじの隙間を確保するため350mmから変更。機体外形500×400mmはガード込みの配置目標。購入品の未公開寸法は実測が必要。"
   },
   "drive": {
     "initial_speed_m_s": 0.15,
@@ -60,40 +60,54 @@
       1.0
     ],
     "loaded_wheel_speed_target_rpm": 80.0,
-    "note_ja": "0.8〜1N·mは車輪側の連続トルク目標。最低使用電圧で約80rpm時の同時成立を確認。拘束トルクではない。坂・段差は未許可。"
+    "note_ja": "第一案はFIT0185を直結。0.8〜1Nm/80rpmは従来の探索目標であり採用品の定格ではない。連続トルクは公表値なし。初期0.15m/s・0.3rad/s、各輪65rpm指令上限を暫定とし負荷/温度を実測。0.3m/sと0.6rad/sは同時達成させず速度を結合制限する。坂・段差は未許可。",
+    "selected_motor": "DFRobot FIT0185",
+    "planned_wheel_rpm_cap": 65.0
   },
   "frame": {
-    "reference_extrusion": "MISUMI HFS5-2020",
-    "reference_mass_kg_per_m": 0.5,
-    "reference_second_moment_mm4": 7420.0,
+    "reference_extrusion": "MISUMI NFSL6-3030（6シリーズ・軽量タイプ・白アルマイト）",
+    "reference_mass_kg_per_m": 0.76,
+    "reference_second_moment_mm4": 26800.0,
     "elastic_modulus_assumed_N_mm2": 69000.0,
     "cuts_mm_count": [
       [
-        320.0,
+        400.0,
+        4
+      ],
+      [
+        300.0,
         2
-      ],
-      [
-        160.0,
-        4
-      ],
-      [
-        100.0,
-        4
       ]
     ],
-    "beam_example_span_mm": 160.0,
+    "beam_example_span_mm": 400.0,
     "beam_example_total_force_N": 100.0,
-    "beam_example_load_sharing_count": 2,
-    "note_ja": "切断長は質量見積り用の仮構成。発注指示ではない。100Nは梁たわみ例で、アーム取付部の認定荷重ではない。"
+    "beam_example_load_sharing_count": 1,
+    "note_ja": "Amazonの300mm・400mm材を採用。前後の300mm横桟の間に400mm長手材4本（左右外周2本＋内部補強2本）を入れ、平面外寸460×300mm。購入定尺のまま使用。アーム専用台座は別途設計する。",
+    "manufacturer_source_url": "https://jp.misumi-ec.com/special/alumiframe/tech/capacity_guideline/",
+    "assembly": {
+      "joint_layout": "longitudinals_between_crossmembers",
+      "longitudinal_length_mm": 400.0,
+      "longitudinal_count": 4,
+      "crossmember_length_mm": 300.0,
+      "crossmember_count": 2
+    },
+    "comparison_4040": {
+      "model": "MISUMI HFSL8-4040（軽量タイプ・比較用、購入対象外）",
+      "section_size_mm": 40.0,
+      "second_moment_mm4": 75400.0,
+      "mass_kg_per_m": 1.27,
+      "source_url": "https://jp.misumi-ec.com/vona2/detail/110302689860/",
+      "note_ja": "材質はA6005CSS-T5で採用NFSLのA6063S-T5とは異なる。共通のEを仮定した曲げ剛性・質量比較のみ。価格・耐力の同一比率を意味しない。"
+    }
   },
   "mass_budget_target_kg": {
-    "frame_plates_fasteners": 1.5,
+    "frame_plates_fasteners": 2.4,
     "complete_drive_and_support_and_holding": 1.15,
     "battery_and_adapter": 0.75,
     "power_conversion_protection_emergency_stop": 0.4,
     "onboard_compute_sensors_cooling": 0.5,
     "wiring_covers_handles": 0.4,
-    "contingency": 0.3
+    "contingency": 0.4
   },
   "stopping_example": {
     "latency_s": 0.2,
@@ -173,13 +187,48 @@
     ],
     "note_ja": "実測ではない仮の質量・重心分布。アーム系1.7kgには取付・専用電装等を含めて仮集約。0.5kgも2kgも把持許可値ではない。"
   },
-  "calculation_baseline_version": "0.2",
+  "calculation_baseline_version": "0.4.0",
   "design_policy": {
     "internal_structure_first": true,
     "cosmetic_exterior_required": false,
     "functional_guards_required": true,
     "concept_image_is_manufacturing_drawing": false,
-    "note_ja": "外面をよくする必要はない。化粧外装は不要。内部構造、支持、配置、配線、放熱、保守を優先し、機能上の保護ガードは残す。寸法・質量・計算条件はv0.2から変更なし。",
-    "concept_images_included": false
+    "note_ja": "内部構造優先、化粧外装不要、機能ガード維持。Amazon購入の3030・300mm/400mm材を採用。費用と重量を考慮し、4040への全面変更は行わず、必要な接合部・取付部の補強を優先する。 ユーザーの最新指示により実CAD画面をcad/amr01に保存して公開。生成概念画像とは区別する。",
+    "concept_images_included": false,
+    "amazon_stock_frames_only": true,
+    "cost_conscious": true,
+    "actual_cad_screenshots_included": true
+  },
+  "procurement": {
+    "frame_channel": "Amazon.co.jp",
+    "frame_cutting_required": false,
+    "checked_on": "2026-09-20",
+    "seller": "ミスミ",
+    "user_reference_url": "https://amzn.asia/d/0ik8OWr7",
+    "currency": "JPY",
+    "price_includes_tax": true,
+    "shipping_fee_jpy": null,
+    "shipping_note_ja": "販売者表示は3000円以上で送料無料。2組同時購入の商品小計は3419円。配送先・適用条件と最終送料は注文画面で確認。",
+    "note_ja": "300mm・400mmの商品名、選択ASIN、断面定数、4本入り、税込価格、注文ボタン、販売元を確認。商品小計にブラケット・ナット・ボルト・取付板は含まない。発注はしていない。",
+    "frame_stock": [
+      {
+        "length_mm": 400.0,
+        "pieces_per_pack": 4,
+        "packs": 1,
+        "pack_price_incl_tax_jpy": 1952,
+        "asin": "B0DKF2CCW3",
+        "url": "https://www.amazon.co.jp/dp/B0DKF2CCW3",
+        "use_ja": "左右外周の長手材2本＋内部の長手補強材2本"
+      },
+      {
+        "length_mm": 300.0,
+        "pieces_per_pack": 4,
+        "packs": 1,
+        "pack_price_incl_tax_jpy": 1467,
+        "asin": "B0DKDZ8G9G",
+        "url": "https://www.amazon.co.jp/dp/B0DKDZ8G9G",
+        "use_ja": "前後の横桟2本、残り2本は予備"
+      }
+    ]
   }
 }

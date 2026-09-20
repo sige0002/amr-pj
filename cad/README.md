@@ -1,5 +1,7 @@
 # FreeCAD + Codex MCP
 
+AMRの第一案は[amr01/README.ja.md](amr01/README.ja.md)へ。FCStd・STEP・実CAD画面・部品表・費用と検証結果を収録しています。
+
 導入日: 2026-09-20。Ubuntu 24.04 / ARM64。
 
 - FreeCAD 1.1.3: 公式ARM64 AppImage。公式SHA-256照合済み。

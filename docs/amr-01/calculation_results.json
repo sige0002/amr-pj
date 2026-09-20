@@ -1,18 +1,18 @@
 {
-  "version": "0.2.1",
-  "status": "concept_only_not_manufacturing_release",
-  "note_ja": "数値は設計仮定からの再計算。部品選定・CAD・実機検証・安全認証ではない。",
+  "version": "0.4.0",
+  "status": "first_cad_concept_not_manufacturing_release",
+  "note_ja": "数値は設計仮定からの再計算。第一案CAD・BOMはcad/amr01に別置。5/6kg重心例は仮定で、CAD部品積上げ重量での実機評価ではない。",
   "envelope_LW_mm": [
-    350.0,
-    280.0
+    500.0,
+    400.0
   ],
-  "mass_budget_sum_kg": 5.0,
-  "max_config_mass_at_target_kg": 9.0,
+  "mass_budget_sum_kg": 6.0,
+  "max_config_mass_at_target_kg": 10.0,
   "max_config_mass_at_upper_budget_kg": 10.0,
   "turning": {
-    "body_only_pivot_swept_diameter_mm": 599.4163828258284,
-    "body_only_pivot_swept_radius_mm": 299.7081914129142,
-    "area_ratio_to_v0p1": 0.44871794871794873,
+    "body_only_pivot_swept_diameter_mm": 788.9233169326408,
+    "body_only_pivot_swept_radius_mm": 394.4616584663204,
+    "area_ratio_to_v0p1": 0.9157509157509157,
     "note_ja": "車軸中心で理想的にその場旋回。アームのはみ出し・誤差・安全離隔を含まない。"
   },
   "envelope_checks_simplified": {
@@ -26,7 +26,14 @@
     "wheel_torque_Nm": 0.33704448400073184,
     "wheel_torque_with_margin_Nm": 0.5055667260010978,
     "straight_wheel_rpm": 57.29577951308232,
-    "outer_wheel_rpm": 71.04676659622208,
+    "outer_wheel_rpm": 77.57848546071347,
+    "initial_outer_wheel_rpm": 38.78924273035673,
+    "selected_motor": "DFRobot FIT0185",
+    "selected_motor_continuous_rating_verified": false,
+    "planned_wheel_rpm_cap_NOT_RATING": 65.0,
+    "initial_combined_command_fits_cap": true,
+    "later_combined_command_fits_cap": false,
+    "selection_note_ja": "連続トルク0.8〜1Nm/80rpmは従来の探索目標。FIT0185が満たすと認定していない。最高並進・旋回は結合制限する。",
     "continuous_torque_target_range_Nm": [
       0.8,
       1.0
@@ -34,9 +41,43 @@
     "loaded_wheel_speed_target_rpm": 80.0
   },
   "frame": {
-    "extrusion_total_m": 1.68,
-    "extrusion_mass_kg": 0.84,
-    "beam_only_deflection_example_mm": 0.008333658866882821,
+    "extrusion_total_m": 2.2,
+    "extrusion_mass_kg": 1.6720000000000002,
+    "stock_plan": {
+      "assembled_outer_LW_mm": [
+        460.0,
+        300.0
+      ],
+      "cutting_required": false,
+      "purchase_material_subtotal_incl_tax_jpy": 3419,
+      "cost_note_ja": "フレーム材の購入小計のみ。送料・金具・板材は別。予備材も購入費には含む。",
+      "stock": [
+        {
+          "length_mm": 400.0,
+          "purchased": 4,
+          "used": 4,
+          "spare": 0
+        },
+        {
+          "length_mm": 300.0,
+          "purchased": 4,
+          "used": 2,
+          "spare": 2
+        }
+      ]
+    },
+    "beam_example_span_mm": 400.0,
+    "beam_example_central_force_per_beam_N": 100.0,
+    "beam_only_deflection_example_mm": 0.07210325185665874,
+    "beam_only_bending_stress_example_MPa": 5.597014925373134,
+    "comparison_4040": {
+      "model": "MISUMI HFSL8-4040（軽量タイプ・比較用、購入対象外）",
+      "bending_stiffness_ratio_to_selected": 2.8134328358208953,
+      "same_load_deflection_mm": 0.025628211535258013,
+      "same_stock_lengths_mass_kg": 2.7940000000000005,
+      "extra_mass_kg": 1.122,
+      "note_ja": "同じ材長・同じEを仮定した梁単体の比較。4040は未採用。"
+    },
     "note_ja": "接合部・取付板・ねじれ・アームモーメントを含まない。"
   },
   "stopping_examples": {
@@ -68,7 +109,7 @@
         85.0
       ],
       "front_edge_margin_mm": 90.0,
-      "worst_sampled_caster_support_margin_mm": 47.543563630140405,
+      "worst_sampled_caster_support_margin_mm": 79.38015972597648,
       "front_tip": {
         "restoring_Nm": 4.4145,
         "overturning_Nm": 0.0,
@@ -100,7 +141,7 @@
         115.0
       ],
       "front_edge_margin_mm": 92.85714285714286,
-      "worst_sampled_caster_support_margin_mm": 45.91905606432703,
+      "worst_sampled_caster_support_margin_mm": 77.56339479015193,
       "front_tip": {
         "restoring_Nm": 6.3765,
         "overturning_Nm": 0.0,
@@ -144,7 +185,7 @@
         133.22222222222223
       ],
       "front_edge_margin_mm": 83.99999999999999,
-      "worst_sampled_caster_support_margin_mm": 50.955029518348475,
+      "worst_sampled_caster_support_margin_mm": 83.19536609120799,
       "front_tip": {
         "restoring_Nm": 7.41636,
         "overturning_Nm": 0.0,
@@ -296,7 +337,7 @@
         85.0
       ],
       "front_edge_margin_mm": 90.0,
-      "worst_sampled_caster_support_margin_mm": 47.543563630140405,
+      "worst_sampled_caster_support_margin_mm": 79.38015972597648,
       "front_tip": {
         "restoring_Nm": 5.2974,
         "overturning_Nm": 0.0,
@@ -328,7 +369,7 @@
         111.25
       ],
       "front_edge_margin_mm": 92.5,
-      "worst_sampled_caster_support_margin_mm": 46.1221195100537,
+      "worst_sampled_caster_support_margin_mm": 77.79049040713,
       "front_tip": {
         "restoring_Nm": 7.259399999999999,
         "overturning_Nm": 0.0,
@@ -372,7 +413,7 @@
         128.4
       ],
       "front_edge_margin_mm": 84.6,
-      "worst_sampled_caster_support_margin_mm": 50.61388292952767,
+      "worst_sampled_caster_support_margin_mm": 82.81384545468484,
       "front_tip": {
         "restoring_Nm": 8.29926,
         "overturning_Nm": 0.0,
@@ -510,7 +551,7 @@
     }
   },
   "unverified": [
-    "部品の入手性・実寸・総質量",
+    "選定部品の未公開寸法・連続定格・実測総質量と注文時の在庫納期（第一案CADは6kg目標未達）",
     "部屋の通路・収納場所・旋回空間",
     "構造・接合部・支持軸の強度",
     "保持・非常停止・タイヤ摩擦",

@@ -1,0 +1,10 @@
+{
+  "observed_purchase_subtotal_jpy": 24409.0,
+  "materials_and_additional_hardware_allowance_jpy": 5900,
+  "shipping_budget_jpy": 3850,
+  "self_fabrication_cash_budget_jpy": 34159.0,
+  "outsourced_fabrication_cash_budget_jpy": 40159.0,
+  "self_fabrication_with_10pct_contingency_jpy": 37575,
+  "outsourced_with_10pct_contingency_jpy": 44175,
+  "note_ja": "機械骨格のみ。電池、ドライバ、制御基板、センサー、非常停止回路、保護ガード、アームは別。未発注。 合計は見積枠を含む試算で、支払確定額ではない。"
+}

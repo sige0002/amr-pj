@@ -1,0 +1,12 @@
+{
+  "step_shape_valid": true,
+  "solids": 219,
+  "volume_mm3": 1855030.8418025512,
+  "native_sum_volume_mm3": 1855030.8418024743,
+  "volume_matches": true,
+  "bbox_LWH_mm": [
+    460.00000000000006,
+    394.0,
+    115.6
+  ]
+}

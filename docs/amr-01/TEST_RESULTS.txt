@@ -1,29 +1,47 @@
 test_2kg_forward_pick_is_not_stable_in_examples (test_check_design.DesignTests.test_2kg_forward_pick_is_not_stable_in_examples) ... ok
 test_budget_overrun_rejected (test_check_design.DesignTests.test_budget_overrun_rejected) ... ok
-test_calculation_baseline_unchanged (test_check_design.DesignTests.test_calculation_baseline_unchanged) ... ok
 test_clockwise_polygon_rejected (test_check_design.DesignTests.test_clockwise_polygon_rejected) ... ok
 test_cosmetic_exterior_not_required_but_guards_required (test_check_design.DesignTests.test_cosmetic_exterior_not_required_but_guards_required) ... ok
+test_current_layout_baseline (test_check_design.DesignTests.test_current_layout_baseline) ... ok
+test_current_wheel_and_caster_envelopes_fit (test_check_design.DesignTests.test_current_wheel_and_caster_envelopes_fit) ... ok
 test_drive_calculation (test_check_design.DesignTests.test_drive_calculation) ... ok
-test_frame_2020 (test_check_design.DesignTests.test_frame_2020) ... ok
+test_frame_3030_and_stock_spares (test_check_design.DesignTests.test_frame_3030_and_stock_spares) ... ok
+test_frame_must_fit_body (test_check_design.DesignTests.test_frame_must_fit_body) ... ok
+test_frame_stock_and_mass_list_must_agree (test_check_design.DesignTests.test_frame_stock_and_mass_list_must_agree) ... ok
 test_front_moment_ratio (test_check_design.DesignTests.test_front_moment_ratio) ... ok
 test_generated_images_are_excluded (test_check_design.DesignTests.test_generated_images_are_excluded) ... ok
+test_insufficient_stock_quantity_rejected (test_check_design.DesignTests.test_insufficient_stock_quantity_rejected) ... ok
 test_internal_structure_is_prioritized (test_check_design.DesignTests.test_internal_structure_is_prioritized) ... ok
+test_invalid_command_rpm_cap_rejected (test_check_design.DesignTests.test_invalid_command_rpm_cap_rejected) ... ok
 test_invalid_geometry_rejected (test_check_design.DesignTests.test_invalid_geometry_rejected) ... ok
 test_invalid_mass (test_check_design.DesignTests.test_invalid_mass) ... ok
 test_json_is_strictly_serializable (test_check_design.DesignTests.test_json_is_strictly_serializable) ... ok
 test_mass_budget (test_check_design.DesignTests.test_mass_budget) ... ok
+test_missing_stock_length_rejected (test_check_design.DesignTests.test_missing_stock_length_rejected) ... ok
 test_no_case_is_operation_approval (test_check_design.DesignTests.test_no_case_is_operation_approval) ... ok
 test_nonfinite_rejected (test_check_design.DesignTests.test_nonfinite_rejected) ... ok
 test_offset_pivot_sweep (test_check_design.DesignTests.test_offset_pivot_sweep) ... ok
 test_parameter_change_affects_results (test_check_design.DesignTests.test_parameter_change_affects_results) ... ok
+test_purchase_cost_includes_spares_but_vehicle_mass_does_not (test_check_design.DesignTests.test_purchase_cost_includes_spares_but_vehicle_mass_does_not) ... ok
 test_saved_result_matches_current_config (test_check_design.DesignTests.test_saved_result_matches_current_config) ... ok
+test_selected_motor_does_not_claim_both_later_maxima (test_check_design.DesignTests.test_selected_motor_does_not_claim_both_later_maxima) ... ok
 test_signed_support_distances (test_check_design.DesignTests.test_signed_support_distances) ... ok
 test_small_current_requirements (test_check_design.DesignTests.test_small_current_requirements) ... ok
+test_stock_length_includes_both_end_members (test_check_design.DesignTests.test_stock_length_includes_both_end_members) ... ok
 test_stopping_examples (test_check_design.DesignTests.test_stopping_examples) ... ok
 test_weighted_cg (test_check_design.DesignTests.test_weighted_cg) ... ok
 test_zero_overturning_ratio_is_null (test_check_design.DesignTests.test_zero_overturning_ratio_is_null) ... ok
 
 ----------------------------------------------------------------------
-Ran 24 tests in 0.091s
+Ran 33 tests in 0.065s
 
 OK
+
+2026-09-20: First CAD validation (FreeCAD 1.1.3)
+217 valid shapes; 67 primary parts / 2211 pairs: no nominal overlaps.
+CAD/BOM installed counts and 40 M6 slot nuts match.
+Frame 460x300; mechanical envelope 460x394x115.6 mm.
+Three wheels touch Z=0; non-wheel drive hardware ground clearance 26.2 mm.
+Hub-bolt / shaft-collar minimum nominal gap 0.8 mm.
+Mass target NOT met: 4.730 kg mechanical + 2.05 kg electrical budget = 6.780 kg.
+Continuous motor rating and received-component dimensional tolerances remain unverified.

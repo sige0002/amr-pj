@@ -1,0 +1,32 @@
+{
+  "checked_on": "2026-09-20",
+  "currency": "JPY",
+  "all_amounts_include_tax": true,
+  "scope": "機械骨格のみ。電池、ドライバ、制御基板、センサー、非常停止回路、保護ガード、アームは別。未発注。",
+  "items": [
+    {"id":"F01","name":"MISUMI NFSL6-3030-400 4本組","packs":1,"pieces_per_pack":4,"used":4,"pack_price_jpy":1952,"price_kind":"observed","url":"https://www.amazon.co.jp/dp/B0DKF2CCW3","note":"切断不要。左右外周2本と内部2本。"},
+    {"id":"F02","name":"MISUMI NFSL6-3030-300 4本組","packs":1,"pieces_per_pack":4,"used":2,"pack_price_jpy":1467,"price_kind":"observed","url":"https://www.amazon.co.jp/dp/B0DKDZ8G9G","note":"切断不要。前後各1本、予備2本も購入費に含む。"},
+    {"id":"F03","name":"3030用28mmアングル20個 / M6溝ナット40 / M6x12ボルト40 / ワッシャ40 セット","packs":1,"pieces_per_pack":20,"used":8,"pack_price_jpy":2580,"price_kind":"observed","url":"https://www.amazon.co.jp/dp/B0D4F38VX2","note":"アングル8個使用。M6ナットは接合16、ガセット8、車軸板8、キャスター板4、トレイ4で40個使用。溝8用だがミスミ6シリーズへの実嵌合は受入確認。"},
+    {"id":"D01","name":"DFRobot FIT0185 / 12V 83rpm 131:1 エンコーダ付き","packs":2,"pieces_per_pack":1,"used":2,"pack_price_jpy":3019.5,"price_kind":"observed","url":"https://www.digikey.jp/ja/products/detail/dfrobot/FIT0185/6588527","note":"税別2745円。在庫106表示。45kgfcmは拘束トルクで連続値ではない。送料を別に計上。"},
+    {"id":"D02","name":"100mm金属ホイール＋ネオプレンタイヤ / 穴8mm / 幅25.4mm","packs":2,"pieces_per_pack":1,"used":2,"pack_price_jpy":2605,"price_kind":"observed","url":"https://www.amazon.co.jp/dp/B0B23WBLBK","note":"約300g/個。ハブなし。PCD24の取付穴加工を別途見込む。許容輪荷重は非公表。"},
+    {"id":"D03","name":"uxcell 8mmフランジハブ H13 / 胴16 / フランジ32 / PCD24 2個組","packs":1,"pieces_per_pack":2,"used":2,"pack_price_jpy":1341,"price_kind":"observed","url":"https://www.amazon.co.jp/dp/B07PTPFX35","note":"M4止めねじ2本/個付属。車輪側4穴は既存穴に合うと仮定せず現物確認して加工。"},
+    {"id":"D04","name":"uxcell C45クロムメッキ軸 8x100mm 2本組","packs":1,"pieces_per_pack":2,"used":2,"pack_price_jpy":828,"price_kind":"observed","url":"https://www.amazon.co.jp/dp/B0G3Y7811K","note":"切断不要。止めねじ部の浅い平面加工を見込む。直径公差は受入確認。"},
+    {"id":"D05","name":"uxcell KP08 軸受 8mm 2個組","packs":2,"pieces_per_pack":2,"used":4,"pack_price_jpy":849,"price_kind":"observed","url":"https://www.amazon.co.jp/dp/B0DSKB5QQN","note":"左右2個ずつ。L55、取付ピッチ42、軸心高15をモデル化。受入時に高さ・足厚を確認。"},
+    {"id":"D06","name":"uxcell ジョーカップリング 6→8mm / D20 L25","packs":2,"pieces_per_pack":1,"used":2,"pack_price_jpy":999,"price_kind":"observed","url":"https://www.amazon.co.jp/dp/B0CWNQJWPH","note":"軸端間に2mmの隙間。許容連続トルク・許容偏心は非公表、負荷試験が必要。"},
+    {"id":"D07","name":"PATIKIL 分割軸カラー 内8 外25 幅8 4個組","packs":1,"pieces_per_pack":4,"used":4,"pack_price_jpy":923,"price_kind":"observed","url":"https://www.amazon.co.jp/dp/B0DDXP5HL6","note":"外側KP08の両側で軸を保持。実機では軸受を締め付けないよう軸方向隙間を調整。"},
+    {"id":"C01","name":"ハンマーキャスター 420G-R50","packs":1,"pieces_per_pack":1,"used":1,"pack_price_jpy":373,"price_kind":"observed","url":"https://www.tanaka-km.com/view/item/000000036665","note":"径50 幅20 高さ65、座59x47、穴ピッチ46x35、トレール16、許容荷重300N。個人購入可。本州送料650円別。"},
+    {"id":"P01","name":"A5052板 t4 200x200mm 素材予算","packs":1,"pieces_per_pack":1,"used":1,"pack_price_jpy":1500,"price_kind":"allowance","url":null,"note":"軸受支持板84x108を2枚（回転して配置）、キャスター板80x170を1枚切り出す。切りしろを含め200角に配置可。販売価格・加工見積は未取得。"},
+    {"id":"P02","name":"アルミ不等辺アングル 40x20x3 L200mm 素材予算","packs":1,"pieces_per_pack":1,"used":1,"pack_price_jpy":600,"price_kind":"allowance","url":null,"note":"L50を2個切り出してモーター台。内Rを含む実断面と取付孔位置は要確認。切断費は加工枠へ。"},
+    {"id":"P03","name":"A5052板 t3 150x150mm 素材予算","packs":1,"pieces_per_pack":1,"used":1,"pack_price_jpy":500,"price_kind":"allowance","url":null,"note":"60x60直角三角ガセット4枚。"},
+    {"id":"P04","name":"A5052板 t2 200x200mm 素材予算","packs":1,"pieces_per_pack":1,"used":1,"pack_price_jpy":800,"price_kind":"allowance","url":null,"note":"200x180機器トレイ1枚。"},
+    {"id":"P05","name":"アルミパイプ 外12 内7 長500mm 素材・スペーサ予算","packs":1,"pieces_per_pack":1,"used":1,"pack_price_jpy":700,"price_kind":"allowance","url":null,"note":"L40を8個、L6を4個。合計344mm、切りしろを含め500mm以内。入手時の内径違いは再確認。"},
+    {"id":"H01","name":"追加ねじ・ナット・ワッシャ類 一式予算","packs":1,"pieces_per_pack":1,"used":1,"pack_price_jpy":1800,"price_kind":"allowance","url":null,"note":"必要数量はfasteners.csv。販売単位の余りも含めた予算。セット付属M6部品と二重計上しない。"}
+  ],
+  "shipping": [
+    {"name":"DigiKey モーター2個を単独注文","amount_jpy":2200,"kind":"allowance","note":"税別商品小計5490円で6000円未満。掲載送料2000円に消費税10%を保守的に加算。実決済で確認。"},
+    {"name":"タナカ金物 本州配送","amount_jpy":650,"kind":"observed_condition","note":"本州・4900円未満の送料。北海道/九州/四国850円、沖縄3200円。"},
+    {"name":"Amazon・素材の追加送料枠","amount_jpy":1000,"kind":"allowance","note":"住所・販売者別の最終送料は未取得。Amazonフレームは同一販売者3000円以上送料無料表示。"}
+  ],
+  "fabrication": {"outsourced_increment_allowance_jpy":6000,"note":"切断、穴あけ、皿もみ、バリ取り、軸の止めねじ用平面加工、車輪のハブ穴加工の外注追加枠。正式見積ではない。工具を持っていて自分で加工する場合はこの外注費を除く。工具新規購入費と自分の作業時間は含まない。"},
+  "contingency_fraction":0.1
+}

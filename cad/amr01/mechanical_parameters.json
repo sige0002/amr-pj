@@ -1,0 +1,37 @@
+{
+  "design": "AMR01_FirstDesign_A",
+  "status": "first_concept_with_selected_components_not_fabrication_release",
+  "units": "mm",
+  "frame_bottom_z": 75,
+  "frame_top_z": 105,
+  "internal_rail_y": [-65, 65],
+  "wheel_hub": {
+    "asin": "B07PTPFX35",
+    "bore_mm": 8,
+    "flange_diameter_mm": 32,
+    "bolt_pcd_mm": 24,
+    "bolt_clearance_diameter_mm": 3.2,
+    "note": "Check supplier drawing and received wheel web before machining. Existing wheel bolt pattern is not specified by seller."
+  },
+  "selected_motor": {
+    "model": "DFRobot FIT0185",
+    "voltage_V": 12,
+    "gear_ratio": 131,
+    "no_load_rpm": 83,
+    "no_load_rpm_tolerance_fraction": 0.1,
+    "stall_torque_kgfcm": 45,
+    "stall_current_A": 7,
+    "no_load_current_A": 0.35,
+    "continuous_torque_Nm": null,
+    "planned_wheel_rpm_cap": 65,
+    "mass_each_kg": 0.205,
+    "note": "Stall values are not operating ratings. 65 rpm is a command cap pending load/thermal tests, not guaranteed loaded speed."
+  },
+  "unverified_interfaces": [
+    "FIT0185 gearbox L dimension and encoder/cable protrusion: shared supplier drawing shows L24 and 12mm encoder; verify 131:1 unit.",
+    "Wheel web thickness/cavity and hub hole pattern: outer diameter100,width25.4,bore8 known; other shape details provisional.",
+    "KP08 vendor tolerances and mounting foot thickness.",
+    "Generic 3030 nut/bracket fit to MISUMI series6 slot8; check nut profile and screw bottoming.",
+    "Wheel/hub/coupling continuous torque and allowable wheel load are unpublished."
+  ]
+}

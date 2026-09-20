@@ -30,10 +30,10 @@ class DesignTests(unittest.TestCase):
         self.assertFalse(any(p.suffix.lower() in image_suffixes for p in self.root.rglob("*")))
         self.assertNotIn("!" + "[", (self.root / "DESIGN.ja.md").read_text(encoding="utf-8"))
 
-    def test_calculation_baseline_unchanged(self):
-        self.assertEqual(self.config["calculation_baseline_version"], "0.2")
+    def test_current_layout_baseline(self):
+        self.assertEqual(self.config["calculation_baseline_version"], "0.4.0")
         self.assertEqual(self.config["geometry"]["drive_axle_x_mm"], 90)
-        self.assertEqual(self.config["geometry"]["drive_track_mm"], 240)
+        self.assertEqual(self.config["geometry"]["drive_track_mm"], 354)
 
     def test_weighted_cg(self):
         self.assertEqual(cg([(1, 0, 0, 0), (3, 4, 0, 0)]), (4, 3, 0, 0))
@@ -65,11 +65,11 @@ class DesignTests(unittest.TestCase):
         self.assertEqual(r["cargo_limit_kg"], 2)
         self.assertEqual(r["gross_mass_calculation_limit_kg"], 10)
         self.assertIsNone(r["arm_object_lifting_limit_kg"])
-        self.assertEqual(self.result["envelope_LW_mm"], [350, 280])
+        self.assertEqual(self.result["envelope_LW_mm"], [500, 400])
 
     def test_mass_budget(self):
-        self.assertEqual(self.result["mass_budget_sum_kg"], 5)
-        self.assertEqual(self.result["max_config_mass_at_target_kg"], 9)
+        self.assertEqual(self.result["mass_budget_sum_kg"], 6)
+        self.assertEqual(self.result["max_config_mass_at_target_kg"], 10)
         self.assertEqual(self.result["max_config_mass_at_upper_budget_kg"], 10)
 
     def test_drive_calculation(self):
@@ -79,12 +79,71 @@ class DesignTests(unittest.TestCase):
         self.assertLess(d["wheel_torque_with_margin_Nm"], d["continuous_torque_target_range_Nm"][0])
 
     def test_offset_pivot_sweep(self):
-        self.assertAlmostEqual(self.result["turning"]["body_only_pivot_swept_diameter_mm"], 599.4163828, places=6)
-        self.assertGreater(self.result["turning"]["body_only_pivot_swept_diameter_mm"], math.hypot(350, 280))
+        self.assertAlmostEqual(self.result["turning"]["body_only_pivot_swept_diameter_mm"], 788.923316932641, places=6)
+        self.assertGreater(self.result["turning"]["body_only_pivot_swept_diameter_mm"], math.hypot(500, 400))
 
-    def test_frame_2020(self):
-        self.assertAlmostEqual(self.result["frame"]["extrusion_total_m"], 1.68)
-        self.assertAlmostEqual(self.result["frame"]["extrusion_mass_kg"], 0.84)
+    def test_selected_motor_does_not_claim_both_later_maxima(self):
+        d = self.result['drive']
+        self.assertTrue(d['initial_combined_command_fits_cap'])
+        self.assertFalse(d['later_combined_command_fits_cap'])
+        self.assertFalse(d['selected_motor_continuous_rating_verified'])
+
+    def test_invalid_command_rpm_cap_rejected(self):
+        config = copy.deepcopy(self.config)
+        config['drive']['planned_wheel_rpm_cap'] = 0
+        with self.assertRaises(ValueError):
+            evaluate(config)
+
+    def test_frame_3030_and_stock_spares(self):
+        frame = self.result["frame"]
+        self.assertEqual(self.config["geometry"]["extrusion_size_mm"], 30)
+        self.assertAlmostEqual(frame["extrusion_total_m"], 2.2)
+        self.assertAlmostEqual(frame["extrusion_mass_kg"], 1.672)
+        self.assertEqual(frame["stock_plan"]["assembled_outer_LW_mm"], [460, 300])
+        self.assertEqual([row["spare"] for row in frame["stock_plan"]["stock"]], [0, 2])
+
+    def test_purchase_cost_includes_spares_but_vehicle_mass_does_not(self):
+        self.assertEqual(self.result["frame"]["stock_plan"]["purchase_material_subtotal_incl_tax_jpy"], 3419)
+        config = copy.deepcopy(self.config)
+        config["procurement"]["frame_stock"][0]["packs"] = 2
+        result = evaluate(config)
+        self.assertEqual(result["frame"]["stock_plan"]["purchase_material_subtotal_incl_tax_jpy"], 5371)
+        self.assertEqual(result["frame"]["extrusion_mass_kg"], self.result["frame"]["extrusion_mass_kg"])
+
+    def test_stock_length_includes_both_end_members(self):
+        config = copy.deepcopy(self.config)
+        config["geometry"]["frame_length_mm"] = 400
+        with self.assertRaisesRegex(ValueError, "組立外寸"):
+            evaluate(config)
+
+    def test_missing_stock_length_rejected(self):
+        config = copy.deepcopy(self.config)
+        config["procurement"]["frame_stock"][1]["length_mm"] = 250
+        with self.assertRaisesRegex(ValueError, "定尺の購入本数"):
+            evaluate(config)
+
+    def test_insufficient_stock_quantity_rejected(self):
+        config = copy.deepcopy(self.config)
+        config["procurement"]["frame_stock"][1]["pieces_per_pack"] = 1
+        with self.assertRaisesRegex(ValueError, "定尺の購入本数"):
+            evaluate(config)
+
+    def test_frame_must_fit_body(self):
+        config = copy.deepcopy(self.config)
+        config["geometry"]["body_width_mm"] = 250
+        with self.assertRaisesRegex(ValueError, "車体外形"):
+            evaluate(config)
+
+    def test_frame_stock_and_mass_list_must_agree(self):
+        config = copy.deepcopy(self.config)
+        config["frame"]["cuts_mm_count"][1][1] = 3
+        with self.assertRaisesRegex(ValueError, "使用材一覧"):
+            evaluate(config)
+
+    def test_current_wheel_and_caster_envelopes_fit(self):
+        checks = self.result["envelope_checks_simplified"]
+        self.assertTrue(checks["wheel_rectangles_inside"])
+        self.assertTrue(checks["caster_assembly_swept_circle_inside"])
 
     def test_stopping_examples(self):
         self.assertAlmostEqual(self.result["stopping_examples"]["0.15_m_s"], 0.0525)

@@ -1,3 +1,7 @@
 # Local Python calculation/test caches
 __pycache__/
 *.py[cod]
+
+# FreeCAD automatic backups (keep the current FCStd and STEP)
+*.FCBak
+*.FCStd1

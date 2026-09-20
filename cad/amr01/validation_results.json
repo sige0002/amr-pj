@@ -1,0 +1,1029 @@
+{
+  "status": "nominal_geometry_checks_only_not_manufacturing_release",
+  "part_objects": 217,
+  "invalid_shapes": [],
+  "frame_LWH_mm": [
+    460.00000000000006,
+    300.0,
+    30.0
+  ],
+  "assembled_mechanical_LWH_mm": [
+    460.00000000000006,
+    394.0,
+    115.6
+  ],
+  "fits_500x400_plan": true,
+  "ground_contacts_z_mm": {
+    "TireL": 0.0,
+    "TireR": 0.0,
+    "CasterTire": 0.0
+  },
+  "minimum_nonwheel_noncaster_clearance_mm": 26.2,
+  "lowest_component": "BearingBolt_L169",
+  "primary_pair_count": 2211,
+  "primary_collisions": [],
+  "clearance_scan_scope": "67 primary nominal objects; fasteners excluded except specific wheel-head check. Not tolerance, swept caster, deformation or cable clearance certification.",
+  "wheel_hub_bolt_to_collar_min_gap_mm": 0.8000000000000114,
+  "selected_clearances": [
+    {
+      "a": "MotorCanL",
+      "b": "MotorCanR",
+      "mm": 42.0
+    },
+    {
+      "a": "EncoderL",
+      "b": "EncoderR",
+      "mm": 18.0
+    },
+    {
+      "a": "CouplerL",
+      "b": "MotorAngleL",
+      "mm": 2.0
+    },
+    {
+      "a": "GearboxL",
+      "b": "Rail400_3",
+      "mm": 6.5
+    },
+    {
+      "a": "TireL",
+      "b": "Rail400_4",
+      "mm": 14.300000000000011
+    }
+  ],
+  "motor_M3_thread_engagement_mm": 2,
+  "motor_M3_max_engagement_mm": 3,
+  "drive": {
+    "initial_simultaneous_outer_rpm": 38.78924273035673,
+    "later_simultaneous_outer_rpm": 77.57848546071347,
+    "command_rpm_cap_not_rating": 65,
+    "initial_command_below_cap": true,
+    "later_simultaneous_command_below_cap": false,
+    "max_abs_v_plus_half_track_abs_omega_m_s": 0.34033920413889424,
+    "max_yaw_at_v_0p3_rad_s": 0.22790510812934603,
+    "sizing_wheel_torque_with_margin_Nm": 0.5055667260010978,
+    "stall_torque_Nm_NOT_CONTINUOUS": 4.4129925,
+    "linear_estimated_rpm_at_sizing_torque_NOT_RATING": 73.49125094636098,
+    "linear_estimated_current_A_NOT_RATING": 1.1118455567072232,
+    "continuous_torque_verified": false
+  },
+  "mass": {
+    "mechanical_estimate_kg": 4.730044765621946,
+    "additional_electrical_wiring_guard_budget_kg": 2.05,
+    "estimated_base_with_electrical_budget_kg": 6.780044765621946,
+    "base_target_kg": 6.0,
+    "remaining_to_base_target_kg": 1.2699552343780542,
+    "estimated_over_target_kg": 0.7800447656219456,
+    "target_met": false,
+    "note": "Estimate, not scale measurement. Mass budget not changed to hide overrun. Old stability cases remain hypothetical 5/6 kg, not this assembled base.",
+    "breakdown": [
+      {
+        "part": "NFSL6-3030 installed 2.2 m",
+        "kg": 1.672,
+        "basis": "manufacturer 0.76 kg/m"
+      },
+      {
+        "part": "FIT0185 pair",
+        "kg": 0.41,
+        "basis": "manufacturer 205 g each"
+      },
+      {
+        "part": "wheel+tire pair",
+        "kg": 0.6,
+        "basis": "seller approximately 300 g each"
+      },
+      {
+        "part": "KP08 x4",
+        "kg": 0.148,
+        "basis": "37 g each reference KP08 supplier; selected vendor unmeasured"
+      },
+      {
+        "part": "420G-R50",
+        "kg": 0.15,
+        "basis": "engineering allowance, not a catalog mass"
+      },
+      {
+        "part": "corner angles x8",
+        "kg": 0.24,
+        "basis": "30 g each allowance; ribs omitted from CAD"
+      },
+      {
+        "part": "couplings x2",
+        "kg": 0.04,
+        "basis": "20 g each allowance"
+      },
+      {
+        "part": "plain nuts / remaining washers / grub screws",
+        "kg": 0.05,
+        "basis": "unmodeled fastener allowance"
+      },
+      {
+        "part": "JointA_NN120",
+        "kg": 0.006362667601315407,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_JointA_NN120",
+        "kg": 0.0010164484800613003,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_JointA_NN120",
+        "kg": 0.00419658785040867,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "JointB_NN120",
+        "kg": 0.006362667601315409,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_JointB_NN120",
+        "kg": 0.0010164484800613003,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_JointB_NN120",
+        "kg": 0.004196587850408669,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "JointA_NN50",
+        "kg": 0.006362667601315407,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_JointA_NN50",
+        "kg": 0.0010164484800613003,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_JointA_NN50",
+        "kg": 0.004196587850408667,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "JointB_NN50",
+        "kg": 0.006362667601315409,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_JointB_NN50",
+        "kg": 0.0010164484800613016,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_JointB_NN50",
+        "kg": 0.004196587850408669,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "JointA_N50",
+        "kg": 0.006362667601315407,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_JointA_N50",
+        "kg": 0.0010164484800613003,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_JointA_N50",
+        "kg": 0.004196587850408667,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "JointB_N50",
+        "kg": 0.006362667601315409,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_JointB_N50",
+        "kg": 0.0010164484800613016,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_JointB_N50",
+        "kg": 0.004196587850408669,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "JointA_N120",
+        "kg": 0.006362667601315407,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_JointA_N120",
+        "kg": 0.0010164484800613003,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_JointA_N120",
+        "kg": 0.004196587850408668,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "JointB_N120",
+        "kg": 0.006362667601315409,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_JointB_N120",
+        "kg": 0.0010164484800613003,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_JointB_N120",
+        "kg": 0.004196587850408669,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Gusset_N1N1",
+        "kg": 0.014302883253619517,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "GussetBolt_N1N10",
+        "kg": 0.006362667601315407,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_GussetBolt_N1N10",
+        "kg": 0.0010164484800613016,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_GussetBolt_N1N10",
+        "kg": 0.00419658785040867,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "GussetBolt_N1N11",
+        "kg": 0.006362667601315407,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_GussetBolt_N1N11",
+        "kg": 0.0010164484800613013,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_GussetBolt_N1N11",
+        "kg": 0.004196587850408669,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Gusset_N11",
+        "kg": 0.014302883253619485,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "GussetBolt_N110",
+        "kg": 0.006362667601315407,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_GussetBolt_N110",
+        "kg": 0.0010164484800613016,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_GussetBolt_N110",
+        "kg": 0.00419658785040867,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "GussetBolt_N111",
+        "kg": 0.006362667601315407,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_GussetBolt_N111",
+        "kg": 0.0010164484800613013,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_GussetBolt_N111",
+        "kg": 0.004196587850408668,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "JointA_PN120",
+        "kg": 0.006362667601315407,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_JointA_PN120",
+        "kg": 0.0010164484800612998,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_JointA_PN120",
+        "kg": 0.00419658785040867,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "JointB_PN120",
+        "kg": 0.006362667601315409,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_JointB_PN120",
+        "kg": 0.0010164484800613003,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_JointB_PN120",
+        "kg": 0.004196587850408669,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "JointA_PN50",
+        "kg": 0.006362667601315407,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_JointA_PN50",
+        "kg": 0.0010164484800613003,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_JointA_PN50",
+        "kg": 0.004196587850408667,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "JointB_PN50",
+        "kg": 0.006362667601315409,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_JointB_PN50",
+        "kg": 0.0010164484800613016,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_JointB_PN50",
+        "kg": 0.004196587850408669,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "JointA_P50",
+        "kg": 0.006362667601315407,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_JointA_P50",
+        "kg": 0.0010164484800612998,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_JointA_P50",
+        "kg": 0.004196587850408667,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "JointB_P50",
+        "kg": 0.006362667601315409,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_JointB_P50",
+        "kg": 0.0010164484800613016,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_JointB_P50",
+        "kg": 0.004196587850408669,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "JointA_P120",
+        "kg": 0.006362667601315407,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_JointA_P120",
+        "kg": 0.0010164484800612998,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_JointA_P120",
+        "kg": 0.004196587850408668,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "JointB_P120",
+        "kg": 0.006362667601315409,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_JointB_P120",
+        "kg": 0.0010164484800613003,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_JointB_P120",
+        "kg": 0.004196587850408669,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Gusset_1N1",
+        "kg": 0.014302883253619517,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "GussetBolt_1N10",
+        "kg": 0.006362667601315407,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_GussetBolt_1N10",
+        "kg": 0.0010164484800613016,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_GussetBolt_1N10",
+        "kg": 0.00419658785040867,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "GussetBolt_1N11",
+        "kg": 0.006362667601315407,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_GussetBolt_1N11",
+        "kg": 0.0010164484800613013,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_GussetBolt_1N11",
+        "kg": 0.004196587850408669,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Gusset_11",
+        "kg": 0.014302883253619485,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "GussetBolt_110",
+        "kg": 0.006362667601315407,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_GussetBolt_110",
+        "kg": 0.0010164484800613016,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_GussetBolt_110",
+        "kg": 0.00419658785040867,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "GussetBolt_111",
+        "kg": 0.006362667601315407,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_GussetBolt_111",
+        "kg": 0.0010164484800613013,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_GussetBolt_111",
+        "kg": 0.004196587850408668,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Post_56_65L",
+        "kg": 0.008058185156457818,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "CassetteBolt_L56_65",
+        "kg": 0.011985490132710417,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_CassetteBolt_L56_65",
+        "kg": 0.004196587850408665,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Post_56_135L",
+        "kg": 0.00805818515645782,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "CassetteBolt_L56_135",
+        "kg": 0.01198549013271042,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_CassetteBolt_L56_135",
+        "kg": 0.004196587850408667,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Post_124_65L",
+        "kg": 0.008058185156457816,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "CassetteBolt_L124_65",
+        "kg": 0.011985490132710417,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_CassetteBolt_L124_65",
+        "kg": 0.004196587850408668,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Post_124_135L",
+        "kg": 0.008058185156457818,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "CassetteBolt_L124_135",
+        "kg": 0.01198549013271042,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_CassetteBolt_L124_135",
+        "kg": 0.00419658785040867,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "BearingPlateL",
+        "kg": 0.08112460028352364,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "BearingBolt_L169",
+        "kg": 0.002786749763366825,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_BearingBolt_L169",
+        "kg": 0.00022017789280830998,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "BearingBolt_L1111",
+        "kg": 0.002786749763366825,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_BearingBolt_L1111",
+        "kg": 0.00022017789280830995,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "BearingBolt_L269",
+        "kg": 0.002786749763366825,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_BearingBolt_L269",
+        "kg": 0.00022017789280830976,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "BearingBolt_L2111",
+        "kg": 0.002786749763366825,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_BearingBolt_L2111",
+        "kg": 0.00022017789280830976,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "MotorAngleL",
+        "kg": 0.021609525092102164,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "MotorFaceBolt_L0",
+        "kg": 0.0008369497353474483,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "MotorFaceBolt_L1",
+        "kg": 0.0008369497353474481,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "MotorFaceBolt_L2",
+        "kg": 0.0008369497353474483,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "MotorFootBolt_L65",
+        "kg": 0.002589457744721386,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_MotorFootBolt_L65",
+        "kg": 0.00022017789280830992,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "MotorFootBolt_L105",
+        "kg": 0.002589457744721386,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_MotorFootBolt_L105",
+        "kg": 0.00022017789280830995,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "WheelShaftL",
+        "kg": 0.03945840372908779,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Collar_1L",
+        "kg": 0.009517140784784921,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "Collar_2L",
+        "kg": 0.009517140784784921,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "HubL",
+        "kg": 0.028836201445217365,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "HubBolt_L0",
+        "kg": 0.0011143916365675965,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "HubBolt_L1",
+        "kg": 0.001114391636567597,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "HubBolt_L2",
+        "kg": 0.001114391636567597,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "HubBolt_L3",
+        "kg": 0.0011143916365675965,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Post_56_65R",
+        "kg": 0.008058185156457818,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "CassetteBolt_R56_65",
+        "kg": 0.011985490132710417,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_CassetteBolt_R56_65",
+        "kg": 0.004196587850408665,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Post_56_135R",
+        "kg": 0.00805818515645782,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "CassetteBolt_R56_135",
+        "kg": 0.01198549013271042,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_CassetteBolt_R56_135",
+        "kg": 0.004196587850408667,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Post_124_65R",
+        "kg": 0.008058185156457816,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "CassetteBolt_R124_65",
+        "kg": 0.011985490132710417,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_CassetteBolt_R124_65",
+        "kg": 0.004196587850408668,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Post_124_135R",
+        "kg": 0.008058185156457818,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "CassetteBolt_R124_135",
+        "kg": 0.01198549013271042,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_CassetteBolt_R124_135",
+        "kg": 0.00419658785040867,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "BearingPlateR",
+        "kg": 0.08112460028352364,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "BearingBolt_R169",
+        "kg": 0.002786749763366825,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_BearingBolt_R169",
+        "kg": 0.00022017789280830998,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "BearingBolt_R1111",
+        "kg": 0.002786749763366825,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_BearingBolt_R1111",
+        "kg": 0.00022017789280830995,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "BearingBolt_R269",
+        "kg": 0.002786749763366825,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_BearingBolt_R269",
+        "kg": 0.00022017789280830976,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "BearingBolt_R2111",
+        "kg": 0.002786749763366825,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_BearingBolt_R2111",
+        "kg": 0.00022017789280830976,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "MotorAngleR",
+        "kg": 0.021609525092102164,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "MotorFaceBolt_R0",
+        "kg": 0.0008369497353474483,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "MotorFaceBolt_R1",
+        "kg": 0.0008369497353474481,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "MotorFaceBolt_R2",
+        "kg": 0.0008369497353474483,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "MotorFootBolt_R65",
+        "kg": 0.002589457744721386,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_MotorFootBolt_R65",
+        "kg": 0.00022017789280830992,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "MotorFootBolt_R105",
+        "kg": 0.002589457744721386,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_MotorFootBolt_R105",
+        "kg": 0.00022017789280830995,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "WheelShaftR",
+        "kg": 0.03945840372908779,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Collar_1R",
+        "kg": 0.009517140784784921,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "Collar_2R",
+        "kg": 0.009517140784784921,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "HubR",
+        "kg": 0.028836201445217365,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "HubBolt_R0",
+        "kg": 0.001114391636567597,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "HubBolt_R1",
+        "kg": 0.0011143916365675965,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "HubBolt_R2",
+        "kg": 0.0011143916365675965,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "HubBolt_R3",
+        "kg": 0.001114391636567597,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "CasterAdapter",
+        "kg": 0.143924088038608,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "CasterSpacer_0",
+        "kg": 0.001208727773468672,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "CasterFrameBolt_0",
+        "kg": 0.007250481685219882,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_CasterFrameBolt_0",
+        "kg": 0.004196587850408668,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "CasterSpacer_1",
+        "kg": 0.001208727773468672,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "CasterFrameBolt_1",
+        "kg": 0.007250481685219882,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_CasterFrameBolt_1",
+        "kg": 0.004196587850408668,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "CasterSpacer_2",
+        "kg": 0.0012087277734686723,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "CasterFrameBolt_2",
+        "kg": 0.007250481685219883,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_CasterFrameBolt_2",
+        "kg": 0.004196587850408668,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "CasterSpacer_3",
+        "kg": 0.0012087277734686725,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "CasterFrameBolt_3",
+        "kg": 0.007250481685219883,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_CasterFrameBolt_3",
+        "kg": 0.004196587850408668,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "CasterBolt_0",
+        "kg": 0.007250481685219881,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "CasterBolt_1",
+        "kg": 0.007250481685219881,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "CasterBolt_2",
+        "kg": 0.007250481685219882,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "CasterBolt_3",
+        "kg": 0.007250481685219882,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "EquipmentTray",
+        "kg": 0.19366102200965193,
+        "basis": "simplified CAD volume x aluminum density"
+      },
+      {
+        "part": "TrayBolt_0",
+        "kg": 0.005918760559363169,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_TrayBolt_0",
+        "kg": 0.0010164484800613011,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_TrayBolt_0",
+        "kg": 0.004196587850408668,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "TrayBolt_1",
+        "kg": 0.005918760559363168,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_TrayBolt_1",
+        "kg": 0.0010164484800613013,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_TrayBolt_1",
+        "kg": 0.004196587850408668,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "TrayBolt_2",
+        "kg": 0.00591876055936317,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_TrayBolt_2",
+        "kg": 0.0010164484800613007,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_TrayBolt_2",
+        "kg": 0.004196587850408666,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "TrayBolt_3",
+        "kg": 0.00591876055936317,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "Washer_TrayBolt_3",
+        "kg": 0.0010164484800613007,
+        "basis": "simplified CAD volume x steel density"
+      },
+      {
+        "part": "SlotNut_TrayBolt_3",
+        "kg": 0.004196587850408666,
+        "basis": "simplified CAD volume x steel density"
+      }
+    ]
+  },
+  "unverified_interfaces": [
+    "FIT0185 gearbox L dimension and encoder/cable protrusion: shared supplier drawing shows L24 and 12mm encoder; verify 131:1 unit.",
+    "Wheel web thickness/cavity and hub hole pattern: outer diameter100,width25.4,bore8 known; other shape details provisional.",
+    "KP08 vendor tolerances and mounting foot thickness.",
+    "Generic 3030 nut/bracket fit to MISUMI series6 slot8; check nut profile and screw bottoming.",
+    "Wheel/hub/coupling continuous torque and allowable wheel load are unpublished."
+  ]
+}
