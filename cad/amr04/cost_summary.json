@@ -1,0 +1,486 @@
+{
+  "version": "0.7.0",
+  "design": "AMR01_DDSM115_A3",
+  "checked_on": "2026-09-20",
+  "currency": "JPY",
+  "all_amounts_include_tax": true,
+  "status": "planning_budget_with_unquoted_items_not_purchase_quote",
+  "source_bom": "bom.json",
+  "scope_ja": "A3機械骨格、DDSM115×2（タイヤ・ドライバー内蔵）、PLAクレードル/前後トレイ、電池固定ストラップ、USB-RS485BとUSBケーブルの購入予算。A2全費目から撤去/置換/追加を漏れなく比較する。電池・主計算機・センサー・電源変換/保護・非常停止・車内電源/RS485配線・コネクター・完成用ガード・荷台・アームは未選定別予算で、無料ではない。未発注。購入部品は新規購入単位全体、PLAのみ既所有材の消費分を計上。",
+  "price_kinds_ja": {
+    "observed_carried_from_A2": "A2 cad/amr03/bom.jsonにある2026-09-20確認価格を引継ぎ。この作業では現価格・在庫・配送を再照合していない。",
+    "observed_2026_09_20": "2026-09-20の国内一次販売ページ確認値を引継ぎ。税込表示価格。在庫未確保・注文未実施で、最終請求額ではない。",
+    "manufacturer_catalog_reference": "2026年7月の公式価格表を2026-09-20に確認した第二案の記録から引継ぎ。税換算参考値で、個人購入・請求単価・送料は未確定。",
+    "allowance": "購入単位・見積が未確定の材料/部品/消費分予算。式・本相当・枚相当は実在販売パックや加工済み価格を意味しない。"
+  },
+  "purchase_subtotals_by_price_kind_jpy": {
+    "observed_carried_from_A2": 3792,
+    "manufacturer_catalog_reference": 1540.0,
+    "allowance": 9300,
+    "observed_2026_09_20": 30382
+  },
+  "parts_and_consumables_subtotal_jpy": 45014.0,
+  "shipping_budget_jpy": 2810,
+  "self_fabrication_cash_budget_jpy": 47824.0,
+  "outsourced_fabrication_cash_budget_jpy": 53824.0,
+  "contingency_fraction": 0.1,
+  "self_fabrication_with_10pct_contingency_jpy": 52607,
+  "outsourced_with_10pct_contingency_jpy": 59207,
+  "fabrication": {
+    "outsourced_increment_allowance_jpy": 6000,
+    "kind": "allowance_not_quotation",
+    "note": "A2と同額6000円の未見積追加枠。今回の金属部材は上アングル2・下アングル2・キー支持板2・キャスター板1・ガセット4。旧車軸の平面加工・ハブ穴加工・KP08支持板は不要だが、角材脚切り詰め・切断・局所fillet逃げ・キー異形輪郭・取付孔/ケーブル孔/導入溝・バリ取り等が必要。実断面、つかみ代、工具アクセス、要求公差と配送を含め要見積。6000円は上限・実現可能性・価格保証ではない。素材4200円はP01/P02/P03/P05/P06に別計上済みで加工枠と重複しない。自加工は既所有工具と自己作業が前提、新品工具・自己作業時間は含めない。"
+  },
+  "shipping": [
+    {
+      "id": "S02",
+      "name": "タナカ金物 本州配送",
+      "amount_jpy": 650,
+      "kind": "observed_condition_carried_from_A",
+      "note": "Aの本州・4900円未満条件を引継ぎ。配送先・決済条件で更新。"
+    },
+    {
+      "id": "S03",
+      "name": "Amazon・素材の追加送料枠",
+      "amount_jpy": 1000,
+      "kind": "allowance_carried_from_A",
+      "note": "A2の1000円枠を維持し、Amazon・新しい板/アングル/鋼板の配送費へ充当。DDSM115、USB-RS485B、キャスター、純正金具の送料は他行で計上し、重複加算しない。素材購入先・口数は未定で、複数配送や最低送料が判明したら更新する。"
+    },
+    {
+      "id": "S04",
+      "name": "純正接合部・追加溝ナットの送料追加枠",
+      "amount_jpy": 500,
+      "kind": "allowance",
+      "note": "個人購入経路未確定のため500円を仮置き。実送料や購入可能性を確認した数字ではない。複数配送や手数料が生じる場合は枠を差替え、同じ費用を二重加算しない。"
+    },
+    {
+      "id": "S05",
+      "name": "エレファイン USB-RS485B 通常配送",
+      "amount_jpy": 660,
+      "kind": "observed_standard_condition_2026_09_20",
+      "url": "https://www.elefine.jp/hpgen/HPB/shop/business.html",
+      "note": "通常送料660円を適用した予算。大型品・配送先・決済方法などの最終条件は注文時確認。代引等の任意手数料は含まない。"
+    },
+    {
+      "id": "S06",
+      "name": "スイッチサイエンス DDSM115×2 標準配送",
+      "amount_jpy": 0,
+      "kind": "observed_free_shipping_condition_2026_09_20",
+      "url": "https://www.switch-science.com/policies/shipping-policy",
+      "note": "同時注文の商品小計25982円が8000円以上の標準送料無料条件に該当。注文を分割する場合や配送規定変更時は更新。商品ページの送料区分650円を重複加算しない。"
+    }
+  ],
+  "quantity_checks": {
+    "slot_nuts_total": 44,
+    "slot_nuts_included_in_sets": 16,
+    "slot_nuts_additional": 28,
+    "slot_nuts_by_use": {
+      "frame_joints": 16,
+      "gussets": 8,
+      "upper_motor_mounts": 4,
+      "caster_plate": 4,
+      "low_battery_cradle": 4,
+      "rear_electronics_tray": 4,
+      "front_electronics_tray": 4
+    },
+    "DDSM115_used": 2,
+    "separate_wheels_used": 0,
+    "kp08_used": 0,
+    "separate_axles_used": 0,
+    "couplers_used": 0,
+    "drive_spacers_used": 0,
+    "caster_spacers_used": 0,
+    "upper_angle_stock_mm": [
+      40,
+      40,
+      5,
+      200
+    ],
+    "upper_angle_finished_mm": [
+      40,
+      30,
+      5,
+      80
+    ],
+    "upper_angle_finished_count": 2,
+    "lower_angle_stock_mm": [
+      50,
+      50,
+      5,
+      150
+    ],
+    "lower_angle_finished_mm": [
+      50,
+      40,
+      5,
+      60
+    ],
+    "lower_angle_finished_count": 2,
+    "key_plate_blank_mm": [
+      60,
+      33,
+      5
+    ],
+    "key_plate_count": 2,
+    "caster_t4_plate_blank_LW_mm_count": [
+      [
+        80,
+        170,
+        1
+      ]
+    ],
+    "gusset_t3_right_triangle_leg_mm_count": [
+      [
+        60,
+        60,
+        4
+      ]
+    ],
+    "printed_parts_planned_LWH_mm_count": [
+      [
+        130,
+        160,
+        37,
+        1
+      ],
+      [
+        85,
+        180,
+        4.4,
+        1
+      ],
+      [
+        145,
+        170,
+        4.4,
+        1
+      ]
+    ],
+    "printed_parts_CAD_solid_PLA_mass_kg": 0.24548495706839338,
+    "PLA_consumption_allowance_g": 300,
+    "battery_straps_planned": 2,
+    "fastener_source": "fasteners.csv",
+    "fastener_status_ja": "CAD使用数量と付属/追加数を照合済み。購入パック・単価・実部品適合は未確認。ストラップ2本はCAD未モデル化の仮枠。",
+    "fasteners": [
+      {
+        "specification": "HNTT6-6 slot nut",
+        "installed_quantity": 44,
+        "included_in_HBLFSN6_SET": 16,
+        "additional_installed_quantity": 28
+      },
+      {
+        "specification": "M2.5x10 socket screw",
+        "installed_quantity": 6,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 6
+      },
+      {
+        "specification": "M4 plain hex nut",
+        "installed_quantity": 12,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 12
+      },
+      {
+        "specification": "M4 washer OD9 ID4.5 t0.8",
+        "installed_quantity": 12,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 12
+      },
+      {
+        "specification": "M4x16 socket screw",
+        "installed_quantity": 12,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 12
+      },
+      {
+        "specification": "M6 large washer OD18 ID6.6 t1.6",
+        "installed_quantity": 12,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 12
+      },
+      {
+        "specification": "M6 plain hex nut",
+        "installed_quantity": 4,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 4
+      },
+      {
+        "specification": "M6 washer OD13 ID6.6 t1.6",
+        "installed_quantity": 12,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 12
+      },
+      {
+        "specification": "M6x10 socket screw",
+        "installed_quantity": 8,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 8
+      },
+      {
+        "specification": "M6x12 socket screw",
+        "installed_quantity": 36,
+        "included_in_HBLFSN6_SET": 16,
+        "additional_installed_quantity": 20
+      },
+      {
+        "specification": "M6x16 socket screw",
+        "installed_quantity": 4,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 4
+      }
+    ]
+  },
+  "CAD_quantity_crosscheck": {
+    "status": "passed",
+    "sources": [
+      "fasteners.csv",
+      "design_parameters.json",
+      "validation_results.json"
+    ],
+    "fastener_specifications": 11,
+    "general_fasteners_additional_installed": 102,
+    "printed_parts_count": 3,
+    "printed_solid_PLA_mass_kg": 0.24548495706839338,
+    "note_ja": "CAD数量の整合確認。販売単位、実部品適合、加工性の保証ではない。"
+  },
+  "comparison_with_A2": {
+    "source_bom": "../amr03/bom.json",
+    "source_summary": "../amr03/cost_summary.json",
+    "A2_self_fabrication_jpy": 34519.0,
+    "A2_outsourced_jpy": 40519.0,
+    "A3_self_fabrication_jpy": 47824.0,
+    "A3_outsourced_jpy": 53824.0,
+    "self_difference_jpy": 13305.0,
+    "outsourced_difference_jpy": 13305.0,
+    "all_purchase_items_covered_once": true,
+    "A2_purchase_row_count": 18,
+    "A3_purchase_row_count": 16,
+    "delta_breakdown": [
+      {
+        "group_ja": "3030定尺",
+        "A2_item_ids": [
+          "F01",
+          "F02"
+        ],
+        "A3_item_ids": [
+          "F01",
+          "F02"
+        ],
+        "A2_jpy": 3419,
+        "A3_jpy": 3419,
+        "difference_jpy": 0
+      },
+      {
+        "group_ja": "接合金具・溝ナット",
+        "A2_item_ids": [
+          "F03",
+          "F04"
+        ],
+        "A3_item_ids": [
+          "F03",
+          "F04"
+        ],
+        "A2_jpy": 2740.0,
+        "A3_jpy": 2740.0,
+        "difference_jpy": 0.0
+      },
+      {
+        "group_ja": "駆動系（A3はドライバー内蔵）",
+        "A2_item_ids": [
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06",
+          "D07"
+        ],
+        "A3_item_ids": [
+          "D01"
+        ],
+        "A2_jpy": 18037.0,
+        "A3_jpy": 25982,
+        "difference_jpy": 7945.0
+      },
+      {
+        "group_ja": "キャスター",
+        "A2_item_ids": [
+          "C01"
+        ],
+        "A3_item_ids": [
+          "C01"
+        ],
+        "A2_jpy": 373,
+        "A3_jpy": 373,
+        "difference_jpy": 0
+      },
+      {
+        "group_ja": "金属素材",
+        "A2_item_ids": [
+          "P01",
+          "P02",
+          "P03"
+        ],
+        "A3_item_ids": [
+          "P01",
+          "P02",
+          "P03",
+          "P05",
+          "P06"
+        ],
+        "A2_jpy": 2600,
+        "A3_jpy": 4200,
+        "difference_jpy": 1600
+      },
+      {
+        "group_ja": "既所有PLA消費分",
+        "A2_item_ids": [
+          "P04"
+        ],
+        "A3_item_ids": [
+          "P04"
+        ],
+        "A2_jpy": 500,
+        "A3_jpy": 600,
+        "difference_jpy": 100
+      },
+      {
+        "group_ja": "追加一般締結材",
+        "A2_item_ids": [
+          "H01"
+        ],
+        "A3_item_ids": [
+          "H01"
+        ],
+        "A2_jpy": 2000,
+        "A3_jpy": 2300,
+        "difference_jpy": 300
+      },
+      {
+        "group_ja": "電池固定ストラップ",
+        "A2_item_ids": [
+          "H02"
+        ],
+        "A3_item_ids": [
+          "H02"
+        ],
+        "A2_jpy": 500,
+        "A3_jpy": 500,
+        "difference_jpy": 0
+      },
+      {
+        "group_ja": "USB-RS485通信インターフェース",
+        "A2_item_ids": [],
+        "A3_item_ids": [
+          "E01"
+        ],
+        "A2_jpy": 0,
+        "A3_jpy": 4400,
+        "difference_jpy": 4400
+      },
+      {
+        "group_ja": "USBケーブル",
+        "A2_item_ids": [],
+        "A3_item_ids": [
+          "E02"
+        ],
+        "A2_jpy": 0,
+        "A3_jpy": 500,
+        "difference_jpy": 500
+      },
+      {
+        "group_ja": "部材配送",
+        "A2_jpy": 4350,
+        "A3_jpy": 2810,
+        "difference_jpy": -1540
+      }
+    ],
+    "shipping_delta_breakdown": [
+      {
+        "id": "S01",
+        "name": "DigiKey モーター2個を単独注文",
+        "A2_jpy": 2200,
+        "A3_jpy": 0,
+        "difference_jpy": -2200
+      },
+      {
+        "id": "S02",
+        "name": "タナカ金物 本州配送",
+        "A2_jpy": 650,
+        "A3_jpy": 650,
+        "difference_jpy": 0
+      },
+      {
+        "id": "S03",
+        "name": "Amazon・素材の追加送料枠",
+        "A2_jpy": 1000,
+        "A3_jpy": 1000,
+        "difference_jpy": 0
+      },
+      {
+        "id": "S04",
+        "name": "純正接合部・追加溝ナットの送料追加枠",
+        "A2_jpy": 500,
+        "A3_jpy": 500,
+        "difference_jpy": 0
+      },
+      {
+        "id": "S05",
+        "name": "エレファイン USB-RS485B 通常配送",
+        "A2_jpy": 0,
+        "A3_jpy": 660,
+        "difference_jpy": 660
+      },
+      {
+        "id": "S06",
+        "name": "スイッチサイエンス DDSM115×2 標準配送",
+        "A2_jpy": 0,
+        "A3_jpy": 0,
+        "difference_jpy": 0
+      }
+    ],
+    "note_ja": "A2の全費目を対応付け、新設USB通信/ケーブルとその配送も省かず比較する。両案とも購入単位全体、PLAは既所有材の消費分。A2旧額は外付けドライバー/速度制御MCUなし、A3はドライバー内蔵とUSB通信を含むため、差額は同一完成機能の最終差額ではない。電源・主計算機・電池等は両案とも別の未見積費用。寿命・交換タイヤ等の維持費は初期BOM額に含まない。"
+  },
+  "mass_estimate_comparison": {
+    "sources": [
+      "../amr03/validation_results.json",
+      "validation_results.json"
+    ],
+    "A2": {
+      "mechanical_estimate_kg": 4.632664191352814,
+      "additional_electrical_budget_kg": 2.05,
+      "estimated_complete_base_kg": 6.6826641913528135
+    },
+    "A3": {
+      "mechanical_estimate_kg": 4.988539029519019,
+      "additional_electrical_budget_kg": 2.0999999999999996,
+      "estimated_complete_base_kg": 7.088539029519018
+    },
+    "difference": {
+      "mechanical_estimate_kg": 0.3558748381662049,
+      "additional_electrical_budget_kg": 0.04999999999999982,
+      "estimated_complete_base_kg": 0.40587483816620473
+    },
+    "note_ja": "CAD体積・部品公称値・未選定電装の質量枠による推計。実測重量・実重心・搭載適合の保証ではない。電装の質量枠は価格の計上を意味しない。"
+  },
+  "initial_purchase_only": true,
+  "lifetime_maintenance_cost_included": false,
+  "maintenance_note_ja": "適合するDDSM115交換タイヤ単品のSKU・供給・寿命は未確認。初期BOM額に維持費は含まない。必要ならユニット12991円/輪（確認時単価、将来価格保証なし）の交換費を用いて保守費を再比較する。M0601C_111用タイヤ4620円は互換未確認で選定対象外。",
+  "excluded_unpriced_items_ja": [
+    "電池・アダプター（予約空間のみ）",
+    "主計算機・センサー・冷却",
+    "電源変換・過電流保護・非常停止",
+    "車内の電源/RS485配線・コネクター・終端部品",
+    "必要に応じた電源スイッチ/状態表示等の制御器",
+    "完成用ガード・荷台・将来アーム",
+    "新規工具・自己作業費・印刷電気代",
+    "実機試験で追加する対策部品",
+    "鋼製キー支持板の防錆処理（方法未選定）",
+    "タイヤ・一体輪ユニット等の交換/保守費（寿命と単品供給未確認）"
+  ],
+  "not_selected_ja": [
+    "M0601C_111用交換タイヤ4620円はDDSM115との互換未確認のため選定BOMには入れない。",
+    "外付けモータードライバーMDD10Aは旧A2との費用比較専用。DDSM115には内蔵されるため追加しない。"
+  ],
+  "budget_note_ja": "参考価格と未見積の仮枠を含む試算で支払確定額ではない。10%予備費は別表示し通常合計へ重複加算しない。電池・電源保護・主計算機・車内配線等は別予算で未選定を0円と扱わない。純正接合部の個人購入経路と最終送料は未確定。材料は購入単位、切りしろ、つかみ代と加工方法を確定して更新し、机上の寸法配置で製作可能性を保証しない。 初期購入予算のみ。DDSM115 CADは比較候補として保存。摩耗したゴムだけを交換でき、適合補修品を個人で買えることを優先要件とし、補修調達確認前に購入仕様を確定しない。"
+}

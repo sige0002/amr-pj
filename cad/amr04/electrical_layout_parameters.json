@@ -1,0 +1,531 @@
+{
+  "version": "0.1.0-A3-electrical-study",
+  "base_document": "AMR01_DDSM115_A3",
+  "layout_document": "AMR01_ElectricalLayout_A3",
+  "status": "packaging_reservations_not_verified_electrical_hardware",
+  "power_basis": "DDSM115 contains its driver and encoder. 18 V battery proposal; pack, protection, DC/DC and regeneration handling remain unselected.",
+  "runtime_planning_hours": 1,
+  "runtime_status": "Planning assumption only; capacity and endurance not verified",
+  "battery_body_xyz_LWH_mm": [
+    -90,
+    -40,
+    35,
+    120,
+    80,
+    65
+  ],
+  "battery_terminals": "Upper/front terminal access assumed; pack and adapter not selected",
+  "zones_xyz_LWH_mm": {
+    "MainFuseAndDistribution": [
+      70,
+      -35,
+      106,
+      45,
+      70,
+      30
+    ],
+    "PowerConditioning": [
+      130,
+      -35,
+      106,
+      50,
+      50,
+      30
+    ],
+    "ComputerAndControl": [
+      -185,
+      -45,
+      107,
+      75,
+      80,
+      40
+    ],
+    "USBRS485": [
+      -180,
+      45,
+      111,
+      65,
+      37,
+      25
+    ],
+    "EmergencyStopAccess": [
+      155,
+      45,
+      111,
+      30,
+      30,
+      40
+    ]
+  },
+  "zone_status": {
+    "default": "Reservation only: selected hardware, mounting, cooling and connectors not verified",
+    "USBRS485": "Devantech USB-RS485B selected as a price reference; these reservation dimensions are not verified product dimensions"
+  },
+  "service_xyz_LWH_mm": {
+    "BatteryUpperRemoval": [
+      -100,
+      -50,
+      69,
+      140,
+      100,
+      121
+    ],
+    "BatteryConnectorAccess": [
+      35,
+      -25,
+      75,
+      25,
+      50,
+      65
+    ]
+  },
+  "service_cylinders": {
+    "TireRemovalOutboardL": {
+      "base_center_mm": [
+        90,
+        203.5,
+        50.35
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "radius_mm": 55,
+      "length_mm": 80
+    },
+    "TireRemovalOutboardR": {
+      "base_center_mm": [
+        90,
+        -203.5,
+        50.35
+      ],
+      "axis": [
+        0,
+        -1,
+        0
+      ],
+      "radius_mm": 55,
+      "length_mm": 80
+    }
+  },
+  "hidden_services": [
+    "BatteryUpperRemoval",
+    "TireRemovalOutboardL",
+    "TireRemovalOutboardR"
+  ],
+  "upper_removal_note": "Disconnect battery lead and release straps before lifting. Height 190 mm is a temporary service reservation, not the operating envelope.",
+  "tire_removal_note": "Tool/working cylinders begin at the outer cover faces. Not a simulated tire-extraction sweep or verified fit. Radius 55 at axis height 50.35 reaches 4.65 mm below the ground plane: support/lift chassis for this service reservation.",
+  "connection_nodes": {
+    "DDSMConnectionL": {
+      "xyz_LWH_mm": [
+        133,
+        91,
+        106,
+        18,
+        18,
+        20
+      ],
+      "point_mm": [
+        142,
+        100,
+        115
+      ],
+      "route_names": [
+        "DDSMFixedHarnessL",
+        "FusedPowerL",
+        "RS485_USB_to_L",
+        "RS485_L_to_R"
+      ],
+      "note": "Reference termination area for separate power and RS485 connectors, not a selected combined connector"
+    },
+    "DDSMConnectionR": {
+      "xyz_LWH_mm": [
+        133,
+        -109,
+        106,
+        18,
+        18,
+        20
+      ],
+      "point_mm": [
+        142,
+        -100,
+        115
+      ],
+      "route_names": [
+        "DDSMFixedHarnessR",
+        "FusedPowerR",
+        "RS485_L_to_R"
+      ],
+      "note": "Reference termination area for separate power and RS485 connectors, not a selected combined connector"
+    }
+  },
+  "fixed_harness_budget_mm": {
+    "nominal_total": 175,
+    "tolerance": 10,
+    "minimum_total": 165,
+    "note": "Published total harness length includes unverified end details. Residual length is arithmetic only; not a guarantee including connector bodies, installation slack or strain relief.",
+    "source": "https://www.waveshare.com/img/devkit/accessories/DDSM115/DDSM115-details-size.jpg"
+  },
+  "cable_routes": [
+    {
+      "name": "DDSMFixedHarnessL",
+      "kind": "integrated_motor_harness",
+      "radius_mm": 3,
+      "bend_radius_mm": 8,
+      "points_mm": [
+        [
+          90,
+          138,
+          50.35
+        ],
+        [
+          90,
+          115,
+          50.35
+        ],
+        [
+          142,
+          115,
+          50.35
+        ],
+        [
+          142,
+          100,
+          115
+        ]
+      ],
+      "allowed_service": [],
+      "allowed_equipment_connections": [
+        "DDSMConnectionL"
+      ],
+      "fixed_supplied_harness": true
+    },
+    {
+      "name": "DDSMFixedHarnessR",
+      "kind": "integrated_motor_harness",
+      "radius_mm": 3,
+      "bend_radius_mm": 8,
+      "points_mm": [
+        [
+          90,
+          -138,
+          50.35
+        ],
+        [
+          90,
+          -115,
+          50.35
+        ],
+        [
+          142,
+          -115,
+          50.35
+        ],
+        [
+          142,
+          -100,
+          115
+        ]
+      ],
+      "allowed_service": [],
+      "allowed_equipment_connections": [
+        "DDSMConnectionR"
+      ],
+      "fixed_supplied_harness": true
+    },
+    {
+      "name": "BatteryToFuse",
+      "kind": "power",
+      "radius_mm": 3,
+      "bend_radius_mm": 8,
+      "points_mm": [
+        [
+          35,
+          0,
+          115
+        ],
+        [
+          55,
+          0,
+          115
+        ],
+        [
+          55,
+          25,
+          156
+        ],
+        [
+          90,
+          25,
+          156
+        ],
+        [
+          90,
+          25,
+          136
+        ]
+      ],
+      "allowed_service": [
+        "BatteryConnectorAccess",
+        "BatteryUpperRemoval"
+      ],
+      "allowed_equipment_connections": [
+        "MainFuseAndDistribution_RESERVED"
+      ]
+    },
+    {
+      "name": "FuseToPowerConditioning",
+      "kind": "power",
+      "radius_mm": 3,
+      "bend_radius_mm": 8,
+      "points_mm": [
+        [
+          115,
+          0,
+          122
+        ],
+        [
+          130,
+          0,
+          122
+        ]
+      ],
+      "allowed_service": [],
+      "allowed_equipment_connections": [
+        "MainFuseAndDistribution_RESERVED",
+        "PowerConditioning_RESERVED"
+      ]
+    },
+    {
+      "name": "FusedPowerL",
+      "kind": "power",
+      "radius_mm": 3,
+      "bend_radius_mm": 8,
+      "points_mm": [
+        [
+          105,
+          35,
+          122
+        ],
+        [
+          105,
+          80,
+          122
+        ],
+        [
+          142,
+          80,
+          122
+        ],
+        [
+          142,
+          100,
+          115
+        ]
+      ],
+      "allowed_service": [],
+      "allowed_equipment_connections": [
+        "MainFuseAndDistribution_RESERVED",
+        "DDSMConnectionL"
+      ]
+    },
+    {
+      "name": "FusedPowerR",
+      "kind": "power",
+      "radius_mm": 3,
+      "bend_radius_mm": 8,
+      "points_mm": [
+        [
+          105,
+          -35,
+          122
+        ],
+        [
+          105,
+          -80,
+          122
+        ],
+        [
+          142,
+          -80,
+          122
+        ],
+        [
+          142,
+          -100,
+          115
+        ]
+      ],
+      "allowed_service": [],
+      "allowed_equipment_connections": [
+        "MainFuseAndDistribution_RESERVED",
+        "DDSMConnectionR"
+      ]
+    },
+    {
+      "name": "LogicSupply",
+      "kind": "power",
+      "radius_mm": 2,
+      "bend_radius_mm": 10,
+      "points_mm": [
+        [
+          130,
+          -20,
+          128
+        ],
+        [
+          122,
+          -20,
+          158
+        ],
+        [
+          122,
+          -100,
+          158
+        ],
+        [
+          -145,
+          -100,
+          158
+        ],
+        [
+          -145,
+          -45,
+          138
+        ]
+      ],
+      "allowed_service": [],
+      "allowed_equipment_connections": [
+        "PowerConditioning_RESERVED",
+        "ComputerAndControl_RESERVED"
+      ]
+    },
+    {
+      "name": "ComputerToUSB",
+      "kind": "signal",
+      "radius_mm": 2,
+      "bend_radius_mm": 8,
+      "points_mm": [
+        [
+          -150,
+          35,
+          120
+        ],
+        [
+          -150,
+          45,
+          120
+        ]
+      ],
+      "allowed_service": [],
+      "allowed_equipment_connections": [
+        "ComputerAndControl_RESERVED",
+        "USBRS485_RESERVED"
+      ]
+    },
+    {
+      "name": "RS485_USB_to_L",
+      "kind": "signal",
+      "radius_mm": 2,
+      "bend_radius_mm": 8,
+      "points_mm": [
+        [
+          -115,
+          65,
+          122
+        ],
+        [
+          -95,
+          100,
+          143
+        ],
+        [
+          122,
+          100,
+          143
+        ],
+        [
+          142,
+          100,
+          115
+        ]
+      ],
+      "allowed_service": [],
+      "allowed_equipment_connections": [
+        "USBRS485_RESERVED",
+        "DDSMConnectionL"
+      ]
+    },
+    {
+      "name": "RS485_L_to_R",
+      "kind": "signal",
+      "radius_mm": 2,
+      "bend_radius_mm": 8,
+      "points_mm": [
+        [
+          142,
+          100,
+          115
+        ],
+        [
+          200,
+          100,
+          151
+        ],
+        [
+          200,
+          -100,
+          151
+        ],
+        [
+          142,
+          -100,
+          115
+        ]
+      ],
+      "allowed_service": [],
+      "allowed_equipment_connections": [
+        "DDSMConnectionL",
+        "DDSMConnectionR"
+      ]
+    },
+    {
+      "name": "StopSignal",
+      "kind": "signal",
+      "radius_mm": 2,
+      "bend_radius_mm": 8,
+      "points_mm": [
+        [
+          155,
+          60,
+          132
+        ],
+        [
+          130,
+          60,
+          150
+        ],
+        [
+          95,
+          60,
+          150
+        ],
+        [
+          95,
+          35,
+          130
+        ]
+      ],
+      "allowed_service": [],
+      "allowed_equipment_connections": [
+        "EmergencyStopAccess_RESERVED",
+        "MainFuseAndDistribution_RESERVED"
+      ]
+    }
+  ],
+  "electrical_topology_note": "Power is fused distribution to each integrated motor. RS485 is one bus from USB to left then right termination area; no separate encoder leads and no external motor driver. End resistors, reference ground, stop circuit and pin assignment not selected.",
+  "cost_status": "Front electronics tray is a physical A3 part. All electrical boxes and cable envelopes remain packaging references. USB-RS485B price selection is in COST_REVIEW.ja.md; actual dimensions and electrical compatibility are unverified. Wire, connectors, clamps, protection and battery costs are not implied to be zero.",
+  "zone_mounting_note": "USBRS485 and emergency-stop envelopes are raised to z111 to clear physical deck fastener heads at z109.6. Their actual standoffs/support/panel are unselected, unmodeled and unpriced electrical items."
+}

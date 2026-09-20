@@ -1,6 +1,6 @@
 # FreeCAD + Codex MCP
 
-AMRの現行案は[第一案改A2](amr03/README.ja.md)です。同軸駆動を維持し、駆動部・キャスターのスペーサー12本を撤去しました。FCStd・STEP・実CAD画面・PLA部品STL・費用・検証結果を収録しています。[元の第一案](amr01/README.ja.md)と[旧第二案B・却下したベルト案C](amr02/README.ja.md)は比較履歴です。
+AMRの現行案は[DDSM115の第一案改A3](amr04/README.ja.md)です。3030フレームと低床電池を維持し、モーター・継手・外付け車軸/軸受を一体ホイールへ置き換えました。FCStd・STEP・実CAD画面・PLA部品STL・費用・検証結果を収録しています。タイヤ補修部品の調達と実機検証は未完了。[A2](amr03/README.ja.md)、[第一案A](amr01/README.ja.md)、[第二案B・ベルト案C](amr02/README.ja.md)は比較履歴です。
 
 導入日: 2026-09-20。Ubuntu 24.04 / ARM64。
 
