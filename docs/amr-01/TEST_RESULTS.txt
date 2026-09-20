@@ -2,11 +2,11 @@ test_2kg_forward_pick_is_not_stable_in_examples (test_check_design.DesignTests.t
 test_budget_overrun_rejected (test_check_design.DesignTests.test_budget_overrun_rejected) ... ok
 test_calculation_baseline_unchanged (test_check_design.DesignTests.test_calculation_baseline_unchanged) ... ok
 test_clockwise_polygon_rejected (test_check_design.DesignTests.test_clockwise_polygon_rejected) ... ok
-test_concept_figure_is_present_not_manufacturing_drawing (test_check_design.DesignTests.test_concept_figure_is_present_not_manufacturing_drawing) ... ok
 test_cosmetic_exterior_not_required_but_guards_required (test_check_design.DesignTests.test_cosmetic_exterior_not_required_but_guards_required) ... ok
 test_drive_calculation (test_check_design.DesignTests.test_drive_calculation) ... ok
 test_frame_2020 (test_check_design.DesignTests.test_frame_2020) ... ok
 test_front_moment_ratio (test_check_design.DesignTests.test_front_moment_ratio) ... ok
+test_generated_images_are_excluded (test_check_design.DesignTests.test_generated_images_are_excluded) ... ok
 test_internal_structure_is_prioritized (test_check_design.DesignTests.test_internal_structure_is_prioritized) ... ok
 test_invalid_geometry_rejected (test_check_design.DesignTests.test_invalid_geometry_rejected) ... ok
 test_invalid_mass (test_check_design.DesignTests.test_invalid_mass) ... ok
@@ -24,6 +24,6 @@ test_weighted_cg (test_check_design.DesignTests.test_weighted_cg) ... ok
 test_zero_overturning_ratio_is_null (test_check_design.DesignTests.test_zero_overturning_ratio_is_null) ... ok
 
 ----------------------------------------------------------------------
-Ran 24 tests in 0.056s
+Ran 24 tests in 0.091s
 
 OK

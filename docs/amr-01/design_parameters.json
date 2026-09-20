@@ -179,6 +179,7 @@
     "cosmetic_exterior_required": false,
     "functional_guards_required": true,
     "concept_image_is_manufacturing_drawing": false,
-    "note_ja": "外面をよくする必要はない。化粧外装は不要。内部構造、支持、配置、配線、放熱、保守を優先し、機能上の保護ガードは残す。寸法・質量・計算条件はv0.2から変更なし。"
+    "note_ja": "外面をよくする必要はない。化粧外装は不要。内部構造、支持、配置、配線、放熱、保守を優先し、機能上の保護ガードは残す。寸法・質量・計算条件はv0.2から変更なし。",
+    "concept_images_included": false
   }
 }

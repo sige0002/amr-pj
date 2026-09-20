@@ -23,12 +23,12 @@ class DesignTests(unittest.TestCase):
         self.assertFalse(policy["cosmetic_exterior_required"])
         self.assertTrue(policy["functional_guards_required"])
 
-    def test_concept_figure_is_present_not_manufacturing_drawing(self):
+    def test_generated_images_are_excluded(self):
+        self.assertFalse(self.config["design_policy"]["concept_images_included"])
         self.assertFalse(self.config["design_policy"]["concept_image_is_manufacturing_drawing"])
-        image = self.root / "assets/amr_internal_structure.webp"
-        self.assertTrue(image.is_file())
-        self.assertGreater(image.stat().st_size, 0)
-        self.assertIn("assets/amr_internal_structure.webp", (self.root / "DESIGN.ja.md").read_text(encoding="utf-8"))
+        image_suffixes = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"}
+        self.assertFalse(any(p.suffix.lower() in image_suffixes for p in self.root.rglob("*")))
+        self.assertNotIn("!" + "[", (self.root / "DESIGN.ja.md").read_text(encoding="utf-8"))
 
     def test_calculation_baseline_unchanged(self):
         self.assertEqual(self.config["calculation_baseline_version"], "0.2")

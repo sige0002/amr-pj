@@ -17,11 +17,12 @@ def main() -> None:
     stem = "amr_v" + version.replace(".", "_")
     output = ROOT / "archives" / (stem + ".zip")
     output.parent.mkdir(parents=True, exist_ok=True)
-    files = sorted(p for p in SOURCE.rglob("*") if p.is_file()
-                   and "__pycache__" not in p.parts
-                   and p.suffix in {".md", ".json", ".py", ".txt", ".webp"})
-    if not (SOURCE / "assets" / "amr_internal_structure.webp").is_file():
-        raise FileNotFoundError("The internal structure figure is required")
+    # Explicit text-only allowlist: never include generated images or caches.
+    names = {"DESIGN.ja.md", "README.ja.md", "CHANGELOG.ja.md", "TEST_RESULTS.txt",
+             "check_design.py", "test_check_design.py", "design_parameters.json", "calculation_results.json"}
+    files = [SOURCE / name for name in sorted(names)]
+    if any(not path.is_file() for path in files):
+        raise FileNotFoundError("A required text/code file is missing")
     with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
         for path in files:
             info = zipfile.ZipInfo(stem + "/" + path.relative_to(SOURCE).as_posix(), (2026, 9, 20, 0, 0, 0))
