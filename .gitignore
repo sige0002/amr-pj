@@ -1,0 +1,3 @@
+# Local Python calculation/test caches
+__pycache__/
+*.py[cod]
