@@ -1,0 +1,174 @@
+{
+  "version": "0.5.0",
+  "design": "AMR01_SecondDesign_B",
+  "updated": "2026-09-20",
+  "status": "reviewed_concept_not_manufacturing_release",
+  "requirements": {
+    "base_upper_budget_kg": 10,
+    "cargo_limit_kg": 2,
+    "arm_system_upper_budget_kg": 2,
+    "gross_mass_calculation_limit_kg": 14,
+    "body_envelope_target_mm": [
+      500,
+      420,
+      180
+    ],
+    "minimum_ground_clearance_mm": 25,
+    "frame_stock_must_remain_mm": [
+      300,
+      400
+    ],
+    "cost_target_ja": "第一案の自加工34159円・外注40159円と同範囲で比較する。ユーザー指定の絶対予算ではない。",
+    "printer": "Bambu Lab P1S",
+    "printer_build_volume_mm": [
+      256,
+      256,
+      256
+    ],
+    "printed_material": "PLA"
+  },
+  "geometry": {
+    "frame_outer_LW_mm": [
+      460,
+      300
+    ],
+    "frame_bottom_z_mm": 75,
+    "frame_top_z_mm": 105,
+    "drive_axle_x_mm": 90,
+    "drive_track_mm": 340,
+    "wheel_diameter_mm": 100,
+    "wheel_width_mm": 25.4,
+    "wheel_axis_z_mm": 50,
+    "wheel_shaft_y_start_end_mm": [
+      98,
+      198
+    ],
+    "bearing_support_y_mm": [
+      115,
+      192
+    ],
+    "wheel_center_y_mm": 170,
+    "inner_wall_y_mm": [
+      105,
+      109
+    ],
+    "outer_wall_y_mm": [
+      198,
+      202
+    ],
+    "side_wall_x_mm": [
+      34,
+      146
+    ],
+    "side_wall_z_mm": [
+      25,
+      105
+    ],
+    "bridge_x_mm": [
+      30,
+      150
+    ],
+    "bridge_y_mm": [
+      50,
+      202
+    ],
+    "bridge_z_mm": [
+      105,
+      109
+    ],
+    "caster_pivot_xy_mm": [
+      -150,
+      0
+    ],
+    "caster_trail_mm": 16,
+    "caster_assembly_sweep_radius_mm": 45
+  },
+  "drive": {
+    "selected_motor": "DFRobot FIT0185",
+    "no_load_rpm": 83,
+    "stall_torque_kgfcm": 45,
+    "continuous_torque_verified": false,
+    "wheel_command_cap_rpm": 65,
+    "initial_v_m_s": 0.15,
+    "initial_omega_rad_s": 0.3,
+    "later_v_m_s": 0.3,
+    "later_omega_rad_s": 0.6,
+    "acceleration_m_s2": 0.2,
+    "slope_for_sizing_deg": 5,
+    "rolling_resistance_assumed": 0.03,
+    "torque_margin": 1.5
+  },
+  "shaft_comparison": {
+    "diameter_mm": 8,
+    "elastic_modulus_assumed_N_mm2": 205000,
+    "new_bearing_y_mm": [
+      115,
+      192
+    ],
+    "new_load_y_mm": 170,
+    "old_bearing_y_mm": [
+      118,
+      145
+    ],
+    "old_load_y_mm": 177,
+    "comparison_wheel_loads_N": [
+      100,
+      200
+    ],
+    "note_ja": "剛支持・集中荷重による配置比較。実機荷重定格ではない。軸溝・ねじ平面・疲労・支持板変形を含まない。"
+  },
+  "mass_electrical_budget_kg": {
+    "battery_and_adapter": 0.75,
+    "power_conversion_protection_emergency_stop": 0.4,
+    "onboard_compute_sensors_cooling": 0.5,
+    "wiring_guards": 0.4
+  },
+  "stability": {
+    "base_mass_cases_kg": [
+      6.78,
+      8,
+      8.1,
+      10
+    ],
+    "base_cg_xyz_mm": [
+      0,
+      0,
+      85
+    ],
+    "caster_orientation_samples": 720,
+    "note_ja": "重心は未測定の仮定。8.10kgはBのCAD積上げと電装仮枠を足した丸め値。8kgは感度ケース、6.78kgはAの積上げ値。いずれも重心位置は未測定。"
+  },
+  "bearing": {
+    "model": "KFL08 8mm flange, procurement pending",
+    "reference_source": "https://www.motedis.fr/en/Flange-Bearing-8mm-die-cast-KFL08",
+    "outer_LH_mm": [
+      48,
+      27
+    ],
+    "reference_total_width_mm": 12,
+    "reference_mount_pitch_mm": 36,
+    "wall_mount_slots_pitch_mm": 37,
+    "wall_mount_slot_width_length_mm": [
+      4.5,
+      6.5
+    ],
+    "note_ja": "参考供給元は穴間隔36mm。他社37mm品もあるため壁板は長穴で調整する。販売品の定格・実寸を確認してから製作。"
+  },
+  "frame_joints": {
+    "model": "MISUMI HBLFSN6-SET",
+    "count": 8,
+    "included_bolts": "CBM6-12 x16",
+    "included_nuts": "HNTT6-6 x16",
+    "source": "https://jp.misumi-ec.com/vona2/detail/110300442340/",
+    "procurement_status": "Individual purchase channel and delivered price unverified"
+  },
+  "unverified": [
+    "FIT0185 continuous torque, temperature and minimum-voltage performance",
+    "KFL08 exact selected vendor dimensions and allowable load",
+    "Wheel web, hub pattern and load rating",
+    "MISUMI connector individual purchasing channel and shipping",
+    "Machining quotations and real assembled mass",
+    "Support plate/joint compliance, proof load, braking and dynamic tipping",
+    "Tire runout/tolerances versus 4.3mm side-restraint gap and 5mm upper gap"
+  ]
+}

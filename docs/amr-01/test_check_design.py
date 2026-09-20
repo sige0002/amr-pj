@@ -31,7 +31,7 @@ class DesignTests(unittest.TestCase):
         self.assertNotIn("!" + "[", (self.root / "DESIGN.ja.md").read_text(encoding="utf-8"))
 
     def test_current_layout_baseline(self):
-        self.assertEqual(self.config["calculation_baseline_version"], "0.4.0")
+        self.assertEqual(self.config["calculation_baseline_version"], "0.4.1")
         self.assertEqual(self.config["geometry"]["drive_axle_x_mm"], 90)
         self.assertEqual(self.config["geometry"]["drive_track_mm"], 354)
 
@@ -63,18 +63,37 @@ class DesignTests(unittest.TestCase):
     def test_small_current_requirements(self):
         r = self.config["requirements"]
         self.assertEqual(r["cargo_limit_kg"], 2)
-        self.assertEqual(r["gross_mass_calculation_limit_kg"], 10)
+        self.assertEqual(r["base_upper_budget_kg"], 10)
+        self.assertEqual(r["gross_mass_calculation_limit_kg"], 14)
         self.assertIsNone(r["arm_object_lifting_limit_kg"])
         self.assertEqual(self.result["envelope_LW_mm"], [500, 400])
 
     def test_mass_budget(self):
-        self.assertEqual(self.result["mass_budget_sum_kg"], 6)
-        self.assertEqual(self.result["max_config_mass_at_target_kg"], 10)
-        self.assertEqual(self.result["max_config_mass_at_upper_budget_kg"], 10)
+        self.assertAlmostEqual(self.result["estimated_base_mass_kg"], 6.78)
+        self.assertAlmostEqual(self.result["base_mass_margin_to_upper_budget_kg"], 3.22)
+        self.assertTrue(self.result["estimated_base_within_upper_budget"])
+        self.assertAlmostEqual(self.result["max_config_mass_at_estimate_kg"], 10.78)
+        self.assertEqual(self.result["max_config_mass_at_upper_budget_kg"], 14)
+
+    def test_mass_overrun_is_reported_without_clamping_estimate(self):
+        config = copy.deepcopy(self.config)
+        config["mass_estimate_kg"]["battery_and_adapter"] += 4
+        result = evaluate(config)
+        self.assertAlmostEqual(result["estimated_base_mass_kg"], 10.78)
+        self.assertAlmostEqual(result["base_mass_margin_to_upper_budget_kg"], -0.78)
+        self.assertFalse(result["estimated_base_within_upper_budget"])
+
+    def test_drive_sizes_for_upper_mass_independently_of_estimate(self):
+        config = copy.deepcopy(self.config)
+        config["mass_estimate_kg"]["battery_and_adapter"] += 1
+        self.assertEqual(evaluate(config)["drive"], self.result["drive"])
+        config["requirements"]["base_upper_budget_kg"] = 6
+        config["requirements"]["gross_mass_calculation_limit_kg"] = 10
+        self.assertAlmostEqual(self.result["drive"]["force_N"] / evaluate(config)["drive"]["force_N"], 1.4)
 
     def test_drive_calculation(self):
         d = self.result["drive"]
-        self.assertAlmostEqual(d["wheel_torque_with_margin_Nm"], 0.505566726, places=8)
+        self.assertAlmostEqual(d["wheel_torque_with_margin_Nm"], 0.7077934164, places=8)
         self.assertLess(d["outer_wheel_rpm"], d["loaded_wheel_speed_target_rpm"])
         self.assertLess(d["wheel_torque_with_margin_Nm"], d["continuous_torque_target_range_Nm"][0])
 
@@ -158,6 +177,14 @@ class DesignTests(unittest.TestCase):
 
     def test_no_case_is_operation_approval(self):
         self.assertTrue(all(not case["operation_approved"] for case in self.result["stability_cases"].values()))
+
+    def test_estimated_mass_stability_is_not_replaced_by_upper_limit(self):
+        cases = self.result["stability_cases"]
+        estimated = cases["base_6.78kg/forward_object_2kg_NOT_APPROVED"]
+        upper = cases["base_10kg/forward_object_2kg_NOT_APPROVED"]
+        self.assertGreater(estimated["front_edge_margin_mm"], 0)
+        self.assertLess(estimated["front_edge_margin_mm"], 6)
+        self.assertGreater(upper["front_edge_margin_mm"], estimated["front_edge_margin_mm"])
 
     def test_parameter_change_affects_results(self):
         config = copy.deepcopy(self.config)

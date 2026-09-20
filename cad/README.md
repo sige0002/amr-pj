@@ -1,6 +1,6 @@
 # FreeCAD + Codex MCP
 
-AMRの第一案は[amr01/README.ja.md](amr01/README.ja.md)へ。FCStd・STEP・実CAD画面・部品表・費用と検証結果を収録しています。
+AMRの第二案は[amr02/README.ja.md](amr02/README.ja.md)へ。下置きの箱形車輪支持と上置き比較案、FCStd・STEP・実CAD画面・PLA部品STL・費用・検証結果を収録しています。[第一案](amr01/README.ja.md)も比較用に残しています。
 
 導入日: 2026-09-20。Ubuntu 24.04 / ARM64。
 

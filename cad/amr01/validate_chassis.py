@@ -57,7 +57,8 @@ for o in parts:
     rho = 7.85e-6 if steel else 2.70e-6
     mass.append({'part': o.Name, 'kg': o.Shape.Volume * rho, 'basis': 'simplified CAD volume x ' + ('steel' if steel else 'aluminum') + ' density'})
 mechanical_kg = sum(i['kg'] for i in mass)
-electrical_budget = sum(cfg['mass_budget_target_kg'][k] for k in ('battery_and_adapter', 'power_conversion_protection_emergency_stop', 'onboard_compute_sensors_cooling', 'wiring_covers_handles'))
+electrical_budget = sum(cfg['mass_estimate_kg'][k] for k in ('battery_and_adapter', 'power_conversion_protection_emergency_stop', 'onboard_compute_sensors_cooling', 'wiring_covers_handles'))
+base_limit = cfg['requirements']['base_upper_budget_kg']
 
 # Specific hardware clearance including fasteners omitted by primary pair scan.
 wheel_fastener_gap = min(doc.getObject('Collar_2' + side).Shape.distToShape(doc.getObject('HubBolt_' + side + str(j)).Shape)[0] for side in ('L', 'R') for j in range(4))
@@ -81,6 +82,7 @@ result = {
     'motor_M3_thread_engagement_mm': 2,
     'motor_M3_max_engagement_mm': 3,
     'drive': {
+        'sizing_gross_mass_kg': cfg['requirements']['gross_mass_calculation_limit_kg'],
         'initial_simultaneous_outer_rpm': initial_rpm,
         'later_simultaneous_outer_rpm': later_rpm,
         'command_rpm_cap_not_rating': cap,
@@ -91,6 +93,7 @@ result = {
         'sizing_wheel_torque_with_margin_Nm': torque,
         'stall_torque_Nm_NOT_CONTINUOUS': stall,
         'linear_estimated_rpm_at_sizing_torque_NOT_RATING': no_load * (1 - torque/stall),
+        'linear_estimated_rpm_with_low_no_load_tolerance_NOT_RATING': no_load * (1 - motor['no_load_rpm_tolerance_fraction']) * (1 - torque/stall),
         'linear_estimated_current_A_NOT_RATING': motor['no_load_current_A']+(motor['stall_current_A']-motor['no_load_current_A'])*torque/stall,
         'continuous_torque_verified': False
     },
@@ -98,22 +101,23 @@ result = {
         'mechanical_estimate_kg': mechanical_kg,
         'additional_electrical_wiring_guard_budget_kg': electrical_budget,
         'estimated_base_with_electrical_budget_kg': mechanical_kg + electrical_budget,
-        'base_target_kg': cfg['requirements']['base_target_kg'],
-        'remaining_to_base_target_kg': cfg['requirements']['base_target_kg'] - mechanical_kg,
-        'estimated_over_target_kg': max(0, mechanical_kg + electrical_budget-cfg['requirements']['base_target_kg']),
-        'target_met': mechanical_kg + electrical_budget <= cfg['requirements']['base_target_kg'],
-        'note': 'Estimate, not scale measurement. Mass budget not changed to hide overrun. Old stability cases remain hypothetical 5/6 kg, not this assembled base.',
+        'base_upper_budget_kg': base_limit,
+        'remaining_after_mechanical_only_kg': base_limit - mechanical_kg,
+        'remaining_after_electrical_budget_kg': base_limit - mechanical_kg - electrical_budget,
+        'estimated_over_upper_budget_kg': max(0, mechanical_kg + electrical_budget - base_limit),
+        'estimated_base_within_upper_budget': mechanical_kg + electrical_budget <= base_limit,
+        'note': 'User revised the base limit to 10 kg including battery and electronics. Estimate, not scale measurement. All stability CG positions remain hypothetical, including the 6.78 kg estimate and 10 kg upper-limit cases.',
         'breakdown': mass
     },
     'unverified_interfaces': mech['unverified_interfaces']
 }
-(HERE/'validation_results.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 assert not result['invalid_shapes']
 assert not collisions, collisions
 assert result['fits_500x400_plan']
 assert all(abs(z) < 1e-6 for z in ground.values())
 assert lowest.Shape.optimalBoundingBox(False, False).ZMin >= cfg['geometry']['minimum_ground_clearance_target_mm']
 assert wheel_fastener_gap > .5
+assert math.isclose(mechanical_kg, cfg['mass_estimate_kg']['mechanical_chassis'], abs_tol=.005), 'Update the rounded mechanical mass estimate in design_parameters.json'
 assert len([o for o in parts if o.Name.startswith('SlotNut_')]) == 40
 assert math.isclose(fb.XLength, cfg['geometry']['frame_length_mm'])
 assert math.isclose(fb.YLength, cfg['geometry']['frame_width_mm'])
@@ -125,5 +129,6 @@ for item in bom['items']:
     if item['id'] in counts:
         prefixes = tuple(counts[item['id']].split('|'))
         assert sum(o.Name.startswith(prefixes) for o in parts) == item['used'], item['id']
+(HERE/'validation_results.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({k:v for k,v in result.items() if k not in ('mass','unverified_interfaces')},ensure_ascii=False))
 print(json.dumps({k:v for k,v in result['mass'].items() if k!='breakdown'},ensure_ascii=False))

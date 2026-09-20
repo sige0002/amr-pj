@@ -1,0 +1,13 @@
+test_forward_cg_unloads_caster (test_calculate_design.MechanicalCalculationTests.test_forward_cg_unloads_caster) ... ok
+test_inconsistent_geometry_and_nonfinite_inputs_rejected (test_calculate_design.MechanicalCalculationTests.test_inconsistent_geometry_and_nonfinite_inputs_rejected) ... ok
+test_left_and_right_overhang_are_symmetric (test_calculate_design.MechanicalCalculationTests.test_left_and_right_overhang_are_symmetric) ... ok
+test_load_at_support_has_no_beam_bending (test_calculate_design.MechanicalCalculationTests.test_load_at_support_has_no_beam_bending) ... ok
+test_midspan_matches_standard_simple_beam (test_calculate_design.MechanicalCalculationTests.test_midspan_matches_standard_simple_beam) ... ok
+test_more_caster_samples_converge (test_calculate_design.MechanicalCalculationTests.test_more_caster_samples_converge) ... ok
+test_saved_result_and_no_implicit_operation_approval (test_calculate_design.MechanicalCalculationTests.test_saved_result_and_no_implicit_operation_approval) ... ok
+test_three_wheel_forces_balance_both_moments (test_calculate_design.MechanicalCalculationTests.test_three_wheel_forces_balance_both_moments) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.124s
+
+OK

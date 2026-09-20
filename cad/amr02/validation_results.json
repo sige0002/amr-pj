@@ -1,0 +1,1851 @@
+{
+  "status": "nominal_geometry_checks_only_not_manufacturing_release",
+  "part_objects": 369,
+  "primary_objects": 91,
+  "invalid_shapes": [],
+  "all_part_pair_count": 67896,
+  "bounding_box_candidate_boolean_count": 862,
+  "all_part_collisions": [],
+  "collision_scope": "All modeled parts including screw-to-screw and screw-to-nut pairs; >0.001 mm3 threshold. Nominal geometry; bought-part shape, angular nut orientation, extrusion/angle corner radii, tools, tolerance, deformation, cables and mounting details remain unverified.",
+  "frame_LWH_mm": [
+    460.00000000000006,
+    300.0,
+    30.0
+  ],
+  "assembled_mechanical_LWH_mm": [
+    460.00000000000006,
+    414.0,
+    115.6
+  ],
+  "body_envelope_target_mm": [
+    500,
+    420,
+    180
+  ],
+  "ground_contacts_z_mm": {
+    "TireL": 0.0,
+    "TireR": 0.0,
+    "CasterTire": 0.0
+  },
+  "minimum_fixed_nonwheel_clearance_mm": 25.0,
+  "lowest_component": "ForkInnerWallL",
+  "drive_track_mm": 340.0,
+  "clearances": [
+    {
+      "a": "FrameSideAngleL",
+      "b": "TireL",
+      "mm": 4.300000000000011
+    },
+    {
+      "a": "ForkBridgeL",
+      "b": "TireL",
+      "mm": 5.0
+    },
+    {
+      "a": "Rail400_4",
+      "b": "TireL",
+      "mm": 7.300000000000011
+    },
+    {
+      "a": "CouplerL",
+      "b": "KFL08_InnerL",
+      "mm": 1.0
+    },
+    {
+      "a": "EncoderL",
+      "b": "EncoderR",
+      "mm": 18.0
+    },
+    {
+      "a": "GearboxL",
+      "b": "Rail400_3",
+      "mm": 6.5
+    },
+    {
+      "a": "HubL",
+      "b": "Collar_1L",
+      "mm": 4.199999999999989
+    },
+    {
+      "a": "Collar_1L",
+      "b": "KFL08_OuterL",
+      "mm": 0.5
+    }
+  ],
+  "caster_sweep_fixed_hits": [],
+  "caster_sweep_scope": "72 nominal orientations at 5 degree spacing against all nearby fixed parts, including stationary caster mounting fasteners; not continuous/tolerance proof.",
+  "shaft_interfaces_mm": {
+    "shaft_length": 100,
+    "motor_shaft_in_coupler": 12,
+    "wheel_shaft_in_coupler": 10,
+    "shaft_end_gap_in_coupler": 3,
+    "coupler_to_inner_bearing": 1,
+    "bearing_housing_axial_envelope": 12,
+    "inner_bearing_whole_housing_on_shaft": true,
+    "outer_bearing_whole_housing_on_shaft": true,
+    "note": "Housing axial envelopes only; inner-ring width, set screw positions, bore fit and allowable coupling engagement need supplier/received-part confirmation."
+  },
+  "motor_M3_thread_engagement_mm": 2,
+  "motor_M3_max_engagement_mm": 3,
+  "hardware_installed": {
+    "HNTT6-6 slot nut": 44,
+    "M3 plain hex nut": 12,
+    "M3x10 socket screw": 12,
+    "M3x5 socket screw": 6,
+    "M4 plain hex nut": 68,
+    "M4x12 socket screw": 60,
+    "M4x16 socket screw": 8,
+    "M6 large washer OD18 ID6.6 t1.6": 4,
+    "M6 plain hex nut": 4,
+    "M6 washer OD13 ID6.6 t1.6": 12,
+    "M6x12 socket screw": 40,
+    "M6x16 socket screw": 8
+  },
+  "printed_parts": [
+    {
+      "file": "EquipmentTrayPLA.stl",
+      "dimensions_mm": [
+        200.0,
+        180.0,
+        10.399999618530273
+      ],
+      "watertight": true,
+      "fits_P1S_256_cube": true,
+      "quantity": 1
+    },
+    {
+      "file": "ShaftEndCapL.stl",
+      "dimensions_mm": [
+        19.986244201660156,
+        48.0,
+        2.0
+      ],
+      "watertight": true,
+      "fits_P1S_256_cube": true,
+      "quantity": 2
+    }
+  ],
+  "mass": {
+    "mechanical_estimate_kg": 6.0517378765017815,
+    "additional_electrical_budget_kg": 2.05,
+    "estimated_complete_base_kg": 8.101737876501781,
+    "base_upper_budget_kg": 10,
+    "remaining_budget_kg": 1.8982621234982187,
+    "within_upper_budget": true,
+    "note": "Estimate, not measured mass. PLA modeled as solid. Equipment/guard budget does not mean these unmodeled items fit the CAD.",
+    "breakdown": [
+      {
+        "part": "NFSL6-3030 2.2 m",
+        "kg": 1.672,
+        "basis": "manufacturer 0.76 kg/m"
+      },
+      {
+        "part": "FIT0185 x2",
+        "kg": 0.41,
+        "basis": "manufacturer 205 g each"
+      },
+      {
+        "part": "100mm wheel+tire x2",
+        "kg": 0.6,
+        "basis": "seller reference 300 g each; unmeasured"
+      },
+      {
+        "part": "KFL08 x4",
+        "kg": 0.24,
+        "basis": "60 g each reference supplier shipping weight; conservative allowance, vendor unselected"
+      },
+      {
+        "part": "HBLFSN6 x8",
+        "kg": 0.12,
+        "basis": "MISUMI official catalog 15 g each; bolts/nuts counted separately"
+      },
+      {
+        "part": "420G-R50",
+        "kg": 0.15,
+        "basis": "engineering allowance, not measured"
+      },
+      {
+        "part": "couplings x2",
+        "kg": 0.04,
+        "basis": "20 g each allowance"
+      },
+      {
+        "part": "unmodeled grub screws, retaining hardware",
+        "kg": 0.03,
+        "basis": "allowance; plain modeled nuts not counted twice"
+      },
+      {
+        "part": "JointA_NN120",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointA_NN120",
+        "kg": 0.00419658785040867,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointB_NN120",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointB_NN120",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointA_NN50",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointA_NN50",
+        "kg": 0.004196587850408667,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointB_NN50",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointB_NN50",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointA_N50",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointA_N50",
+        "kg": 0.004196587850408667,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointB_N50",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointB_N50",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointA_N120",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointA_N120",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointB_N120",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointB_N120",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Gusset_N1N1",
+        "kg": 0.014302883253619517,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "GussetWasher_N1N10",
+        "kg": 0.0012374155409441907,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetBolt_N1N10",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Gusset_N1N10",
+        "kg": 0.00419658785040867,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetWasher_N1N11",
+        "kg": 0.0012374155409441904,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetBolt_N1N11",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Gusset_N1N11",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Gusset_N11",
+        "kg": 0.014302883253619485,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "GussetWasher_N110",
+        "kg": 0.0012374155409441907,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetBolt_N110",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Gusset_N110",
+        "kg": 0.00419658785040867,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetWasher_N111",
+        "kg": 0.0012374155409441904,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetBolt_N111",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Gusset_N111",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointA_PN120",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointA_PN120",
+        "kg": 0.00419658785040867,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointB_PN120",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointB_PN120",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointA_PN50",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointA_PN50",
+        "kg": 0.004196587850408667,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointB_PN50",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointB_PN50",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointA_P50",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointA_P50",
+        "kg": 0.004196587850408667,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointB_P50",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointB_P50",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointA_P120",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointA_P120",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointB_P120",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointB_P120",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Gusset_1N1",
+        "kg": 0.014302883253619517,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "GussetWasher_1N10",
+        "kg": 0.0012374155409441909,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetBolt_1N10",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Gusset_1N10",
+        "kg": 0.00419658785040867,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetWasher_1N11",
+        "kg": 0.0012374155409441904,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetBolt_1N11",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Gusset_1N11",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Gusset_11",
+        "kg": 0.014302883253619485,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "GussetWasher_110",
+        "kg": 0.0012374155409441909,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetBolt_110",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Gusset_110",
+        "kg": 0.00419658785040867,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetWasher_111",
+        "kg": 0.0012374155409441904,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetBolt_111",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Gusset_111",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "ForkBridgeL",
+        "kg": 0.19448344454929378,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "BridgeBolt_42_65L",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Bridge_42_65L",
+        "kg": 0.004196587850408665,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "BridgeBolt_42_135L",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Bridge_42_135L",
+        "kg": 0.004196587850408667,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "BridgeBolt_138_65L",
+        "kg": 0.006362667601315406,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Bridge_138_65L",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "BridgeBolt_138_135L",
+        "kg": 0.006362667601315406,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Bridge_138_135L",
+        "kg": 0.00419658785040867,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "ForkWeb_0L",
+        "kg": 0.09109210452998986,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "ForkWeb_1L",
+        "kg": 0.09109210452998986,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "ForkInnerWallL",
+        "kg": 0.09059985528601361,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "ForkOuterWallL",
+        "kg": 0.09465982343684204,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "ForkCorner_01L",
+        "kg": 0.013766296264994936,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "WebJoint_0145L",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WebJoint_0145L",
+        "kg": 0.0007179502281196359,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WebJoint_0195L",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WebJoint_0195L",
+        "kg": 0.0007179502281196357,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WallJoint_0155L",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WallJoint_0155L",
+        "kg": 0.0007179502281196357,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WallJoint_0185L",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WallJoint_0185L",
+        "kg": 0.0007179502281196357,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "ForkCorner_02L",
+        "kg": 0.014793700264994936,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "WebJoint_0245L",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WebJoint_0245L",
+        "kg": 0.0007179502281196359,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WebJoint_0295L",
+        "kg": 0.002392165726075947,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WebJoint_0295L",
+        "kg": 0.0007179502281196357,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WallJoint_0255L",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WallJoint_0255L",
+        "kg": 0.0007179502281196347,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WallJoint_0285L",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WallJoint_0285L",
+        "kg": 0.0007179502281196347,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "ForkCorner_11L",
+        "kg": 0.013766296264994935,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "WebJoint_1145L",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WebJoint_1145L",
+        "kg": 0.0007179502281196348,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WebJoint_1195L",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WebJoint_1195L",
+        "kg": 0.0007179502281196347,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WallJoint_1155L",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WallJoint_1155L",
+        "kg": 0.0007179502281196362,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WallJoint_1185L",
+        "kg": 0.002392165726075947,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WallJoint_1185L",
+        "kg": 0.0007179502281196363,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "ForkCorner_12L",
+        "kg": 0.014793700264994936,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "WebJoint_1245L",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WebJoint_1245L",
+        "kg": 0.0007179502281196347,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WebJoint_1295L",
+        "kg": 0.002392165726075947,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WebJoint_1295L",
+        "kg": 0.0007179502281196346,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WallJoint_1255L",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WallJoint_1255L",
+        "kg": 0.0007179502281196353,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WallJoint_1285L",
+        "kg": 0.002392165726075947,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WallJoint_1285L",
+        "kg": 0.0007179502281196352,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "UpperAngle_00L",
+        "kg": 0.005136950132497468,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "TopJoint_00L",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_TopJoint_00L",
+        "kg": 0.0007179502281196359,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "UpperWebJoint_00L",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_UpperWebJoint_00L",
+        "kg": 0.0007179502281196357,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "UpperAngle_01L",
+        "kg": 0.0033387501324974663,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "TopJoint_01L",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_TopJoint_01L",
+        "kg": 0.0007179502281196359,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "UpperWebJoint_01L",
+        "kg": 0.002392165726075947,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_UpperWebJoint_01L",
+        "kg": 0.0007179502281196357,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "UpperAngle_10L",
+        "kg": 0.0051369501324974665,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "TopJoint_10L",
+        "kg": 0.0023921657260759484,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_TopJoint_10L",
+        "kg": 0.0007179502281196363,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "UpperWebJoint_10L",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_UpperWebJoint_10L",
+        "kg": 0.0007179502281196347,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "UpperAngle_11L",
+        "kg": 0.003338750132497466,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "TopJoint_11L",
+        "kg": 0.0023921657260759484,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_TopJoint_11L",
+        "kg": 0.0007179502281196364,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "UpperWebJoint_11L",
+        "kg": 0.002392165726075947,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_UpperWebJoint_11L",
+        "kg": 0.0007179502281196346,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "FrameSideAngleL",
+        "kg": 0.03356451663973647,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "SideFrameWasher_42L",
+        "kg": 0.0012374155409441917,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SideFrameBolt_42L",
+        "kg": 0.006362667601315406,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_SideFrame_42L",
+        "kg": 0.004196587850408667,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SideTie_42L",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_SideTie_42L",
+        "kg": 0.0007179502281196359,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SideFrameWasher_138L",
+        "kg": 0.0012374155409441924,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SideFrameBolt_138L",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_SideFrame_138L",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SideTie_138L",
+        "kg": 0.0023921657260759484,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_SideTie_138L",
+        "kg": 0.0007179502281196365,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "BearingBolt_Inner72L",
+        "kg": 0.002786749763366825,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_BearingBolt_Inner72L",
+        "kg": 0.0007179502281196355,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "BearingBolt_Inner108L",
+        "kg": 0.002786749763366825,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_BearingBolt_Inner108L",
+        "kg": 0.0007179502281196355,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "BearingBolt_Outer72L",
+        "kg": 0.002786749763366825,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_BearingBolt_Outer72L",
+        "kg": 0.0007179502281196348,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "BearingBolt_Outer108L",
+        "kg": 0.002786749763366825,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_BearingBolt_Outer108L",
+        "kg": 0.0007179502281196348,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorSaddleL",
+        "kg": 0.04181869611951336,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "MotorSaddleBolt_7038L",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_MotorSaddleBolt_7038L",
+        "kg": 0.0007179502281196355,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorSaddleBolt_7068L",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_MotorSaddleBolt_7068L",
+        "kg": 0.0007179502281196356,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorSaddleBolt_11038L",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_MotorSaddleBolt_11038L",
+        "kg": 0.0007179502281196355,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorSaddleBolt_11068L",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_MotorSaddleBolt_11068L",
+        "kg": 0.0007179502281196356,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorFaceBolt_0L",
+        "kg": 0.0008369497353474483,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorFaceBolt_1L",
+        "kg": 0.0008369497353474481,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorFaceBolt_2L",
+        "kg": 0.0008369497353474483,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WheelShaftL",
+        "kg": 0.03945840372908779,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Collar_0L",
+        "kg": 0.027670205615022824,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Collar_1L",
+        "kg": 0.027670205615022824,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "HubL",
+        "kg": 0.028836201445217365,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "HubBolt_0L",
+        "kg": 0.0011143916365675965,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_HubBolt_0L",
+        "kg": 0.00034203626755109265,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "HubBolt_1L",
+        "kg": 0.001114391636567597,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_HubBolt_1L",
+        "kg": 0.00034203626755109265,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "HubBolt_2L",
+        "kg": 0.001114391636567597,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_HubBolt_2L",
+        "kg": 0.00034203626755109265,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "HubBolt_3L",
+        "kg": 0.0011143916365675965,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_HubBolt_3L",
+        "kg": 0.00034203626755109265,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "ShaftEndCapL",
+        "kg": 0.0015286669745076952,
+        "basis": "CAD volume x PLA assumed density; threads omitted"
+      },
+      {
+        "part": "CapBolt_32L",
+        "kg": 0.001114391636567597,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_CapBolt_32L",
+        "kg": 0.00034203626755109276,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CapBolt_68L",
+        "kg": 0.001114391636567597,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_CapBolt_68L",
+        "kg": 0.00034203626755109265,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "ForkBridgeR",
+        "kg": 0.19448344454929378,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "BridgeBolt_42_65R",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Bridge_42_65R",
+        "kg": 0.004196587850408666,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "BridgeBolt_42_135R",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Bridge_42_135R",
+        "kg": 0.0041965878504086574,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "BridgeBolt_138_65R",
+        "kg": 0.006362667601315406,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Bridge_138_65R",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "BridgeBolt_138_135R",
+        "kg": 0.006362667601315406,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Bridge_138_135R",
+        "kg": 0.004196587850408659,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "ForkWeb_0R",
+        "kg": 0.09109210452998986,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "ForkWeb_1R",
+        "kg": 0.09109210452998986,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "ForkInnerWallR",
+        "kg": 0.09059985528601361,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "ForkOuterWallR",
+        "kg": 0.09465982343684204,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "ForkCorner_01R",
+        "kg": 0.013766296264994936,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "WebJoint_0145R",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WebJoint_0145R",
+        "kg": 0.0007179502281196359,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WebJoint_0195R",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WebJoint_0195R",
+        "kg": 0.0007179502281196357,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WallJoint_0155R",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WallJoint_0155R",
+        "kg": 0.0007179502281196357,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WallJoint_0185R",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WallJoint_0185R",
+        "kg": 0.0007179502281196357,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "ForkCorner_02R",
+        "kg": 0.014793700264994936,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "WebJoint_0245R",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WebJoint_0245R",
+        "kg": 0.0007179502281196364,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WebJoint_0295R",
+        "kg": 0.002392165726075947,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WebJoint_0295R",
+        "kg": 0.0007179502281196362,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WallJoint_0255R",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WallJoint_0255R",
+        "kg": 0.0007179502281196347,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WallJoint_0285R",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WallJoint_0285R",
+        "kg": 0.0007179502281196347,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "ForkCorner_11R",
+        "kg": 0.013766296264994935,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "WebJoint_1145R",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WebJoint_1145R",
+        "kg": 0.0007179502281196347,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WebJoint_1195R",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WebJoint_1195R",
+        "kg": 0.0007179502281196346,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WallJoint_1155R",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WallJoint_1155R",
+        "kg": 0.0007179502281196364,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WallJoint_1185R",
+        "kg": 0.002392165726075947,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WallJoint_1185R",
+        "kg": 0.0007179502281196363,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "ForkCorner_12R",
+        "kg": 0.014793700264994936,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "WebJoint_1245R",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WebJoint_1245R",
+        "kg": 0.0007179502281196351,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WebJoint_1295R",
+        "kg": 0.002392165726075947,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WebJoint_1295R",
+        "kg": 0.0007179502281196351,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WallJoint_1255R",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WallJoint_1255R",
+        "kg": 0.0007179502281196353,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WallJoint_1285R",
+        "kg": 0.002392165726075947,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_WallJoint_1285R",
+        "kg": 0.0007179502281196355,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "UpperAngle_00R",
+        "kg": 0.005136950132497468,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "TopJoint_00R",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_TopJoint_00R",
+        "kg": 0.0007179502281196359,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "UpperWebJoint_00R",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_UpperWebJoint_00R",
+        "kg": 0.0007179502281196357,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "UpperAngle_01R",
+        "kg": 0.0033387501324974663,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "TopJoint_01R",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_TopJoint_01R",
+        "kg": 0.0007179502281196364,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "UpperWebJoint_01R",
+        "kg": 0.002392165726075947,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_UpperWebJoint_01R",
+        "kg": 0.0007179502281196362,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "UpperAngle_10R",
+        "kg": 0.0051369501324974665,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "TopJoint_10R",
+        "kg": 0.0023921657260759484,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_TopJoint_10R",
+        "kg": 0.0007179502281196364,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "UpperWebJoint_10R",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_UpperWebJoint_10R",
+        "kg": 0.0007179502281196346,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "UpperAngle_11R",
+        "kg": 0.003338750132497466,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "TopJoint_11R",
+        "kg": 0.0023921657260759484,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_TopJoint_11R",
+        "kg": 0.0007179502281196368,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "UpperWebJoint_11R",
+        "kg": 0.002392165726075947,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_UpperWebJoint_11R",
+        "kg": 0.0007179502281196351,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "FrameSideAngleR",
+        "kg": 0.03356451663973647,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "SideFrameWasher_42R",
+        "kg": 0.0012374155409441917,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SideFrameBolt_42R",
+        "kg": 0.006362667601315406,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_SideFrame_42R",
+        "kg": 0.004196587850408666,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SideTie_42R",
+        "kg": 0.0023921657260759475,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_SideTie_42R",
+        "kg": 0.0007179502281196364,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SideFrameWasher_138R",
+        "kg": 0.0012374155409441924,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SideFrameBolt_138R",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_SideFrame_138R",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SideTie_138R",
+        "kg": 0.0023921657260759484,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_SideTie_138R",
+        "kg": 0.000717950228119637,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "BearingBolt_Inner72R",
+        "kg": 0.002786749763366825,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_BearingBolt_Inner72R",
+        "kg": 0.0007179502281196355,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "BearingBolt_Inner108R",
+        "kg": 0.002786749763366825,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_BearingBolt_Inner108R",
+        "kg": 0.0007179502281196355,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "BearingBolt_Outer72R",
+        "kg": 0.002786749763366825,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_BearingBolt_Outer72R",
+        "kg": 0.0007179502281196348,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "BearingBolt_Outer108R",
+        "kg": 0.002786749763366825,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_BearingBolt_Outer108R",
+        "kg": 0.0007179502281196348,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorSaddleR",
+        "kg": 0.04181869611951337,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "MotorSaddleBolt_7038R",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_MotorSaddleBolt_7038R",
+        "kg": 0.0007179502281196355,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorSaddleBolt_7068R",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_MotorSaddleBolt_7068R",
+        "kg": 0.0007179502281196355,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorSaddleBolt_11038R",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_MotorSaddleBolt_11038R",
+        "kg": 0.0007179502281196355,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorSaddleBolt_11068R",
+        "kg": 0.0023921657260759467,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_MotorSaddleBolt_11068R",
+        "kg": 0.0007179502281196355,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorFaceBolt_0R",
+        "kg": 0.0008369497353474483,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorFaceBolt_1R",
+        "kg": 0.0008369497353474481,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorFaceBolt_2R",
+        "kg": 0.0008369497353474483,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "WheelShaftR",
+        "kg": 0.03945840372908779,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Collar_0R",
+        "kg": 0.027670205615022824,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Collar_1R",
+        "kg": 0.027670205615022824,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "HubR",
+        "kg": 0.028836201445217365,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "HubBolt_0R",
+        "kg": 0.0011143916365675965,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_HubBolt_0R",
+        "kg": 0.00034203626755109276,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "HubBolt_1R",
+        "kg": 0.001114391636567597,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_HubBolt_1R",
+        "kg": 0.00034203626755109276,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "HubBolt_2R",
+        "kg": 0.001114391636567597,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_HubBolt_2R",
+        "kg": 0.00034203626755109276,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "HubBolt_3R",
+        "kg": 0.0011143916365675965,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_HubBolt_3R",
+        "kg": 0.00034203626755109276,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "ShaftEndCapR",
+        "kg": 0.0015286669745076952,
+        "basis": "CAD volume x PLA assumed density; threads omitted"
+      },
+      {
+        "part": "CapBolt_32R",
+        "kg": 0.001114391636567597,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_CapBolt_32R",
+        "kg": 0.00034203626755109276,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CapBolt_68R",
+        "kg": 0.001114391636567597,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_CapBolt_68R",
+        "kg": 0.00034203626755109276,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CasterAdapter",
+        "kg": 0.143924088038608,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "CasterSpacer_0",
+        "kg": 0.001208727773468672,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "CasterFrameBolt_0",
+        "kg": 0.007250481685219882,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Caster_0",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CasterSpacer_1",
+        "kg": 0.001208727773468672,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "CasterFrameBolt_1",
+        "kg": 0.007250481685219882,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Caster_1",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CasterSpacer_2",
+        "kg": 0.0012087277734686723,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "CasterFrameBolt_2",
+        "kg": 0.007250481685219883,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Caster_2",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CasterSpacer_3",
+        "kg": 0.0012087277734686725,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "CasterFrameBolt_3",
+        "kg": 0.007250481685219883,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Caster_3",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CasterBolt_0",
+        "kg": 0.007250481685219881,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_CasterBolt_0",
+        "kg": 0.002214164522864753,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CasterBolt_1",
+        "kg": 0.007250481685219881,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_CasterBolt_1",
+        "kg": 0.0022141645228647526,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CasterBolt_2",
+        "kg": 0.007250481685219882,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_CasterBolt_2",
+        "kg": 0.0022141645228647535,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CasterBolt_3",
+        "kg": 0.007250481685219882,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_CasterBolt_3",
+        "kg": 0.0022141645228647535,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "EquipmentTrayPLA",
+        "kg": 0.13950579937162644,
+        "basis": "CAD volume x PLA assumed density; threads omitted"
+      },
+      {
+        "part": "TraySleeve_0",
+        "kg": 0.0005237820351697575,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "TrayWasher_0",
+        "kg": 0.002766428685446342,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "TrayBolt_0",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Tray_0",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "TraySleeve_1",
+        "kg": 0.0005237820351697575,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "TrayWasher_1",
+        "kg": 0.0027664286854463416,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "TrayBolt_1",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Tray_1",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "TraySleeve_2",
+        "kg": 0.0005237820351697578,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "TrayWasher_2",
+        "kg": 0.0027664286854463425,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "TrayBolt_2",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Tray_2",
+        "kg": 0.004196587850408667,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "TraySleeve_3",
+        "kg": 0.0005237820351697578,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "TrayWasher_3",
+        "kg": 0.002766428685446342,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "TrayBolt_3",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Tray_3",
+        "kg": 0.004196587850408665,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      }
+    ]
+  },
+  "unverified": [
+    "FIT0185 continuous torque, temperature and minimum-voltage performance",
+    "KFL08 exact selected vendor dimensions and allowable load",
+    "Wheel web, hub pattern and load rating",
+    "MISUMI connector individual purchasing channel and shipping",
+    "Machining quotations and real assembled mass",
+    "Support plate/joint compliance, proof load, braking and dynamic tipping",
+    "Tire runout/tolerances versus 4.3mm side-restraint gap and 5mm upper gap",
+    "Tool access, nut angular orientation and angle inside radius; no locking/thread friction or bolt preload model",
+    "Motor saddle bend flat length, bend radius tolerance and metal grade/temper; no fabrication release",
+    "Gearbox holes and extrusion grooves are nominal thread-free envelopes, not supplier CAD"
+  ]
+}

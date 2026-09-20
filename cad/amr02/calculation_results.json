@@ -1,0 +1,3670 @@
+{
+  "version": "0.5.0",
+  "design": "AMR01_SecondDesign_B",
+  "status": "reviewed_concept_not_manufacturing_release",
+  "baseline_version": "0.4.1",
+  "gravity_assumed_m_s2": 9.81,
+  "note_ja": "仮の重心と一姿勢ごとの剛体静的計算。軸・軸受・継手の定格、動的転倒、実機可搬能力、運転・把持を承認する結果ではない。",
+  "shaft_comparison": {
+    "diameter_mm": 8,
+    "elastic_modulus_assumed_N_mm2": 205000,
+    "old": [
+      {
+        "load_N": 100,
+        "bearing_support_y_mm": [
+          118,
+          145
+        ],
+        "load_y_mm": 177,
+        "bearing_span_mm": 27,
+        "arrangement": "overhung",
+        "inner_outer_signed_reaction_N": [
+          -118.51851851851852,
+          218.5185185185185
+        ],
+        "max_abs_bearing_reaction_N": 218.5185185185185,
+        "max_bending_moment_Nm": 3.2,
+        "max_bending_stress_MPa": 63.66197723675813,
+        "load_point_deflection_mm": 0.04885927358658511
+      },
+      {
+        "load_N": 200,
+        "bearing_support_y_mm": [
+          118,
+          145
+        ],
+        "load_y_mm": 177,
+        "bearing_span_mm": 27,
+        "arrangement": "overhung",
+        "inner_outer_signed_reaction_N": [
+          -237.03703703703704,
+          437.037037037037
+        ],
+        "max_abs_bearing_reaction_N": 437.037037037037,
+        "max_bending_moment_Nm": 6.4,
+        "max_bending_stress_MPa": 127.32395447351627,
+        "load_point_deflection_mm": 0.09771854717317022
+      }
+    ],
+    "new": [
+      {
+        "load_N": 100,
+        "bearing_support_y_mm": [
+          115,
+          192
+        ],
+        "load_y_mm": 170,
+        "bearing_span_mm": 77,
+        "arrangement": "between_bearings",
+        "inner_outer_signed_reaction_N": [
+          28.571428571428573,
+          71.42857142857143
+        ],
+        "max_abs_bearing_reaction_N": 71.42857142857143,
+        "max_bending_moment_Nm": 1.5714285714285714,
+        "max_bending_stress_MPa": 31.262578107336584,
+        "load_point_deflection_mm": 0.01537712175198263
+      },
+      {
+        "load_N": 200,
+        "bearing_support_y_mm": [
+          115,
+          192
+        ],
+        "load_y_mm": 170,
+        "bearing_span_mm": 77,
+        "arrangement": "between_bearings",
+        "inner_outer_signed_reaction_N": [
+          57.142857142857146,
+          142.85714285714286
+        ],
+        "max_abs_bearing_reaction_N": 142.85714285714286,
+        "max_bending_moment_Nm": 3.142857142857143,
+        "max_bending_stress_MPa": 62.52515621467317,
+        "load_point_deflection_mm": 0.03075424350396526
+      }
+    ],
+    "note_ja": "剛支持・集中荷重による配置比較。実機荷重定格ではない。軸溝・ねじ平面・疲労・支持板変形を含まない。 反力の負号は逆向き支持を表す。100/200Nは配置比較用で総質量から得た一輪荷重ではない。"
+  },
+  "drive": {
+    "gross_mass_kg": 14.0,
+    "force_N": 18.874491104040985,
+    "wheel_torque_Nm": 0.4718622776010246,
+    "wheel_torque_with_margin_Nm": 0.7077934164015369,
+    "torque_margin": 1.5,
+    "selected_motor": "DFRobot FIT0185",
+    "motor_no_load_rpm_NOT_LOADED_RATING": 83,
+    "motor_stall_torque_Nm_NOT_CONTINUOUS_RATING": 4.4129925,
+    "continuous_torque_verified": false,
+    "wheel_command_cap_rpm_NOT_RATING": 65.0,
+    "initial_outer_wheel_rpm": 38.388172273765164,
+    "later_outer_wheel_rpm": 76.77634454753033,
+    "speed_cases": {
+      "initial": {
+        "v_m_s": 0.15,
+        "omega_rad_s": 0.3,
+        "inner_wheel_rpm": 18.907607239317166,
+        "outer_wheel_rpm": 38.388172273765164,
+        "straight_wheel_rpm": 28.64788975654116,
+        "combined_command_fits_cap": true,
+        "max_abs_omega_at_this_v_rad_s": 1.1196423772876134,
+        "v_alone_fits_cap": true
+      },
+      "later": {
+        "v_m_s": 0.3,
+        "omega_rad_s": 0.6,
+        "inner_wheel_rpm": 37.81521447863433,
+        "outer_wheel_rpm": 76.77634454753033,
+        "straight_wheel_rpm": 57.29577951308232,
+        "combined_command_fits_cap": false,
+        "max_abs_omega_at_this_v_rad_s": 0.23728943611114295,
+        "v_alone_fits_cap": true
+      }
+    },
+    "coupled_command_limit": {
+      "formula": "abs(v_m_s) + half_track_m * abs(omega_rad_s) <= wheel_rim_speed_cap_m_s",
+      "half_track_m": 0.17,
+      "wheel_rim_speed_cap_m_s": 0.3403392041388943
+    },
+    "note_ja": "必要駆動力を左右へ均等配分したトルク計算。輪荷重の均等配分を意味しない。5度は選定計算条件、65rpmは指令上限であり負荷時性能・連続定格・坂道走行許可ではない。"
+  },
+  "stability_assumptions": {
+    "base_mass_cases_kg": [
+      6.78,
+      8,
+      8.1,
+      10
+    ],
+    "base_cg_xyz_mm": [
+      0,
+      0,
+      85
+    ],
+    "inherited_component_assumptions": {
+      "cargo_kg_xyz_mm": [
+        2.0,
+        -10.0,
+        0.0,
+        190.0
+      ],
+      "arm_system_without_gripper_kg": 1.7,
+      "gripper_kg": 0.3,
+      "arm_folded_cg_xyz_mm": [
+        40.0,
+        0.0,
+        200.0
+      ],
+      "gripper_folded_cg_xyz_mm": [
+        20.0,
+        0.0,
+        180.0
+      ],
+      "arm_forward_cg_xyz_mm": [
+        160.0,
+        0.0,
+        240.0
+      ],
+      "gripper_forward_cg_xyz_mm": [
+        280.0,
+        0.0,
+        40.0
+      ],
+      "object_cg_xyz_mm": [
+        280.0,
+        0.0,
+        40.0
+      ],
+      "object_mass_sensitivity_cases_kg": [
+        0.0,
+        0.5,
+        2.0
+      ]
+    },
+    "first_design_A_contact_geometry": {
+      "drive_axle_x_mm": 90.0,
+      "drive_track_mm": 354.0,
+      "caster_pivot_xy_mm": [
+        -150.0,
+        0.0
+      ],
+      "caster_trail_mm": 16.0
+    },
+    "second_design_B_contact_geometry": {
+      "drive_axle_x_mm": 90,
+      "drive_track_mm": 340,
+      "caster_pivot_xy_mm": [
+        -150,
+        0
+      ],
+      "caster_trail_mm": 16
+    },
+    "caster_orientation_samples_each_design": 720,
+    "caster_angle_step_deg": 0.5,
+    "caster_angle_convention": "contact = pivot + trail*(cos(theta), sin(theta)); theta in [0, 360) deg",
+    "note_ja": "全旋回360度を有限個でサンプルした最小余裕。A/Bとも同じ角度分割・質量・重心を使用。接地点は点、平床、重力のみ。CG高さは記録するが静的平床の支持余裕には影響しない。",
+    "reaction_note_ja": "鉛直力とx/y方向一次モーメントの釣合いで左右輪・キャスターの反力を計算。負の計算反力は接地離脱を示し、実接触が負荷を引張支持できる意味ではない。各輪の最小・最大は別のキャスター角度で起こる。"
+  },
+  "stability_cases": {
+    "base_6.78kg/base_only": {
+      "components_kg_xyz_mm": [
+        [
+          6.78,
+          0,
+          0,
+          85
+        ]
+      ],
+      "total_mass_kg": 6.78,
+      "cg_xyz_mm": [
+        0.0,
+        0.0,
+        85.0
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 90.0,
+        "worst_sampled_caster_support_margin_mm": 79.38015972597648,
+        "worst_margin_caster_angle_deg": 50.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -139.82274847555578,
+            12.34599333420352
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 19.32429815372623,
+          "right": 21.14107241443411,
+          "caster": 26.046429431839666
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 19.32429815372623,
+            "max_signed_N": 22.134223507242044,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 19.32429815372623,
+            "max_signed_N": 22.134223507242044,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 23.383054687500003,
+            "max_signed_N": 26.723491071428576,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 5.986062,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 9.094947017729282e-13,
+          "y_weight_moment_Nmm": 1.8189894035458565e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 90.0,
+        "worst_sampled_caster_support_margin_mm": 77.23317300161935,
+        "worst_margin_caster_angle_deg": 51.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -140.03976581379808,
+            12.52173050963862
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 19.286622183122788,
+          "right": 21.203320340090706,
+          "caster": 26.021857476786515
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 19.286622183122788,
+            "max_signed_N": 22.17189853697831,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 19.286622183122788,
+            "max_signed_N": 22.17189853697831,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 23.383054687500003,
+            "max_signed_N": 26.723491071428576,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 5.986062,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.1368683772161603e-12,
+          "y_weight_moment_Nmm": 1.7053025658242404e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": -2.1469867243571343,
+      "operation_approved": false
+    },
+    "base_6.78kg/base_plus_cargo": {
+      "components_kg_xyz_mm": [
+        [
+          6.78,
+          0,
+          0,
+          85
+        ],
+        [
+          2.0,
+          -10.0,
+          0.0,
+          190.0
+        ]
+      ],
+      "total_mass_kg": 8.780000000000001,
+      "cg_xyz_mm": [
+        -2.2779043280182227,
+        0.0,
+        108.91799544419133
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 92.27790432801822,
+        "worst_sampled_caster_support_margin_mm": 77.93171387736922,
+        "worst_margin_caster_angle_deg": 50.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -139.82274847555578,
+            12.34599333420352
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 24.56805697172893,
+          "right": 26.98029968891268,
+          "caster": 34.5834433393584
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 24.56805697172893,
+            "max_signed_N": 28.298967364089652,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 24.568056971728932,
+            "max_signed_N": 28.29896736408965,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 31.047117187500003,
+            "max_signed_N": 35.482419642857145,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 7.948062,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.5347723092418164e-12,
+          "y_weight_moment_Nmm": 1.8189894035458565e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 92.27790432801822,
+        "worst_sampled_caster_support_margin_mm": 75.81733152903203,
+        "worst_margin_caster_angle_deg": 51.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -140.03976581379808,
+            12.52173050963862
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 24.518032272641893,
+          "right": 27.06295008118894,
+          "caster": 34.55081764616918
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 24.518032272641893,
+            "max_signed_N": 28.348990813929575,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 24.518032272641893,
+            "max_signed_N": 28.34899081392957,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 31.047117187500003,
+            "max_signed_N": 35.482419642857145,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 7.948062,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.5347723092418164e-12,
+          "y_weight_moment_Nmm": 1.8189894035458565e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": -2.1143823483371875,
+      "operation_approved": false
+    },
+    "base_6.78kg/future_transport": {
+      "components_kg_xyz_mm": [
+        [
+          6.78,
+          0,
+          0,
+          85
+        ],
+        [
+          1.7,
+          40.0,
+          0.0,
+          200.0
+        ],
+        [
+          0.3,
+          20.0,
+          0.0,
+          180.0
+        ],
+        [
+          2.0,
+          -10.0,
+          0.0,
+          190.0
+        ]
+      ],
+      "total_mass_kg": 10.78,
+      "cg_xyz_mm": [
+        5.009276437847867,
+        0.0,
+        125.25974025974028
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 84.99072356215213,
+        "worst_sampled_caster_support_margin_mm": 82.56539695112339,
+        "worst_margin_caster_angle_deg": 50.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -139.82274847555578,
+            12.34599333420352
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 31.957949145270362,
+          "right": 34.68579014438632,
+          "caster": 39.108060710343324
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 31.957949145270362,
+            "max_signed_N": 36.17698160821888,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 31.957949145270355,
+            "max_signed_N": 36.176981608218874,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 35.109070312499995,
+            "max_signed_N": 40.12465178571428,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 8.987922000000001,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 1.4210854715202004e-14,
+          "x_weight_moment_Nmm": 3.296918293926865e-12,
+          "y_weight_moment_Nmm": 3.254285729781259e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 84.99072356215213,
+        "worst_sampled_caster_support_margin_mm": 80.3467108447692,
+        "worst_margin_caster_angle_deg": 51.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -140.03976581379808,
+            12.52173050963862
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 31.901379620087017,
+          "right": 34.779253843971006,
+          "caster": 39.071166535941984
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 31.901379620087017,
+            "max_signed_N": 36.23354972071375,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 31.90137962008702,
+            "max_signed_N": 36.23354972071375,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 35.109070312499995,
+            "max_signed_N": 40.12465178571428,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 8.987922000000001,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 1.4210854715202004e-14,
+          "x_weight_moment_Nmm": 3.296918293926865e-12,
+          "y_weight_moment_Nmm": 3.495870259939693e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": -2.218686106354184,
+      "operation_approved": false
+    },
+    "base_6.78kg/forward_object_0kg_NOT_APPROVED": {
+      "components_kg_xyz_mm": [
+        [
+          6.78,
+          0,
+          0,
+          85
+        ],
+        [
+          1.7,
+          160.0,
+          0.0,
+          240.0
+        ],
+        [
+          0.3,
+          280.0,
+          0.0,
+          40.0
+        ]
+      ],
+      "total_mass_kg": 8.78,
+      "cg_xyz_mm": [
+        40.546697038724375,
+        0.0,
+        113.47380410022781
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 49.453302961275625,
+        "worst_sampled_caster_support_margin_mm": 49.453302961275625,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 33.55808303571429,
+          "right": 33.55808303571429,
+          "caster": 19.015633928571425
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 33.152590393883855,
+            "max_signed_N": 35.152048913216156,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 33.15259039388386,
+            "max_signed_N": 35.15204891321615,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 16.638679687499998,
+            "max_signed_N": 19.015633928571425,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 5.986062,
+          "overturning_Nm": 1.7265599999999999,
+          "static_moment_ratio": 3.467045454545455
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.3642420526593924e-12,
+          "y_weight_moment_Nmm": 3.410605131648481e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 49.453302961275625,
+        "worst_sampled_caster_support_margin_mm": 49.453302961275625,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 33.55808303571429,
+          "right": 33.55808303571429,
+          "caster": 19.015633928571425
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 33.12578130434597,
+            "max_signed_N": 35.1788573332612,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 33.12578130434597,
+            "max_signed_N": 35.1788573332612,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 16.638679687499998,
+            "max_signed_N": 19.015633928571425,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 5.986062,
+          "overturning_Nm": 1.7265599999999999,
+          "static_moment_ratio": 3.467045454545455
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.8189894035458565e-12,
+          "y_weight_moment_Nmm": 3.353761712787673e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": 0.0,
+      "operation_approved": false
+    },
+    "base_6.78kg/forward_object_0.5kg_NOT_APPROVED": {
+      "components_kg_xyz_mm": [
+        [
+          6.78,
+          0,
+          0,
+          85
+        ],
+        [
+          1.7,
+          160.0,
+          0.0,
+          240.0
+        ],
+        [
+          0.3,
+          280.0,
+          0.0,
+          40.0
+        ],
+        [
+          0.5,
+          280.0,
+          0.0,
+          40.0
+        ]
+      ],
+      "total_mass_kg": 9.28,
+      "cg_xyz_mm": [
+        53.44827586206897,
+        0.0,
+        109.51508620689657
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 36.55172413793103,
+        "worst_sampled_caster_support_margin_mm": 36.55172413793103,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 38.090828571428574,
+          "right": 38.090828571428574,
+          "caster": 14.855142857142855
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 37.77405495533258,
+            "max_signed_N": 39.33604558121354,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 37.77405495533257,
+            "max_signed_N": 39.33604558121353,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 12.998249999999999,
+            "max_signed_N": 14.855142857142855,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 5.986062,
+          "overturning_Nm": 2.6585099999999997,
+          "static_moment_ratio": 2.2516605166051664
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 9.094947017729282e-13,
+          "y_weight_moment_Nmm": 3.637978807091713e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 36.55172413793103,
+        "worst_sampled_caster_support_margin_mm": 36.55172413793103,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 38.090828571428574,
+          "right": 38.090828571428574,
+          "caster": 14.855142857142855
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 37.7531115118244,
+            "max_signed_N": 39.356988501709345,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 37.7531115118244,
+            "max_signed_N": 39.356988501709345,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 12.998249999999999,
+            "max_signed_N": 14.855142857142855,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 5.986062,
+          "overturning_Nm": 2.6585099999999997,
+          "static_moment_ratio": 2.2516605166051664
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.8189894035458565e-12,
+          "y_weight_moment_Nmm": 3.609557097661309e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": 0.0,
+      "operation_approved": false
+    },
+    "base_6.78kg/forward_object_2kg_NOT_APPROVED": {
+      "components_kg_xyz_mm": [
+        [
+          6.78,
+          0,
+          0,
+          85
+        ],
+        [
+          1.7,
+          160.0,
+          0.0,
+          240.0
+        ],
+        [
+          0.3,
+          280.0,
+          0.0,
+          40.0
+        ],
+        [
+          2.0,
+          280.0,
+          0.0,
+          40.0
+        ]
+      ],
+      "total_mass_kg": 10.78,
+      "cg_xyz_mm": [
+        84.97217068645641,
+        0.0,
+        99.8423005565863
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 5.027829313543592,
+        "worst_sampled_caster_support_margin_mm": 5.027829313543592,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 51.68906517857143,
+          "right": 51.68906517857143,
+          "caster": 2.373669642857139
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 51.638448639678735,
+            "max_signed_N": 51.88803558520571,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 51.63844863967873,
+            "max_signed_N": 51.88803558520571,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 2.076960937499997,
+            "max_signed_N": 2.373669642857139,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 5.986062,
+          "overturning_Nm": 5.45436,
+          "static_moment_ratio": 1.0974820143884891
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.8189894035458565e-12,
+          "y_weight_moment_Nmm": 3.630873379734112e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 5.027829313543592,
+        "worst_sampled_caster_support_margin_mm": 5.027829313543592,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 51.68906517857143,
+          "right": 51.68906517857143,
+          "caster": 2.373669642857139
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 51.635102134259675,
+            "max_signed_N": 51.8913820070538,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 51.63510213425968,
+            "max_signed_N": 51.8913820070538,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 2.076960937499997,
+            "max_signed_N": 2.373669642857139,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 5.986062,
+          "overturning_Nm": 5.45436,
+          "static_moment_ratio": 1.0974820143884891
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.8189894035458565e-12,
+          "y_weight_moment_Nmm": 3.630873379734112e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": 0.0,
+      "operation_approved": false
+    },
+    "base_8kg/base_only": {
+      "components_kg_xyz_mm": [
+        [
+          8,
+          0,
+          0,
+          85
+        ]
+      ],
+      "total_mass_kg": 8,
+      "cg_xyz_mm": [
+        0.0,
+        0.0,
+        85.0
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 90.0,
+        "worst_sampled_caster_support_margin_mm": 79.38015972597648,
+        "worst_margin_caster_angle_deg": 50.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -139.82274847555578,
+            12.34599333420352
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 22.80153174480971,
+          "right": 24.94521818812284,
+          "caster": 30.733250067067452
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 22.80153174480971,
+            "max_signed_N": 26.11707788465138,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 22.801531744809708,
+            "max_signed_N": 26.117077884651376,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 27.590625000000003,
+            "max_signed_N": 31.532142857142862,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 7.063200000000001,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.3642420526593924e-12,
+          "y_weight_moment_Nmm": 1.8189894035458565e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 90.0,
+        "worst_sampled_caster_support_margin_mm": 77.23317300161935,
+        "worst_margin_caster_angle_deg": 51.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -140.03976581379808,
+            12.52173050963862
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 22.757076322268773,
+          "right": 25.01866706795363,
+          "caster": 30.704256609777598
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 22.757076322268773,
+            "max_signed_N": 26.161532197024552,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 22.757076322268773,
+            "max_signed_N": 26.16153219702455,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 27.590625000000003,
+            "max_signed_N": 31.532142857142862,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 7.063200000000001,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.3642420526593924e-12,
+          "y_weight_moment_Nmm": 1.9326762412674725e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": -2.1469867243571343,
+      "operation_approved": false
+    },
+    "base_8kg/base_plus_cargo": {
+      "components_kg_xyz_mm": [
+        [
+          8,
+          0,
+          0,
+          85
+        ],
+        [
+          2.0,
+          -10.0,
+          0.0,
+          190.0
+        ]
+      ],
+      "total_mass_kg": 10.0,
+      "cg_xyz_mm": [
+        -2.0,
+        0.0,
+        106.0
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 92.0,
+        "worst_sampled_caster_support_margin_mm": 78.1084242708993,
+        "worst_margin_caster_angle_deg": 50.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -139.82274847555578,
+            12.34599333420352
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 28.045290562812408,
+          "right": 30.784445462601415,
+          "caster": 39.270263974586186
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 28.045290562812408,
+            "max_signed_N": 32.28182174149898,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 28.045290562812408,
+            "max_signed_N": 32.28182174149899,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 35.2546875,
+            "max_signed_N": 40.291071428571435,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 9.025200000000002,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.6200374375330284e-12,
+          "y_weight_moment_Nmm": 2.6147972675971687e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 92.0,
+        "worst_sampled_caster_support_margin_mm": 75.99006418868768,
+        "worst_margin_caster_angle_deg": 51.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -140.03976581379808,
+            12.52173050963862
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 27.988486411787882,
+          "right": 30.87829680905186,
+          "caster": 39.233216779160266
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 27.988486411787882,
+            "max_signed_N": 32.33862447397581,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 27.98848641178788,
+            "max_signed_N": 32.33862447397582,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 35.2546875,
+            "max_signed_N": 40.291071428571435,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 9.025200000000002,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.5631940186722204e-12,
+          "y_weight_moment_Nmm": 2.7284841053187847e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": -2.1183600822116233,
+      "operation_approved": false
+    },
+    "base_8kg/future_transport": {
+      "components_kg_xyz_mm": [
+        [
+          8,
+          0,
+          0,
+          85
+        ],
+        [
+          1.7,
+          40.0,
+          0.0,
+          200.0
+        ],
+        [
+          0.3,
+          20.0,
+          0.0,
+          180.0
+        ],
+        [
+          2.0,
+          -10.0,
+          0.0,
+          190.0
+        ]
+      ],
+      "total_mass_kg": 12.0,
+      "cg_xyz_mm": [
+        4.5,
+        0.0,
+        121.16666666666667
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 85.5,
+        "worst_sampled_caster_support_margin_mm": 82.24156449990012,
+        "worst_margin_caster_angle_deg": 50.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -139.82274847555578,
+            12.34599333420352
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 35.43518273635384,
+          "right": 38.48993591807505,
+          "caster": 43.79488134557111
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 35.43518273635384,
+            "max_signed_N": 40.15983598562821,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 35.43518273635384,
+            "max_signed_N": 40.159835985628206,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 39.316640625,
+            "max_signed_N": 44.93330357142857,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 10.06506,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 2.5011104298755527e-12,
+          "y_weight_moment_Nmm": 3.410605131648481e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 85.5,
+        "worst_sampled_caster_support_margin_mm": 80.03016783071564,
+        "worst_margin_caster_angle_deg": 51.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -140.03976581379808,
+            12.52173050963862
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 35.371833759233,
+          "right": 38.59460057183392,
+          "caster": 43.75356566893307
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 35.371833759233,
+            "max_signed_N": 40.223183380759984,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 35.371833759233,
+            "max_signed_N": 40.223183380759984,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 39.316640625,
+            "max_signed_N": 44.93330357142857,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 10.06506,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 2.5011104298755527e-12,
+          "y_weight_moment_Nmm": 3.296918293926865e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": -2.211396669184481,
+      "operation_approved": false
+    },
+    "base_8kg/forward_object_0kg_NOT_APPROVED": {
+      "components_kg_xyz_mm": [
+        [
+          8,
+          0,
+          0,
+          85
+        ],
+        [
+          1.7,
+          160.0,
+          0.0,
+          240.0
+        ],
+        [
+          0.3,
+          280.0,
+          0.0,
+          40.0
+        ]
+      ],
+      "total_mass_kg": 10.0,
+      "cg_xyz_mm": [
+        35.6,
+        0.0,
+        110.0
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 54.4,
+        "worst_sampled_caster_support_margin_mm": 54.4,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 37.13785714285714,
+          "right": 37.13785714285714,
+          "caster": 23.824285714285715
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 36.62982398496734,
+            "max_signed_N": 39.13490329062549,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 36.62982398496734,
+            "max_signed_N": 39.13490329062549,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 20.84625,
+            "max_signed_N": 23.824285714285715,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 7.063200000000001,
+          "overturning_Nm": 1.7265599999999999,
+          "static_moment_ratio": 4.090909090909092
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 1.4210854715202004e-14,
+          "x_weight_moment_Nmm": 1.3642420526593924e-12,
+          "y_weight_moment_Nmm": 3.410605131648481e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 54.4,
+        "worst_sampled_caster_support_margin_mm": 54.4,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 37.13785714285714,
+          "right": 37.13785714285714,
+          "caster": 23.824285714285715
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 36.59623544349196,
+            "max_signed_N": 39.168490993307444,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 36.59623544349197,
+            "max_signed_N": 39.16849099330744,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 20.84625,
+            "max_signed_N": 23.824285714285715,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 7.063200000000001,
+          "overturning_Nm": 1.7265599999999999,
+          "static_moment_ratio": 4.090909090909092
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 1.4210854715202004e-14,
+          "x_weight_moment_Nmm": 1.3642420526593924e-12,
+          "y_weight_moment_Nmm": 3.581135388230905e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": 0.0,
+      "operation_approved": false
+    },
+    "base_8kg/forward_object_0.5kg_NOT_APPROVED": {
+      "components_kg_xyz_mm": [
+        [
+          8,
+          0,
+          0,
+          85
+        ],
+        [
+          1.7,
+          160.0,
+          0.0,
+          240.0
+        ],
+        [
+          0.3,
+          280.0,
+          0.0,
+          40.0
+        ],
+        [
+          0.5,
+          280.0,
+          0.0,
+          40.0
+        ]
+      ],
+      "total_mass_kg": 10.5,
+      "cg_xyz_mm": [
+        47.23809523809524,
+        0.0,
+        106.66666666666667
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 42.76190476190476,
+        "worst_sampled_caster_support_margin_mm": 42.76190476190476,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 41.670602678571434,
+          "right": 41.670602678571434,
+          "caster": 19.663794642857145
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 41.251288546416056,
+            "max_signed_N": 43.31889995862288,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 41.251288546416056,
+            "max_signed_N": 43.31889995862288,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 17.205820312500002,
+            "max_signed_N": 19.663794642857145,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 7.063200000000001,
+          "overturning_Nm": 2.6585099999999997,
+          "static_moment_ratio": 2.6568265682656835
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 1.4210854715202004e-14,
+          "x_weight_moment_Nmm": 2.7284841053187847e-12,
+          "y_weight_moment_Nmm": 3.353761712787673e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 42.76190476190476,
+        "worst_sampled_caster_support_margin_mm": 42.76190476190476,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 41.670602678571434,
+          "right": 41.670602678571434,
+          "caster": 19.663794642857145
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 41.22356565097039,
+            "max_signed_N": 43.3466221617556,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 41.223565650970386,
+            "max_signed_N": 43.34662216175559,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 17.205820312500002,
+            "max_signed_N": 19.663794642857145,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 7.063200000000001,
+          "overturning_Nm": 2.6585099999999997,
+          "static_moment_ratio": 2.6568265682656835
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 1.4210854715202004e-14,
+          "x_weight_moment_Nmm": 1.8189894035458565e-12,
+          "y_weight_moment_Nmm": 3.268496584496461e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": 0.0,
+      "operation_approved": false
+    },
+    "base_8kg/forward_object_2kg_NOT_APPROVED": {
+      "components_kg_xyz_mm": [
+        [
+          8,
+          0,
+          0,
+          85
+        ],
+        [
+          1.7,
+          160.0,
+          0.0,
+          240.0
+        ],
+        [
+          0.3,
+          280.0,
+          0.0,
+          40.0
+        ],
+        [
+          2.0,
+          280.0,
+          0.0,
+          40.0
+        ]
+      ],
+      "total_mass_kg": 12.0,
+      "cg_xyz_mm": [
+        76.33333333333333,
+        0.0,
+        98.33333333333333
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 13.666666666666671,
+        "worst_sampled_caster_support_margin_mm": 13.666666666666671,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 55.268839285714286,
+          "right": 55.268839285714286,
+          "caster": 7.182321428571432
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 55.115682230762204,
+            "max_signed_N": 55.87088996261503,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 55.11568223076221,
+            "max_signed_N": 55.87088996261503,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 6.284531250000002,
+            "max_signed_N": 7.182321428571432,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 7.063200000000001,
+          "overturning_Nm": 5.45436,
+          "static_moment_ratio": 1.2949640287769786
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.8189894035458565e-12,
+          "y_weight_moment_Nmm": 3.637978807091713e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 13.666666666666671,
+        "worst_sampled_caster_support_margin_mm": 13.66666666666667,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 55.26883928571428,
+          "right": 55.26883928571429,
+          "caster": 7.182321428571432
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 55.10555627340567,
+            "max_signed_N": 55.88101566710004,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 55.10555627340566,
+            "max_signed_N": 55.88101566710004,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 6.284531250000002,
+            "max_signed_N": 7.182321428571432,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 7.063200000000001,
+          "overturning_Nm": 5.45436,
+          "static_moment_ratio": 1.2949640287769786
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.8189894035458565e-12,
+          "y_weight_moment_Nmm": 3.637978807091713e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": -1.7763568394002505e-15,
+      "operation_approved": false
+    },
+    "base_8.1kg/base_only": {
+      "components_kg_xyz_mm": [
+        [
+          8.1,
+          0,
+          0,
+          85
+        ]
+      ],
+      "total_mass_kg": 8.1,
+      "cg_xyz_mm": [
+        0.0,
+        0.0,
+        85.0
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 90.0,
+        "worst_sampled_caster_support_margin_mm": 79.38015972597648,
+        "worst_margin_caster_angle_deg": 50.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -139.82274847555578,
+            12.34599333420352
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 23.08655089161983,
+          "right": 25.257033415474375,
+          "caster": 31.11741569290579
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 23.08655089161983,
+            "max_signed_N": 26.443541358209515,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 23.08655089161983,
+            "max_signed_N": 26.443541358209515,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 27.9355078125,
+            "max_signed_N": 31.92629464285714,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 7.15149,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.3642420526593924e-12,
+          "y_weight_moment_Nmm": 1.8189894035458565e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 90.0,
+        "worst_sampled_caster_support_margin_mm": 77.23317300161935,
+        "worst_margin_caster_angle_deg": 51.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -140.03976581379808,
+            12.52173050963862
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 23.041539776297135,
+          "right": 25.331400406303054,
+          "caster": 31.088059817399813
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 23.041539776297135,
+            "max_signed_N": 26.488551349487363,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 23.04153977629714,
+            "max_signed_N": 26.48855134948736,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 27.9355078125,
+            "max_signed_N": 31.92629464285714,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 7.15149,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.3642420526593924e-12,
+          "y_weight_moment_Nmm": 2.1032064978498966e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": -2.1469867243571343,
+      "operation_approved": false
+    },
+    "base_8.1kg/base_plus_cargo": {
+      "components_kg_xyz_mm": [
+        [
+          8.1,
+          0,
+          0,
+          85
+        ],
+        [
+          2.0,
+          -10.0,
+          0.0,
+          190.0
+        ]
+      ],
+      "total_mass_kg": 10.1,
+      "cg_xyz_mm": [
+        -1.9801980198019802,
+        0.0,
+        105.79207920792079
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 91.98019801980197,
+        "worst_sampled_caster_support_margin_mm": 78.12101571104859,
+        "worst_margin_caster_angle_deg": 50.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -139.82274847555578,
+            12.34599333420352
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 28.330309709622533,
+          "right": 31.096260689952942,
+          "caster": 39.65442960042453
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 28.330309709622533,
+            "max_signed_N": 32.60828521505712,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 28.33030970962253,
+            "max_signed_N": 32.60828521505712,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 35.5995703125,
+            "max_signed_N": 40.68522321428571,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 9.11349,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 2.0179413695586845e-12,
+          "y_weight_moment_Nmm": 3.595346242946107e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 91.98019801980197,
+        "worst_sampled_caster_support_margin_mm": 76.00237219673652,
+        "worst_margin_caster_angle_deg": 51.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -140.03976581379808,
+            12.52173050963862
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 28.272949865816237,
+          "right": 31.191030147401285,
+          "caster": 39.61701998678248
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 28.272949865816237,
+            "max_signed_N": 32.66564362643862,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 28.272949865816237,
+            "max_signed_N": 32.66564362643862,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 35.5995703125,
+            "max_signed_N": 40.68522321428571,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 9.11349,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 2.0179413695586845e-12,
+          "y_weight_moment_Nmm": 3.296918293926865e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": -2.118643514312069,
+      "operation_approved": false
+    },
+    "base_8.1kg/future_transport": {
+      "components_kg_xyz_mm": [
+        [
+          8.1,
+          0,
+          0,
+          85
+        ],
+        [
+          1.7,
+          40.0,
+          0.0,
+          200.0
+        ],
+        [
+          0.3,
+          20.0,
+          0.0,
+          180.0
+        ],
+        [
+          2.0,
+          -10.0,
+          0.0,
+          190.0
+        ]
+      ],
+      "total_mass_kg": 12.1,
+      "cg_xyz_mm": [
+        4.462809917355372,
+        0.0,
+        120.86776859504133
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 85.53719008264463,
+        "worst_sampled_caster_support_margin_mm": 82.21791652656191,
+        "worst_margin_caster_angle_deg": 309.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -139.82274847555578,
+            -12.345993334203515
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 38.80175114542659,
+          "right": 35.720201883163966,
+          "caster": 44.179046971409456
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 35.72020188316396,
+            "max_signed_N": 40.48629945918636,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 35.720201883163966,
+            "max_signed_N": 40.486299459186355,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 39.6615234375,
+            "max_signed_N": 45.32745535714286,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 10.15335,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 1.4210854715202004e-14,
+          "x_weight_moment_Nmm": 2.5011104298755527e-12,
+          "y_weight_moment_Nmm": 3.524291969370097e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 85.53719008264463,
+        "worst_sampled_caster_support_margin_mm": 80.00705217097104,
+        "worst_margin_caster_angle_deg": 51.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -140.03976581379808,
+            12.52173050963862
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 35.65629721326136,
+          "right": 38.90733391018335,
+          "caster": 44.13736887655529
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 35.65629721326136,
+            "max_signed_N": 40.550202533222794,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 35.65629721326136,
+            "max_signed_N": 40.550202533222794,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 39.6615234375,
+            "max_signed_N": 45.32745535714286,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 10.15335,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 1.4210854715202004e-14,
+          "x_weight_moment_Nmm": 2.5011104298755527e-12,
+          "y_weight_moment_Nmm": 3.524291969370097e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": -2.2108643555908714,
+      "operation_approved": false
+    },
+    "base_8.1kg/forward_object_0kg_NOT_APPROVED": {
+      "components_kg_xyz_mm": [
+        [
+          8.1,
+          0,
+          0,
+          85
+        ],
+        [
+          1.7,
+          160.0,
+          0.0,
+          240.0
+        ],
+        [
+          0.3,
+          280.0,
+          0.0,
+          40.0
+        ]
+      ],
+      "total_mass_kg": 10.1,
+      "cg_xyz_mm": [
+        35.24752475247525,
+        0.0,
+        109.75247524752476
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 54.75247524752475,
+        "worst_sampled_caster_support_margin_mm": 54.75247524752475,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 37.43128125,
+          "right": 37.43128125,
+          "caster": 24.2184375
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 36.91484313177746,
+            "max_signed_N": 39.46136676418362,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 36.91484313177746,
+            "max_signed_N": 39.46136676418363,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 21.1911328125,
+            "max_signed_N": 24.2184375,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 7.15149,
+          "overturning_Nm": 1.7265599999999999,
+          "static_moment_ratio": 4.142045454545455
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 1.4210854715202004e-14,
+          "x_weight_moment_Nmm": 1.8189894035458565e-12,
+          "y_weight_moment_Nmm": 3.581135388230905e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 54.75247524752475,
+        "worst_sampled_caster_support_margin_mm": 54.75247524752475,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 37.43128125,
+          "right": 37.43128125,
+          "caster": 24.2184375
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 36.880698897520325,
+            "max_signed_N": 39.49551014577025,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 36.880698897520325,
+            "max_signed_N": 39.49551014577024,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 21.1911328125,
+            "max_signed_N": 24.2184375,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 7.15149,
+          "overturning_Nm": 1.7265599999999999,
+          "static_moment_ratio": 4.142045454545455
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 1.4210854715202004e-14,
+          "x_weight_moment_Nmm": 1.8189894035458565e-12,
+          "y_weight_moment_Nmm": 3.296918293926865e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": 0.0,
+      "operation_approved": false
+    },
+    "base_8.1kg/forward_object_0.5kg_NOT_APPROVED": {
+      "components_kg_xyz_mm": [
+        [
+          8.1,
+          0,
+          0,
+          85
+        ],
+        [
+          1.7,
+          160.0,
+          0.0,
+          240.0
+        ],
+        [
+          0.3,
+          280.0,
+          0.0,
+          40.0
+        ],
+        [
+          0.5,
+          280.0,
+          0.0,
+          40.0
+        ]
+      ],
+      "total_mass_kg": 10.6,
+      "cg_xyz_mm": [
+        46.79245283018868,
+        0.0,
+        106.4622641509434
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 43.20754716981132,
+        "worst_sampled_caster_support_margin_mm": 43.20754716981132,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 41.96402678571429,
+          "right": 41.96402678571429,
+          "caster": 20.05794642857143
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 41.53630769322618,
+            "max_signed_N": 43.645363432181014,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 41.536307693226185,
+            "max_signed_N": 43.64536343218102,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 17.550703125000002,
+            "max_signed_N": 20.05794642857143,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 7.15149,
+          "overturning_Nm": 2.6585099999999997,
+          "static_moment_ratio": 2.690036900369004
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 1.4210854715202004e-14,
+          "x_weight_moment_Nmm": 1.8189894035458565e-12,
+          "y_weight_moment_Nmm": 3.581135388230905e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 43.20754716981132,
+        "worst_sampled_caster_support_margin_mm": 43.20754716981132,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 41.96402678571429,
+          "right": 41.96402678571429,
+          "caster": 20.05794642857143
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 41.50802910499875,
+            "max_signed_N": 43.67364131421839,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 41.50802910499875,
+            "max_signed_N": 43.673641314218386,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 17.550703125000002,
+            "max_signed_N": 20.05794642857143,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 7.15149,
+          "overturning_Nm": 2.6585099999999997,
+          "static_moment_ratio": 2.690036900369004
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 1.4210854715202004e-14,
+          "x_weight_moment_Nmm": 1.8189894035458565e-12,
+          "y_weight_moment_Nmm": 3.581135388230905e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": 0.0,
+      "operation_approved": false
+    },
+    "base_8.1kg/forward_object_2kg_NOT_APPROVED": {
+      "components_kg_xyz_mm": [
+        [
+          8.1,
+          0,
+          0,
+          85
+        ],
+        [
+          1.7,
+          160.0,
+          0.0,
+          240.0
+        ],
+        [
+          0.3,
+          280.0,
+          0.0,
+          40.0
+        ],
+        [
+          2.0,
+          280.0,
+          0.0,
+          40.0
+        ]
+      ],
+      "total_mass_kg": 12.1,
+      "cg_xyz_mm": [
+        75.70247933884298,
+        0.0,
+        98.22314049586777
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 14.297520661157023,
+        "worst_sampled_caster_support_margin_mm": 14.297520661157025,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 55.56226339285715,
+          "right": 55.56226339285715,
+          "caster": 7.576473214285714
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 55.40070137757233,
+            "max_signed_N": 56.19735343617319,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 55.40070137757233,
+            "max_signed_N": 56.197353436173174,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 6.6294140624999995,
+            "max_signed_N": 7.576473214285714,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 7.15149,
+          "overturning_Nm": 5.45436,
+          "static_moment_ratio": 1.3111510791366905
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 1.4210854715202004e-14,
+          "x_weight_moment_Nmm": 1.8189894035458565e-12,
+          "y_weight_moment_Nmm": 3.637978807091713e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 14.297520661157023,
+        "worst_sampled_caster_support_margin_mm": 14.297520661157023,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 55.562263392857155,
+          "right": 55.56226339285714,
+          "caster": 7.576473214285714
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 55.39001972743403,
+            "max_signed_N": 56.20803481956285,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 55.39001972743402,
+            "max_signed_N": 56.20803481956284,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 6.6294140624999995,
+            "max_signed_N": 7.576473214285714,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 7.15149,
+          "overturning_Nm": 5.45436,
+          "static_moment_ratio": 1.3111510791366905
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 1.4210854715202004e-14,
+          "x_weight_moment_Nmm": 1.8189894035458565e-12,
+          "y_weight_moment_Nmm": 3.623767952376511e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": -1.7763568394002505e-15,
+      "operation_approved": false
+    },
+    "base_10kg/base_only": {
+      "components_kg_xyz_mm": [
+        [
+          10,
+          0,
+          0,
+          85
+        ]
+      ],
+      "total_mass_kg": 10,
+      "cg_xyz_mm": [
+        0.0,
+        0.0,
+        85.0
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 90.0,
+        "worst_sampled_caster_support_margin_mm": 79.38015972597648,
+        "worst_margin_caster_angle_deg": 50.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -139.82274847555578,
+            12.34599333420352
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 28.50191468101214,
+          "right": 31.181522735153557,
+          "caster": 38.41656258383431
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 28.50191468101214,
+            "max_signed_N": 32.64634735581422,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 28.50191468101214,
+            "max_signed_N": 32.64634735581423,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 34.48828125,
+            "max_signed_N": 39.41517857142857,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 8.829,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 2.2737367544323206e-12,
+          "y_weight_moment_Nmm": 3.609557097661309e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 90.0,
+        "worst_sampled_caster_support_margin_mm": 77.23317300161935,
+        "worst_margin_caster_angle_deg": 51.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -140.03976581379808,
+            12.52173050963862
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 28.44634540283597,
+          "right": 31.273333834942047,
+          "caster": 38.38032076222199
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 28.44634540283597,
+            "max_signed_N": 32.70191524628069,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 28.446345402835973,
+            "max_signed_N": 32.70191524628069,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 34.48828125,
+            "max_signed_N": 39.41517857142857,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 8.829,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 2.2737367544323206e-12,
+          "y_weight_moment_Nmm": 2.7853275241795927e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": -2.1469867243571343,
+      "operation_approved": false
+    },
+    "base_10kg/base_plus_cargo": {
+      "components_kg_xyz_mm": [
+        [
+          10,
+          0,
+          0,
+          85
+        ],
+        [
+          2.0,
+          -10.0,
+          0.0,
+          190.0
+        ]
+      ],
+      "total_mass_kg": 12.0,
+      "cg_xyz_mm": [
+        -1.6666666666666667,
+        0.0,
+        102.5
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 91.66666666666667,
+        "worst_sampled_caster_support_margin_mm": 78.32038018007883,
+        "worst_margin_caster_angle_deg": 309.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -139.82274847555578,
+            -12.345993334203515
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 37.02075000963212,
+          "right": 33.745673499014835,
+          "caster": 46.95357649135305
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 33.745673499014835,
+            "max_signed_N": 38.81109121266182,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 33.745673499014835,
+            "max_signed_N": 38.81109121266182,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 42.15234375,
+            "max_signed_N": 48.174107142857146,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 10.791,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 2.0747847884194925e-12,
+          "y_weight_moment_Nmm": 3.524291969370097e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 91.66666666666667,
+        "worst_sampled_caster_support_margin_mm": 76.19724899084297,
+        "worst_margin_caster_angle_deg": 51.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -140.03976581379808,
+            12.52173050963862
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 33.677755492355075,
+          "right": 37.13296357604027,
+          "caster": 46.90928093160466
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 33.677755492355075,
+            "max_signed_N": 38.87900752323195,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 33.67775549235507,
+            "max_signed_N": 38.879007523231955,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 42.15234375,
+            "max_signed_N": 48.174107142857146,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 10.791,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 2.0747847884194925e-12,
+          "y_weight_moment_Nmm": 3.254285729781259e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": -2.1231311892358633,
+      "operation_approved": false
+    },
+    "base_10kg/future_transport": {
+      "components_kg_xyz_mm": [
+        [
+          10,
+          0,
+          0,
+          85
+        ],
+        [
+          1.7,
+          40.0,
+          0.0,
+          200.0
+        ],
+        [
+          0.3,
+          20.0,
+          0.0,
+          180.0
+        ],
+        [
+          2.0,
+          -10.0,
+          0.0,
+          190.0
+        ]
+      ],
+      "total_mass_kg": 14.0,
+      "cg_xyz_mm": [
+        3.857142857142857,
+        0.0,
+        116.0
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 86.14285714285714,
+        "worst_sampled_caster_support_margin_mm": 81.83279238933962,
+        "worst_margin_caster_angle_deg": 50.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -139.82274847555578,
+            12.34599333420352
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 41.13556567255627,
+          "right": 44.72624046510576,
+          "caster": 51.478193862337974
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 41.13556567255627,
+            "max_signed_N": 46.68910545679105,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 41.13556567255627,
+            "max_signed_N": 46.68910545679105,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 46.214296875,
+            "max_signed_N": 52.816339285714285,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 11.830860000000001,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 2.0463630789890885e-12,
+          "y_weight_moment_Nmm": 3.524291969370097e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 86.14285714285714,
+        "worst_sampled_caster_support_margin_mm": 79.63059714084474,
+        "worst_margin_caster_angle_deg": 51.5,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -140.03976581379808,
+            12.52173050963862
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 41.0611028398002,
+          "right": 44.84926733882233,
+          "caster": 51.429629821377475
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 41.0611028398002,
+            "max_signed_N": 46.76356643001613,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 41.06110283980019,
+            "max_signed_N": 46.763566430016134,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 46.214296875,
+            "max_signed_N": 52.816339285714285,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 11.830860000000001,
+          "overturning_Nm": 0.0,
+          "static_moment_ratio": null
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 2.0463630789890885e-12,
+          "y_weight_moment_Nmm": 3.410605131648481e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": -2.202195248494874,
+      "operation_approved": false
+    },
+    "base_10kg/forward_object_0kg_NOT_APPROVED": {
+      "components_kg_xyz_mm": [
+        [
+          10,
+          0,
+          0,
+          85
+        ],
+        [
+          1.7,
+          160.0,
+          0.0,
+          240.0
+        ],
+        [
+          0.3,
+          280.0,
+          0.0,
+          40.0
+        ]
+      ],
+      "total_mass_kg": 12.0,
+      "cg_xyz_mm": [
+        29.666666666666668,
+        0.0,
+        105.83333333333333
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 60.33333333333333,
+        "worst_sampled_caster_support_margin_mm": 60.333333333333336,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 43.00633928571429,
+          "right": 43.00633928571429,
+          "caster": 31.707321428571426
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 42.33020692116977,
+            "max_signed_N": 45.66417276178832,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 42.33020692116977,
+            "max_signed_N": 45.66417276178833,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 27.74390625,
+            "max_signed_N": 31.707321428571426,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 8.829,
+          "overturning_Nm": 1.7265599999999999,
+          "static_moment_ratio": 5.113636363636364
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.8189894035458565e-12,
+          "y_weight_moment_Nmm": 3.630873379734112e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 60.33333333333333,
+        "worst_sampled_caster_support_margin_mm": 60.33333333333333,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 43.00633928571429,
+          "right": 43.00633928571429,
+          "caster": 31.707321428571426
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 42.28550452405916,
+            "max_signed_N": 45.70887404256357,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 42.28550452405916,
+            "max_signed_N": 45.70887404256358,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 27.74390625,
+            "max_signed_N": 31.707321428571426,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 8.829,
+          "overturning_Nm": 1.7265599999999999,
+          "static_moment_ratio": 5.113636363636364
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.8189894035458565e-12,
+          "y_weight_moment_Nmm": 3.524291969370097e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": -7.105427357601002e-15,
+      "operation_approved": false
+    },
+    "base_10kg/forward_object_0.5kg_NOT_APPROVED": {
+      "components_kg_xyz_mm": [
+        [
+          10,
+          0,
+          0,
+          85
+        ],
+        [
+          1.7,
+          160.0,
+          0.0,
+          240.0
+        ],
+        [
+          0.3,
+          280.0,
+          0.0,
+          40.0
+        ],
+        [
+          0.5,
+          280.0,
+          0.0,
+          40.0
+        ]
+      ],
+      "total_mass_kg": 12.5,
+      "cg_xyz_mm": [
+        39.68,
+        0.0,
+        103.2
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 50.32,
+        "worst_sampled_caster_support_margin_mm": 50.31999999999999,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 47.53908482142858,
+          "right": 47.53908482142857,
+          "caster": 27.546830357142856
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 46.95167148261848,
+            "max_signed_N": 49.84816942978572,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 46.95167148261848,
+            "max_signed_N": 49.84816942978571,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 24.1034765625,
+            "max_signed_N": 27.546830357142856,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 8.829,
+          "overturning_Nm": 2.6585099999999997,
+          "static_moment_ratio": 3.321033210332104
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.8189894035458565e-12,
+          "y_weight_moment_Nmm": 3.637978807091713e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 50.32,
+        "worst_sampled_caster_support_margin_mm": 50.32,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 47.539084821428574,
+          "right": 47.539084821428574,
+          "caster": 27.546830357142856
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 46.912834731537586,
+            "max_signed_N": 49.887005211011726,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 46.91283473153758,
+            "max_signed_N": 49.887005211011726,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 24.1034765625,
+            "max_signed_N": 27.546830357142856,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 8.829,
+          "overturning_Nm": 2.6585099999999997,
+          "static_moment_ratio": 3.321033210332104
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.8189894035458565e-12,
+          "y_weight_moment_Nmm": 4.376943252282217e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": 7.105427357601002e-15,
+      "operation_approved": false
+    },
+    "base_10kg/forward_object_2kg_NOT_APPROVED": {
+      "components_kg_xyz_mm": [
+        [
+          10,
+          0,
+          0,
+          85
+        ],
+        [
+          1.7,
+          160.0,
+          0.0,
+          240.0
+        ],
+        [
+          0.3,
+          280.0,
+          0.0,
+          40.0
+        ],
+        [
+          2.0,
+          280.0,
+          0.0,
+          40.0
+        ]
+      ],
+      "total_mass_kg": 14.0,
+      "cg_xyz_mm": [
+        65.42857142857143,
+        0.0,
+        96.42857142857143
+      ],
+      "first_design_A": {
+        "front_edge_margin_mm": 24.57142857142857,
+        "worst_sampled_caster_support_margin_mm": 24.57142857142857,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90.0,
+            177.0
+          ],
+          "right": [
+            90.0,
+            -177.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 61.137321428571425,
+          "right": 61.13732142857144,
+          "caster": 15.065357142857142
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 60.81606516696464,
+            "max_signed_N": 62.400159433777894,
+            "min_at_caster_angle_deg": 50.5,
+            "max_at_caster_angle_deg": 236.5
+          },
+          "right": {
+            "min_signed_N": 60.81606516696465,
+            "max_signed_N": 62.40015943377788,
+            "min_at_caster_angle_deg": 309.5,
+            "max_at_caster_angle_deg": 123.5
+          },
+          "caster": {
+            "min_signed_N": 13.1821875,
+            "max_signed_N": 15.065357142857142,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 8.829,
+          "overturning_Nm": 5.45436,
+          "static_moment_ratio": 1.618705035971223
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.8189894035458565e-12,
+          "y_weight_moment_Nmm": 3.637978807091713e-12
+        },
+        "operation_approved": false
+      },
+      "second_design_B": {
+        "front_edge_margin_mm": 24.57142857142857,
+        "worst_sampled_caster_support_margin_mm": 24.57142857142857,
+        "worst_margin_caster_angle_deg": 0.0,
+        "contacts_at_worst_margin_xy_mm": {
+          "left": [
+            90,
+            170.0
+          ],
+          "right": [
+            90,
+            -170.0
+          ],
+          "caster": [
+            -134.0,
+            0.0
+          ]
+        },
+        "signed_reactions_at_worst_margin_N": {
+          "left": 61.13732142857144,
+          "right": 61.137321428571425,
+          "caster": 15.065357142857142
+        },
+        "wheel_reaction_ranges_N": {
+          "left": {
+            "min_signed_N": 60.79482535397287,
+            "max_signed_N": 62.42139871635617,
+            "min_at_caster_angle_deg": 51.5,
+            "max_at_caster_angle_deg": 238.0
+          },
+          "right": {
+            "min_signed_N": 60.79482535397287,
+            "max_signed_N": 62.42139871635617,
+            "min_at_caster_angle_deg": 308.5,
+            "max_at_caster_angle_deg": 122.0
+          },
+          "caster": {
+            "min_signed_N": 13.1821875,
+            "max_signed_N": 15.065357142857142,
+            "min_at_caster_angle_deg": 180.0,
+            "max_at_caster_angle_deg": 0.0
+          }
+        },
+        "all_sampled_reactions_nonnegative": true,
+        "sampled_flat_static_cg_inside": true,
+        "front_tip": {
+          "restoring_Nm": 8.829,
+          "overturning_Nm": 5.45436,
+          "static_moment_ratio": 1.618705035971223
+        },
+        "equilibrium_max_abs_residual": {
+          "vertical_force_N": 0.0,
+          "x_weight_moment_Nmm": 1.8189894035458565e-12,
+          "y_weight_moment_Nmm": 3.637978807091713e-12
+        },
+        "operation_approved": false
+      },
+      "support_margin_B_minus_A_mm": 0.0,
+      "operation_approved": false
+    }
+  },
+  "operation_approved": false,
+  "input_files": {
+    "config": "cad/amr02/design_parameters.json",
+    "baseline": "docs/amr-01/design_parameters.json"
+  }
+}

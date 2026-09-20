@@ -112,7 +112,7 @@ def evaluate(config: dict[str, Any]) -> dict[str, Any]:
     req, geo, drive = config["requirements"], config["geometry"], config["drive"]
     frame, stability = config["frame"], config["stability_example"]
     stock_plan = frame_stock_plan(config)
-    required_positive = [req["base_target_kg"], req["base_upper_budget_kg"],
+    required_positive = [req["base_upper_budget_kg"],
                          req["gross_mass_calculation_limit_kg"], geo["wheel_diameter_mm"],
                          geo["drive_track_mm"], geo["body_length_mm"], geo["body_width_mm"],
                          frame["elastic_modulus_assumed_N_mm2"], frame["reference_second_moment_mm4"],
@@ -132,12 +132,13 @@ def evaluate(config: dict[str, Any]) -> dict[str, Any]:
     samples = geo["caster_orientation_samples"]
     if not isinstance(samples, int) or isinstance(samples, bool) or samples < 16:
         raise ValueError("キャスター角度サンプル数は16以上の整数です。")
-    if req["base_target_kg"] > req["base_upper_budget_kg"]:
-        raise ValueError("台車目標質量が上限を超えています。")
+    mass_estimates = config["mass_estimate_kg"]
+    if not mass_estimates or any(v <= 0 for v in mass_estimates.values()):
+        raise ValueError("質量見込みの各項目は正にしてください。")
+    estimated_base = sum(mass_estimates.values())
+    base_margin = req["base_upper_budget_kg"] - estimated_base
     if req["base_upper_budget_kg"] + req["arm_system_upper_budget_kg"] + req["cargo_limit_kg"] > req["gross_mass_calculation_limit_kg"] + 1e-9:
         raise ValueError("最大構成が総質量の計算枠を超えています。")
-    if not math.isclose(sum(config["mass_budget_target_kg"].values()), req["base_target_kg"], abs_tol=1e-9):
-        raise ValueError("重量配分の合計と台車目標質量が一致しません。")
     if not math.isclose(stability["arm_system_without_gripper_kg"] + stability["gripper_kg"], req["arm_system_upper_budget_kg"], abs_tol=1e-9):
         raise ValueError("参考アーム系の合計とアーム質量予算が一致しません。")
 
@@ -205,9 +206,12 @@ def evaluate(config: dict[str, Any]) -> dict[str, Any]:
     sr = geo["caster_assembly_sweep_radius_mm"]
     return {
         "version": config["version"], "status": config["status"],
-        "note_ja": "数値は設計仮定からの再計算。第一案CAD・BOMはcad/amr01に別置。5/6kg重心例は仮定で、CAD部品積上げ重量での実機評価ではない。",
-        "envelope_LW_mm": [l, w], "mass_budget_sum_kg": sum(config["mass_budget_target_kg"].values()),
-        "max_config_mass_at_target_kg": req["base_target_kg"] + req["arm_system_upper_budget_kg"] + req["cargo_limit_kg"],
+        "note_ja": "数値は設計仮定からの再計算。第一案CAD・BOMはcad/amr01に別置。台車自重上限10kgと現案見込み6.78kgを分けて管理。重心位置は全質量ケースで仮定値であり実機評価ではない。",
+        "envelope_LW_mm": [l, w],
+        "estimated_base_mass_kg": estimated_base,
+        "base_mass_margin_to_upper_budget_kg": base_margin,
+        "estimated_base_within_upper_budget": base_margin >= 0,
+        "max_config_mass_at_estimate_kg": estimated_base + req["arm_system_upper_budget_kg"] + req["cargo_limit_kg"],
         "max_config_mass_at_upper_budget_kg": req["base_upper_budget_kg"] + req["arm_system_upper_budget_kg"] + req["cargo_limit_kg"],
         "turning": {"body_only_pivot_swept_diameter_mm": diameter,
                     "body_only_pivot_swept_radius_mm": diameter / 2,
@@ -247,7 +251,7 @@ def evaluate(config: dict[str, Any]) -> dict[str, Any]:
         "runtime_examples": {"nominal_Wh": wh, "hours_by_assumed_W": {str(p): wh * runtime["usable_fraction_assumed"] / p for p in runtime["average_power_examples_W"]}},
         "reach_example_distance_mm": math.dist(config["reach_example"]["shoulder_xyz_mm"], config["reach_example"]["tcp_xyz_mm"]),
         "stability_cases": cases,
-        "unverified": ["選定部品の未公開寸法・連続定格・実測総質量と注文時の在庫納期（第一案CADは6kg目標未達）", "部屋の通路・収納場所・旋回空間", "構造・接合部・支持軸の強度",
+        "unverified": ["選定部品の未公開寸法・連続定格・実測総質量と注文時の在庫納期（10kg以内は現案見込みでの判定）", "部屋の通路・収納場所・旋回空間", "構造・接合部・支持軸の強度",
                        "保持・非常停止・タイヤ摩擦", "アーム全姿勢・把持重量・逆運動学", "電池保護・回生処理", "実機性能・無監督家庭内運用"]}
 
 

@@ -1,0 +1,634 @@
+{
+  "version": "0.5.0",
+  "design": "AMR01_SecondDesign_B",
+  "checked_on": "2026-09-20",
+  "currency": "JPY",
+  "all_amounts_include_tax": true,
+  "status": "planning_budget_with_unquoted_items_not_purchase_quote",
+  "scope_ja": "機械骨格・PLA機器トレイ・軸端キャップの費用。電池、ドライバ、制御基板、センサー、非常停止回路、完成に必要な機能ガード、持ち手、荷台、アームは別。未発注。Aと同じく必要購入単位を計上し、流用可能な候補部品も全数新規購入額で比較。PLAのみ既所有材の消費分仮定。",
+  "price_kinds_ja": {
+    "observed_carried_from_A": "Aの2026-09-20確認価格を引継ぎ。この作業で商品価格は再照合していない。",
+    "manufacturer_catalog_reference": "型番・メーカー価格表に基づく税換算参考。個人購入・送料・請求単価未確定。",
+    "retailer_price_reference": "参照日に販売ページの税込価格を確認。個人向け最終納入条件・加工適合は未確定。",
+    "allowance": "見積未取得の素材・部品・消費材料・締結材の予算。実販売単位を示さない行がある。"
+  },
+  "purchase_subtotals_by_price_kind_jpy": {
+    "allowance": 13700,
+    "manufacturer_catalog_reference": 1540.0,
+    "observed_carried_from_A": 20131.0,
+    "retailer_price_reference": 9042
+  },
+  "observed_carried_purchase_subtotal_jpy": 20131.0,
+  "reference_purchase_subtotal_jpy": 10582.0,
+  "purchase_allowance_subtotal_jpy": 13700,
+  "parts_and_consumables_subtotal_jpy": 44413.0,
+  "shipping_budget_jpy": 5350,
+  "self_fabrication_cash_budget_jpy": 49763.0,
+  "outsourced_fabrication_cash_budget_jpy": 64763.0,
+  "contingency_fraction": 0.1,
+  "self_fabrication_with_10pct_contingency_jpy": 54740,
+  "outsourced_with_10pct_contingency_jpy": 71240,
+  "budget_note_ja": "合計は仮枠を含む試算で支払確定額ではない。自加工は既所有工具/P1Sと自己作業を前提にし、工具購入代・作業費・印刷電気代を含まない。新規PLAスプール購入時はP06を販売単位全額に差替える。10%予備費は別表示で、通常合計には重複加算しない。",
+  "fabrication": {
+    "outsourced_increment_allowance_jpy": 15000,
+    "kind": "allowance_not_quotation",
+    "note_ja": "切断・切欠き・長穴/取付穴・U曲げ/代替接合・バリ取り・軸平面・車輪ハブ穴加工と外注品の往復配送をまとめた追加仮枠。素材代はP01〜P05に含むため重複加算しない。Aの6000円より増やした15000円は保証額・上限ではなく正式見積未取得。"
+  },
+  "shipping": [
+    {
+      "id": "S01",
+      "name": "DigiKey モーター2個単独注文",
+      "amount_jpy": 2200,
+      "kind": "allowance_carried_from_A",
+      "note_ja": "Aと同じ税別商品小計5490円の送料枠。最終決済条件で更新。"
+    },
+    {
+      "id": "S02",
+      "name": "ハンマーキャスター販売店 本州配送",
+      "amount_jpy": 650,
+      "kind": "observed_condition_carried_from_A",
+      "note_ja": "Aと同じ本州・4900円未満条件。配送先で変更。"
+    },
+    {
+      "id": "S03",
+      "name": "Amazon・金属材・純正接合部・KFL08等の追加配送枠",
+      "amount_jpy": 2500,
+      "kind": "allowance",
+      "note_ja": "取引先と長尺材配送を集約できる前提の仮枠。参考アングルに単品専用送料1870円の表示があるが、15角と20角を同梱できるか未確認。採用先の各配送費を最終集計してこの枠に置換し、別途同額を二重加算しない。"
+    }
+  ],
+  "comparison_with_A": {
+    "source": "../amr01/cost_summary.json",
+    "first_self_fabrication_jpy": 34159.0,
+    "first_outsourced_jpy": 40159.0,
+    "self_difference_jpy": 15604.0,
+    "outsourced_difference_jpy": 24604.0,
+    "delta_breakdown": [
+      {
+        "group_ja": "3030購入材",
+        "first_A_jpy": 3419,
+        "second_B_jpy": 3419,
+        "difference_B_minus_A_jpy": 0
+      },
+      {
+        "group_ja": "接合金具・溝ナット",
+        "first_A_jpy": 2580,
+        "second_B_jpy": 2740.0,
+        "difference_B_minus_A_jpy": 160.0
+      },
+      {
+        "group_ja": "駆動系",
+        "first_A_jpy": 18037.0,
+        "second_B_jpy": 19039.0,
+        "difference_B_minus_A_jpy": 1002.0
+      },
+      {
+        "group_ja": "キャスター",
+        "first_A_jpy": 373,
+        "second_B_jpy": 373,
+        "difference_B_minus_A_jpy": 0
+      },
+      {
+        "group_ja": "金属素材",
+        "first_A_jpy": 4100,
+        "second_B_jpy": 14842,
+        "difference_B_minus_A_jpy": 10742
+      },
+      {
+        "group_ja": "PLA材料消費",
+        "first_A_jpy": 0,
+        "second_B_jpy": 500,
+        "difference_B_minus_A_jpy": 500
+      },
+      {
+        "group_ja": "追加一般締結材",
+        "first_A_jpy": 1800,
+        "second_B_jpy": 3500,
+        "difference_B_minus_A_jpy": 1700
+      },
+      {
+        "group_ja": "部材配送",
+        "first_A_jpy": 3850,
+        "second_B_jpy": 5350,
+        "difference_B_minus_A_jpy": 1500
+      }
+    ],
+    "extra_outsource_increment_difference_jpy": 9000,
+    "note_ja": "BはAより安くない。低同軸が安いという比較は、同じ箱支持を備えた上置きベルト案に対する相対評価。ユーザーはフレーム下配置を否定しておらず、Aも有効な対照案である。Bは支持荷重経路を変えた比較試作候補で無条件採用・製作承認を意味しない。AとBはいずれも未見積枠を含み、ユーザー指定の絶対予算がないため予算超過とは判定しない。"
+  },
+  "quantity_checks": {
+    "slot_nuts_total": 44,
+    "slot_nuts_included_in_sets": 16,
+    "slot_nuts_additional": 28,
+    "kfl08_used": 4,
+    "kfl08_provisional_purchased": 6,
+    "removed_drive_spacers_40mm": 8,
+    "angle_15x15x3_cut_list_mm_count": [
+      [
+        70,
+        8
+      ]
+    ],
+    "angle_15x15x3_net_length_mm": 560,
+    "angle_15x15x3_with_3mm_per_cut_mm": 584,
+    "angle_30x20x3_cut_list_mm_count": [
+      [
+        112,
+        2
+      ]
+    ],
+    "caster_spacers_mm_count": [
+      [
+        6,
+        4
+      ]
+    ],
+    "tray_sleeves_mm_count": [
+      [
+        2.6,
+        4
+      ]
+    ],
+    "small_fastener_source": "fasteners.csv",
+    "small_fastener_note_ja": "fasteners.csvを最終CADから生成。M3x5 6本/M3x10 12本、M4x12 60本/M4x16 8本、M6x12 40本(SET16含む)/M6x16 8本。一般ナットM3 12/M4 68/M6 4、M6座金12/大径4。購入パックと価格は未見積枠。",
+    "angle_20x20x3_cut_list_mm_count": [
+      [
+        18,
+        4
+      ],
+      [
+        12,
+        4
+      ]
+    ],
+    "angle_20x20x3_net_length_mm": 120,
+    "angle_20x20x3_with_3mm_per_cut_mm": 144,
+    "upper_bracket_bolt_x_mm": [
+      47,
+      133
+    ],
+    "drive_track_mm": 340,
+    "wheel_center_absolute_y_mm": 170
+  },
+  "fabricated_metal_workload_ja": "t4矩形外形11枚、t3ガセット4枚、Uモーター台2個、短尺アングル16個＋側面金具2個、スペーサ/スリーブ8個が現時点の素材加工対象。切欠き・多数の穴・芯合わせを伴い、Aより加工/組立の作業負担が増える。",
+  "t4_material_plan": {
+    "stock_size_mm": [
+      300,
+      300,
+      4
+    ],
+    "provisional_sheet_count": 2,
+    "kerf_clearance_mm": 3,
+    "edge_margin_mm": 5,
+    "gross_blank_area_mm2": 127360,
+    "rectangles": [
+      {
+        "part": "Caster",
+        "sheet": 1,
+        "xy_mm": [
+          5,
+          5
+        ],
+        "wh_mm": [
+          80,
+          170
+        ]
+      },
+      {
+        "part": "Web3",
+        "sheet": 1,
+        "xy_mm": [
+          88,
+          5
+        ],
+        "wh_mm": [
+          148,
+          70
+        ]
+      },
+      {
+        "part": "Web2",
+        "sheet": 1,
+        "xy_mm": [
+          88,
+          78
+        ],
+        "wh_mm": [
+          148,
+          70
+        ]
+      },
+      {
+        "part": "Top2",
+        "sheet": 1,
+        "xy_mm": [
+          88,
+          151
+        ],
+        "wh_mm": [
+          152,
+          120
+        ]
+      },
+      {
+        "part": "Side1",
+        "sheet": 1,
+        "xy_mm": [
+          5,
+          178
+        ],
+        "wh_mm": [
+          80,
+          112
+        ]
+      },
+      {
+        "part": "Side2",
+        "sheet": 2,
+        "xy_mm": [
+          5,
+          5
+        ],
+        "wh_mm": [
+          80,
+          112
+        ]
+      },
+      {
+        "part": "Side4",
+        "sheet": 2,
+        "xy_mm": [
+          88,
+          5
+        ],
+        "wh_mm": [
+          80,
+          112
+        ]
+      },
+      {
+        "part": "Side3",
+        "sheet": 2,
+        "xy_mm": [
+          171,
+          5
+        ],
+        "wh_mm": [
+          80,
+          112
+        ]
+      },
+      {
+        "part": "Web1",
+        "sheet": 2,
+        "xy_mm": [
+          5,
+          120
+        ],
+        "wh_mm": [
+          70,
+          148
+        ]
+      },
+      {
+        "part": "Top1",
+        "sheet": 2,
+        "xy_mm": [
+          78,
+          120
+        ],
+        "wh_mm": [
+          120,
+          152
+        ]
+      },
+      {
+        "part": "Web4",
+        "sheet": 2,
+        "xy_mm": [
+          201,
+          120
+        ],
+        "wh_mm": [
+          70,
+          148
+        ]
+      }
+    ],
+    "check_status": "Rectangular blanks fit with specified gaps; real cutting and clamping not verified",
+    "note_ja": "面積だけから枚数を決めず、回転を含む矩形配置を机上確認。ウェブ切欠き・穴は後加工。クランプのつかみ幅、切断順、刃物、寸法公差、端面仕上げを含む最終ネスティングでは追加材が必要になる場合がある。"
+  },
+  "material_comparisons": [
+    {
+      "description_ja": "比較元: 250×500級を2枚、各5000円の仮枠",
+      "total_jpy": 10000,
+      "adopted": false,
+      "reference_url": "https://www.monotaro.com/p/0965/1302/",
+      "note_ja": "同ページは幅201〜250/長501〜550、現表示4948円。250×500そのものの確定見積ではない。9月27日改定予告あり。"
+    },
+    {
+      "description_ja": "採用参考: EA441VC-41 300×300×4を2枚",
+      "total_jpy": 9042,
+      "adopted": true,
+      "reference_url": "https://www.monotaro.com/p/4993/2618/",
+      "note_ja": "2枚の机上矩形配置を確認。250×500仮枠との二重計上なし。Amazonの同等板で寸法・現価格を特定した結果ではない。"
+    }
+  ],
+  "bearing_reference": {
+    "dimension_source": "https://www.motedis.fr/en/Flange-Bearing-8mm-die-cast-KFL08",
+    "nominal_LHW_mm": [
+      48,
+      27,
+      12
+    ],
+    "mount_pitch_mm": 36,
+    "price_reference_url": "https://store.shopping.yahoo.co.jp/shiningone23/pea696f5ed9.html",
+    "reference_pack_price_jpy": 1336,
+    "reference_pieces_per_pack": 3,
+    "reference_two_packs_jpy": 2672,
+    "note_ja": "寸法資料と価格資料は別供給元。価格資料に幅2mm記載があるため同一図面の製品と認定しない。採用前に寸法・取付方法・荷重仕様を確認。"
+  },
+  "items": [
+    {
+      "id": "F01",
+      "name": "MISUMI NFSL6-3030-400 4本組",
+      "packs": 1,
+      "pieces_per_pack": 4,
+      "used": 4,
+      "pack_price_jpy": 1952,
+      "price_kind": "observed_carried_from_A",
+      "url": "https://www.amazon.co.jp/dp/B0DKF2CCW3",
+      "note": "切断不要。左右外周2本と内部2本。 Aの2026-09-20確認価格を引継ぎ。この集計で再価格確認はしていない。",
+      "quantity_unit": "本",
+      "procurement_status": "未発注・受入確認待ち",
+      "purchase_subtotal_jpy": 1952
+    },
+    {
+      "id": "F02",
+      "name": "MISUMI NFSL6-3030-300 4本組",
+      "packs": 1,
+      "pieces_per_pack": 4,
+      "used": 2,
+      "pack_price_jpy": 1467,
+      "price_kind": "observed_carried_from_A",
+      "url": "https://www.amazon.co.jp/dp/B0DKDZ8G9G",
+      "note": "切断不要。前後各1本、予備2本も購入費に含む。 Aの2026-09-20確認価格を引継ぎ。この集計で再価格確認はしていない。",
+      "quantity_unit": "本",
+      "procurement_status": "未発注・受入確認待ち",
+      "purchase_subtotal_jpy": 1467
+    },
+    {
+      "id": "F03",
+      "name": "MISUMI HBLFSN6-SET 純正6シリーズ接合セット",
+      "packs": 8,
+      "pieces_per_pack": 1,
+      "used": 8,
+      "pack_price_jpy": 192.5,
+      "price_kind": "manufacturer_catalog_reference",
+      "url": "https://jp.misumi-ec.com/vona2/detail/110300442340/",
+      "note": "2026年7月表: 本体78円+SET97円=税別175円/組。8組×175×1.10=1540円の参考換算。各組CBM6-12×2/HNTT6-6×2付属。請求時の丸め・送料は未確定。",
+      "quantity_unit": "組",
+      "procurement_status": "個人購入経路・納入総額未確定",
+      "purchase_subtotal_jpy": 1540.0
+    },
+    {
+      "id": "F04",
+      "name": "MISUMI HNTT6-6 追加28個の予算",
+      "packs": 1,
+      "pieces_per_pack": 28,
+      "used": 28,
+      "pack_price_jpy": 1200,
+      "price_kind": "allowance",
+      "url": "https://jp.misumi-ec.com/vona2/detail/110302610850/",
+      "note": "全44個=SET付属16+追加28。1200円は28個分の仮枠で、28個入りパックを確認した意味ではない。H01にこの溝ナット費を重複計上しない。",
+      "quantity_unit": "個",
+      "procurement_status": "個人購入経路・販売単位・現価格未確定",
+      "purchase_subtotal_jpy": 1200
+    },
+    {
+      "id": "D01",
+      "name": "DFRobot FIT0185 / 12V 83rpm 131:1 エンコーダ付き",
+      "packs": 2,
+      "pieces_per_pack": 1,
+      "used": 2,
+      "pack_price_jpy": 3019.5,
+      "price_kind": "observed_carried_from_A",
+      "url": "https://www.digikey.jp/ja/products/detail/dfrobot/FIT0185/6588527",
+      "note": "税別2745円。在庫106表示。45kgfcmは拘束トルクで連続値ではない。送料を別に計上。 Aの確認価格を引継ぎ、全数の新規購入額で比較する。",
+      "quantity_unit": "個",
+      "procurement_status": "未発注・受入確認待ち",
+      "purchase_subtotal_jpy": 6039.0
+    },
+    {
+      "id": "D02",
+      "name": "100mm金属ホイール＋ネオプレンタイヤ / 穴8mm / 幅25.4mm",
+      "packs": 2,
+      "pieces_per_pack": 1,
+      "used": 2,
+      "pack_price_jpy": 2605,
+      "price_kind": "observed_carried_from_A",
+      "url": "https://www.amazon.co.jp/dp/B0B23WBLBK",
+      "note": "約300g/個。ハブなし。PCD24の取付穴加工を別途見込む。許容輪荷重は非公表。 Aの確認価格を引継ぎ、全数の新規購入額で比較する。",
+      "quantity_unit": "個",
+      "procurement_status": "未発注・受入確認待ち",
+      "purchase_subtotal_jpy": 5210
+    },
+    {
+      "id": "D03",
+      "name": "uxcell 8mmフランジハブ H13 / 胴16 / フランジ32 / PCD24 2個組",
+      "packs": 1,
+      "pieces_per_pack": 2,
+      "used": 2,
+      "pack_price_jpy": 1341,
+      "price_kind": "observed_carried_from_A",
+      "url": "https://www.amazon.co.jp/dp/B07PTPFX35",
+      "note": "M4止めねじ2本/個付属。車輪側4穴は既存穴に合うと仮定せず現物確認して加工。 Aの確認価格を引継ぎ、全数の新規購入額で比較する。",
+      "quantity_unit": "個",
+      "procurement_status": "未発注・受入確認待ち",
+      "purchase_subtotal_jpy": 1341
+    },
+    {
+      "id": "D04",
+      "name": "uxcell C45クロムメッキ軸 8x100mm 2本組",
+      "packs": 1,
+      "pieces_per_pack": 2,
+      "used": 2,
+      "pack_price_jpy": 828,
+      "price_kind": "observed_carried_from_A",
+      "url": "https://www.amazon.co.jp/dp/B0G3Y7811K",
+      "note": "切断不要。止めねじ部の浅い平面加工を見込む。直径公差は受入確認。 Aの確認価格を引継ぎ、全数の新規購入額で比較する。",
+      "quantity_unit": "個",
+      "procurement_status": "未発注・受入確認待ち",
+      "purchase_subtotal_jpy": 828
+    },
+    {
+      "id": "D05",
+      "name": "KFL08 8mmフランジ軸受 3個組×2を参考にした予算",
+      "packs": 2,
+      "pieces_per_pack": 3,
+      "used": 4,
+      "pack_price_jpy": 1350,
+      "price_kind": "allowance",
+      "url": "https://store.shopping.yahoo.co.jp/shiningone23/pea696f5ed9.html",
+      "note": "参考販売表示は3個1336円、2組2672円。試算2700円、6個購入想定で2個余りも含む。幅2mm等の記載があり、参照図48×27×12/穴ピッチ36と同一寸法・荷重仕様の保証なし。Amazon採用品未特定。",
+      "quantity_unit": "個",
+      "procurement_status": "調達候補未確定・図面との同一性未確認",
+      "purchase_subtotal_jpy": 2700
+    },
+    {
+      "id": "D06",
+      "name": "uxcell ジョーカップリング 6→8mm / D20 L25",
+      "packs": 2,
+      "pieces_per_pack": 1,
+      "used": 2,
+      "pack_price_jpy": 999,
+      "price_kind": "observed_carried_from_A",
+      "url": "https://www.amazon.co.jp/dp/B0CWNQJWPH",
+      "note": "軸端間に3mmの隙間。許容連続トルク・許容偏心は非公表、負荷試験が必要。 Aの確認価格を引継ぎ。",
+      "quantity_unit": "個",
+      "procurement_status": "未発注・受入確認待ち",
+      "purchase_subtotal_jpy": 1998
+    },
+    {
+      "id": "D07",
+      "name": "PATIKIL 分割軸カラー 内8 外25 幅8 4個組",
+      "packs": 1,
+      "pieces_per_pack": 4,
+      "used": 4,
+      "pack_price_jpy": 923,
+      "price_kind": "observed_carried_from_A",
+      "url": "https://www.amazon.co.jp/dp/B0DDXP5HL6",
+      "note": "4個購入・4個使用。内外KFL08の内側に配置する軸方向の補助ストッパ。現物では隙間を調整し軸受へ予圧を掛けない。 Aの確認価格を引継ぎ。",
+      "quantity_unit": "個",
+      "procurement_status": "未発注・受入確認待ち",
+      "purchase_subtotal_jpy": 923
+    },
+    {
+      "id": "C01",
+      "name": "ハンマーキャスター 420G-R50",
+      "packs": 1,
+      "pieces_per_pack": 1,
+      "used": 1,
+      "pack_price_jpy": 373,
+      "price_kind": "observed_carried_from_A",
+      "url": "https://www.tanaka-km.com/view/item/000000036665",
+      "note": "径50 幅20 高さ65、座59x47、穴ピッチ46x35、トレール16、許容荷重300N。個人購入可。本州送料650円別。 50mmを維持。段差能力は未認定。",
+      "quantity_unit": "個",
+      "procurement_status": "未発注・受入確認待ち",
+      "purchase_subtotal_jpy": 373
+    },
+    {
+      "id": "P01",
+      "name": "A5052板 t4 300×300mm / EA441VC-41 参考",
+      "packs": 2,
+      "pieces_per_pack": 1,
+      "used": 2,
+      "pack_price_jpy": 4521,
+      "price_kind": "retailer_price_reference",
+      "url": "https://www.monotaro.com/p/4993/2618/",
+      "note": "2026-09-20参照の税込表示4521円/枚。上板120×152×2、壁112×80×4、ウェブ148×70×4、キャスター板80×170×1の矩形外形を2枚に仮配置。cost_summaryの切出し案は刃幅3mm/外周5mmの机上確認で、つかみ代・切断順・実公差は未確定。加工費別。",
+      "quantity_unit": "枚",
+      "procurement_status": "購入・個人向け納入条件・加工適合の最終確認前",
+      "purchase_subtotal_jpy": 9042
+    },
+    {
+      "id": "P02",
+      "name": "A5052板 t3 250×250mm相当 素材予算",
+      "packs": 1,
+      "pieces_per_pack": 1,
+      "used": 1,
+      "pack_price_jpy": 1500,
+      "price_kind": "allowance",
+      "url": null,
+      "note": "ガセット60×60直角三角形×4と幅50mmのU形モーター台×2。Uの展開寸法・曲げR・加工方式は未確定。板の販売単位・切出し配置を確定後に更新。曲げ/穴加工は外注枠と分離。",
+      "quantity_unit": "枚相当",
+      "procurement_status": "素材単位・価格・加工見積未取得",
+      "purchase_subtotal_jpy": 1500
+    },
+    {
+      "id": "P03",
+      "name": "アルミ等辺アングル15×15×3 L1000mm 素材予算",
+      "packs": 1,
+      "pieces_per_pack": 1,
+      "used": 1,
+      "pack_price_jpy": 1000,
+      "price_kind": "allowance",
+      "url": "https://axel.as-1.co.jp/asone/d/64-8372-69/",
+      "note": "L70×8=560mmを切出す想定。切りしろ3mm×8を加えて584mm。上部小金具はP07の20mm角材へ変更し、この材には含めない。残材を費用から控除しない。参考製品は光モール413、標準税別850円だがWEB納入価格未確定。",
+      "quantity_unit": "本",
+      "procurement_status": "採用販売元・内R・実寸・送料未確定",
+      "purchase_subtotal_jpy": 1000
+    },
+    {
+      "id": "P04",
+      "name": "アルミ不等辺アングル30×20×3 素材一式予算",
+      "packs": 1,
+      "pieces_per_pack": 1,
+      "used": 1,
+      "pack_price_jpy": 1200,
+      "price_kind": "allowance",
+      "url": null,
+      "note": "フレーム側面金具L112×2。切断・切欠き・穴加工が必要。必要長224mmだけの按分価格ではなく、販売単位未確定の素材購入枠。",
+      "quantity_unit": "式",
+      "procurement_status": "入手可能定尺・材質・価格未確認",
+      "purchase_subtotal_jpy": 1200
+    },
+    {
+      "id": "P05",
+      "name": "アルミパイプ 外12 内7 長500mm 素材予算",
+      "packs": 1,
+      "pieces_per_pack": 1,
+      "used": 1,
+      "pack_price_jpy": 700,
+      "price_kind": "allowance",
+      "url": null,
+      "note": "Aの素材枠を引継ぎ。40mmスペーサ8個は撤去するが、キャスターL6×4とPLAトレイ圧縮スリーブL2.6×4を切出す。長さ精度・切りしろを確認。購入長全体を計上し余りを費用から控除しない。",
+      "quantity_unit": "本",
+      "procurement_status": "素材価格・短尺加工方法未確定",
+      "purchase_subtotal_jpy": 700
+    },
+    {
+      "id": "P06",
+      "name": "PLAトレイ・軸端キャップ・型合わせ治具 消費材料予算",
+      "packs": 1,
+      "pieces_per_pack": 1,
+      "used": 1,
+      "pack_price_jpy": 500,
+      "price_kind": "allowance",
+      "url": null,
+      "note": "機器トレイ200×180×10.4mmと軸端キャップ等。既所有PLAの消費分を約200g×2500円/kg=500円と仮置き。実スライス量・治具・失敗分を再集計。新規スプールを買う場合は購入単位全額へ差替え。P1S本体・工具代・作業時間・電気代は含まない。",
+      "quantity_unit": "式(消費分)",
+      "procurement_status": "手持ちPLA使用仮定・実スライス量未確定",
+      "purchase_subtotal_jpy": 500
+    },
+    {
+      "id": "P07",
+      "name": "アルミ等辺アングル20×20×3 L1000mm 素材予算",
+      "packs": 1,
+      "pieces_per_pack": 1,
+      "used": 1,
+      "pack_price_jpy": 1400,
+      "price_kind": "allowance",
+      "url": "https://axel.as-1.co.jp/asone/d/64-8372-74/",
+      "note": "上部小金具L18×4+L12×4=120mm。刃幅3mm×8を加えて144mm。干渉修正で15mm角から変更。光モール414の標準税別1210円/1mを参考に税込1400円枠。使用長の按分でなく1本購入を見込む。端材入手が確定すれば購入単位・送料を含めて差替え。",
+      "quantity_unit": "本",
+      "procurement_status": "販売元・内R・現価格・送料未確定",
+      "purchase_subtotal_jpy": 1400
+    },
+    {
+      "id": "H01",
+      "name": "追加M3/M4/M6ねじ・一般ナット・ワッシャ・小ねじ予備枠",
+      "packs": 1,
+      "pieces_per_pack": 1,
+      "used": 1,
+      "pack_price_jpy": 3500,
+      "price_kind": "allowance",
+      "url": null,
+      "note": "多数の箱角材・壁・上板・軸受・U台座の締結とトレイ大径ワッシャを含む一式枠。確定数量はfasteners.csv。SET付属M6×16組と追加溝ナットF04は除外し重複計上しない。新品工具・ドリル等の購入代は含まない。",
+      "quantity_unit": "式",
+      "procurement_status": "CAD使用数量確定・販売単位と単価未見積",
+      "purchase_subtotal_jpy": 3500
+    }
+  ],
+  "cad_revision_note_ja": "上部小角材は20×20×3、15角は縦L70×8のみ。側面金具L112×2。U台座は内R3/外R6の曲げ形状、床面z27〜30の現CADを素材/外注枠で扱う。最終展開と工具・曲げ条件は未確定。"
+}

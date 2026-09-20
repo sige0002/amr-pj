@@ -1,14 +1,16 @@
 {
-  "version": "0.4.0",
+  "version": "0.4.1",
   "status": "first_cad_concept_not_manufacturing_release",
-  "note_ja": "数値は設計仮定からの再計算。第一案CAD・BOMはcad/amr01に別置。5/6kg重心例は仮定で、CAD部品積上げ重量での実機評価ではない。",
+  "note_ja": "数値は設計仮定からの再計算。第一案CAD・BOMはcad/amr01に別置。台車自重上限10kgと現案見込み6.78kgを分けて管理。重心位置は全質量ケースで仮定値であり実機評価ではない。",
   "envelope_LW_mm": [
     500.0,
     400.0
   ],
-  "mass_budget_sum_kg": 6.0,
-  "max_config_mass_at_target_kg": 10.0,
-  "max_config_mass_at_upper_budget_kg": 10.0,
+  "estimated_base_mass_kg": 6.78,
+  "base_mass_margin_to_upper_budget_kg": 3.2199999999999998,
+  "estimated_base_within_upper_budget": true,
+  "max_config_mass_at_estimate_kg": 10.780000000000001,
+  "max_config_mass_at_upper_budget_kg": 14.0,
   "turning": {
     "body_only_pivot_swept_diameter_mm": 788.9233169326408,
     "body_only_pivot_swept_radius_mm": 394.4616584663204,
@@ -21,10 +23,10 @@
     "note_ja": "車輪の矩形とキャスター包絡円だけの概算。干渉なしの保証ではない。"
   },
   "drive": {
-    "gross_mass_kg": 10.0,
-    "force_N": 13.481779360029273,
-    "wheel_torque_Nm": 0.33704448400073184,
-    "wheel_torque_with_margin_Nm": 0.5055667260010978,
+    "gross_mass_kg": 14.0,
+    "force_N": 18.874491104040985,
+    "wheel_torque_Nm": 0.4718622776010246,
+    "wheel_torque_with_margin_Nm": 0.7077934164015369,
     "straight_wheel_rpm": 57.29577951308232,
     "outer_wheel_rpm": 77.57848546071347,
     "initial_outer_wheel_rpm": 38.78924273035673,
@@ -548,10 +550,466 @@
       "sampled_flat_static_cg_inside": false,
       "operation_approved": false,
       "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_6.78kg/base_only": {
+      "components_kg_xyz_m": [
+        [
+          6.78,
+          0.0,
+          0.0,
+          0.085
+        ]
+      ],
+      "total_mass_kg": 6.78,
+      "cg_xyz_mm": [
+        0.0,
+        0.0,
+        85.0
+      ],
+      "front_edge_margin_mm": 90.0,
+      "worst_sampled_caster_support_margin_mm": 79.38015972597648,
+      "front_tip": {
+        "restoring_Nm": 5.986062,
+        "overturning_Nm": 0.0,
+        "static_moment_ratio": null
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_6.78kg/base_plus_cargo": {
+      "components_kg_xyz_m": [
+        [
+          6.78,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          2.0,
+          -0.01,
+          0.0,
+          0.19
+        ]
+      ],
+      "total_mass_kg": 8.780000000000001,
+      "cg_xyz_mm": [
+        -2.277904328018223,
+        0.0,
+        108.91799544419133
+      ],
+      "front_edge_margin_mm": 92.27790432801822,
+      "worst_sampled_caster_support_margin_mm": 77.93171387736922,
+      "front_tip": {
+        "restoring_Nm": 7.948062,
+        "overturning_Nm": 0.0,
+        "static_moment_ratio": null
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_6.78kg/future_transport": {
+      "components_kg_xyz_m": [
+        [
+          6.78,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          1.7,
+          0.04,
+          0.0,
+          0.2
+        ],
+        [
+          0.3,
+          0.02,
+          0.0,
+          0.18
+        ],
+        [
+          2.0,
+          -0.01,
+          0.0,
+          0.19
+        ]
+      ],
+      "total_mass_kg": 10.78,
+      "cg_xyz_mm": [
+        5.009276437847867,
+        0.0,
+        125.25974025974027
+      ],
+      "front_edge_margin_mm": 84.99072356215214,
+      "worst_sampled_caster_support_margin_mm": 82.5653969511234,
+      "front_tip": {
+        "restoring_Nm": 8.987922000000001,
+        "overturning_Nm": 0.0,
+        "static_moment_ratio": null
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_6.78kg/forward_object_0kg_NOT_APPROVED": {
+      "components_kg_xyz_m": [
+        [
+          6.78,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          1.7,
+          0.16,
+          0.0,
+          0.24
+        ],
+        [
+          0.3,
+          0.28,
+          0.0,
+          0.04
+        ]
+      ],
+      "total_mass_kg": 8.78,
+      "cg_xyz_mm": [
+        40.546697038724375,
+        0.0,
+        113.4738041002278
+      ],
+      "front_edge_margin_mm": 49.45330296127562,
+      "worst_sampled_caster_support_margin_mm": 49.45330296127562,
+      "front_tip": {
+        "restoring_Nm": 5.986062,
+        "overturning_Nm": 1.72656,
+        "static_moment_ratio": 3.4670454545454548
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_6.78kg/forward_object_0.5kg_NOT_APPROVED": {
+      "components_kg_xyz_m": [
+        [
+          6.78,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          1.7,
+          0.16,
+          0.0,
+          0.24
+        ],
+        [
+          0.3,
+          0.28,
+          0.0,
+          0.04
+        ],
+        [
+          0.5,
+          0.28,
+          0.0,
+          0.04
+        ]
+      ],
+      "total_mass_kg": 9.28,
+      "cg_xyz_mm": [
+        53.448275862068975,
+        0.0,
+        109.51508620689656
+      ],
+      "front_edge_margin_mm": 36.551724137931025,
+      "worst_sampled_caster_support_margin_mm": 36.551724137931025,
+      "front_tip": {
+        "restoring_Nm": 5.986062,
+        "overturning_Nm": 2.6585100000000006,
+        "static_moment_ratio": 2.2516605166051655
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_6.78kg/forward_object_2kg_NOT_APPROVED": {
+      "components_kg_xyz_m": [
+        [
+          6.78,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          1.7,
+          0.16,
+          0.0,
+          0.24
+        ],
+        [
+          0.3,
+          0.28,
+          0.0,
+          0.04
+        ],
+        [
+          2.0,
+          0.28,
+          0.0,
+          0.04
+        ]
+      ],
+      "total_mass_kg": 10.78,
+      "cg_xyz_mm": [
+        84.97217068645641,
+        0.0,
+        99.84230055658628
+      ],
+      "front_edge_margin_mm": 5.027829313543592,
+      "worst_sampled_caster_support_margin_mm": 5.027829313543592,
+      "front_tip": {
+        "restoring_Nm": 5.986062,
+        "overturning_Nm": 5.454360000000001,
+        "static_moment_ratio": 1.0974820143884891
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_10kg/base_only": {
+      "components_kg_xyz_m": [
+        [
+          10.0,
+          0.0,
+          0.0,
+          0.085
+        ]
+      ],
+      "total_mass_kg": 10.0,
+      "cg_xyz_mm": [
+        0.0,
+        0.0,
+        85.0
+      ],
+      "front_edge_margin_mm": 90.0,
+      "worst_sampled_caster_support_margin_mm": 79.38015972597648,
+      "front_tip": {
+        "restoring_Nm": 8.829,
+        "overturning_Nm": 0.0,
+        "static_moment_ratio": null
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_10kg/base_plus_cargo": {
+      "components_kg_xyz_m": [
+        [
+          10.0,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          2.0,
+          -0.01,
+          0.0,
+          0.19
+        ]
+      ],
+      "total_mass_kg": 12.0,
+      "cg_xyz_mm": [
+        -1.6666666666666667,
+        0.0,
+        102.5
+      ],
+      "front_edge_margin_mm": 91.66666666666666,
+      "worst_sampled_caster_support_margin_mm": 78.32038018007883,
+      "front_tip": {
+        "restoring_Nm": 10.791,
+        "overturning_Nm": 0.0,
+        "static_moment_ratio": null
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_10kg/future_transport": {
+      "components_kg_xyz_m": [
+        [
+          10.0,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          1.7,
+          0.04,
+          0.0,
+          0.2
+        ],
+        [
+          0.3,
+          0.02,
+          0.0,
+          0.18
+        ],
+        [
+          2.0,
+          -0.01,
+          0.0,
+          0.19
+        ]
+      ],
+      "total_mass_kg": 14.0,
+      "cg_xyz_mm": [
+        3.8571428571428577,
+        0.0,
+        116.0
+      ],
+      "front_edge_margin_mm": 86.14285714285714,
+      "worst_sampled_caster_support_margin_mm": 81.8327923893396,
+      "front_tip": {
+        "restoring_Nm": 11.830860000000001,
+        "overturning_Nm": 0.0,
+        "static_moment_ratio": null
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_10kg/forward_object_0kg_NOT_APPROVED": {
+      "components_kg_xyz_m": [
+        [
+          10.0,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          1.7,
+          0.16,
+          0.0,
+          0.24
+        ],
+        [
+          0.3,
+          0.28,
+          0.0,
+          0.04
+        ]
+      ],
+      "total_mass_kg": 12.0,
+      "cg_xyz_mm": [
+        29.66666666666667,
+        0.0,
+        105.83333333333333
+      ],
+      "front_edge_margin_mm": 60.33333333333332,
+      "worst_sampled_caster_support_margin_mm": 60.33333333333332,
+      "front_tip": {
+        "restoring_Nm": 8.829,
+        "overturning_Nm": 1.72656,
+        "static_moment_ratio": 5.113636363636363
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_10kg/forward_object_0.5kg_NOT_APPROVED": {
+      "components_kg_xyz_m": [
+        [
+          10.0,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          1.7,
+          0.16,
+          0.0,
+          0.24
+        ],
+        [
+          0.3,
+          0.28,
+          0.0,
+          0.04
+        ],
+        [
+          0.5,
+          0.28,
+          0.0,
+          0.04
+        ]
+      ],
+      "total_mass_kg": 12.5,
+      "cg_xyz_mm": [
+        39.68000000000001,
+        0.0,
+        103.2
+      ],
+      "front_edge_margin_mm": 50.31999999999999,
+      "worst_sampled_caster_support_margin_mm": 50.319999999999986,
+      "front_tip": {
+        "restoring_Nm": 8.829,
+        "overturning_Nm": 2.6585100000000006,
+        "static_moment_ratio": 3.3210332103321027
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
+    },
+    "base_10kg/forward_object_2kg_NOT_APPROVED": {
+      "components_kg_xyz_m": [
+        [
+          10.0,
+          0.0,
+          0.0,
+          0.085
+        ],
+        [
+          1.7,
+          0.16,
+          0.0,
+          0.24
+        ],
+        [
+          0.3,
+          0.28,
+          0.0,
+          0.04
+        ],
+        [
+          2.0,
+          0.28,
+          0.0,
+          0.04
+        ]
+      ],
+      "total_mass_kg": 14.0,
+      "cg_xyz_mm": [
+        65.42857142857143,
+        0.0,
+        96.42857142857143
+      ],
+      "front_edge_margin_mm": 24.571428571428562,
+      "worst_sampled_caster_support_margin_mm": 24.571428571428562,
+      "front_tip": {
+        "restoring_Nm": 8.829,
+        "overturning_Nm": 5.454360000000001,
+        "static_moment_ratio": 1.6187050359712227
+      },
+      "sampled_flat_static_cg_inside": true,
+      "operation_approved": false,
+      "note_ja": "仮定した一姿勢の静的計算。正の支持余裕でも運転・把持を許可しない。"
     }
   },
   "unverified": [
-    "選定部品の未公開寸法・連続定格・実測総質量と注文時の在庫納期（第一案CADは6kg目標未達）",
+    "選定部品の未公開寸法・連続定格・実測総質量と注文時の在庫納期（10kg以内は現案見込みでの判定）",
     "部屋の通路・収納場所・旋回空間",
     "構造・接合部・支持軸の強度",
     "保持・非常停止・タイヤ摩擦",
