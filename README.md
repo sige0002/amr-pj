@@ -7,7 +7,8 @@
 - [現行案の説明・CAD・実画面](cad/amr03/README.ja.md)
 - [部品表](cad/amr03/BOM.csv) / [費用根拠と第一案との差](cad/amr03/cost_summary.json)
 - [重量・CAD検査](cad/amr03/validation_results.json) / [駆動・軸・重心感度](cad/amr03/calculation_results.json)
-- [モーター仮選定の理由・候補比較](cad/amr03/MOTOR_SELECTION.ja.md)
+- [実機採用例からの駆動系再選定・候補順位](cad/amr03/DRIVE_RESELECTION.ja.md)
+- [電池位置・配線・交換空間と実CAD画面](cad/amr03/ELECTRICAL_PACKAGING.ja.md)
 - [車輪支持のレビュー](cad/amr03/WHEEL_REVIEW.ja.md) / [低重心化のレビュー](cad/amr03/CG_REVIEW.ja.md)
 - 比較履歴：[元の第一案A](cad/amr01/README.ja.md) / [旧第二案B・却下したベルト案C](cad/amr02/README.ja.md)
 - [第一案の基礎設計書 v0.4.1](docs/amr-01/DESIGN.ja.md) / [同資料ZIP](archives/amr_v0_4_1.zip) / [FreeCAD環境](cad/)
@@ -27,7 +28,7 @@
 | 自加工：購入・材料・送料 | 34,159円 | **34,519円** |
 | 加工外注の仮枠込み | 40,159円 | **40,519円** |
 
-FIT0185は低価格の試作候補で、必要な連続トルクへの適合は未確認。モーターの選定確定とは扱わない。
+駆動系は実機採用例と負荷仕様を起点に再選定中。次の配置検討の優先候補はDDSM115一体ホイール。下記の骨格・費用はFIT0185を含む比較基準で、新候補へ置換済みではない。電装配置は別のCADで端子・配線・交換空間を検討している。
 
 差額は+360円。参考価格・未見積枠を含み、電池・電装・完成用ガード・荷台・アームは別。純正接合金具の個人購入経路と現物適合、加工見積は未確定。
 

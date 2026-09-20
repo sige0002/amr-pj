@@ -44,7 +44,10 @@ def evaluate(config, original, validation):
         raise ValueError("Validated CAD track differs from the calculation input")
     inputs = copy.deepcopy(config)
     inputs["stability"]["base_mass_cases_kg"] = [estimated, upper]
+    inputs["drive"]["selected_motor"] = inputs["drive"]["geometry_reference_motor"]
     raw = numerical.evaluate(inputs, original)
+    raw["drive"]["geometry_reference_motor"] = raw["drive"].pop("selected_motor")
+    raw["drive"]["selection_status"] = config["drive"]["selection_status"]
     assumptions = raw["stability_assumptions"]
     original_contacts = assumptions["first_design_A_contact_geometry"]
     current_contacts = assumptions["second_design_B_contact_geometry"]

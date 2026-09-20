@@ -1,0 +1,22 @@
+{
+  "status": "reference_packaging_only_not_electrical_or_assembly_release",
+  "base_physical_objects": 226,
+  "reference_routes": 10,
+  "reference_vs_chassis_collisions": [],
+  "permanent_reservation_vs_service_collisions": [],
+  "equipment_zone_collisions": [],
+  "route_envelope_intersections": [],
+  "routes_vs_unrelated_equipment_or_proposed_deck": [],
+  "invalid_shapes": [],
+  "battery_connector_route_must_disconnect_for_service": true,
+  "upper_service_height_mm": 190,
+  "motor_harness_endpoints_not_connected_to_verified_terminals": true,
+  "minimum_terminal_side_slack_current_pack_mm": 2,
+  "not_checked": [
+    "Selected pack/adapter geometry and removal mechanism",
+    "Real motor connector exit in18mm encoder gap",
+    "Clamp attachment and proposed front-deck fasteners",
+    "Cable ratings, EMI, actual bend minimum, wiring lengths and electric protection",
+    "Battery capacity/runtime, power conversion/regeneration and heat"
+  ]
+}

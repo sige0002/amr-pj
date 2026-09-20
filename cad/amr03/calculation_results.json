@@ -16,7 +16,6 @@
     "wheel_torque_Nm": 0.4718622776010246,
     "wheel_torque_with_margin_Nm": 0.7077934164015369,
     "torque_margin": 1.5,
-    "selected_motor": "DFRobot FIT0185",
     "motor_no_load_rpm_NOT_LOADED_RATING": 83,
     "motor_stall_torque_Nm_NOT_CONTINUOUS_RATING": 4.4129925,
     "continuous_torque_verified": false,
@@ -51,6 +50,8 @@
       "wheel_rim_speed_cap_m_s": 0.3403392041388943
     },
     "note_ja": "必要駆動力を左右へ均等配分したトルク計算。輪荷重の均等配分を意味しない。5度は選定計算条件、65rpmは指令上限であり負荷時性能・連続定格・坂道走行許可ではない。",
+    "geometry_reference_motor": "DFRobot FIT0185",
+    "selection_status": "reselection_using_real_robot_precedents_and_published_wheel_unit_ratings",
     "sizing_inputs": {
       "gravity_m_s2": 9.81,
       "slope_deg": 5,

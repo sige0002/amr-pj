@@ -74,7 +74,7 @@
       "url": "https://www.digikey.jp/ja/products/detail/dfrobot/FIT0185/6588527",
       "note": "Aの2026-09-20確認価格を引継ぎ（税別2745円/個）。過去の在庫数を現時点の在庫保証とはしない。45kgfcmは拘束トルクで連続値ではない。送料を別に計上。",
       "quantity_unit": "個",
-      "procurement_status": "低価格試作候補・連続性能未確認・未発注。比較はMOTOR_SELECTION.ja.md"
+      "procurement_status": "既存CADの比較用候補・未発注。実機採用例/輪ユニットを起点に再選定中。DRIVE_RESELECTION.ja.md参照"
     },
     {
       "id": "D02",

@@ -1,0 +1,29 @@
+{
+  "status": "candidate_comparison_not_selected_hardware",
+  "source_sizing": "calculation_results.json",
+  "candidate": "DDSM115",
+  "diameter_mm": 100.7,
+  "required_torque_Nm_per_wheel": 0.7127479703163477,
+  "required_initial_outer_rpm": 38.51960549191334,
+  "published_rated_voltage_V": 18,
+  "published_rated_torque_Nm": 0.96,
+  "published_rated_rpm": 115,
+  "rated_to_required_torque_numeric_ratio_NOT_safety_factor": 1.346899661564678,
+  "maximum_drive_wheel_force_in_A2_assumed_static_cases_N": 62.400159433777894,
+  "static_force_scope": "Existing A2 support/CG assumptions only. A changed wheel mount and track need recomputation. Not a shock or tested wheel load.",
+  "published_single_wheel_load_kg": 10,
+  "A2_existing_drive_parts_subtotal_JPY_excludes_driver": 18037.0,
+  "DDSM115_pair_JPY_includes_internal_driver": 25982,
+  "partial_subtotal_difference_JPY_NOT_complete_cost_delta": 7945.0,
+  "cost_note": "Old subtotal excludes motor-driver electronics. New subtotal excludes brackets, RS485 interface, power design and wiring. Shipping/order changes and deleted fabrication still need accounting.",
+  "sources": {
+    "manufacturer": "https://www.waveshare.com/wiki/DDSM115",
+    "domestic_price": "https://www.switch-science.com/products/9628"
+  },
+  "remaining": [
+    "38.5rpm low-speed continuous torque/thermal performance at intended battery voltage",
+    "Mounting footprint and wheel track",
+    "Dynamic wheel loads and bracket stiffness",
+    "Actual driver power-stop/regeneration behavior and full drive BOM"
+  ]
+}

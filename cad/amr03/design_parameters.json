@@ -80,7 +80,6 @@
     "battery_space_note_ja": "電池未選定の予約空間。容量・質量・固定条件の保証ではない。"
   },
   "drive": {
-    "selected_motor": "DFRobot FIT0185",
     "no_load_rpm": 83,
     "stall_torque_kgfcm": 45,
     "continuous_torque_verified": false,
@@ -93,8 +92,10 @@
     "slope_for_sizing_deg": 5,
     "rolling_resistance_assumed": 0.03,
     "torque_margin": 1.5,
-    "selection_status": "provisional_geometry_and_cost_candidate_continuous_duty_unverified",
-    "selection_review": "MOTOR_SELECTION.ja.md"
+    "selection_status": "reselection_using_real_robot_precedents_and_published_wheel_unit_ratings",
+    "selection_review": "DRIVE_RESELECTION.ja.md",
+    "geometry_reference_motor": "DFRobot FIT0185",
+    "priority_candidate_for_packaging_review": "DDSM115 integrated wheel; not adopted or substituted into chassis"
   },
   "shaft_comparison": {
     "diameter_mm": 8,

@@ -1,0 +1,420 @@
+{
+  "version": "0.6.1-layout-study",
+  "base_document": "AMR01_Revision_A2",
+  "status": "packaging_reservations_not_selected_electrical_hardware",
+  "power_basis": "Legacy design mentions Makita 18V; pack/adapter not selected. Motor bus, minimum voltage, protection and regeneration matching unresolved.",
+  "runtime_planning_hours": 1,
+  "runtime_status": "Working assumption pending user preference; not verified endurance",
+  "battery_body_xyz_LWH_mm": [
+    -90,
+    -40,
+    35,
+    120,
+    80,
+    65
+  ],
+  "battery_terminals": "Require upper/front access for this layout; battery is unselected",
+  "zones_xyz_LWH_mm": {
+    "MainFuseAndDistribution": [
+      67,
+      -35,
+      106,
+      40,
+      70,
+      30
+    ],
+    "MotorDriver": [
+      115,
+      -40,
+      106,
+      70,
+      80,
+      35
+    ],
+    "PowerConditioning": [
+      65,
+      50,
+      106,
+      45,
+      40,
+      40
+    ],
+    "ComputerAndControl": [
+      -185,
+      -45,
+      107,
+      75,
+      90,
+      40
+    ],
+    "EmergencyStopAccess": [
+      135,
+      110,
+      112,
+      50,
+      50,
+      50
+    ]
+  },
+  "service_xyz_LWH_mm": {
+    "BatteryUpperRemoval": [
+      -100,
+      -50,
+      69,
+      140,
+      100,
+      121
+    ],
+    "BatteryConnectorAccess": [
+      35,
+      -25,
+      75,
+      25,
+      50,
+      65
+    ]
+  },
+  "upper_removal_note": "Clear the straps and disconnect the pack. Lift the battery bottom above99mm rail top;65mm battery top then exceeds164mm before handling margin.190mm service height is temporary, not operating envelope.",
+  "cable_routes": [
+    {
+      "name": "BatteryToFuse",
+      "kind": "power",
+      "radius_mm": 3,
+      "bend_radius_mm": 8,
+      "points_mm": [
+        [
+          35,
+          0,
+          115
+        ],
+        [
+          55,
+          0,
+          115
+        ],
+        [
+          55,
+          25,
+          156
+        ],
+        [
+          90,
+          25,
+          156
+        ],
+        [
+          90,
+          25,
+          136
+        ]
+      ],
+      "allowed_service": [
+        "BatteryConnectorAccess",
+        "BatteryUpperRemoval"
+      ],
+      "allowed_equipment_connections": [
+        "MainFuseAndDistribution_RESERVED"
+      ]
+    },
+    {
+      "name": "FuseToPowerConditioning",
+      "kind": "power",
+      "radius_mm": 3,
+      "bend_radius_mm": 8,
+      "points_mm": [
+        [
+          90,
+          35,
+          122
+        ],
+        [
+          90,
+          50,
+          122
+        ]
+      ],
+      "allowed_service": [],
+      "allowed_equipment_connections": [
+        "MainFuseAndDistribution_RESERVED",
+        "PowerConditioning_RESERVED"
+      ]
+    },
+    {
+      "name": "PowerConditioningToDriver",
+      "kind": "power",
+      "radius_mm": 3,
+      "bend_radius_mm": 10,
+      "points_mm": [
+        [
+          110,
+          70,
+          125
+        ],
+        [
+          150,
+          70,
+          125
+        ],
+        [
+          150,
+          40,
+          125
+        ]
+      ],
+      "allowed_service": [],
+      "allowed_equipment_connections": [
+        "PowerConditioning_RESERVED",
+        "MotorDriver_RESERVED"
+      ]
+    },
+    {
+      "name": "MotorPowerL",
+      "kind": "power",
+      "radius_mm": 3,
+      "bend_radius_mm": 10,
+      "points_mm": [
+        [
+          175,
+          40,
+          118
+        ],
+        [
+          175,
+          100,
+          118
+        ],
+        [
+          55,
+          100,
+          118
+        ],
+        [
+          55,
+          35,
+          118
+        ],
+        [
+          55,
+          35,
+          66
+        ]
+      ],
+      "allowed_service": [],
+      "allowed_equipment_connections": [
+        "MotorDriver_RESERVED"
+      ]
+    },
+    {
+      "name": "MotorPowerR",
+      "kind": "power",
+      "radius_mm": 3,
+      "bend_radius_mm": 10,
+      "points_mm": [
+        [
+          175,
+          -40,
+          118
+        ],
+        [
+          175,
+          -90,
+          118
+        ],
+        [
+          55,
+          -90,
+          118
+        ],
+        [
+          55,
+          -35,
+          118
+        ],
+        [
+          55,
+          -35,
+          66
+        ]
+      ],
+      "allowed_service": [],
+      "allowed_equipment_connections": [
+        "MotorDriver_RESERVED"
+      ]
+    },
+    {
+      "name": "LogicSupply",
+      "kind": "power",
+      "radius_mm": 2,
+      "bend_radius_mm": 10,
+      "points_mm": [
+        [
+          65,
+          70,
+          138
+        ],
+        [
+          45,
+          100,
+          138
+        ],
+        [
+          -145,
+          100,
+          138
+        ],
+        [
+          -145,
+          45,
+          138
+        ]
+      ],
+      "allowed_service": [],
+      "allowed_equipment_connections": [
+        "PowerConditioning_RESERVED",
+        "ComputerAndControl_RESERVED"
+      ]
+    },
+    {
+      "name": "ControlBus",
+      "kind": "signal",
+      "radius_mm": 2,
+      "bend_radius_mm": 10,
+      "points_mm": [
+        [
+          -155,
+          -45,
+          133
+        ],
+        [
+          -155,
+          -110,
+          133
+        ],
+        [
+          130,
+          -110,
+          133
+        ],
+        [
+          130,
+          -40,
+          133
+        ]
+      ],
+      "allowed_service": [],
+      "allowed_equipment_connections": [
+        "ComputerAndControl_RESERVED",
+        "MotorDriver_RESERVED"
+      ]
+    },
+    {
+      "name": "EncoderL",
+      "kind": "signal",
+      "radius_mm": 2,
+      "bend_radius_mm": 10,
+      "points_mm": [
+        [
+          -165,
+          -45,
+          150
+        ],
+        [
+          -165,
+          -100,
+          150
+        ],
+        [
+          62,
+          -100,
+          150
+        ],
+        [
+          62,
+          40,
+          150
+        ],
+        [
+          62,
+          40,
+          84
+        ],
+        [
+          58,
+          40,
+          70
+        ]
+      ],
+      "allowed_service": [],
+      "allowed_equipment_connections": [
+        "ComputerAndControl_RESERVED"
+      ]
+    },
+    {
+      "name": "EncoderR",
+      "kind": "signal",
+      "radius_mm": 2,
+      "bend_radius_mm": 10,
+      "points_mm": [
+        [
+          -175,
+          -45,
+          142
+        ],
+        [
+          -175,
+          -120,
+          142
+        ],
+        [
+          64,
+          -120,
+          142
+        ],
+        [
+          64,
+          -42,
+          142
+        ],
+        [
+          64,
+          -42,
+          70
+        ]
+      ],
+      "allowed_service": [],
+      "allowed_equipment_connections": [
+        "ComputerAndControl_RESERVED"
+      ]
+    },
+    {
+      "name": "StopSignal",
+      "kind": "signal",
+      "radius_mm": 2,
+      "bend_radius_mm": 10,
+      "points_mm": [
+        [
+          160,
+          110,
+          133
+        ],
+        [
+          160,
+          70,
+          150
+        ],
+        [
+          160,
+          40,
+          133
+        ]
+      ],
+      "allowed_service": [],
+      "allowed_equipment_connections": [
+        "EmergencyStopAccess_RESERVED",
+        "MotorDriver_RESERVED"
+      ]
+    }
+  ],
+  "motor_endpoint_note": "Power and encoder routes end at service approach points, not at verified motor connector pins.18mm back-to-back encoder gap remains unresolved; harness is incomplete there.",
+  "cost_status": "Reference zones/routes have no purchase price. Existing34519JPY mechanical budget excludes electrical hardware. Front support, clamps, edge protection, real wire/connector/fuse/controller/battery/charger costs must be added after selection. No implied zero cost."
+}

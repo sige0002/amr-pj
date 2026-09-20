@@ -4,6 +4,8 @@
 
 狙いは第一案の簡素さと費用を保ち、搭載物を低く置くこと。フレームを6mm下げ、電池用PLAクレードルをフレーム内へ設けた。**40mmスペーサーの撤去が、そのまま40mmの車体下降になる構成ではない。**
 
+**追記：** [電池位置・配線・交換空間の検討CAD](ELECTRICAL_PACKAGING.ja.md)を追加した。駆動系は[実機採用例を起点に再選定](DRIVE_RESELECTION.ja.md)し、DDSM115一体ホイールを次の取付検討の優先候補とする。以下の骨格CAD・費用はFIT0185構成の比較基準で、新駆動系へ変更済みではない。
+
 ## 実際のFreeCAD画面とデータ
 
 ![第一案改A2：FreeCAD実画面](cad-screen-isometric.png)
@@ -18,7 +20,7 @@
 - [部品表](BOM.csv) / [購入URL・価格区分](bom.json) / [費用集計と第一案との差額](cost_summary.json)
 - [CADから集計した締結部品](fasteners.csv) / [CAD検証・重量](validation_results.json)
 - [設計条件](design_parameters.json) / [駆動・軸・重心感度計算](calculation_results.json)
-- [モーターの選定理由と候補比較](MOTOR_SELECTION.ja.md)
+- [実機採用例からの駆動系再選定](DRIVE_RESELECTION.ja.md) / [従来のモーター候補比較](MOTOR_SELECTION.ja.md)
 - [車輪担当の検討](WHEEL_REVIEW.ja.md) / [低重心化の独立レビュー](CG_REVIEW.ja.md) / [150mm輪の調達検討・今回は不採用](wheel-shopping-notes.ja.md)
 - 印刷用STL：[電池クレードル](BatteryCradlePLA.stl) / [電装トレイ](ElectronicsTrayPLA.stl)
 
