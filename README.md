@@ -16,7 +16,9 @@ M0601C_111二輪、100.7mmタイヤ、TYG-50キャスター、下段460×300mm�
 
 **P1は組付け確認済みの試作設計です。PLAの強度・クリープ・実機の安全率2と停止性能は未確認です。** 旧D2アルミ荷台の解析結果をP1の耐荷重として流用しません。荷物CG上限220mm、車体CG上限目標110mmは実機で確認します。
 
-![P1の上板を外したFreeCAD画面](cad/amr07/printed-deck-frame/cad-screen-frame-connections.png)
+![格子穴付き上板を載せたP1のFreeCAD画面](cad/amr07/printed-deck-frame/cad-screen-isometric.png)
+
+拡張用の格子板は4分割PLAで組付け済み。50mmピッチ・φ4.5の36穴と、M4用の裏ナットポケットを備えます。[真上から見た格子穴](cad/amr07/printed-deck-frame/cad-screen-grid-top.png)。締結説明に使う骨格だけの画像は、支持部分を見せるため一時的に上板を非表示にしています。
 
 - [P1の設計理由・締結拡大画像・費用・検査](cad/amr07/printed-deck-frame/README.ja.md)
 - [P1組立FCStd](cad/amr07/printed-deck-frame/AMR01_PrintedDeck_P1.FCStd) / [STEP](cad/amr07/printed-deck-frame/AMR01_PrintedDeck_P1.step)

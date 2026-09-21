@@ -70,5 +70,9 @@
   "viewport-isometric.png": {
     "bytes": 56045,
     "sha256": "31dc61bcaad7f94868fbf166a3174a88d972c1da5a3ff9b25bb9ac6643e6e07c"
+  },
+  "cad-screen-grid-top.png": {
+    "bytes": 174967,
+    "sha256": "1092b60b657a78dfeb747bb5b68067c89eff69492bae58f8e5345d55691d518a"
   }
 }

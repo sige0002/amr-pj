@@ -36,6 +36,11 @@ def save(name,fit=True):
 
 
 save('isometric')
+view.viewTop();view.fitAll()
+# Keep all four grid panels and the complete vehicle in the top view.
+view.getCameraNode().height.setValue(410)
+save('grid-top',False)
+view.viewAxonometric()
 for o in features:
     if o.Name.startswith(('PrintedDeck','PrintedStop','Deck','Stop')):o.ViewObject.Visibility=False
 save('frame-connections')
@@ -52,4 +57,4 @@ save('joint-detail',False)
 for o in features:
     o.ViewObject.Visibility=o.MaterialBasis!='reference'; o.ViewObject.Transparency=0
 view.viewAxonometric();view.fitAll();doc.recompute();doc.save()
-print('Saved actual GUI: isometric, frame-connections, joint-detail.')
+print('Saved actual GUI: isometric, grid-top, frame-connections, joint-detail.')
