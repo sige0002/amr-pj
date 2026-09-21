@@ -1,0 +1,4 @@
+interface:
+  display_name: "CNC加工見積"
+  short_description: "実CADを加工サイトへ投入し、加工条件・送料・見積画面を記録する"
+  default_prompt: "$cnc-quote を使い、このSTEPと図面の実際の加工見積を取得して記録してください。"

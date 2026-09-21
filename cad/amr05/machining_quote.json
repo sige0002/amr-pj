@@ -1,0 +1,102 @@
+{
+  "id": "JLCCNC-AMR05-20260921",
+  "recorded_at_utc": "2026-09-21T02:01:39+00:00",
+  "vendor": "JLCCNC",
+  "url": "https://jlccnc.com/jp/cnc-machining-quote",
+  "status": "observed_vendor_automatic_quote_not_manually_confirmed",
+  "vendor_formal_quote_number": null,
+  "order_submitted": false,
+  "paid": false,
+  "method": "Actual STEP uploaded, matching PDF attached, quantity and manufacturing options selected in vendor website UI.",
+  "design": "AMR01_M0601C_A4",
+  "drawing_revision": "AMR-05 / MOUNT-Q01 Rev. A",
+  "files": [
+    {
+      "path": "M0601C_custom_mount_quote.step",
+      "sha256": "399ed21399d2bd237d12dbfafdfe6a5f079422efe9abbdf7c02c84a8c2138d13"
+    },
+    {
+      "path": "M0601C_custom_mount_quote.pdf",
+      "sha256": "760921303c9dd2f1705e7843c08eb34b026105fb993cdc15f136f31818bc5c40"
+    }
+  ],
+  "vendor_recognized_dimensions_mm": [
+    90,
+    34,
+    30
+  ],
+  "vendor_recognized_volume_mm3": 38440.75,
+  "conditions": {
+    "quantity": 2,
+    "same_part_both_sides": true,
+    "material_ui": "Aluminum 6061",
+    "material_tooltip_temper": "T6",
+    "surface_finish": false,
+    "appearance": "Standard",
+    "tightest_tolerance_mm": 0.05,
+    "tightest_tolerance_scope": "Drawing-annotated seat flats 8.25 +/-0.05 mm; remaining nominal general tolerance ISO 2768-m for quotation only.",
+    "threads": false,
+    "subassembly": false,
+    "drawing_attached": true,
+    "special_inspection_report_confirmed": false,
+    "manufacturing_release": false,
+    "cnc_remarks": "QUOTE ONLY. Two identical motor mounting brackets for an indoor mobile robot. Aluminum 6061-T6, as-machined, no anodizing. Seat flats 8.25 +/-0.05 mm per attached 2D drawing; other tolerances ISO 2768-m. All five holes are clearance holes, no tapped threads. Please identify required internal fillets; no geometry changes without agreement. Preliminary fit review pending."
+  },
+  "currency": "USD",
+  "selected": {
+    "manufacturing_speed": "Economic",
+    "displayed_manufacturing_days": 10,
+    "parts_lot_amount": 74.5,
+    "shipping_method": "OCS Express",
+    "shipping_amount": 7.23,
+    "sum_of_displayed_parts_and_shipping": 81.73,
+    "shipping_transit_business_days": [
+      4,
+      6
+    ]
+  },
+  "alternative": {
+    "manufacturing_speed": "Standard",
+    "displayed_manufacturing_days": 5,
+    "parts_lot_amount": 84.06,
+    "shipping_method": "OCS Express",
+    "shipping_amount": 7.23,
+    "sum_of_displayed_parts_and_shipping": 91.29,
+    "shipping_transit_business_days": [
+      4,
+      6
+    ]
+  },
+  "shipping": {
+    "country": "Japan",
+    "calculation_basis": "country_only_before_checkout",
+    "postal_code_entered": false,
+    "postal_code_field_available": false,
+    "address_specific_surcharges_confirmed": false,
+    "displayed_package_weight_kg": 0.4,
+    "alternatives_usd": {
+      "OCS Express": 7.23,
+      "UPS Worldwide Express Saver": 9.78,
+      "DHL Express": 17.06,
+      "FedEx Express": 21.44,
+      "S.F Express Economy": 16.21
+    },
+    "note": "Own-courier-account handling charges are not complete shipping prices and are excluded from cheapest-service comparison."
+  },
+  "discounts_applied": false,
+  "JPY_conversion_rate": null,
+  "JPY_amount": null,
+  "taxes_import_fees_payment_conversion_and_address_surcharges": "Not confirmed at checkout; not added to displayed-price sum.",
+  "is_delivered_tax_inclusive_firm_quote": false,
+  "manual_review_guidelines_url": "https://jlccnc.com/help/article/cnc-machining-ordering-guidelines",
+  "review_before_payment_url": "https://jlccnc.com/help/article/how-to-place-cnc-orders",
+  "evidence": [
+    "quote-evidence/jlccnc-economic.png",
+    "quote-evidence/jlccnc-standard.png",
+    "quote-evidence/jlccnc-settings.png",
+    "quote-evidence/jlccnc-settings-notes.png",
+    "quote-evidence/jlccnc-japan-shipping.png",
+    "quote-evidence/jlccnc-economic.txt",
+    "quote-evidence/jlccnc-standard.txt"
+  ]
+}

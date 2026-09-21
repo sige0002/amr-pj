@@ -44,13 +44,30 @@ def purchase_amount(item):
     return None if value is None else value * item["packs"]
 
 
+def foreign_amount(value, multiplier=1):
+    """Keep the vendor's currency; never silently invent an exchange rate."""
+    if value is None:
+        return None
+    currency, amount = value["currency"], money(value["amount"])
+    if currency == "JPY" or len(currency) != 3 or not currency.isalpha() or not currency.isupper() or amount is None:
+        raise ValueError("Invalid foreign-currency quote")
+    return {"currency": currency, "amount": amount * multiplier}
+
+
 def aggregate(rows):
     """Rows carry an ID, price provenance and an already quantity-scaled amount."""
     known = Decimal(0)
-    kinds, pending = {}, []
+    kinds, pending, unconverted, foreign_totals = {}, [], [], {}
     for row in rows:
         value = money(row["amount_jpy"])
-        if value is None:
+        foreign = foreign_amount(row.get("amount_foreign"))
+        if value is None and foreign is not None:
+            unconverted.append({"id": row["id"], "name": row["name"],
+                                "reason": "vendor_quote_observed_in_foreign_currency_JPY_unconfirmed",
+                                "price_kind": row["price_kind"], **foreign})
+            code = foreign["currency"]
+            foreign_totals[code] = foreign_totals.get(code, Decimal(0)) + foreign["amount"]
+        elif value is None:
             pending.append({"id": row["id"], "name": row["name"], "reason": row["price_kind"]})
         else:
             known += value
@@ -58,7 +75,9 @@ def aggregate(rows):
     return {"priced_and_allowance_subtotal_jpy": known,
             "priced_subtotals_by_kind_jpy": kinds,
             "required_unpriced_entries": pending,
-            "planning_total_jpy": None if pending else known}
+            "required_unconverted_entries": unconverted,
+            "unconverted_quoted_subtotals_by_currency": foreign_totals,
+            "planning_total_jpy": None if pending or unconverted else known}
 
 
 def validate_bom(bom):
@@ -74,13 +93,15 @@ def validate_bom(bom):
         if item["used"] > item["packs"] * item["pieces_per_pack"]:
             raise ValueError("Insufficient purchase quantity")
         price = money(item["pack_price_jpy"])
-        if price is None and item["price_kind"] != "quote_pending":
+        foreign = foreign_amount(item.get("pack_price_foreign"))
+        if price is None and foreign is None and item["price_kind"] != "quote_pending":
             raise ValueError("Unknown purchase price must be labelled quote_pending")
     shipping = {row["id"]: row for row in bom["shipping"]}
     if len(shipping) != len(bom["shipping"]):
         raise ValueError("Duplicate shipping ID")
     for row in shipping.values():
         money(row["amount_jpy"])
+        foreign_amount(row.get("amount_foreign"))
     scenario_ids = set()
     used_items, used_shipping = set(), set()
     for scenario in bom["scenarios"]:
@@ -121,10 +142,13 @@ def scenario_rows(bom, scenario):
     shipping = {row["id"]: row for row in bom["shipping"]}
     purchases = [dict(id=key, name=catalog[key]["name"],
                       price_kind=catalog[key]["price_kind"],
-                      amount_jpy=purchase_amount(catalog[key])) for key in scenario["item_ids"]]
+                      amount_jpy=purchase_amount(catalog[key]),
+                      amount_foreign=foreign_amount(catalog[key].get("pack_price_foreign"), catalog[key]["packs"]))
+                 for key in scenario["item_ids"]]
     delivery = [dict(id=key, name=shipping[key]["name"],
                     price_kind=shipping[key]["kind"],
-                    amount_jpy=shipping[key]["amount_jpy"]) for key in scenario["shipping_ids"]]
+                    amount_jpy=shipping[key]["amount_jpy"],
+                    amount_foreign=foreign_amount(shipping[key].get("amount_foreign"))) for key in scenario["shipping_ids"]]
     return purchases, delivery
 
 
@@ -146,7 +170,7 @@ def calculate_scenario(bom, scenario):
     other_total = all_outsource["planning_total_jpy"]
     all_outsource["planning_total_with_contingency_jpy"] = None if other_total is None else (other_total * (1 + fraction)).to_integral_value(rounding=ROUND_CEILING)
     result["with_residual_plate_outsourcing"] = all_outsource
-    result["note_ja"] = "数値のある参考価格・仮枠の途中小計。必須見積が残る場合、完成額・価格の下限・税込確定額ではない。主条件はブラケット製作のみ外注、残存板は既所有工具で自加工。"
+    result["note_ja"] = "参考価格・仮枠の円小計と、サイト自動見積の外貨小計を通貨別に保持。外貨を円と合算しない。未見積・円換算未確定が残る場合、円総額はnull。加工先の図面審査・税・住所別送料・決済換算は未確定。主条件はブラケットのみ外注、残存板は自加工。"
     return result
 
 
@@ -259,6 +283,7 @@ def self_test(bom):
     for row in sample["items"]:
         if row["id"] == "Q01":
             row["pack_price_jpy"] = None
+            row.pop("pack_price_foreign", None)
         elif row["pack_price_jpy"] is None:
             row["pack_price_jpy"] = 0
     for row in sample["shipping"]:
@@ -271,7 +296,21 @@ def self_test(bom):
     assert bare["planning_total_with_contingency_jpy"] is None
     assert [row["id"] for row in bare["required_unpriced_entries"]] == ["Q01"]
     assert bare["priced_and_allowance_subtotal_jpy"] - included["priced_and_allowance_subtotal_jpy"] == Decimal(9240)
-    return {"unknown_required_quote_keeps_total_null": "passed", "initial_tyre_case_difference_9240_jpy": "passed"}
+    current = next(row for row in bom["scenarios"] if row["id"] == "custom_taobao_bare")
+    quoted = calculate_scenario(bom, current)
+    if any(row.get("pack_price_foreign") for row in bom["items"]):
+        assert quoted["unconverted_quoted_subtotals_by_currency"] == {"USD": Decimal("81.73")}
+        assert {row["id"]: row["amount"] for row in quoted["required_unconverted_entries"]} == {
+            "Q01": Decimal("74.50"), "S08": Decimal("7.23")}
+        assert quoted["planning_total_jpy"] is None
+        assert quoted["priced_and_allowance_subtotal_jpy"] == Decimal("42282")
+    mixed = aggregate([dict(id="foreign_only", name="USD quote", price_kind="vendor_auto_quote",
+                            amount_jpy=None, amount_foreign={"currency": "USD", "amount": "81.73"})])
+    assert mixed["planning_total_jpy"] is None and not mixed["required_unpriced_entries"]
+    assert mixed["priced_and_allowance_subtotal_jpy"] == 0
+    return {"unknown_required_quote_keeps_total_null": "passed", "initial_tyre_case_difference_9240_jpy": "passed",
+            "two_part_lot_and_shipping_counted_once_in_USD": "passed",
+            "unconverted_foreign_quote_keeps_JPY_total_null": "passed"}
 
 
 def main():
@@ -288,7 +327,7 @@ def main():
     summary = {"version": bom["version"], "design": bom["design"], "checked_on": bom["checked_on"],
                "currency": bom["currency"], "all_amounts_include_tax": bom["all_amounts_include_tax"],
                "amount_basis_note_ja": bom["amount_basis_note_ja"], "scope_ja": bom["scope"],
-               "status": "partial_planning_costs_required_quotes_pending" if default["required_unpriced_entries"] else "planning_references_and_allowances_not_purchase_quote",
+               "status": "partial_planning_costs_quotes_or_currency_pending" if default["required_unpriced_entries"] or default["required_unconverted_entries"] else "planning_references_and_allowances_not_purchase_quote",
                "source_bom": "bom.json", "default_scenario": bom["default_scenario"],
                "default_result": default, "scenarios": results,
                "comparison_with_A3": compare_with_A3(bom, scenarios[bom["default_scenario"]], default),
@@ -305,19 +344,25 @@ def main():
     catalog = {row["id"]: row for row in bom["items"]}
     with (HERE / "BOM.csv").open("w", encoding="utf-8-sig", newline="") as stream:
         writer = csv.writer(stream, lineterminator="\n")
-        writer.writerow(["ID", "品名", "購入パック数", "1パック入数", "使用数", "余り", "パック価格円", "購入小計円", "価格区分", "税の扱い", "URL", "注意", "計上単位", "調達状態", "シナリオ"])
+        writer.writerow(["ID", "品名", "購入パック数", "1パック入数", "使用数", "余り", "パック価格円", "購入小計円", "価格区分", "税の扱い", "URL", "注意", "計上単位", "調達状態", "シナリオ", "原通貨", "原通貨パック価格", "原通貨購入小計"])
         for key in default["active_item_ids"]:
             row = catalog[key]
             amount = purchase_amount(row)
+            native = foreign_amount(row.get("pack_price_foreign"))
+            pending_label = "円換算未確定" if native else "見積待ち"
             writer.writerow([key, row["name"], row["packs"], row["pieces_per_pack"], row["used"],
                              row["packs"] * row["pieces_per_pack"] - row["used"],
-                             "見積待ち" if row["pack_price_jpy"] is None else row["pack_price_jpy"],
-                             "見積待ち" if amount is None else amount, row["price_kind"], row["tax_status"], row["url"],
-                             row["note"], row["quantity_unit"], row["procurement_status"], default["id"]])
+                             pending_label if row["pack_price_jpy"] is None else row["pack_price_jpy"],
+                             pending_label if amount is None else amount, row["price_kind"], row["tax_status"], row["url"],
+                             row["note"], row["quantity_unit"], row["procurement_status"], default["id"],
+                             native["currency"] if native else "JPY", native["amount"] if native else row["pack_price_jpy"],
+                             native["amount"] * row["packs"] if native else amount])
     print(json.dumps({"default_scenario": default["id"],
                       "priced_and_allowance_subtotal_jpy": default["priced_and_allowance_subtotal_jpy"],
                       "planning_total_jpy": default["planning_total_jpy"],
                       "required_unpriced_entries": default["required_unpriced_entries"],
+                      "required_unconverted_entries": default["required_unconverted_entries"],
+                      "unconverted_quoted_subtotals_by_currency": default["unconverted_quoted_subtotals_by_currency"],
                       "CAD_quantity_crosscheck": cad, "self_tests": summary.get("self_tests")},
                      ensure_ascii=False, indent=2, default=json_number))
 

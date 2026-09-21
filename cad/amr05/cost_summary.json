@@ -4,9 +4,9 @@
   "checked_on": "2026-09-21",
   "currency": "JPY",
   "all_amounts_include_tax": null,
-  "amount_basis_note_ja": "国内表示は税込参考。Taobao約7000円はユーザー提示の円換算仮枠で税・送料・輸入諸費未確認。未見積はnullとし税込確定総額を出さない。",
+  "amount_basis_note_ja": "国内表示は税込参考。Taobao約7000円はユーザー仮枠。JLCCNC専用金具2個74.50 USDと国単位送料7.23 USDは実STEP/PDFによるサイト自動見積。図面審査・税・住所別送料・決済換算は未確定。円とドルを合算せず総額nullを維持。",
   "scope_ja": "M0601C_111×2、初回タイヤ、製作ブラケット2個、共通機械骨格/PLA/USB通信/ストラップの初期購入・製作予算。基準はTaobao本体約7000円/個＋初回タイヤ別購入。製作ブラケットだけ外注し残存板は自加工する条件と、残存板も外注する条件を分ける。電池・主計算機・電源保護・車内配線等の未選定電装は別予算。未発注。",
-  "status": "partial_planning_costs_required_quotes_pending",
+  "status": "partial_planning_costs_quotes_or_currency_pending",
   "source_bom": "bom.json",
   "default_scenario": "custom_taobao_bare",
   "default_result": {
@@ -24,21 +24,32 @@
     },
     "required_unpriced_entries": [
       {
-        "id": "Q01",
-        "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
-        "reason": "quote_pending"
-      },
-      {
         "id": "S07",
         "name": "Taobaoの国内外送料・代行/輸入諸費",
         "reason": "quote_pending"
+      }
+    ],
+    "required_unconverted_entries": [
+      {
+        "id": "Q01",
+        "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
+        "reason": "vendor_quote_observed_in_foreign_currency_JPY_unconfirmed",
+        "price_kind": "vendor_auto_quote_2026_09_21",
+        "currency": "USD",
+        "amount": 74.5
       },
       {
         "id": "S08",
-        "name": "製作ブラケットの納入送料",
-        "reason": "quote_pending"
+        "name": "製作ブラケットの国単位送料自動見積",
+        "reason": "vendor_quote_observed_in_foreign_currency_JPY_unconfirmed",
+        "price_kind": "vendor_auto_quote_2026_09_21",
+        "currency": "USD",
+        "amount": 7.23
       }
     ],
+    "unconverted_quoted_subtotals_by_currency": {
+      "USD": 81.73
+    },
     "planning_total_jpy": null,
     "id": "custom_taobao_bare",
     "mount_variant": "custom",
@@ -89,18 +100,8 @@
       },
       "required_unpriced_entries": [
         {
-          "id": "Q01",
-          "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
-          "reason": "quote_pending"
-        },
-        {
           "id": "S07",
           "name": "Taobaoの国内外送料・代行/輸入諸費",
-          "reason": "quote_pending"
-        },
-        {
-          "id": "S08",
-          "name": "製作ブラケットの納入送料",
           "reason": "quote_pending"
         },
         {
@@ -109,10 +110,31 @@
           "reason": "quote_pending"
         }
       ],
+      "required_unconverted_entries": [
+        {
+          "id": "Q01",
+          "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
+          "reason": "vendor_quote_observed_in_foreign_currency_JPY_unconfirmed",
+          "price_kind": "vendor_auto_quote_2026_09_21",
+          "currency": "USD",
+          "amount": 74.5
+        },
+        {
+          "id": "S08",
+          "name": "製作ブラケットの国単位送料自動見積",
+          "reason": "vendor_quote_observed_in_foreign_currency_JPY_unconfirmed",
+          "price_kind": "vendor_auto_quote_2026_09_21",
+          "currency": "USD",
+          "amount": 7.23
+        }
+      ],
+      "unconverted_quoted_subtotals_by_currency": {
+        "USD": 81.73
+      },
       "planning_total_jpy": null,
       "planning_total_with_contingency_jpy": null
     },
-    "note_ja": "数値のある参考価格・仮枠の途中小計。必須見積が残る場合、完成額・価格の下限・税込確定額ではない。主条件はブラケット製作のみ外注、残存板は既所有工具で自加工。"
+    "note_ja": "参考価格・仮枠の円小計と、サイト自動見積の外貨小計を通貨別に保持。外貨を円と合算しない。未見積・円換算未確定が残る場合、円総額はnull。加工先の図面審査・税・住所別送料・決済換算は未確定。主条件はブラケットのみ外注、残存板は自加工。"
   },
   "scenarios": [
     {
@@ -130,21 +152,32 @@
       },
       "required_unpriced_entries": [
         {
-          "id": "Q01",
-          "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
-          "reason": "quote_pending"
-        },
-        {
           "id": "S07",
           "name": "Taobaoの国内外送料・代行/輸入諸費",
           "reason": "quote_pending"
+        }
+      ],
+      "required_unconverted_entries": [
+        {
+          "id": "Q01",
+          "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
+          "reason": "vendor_quote_observed_in_foreign_currency_JPY_unconfirmed",
+          "price_kind": "vendor_auto_quote_2026_09_21",
+          "currency": "USD",
+          "amount": 74.5
         },
         {
           "id": "S08",
-          "name": "製作ブラケットの納入送料",
-          "reason": "quote_pending"
+          "name": "製作ブラケットの国単位送料自動見積",
+          "reason": "vendor_quote_observed_in_foreign_currency_JPY_unconfirmed",
+          "price_kind": "vendor_auto_quote_2026_09_21",
+          "currency": "USD",
+          "amount": 7.23
         }
       ],
+      "unconverted_quoted_subtotals_by_currency": {
+        "USD": 81.73
+      },
       "planning_total_jpy": null,
       "id": "custom_taobao_bare",
       "mount_variant": "custom",
@@ -195,18 +228,8 @@
         },
         "required_unpriced_entries": [
           {
-            "id": "Q01",
-            "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
-            "reason": "quote_pending"
-          },
-          {
             "id": "S07",
             "name": "Taobaoの国内外送料・代行/輸入諸費",
-            "reason": "quote_pending"
-          },
-          {
-            "id": "S08",
-            "name": "製作ブラケットの納入送料",
             "reason": "quote_pending"
           },
           {
@@ -215,10 +238,31 @@
             "reason": "quote_pending"
           }
         ],
+        "required_unconverted_entries": [
+          {
+            "id": "Q01",
+            "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
+            "reason": "vendor_quote_observed_in_foreign_currency_JPY_unconfirmed",
+            "price_kind": "vendor_auto_quote_2026_09_21",
+            "currency": "USD",
+            "amount": 74.5
+          },
+          {
+            "id": "S08",
+            "name": "製作ブラケットの国単位送料自動見積",
+            "reason": "vendor_quote_observed_in_foreign_currency_JPY_unconfirmed",
+            "price_kind": "vendor_auto_quote_2026_09_21",
+            "currency": "USD",
+            "amount": 7.23
+          }
+        ],
+        "unconverted_quoted_subtotals_by_currency": {
+          "USD": 81.73
+        },
         "planning_total_jpy": null,
         "planning_total_with_contingency_jpy": null
       },
-      "note_ja": "数値のある参考価格・仮枠の途中小計。必須見積が残る場合、完成額・価格の下限・税込確定額ではない。主条件はブラケット製作のみ外注、残存板は既所有工具で自加工。"
+      "note_ja": "参考価格・仮枠の円小計と、サイト自動見積の外貨小計を通貨別に保持。外貨を円と合算しない。未見積・円換算未確定が残る場合、円総額はnull。加工先の図面審査・税・住所別送料・決済換算は未確定。主条件はブラケットのみ外注、残存板は自加工。"
     },
     {
       "priced_and_allowance_subtotal_jpy": 33042,
@@ -233,21 +277,32 @@
       },
       "required_unpriced_entries": [
         {
-          "id": "Q01",
-          "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
-          "reason": "quote_pending"
-        },
-        {
           "id": "S07",
           "name": "Taobaoの国内外送料・代行/輸入諸費",
           "reason": "quote_pending"
+        }
+      ],
+      "required_unconverted_entries": [
+        {
+          "id": "Q01",
+          "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
+          "reason": "vendor_quote_observed_in_foreign_currency_JPY_unconfirmed",
+          "price_kind": "vendor_auto_quote_2026_09_21",
+          "currency": "USD",
+          "amount": 74.5
         },
         {
           "id": "S08",
-          "name": "製作ブラケットの納入送料",
-          "reason": "quote_pending"
+          "name": "製作ブラケットの国単位送料自動見積",
+          "reason": "vendor_quote_observed_in_foreign_currency_JPY_unconfirmed",
+          "price_kind": "vendor_auto_quote_2026_09_21",
+          "currency": "USD",
+          "amount": 7.23
         }
       ],
+      "unconverted_quoted_subtotals_by_currency": {
+        "USD": 81.73
+      },
       "planning_total_jpy": null,
       "id": "custom_taobao_included",
       "mount_variant": "custom",
@@ -294,18 +349,8 @@
         },
         "required_unpriced_entries": [
           {
-            "id": "Q01",
-            "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
-            "reason": "quote_pending"
-          },
-          {
             "id": "S07",
             "name": "Taobaoの国内外送料・代行/輸入諸費",
-            "reason": "quote_pending"
-          },
-          {
-            "id": "S08",
-            "name": "製作ブラケットの納入送料",
             "reason": "quote_pending"
           },
           {
@@ -314,10 +359,31 @@
             "reason": "quote_pending"
           }
         ],
+        "required_unconverted_entries": [
+          {
+            "id": "Q01",
+            "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
+            "reason": "vendor_quote_observed_in_foreign_currency_JPY_unconfirmed",
+            "price_kind": "vendor_auto_quote_2026_09_21",
+            "currency": "USD",
+            "amount": 74.5
+          },
+          {
+            "id": "S08",
+            "name": "製作ブラケットの国単位送料自動見積",
+            "reason": "vendor_quote_observed_in_foreign_currency_JPY_unconfirmed",
+            "price_kind": "vendor_auto_quote_2026_09_21",
+            "currency": "USD",
+            "amount": 7.23
+          }
+        ],
+        "unconverted_quoted_subtotals_by_currency": {
+          "USD": 81.73
+        },
         "planning_total_jpy": null,
         "planning_total_with_contingency_jpy": null
       },
-      "note_ja": "数値のある参考価格・仮枠の途中小計。必須見積が残る場合、完成額・価格の下限・税込確定額ではない。主条件はブラケット製作のみ外注、残存板は既所有工具で自加工。"
+      "note_ja": "参考価格・仮枠の円小計と、サイト自動見積の外貨小計を通貨別に保持。外貨を円と合算しない。未見積・円換算未確定が残る場合、円総額はnull。加工先の図面審査・税・住所別送料・決済換算は未確定。主条件はブラケットのみ外注、残存板は自加工。"
     },
     {
       "priced_and_allowance_subtotal_jpy": 57102,
@@ -331,18 +397,28 @@
         "observed_standard_condition_2026_09_20": 660,
         "observed_free_shipping_condition_2026_09_21": 0
       },
-      "required_unpriced_entries": [
+      "required_unpriced_entries": [],
+      "required_unconverted_entries": [
         {
           "id": "Q01",
           "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
-          "reason": "quote_pending"
+          "reason": "vendor_quote_observed_in_foreign_currency_JPY_unconfirmed",
+          "price_kind": "vendor_auto_quote_2026_09_21",
+          "currency": "USD",
+          "amount": 74.5
         },
         {
           "id": "S08",
-          "name": "製作ブラケットの納入送料",
-          "reason": "quote_pending"
+          "name": "製作ブラケットの国単位送料自動見積",
+          "reason": "vendor_quote_observed_in_foreign_currency_JPY_unconfirmed",
+          "price_kind": "vendor_auto_quote_2026_09_21",
+          "currency": "USD",
+          "amount": 7.23
         }
       ],
+      "unconverted_quoted_subtotals_by_currency": {
+        "USD": 81.73
+      },
       "planning_total_jpy": null,
       "id": "custom_domestic_bare",
       "mount_variant": "custom",
@@ -391,25 +467,36 @@
         },
         "required_unpriced_entries": [
           {
-            "id": "Q01",
-            "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
-            "reason": "quote_pending"
-          },
-          {
-            "id": "S08",
-            "name": "製作ブラケットの納入送料",
-            "reason": "quote_pending"
-          },
-          {
             "id": "K01",
             "name": "残るキャスター板・ガセットの加工外注追加",
             "reason": "quote_pending"
           }
         ],
+        "required_unconverted_entries": [
+          {
+            "id": "Q01",
+            "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
+            "reason": "vendor_quote_observed_in_foreign_currency_JPY_unconfirmed",
+            "price_kind": "vendor_auto_quote_2026_09_21",
+            "currency": "USD",
+            "amount": 74.5
+          },
+          {
+            "id": "S08",
+            "name": "製作ブラケットの国単位送料自動見積",
+            "reason": "vendor_quote_observed_in_foreign_currency_JPY_unconfirmed",
+            "price_kind": "vendor_auto_quote_2026_09_21",
+            "currency": "USD",
+            "amount": 7.23
+          }
+        ],
+        "unconverted_quoted_subtotals_by_currency": {
+          "USD": 81.73
+        },
         "planning_total_jpy": null,
         "planning_total_with_contingency_jpy": null
       },
-      "note_ja": "数値のある参考価格・仮枠の途中小計。必須見積が残る場合、完成額・価格の下限・税込確定額ではない。主条件はブラケット製作のみ外注、残存板は既所有工具で自加工。"
+      "note_ja": "参考価格・仮枠の円小計と、サイト自動見積の外貨小計を通貨別に保持。外貨を円と合算しない。未見積・円換算未確定が残る場合、円総額はnull。加工先の図面審査・税・住所別送料・決済換算は未確定。主条件はブラケットのみ外注、残存板は自加工。"
     },
     {
       "priced_and_allowance_subtotal_jpy": 54382,
@@ -436,6 +523,8 @@
           "reason": "quote_pending"
         }
       ],
+      "required_unconverted_entries": [],
+      "unconverted_quoted_subtotals_by_currency": {},
       "planning_total_jpy": null,
       "id": "stock_taobao_bare",
       "mount_variant": "stock",
@@ -501,10 +590,12 @@
             "reason": "quote_pending"
           }
         ],
+        "required_unconverted_entries": [],
+        "unconverted_quoted_subtotals_by_currency": {},
         "planning_total_jpy": null,
         "planning_total_with_contingency_jpy": null
       },
-      "note_ja": "数値のある参考価格・仮枠の途中小計。必須見積が残る場合、完成額・価格の下限・税込確定額ではない。主条件はブラケット製作のみ外注、残存板は既所有工具で自加工。"
+      "note_ja": "参考価格・仮枠の円小計と、サイト自動見積の外貨小計を通貨別に保持。外貨を円と合算しない。未見積・円換算未確定が残る場合、円総額はnull。加工先の図面審査・税・住所別送料・決済換算は未確定。主条件はブラケットのみ外注、残存板は自加工。"
     },
     {
       "priced_and_allowance_subtotal_jpy": 45142,
@@ -531,6 +622,8 @@
           "reason": "quote_pending"
         }
       ],
+      "required_unconverted_entries": [],
+      "unconverted_quoted_subtotals_by_currency": {},
       "planning_total_jpy": null,
       "id": "stock_taobao_included",
       "mount_variant": "stock",
@@ -595,10 +688,12 @@
             "reason": "quote_pending"
           }
         ],
+        "required_unconverted_entries": [],
+        "unconverted_quoted_subtotals_by_currency": {},
         "planning_total_jpy": null,
         "planning_total_with_contingency_jpy": null
       },
-      "note_ja": "数値のある参考価格・仮枠の途中小計。必須見積が残る場合、完成額・価格の下限・税込確定額ではない。主条件はブラケット製作のみ外注、残存板は既所有工具で自加工。"
+      "note_ja": "参考価格・仮枠の円小計と、サイト自動見積の外貨小計を通貨別に保持。外貨を円と合算しない。未見積・円換算未確定が残る場合、円総額はnull。加工先の図面審査・税・住所別送料・決済換算は未確定。主条件はブラケットのみ外注、残存板は自加工。"
     },
     {
       "priced_and_allowance_subtotal_jpy": 69202,
@@ -619,6 +714,8 @@
           "reason": "quote_pending"
         }
       ],
+      "required_unconverted_entries": [],
+      "unconverted_quoted_subtotals_by_currency": {},
       "planning_total_jpy": null,
       "id": "stock_domestic_bare",
       "mount_variant": "stock",
@@ -677,10 +774,12 @@
             "reason": "quote_pending"
           }
         ],
+        "required_unconverted_entries": [],
+        "unconverted_quoted_subtotals_by_currency": {},
         "planning_total_jpy": null,
         "planning_total_with_contingency_jpy": null
       },
-      "note_ja": "数値のある参考価格・仮枠の途中小計。必須見積が残る場合、完成額・価格の下限・税込確定額ではない。主条件はブラケット製作のみ外注、残存板は既所有工具で自加工。"
+      "note_ja": "参考価格・仮枠の円小計と、サイト自動見積の外貨小計を通貨別に保持。外貨を円と合算しない。未見積・円換算未確定が残る場合、円総額はnull。加工先の図面審査・税・住所別送料・決済換算は未確定。主条件はブラケットのみ外注、残存板は自加工。"
     }
   ],
   "comparison_with_A3": {
@@ -1000,7 +1099,8 @@
     "manufacturer_catalog_reference": "2026年7月の公式価格表を2026-09-20に確認した第二案の記録から引継ぎ。税換算参考値で、個人購入・請求単価・送料は未確定。",
     "allowance": "材料・消費材・購入パック等の予算仮枠。確定販売価格ではない。",
     "user_allowance": "ユーザー提示の約7000円/個という計画仮枠。対象商品・付属・税・輸入諸費は未確認。",
-    "quote_pending": "必要な見積が未取得。nullを0円として集計しない。"
+    "quote_pending": "必要な見積が未取得。nullを0円として集計しない。",
+    "vendor_auto_quote_2026_09_21": "2026-09-21に実STEPとPDFを投入して確認したJLCCNCのUSD建て自動見積。最終額・納期は図面審査後。円換算・税/輸入費・住所別追加料金は未確定。"
   },
   "initial_purchase_only": true,
   "lifetime_maintenance_cost_included": false,
@@ -1023,10 +1123,12 @@
     "実機試験で追加する対策部品",
     "将来交換タイヤ・工賃等の維持費（別比較）"
   ],
-  "procurement_note_ja": "モーター選定に従う設計候補。国内本体は欠品、Taobao商品URL・付属品・着荷額は未確認。ブラケット製作依頼は未送信。",
-  "budget_note_ja": "必要費目にnullがある間は総額・A3との総差額・10%予備費込み総額を未定とする。参考価格と仮枠の途中小計を台車完成額にしない。既製と製作、材料込み見積と別素材、初回タイヤと予備交換タイヤを二重計上しない。電装除外費用は0円ではない。",
+  "procurement_note_ja": "JLCCNCへ金具STEP/PDFを投入し2個の自動見積を取得。正式審査・発注・支払いは未実施。国内モーター欠品、Taobao付属・着荷額は未確認。",
+  "budget_note_ja": "円の参考価格/仮枠小計とUSD建てサイト自動見積を通貨別に計上する。未見積や円換算未確定があれば円総額・A3との総差額・予備費込み円総額はnull。外貨を未見積や0円へ変換せず、2個一式74.50 USDを2倍せず、送料7.23 USDを1回だけ計上。税/輸入費・図面審査後差額・未選定電装は別途。",
   "self_tests": {
     "unknown_required_quote_keeps_total_null": "passed",
-    "initial_tyre_case_difference_9240_jpy": "passed"
+    "initial_tyre_case_difference_9240_jpy": "passed",
+    "two_part_lot_and_shipping_counted_once_in_USD": "passed",
+    "unconverted_foreign_quote_keeps_JPY_total_null": "passed"
   }
 }

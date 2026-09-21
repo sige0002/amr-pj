@@ -4,7 +4,7 @@
   "checked_on": "2026-09-21",
   "currency": "JPY",
   "all_amounts_include_tax": null,
-  "amount_basis_note_ja": "国内表示は税込参考。Taobao約7000円はユーザー提示の円換算仮枠で税・送料・輸入諸費未確認。未見積はnullとし税込確定総額を出さない。",
+  "amount_basis_note_ja": "国内表示は税込参考。Taobao約7000円はユーザー仮枠。JLCCNC専用金具2個74.50 USDと国単位送料7.23 USDは実STEP/PDFによるサイト自動見積。図面審査・税・住所別送料・決済換算は未確定。円とドルを合算せず総額nullを維持。",
   "scope": "M0601C_111×2、初回タイヤ、製作ブラケット2個、共通機械骨格/PLA/USB通信/ストラップの初期購入・製作予算。基準はTaobao本体約7000円/個＋初回タイヤ別購入。製作ブラケットだけ外注し残存板は自加工する条件と、残存板も外注する条件を分ける。電池・主計算機・電源保護・車内配線等の未選定電装は別予算。未発注。",
   "default_scenario": "custom_taobao_bare",
   "common_item_ids": [
@@ -27,7 +27,8 @@
     "manufacturer_catalog_reference": "2026年7月の公式価格表を2026-09-20に確認した第二案の記録から引継ぎ。税換算参考値で、個人購入・請求単価・送料は未確定。",
     "allowance": "材料・消費材・購入パック等の予算仮枠。確定販売価格ではない。",
     "user_allowance": "ユーザー提示の約7000円/個という計画仮枠。対象商品・付属・税・輸入諸費は未確認。",
-    "quote_pending": "必要な見積が未取得。nullを0円として集計しない。"
+    "quote_pending": "必要な見積が未取得。nullを0円として集計しない。",
+    "vendor_auto_quote_2026_09_21": "2026-09-21に実STEPとPDFを投入して確認したJLCCNCのUSD建て自動見積。最終額・納期は図面審査後。円換算・税/輸入費・住所別追加料金は未確定。"
   },
   "items": [
     {
@@ -247,22 +248,32 @@
       "pieces_per_pack": 2,
       "used": 2,
       "pack_price_jpy": null,
-      "price_kind": "quote_pending",
-      "url": null,
-      "note": "同形状2個を回転して左右に配置。完成包絡90×30×34mm、フランジ90×30×5、web60×17×34、特殊固定受けpocket深さ9mm/背面8mm。最新custom_mount_dimensions.jsonとSTEPを対象に、A6061-T6材料・CNC加工・バリ取り込みの2個一式を見積もる。完成形状寸法は購入ブランク寸法ではない。実際の見積範囲を確認し材料込みなら素材代を別加算しない。未見積を0円や旧加工6000円で代用しない。送料S08・残存板加工K01とは範囲を分ける。",
+      "price_kind": "vendor_auto_quote_2026_09_21",
+      "url": "https://jlccnc.com/jp/cnc-machining-quote",
+      "note": "同形2個一式のサイト自動見積74.50 USD（2倍しない）。A6061-T6、90×30×34mm、処理なし、受け部±0.05mmのPDF添付、製造10日表示。実STEPのSHAと画面はmachining_quote.json。材料込みCNCのため別素材代を重ねない。送料7.23 USDはS08。最終公差適合・工具R・検査範囲・税と決済円額は審査/決済前で未確定。",
       "quantity_unit": "式（同形状2個）",
-      "procurement_status": "CAD見積用形状作成済み・見積未取得/依頼未送信。寸法公差と受入モーター適合は未確定",
-      "tax_status": "unknown_quote_tax_basis",
+      "procurement_status": "STEP/PDFアップロード済み・サイト自動見積取得。正式図面審査/発注/支払いは未実施。",
+      "tax_status": "unconfirmed_at_checkout",
       "quote_requested_scope": [
         "material_A6061_T6",
         "CNC_machining",
         "deburring"
       ],
-      "quoted_scope": null,
+      "quoted_scope": [
+        "material_6061_T6",
+        "CNC_machining_selected_geometry",
+        "vendor_standard_deburring"
+      ],
       "quote_geometry_sources": [
         "M0601C_custom_mount_quote.step",
+        "M0601C_custom_mount_quote.pdf",
         "custom_mount_dimensions.json"
-      ]
+      ],
+      "pack_price_foreign": {
+        "currency": "USD",
+        "amount": 74.5
+      },
+      "quote_record": "machining_quote.json"
     },
     {
       "id": "B01",
@@ -353,12 +364,17 @@
     },
     {
       "id": "S08",
-      "name": "製作ブラケットの納入送料",
+      "name": "製作ブラケットの国単位送料自動見積",
       "amount_jpy": null,
-      "kind": "quote_pending",
-      "tax_status": "unknown_quote_tax_basis",
-      "url": null,
-      "note": "製作見積未取得。Q01に含む見積であることを確認したら、包含を記録し追加額0円へ更新。確認前に無料としない。"
+      "kind": "vendor_auto_quote_2026_09_21",
+      "tax_status": "unconfirmed_at_checkout",
+      "url": "https://jlccnc.com/jp/cnc-machining-quote",
+      "note": "日本宛OCS Express、4〜6営業日、0.4kg表示のサイト送料7.23 USD。Q01へ含めず1回だけ加算。国単位の見積画面に郵便番号欄はなく、住所別追加料金・税/輸入費・円決済額は未確定。",
+      "amount_foreign": {
+        "currency": "USD",
+        "amount": 7.23
+      },
+      "quote_record": "machining_quote.json"
     }
   ],
   "scenarios": [
@@ -698,7 +714,7 @@
     "special_pocket_depth_mm": 9,
     "custom_bracket_rear_wall_mm": 8
   },
-  "procurement_note_ja": "モーター選定に従う設計候補。国内本体は欠品、Taobao商品URL・付属品・着荷額は未確認。ブラケット製作依頼は未送信。",
+  "procurement_note_ja": "JLCCNCへ金具STEP/PDFを投入し2個の自動見積を取得。正式審査・発注・支払いは未実施。国内モーター欠品、Taobao付属・着荷額は未確認。",
   "excluded_unpriced_items_ja": [
     "電池・アダプター（予約空間のみ）",
     "主計算機・センサー・冷却",
@@ -719,5 +735,5 @@
     "single_replacement_shipping_jpy": 650,
     "note": "初回D02とは別の交換費。左右同時注文で通常送料無料。価格・供給期間・寿命・工賃は将来保証しない。Taobao品と補修キットの適合確認が必要。"
   },
-  "budget_note_ja": "必要費目にnullがある間は総額・A3との総差額・10%予備費込み総額を未定とする。参考価格と仮枠の途中小計を台車完成額にしない。既製と製作、材料込み見積と別素材、初回タイヤと予備交換タイヤを二重計上しない。電装除外費用は0円ではない。"
+  "budget_note_ja": "円の参考価格/仮枠小計とUSD建てサイト自動見積を通貨別に計上する。未見積や円換算未確定があれば円総額・A3との総差額・予備費込み円総額はnull。外貨を未見積や0円へ変換せず、2個一式74.50 USDを2倍せず、送料7.23 USDを1回だけ計上。税/輸入費・図面審査後差額・未選定電装は別途。"
 }
