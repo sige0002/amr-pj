@@ -1,0 +1,236 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
+<title>M0601C_111 D5 compact mount — quotation only — sheet 1 of 2</title>
+<desc>Exact STEP projections; 75x30x34, flange 6, web45, pitch60. Not approved for manufacturing or loads.</desc>
+<defs><pattern id="hatch" width="2.2" height="2.2" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="2.2" stroke="#a3afb8" stroke-width="0.35"/></pattern><clipPath id="detailClip"><rect x="282" y="156" width="98" height="92"/></clipPath></defs>
+<g font-family="Noto Sans CJK JP, sans-serif">
+<rect x="0" y="0" width="420" height="297" fill="white" stroke="none" stroke-width="0.2"/>
+<rect x="8" y="8" width="404" height="281" fill="none" stroke="#a7b1b8" stroke-width="0.35"/>
+<text x="15" y="19" font-size="4.8" text-anchor="start" font-weight="bold" fill="#152331">M0601C_111 金具 D5 — 幅75・板厚6 見積用寸法図</text>
+<text x="15" y="26" font-size="3.1" text-anchor="start" font-weight="normal" fill="#913b2b">製作未承認 ／ 小型化と厚板化の比較候補 ／ 現物照合・公差・荷重条件の承認前は製作保留</text>
+<text x="406" y="19" font-size="3.1" text-anchor="end" font-weight="normal" fill="#152331">AMR-06 / MOUNT-D5</text>
+<text x="406" y="25" font-size="2.9" text-anchor="end" font-weight="normal" fill="#152331">単位 mm　A3　寸法値優先　1 / 2</text>
+<g fill="none" stroke="#142433" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.13" transform="matrix(0 -2 2 0 45 113)">
+<path d=" M 28 0 L 28 75 " />
+<path d=" M 0 60 L 26 60 " />
+<path d="M28, 60 Q27.9937, 60 27.9874, 60  Q27.9686, 60 27.9499, 60  Q27.9188, 60 27.8878, 60  Q27.8449, 60 27.8019, 60  Q27.7477, 60 27.6934, 60  Q27.6286, 60 27.5637, 60  Q27.4889, 60 27.4142, 60  Q27.3306, 60 27.247, 60  Q27.1555, 60 27.0641, 60  Q26.9659, 60 26.8678, 60  Q26.7642, 60 26.6606, 60  Q26.5528, 60 26.445, 60  Q26.2247, 60 26, 60 " /><path d=" M 0 15 L 26 15 " />
+<path d="M28, 15 Q27.9937, 15 27.9874, 15  Q27.9686, 15 27.9499, 15  Q27.9188, 15 27.8878, 15  Q27.8449, 15 27.8019, 15  Q27.7477, 15 27.6934, 15  Q27.6286, 15 27.5637, 15  Q27.4889, 15 27.4142, 15  Q27.3306, 15 27.247, 15  Q27.1555, 15 27.0641, 15  Q26.9659, 15 26.8678, 15  Q26.7642, 15 26.6606, 15  Q26.5528, 15 26.445, 15  Q26.2247, 15 26, 15 " /><path d=" M 28 0 L 34 0 " />
+<path d=" M 34 0 L 34 75 " />
+<path d=" M 28 75 L 34 75 " />
+<path d=" M 0 42.25 L 0 60 " />
+<path d=" M 7.1 42.25 L 0 42.25 " />
+<path d=" M 7.1 42.25 L 7.1 42.5589 " />
+<path d="M8.6408 44.5055 A2 2 0 0 1 7.1 42.5589" /><path d="M8.6408 44.5055 A9.7 9.7 0 0 0 12.6377 46.8131" /><path d="M15.0939 47.1742 A2 2 0 0 1 12.6377 46.8131" /><path d=" M 15.0939 47.1742 L 23.8561 42.1153 " />
+<path d="M24.8561 40.3832 A2 2 0 0 1 23.8561 42.1153" /><path d="M24.7715 39.8076 A2 2 0 0 1 24.8561 40.3832" /><path d="M24.7715 39.8076 A9.7 9.7 0 0 0 24.7715 35.1924" /><path d="M24.8561 34.6168 A2 2 0 0 1 24.7715 35.1924" /><path d="M23.8561 32.8847 A2 2 0 0 1 24.8561 34.6168" /><path d=" M 23.8561 32.8847 L 15.0939 27.8258 " />
+<path d="M12.6377 28.1869 A2 2 0 0 1 15.0939 27.8258" /><path d="M12.6377 28.1869 A9.7 9.7 0 0 0 8.6408 30.4945" /><path d="M7.1 32.4411 A2 2 0 0 1 8.6408 30.4945" /><path d=" M 7.1 32.4411 L 7.1 32.75 " />
+<path d=" M 7.1 32.75 L 0 32.75 " />
+<path d=" M 0 15 L 0 32.75 " />
+<path d=" M 6 41 L 6 42.25 " />
+<path d=" M 6 41 L 15.35 41 " />
+<path d=" M 6 32.75 L 6 34 " />
+<path d="M18.85 37.5 A3.5 3.5 0 0 1 15.35 41" /><path d="M15.35 34 A3.5 3.5 0 0 1 18.85 37.5" /><path d=" M 6 34 L 15.35 34 " />
+<path d="M12.0951 29.6287 A1.4 1.4 0 0 1 12.95 30.9182" /><path d="M10.1607 30.7455 A1.4 1.4 0 0 1 12.0951 29.6287" /><path d="M11.0899 32.2404 A1.4 1.4 0 0 1 10.1607 30.7455" /><path d="M12.9251 31.1809 A1.4 1.4 0 0 1 11.0899 32.2404" /><path d="M12.95 30.9182 A1.4 1.4 0 0 1 12.9251 31.1809" /><path d="M12.9251 43.8191 A1.4 1.4 0 0 1 12.95 44.0818" /><path d="M11.0899 42.7596 A1.4 1.4 0 0 1 12.9251 43.8191" /><path d="M10.1607 44.2545 A1.4 1.4 0 0 1 11.0899 42.7596" /><path d="M12.0951 45.3713 A1.4 1.4 0 0 1 10.1607 44.2545" /><path d="M12.95 44.0818 A1.4 1.4 0 0 1 12.0951 45.3713" /><path d="M23.7942 36.3832 A1.4 1.4 0 0 1 24.35 37.5" /><path d="M22.035 36.4404 A1.4 1.4 0 0 1 23.7942 36.3832" /><path d="M22.035 38.5596 A1.4 1.4 0 0 1 22.035 36.4404" /><path d="M23.7942 38.6168 A1.4 1.4 0 0 1 22.035 38.5596" /><path d="M24.35 37.5 A1.4 1.4 0 0 1 23.7942 38.6168" /></g>
+<line x1="45" y1="45" x2="45" y2="33.4" stroke="#334353" stroke-width="0.15"/>
+<line x1="195" y1="45" x2="195" y2="33.4" stroke="#334353" stroke-width="0.15"/>
+<line x1="45" y1="35" x2="195" y2="35" stroke="#334353" stroke-width="0.22"/>
+<path d="M45,35 L46.6,35.5 L46.6,34.5 Z" fill="#334353"/>
+<path d="M195,35 L193.4,34.5 L193.4,35.5 Z" fill="#334353"/>
+<rect x="117" y="30.7" width="6" height="3.5" fill="white" stroke="none" stroke-width="0.2"/>
+<text x="120" y="33.9" font-size="3.1" text-anchor="middle" font-weight="normal" fill="#152331">75</text>
+<line x1="45" y1="45" x2="27.4" y2="45" stroke="#334353" stroke-width="0.15"/>
+<line x1="45" y1="113" x2="27.4" y2="113" stroke="#334353" stroke-width="0.15"/>
+<line x1="29" y1="45" x2="29" y2="113" stroke="#334353" stroke-width="0.22"/>
+<path d="M29,45 L28.5,46.6 L29.5,46.6 Z" fill="#334353"/>
+<path d="M29,113 L29.5,111.4 L28.5,111.4 Z" fill="#334353"/>
+<text x="27.8" y="79" transform="rotate(-90 27.8 79)" text-anchor="middle" font-size="3.1" fill="#334353">34</text>
+<line x1="195" y1="45" x2="212.6" y2="45" stroke="#334353" stroke-width="0.15"/>
+<line x1="195" y1="57" x2="212.6" y2="57" stroke="#334353" stroke-width="0.15"/>
+<line x1="211" y1="45" x2="211" y2="57" stroke="#334353" stroke-width="0.22"/>
+<path d="M211,45 L210.5,46.6 L211.5,46.6 Z" fill="#334353"/>
+<path d="M211,57 L211.5,55.4 L210.5,55.4 Z" fill="#334353"/>
+<text x="209.8" y="51" transform="rotate(-90 209.8 51)" text-anchor="middle" font-size="3.1" fill="#334353">6</text>
+<line x1="195" y1="45" x2="230.6" y2="45" stroke="#334353" stroke-width="0.15"/>
+<line x1="195" y1="82.3" x2="230.6" y2="82.3" stroke="#334353" stroke-width="0.15"/>
+<line x1="229" y1="45" x2="229" y2="82.3" stroke="#334353" stroke-width="0.22"/>
+<path d="M229,45 L228.5,46.6 L229.5,46.6 Z" fill="#334353"/>
+<path d="M229,82.3 L229.5,80.7 L228.5,80.7 Z" fill="#334353"/>
+<text x="227.8" y="63.65" transform="rotate(-90 227.8 63.65)" text-anchor="middle" font-size="3.1" fill="#334353">18.65</text>
+<line x1="75" y1="113" x2="75" y2="122.6" stroke="#334353" stroke-width="0.15"/>
+<line x1="165" y1="113" x2="165" y2="122.6" stroke="#334353" stroke-width="0.15"/>
+<line x1="75" y1="121" x2="165" y2="121" stroke="#334353" stroke-width="0.22"/>
+<path d="M75,121 L76.6,121.5 L76.6,120.5 Z" fill="#334353"/>
+<path d="M165,121 L163.4,120.5 L163.4,121.5 Z" fill="#334353"/>
+<rect x="117" y="116.7" width="6" height="3.5" fill="white" stroke="none" stroke-width="0.2"/>
+<text x="120" y="119.9" font-size="3.1" text-anchor="middle" font-weight="normal" fill="#152331">45</text>
+<line x1="110.5" y1="113" x2="110.5" y2="132.6" stroke="#334353" stroke-width="0.15"/>
+<line x1="129.5" y1="113" x2="129.5" y2="132.6" stroke="#334353" stroke-width="0.15"/>
+<line x1="110.5" y1="131" x2="129.5" y2="131" stroke="#334353" stroke-width="0.22"/>
+<path d="M110.5,131 L112.1,131.5 L112.1,130.5 Z" fill="#334353"/>
+<path d="M129.5,131 L127.9,130.5 L127.9,131.5 Z" fill="#334353"/>
+<rect x="117" y="126.7" width="6" height="3.5" fill="white" stroke="none" stroke-width="0.2"/>
+<text x="120" y="129.9" font-size="3.1" text-anchor="middle" font-weight="normal" fill="#152331">9.5</text>
+<line x1="98" y1="82.3" x2="142" y2="82.3" stroke="#788793" stroke-width="0.16" stroke-dasharray="3 1 .5 1"/>
+<line x1="120" y1="60.3" x2="120" y2="104.3" stroke="#788793" stroke-width="0.16" stroke-dasharray="3 1 .5 1"/>
+<circle cx="120" cy="82.3" r="15.2" fill="none" stroke="#788793" stroke-width="0.18" stroke-dasharray="3 1 .5 1"/>
+<polyline fill="none" stroke="#536270" stroke-width="0.18" points="120,67.1 153,63 180,63"/>
+<circle cx="120" cy="67.1" r="0.45" fill="none" stroke="#536270" stroke-width="0.18"/>
+<text x="181" y="62" font-size="2.9" text-anchor="start" font-weight="normal" fill="#152331">3× Ø2.8 通し</text>
+<polyline fill="none" stroke="#536270" stroke-width="0.18" points="132,72.95 159,85 180,85"/>
+<circle cx="132" cy="72.95" r="0.45" fill="none" stroke="#536270" stroke-width="0.18"/>
+<text x="181" y="84" font-size="2.9" text-anchor="start" font-weight="normal" fill="#152331">PCD 15.2</text>
+<text x="120" y="141" font-size="3.2" text-anchor="middle" font-weight="bold" fill="#152331">モータ側正面（+Y側から）  2:1</text>
+<g fill="none" stroke="#b3bac0" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.085" transform="matrix(0 -2 -2 0 274 113)">
+<path d=" M 28 0 L 28 -30 " />
+<path d=" M 0 -10 L 26 -10 " />
+<path d=" M 0 -10 L 0 -27 " />
+<path d=" M 0 -27 L 26 -27 " />
+<path d="M28 -29 A2 2 0 0 1 26 -27" /><path d="M28 -8 A2 2 0 0 0 26 -10" /><path d=" M 28 -30 L 34 -30 " />
+<path d=" M 28 0 L 34 0 " />
+<path d=" M 34 0 L 34 -30 " />
+</g>
+<polygon points="310,62.9 328,62.9 328,61 328.036,60.4623 328.145,59.9343 328.323,59.4257 328.568,58.9457 328.875,58.5029 329.239,58.1055 329.653,57.7606 330.11,57.4746 330.601,57.2525 331.118,57.0985 331.65,57.0153 331.984,57 332,57 334,57 334,45 274,45 274,57 290,57 290.538,57.0363 291.066,57.1446 291.574,57.3228 292.054,57.5678 292.497,57.8752 292.894,58.2392 293.239,58.6534 293.525,59.1102 293.747,59.6013 293.901,60.1177 293.985,60.6502 294,60.9837 294,61 294,64.3 310,64.3 310,62.9" fill="url(#hatch)" stroke="#142433" stroke-width="0.3"/>
+<polygon points="310,69.9 294,69.9 294,75.3 310,75.3 310,69.9" fill="url(#hatch)" stroke="#142433" stroke-width="0.3"/>
+<line x1="274" y1="45" x2="274" y2="33.4" stroke="#334353" stroke-width="0.15"/>
+<line x1="334" y1="45" x2="334" y2="33.4" stroke="#334353" stroke-width="0.15"/>
+<line x1="274" y1="35" x2="334" y2="35" stroke="#334353" stroke-width="0.22"/>
+<path d="M274,35 L275.6,35.5 L275.6,34.5 Z" fill="#334353"/>
+<path d="M334,35 L332.4,34.5 L332.4,35.5 Z" fill="#334353"/>
+<rect x="301" y="30.7" width="6" height="3.5" fill="white" stroke="none" stroke-width="0.2"/>
+<text x="304" y="33.9" font-size="3.1" text-anchor="middle" font-weight="normal" fill="#152331">30</text>
+<line x1="294" y1="82" x2="294" y2="96.6" stroke="#334353" stroke-width="0.15"/>
+<line x1="310" y1="82" x2="310" y2="96.6" stroke="#334353" stroke-width="0.15"/>
+<line x1="294" y1="95" x2="310" y2="95" stroke="#334353" stroke-width="0.22"/>
+<path d="M294,95 L295.6,95.5 L295.6,94.5 Z" fill="#334353"/>
+<path d="M310,95 L308.4,94.5 L308.4,95.5 Z" fill="#334353"/>
+<rect x="299" y="90.7" width="6" height="3.5" fill="white" stroke="none" stroke-width="0.2"/>
+<text x="302" y="93.9" font-size="3.1" text-anchor="middle" font-weight="normal" fill="#152331">8</text>
+<line x1="310" y1="76" x2="310" y2="96.6" stroke="#334353" stroke-width="0.15"/>
+<line x1="328" y1="76" x2="328" y2="96.6" stroke="#334353" stroke-width="0.15"/>
+<line x1="310" y1="95" x2="328" y2="95" stroke="#334353" stroke-width="0.22"/>
+<path d="M310,95 L311.6,95.5 L311.6,94.5 Z" fill="#334353"/>
+<path d="M328,95 L326.4,94.5 L326.4,95.5 Z" fill="#334353"/>
+<rect x="316" y="90.7" width="6" height="3.5" fill="white" stroke="none" stroke-width="0.2"/>
+<text x="319" y="93.9" font-size="3.1" text-anchor="middle" font-weight="normal" fill="#152331">9</text>
+<line x1="294" y1="113" x2="294" y2="120.6" stroke="#334353" stroke-width="0.15"/>
+<line x1="328" y1="113" x2="328" y2="120.6" stroke="#334353" stroke-width="0.15"/>
+<line x1="294" y1="119" x2="328" y2="119" stroke="#334353" stroke-width="0.22"/>
+<path d="M294,119 L295.6,119.5 L295.6,118.5 Z" fill="#334353"/>
+<path d="M328,119 L326.4,118.5 L326.4,119.5 Z" fill="#334353"/>
+<rect x="308" y="114.7" width="6" height="3.5" fill="white" stroke="none" stroke-width="0.2"/>
+<text x="311" y="117.9" font-size="3.1" text-anchor="middle" font-weight="normal" fill="#152331">17</text>
+<text x="310" y="129" font-size="3.1" text-anchor="middle" font-weight="bold" fill="#152331">軸中心 X=37.5 の断面  2:1</text>
+<text x="310" y="134" font-size="2.7" text-anchor="middle" font-weight="normal" fill="#152331">薄灰色は外形投影。下側は配線開口。</text>
+<polyline fill="none" stroke="#536270" stroke-width="0.18" points="310,80 349,85"/>
+<circle cx="310" cy="80" r="0.45" fill="none" stroke="#536270" stroke-width="0.18"/>
+<text x="351" y="86" font-size="2.9" text-anchor="start" font-weight="normal" fill="#152331">受け底 Y=18</text>
+<polyline fill="none" stroke="#536270" stroke-width="0.18" points="328,68 350,67"/>
+<circle cx="328" cy="68" r="0.45" fill="none" stroke="#536270" stroke-width="0.18"/>
+<text x="351" y="68" font-size="2.9" text-anchor="start" font-weight="normal" fill="#152331">入口 Y=27</text>
+<polyline fill="none" stroke="#536270" stroke-width="0.18" points="294,72 350,76"/>
+<circle cx="294" cy="72" r="0.45" fill="none" stroke="#536270" stroke-width="0.18"/>
+<text x="351" y="77" font-size="2.9" text-anchor="start" font-weight="normal" fill="#152331">背面 Y=10</text>
+<text x="350" y="99" font-size="2.9" text-anchor="start" font-weight="normal" fill="#152331">9：受け深さ</text>
+<text x="350" y="105" font-size="2.9" text-anchor="start" font-weight="normal" fill="#152331">8：残る背面肉厚</text>
+<g fill="none" stroke="#142433" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.13" transform="matrix(2 0 0 -2 45 228)">
+<path d=" M 0 0 L 0 30 " />
+<path d=" M 0 30 L 75 30 " />
+<path d=" M 0 0 L 75 0 " />
+<path d=" M 75 0 L 75 30 " />
+<circle cx="7.5" cy="15" r="3.3" /><circle cx="67.5" cy="15" r="3.3" /></g>
+<rect x="75" y="174" width="90" height="34" fill="none" stroke="#82909a" stroke-width="0.18" stroke-dasharray="3 1"/>
+<line x1="50" y1="198" x2="70" y2="198" stroke="#788793" stroke-width="0.16" stroke-dasharray="3 1 .5 1"/>
+<line x1="60" y1="188" x2="60" y2="208" stroke="#788793" stroke-width="0.16" stroke-dasharray="3 1 .5 1"/>
+<line x1="170" y1="198" x2="190" y2="198" stroke="#788793" stroke-width="0.16" stroke-dasharray="3 1 .5 1"/>
+<line x1="180" y1="188" x2="180" y2="208" stroke="#788793" stroke-width="0.16" stroke-dasharray="3 1 .5 1"/>
+<line x1="45" y1="198" x2="195" y2="198" stroke="#788793" stroke-width="0.16" stroke-dasharray="4 1 .5 1"/>
+<line x1="60" y1="198" x2="60" y2="152.4" stroke="#334353" stroke-width="0.15"/>
+<line x1="180" y1="198" x2="180" y2="152.4" stroke="#334353" stroke-width="0.15"/>
+<line x1="60" y1="154" x2="180" y2="154" stroke="#334353" stroke-width="0.22"/>
+<path d="M60,154 L61.6,154.5 L61.6,153.5 Z" fill="#334353"/>
+<path d="M180,154 L178.4,153.5 L178.4,154.5 Z" fill="#334353"/>
+<rect x="117" y="149.7" width="6" height="3.5" fill="white" stroke="none" stroke-width="0.2"/>
+<text x="120" y="152.9" font-size="3.1" text-anchor="middle" font-weight="normal" fill="#152331">60</text>
+<line x1="45" y1="168" x2="27.4" y2="168" stroke="#334353" stroke-width="0.15"/>
+<line x1="45" y1="228" x2="27.4" y2="228" stroke="#334353" stroke-width="0.15"/>
+<line x1="29" y1="168" x2="29" y2="228" stroke="#334353" stroke-width="0.22"/>
+<path d="M29,168 L28.5,169.6 L29.5,169.6 Z" fill="#334353"/>
+<path d="M29,228 L29.5,226.4 L28.5,226.4 Z" fill="#334353"/>
+<text x="27.8" y="198" transform="rotate(-90 27.8 198)" text-anchor="middle" font-size="3.1" fill="#334353">30</text>
+<line x1="195" y1="168" x2="213.6" y2="168" stroke="#334353" stroke-width="0.15"/>
+<line x1="195" y1="198" x2="213.6" y2="198" stroke="#334353" stroke-width="0.15"/>
+<line x1="212" y1="168" x2="212" y2="198" stroke="#334353" stroke-width="0.22"/>
+<path d="M212,168 L211.5,169.6 L212.5,169.6 Z" fill="#334353"/>
+<path d="M212,198 L212.5,196.4 L211.5,196.4 Z" fill="#334353"/>
+<text x="210.8" y="183" transform="rotate(-90 210.8 183)" text-anchor="middle" font-size="3.1" fill="#334353">15</text>
+<line x1="45" y1="228" x2="45" y2="241.6" stroke="#334353" stroke-width="0.15"/>
+<line x1="60" y1="228" x2="60" y2="241.6" stroke="#334353" stroke-width="0.15"/>
+<line x1="45" y1="240" x2="60" y2="240" stroke="#334353" stroke-width="0.22"/>
+<path d="M45,240 L46.6,240.5 L46.6,239.5 Z" fill="#334353"/>
+<path d="M60,240 L58.4,239.5 L58.4,240.5 Z" fill="#334353"/>
+<rect x="49.5" y="235.7" width="6" height="3.5" fill="white" stroke="none" stroke-width="0.2"/>
+<text x="52.5" y="238.9" font-size="3.1" text-anchor="middle" font-weight="normal" fill="#152331">7.5</text>
+<polyline fill="none" stroke="#536270" stroke-width="0.18" points="180,198 203,242 168,242"/>
+<circle cx="180" cy="198" r="0.45" fill="none" stroke="#536270" stroke-width="0.18"/>
+<text x="166" y="243" font-size="2.9" text-anchor="end" font-weight="normal" fill="#152331">2× Ø6.6 通し</text>
+<text x="120" y="251" font-size="3.2" text-anchor="middle" font-weight="bold" fill="#152331">3030接触面（+Z側から）  2:1</text>
+<text x="30" y="258" font-size="2.75" text-anchor="start" font-weight="normal" fill="#152331">破線：下側web外周。全て通し穴、タップなし。</text>
+<text x="330" y="148" font-size="3.2" text-anchor="middle" font-weight="bold" fill="#152331">受け部詳細  4:1</text>
+<g clip-path="url(#detailClip)">
+<g fill="none" stroke="#142433" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.0725" transform="matrix(0 -4 4 0 180 256.4)">
+<path d=" M 28 0 L 28 75 " />
+<path d=" M 0 60 L 26 60 " />
+<path d="M28, 60 Q27.9937, 60 27.9874, 60  Q27.9686, 60 27.9499, 60  Q27.9188, 60 27.8878, 60  Q27.8449, 60 27.8019, 60  Q27.7477, 60 27.6934, 60  Q27.6286, 60 27.5637, 60  Q27.4889, 60 27.4142, 60  Q27.3306, 60 27.247, 60  Q27.1555, 60 27.0641, 60  Q26.9659, 60 26.8678, 60  Q26.7642, 60 26.6606, 60  Q26.5528, 60 26.445, 60  Q26.2247, 60 26, 60 " /><path d=" M 0 15 L 26 15 " />
+<path d="M28, 15 Q27.9937, 15 27.9874, 15  Q27.9686, 15 27.9499, 15  Q27.9188, 15 27.8878, 15  Q27.8449, 15 27.8019, 15  Q27.7477, 15 27.6934, 15  Q27.6286, 15 27.5637, 15  Q27.4889, 15 27.4142, 15  Q27.3306, 15 27.247, 15  Q27.1555, 15 27.0641, 15  Q26.9659, 15 26.8678, 15  Q26.7642, 15 26.6606, 15  Q26.5528, 15 26.445, 15  Q26.2247, 15 26, 15 " /><path d=" M 28 0 L 34 0 " />
+<path d=" M 34 0 L 34 75 " />
+<path d=" M 28 75 L 34 75 " />
+<path d=" M 0 42.25 L 0 60 " />
+<path d=" M 7.1 42.25 L 0 42.25 " />
+<path d=" M 7.1 42.25 L 7.1 42.5589 " />
+<path d="M8.6408 44.5055 A2 2 0 0 1 7.1 42.5589" /><path d="M8.6408 44.5055 A9.7 9.7 0 0 0 12.6377 46.8131" /><path d="M15.0939 47.1742 A2 2 0 0 1 12.6377 46.8131" /><path d=" M 15.0939 47.1742 L 23.8561 42.1153 " />
+<path d="M24.8561 40.3832 A2 2 0 0 1 23.8561 42.1153" /><path d="M24.7715 39.8076 A2 2 0 0 1 24.8561 40.3832" /><path d="M24.7715 39.8076 A9.7 9.7 0 0 0 24.7715 35.1924" /><path d="M24.8561 34.6168 A2 2 0 0 1 24.7715 35.1924" /><path d="M23.8561 32.8847 A2 2 0 0 1 24.8561 34.6168" /><path d=" M 23.8561 32.8847 L 15.0939 27.8258 " />
+<path d="M12.6377 28.1869 A2 2 0 0 1 15.0939 27.8258" /><path d="M12.6377 28.1869 A9.7 9.7 0 0 0 8.6408 30.4945" /><path d="M7.1 32.4411 A2 2 0 0 1 8.6408 30.4945" /><path d=" M 7.1 32.4411 L 7.1 32.75 " />
+<path d=" M 7.1 32.75 L 0 32.75 " />
+<path d=" M 0 15 L 0 32.75 " />
+<path d=" M 6 41 L 6 42.25 " />
+<path d=" M 6 41 L 15.35 41 " />
+<path d=" M 6 32.75 L 6 34 " />
+<path d="M18.85 37.5 A3.5 3.5 0 0 1 15.35 41" /><path d="M15.35 34 A3.5 3.5 0 0 1 18.85 37.5" /><path d=" M 6 34 L 15.35 34 " />
+<path d="M12.0951 29.6287 A1.4 1.4 0 0 1 12.95 30.9182" /><path d="M10.1607 30.7455 A1.4 1.4 0 0 1 12.0951 29.6287" /><path d="M11.0899 32.2404 A1.4 1.4 0 0 1 10.1607 30.7455" /><path d="M12.9251 31.1809 A1.4 1.4 0 0 1 11.0899 32.2404" /><path d="M12.95 30.9182 A1.4 1.4 0 0 1 12.9251 31.1809" /><path d="M12.9251 43.8191 A1.4 1.4 0 0 1 12.95 44.0818" /><path d="M11.0899 42.7596 A1.4 1.4 0 0 1 12.9251 43.8191" /><path d="M10.1607 44.2545 A1.4 1.4 0 0 1 11.0899 42.7596" /><path d="M12.0951 45.3713 A1.4 1.4 0 0 1 10.1607 44.2545" /><path d="M12.95 44.0818 A1.4 1.4 0 0 1 12.0951 45.3713" /><path d="M23.7942 36.3832 A1.4 1.4 0 0 1 24.35 37.5" /><path d="M22.035 36.4404 A1.4 1.4 0 0 1 23.7942 36.3832" /><path d="M22.035 38.5596 A1.4 1.4 0 0 1 22.035 36.4404" /><path d="M23.7942 38.6168 A1.4 1.4 0 0 1 22.035 38.5596" /><path d="M24.35 37.5 A1.4 1.4 0 0 1 23.7942 38.6168" /></g>
+</g>
+<line x1="294" y1="195" x2="366" y2="195" stroke="#788793" stroke-width="0.16" stroke-dasharray="3 1 .5 1"/>
+<line x1="330" y1="159" x2="330" y2="231" stroke="#788793" stroke-width="0.16" stroke-dasharray="3 1 .5 1"/>
+<circle cx="330" cy="195" r="30.4" fill="none" stroke="#788793" stroke-width="0.18" stroke-dasharray="3 1 .5 1"/>
+<polyline fill="none" stroke="#536270" stroke-width="0.18" points="340,157.5 377,157.5"/>
+<circle cx="340" cy="157.5" r="0.45" fill="none" stroke="#536270" stroke-width="0.18"/>
+<text x="379" y="158.5" font-size="2.9" text-anchor="start" font-weight="normal" fill="#152331">R9.70</text>
+<polyline fill="none" stroke="#536270" stroke-width="0.18" points="311.539,160.975 277,176 249,176"/>
+<circle cx="311.539" cy="160.975" r="0.45" fill="none" stroke="#536270" stroke-width="0.18"/>
+<text x="249" y="181" font-size="2.9" text-anchor="start" font-weight="normal" fill="#152331">6× R2.0</text>
+<polyline fill="none" stroke="#536270" stroke-width="0.18" points="343,204 386,215"/>
+<circle cx="343" cy="204" r="0.45" fill="none" stroke="#536270" stroke-width="0.18"/>
+<text x="387" y="216" font-size="2.9" text-anchor="start" font-weight="normal" fill="#152331">背側幅7</text>
+<polyline fill="none" stroke="#536270" stroke-width="0.18" points="347,237 385,237"/>
+<circle cx="347" cy="237" r="0.45" fill="none" stroke="#536270" stroke-width="0.18"/>
+<text x="387" y="238" font-size="2.9" text-anchor="start" font-weight="normal" fill="#152331">前側幅9.5</text>
+<text x="253" y="157" font-size="2.8" text-anchor="start" font-weight="normal" fill="#152331">輪郭はSTEP参照</text>
+<text x="249" y="251" font-size="3" text-anchor="start" font-weight="normal" fill="#152331">受け平面の軸距離：8.25 ±0.05（見積公差）</text>
+<text x="249" y="257" font-size="2.75" text-anchor="start" font-weight="normal" fill="#152331">元輪郭 +0.15、接点を保つR変更。現物照合前。</text>
+<text x="249" y="263" font-size="2.75" text-anchor="start" font-weight="normal" fill="#152331">下端から6 mmまでは背側も幅9.5へ開放。</text>
+<text x="249" y="269" font-size="2.55" text-anchor="start" font-weight="normal" fill="#152331">受け6箇所 R2.0 ／ web–flange 長辺2本 R2.0（2頁参照）</text>
+<text x="15" y="266" font-size="2.75" text-anchor="start" font-weight="normal" fill="#152331">原点：外形最小隅。軸X37.5 / Z15.35。接触面Z34・頭座面Z28。</text>
+<line x1="8" y1="270" x2="412" y2="270" stroke="#334353" stroke-width="0.3"/>
+<line x1="120" y1="270" x2="120" y2="289" stroke="#334353" stroke-width="0.25"/>
+<line x1="234" y1="270" x2="234" y2="289" stroke="#334353" stroke-width="0.25"/>
+<line x1="320" y1="270" x2="320" y2="289" stroke="#334353" stroke-width="0.25"/>
+<text x="12" y="276" font-size="3.2" text-anchor="start" font-weight="bold" fill="#152331">材質：A6061-T6 ／ 同形2個</text>
+<text x="12" y="282" font-size="2.65" text-anchor="start" font-weight="normal" fill="#152331">一体CNC加工。公差・強度の承認前は製作保留。</text>
+<text x="12" y="287" font-size="2.6" text-anchor="start" font-weight="normal" fill="#152331">質量参考：81.750 g/個（ρ=2.70）</text>
+<text x="124" y="276" font-size="3" text-anchor="start" font-weight="normal" fill="#152331">提出物：本図2頁・同名STEP</text>
+<text x="124" y="282" font-size="2.7" text-anchor="start" font-weight="normal" fill="#152331">見積総額 Q：2個、材料・加工・税・送料込み</text>
+<text x="124" y="287" font-size="2.6" text-anchor="start" font-weight="normal" fill="#152331">未注記寸法：ISO 2768-m（未承認条件）</text>
+<text x="238" y="276" font-size="2.9" text-anchor="start" font-weight="normal" fill="#152331">図番 MOUNT-D5 / Rev. A5-Q1</text>
+<text x="238" y="282" font-size="3.1" text-anchor="start" font-weight="bold" fill="#913b2b">見積用・製作未承認</text>
+<text x="238" y="287" font-size="2.6" text-anchor="start" font-weight="normal" fill="#152331">2026-09-21</text>
+<text x="324" y="276" font-size="2.8" text-anchor="start" font-weight="normal" fill="#152331">投影元：同梱STEP</text>
+<text x="324" y="282" font-size="2.6" text-anchor="start" font-weight="normal" fill="#152331">SHA-256（先頭16桁）</text>
+<text x="324" y="287" font-size="2.8" text-anchor="start" font-weight="normal" fill="#152331">a560867e587b281b</text>
+</g></svg>

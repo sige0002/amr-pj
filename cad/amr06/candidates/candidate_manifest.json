@@ -1,0 +1,64 @@
+{
+  "revision": "A5-Q1",
+  "status": "quotation_candidates_only_not_released",
+  "source_a4_unchanged": true,
+  "source_a4_sha256": {
+    "amr05/custom_mount.py": "c869b49af04d2d9c4f25dc4a66fd3aea0a6a9da6ea6ea0e7a9e9b2f7a94bde29",
+    "amr05/reconstruct_motor_seat.py": "0d03da0789e3adb59e91423b3022291fe35a7fa7509240f81c21eec6c7b5c912",
+    "amr05/motor-seat-profile-source.json": "5551b02010b4d7909562e624983ecab44445e4822f1143f117ba4be365a42bf3",
+    "amr05/M0601C_custom_mount_quote.step": "399ed21399d2bd237d12dbfafdfe6a5f079422efe9abbdf7c02c84a8c2138d13",
+    "amr05/custom_mount_dimensions.json": "39d63aa1693d69a7228e13ce88bc86f521ebbf658ccec7b6dfd2eb93988cefda"
+  },
+  "candidates": [
+    {
+      "candidate": "D1",
+      "step": "M0601C_mount_D1_R2.step",
+      "json": "M0601C_mount_D1_R2.json",
+      "step_sha256": "ae3a00b1024def670b45e712af563593250c1be6d38595254ef27471f37b7e8b",
+      "valid": true,
+      "volume_mm3": 38564.12420585856,
+      "mass_g_each": 104.12313535581812,
+      "radial_support_retained_ratio": 0.8192723139550366
+    },
+    {
+      "candidate": "D2",
+      "step": "M0601C_mount_D2_R2p5.step",
+      "json": "M0601C_mount_D2_R2p5.json",
+      "step_sha256": "cef0ba5afe3f5a2dbe5f3a8c1b49d430de055787959de092d774c015d3121c05",
+      "valid": true,
+      "volume_mm3": 38539.74404852455,
+      "mass_g_each": 104.0573089310163,
+      "radial_support_retained_ratio": 0.5389345507240614
+    },
+    {
+      "candidate": "D3",
+      "step": "M0601C_mount_D3_R2_LongRoots.step",
+      "json": "M0601C_mount_D3_R2_LongRoots.json",
+      "step_sha256": "32f71794248b0fa3c10abdeae57ba4aa564fbf5404662bab1d4b3d5644849ac9",
+      "valid": true,
+      "volume_mm3": 38531.87050497205,
+      "mass_g_each": 104.03605036342455,
+      "radial_support_retained_ratio": 0.8192723139550366
+    },
+    {
+      "candidate": "D4",
+      "step": "M0601C_mount_D4_R2_NoRootFillet.step",
+      "json": "M0601C_mount_D4_R2_NoRootFillet.json",
+      "step_sha256": "8150975092ee781045afabcaf831e2e27ecc3170af3656832472bd4f057e8caa",
+      "valid": true,
+      "volume_mm3": 38428.861623402816,
+      "mass_g_each": 103.75792638318761,
+      "radial_support_retained_ratio": 0.8192723139550366
+    },
+    {
+      "candidate": "D5",
+      "step": "M0601C_mount_D5_Compact_R2.step",
+      "json": "M0601C_mount_D5_Compact_R2.json",
+      "step_sha256": "a560867e587b281b1c9c31354d68e567ca33a91a49fd4773484d3f290692db00",
+      "valid": true,
+      "volume_mm3": 30277.694396584553,
+      "mass_g_each": 81.7497748707783,
+      "radial_support_retained_ratio": 0.8192723139550366
+    }
+  ]
+}

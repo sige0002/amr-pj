@@ -1,0 +1,28 @@
+{
+  "candidate": "D1",
+  "revision": "A5-Q1",
+  "status": "quotation_only_not_manufacturing_or_strength_release",
+  "pdf_pages": 2,
+  "step_sha256": "ae3a00b1024def670b45e712af563593250c1be6d38595254ef27471f37b7e8b",
+  "svg_sha256": "3086330de1d5554d75fdb7cb615db562ca0dcd410e2d4d423a3a9511dfaac20c",
+  "notes_svg_sha256": "bc082f877853d980bb29266b11f6b8b2643cd7fb9fbade7dab42cc0204b8b0ff",
+  "pdf_sha256": "bbedbe5f2f77dbc2a3ab646134fa96f74173d7b6a1ddef5b4bef34c29310d064",
+  "drawing_generator_sha256": "9e5e1396e1a54f1f461bfc004dcafb9bf190aa9bc583d52525cb8d153ec38ce7",
+  "a4_drawing_template_sha256": "055d36410dd1704d94299d55677f89bab28428c281da375fedf70347b58ed2c5",
+  "projection_source": "Exact same-stem STEP using headless FreeCAD TechDraw.projectToSVG",
+  "center_section_source": "Exact STEP section at local X45; display discretization deflection 0.005 mm",
+  "bbox_mm": [
+    90.0,
+    30.0,
+    34.0
+  ],
+  "volume_mm3": 38564.12420160719,
+  "valid": true,
+  "solids": 1,
+  "section_loops": 2,
+  "files": [
+    "M0601C_mount_D1_R2.svg",
+    "M0601C_mount_D1_R2_notes.svg",
+    "M0601C_mount_D1_R2.pdf"
+  ]
+}

@@ -1,0 +1,919 @@
+{
+  "status": "quotation_candidate_not_manufacturing_or_strength_release",
+  "material": "A6061-T6, quotation preference; alloy to be agreed",
+  "quantity": 2,
+  "same_part_both_sides": true,
+  "volume_mm3_each": 38428.861623402816,
+  "density_kg_per_mm3": 2.7e-06,
+  "mass_kg_each_estimate": 0.10375792638318761,
+  "overall_LWH_mm": [
+    90,
+    30,
+    34
+  ],
+  "flange_thickness_mm": 5,
+  "web_width_thickness_mm": [
+    60,
+    17
+  ],
+  "seat_depth_mm": 9,
+  "rear_wall_mm": 8,
+  "source_seat_depth_mm": 3,
+  "source_floor_offset_mm": 0.15,
+  "seat_flat_distance_mm": 8.25,
+  "seat_large_arc_radius_mm": 9.7,
+  "proposed_fit_profile_tolerance_mm": 0.05,
+  "fit_note": "Motor drawing flat maximum8.15 vs pocket minimum8.20 gives nominal minimum0.05mm on flats only. Full contour, corner radii and delivered revision need received-part gauging before release.",
+  "motor_holes_diameter_mm": 2.8,
+  "motor_holes_PCD_mm": 15.2,
+  "motor_screw": "3x M2.5x12 per mount, nominal4mm engagement in max5mm hole",
+  "frame_holes_diameter_mm": 6.6,
+  "frame_hole_pitch_mm": 75,
+  "frame_screw": "2x M6x12 per mount, direct head seating on5mm flange",
+  "cable_through_throat_width_mm": 7,
+  "cable_front_and_lower_relief_width_mm": 9.5,
+  "ground_clearance_bracket_mm": 35,
+  "scope": "Source motor-seat analytic curves reused with explicit offset; external body, deeper pocket, wider cable slot and chassis fastening are new. Native bracket STEP conversion is not claimed.",
+  "candidate_id": "D4",
+  "drawing_revision": "A5-Q1",
+  "date": "2026-09-21",
+  "priority": "seat_only_quotation_comparison_pending",
+  "seat_small_corner_radius_mm": 2.0,
+  "seat_small_corner_count": 6,
+  "web_flange_root_radius_mm": 0.0,
+  "web_flange_root_edge_count": 0,
+  "web_flange_root_mode": "none",
+  "root_surface_analysis": {
+    "all_face_surface_types": {
+      "Plane": 23,
+      "Cylinder": 15
+    },
+    "root_transition_surface_count": 0,
+    "root_transition_surfaces": [],
+    "note": "Analytic B-rep types and trim curves only; these do not determine a vendor CAM strategy, tool count, setup count or quotation."
+  },
+  "seat_corner_method": "Shift each arc center inward by delta R to retain the original flat tangent point; then cut only Y138..147.",
+  "corner_center_moves": [
+    {
+      "old_center_world_xz_mm": [
+        81.7547808134473,
+        49.26886144934904
+      ],
+      "new_center_world_xz_mm": [
+        82.05788970477185,
+        49.09386144934904
+      ],
+      "flat_outward_normal_xz": [
+        -0.8660254037844386,
+        0.5
+      ],
+      "center_shift_mm": 0.3500000000000001
+    },
+    {
+      "old_center_world_xz_mm": [
+        84.94109695684928,
+        43.74999999999996
+      ],
+      "new_center_world_xz_mm": [
+        84.94109695684928,
+        44.09999999999996
+      ],
+      "flat_outward_normal_xz": [
+        0,
+        -1
+      ],
+      "center_shift_mm": 0.3500000000000001
+    },
+    {
+      "old_center_world_xz_mm": [
+        86.81368385659812,
+        58.03113855065106
+      ],
+      "new_center_world_xz_mm": [
+        87.11679274792267,
+        57.85613855065106
+      ],
+      "flat_outward_normal_xz": [
+        -0.8660254037844386,
+        0.5
+      ],
+      "center_shift_mm": 0.3500000000000001
+    },
+    {
+      "old_center_world_xz_mm": [
+        93.18631614340192,
+        58.031138550650915
+      ],
+      "new_center_world_xz_mm": [
+        92.88320725207737,
+        57.85613855065092
+      ],
+      "flat_outward_normal_xz": [
+        0.8660254037844386,
+        0.5
+      ],
+      "center_shift_mm": 0.3500000000000001
+    },
+    {
+      "old_center_world_xz_mm": [
+        95.05890304315082,
+        43.749999999999964
+      ],
+      "new_center_world_xz_mm": [
+        95.05890304315082,
+        44.099999999999966
+      ],
+      "flat_outward_normal_xz": [
+        0,
+        -1
+      ],
+      "center_shift_mm": 0.3500000000000001
+    },
+    {
+      "old_center_world_xz_mm": [
+        98.24521918655272,
+        49.26886144934907
+      ],
+      "new_center_world_xz_mm": [
+        97.94211029522816,
+        49.09386144934907
+      ],
+      "flat_outward_normal_xz": [
+        0.8660254037844386,
+        0.5
+      ],
+      "center_shift_mm": 0.3500000000000001
+    }
+  ],
+  "root_edges_before_fillet": [],
+  "world_bbox_mm": {
+    "minimum_mm": [
+      45.0,
+      120.0,
+      35.0
+    ],
+    "maximum_mm": [
+      135.0,
+      150.0,
+      69.0
+    ],
+    "size_mm": [
+      90.0,
+      30.0,
+      34.0
+    ]
+  },
+  "quote_origin_world_mm": [
+    45,
+    120,
+    35
+  ],
+  "quote_axis_local_xz_mm": [
+    45,
+    15.35
+  ],
+  "quote_mounting_contact_z_mm": 34,
+  "geometry_checks": {
+    "one_valid_solid": true,
+    "solid_count": 1,
+    "flat_fragment_lengths_preserved": true,
+    "rear_wall_material_not_reduced": true,
+    "rear_wall_removed_volume_mm3": 0.0,
+    "root_fillets_only_add_material": true,
+    "overall_envelope_preserved": true,
+    "all_five_holes_preserved": true
+  },
+  "flat_support_faces": [
+    {
+      "normal_world": [
+        0.866025403784438,
+        1.1102230246251588e-16,
+        -0.500000000000001
+      ],
+      "axis_distance_mm": 8.249999999999964,
+      "depth_mm": 9.0,
+      "surface_area_mm2": 91.06025477671466,
+      "support_length_mm": 10.117806086301629,
+      "bbox_world_mm": {
+        "minimum_mm": [
+          80.32583889720301,
+          138.0,
+          50.09386144934901
+        ],
+        "maximum_mm": [
+          85.38474194035385,
+          147.0,
+          58.85613855065103
+        ],
+        "size_mm": [
+          5.058903043150835,
+          9.0,
+          8.762277101302018
+        ]
+      },
+      "vertices_world_mm": [
+        [
+          85.38474194035385,
+          147.0,
+          58.85613855065103
+        ],
+        [
+          85.38474194035385,
+          138.0,
+          58.85613855065103
+        ],
+        [
+          80.32583889720301,
+          147.0,
+          50.09386144934901
+        ],
+        [
+          80.32583889720301,
+          138.0,
+          50.09386144934901
+        ]
+      ]
+    },
+    {
+      "normal_world": [
+        -5.553494788807821e-15,
+        -2.220446049250313e-16,
+        1.0
+      ],
+      "axis_distance_mm": 8.249999999999993,
+      "depth_mm": 9.0,
+      "surface_area_mm2": 2.7801273883563624,
+      "support_length_mm": 0.30890304315070694,
+      "bbox_world_mm": {
+        "minimum_mm": [
+          84.9410969568493,
+          138.0,
+          42.09999999999998
+        ],
+        "maximum_mm": [
+          85.25,
+          147.0,
+          42.09999999999998
+        ],
+        "size_mm": [
+          0.30890304315070694,
+          9.0,
+          0.0
+        ]
+      },
+      "vertices_world_mm": [
+        [
+          84.9410969568493,
+          147.0,
+          42.09999999999998
+        ],
+        [
+          85.25,
+          147.0,
+          42.09999999999998
+        ],
+        [
+          85.25,
+          138.0,
+          42.09999999999998
+        ],
+        [
+          84.9410969568493,
+          138.0,
+          42.09999999999998
+        ]
+      ]
+    },
+    {
+      "normal_world": [
+        -0.866025403784438,
+        1.110223024625159e-16,
+        -0.5000000000000011
+      ],
+      "axis_distance_mm": 8.250000000000052,
+      "depth_mm": 9.0,
+      "surface_area_mm2": 91.06025477671318,
+      "support_length_mm": 10.117806086301464,
+      "bbox_world_mm": {
+        "minimum_mm": [
+          94.6152580596463,
+          138.0,
+          50.09386144934908
+        ],
+        "maximum_mm": [
+          99.67416110279704,
+          147.0,
+          58.85613855065095
+        ],
+        "size_mm": [
+          5.05890304315075,
+          9.0,
+          8.76227710130187
+        ]
+      },
+      "vertices_world_mm": [
+        [
+          99.67416110279704,
+          147.0,
+          50.09386144934908
+        ],
+        [
+          99.67416110279704,
+          138.0,
+          50.09386144934908
+        ],
+        [
+          94.61525805964631,
+          147.0,
+          58.85613855065095
+        ],
+        [
+          94.61525805964631,
+          138.0,
+          58.85613855065095
+        ]
+      ]
+    },
+    {
+      "normal_world": [
+        0.0,
+        -2.220446049250313e-16,
+        1.0
+      ],
+      "axis_distance_mm": 8.250000000000007,
+      "depth_mm": 9.0,
+      "surface_area_mm2": 2.7801273883573696,
+      "support_length_mm": 0.30890304315081885,
+      "bbox_world_mm": {
+        "minimum_mm": [
+          94.75,
+          138.0,
+          42.099999999999994
+        ],
+        "maximum_mm": [
+          95.05890304315082,
+          147.0,
+          42.099999999999994
+        ],
+        "size_mm": [
+          0.3089030431508206,
+          9.0,
+          0.0
+        ]
+      },
+      "vertices_world_mm": [
+        [
+          94.75,
+          147.0,
+          42.099999999999994
+        ],
+        [
+          95.05890304315082,
+          147.0,
+          42.099999999999994
+        ],
+        [
+          95.05890304315082,
+          138.0,
+          42.099999999999994
+        ],
+        [
+          94.75,
+          138.0,
+          42.099999999999994
+        ]
+      ]
+    }
+  ],
+  "baseline_flat_support_faces": [
+    {
+      "normal_world": [
+        0.866025403784438,
+        1.1102230246251588e-16,
+        -0.500000000000001
+      ],
+      "axis_distance_mm": 8.249999999999964,
+      "depth_mm": 9.0,
+      "surface_area_mm2": 91.06025477671466,
+      "support_length_mm": 10.117806086301629,
+      "bbox_world_mm": {
+        "minimum_mm": [
+          80.32583889720301,
+          138.0,
+          50.09386144934901
+        ],
+        "maximum_mm": [
+          85.38474194035385,
+          147.0,
+          58.85613855065103
+        ],
+        "size_mm": [
+          5.058903043150835,
+          9.0,
+          8.762277101302018
+        ]
+      },
+      "vertices_world_mm": [
+        [
+          85.38474194035385,
+          147.0,
+          58.85613855065103
+        ],
+        [
+          85.38474194035385,
+          138.0,
+          58.85613855065103
+        ],
+        [
+          80.32583889720301,
+          147.0,
+          50.09386144934901
+        ],
+        [
+          80.32583889720301,
+          138.0,
+          50.09386144934901
+        ]
+      ]
+    },
+    {
+      "normal_world": [
+        -5.553494788807821e-15,
+        -2.220446049250313e-16,
+        1.0
+      ],
+      "axis_distance_mm": 8.249999999999993,
+      "depth_mm": 9.0,
+      "surface_area_mm2": 2.7801273883563624,
+      "support_length_mm": 0.30890304315070694,
+      "bbox_world_mm": {
+        "minimum_mm": [
+          84.9410969568493,
+          138.0,
+          42.09999999999998
+        ],
+        "maximum_mm": [
+          85.25,
+          147.0,
+          42.09999999999998
+        ],
+        "size_mm": [
+          0.30890304315070694,
+          9.0,
+          0.0
+        ]
+      },
+      "vertices_world_mm": [
+        [
+          84.9410969568493,
+          147.0,
+          42.09999999999998
+        ],
+        [
+          85.25,
+          147.0,
+          42.09999999999998
+        ],
+        [
+          85.25,
+          138.0,
+          42.09999999999998
+        ],
+        [
+          84.9410969568493,
+          138.0,
+          42.09999999999998
+        ]
+      ]
+    },
+    {
+      "normal_world": [
+        -0.866025403784438,
+        1.110223024625159e-16,
+        -0.5000000000000011
+      ],
+      "axis_distance_mm": 8.250000000000052,
+      "depth_mm": 9.0,
+      "surface_area_mm2": 91.06025477671318,
+      "support_length_mm": 10.117806086301464,
+      "bbox_world_mm": {
+        "minimum_mm": [
+          94.6152580596463,
+          138.0,
+          50.09386144934908
+        ],
+        "maximum_mm": [
+          99.67416110279704,
+          147.0,
+          58.85613855065095
+        ],
+        "size_mm": [
+          5.05890304315075,
+          9.0,
+          8.76227710130187
+        ]
+      },
+      "vertices_world_mm": [
+        [
+          99.67416110279704,
+          147.0,
+          50.09386144934908
+        ],
+        [
+          99.67416110279704,
+          138.0,
+          50.09386144934908
+        ],
+        [
+          94.61525805964631,
+          147.0,
+          58.85613855065095
+        ],
+        [
+          94.61525805964631,
+          138.0,
+          58.85613855065095
+        ]
+      ]
+    },
+    {
+      "normal_world": [
+        0.0,
+        -2.220446049250313e-16,
+        1.0
+      ],
+      "axis_distance_mm": 8.250000000000007,
+      "depth_mm": 9.0,
+      "surface_area_mm2": 2.7801273883573696,
+      "support_length_mm": 0.30890304315081885,
+      "bbox_world_mm": {
+        "minimum_mm": [
+          94.75,
+          138.0,
+          42.099999999999994
+        ],
+        "maximum_mm": [
+          95.05890304315082,
+          147.0,
+          42.099999999999994
+        ],
+        "size_mm": [
+          0.3089030431508206,
+          9.0,
+          0.0
+        ]
+      },
+      "vertices_world_mm": [
+        [
+          94.75,
+          147.0,
+          42.099999999999994
+        ],
+        [
+          95.05890304315082,
+          147.0,
+          42.099999999999994
+        ],
+        [
+          95.05890304315082,
+          138.0,
+          42.099999999999994
+        ],
+        [
+          94.75,
+          138.0,
+          42.099999999999994
+        ]
+      ]
+    }
+  ],
+  "radial_support_faces": [
+    {
+      "radius_mm": 9.699999999999923,
+      "depth_mm": 9,
+      "arc_length_mm": 4.65987862753201,
+      "surface_area_mm2": 41.93890764778809,
+      "bbox_world_mm": {
+        "minimum_mm": [
+          80.68692719350824,
+          138.0,
+          43.64080191235389
+        ],
+        "maximum_mm": [
+          82.99452635286339,
+          147.0,
+          47.6376808998602
+        ],
+        "size_mm": [
+          2.3075991593551493,
+          9.0,
+          3.9968789875063067
+        ]
+      }
+    },
+    {
+      "radius_mm": 9.700000000000276,
+      "depth_mm": 9,
+      "arc_length_mm": 4.659878627532015,
+      "surface_area_mm2": 41.938907647788135,
+      "bbox_world_mm": {
+        "minimum_mm": [
+          87.69240084064506,
+          138.0,
+          59.77151718778581
+        ],
+        "maximum_mm": [
+          92.30759915935526,
+          147.0,
+          60.05000000000001
+        ],
+        "size_mm": [
+          4.615198318710199,
+          9.0,
+          0.27848281221420024
+        ]
+      }
+    },
+    {
+      "radius_mm": 9.700000000000045,
+      "depth_mm": 9,
+      "arc_length_mm": 4.659878627532033,
+      "surface_area_mm2": 41.9389076477883,
+      "bbox_world_mm": {
+        "minimum_mm": [
+          97.0054736471367,
+          138.0,
+          43.64080191235392
+        ],
+        "maximum_mm": [
+          99.31307280649185,
+          147.0,
+          47.63768089986028
+        ],
+        "size_mm": [
+          2.3075991593551493,
+          9.0,
+          3.9968789875063564
+        ]
+      }
+    }
+  ],
+  "baseline_radial_support_faces": [
+    {
+      "radius_mm": 9.699999999999923,
+      "depth_mm": 9,
+      "arc_length_mm": 5.687826316303153,
+      "surface_area_mm2": 51.190436846728375,
+      "bbox_world_mm": {
+        "minimum_mm": [
+          80.55634753168763,
+          138.0,
+          43.279192834904514
+        ],
+        "maximum_mm": [
+          83.35969232384268,
+          147.0,
+          48.134728446050644
+        ],
+        "size_mm": [
+          2.8033447921550447,
+          9.0,
+          4.855535611146131
+        ]
+      }
+    },
+    {
+      "radius_mm": 9.700000000000276,
+      "depth_mm": 9,
+      "arc_length_mm": 5.687826316303092,
+      "surface_area_mm2": 51.190436846727835,
+      "bbox_world_mm": {
+        "minimum_mm": [
+          87.19665520784504,
+          138.0,
+          59.63607871904486
+        ],
+        "maximum_mm": [
+          92.80334479215507,
+          147.0,
+          60.05000000000001
+        ],
+        "size_mm": [
+          5.606689584310033,
+          9.0,
+          0.4139212809551509
+        ]
+      }
+    },
+    {
+      "radius_mm": 9.700000000000045,
+      "depth_mm": 9,
+      "arc_length_mm": 5.687826316303155,
+      "surface_area_mm2": 51.19043684672839,
+      "bbox_world_mm": {
+        "minimum_mm": [
+          96.64030767615739,
+          138.0,
+          43.279192834904514
+        ],
+        "maximum_mm": [
+          99.44365246831242,
+          147.0,
+          48.13472844605066
+        ],
+        "size_mm": [
+          2.8033447921550305,
+          9.0,
+          4.855535611146145
+        ]
+      }
+    }
+  ],
+  "radial_support_total_length_mm": 13.97963588259606,
+  "radial_support_retained_ratio": 0.8192723139550366,
+  "holes": {
+    "motor": [
+      {
+        "center_world_xz_mm": [
+          83.4182069312383,
+          46.550000000000004
+        ],
+        "diameter_mm": 2.8,
+        "material_length_mm": 8.0,
+        "material_y_limits_mm": [
+          130.0,
+          138.0
+        ]
+      },
+      {
+        "center_world_xz_mm": [
+          90.0,
+          57.95
+        ],
+        "diameter_mm": 2.8,
+        "material_length_mm": 8.0,
+        "material_y_limits_mm": [
+          130.0,
+          138.0
+        ]
+      },
+      {
+        "center_world_xz_mm": [
+          96.5817930687617,
+          46.550000000000004
+        ],
+        "diameter_mm": 2.8,
+        "material_length_mm": 8.0,
+        "material_y_limits_mm": [
+          130.0,
+          138.0
+        ]
+      }
+    ],
+    "frame": [
+      {
+        "center_world_xy_mm": [
+          52.5,
+          135.0
+        ],
+        "diameter_mm": 6.6,
+        "material_length_mm": 5.0,
+        "material_z_limits_mm": [
+          64.0,
+          69.0
+        ]
+      },
+      {
+        "center_world_xy_mm": [
+          127.5,
+          135.0
+        ],
+        "diameter_mm": 6.6,
+        "material_length_mm": 5.0,
+        "material_z_limits_mm": [
+          64.0,
+          69.0
+        ]
+      }
+    ]
+  },
+  "baseline_holes": {
+    "motor": [
+      {
+        "center_world_xz_mm": [
+          83.4182069312383,
+          46.550000000000004
+        ],
+        "diameter_mm": 2.8,
+        "material_length_mm": 8.0,
+        "material_y_limits_mm": [
+          130.0,
+          138.0
+        ]
+      },
+      {
+        "center_world_xz_mm": [
+          90.0,
+          57.95
+        ],
+        "diameter_mm": 2.8,
+        "material_length_mm": 8.0,
+        "material_y_limits_mm": [
+          130.0,
+          138.0
+        ]
+      },
+      {
+        "center_world_xz_mm": [
+          96.5817930687617,
+          46.550000000000004
+        ],
+        "diameter_mm": 2.8,
+        "material_length_mm": 8.0,
+        "material_y_limits_mm": [
+          130.0,
+          138.0
+        ]
+      }
+    ],
+    "frame": [
+      {
+        "center_world_xy_mm": [
+          52.5,
+          135.0
+        ],
+        "diameter_mm": 6.6,
+        "material_length_mm": 5.0,
+        "material_z_limits_mm": [
+          64.0,
+          69.0
+        ]
+      },
+      {
+        "center_world_xy_mm": [
+          127.5,
+          135.0
+        ],
+        "diameter_mm": 6.6,
+        "material_length_mm": 5.0,
+        "material_z_limits_mm": [
+          64.0,
+          69.0
+        ]
+      }
+    ]
+  },
+  "volume_comparison": {
+    "baseline_volume_mm3": 38440.75251307031,
+    "candidate_volume_mm3": 38428.861623402816,
+    "seat_relief_removed_mm3": 11.890889667491138,
+    "root_fillets_added_mm3": 0.0,
+    "added_to_baseline_mm3": 0.0,
+    "removed_from_baseline_mm3": 11.890889667491663,
+    "net_change_mm3": -11.890889667491138
+  },
+  "tolerance_scope": {
+    "quoted_special_tolerance": "Only seat flat distance from shaft axis: 8.25 +/- 0.05 mm; same scope as A4 quotation.",
+    "all_other_dimensions": "ISO 2768-m provisional quotation condition; not manufacturing approval.",
+    "new_hole_position_or_profile_tolerances_added": false,
+    "unresolved": "Received motor lot, complete contour clearance, geometric/hole-position tolerances and functional contacts require approval before production."
+  },
+  "limitations": [
+    "Lower flat consists of two short 0.308903 mm fragments; do not count it as an equal third support face.",
+    "Reduced radial support arc lengths are geometric data, not contact-pressure or load-capacity certification.",
+    "No full chassis interference, CAM, strength or safety-factor certification in this candidate generator.",
+    "Identical two-piece quantity is for price comparison; no manufacturing or purchasing authorization."
+  ],
+  "source_a4_sha256": {
+    "amr05/custom_mount.py": "c869b49af04d2d9c4f25dc4a66fd3aea0a6a9da6ea6ea0e7a9e9b2f7a94bde29",
+    "amr05/reconstruct_motor_seat.py": "0d03da0789e3adb59e91423b3022291fe35a7fa7509240f81c21eec6c7b5c912",
+    "amr05/motor-seat-profile-source.json": "5551b02010b4d7909562e624983ecab44445e4822f1143f117ba4be365a42bf3",
+    "amr05/M0601C_custom_mount_quote.step": "399ed21399d2bd237d12dbfafdfe6a5f079422efe9abbdf7c02c84a8c2138d13",
+    "amr05/custom_mount_dimensions.json": "39d63aa1693d69a7228e13ce88bc86f521ebbf658ccec7b6dfd2eb93988cefda"
+  },
+  "generator_sha256": "eb61d0a8eb8056c35d5e945bdb6de4ff6d2fe2fd3232aa76a4ca725c55ed3a34",
+  "step_file": "M0601C_mount_D4_R2_NoRootFillet.step",
+  "step_sha256": "8150975092ee781045afabcaf831e2e27ecc3170af3656832472bd4f057e8caa",
+  "exported_step_checks": {
+    "one_valid_solid": true,
+    "local_bbox_mm": {
+      "minimum_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "maximum_mm": [
+        90.0,
+        30.0,
+        34.0
+      ],
+      "size_mm": [
+        90.0,
+        30.0,
+        34.0
+      ]
+    },
+    "volume_mm3": 38428.86162340269,
+    "volume_roundtrip_difference_mm3": -1.2369127944111824e-10
+  }
+}

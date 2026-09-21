@@ -1,0 +1,12 @@
+{
+  "selected_candidate": "D5",
+  "candidate_step_relative": "candidates/M0601C_mount_D5_Compact_R2.step",
+  "selection_status": "D5_fit_mock_and_comparison_CAD_only_not_cost_down_adoption",
+  "lowest_observed_manufacturing_cost_reference": "A4",
+  "cost_reduction_achieved": false,
+  "automatic_parts_lot_quote_USD": 80.08,
+  "baseline_A4_parts_lot_quote_USD": 74.50,
+  "manufacturing_released": false,
+  "payload_15kg_and_SF2_verified": false,
+  "reason_ja": "D5は幅75/web45/厚6と長辺根元R2の比較CAD・仮合わせモック用。2個80.08USDで旧A4の74.50USDより高いため、コスト低減案としての採用は保留。A4も新しい15kg可搬・安全率2を認定したものではない。実接合、局所応力、はめあいは未確認。"
+}

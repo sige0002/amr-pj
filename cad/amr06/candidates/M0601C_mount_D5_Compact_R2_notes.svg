@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
+<title>M0601C_111 D5 mount — quotation only — sheet 2 of 2</title>
+<desc>Quotation conditions, nominal local coordinates and measured support geometry. No manufacturing approval, load rating, complete fit or safety-factor certification.</desc>
+<g font-family="Noto Sans CJK JP, sans-serif">
+<rect x="0" y="0" width="420" height="297" fill="white" stroke="none" stroke-width="0.2"/>
+<rect x="8" y="8" width="404" height="281" fill="none" stroke="#a7b1b8" stroke-width="0.35"/>
+<text x="15" y="19" font-size="5" text-anchor="start" font-weight="bold" fill="#152331">M0601C_111 金具 D5 — 加工条件・機能寸法・比較記録</text>
+<text x="406" y="19" font-size="3.1" text-anchor="end" font-weight="normal" fill="#152331">Rev. A5-Q1　2 / 2</text>
+<text x="15" y="27" font-size="3.2" text-anchor="start" font-weight="normal" fill="#913b2b">製作未承認：この資料は見積比較用。安全率2、全輪郭のはめあい、公差累積、加工工程の成立を認定しない。</text>
+<text x="15" y="38" font-size="3.8" text-anchor="start" font-weight="bold" fill="#152331">見積条件（A4と同じ公差範囲）</text>
+<rect x="15" y="42" width="390" height="8" fill="#edf2f5" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="17" y="47.5" font-size="3" text-anchor="start" font-weight="bold" fill="#152331">項目</text>
+<line x1="74" y1="42" x2="74" y2="50" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="76" y="47.5" font-size="3" text-anchor="start" font-weight="bold" fill="#152331">指定・依頼内容</text>
+<rect x="15" y="50" width="390" height="8" fill="white" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="17" y="55.5" font-size="3" text-anchor="start" font-weight="normal" fill="#152331">数量・材質・処理</text>
+<line x1="74" y1="50" x2="74" y2="58" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="76" y="55.5" font-size="3" text-anchor="start" font-weight="normal" fill="#152331">同形2個、A6061-T6、表面処理なし。左右用は同じ部品。製造10日の比較条件、納期確約ではない。</text>
+<rect x="15" y="58" width="390" height="8" fill="white" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="17" y="63.5" font-size="3" text-anchor="start" font-weight="normal" fill="#152331">特別公差</text>
+<line x1="74" y1="58" x2="74" y2="66" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="76" y="63.5" font-size="3" text-anchor="start" font-weight="normal" fill="#152331">受け平面の軸距離8.25 ±0.05 mmのみ。穴位置やRへ新たな±0.05指定を追加していない。</text>
+<rect x="15" y="66" width="390" height="8" fill="white" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="17" y="71.5" font-size="3" text-anchor="start" font-weight="normal" fill="#152331">その他の寸法</text>
+<line x1="74" y1="66" x2="74" y2="74" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="76" y="71.5" font-size="3" text-anchor="start" font-weight="normal" fill="#152331">ISO 2768-mを見積条件とする。幾何公差・穴位置・全輪郭適合は現物ロット確認後に決める。</text>
+<rect x="15" y="74" width="390" height="8" fill="white" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="17" y="79.5" font-size="3" text-anchor="start" font-weight="normal" fill="#152331">仕上げ・形状変更</text>
+<line x1="74" y1="74" x2="74" y2="82" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="76" y="79.5" font-size="3" text-anchor="start" font-weight="normal" fill="#152331">バリ取り。接触平面・受け深さ・ねじ座面を削らない。STEP輪郭や内隅Rの変更は製作前に要確認。</text>
+<text x="15" y="91" font-size="3.8" text-anchor="start" font-weight="bold" fill="#152331">部品座標と加工対象（形状は同名STEP、1頁の実投影を参照）</text>
+<text x="15" y="98" font-size="3" text-anchor="start" font-weight="normal" fill="#152331">O=外形最小隅。車体座標から(52.5,120,35) mmを引いた座標。軸X37.5/Z15.35、3030接触面Z34。</text>
+<rect x="15" y="102" width="390" height="8" fill="#edf2f5" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="17" y="107.5" font-size="2.95" text-anchor="start" font-weight="bold" fill="#152331">対象</text>
+<line x1="81" y1="102" x2="81" y2="110" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="83" y="107.5" font-size="2.95" text-anchor="start" font-weight="bold" fill="#152331">局所座標・寸法 mm</text>
+<line x1="273" y1="102" x2="273" y2="110" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="275" y="107.5" font-size="2.95" text-anchor="start" font-weight="bold" fill="#152331">注記</text>
+<rect x="15" y="110" width="390" height="8" fill="white" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="17" y="115.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">外形／根元</text>
+<line x1="81" y1="110" x2="81" y2="118" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="83" y="115.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">75×30×34、flange t6、web45×17</text>
+<line x1="273" y1="110" x2="273" y2="118" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="275" y="115.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">X方向長辺2本だけR2.0</text>
+<rect x="15" y="118" width="390" height="8" fill="white" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="17" y="123.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">受け／背肉</text>
+<line x1="81" y1="118" x2="81" y2="126" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="83" y="123.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">前面Y27、底Y18、背面Y10</text>
+<line x1="273" y1="118" x2="273" y2="126" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="275" y="123.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">受け深さ9、背肉8</text>
+<rect x="15" y="126" width="390" height="8" fill="white" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="17" y="131.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">根元</text>
+<line x1="81" y1="126" x2="81" y2="134" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="83" y="131.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">Z28：Y10/27のX15…60、長さ45×2辺</text>
+<line x1="273" y1="126" x2="273" y2="134" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="275" y="131.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">端辺X15/60はR追加なし</text>
+<rect x="15" y="134" width="390" height="8" fill="white" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="17" y="139.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">受け輪郭</text>
+<line x1="81" y1="134" x2="81" y2="142" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="83" y="139.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">大円弧R9.70、6小円弧R2.0、軸距離8.25 ±0.05</text>
+<line x1="273" y1="134" x2="273" y2="142" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="275" y="139.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">接点を保ち小円弧中心を移動</text>
+<rect x="15" y="142" width="390" height="8" fill="white" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="17" y="147.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">モータ穴</text>
+<line x1="81" y1="142" x2="81" y2="150" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="83" y="147.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">3×Ø2.8、PCD15.2、材料内長8（Y10…18）</text>
+<line x1="273" y1="142" x2="273" y2="150" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="275" y="147.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">全通し穴、タップなし</text>
+<rect x="15" y="150" width="390" height="8" fill="white" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="17" y="155.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">モータ穴 X/Z</text>
+<line x1="81" y1="150" x2="81" y2="158" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="83" y="155.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">(30.9182,11.55)、(37.5000,22.95)、(44.0818,11.55)</text>
+<line x1="273" y1="150" x2="273" y2="158" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="275" y="155.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">CAD座標参照値、追加の公差指定ではない</text>
+<rect x="15" y="158" width="390" height="8" fill="white" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="17" y="163.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">3030穴 X/Y</text>
+<line x1="81" y1="158" x2="81" y2="166" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="83" y="163.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">2×Ø6.6：(7.5,15)、(67.5,15)、pitch60</text>
+<line x1="273" y1="158" x2="273" y2="166" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="275" y="163.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">材料内長6（Z28…34）、全通し</text>
+<rect x="15" y="166" width="390" height="8" fill="white" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="17" y="171.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">ケーブル開口</text>
+<line x1="81" y1="166" x2="81" y2="174" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="83" y="171.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">背側幅7、前側と下端Z0…6は幅9.5</text>
+<line x1="273" y1="166" x2="273" y2="174" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="275" y="171.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">背側のM2.5頭座面を残す</text>
+<text x="15" y="191" font-size="3.8" text-anchor="start" font-weight="bold" fill="#152331">変更前A4からの幾何比較（加工費・荷重性能の保証値ではない）</text>
+<rect x="15" y="195" width="390" height="8" fill="#edf2f5" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="17" y="200.5" font-size="2.95" text-anchor="start" font-weight="bold" fill="#152331">計測項目</text>
+<line x1="97" y1="195" x2="97" y2="203" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="99" y="200.5" font-size="2.95" text-anchor="start" font-weight="bold" fill="#152331">D5 の値</text>
+<line x1="255" y1="195" x2="255" y2="203" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="257" y="200.5" font-size="2.95" text-anchor="start" font-weight="bold" fill="#152331">解釈・限界</text>
+<rect x="15" y="203" width="390" height="8" fill="white" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="17" y="208.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">支持平面の有効長</text>
+<line x1="97" y1="203" x2="97" y2="211" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="99" y="208.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">斜め2面：各10.117806、下側：0.308903×2片</text>
+<line x1="255" y1="203" x2="255" y2="211" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="257" y="208.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">全4片を維持。下側を同等の第3支持面としない</text>
+<rect x="15" y="211" width="390" height="8" fill="white" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="17" y="216.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">R9.70円弧の有効長</text>
+<line x1="97" y1="211" x2="97" y2="219" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="99" y="216.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">3箇所：各4.659879、A4比81.9%</text>
+<line x1="255" y1="211" x2="255" y2="219" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="257" y="216.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">隙間ばめ。全壁の同時全面接触は未確認</text>
+<rect x="15" y="219" width="390" height="8" fill="white" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="17" y="224.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">追加／除去体積 mm³</text>
+<line x1="97" y1="219" x2="97" y2="227" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="99" y="224.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">根元追加77.256661 ／ 受け除去11.890890</text>
+<line x1="255" y1="219" x2="255" y2="227" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="257" y="224.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">受け背肉保持、M6ピッチ変更。1 solid / valid</text>
+<rect x="15" y="227" width="390" height="8" fill="white" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="17" y="232.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">質量／候補の扱い</text>
+<line x1="97" y1="227" x2="97" y2="235" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="99" y="232.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">81.750 g/個、ρ=2.70 g/cm³</text>
+<line x1="255" y1="227" x2="255" y2="235" stroke="#a7b1b8" stroke-width="0.16"/>
+<text x="257" y="232.5" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">幅75・板厚6の加工費比較・採用未定</text>
+<text x="15" y="242" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">M6×12：頭座面の車体Z63、先端Z75。簡略ナットZ71…75と公称一致。有効ねじ長・公差・工具接近は未確認。</text>
+<text x="15" y="249" font-size="2.95" text-anchor="start" font-weight="normal" fill="#152331">幅縮小＋厚板化の見積比較案。穴・局所応力・接合・実接触の認定なし。M2.5の3本だけへ全荷重を逃がす仕様ではない。</text>
+<text x="15" y="259" font-size="3" text-anchor="start" font-weight="normal" fill="#152331">投影・座標元：M0601C_mount_D5_Compact_R2.step</text>
+<text x="15" y="265" font-size="2.7" text-anchor="start" font-weight="normal" fill="#152331">STEP SHA-256：a560867e587b281b1c9c31354d68e567ca33a91a49fd4773484d3f290692db00</text>
+<line x1="8" y1="270" x2="412" y2="270" stroke="#334353" stroke-width="0.3"/>
+<text x="15" y="278" font-size="3.2" text-anchor="start" font-weight="bold" fill="#152331">AMR-06 / MOUNT-D5 / Rev. A5-Q1</text>
+<text x="15" y="285" font-size="2.9" text-anchor="start" font-weight="normal" fill="#152331">単位 mm。寸法値優先。A4原本・旧見積から独立したA5候補。</text>
+<text x="405" y="278" font-size="3" text-anchor="end" font-weight="normal" fill="#152331">2026-09-21</text>
+<text x="405" y="285" font-size="3.1" text-anchor="end" font-weight="bold" fill="#913b2b">見積用・製作未承認</text>
+</g></svg>

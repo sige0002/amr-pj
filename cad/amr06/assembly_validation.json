@@ -1,0 +1,148 @@
+{
+  "status": "nominal_geometry_only_load_and_fit_qualification_pending",
+  "source_A4_sha256": "48f20465f6d0b2259eef9cea50c229f72ebb58e20c435035a0c11b006eacfb3b",
+  "candidate_id": "D5",
+  "candidate_STEP_sha256": "a560867e587b281b1c9c31354d68e567ca33a91a49fd4773484d3f290692db00",
+  "changed_feature_ids": [
+    "CustomMotorMountL",
+    "CustomMotorMountR",
+    "MountFrameBolt_127p5L",
+    "MountFrameBolt_127p5R",
+    "MountFrameBolt_52p5L",
+    "MountFrameBolt_52p5R",
+    "SlotNut_Mount_127p5L",
+    "SlotNut_Mount_127p5R",
+    "SlotNut_Mount_52p5L",
+    "SlotNut_Mount_52p5R"
+  ],
+  "physical_parts": 161,
+  "unchanged_physical_and_reference_features": 152,
+  "physical_pair_count": 12880,
+  "bounding_box_candidate_boolean_count": 332,
+  "collisions": [],
+  "reserved_battery_collisions": [],
+  "tool_and_tire_access": [
+    {
+      "name": "M2p5_driver_L0",
+      "hits": []
+    },
+    {
+      "name": "M2p5_driver_L1",
+      "hits": []
+    },
+    {
+      "name": "M2p5_driver_L2",
+      "hits": []
+    },
+    {
+      "name": "M6_driver_L60.0",
+      "hits": []
+    },
+    {
+      "name": "M6_driver_L120.0",
+      "hits": []
+    },
+    {
+      "name": "tire_outboard_L1",
+      "hits": []
+    },
+    {
+      "name": "tire_outboard_L5",
+      "hits": []
+    },
+    {
+      "name": "tire_outboard_L10",
+      "hits": []
+    },
+    {
+      "name": "tire_outboard_L20",
+      "hits": []
+    },
+    {
+      "name": "tire_outboard_L40",
+      "hits": []
+    },
+    {
+      "name": "tire_outboard_L80",
+      "hits": []
+    },
+    {
+      "name": "M2p5_driver_R0",
+      "hits": []
+    },
+    {
+      "name": "M2p5_driver_R1",
+      "hits": []
+    },
+    {
+      "name": "M2p5_driver_R2",
+      "hits": []
+    },
+    {
+      "name": "M6_driver_R60.0",
+      "hits": []
+    },
+    {
+      "name": "M6_driver_R120.0",
+      "hits": []
+    },
+    {
+      "name": "tire_outboard_R1",
+      "hits": []
+    },
+    {
+      "name": "tire_outboard_R5",
+      "hits": []
+    },
+    {
+      "name": "tire_outboard_R10",
+      "hits": []
+    },
+    {
+      "name": "tire_outboard_R20",
+      "hits": []
+    },
+    {
+      "name": "tire_outboard_R40",
+      "hits": []
+    },
+    {
+      "name": "tire_outboard_R80",
+      "hits": []
+    }
+  ],
+  "existing_harness_envelope_collisions": [],
+  "same_part_rotation_difference_mm3": 0.0,
+  "wheel_and_caster_floor_contacts_z_mm": {
+    "TireL": 0.0,
+    "TireR": 0.0,
+    "CasterTire": 0.0
+  },
+  "direct_3030_face_gap_mm": {
+    "L": 0.0,
+    "R": 0.0
+  },
+  "assembly_bounds_mm": [
+    460.00000000000006,
+    406.6,
+    109.6
+  ],
+  "mount_bottom_z_mm": 35.0,
+  "mass_change_kg": -0.04408051382902382,
+  "mount_flange_thickness_mm": 6,
+  "mount_frame_bolt_pitch_mm": 60,
+  "upper_motor_screw_to_long_root_surface_minimum_mm": 0.7999999999999972,
+  "M6x12_nominal_tip_z_mm": 75,
+  "slot_nut_nominal_z_mm": [
+    71,
+    75
+  ],
+  "screw_thread_engagement_caveat": "Unthreaded envelopes only. Actual lead-in, incomplete threads, nut geometry and tolerance need checking.",
+  "estimated_base_mass_kg": 6.743727978797744,
+  "scope": "Nominal unsqueezed tires; unchanged assumed tire axial datum and electrical reservations from A4. No tolerance, load, wear, contact/preload, thermal or physical assembly certification. Tool shafts only; tire removal sampled at six distances. New payload deck is not designed by this mount change.",
+  "STEP_roundtrip": {
+    "valid": true,
+    "solids": 165,
+    "volume_difference_mm3": 0.10231502633541822
+  }
+}

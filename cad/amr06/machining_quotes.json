@@ -1,0 +1,450 @@
+{
+  "vendor": "JLCCNC",
+  "url": "https://jlccnc.com/jp/cnc-machining-quote",
+  "stage": "observed_website_automatic_quotes_not_manual_confirmations",
+  "vendor_formal_quote_number": null,
+  "orders_submitted": false,
+  "payments_made": false,
+  "conditions": {
+    "quantity": 2,
+    "two_identical_parts": true,
+    "currency": "USD",
+    "material_UI": "Aluminum 6061",
+    "material_tooltip_temper": "T6",
+    "surface_finish": false,
+    "appearance": "Standard",
+    "threads": false,
+    "subassembly": false,
+    "tightest_tolerance_mm": 0.05,
+    "tolerance_scope": "Seat flat distance 8.25 +/-0.05 only. Other dimensions ISO 2768-m for quotation; final functional tolerance design pending.",
+    "matching_PDF_attached_for_each_variant": true,
+    "manufacturing_release": false,
+    "discounts_applied": false,
+    "country": "Japan",
+    "shipping_method": "OCS Express",
+    "shipping_transit_business_days": [
+      4,
+      6
+    ],
+    "shipping_basis": "country_only_before_checkout",
+    "postal_code_field_available": false,
+    "postal_code_entered": false,
+    "address_surcharges_taxes_import_fees_and_payment_conversion": "unconfirmed",
+    "JPY_conversion_rate": null
+  },
+  "baseline_A4": {
+    "original_record": "../amr05/machining_quote.json",
+    "parts_lot_economic_USD": 74.5,
+    "shipping_USD": 7.23,
+    "displayed_sum_USD": 81.73,
+    "same_session_recheck": [
+      {
+        "path": "quote-evidence/A4-control-economic.txt",
+        "sha256": "f6e39b2ebc95d530f033cd7685c37ea6dab27273d685810b60ec860382668ce4"
+      },
+      {
+        "path": "quote-evidence/A4-control-economic.png",
+        "sha256": "ad3595aaf4642da7a7267da6204e010343b483f84836e8650d84153bbe44f2a8"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "candidate": "D1",
+      "observed_at": "2026-09-21T03:08:24.979110+00:00",
+      "uploaded_STEP_filename": "M0601C_mount_D1_R2.step",
+      "uploaded_drawing_filename": "M0601C_mount_D1_R2.pdf",
+      "files": [
+        {
+          "path": "candidates/M0601C_mount_D1_R2.step",
+          "sha256": "ae3a00b1024def670b45e712af563593250c1be6d38595254ef27471f37b7e8b"
+        },
+        {
+          "path": "candidates/M0601C_mount_D1_R2.pdf",
+          "sha256": "bbedbe5f2f77dbc2a3ab646134fa96f74173d7b6a1ddef5b4bef34c29310d064"
+        }
+      ],
+      "CAD_dimensions_xyz_mm": [
+        90,
+        30,
+        34
+      ],
+      "CAD_volume_mm3": 38564.12420585856,
+      "CAD_mass_each_kg_at_2700kg_m3": 0.10412313535581812,
+      "drawing_revision": "A5-Q1",
+      "website_remarks": "QUOTE ONLY. Two identical motor mounting brackets for an indoor mobile robot. Aluminum 6061-T6, as-machined, no anodizing. Seat flats 8.25 +/-0.05 mm per attached drawing; other tolerances ISO 2768-m. All five holes are clearance holes, no tapped threads. Internal radii as STEP/PDF; no geometry changes without agreement. Preliminary fit and load review pending.",
+      "offers": [
+        {
+          "speed": "standard",
+          "manufacturing_label": "標準: 5 日",
+          "parts_lot_USD": 92.16,
+          "shipping_USD": 7.23,
+          "displayed_parts_plus_shipping_USD": 99.39
+        },
+        {
+          "speed": "economic",
+          "manufacturing_label": "経済的: 10 日",
+          "parts_lot_USD": 81.4,
+          "shipping_USD": 7.23,
+          "displayed_parts_plus_shipping_USD": 88.63
+        }
+      ],
+      "evidence": [
+        {
+          "path": "quote-evidence/D1-standard.txt",
+          "sha256": "ec7bb444b723553498a2c40bc967995c0e34850d3e76eb474778eb11cf207b33"
+        },
+        {
+          "path": "quote-evidence/D1-standard.png",
+          "sha256": "f78ef9ab88d473390cf1be914ad456972f8adf44df1ddb81477c94a80e387911"
+        },
+        {
+          "path": "quote-evidence/D1-economic.txt",
+          "sha256": "1c42559d3fb9e18c6deb988d1a29b12356e363bd2776cf83cc7ec3d659440802"
+        },
+        {
+          "path": "quote-evidence/D1-economic.png",
+          "sha256": "2f5b041fe50b57d6e931462d4082fcbec828175b497c960ed1a3c7ba756736e4"
+        },
+        {
+          "path": "quote-evidence/D1-settings.png",
+          "sha256": "c4587439e16f638ca2bc08ef8a18e31b02520b5a34e4afcd6f2087f006924b11"
+        },
+        {
+          "path": "quote-evidence/D1-settings-notes.png",
+          "sha256": "6245dfa70efc9bccec1db73d490bc8b8c554c988c314ee9884d9efb7a0fd01e8"
+        },
+        {
+          "path": "quote-evidence/D1-settings.txt",
+          "sha256": "d61294261d1cbc8f139832909f369470bad8d5aa0431ca84ac3baa30162276d7"
+        },
+        {
+          "path": "quote-evidence/D1-shipping.png",
+          "sha256": "9d12f9702a57b31237ce2163555123524436303a6bde44bfe5e7bc175d2e8a9a"
+        },
+        {
+          "path": "quote-evidence/D1-shipping.txt",
+          "sha256": "e64d8eed55987ca1b8fae8d988fc19328de025f3e0370052ce9f11cc3d4814e5"
+        }
+      ]
+    },
+    {
+      "candidate": "D2",
+      "observed_at": "2026-09-21T03:11:04.239965+00:00",
+      "uploaded_STEP_filename": "M0601C_mount_D2_R2p5.step",
+      "uploaded_drawing_filename": "M0601C_mount_D2_R2p5.pdf",
+      "files": [
+        {
+          "path": "candidates/M0601C_mount_D2_R2p5.step",
+          "sha256": "cef0ba5afe3f5a2dbe5f3a8c1b49d430de055787959de092d774c015d3121c05"
+        },
+        {
+          "path": "candidates/M0601C_mount_D2_R2p5.pdf",
+          "sha256": "33f1023229985006e8f2e6f6ff6d2fb49a3e4ed09dfbaaec0456aedfeec21ee2"
+        }
+      ],
+      "CAD_dimensions_xyz_mm": [
+        90,
+        30,
+        34
+      ],
+      "CAD_volume_mm3": 38539.74404852455,
+      "CAD_mass_each_kg_at_2700kg_m3": 0.10405730893101629,
+      "drawing_revision": "A5-Q1",
+      "website_remarks": "QUOTE ONLY. Two identical motor mounting brackets for an indoor mobile robot. Aluminum 6061-T6, as-machined, no anodizing. Seat flats 8.25 +/-0.05 mm per attached drawing; other tolerances ISO 2768-m. All five holes are clearance holes, no tapped threads. Internal radii as STEP/PDF; no geometry changes without agreement. Preliminary fit and load review pending.",
+      "offers": [
+        {
+          "speed": "standard",
+          "manufacturing_label": "標準: 5 日",
+          "parts_lot_USD": 92.8,
+          "shipping_USD": 7.23,
+          "displayed_parts_plus_shipping_USD": 100.03
+        },
+        {
+          "speed": "economic",
+          "manufacturing_label": "経済的: 10 日",
+          "parts_lot_USD": 81.92,
+          "shipping_USD": 7.23,
+          "displayed_parts_plus_shipping_USD": 89.15
+        }
+      ],
+      "evidence": [
+        {
+          "path": "quote-evidence/D2-standard.txt",
+          "sha256": "baba09c5ce5ee2285c4758f15fa3a0a64354db01f5b80ae5a72cf6e9ff044770"
+        },
+        {
+          "path": "quote-evidence/D2-standard.png",
+          "sha256": "0f2de804c8e937407e524d84d44e998f62b62e488cf425bdab69114446ae2f0f"
+        },
+        {
+          "path": "quote-evidence/D2-economic.txt",
+          "sha256": "877dac38dd8c59d09c5366b2741cf1733b479b56d0e802c5b13d76c2fd97d46b"
+        },
+        {
+          "path": "quote-evidence/D2-economic.png",
+          "sha256": "2e453d0a493c9bd6d1495b0f4f73aeb99796b3d84bf5901045eaa5f222f40475"
+        },
+        {
+          "path": "quote-evidence/D2-settings.png",
+          "sha256": "2809abda6ae1dfc25e86a621c4c02ec3f8a7282519d9858da1341e4494fc9e18"
+        },
+        {
+          "path": "quote-evidence/D2-settings-notes.png",
+          "sha256": "0acdb9c09edb5cdffefc9e8fe2aa23b1ac7ef052ddea0b362bd671229ba7b92b"
+        },
+        {
+          "path": "quote-evidence/D2-settings.txt",
+          "sha256": "24f6950f01254d1d97a8233176a24589e08d1a4db4f02b34b55702f65f1486f8"
+        },
+        {
+          "path": "quote-evidence/D2-shipping.png",
+          "sha256": "9d12f9702a57b31237ce2163555123524436303a6bde44bfe5e7bc175d2e8a9a"
+        },
+        {
+          "path": "quote-evidence/D2-shipping.txt",
+          "sha256": "e64d8eed55987ca1b8fae8d988fc19328de025f3e0370052ce9f11cc3d4814e5"
+        }
+      ]
+    },
+    {
+      "candidate": "D3",
+      "observed_at": "2026-09-21T03:14:36.012935+00:00",
+      "uploaded_STEP_filename": "M0601C_mount_D3_R2_LongRoots.step",
+      "uploaded_drawing_filename": "M0601C_mount_D3_R2_LongRoots.pdf",
+      "files": [
+        {
+          "path": "candidates/M0601C_mount_D3_R2_LongRoots.step",
+          "sha256": "32f71794248b0fa3c10abdeae57ba4aa564fbf5404662bab1d4b3d5644849ac9"
+        },
+        {
+          "path": "candidates/M0601C_mount_D3_R2_LongRoots.pdf",
+          "sha256": "8515c4f88aa183e6325b6e8de2a337784e749128bc420fb54d7b6e82fab8bebb"
+        }
+      ],
+      "CAD_dimensions_xyz_mm": [
+        90,
+        30,
+        34
+      ],
+      "CAD_volume_mm3": 38531.87050497205,
+      "CAD_mass_each_kg_at_2700kg_m3": 0.10403605036342455,
+      "drawing_revision": "A5-Q1",
+      "website_remarks": "QUOTE ONLY. Two identical motor mounting brackets for an indoor mobile robot. Aluminum 6061-T6, as-machined, no anodizing. Seat flats 8.25 +/-0.05 mm per attached drawing; other tolerances ISO 2768-m. All five holes are clearance holes, no tapped threads. Internal radii as STEP/PDF; no geometry changes without agreement. Preliminary fit and load review pending.",
+      "offers": [
+        {
+          "speed": "standard",
+          "manufacturing_label": "標準: 5 日",
+          "parts_lot_USD": 90.94,
+          "shipping_USD": 7.23,
+          "displayed_parts_plus_shipping_USD": 98.17
+        },
+        {
+          "speed": "economic",
+          "manufacturing_label": "経済的: 10 日",
+          "parts_lot_USD": 80.36,
+          "shipping_USD": 7.23,
+          "displayed_parts_plus_shipping_USD": 87.59
+        }
+      ],
+      "evidence": [
+        {
+          "path": "quote-evidence/D3-standard.txt",
+          "sha256": "20990f78a6cf3a63deacc0938d415006160b7b53ad3f66a1250a1f82f19ba013"
+        },
+        {
+          "path": "quote-evidence/D3-standard.png",
+          "sha256": "43ffffe82d106e714308d2bd4366fdda4c6a03b96ff0aa72784bb6316caf0227"
+        },
+        {
+          "path": "quote-evidence/D3-economic.txt",
+          "sha256": "a7fc7e8b038757a975f23bf2255f79a8efc3f31853d68117914438e792944a5d"
+        },
+        {
+          "path": "quote-evidence/D3-economic.png",
+          "sha256": "61908555a934a78a8f8f7ef2da02b34f5b6f97d8f5d3e840cb8aa771e68217ea"
+        },
+        {
+          "path": "quote-evidence/D3-settings.png",
+          "sha256": "984c24751006d37bd8d6c459aa53c24b1b7474cf050f8fadad2c53938ed59898"
+        },
+        {
+          "path": "quote-evidence/D3-settings-notes.png",
+          "sha256": "1805ca8988b0e00a6c3db8922568431332dd1a295fe4f25c672b09ce2039c3ff"
+        },
+        {
+          "path": "quote-evidence/D3-settings.txt",
+          "sha256": "7dd50c40ed6719efb6d8c335e168825bf9aa71c851c22b10194f65afbe7ee9f5"
+        },
+        {
+          "path": "quote-evidence/D3-shipping.png",
+          "sha256": "9d12f9702a57b31237ce2163555123524436303a6bde44bfe5e7bc175d2e8a9a"
+        },
+        {
+          "path": "quote-evidence/D3-shipping.txt",
+          "sha256": "e64d8eed55987ca1b8fae8d988fc19328de025f3e0370052ce9f11cc3d4814e5"
+        }
+      ]
+    },
+    {
+      "candidate": "D4",
+      "observed_at": "2026-09-21T03:18:05.686931+00:00",
+      "uploaded_STEP_filename": "M0601C_mount_D4_R2_NoRootFillet.step",
+      "uploaded_drawing_filename": "M0601C_mount_D4_R2_NoRootFillet.pdf",
+      "files": [
+        {
+          "path": "candidates/M0601C_mount_D4_R2_NoRootFillet.step",
+          "sha256": "8150975092ee781045afabcaf831e2e27ecc3170af3656832472bd4f057e8caa"
+        },
+        {
+          "path": "candidates/M0601C_mount_D4_R2_NoRootFillet.pdf",
+          "sha256": "4920d2515fe33d635dc2f1ab15dc7945f7dfe14adfd6ec2ec88cfb953d3ef7b5"
+        }
+      ],
+      "CAD_dimensions_xyz_mm": [
+        90,
+        30,
+        34
+      ],
+      "CAD_volume_mm3": 38428.861623402816,
+      "CAD_mass_each_kg_at_2700kg_m3": 0.10375792638318761,
+      "drawing_revision": "A5-Q1",
+      "website_remarks": "QUOTE ONLY. Two identical motor mounting brackets for an indoor mobile robot. Aluminum 6061-T6, as-machined, no anodizing. Seat flats 8.25 +/-0.05 mm per attached drawing; other tolerances ISO 2768-m. All five holes are clearance holes, no tapped threads. Internal radii as STEP/PDF; no geometry changes without agreement. Preliminary fit and load review pending.",
+      "offers": [
+        {
+          "speed": "standard",
+          "manufacturing_label": "標準: 5 日",
+          "parts_lot_USD": 84.66,
+          "shipping_USD": 7.23,
+          "displayed_parts_plus_shipping_USD": 91.89
+        },
+        {
+          "speed": "economic",
+          "manufacturing_label": "経済的: 10 日",
+          "parts_lot_USD": 75.02,
+          "shipping_USD": 7.23,
+          "displayed_parts_plus_shipping_USD": 82.25
+        }
+      ],
+      "evidence": [
+        {
+          "path": "quote-evidence/D4-standard.txt",
+          "sha256": "21ff5310f7fdf2117f8f87d40d92646502501966465327d2048f9b6a0edc51ae"
+        },
+        {
+          "path": "quote-evidence/D4-standard.png",
+          "sha256": "48be7c78fcc6ef67ec2e422cbb1c6e417567409a08f0f4ed9cee0431a0e75195"
+        },
+        {
+          "path": "quote-evidence/D4-economic.txt",
+          "sha256": "70abab1f00e368b635de69c5fd3b2c270ba6a93b0d759edc379eaf4ce5d89fbf"
+        },
+        {
+          "path": "quote-evidence/D4-economic.png",
+          "sha256": "fd3e9ce0f8efeea1b69bc612b149edcb49d4f52f858b3fe403745c6fc1f08a18"
+        },
+        {
+          "path": "quote-evidence/D4-settings.png",
+          "sha256": "f9fc688c91467d350badf02ff05cbf5571525c8af23c09dc8ff6e0339f1f1a7b"
+        },
+        {
+          "path": "quote-evidence/D4-settings-notes.png",
+          "sha256": "f4aa48473174308a2d0eca326fa41b41f80cf24a5a43d2b14e46a21fb535ce5b"
+        },
+        {
+          "path": "quote-evidence/D4-settings.txt",
+          "sha256": "d4fc2ea78cfa1933a4ec649dd4f1d1aa48e63635f6d12ee98d8c8957df661c12"
+        },
+        {
+          "path": "quote-evidence/D4-shipping.png",
+          "sha256": "9d12f9702a57b31237ce2163555123524436303a6bde44bfe5e7bc175d2e8a9a"
+        },
+        {
+          "path": "quote-evidence/D4-shipping.txt",
+          "sha256": "e64d8eed55987ca1b8fae8d988fc19328de025f3e0370052ce9f11cc3d4814e5"
+        }
+      ]
+    },
+    {
+      "candidate": "D5",
+      "observed_at": "2026-09-21T03:18:47.573288+00:00",
+      "uploaded_STEP_filename": "M0601C_mount_D5_Compact_R2.step",
+      "uploaded_drawing_filename": "M0601C_mount_D5_Compact_R2.pdf",
+      "files": [
+        {
+          "path": "candidates/M0601C_mount_D5_Compact_R2.step",
+          "sha256": "a560867e587b281b1c9c31354d68e567ca33a91a49fd4773484d3f290692db00"
+        },
+        {
+          "path": "candidates/M0601C_mount_D5_Compact_R2.pdf",
+          "sha256": "24d30970f3d4208077b0268f4fdce707d1f0de6a5fe075c33c89645174940398"
+        }
+      ],
+      "CAD_dimensions_xyz_mm": [
+        75,
+        30,
+        34
+      ],
+      "CAD_volume_mm3": 30277.694396584553,
+      "CAD_mass_each_kg_at_2700kg_m3": 0.0817497748707783,
+      "drawing_revision": "A5-Q1",
+      "website_remarks": "QUOTE ONLY. Two identical motor mounting brackets for an indoor mobile robot. Aluminum 6061-T6, as-machined, no anodizing. Seat flats 8.25 +/-0.05 mm per attached drawing; other tolerances ISO 2768-m. All five holes are clearance holes, no tapped threads. Internal radii as STEP/PDF; no geometry changes without agreement. Preliminary fit and load review pending.",
+      "offers": [
+        {
+          "speed": "standard",
+          "manufacturing_label": "標準: 5 日",
+          "parts_lot_USD": 90.84,
+          "shipping_USD": 7.23,
+          "displayed_parts_plus_shipping_USD": 98.07
+        },
+        {
+          "speed": "economic",
+          "manufacturing_label": "経済的: 10 日",
+          "parts_lot_USD": 80.08,
+          "shipping_USD": 7.23,
+          "displayed_parts_plus_shipping_USD": 87.31
+        }
+      ],
+      "evidence": [
+        {
+          "path": "quote-evidence/D5-standard.txt",
+          "sha256": "f02133620ab423dc97d70d6e45749c4bf9febea54ae92c2d03edfe7af6980292"
+        },
+        {
+          "path": "quote-evidence/D5-standard.png",
+          "sha256": "683f494be7b8d38c6388bda749f5cf895217bb05a7dfc6df9e53c63d5d3721b7"
+        },
+        {
+          "path": "quote-evidence/D5-economic.txt",
+          "sha256": "9092d53bdcc5da1126377fdb410755e04a3a522bea1e6b5404e2884a78659102"
+        },
+        {
+          "path": "quote-evidence/D5-economic.png",
+          "sha256": "7d08fda83b87592f1cb7bff7e3b2cf5b962b8fe840f42c7084dc8bcdd0994192"
+        },
+        {
+          "path": "quote-evidence/D5-settings.png",
+          "sha256": "17acc7ae7961b52c53bea49c2e38acd4069a51b691bcf2419653e3fb7dee3926"
+        },
+        {
+          "path": "quote-evidence/D5-settings-notes.png",
+          "sha256": "9f31901c3ec148d5293e95a0e8e5d02a929546fa8e6147082ae478ea9237e61b"
+        },
+        {
+          "path": "quote-evidence/D5-settings.txt",
+          "sha256": "d00e9be5de25412c042596f264706b8744b622b5551ea9c358d0f9e63c40290f"
+        },
+        {
+          "path": "quote-evidence/D5-shipping.png",
+          "sha256": "15de68ef28862433a32c43ff7b08b3a06136cf41fae0bae71f9ebf9ade2f437c"
+        },
+        {
+          "path": "quote-evidence/D5-shipping.txt",
+          "sha256": "e64d8eed55987ca1b8fae8d988fc19328de025f3e0370052ce9f11cc3d4814e5"
+        }
+      ]
+    }
+  ],
+  "interpretation": "Observed differences are automatic website quotations for the submitted geometry. No toolpath, cutter count, setup count or final manufacturing price was confirmed by a machinist.",
+  "manual_review_policy": "https://jlccnc.com/help/article/cnc-machining-ordering-guidelines"
+}

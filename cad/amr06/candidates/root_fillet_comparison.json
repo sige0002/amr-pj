@@ -1,0 +1,423 @@
+{
+  "D1": {
+    "all_face_surface_types": {
+      "Plane": 23,
+      "Cylinder": 19
+    },
+    "root_transition_surface_count": 4,
+    "root_transition_surfaces": [
+      {
+        "surface_type": "Cylinder",
+        "area_mm2": 193.06192984477414,
+        "bbox_world_mm": {
+          "minimum_mm": [
+            58.0,
+            128.0,
+            62.0
+          ],
+          "maximum_mm": [
+            122.0,
+            130.0,
+            64.0
+          ],
+          "size_mm": [
+            64.0,
+            2.0,
+            2.0
+          ]
+        },
+        "trim_edge_curve_types": {
+          "Ellipse": 2,
+          "Line": 2
+        },
+        "radius_mm": 2.0,
+        "axis_world": [
+          -1.0,
+          -0.0,
+          0.0
+        ]
+      },
+      {
+        "surface_type": "Cylinder",
+        "area_mm2": 57.97344573289577,
+        "bbox_world_mm": {
+          "minimum_mm": [
+            120.0,
+            128.0,
+            62.0
+          ],
+          "maximum_mm": [
+            122.0,
+            149.0,
+            64.0
+          ],
+          "size_mm": [
+            2.0,
+            21.0,
+            2.0
+          ]
+        },
+        "trim_edge_curve_types": {
+          "Ellipse": 2,
+          "Line": 2
+        },
+        "radius_mm": 2.0,
+        "axis_world": [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "surface_type": "Cylinder",
+        "area_mm2": 57.973445740409744,
+        "bbox_world_mm": {
+          "minimum_mm": [
+            58.0,
+            128.0,
+            62.0
+          ],
+          "maximum_mm": [
+            60.0,
+            149.0,
+            64.0
+          ],
+          "size_mm": [
+            2.0,
+            21.0,
+            2.0
+          ]
+        },
+        "trim_edge_curve_types": {
+          "Ellipse": 2,
+          "Line": 2
+        },
+        "radius_mm": 2.0,
+        "axis_world": [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "surface_type": "Cylinder",
+        "area_mm2": 193.06192983713146,
+        "bbox_world_mm": {
+          "minimum_mm": [
+            58.0,
+            147.0,
+            62.0
+          ],
+          "maximum_mm": [
+            122.0,
+            149.0,
+            64.0
+          ],
+          "size_mm": [
+            64.0,
+            2.0,
+            2.0
+          ]
+        },
+        "trim_edge_curve_types": {
+          "Ellipse": 2,
+          "Line": 2
+        },
+        "radius_mm": 2.0,
+        "axis_world": [
+          -1.0,
+          -0.0,
+          0.0
+        ]
+      }
+    ],
+    "note": "Analytic B-rep types and trim curves only; these do not determine a vendor CAM strategy, tool count, setup count or quotation."
+  },
+  "D2": {
+    "all_face_surface_types": {
+      "Plane": 23,
+      "Cylinder": 19
+    },
+    "root_transition_surface_count": 4,
+    "root_transition_surfaces": [
+      {
+        "surface_type": "Cylinder",
+        "area_mm2": 193.06192984477414,
+        "bbox_world_mm": {
+          "minimum_mm": [
+            58.0,
+            128.0,
+            62.0
+          ],
+          "maximum_mm": [
+            122.0,
+            130.0,
+            64.0
+          ],
+          "size_mm": [
+            64.0,
+            2.0,
+            2.0
+          ]
+        },
+        "trim_edge_curve_types": {
+          "Ellipse": 2,
+          "Line": 2
+        },
+        "radius_mm": 2.0,
+        "axis_world": [
+          -1.0,
+          -0.0,
+          0.0
+        ]
+      },
+      {
+        "surface_type": "Cylinder",
+        "area_mm2": 57.97344573289577,
+        "bbox_world_mm": {
+          "minimum_mm": [
+            120.0,
+            128.0,
+            62.0
+          ],
+          "maximum_mm": [
+            122.0,
+            149.0,
+            64.0
+          ],
+          "size_mm": [
+            2.0,
+            21.0,
+            2.0
+          ]
+        },
+        "trim_edge_curve_types": {
+          "Ellipse": 2,
+          "Line": 2
+        },
+        "radius_mm": 2.0,
+        "axis_world": [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "surface_type": "Cylinder",
+        "area_mm2": 57.973445740409744,
+        "bbox_world_mm": {
+          "minimum_mm": [
+            58.0,
+            128.0,
+            62.0
+          ],
+          "maximum_mm": [
+            60.0,
+            149.0,
+            64.0
+          ],
+          "size_mm": [
+            2.0,
+            21.0,
+            2.0
+          ]
+        },
+        "trim_edge_curve_types": {
+          "Ellipse": 2,
+          "Line": 2
+        },
+        "radius_mm": 2.0,
+        "axis_world": [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "surface_type": "Cylinder",
+        "area_mm2": 193.06192983713146,
+        "bbox_world_mm": {
+          "minimum_mm": [
+            58.0,
+            147.0,
+            62.0
+          ],
+          "maximum_mm": [
+            122.0,
+            149.0,
+            64.0
+          ],
+          "size_mm": [
+            64.0,
+            2.0,
+            2.0
+          ]
+        },
+        "trim_edge_curve_types": {
+          "Ellipse": 2,
+          "Line": 2
+        },
+        "radius_mm": 2.0,
+        "axis_world": [
+          -1.0,
+          -0.0,
+          0.0
+        ]
+      }
+    ],
+    "note": "Analytic B-rep types and trim curves only; these do not determine a vendor CAM strategy, tool count, setup count or quotation."
+  },
+  "D3": {
+    "all_face_surface_types": {
+      "Plane": 23,
+      "Cylinder": 17
+    },
+    "root_transition_surface_count": 2,
+    "root_transition_surfaces": [
+      {
+        "surface_type": "Cylinder",
+        "area_mm2": 188.49555921538757,
+        "bbox_world_mm": {
+          "minimum_mm": [
+            60.0,
+            128.0,
+            62.0
+          ],
+          "maximum_mm": [
+            120.0,
+            130.0,
+            64.0
+          ],
+          "size_mm": [
+            60.0,
+            2.0,
+            2.0
+          ]
+        },
+        "trim_edge_curve_types": {
+          "Circle": 2,
+          "Line": 2
+        },
+        "radius_mm": 2.0,
+        "axis_world": [
+          -1.0,
+          -0.0,
+          0.0
+        ]
+      },
+      {
+        "surface_type": "Cylinder",
+        "area_mm2": 188.49555921538757,
+        "bbox_world_mm": {
+          "minimum_mm": [
+            60.0,
+            147.0,
+            62.0
+          ],
+          "maximum_mm": [
+            120.0,
+            149.0,
+            64.0
+          ],
+          "size_mm": [
+            60.0,
+            2.0,
+            2.0
+          ]
+        },
+        "trim_edge_curve_types": {
+          "Circle": 2,
+          "Line": 2
+        },
+        "radius_mm": 2.0,
+        "axis_world": [
+          -1.0,
+          -0.0,
+          0.0
+        ]
+      }
+    ],
+    "note": "Analytic B-rep types and trim curves only; these do not determine a vendor CAM strategy, tool count, setup count or quotation."
+  },
+  "D4": {
+    "all_face_surface_types": {
+      "Plane": 23,
+      "Cylinder": 15
+    },
+    "root_transition_surface_count": 0,
+    "root_transition_surfaces": [],
+    "note": "Analytic B-rep types and trim curves only; these do not determine a vendor CAM strategy, tool count, setup count or quotation."
+  },
+  "D5": {
+    "all_face_surface_types": {
+      "Plane": 23,
+      "Cylinder": 17
+    },
+    "root_transition_surface_count": 2,
+    "root_transition_surfaces": [
+      {
+        "surface_type": "Cylinder",
+        "area_mm2": 141.3716694115407,
+        "bbox_world_mm": {
+          "minimum_mm": [
+            67.5,
+            128.0,
+            61.0
+          ],
+          "maximum_mm": [
+            112.5,
+            130.0,
+            63.0
+          ],
+          "size_mm": [
+            45.0,
+            2.0,
+            2.0
+          ]
+        },
+        "trim_edge_curve_types": {
+          "Circle": 2,
+          "Line": 2
+        },
+        "radius_mm": 2.0,
+        "axis_world": [
+          -1.0,
+          -0.0,
+          0.0
+        ]
+      },
+      {
+        "surface_type": "Cylinder",
+        "area_mm2": 141.3716694115407,
+        "bbox_world_mm": {
+          "minimum_mm": [
+            67.5,
+            147.0,
+            61.0
+          ],
+          "maximum_mm": [
+            112.5,
+            149.0,
+            63.0
+          ],
+          "size_mm": [
+            45.0,
+            2.0,
+            2.0
+          ]
+        },
+        "trim_edge_curve_types": {
+          "Circle": 2,
+          "Line": 2
+        },
+        "radius_mm": 2.0,
+        "axis_world": [
+          -1.0,
+          -0.0,
+          0.0
+        ]
+      }
+    ],
+    "note": "Analytic B-rep types and trim curves only; these do not determine a vendor CAM strategy, tool count, setup count or quotation."
+  }
+}

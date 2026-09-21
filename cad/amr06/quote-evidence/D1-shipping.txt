@@ -1,0 +1,76 @@
+への配送:  Japan
+	配送方法	費用 	配達時間	評価	制限事項
+
+	
+UPS Worldwide Express Saver
+	$9.78	2-4 business days	--	
+≤10000kg
+≤270cm
+
+
+	
+DHL Express
+	$17.06	1-3 business days	--	
+≤10000kg
+≤295x195cm
+
+
+	
+FedEx Express
+	$21.44	4-5 business days	--	
+≤10000kg
+≤270cm
+
+
+	
+OCS Express
+	$7.23	4-6 business days	--	
+≤20kg
+
+
+	
+S.F Express Economy
+	$16.21	5-9 business days	--	
+≤10000kg
+
+
+	
+My UPS Account
+	$2.02		--	
+≤10000kg
+≤270cm
+
+
+	
+My DHL Account
+	$2.02		--	
+≤10000kg
+≤295x195cm
+
+
+	
+My FedEx Account
+	$2.02		--	
+≤10000kg
+≤270cm
+
+
+	
+OCS NEP
+	—	—	--	
+≤0.6kg
+≤10x10cm
+
+
+	
+FedEx International Connect Plus
+	—	—	--	
+1.5-10kg
+≤$650
+≤270cm
+
+
+	
+Sea Shipment
+	—	—	--	
+100-10000kg

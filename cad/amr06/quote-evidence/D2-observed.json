@@ -1,0 +1,23 @@
+{
+  "candidate": "D2",
+  "name": "M0601C_mount_D2_R2p5",
+  "observed_at": "2026-09-21T03:11:04.239965+00:00",
+  "remarks": "QUOTE ONLY. Two identical motor mounting brackets for an indoor mobile robot. Aluminum 6061-T6, as-machined, no anodizing. Seat flats 8.25 +/-0.05 mm per attached drawing; other tolerances ISO 2768-m. All five holes are clearance holes, no tapped threads. Internal radii as STEP/PDF; no geometry changes without agreement. Preliminary fit and load review pending.",
+  "quantity": 2,
+  "currency": "USD",
+  "automatic_not_manual": true,
+  "records": [
+    {
+      "speed": "standard",
+      "manufacturing_label": "標準: 5 日",
+      "parts_lot_USD": 92.8,
+      "shipping_USD": 7.23
+    },
+    {
+      "speed": "economic",
+      "manufacturing_label": "経済的: 10 日",
+      "parts_lot_USD": 81.92,
+      "shipping_USD": 7.23
+    }
+  ]
+}
