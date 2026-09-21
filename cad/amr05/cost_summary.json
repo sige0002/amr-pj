@@ -1,0 +1,1032 @@
+{
+  "version": "0.8.0",
+  "design": "AMR01_M0601C_A4",
+  "checked_on": "2026-09-21",
+  "currency": "JPY",
+  "all_amounts_include_tax": null,
+  "amount_basis_note_ja": "国内表示は税込参考。Taobao約7000円はユーザー提示の円換算仮枠で税・送料・輸入諸費未確認。未見積はnullとし税込確定総額を出さない。",
+  "scope_ja": "M0601C_111×2、初回タイヤ、製作ブラケット2個、共通機械骨格/PLA/USB通信/ストラップの初期購入・製作予算。基準はTaobao本体約7000円/個＋初回タイヤ別購入。製作ブラケットだけ外注し残存板は自加工する条件と、残存板も外注する条件を分ける。電池・主計算機・電源保護・車内配線等の未選定電装は別予算。未発注。",
+  "status": "partial_planning_costs_required_quotes_pending",
+  "source_bom": "bom.json",
+  "default_scenario": "custom_taobao_bare",
+  "default_result": {
+    "priced_and_allowance_subtotal_jpy": 42282,
+    "priced_subtotals_by_kind_jpy": {
+      "observed_carried_from_A3": 8192,
+      "manufacturer_catalog_reference": 1540,
+      "allowance": 7000,
+      "user_allowance": 14000,
+      "observed_2026_09_21": 9240,
+      "observed_condition_carried_from_A": 650,
+      "allowance_carried_from_A": 1000,
+      "observed_standard_condition_2026_09_20": 660,
+      "observed_free_shipping_condition_2026_09_21": 0
+    },
+    "required_unpriced_entries": [
+      {
+        "id": "Q01",
+        "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
+        "reason": "quote_pending"
+      },
+      {
+        "id": "S07",
+        "name": "Taobaoの国内外送料・代行/輸入諸費",
+        "reason": "quote_pending"
+      },
+      {
+        "id": "S08",
+        "name": "製作ブラケットの納入送料",
+        "reason": "quote_pending"
+      }
+    ],
+    "planning_total_jpy": null,
+    "id": "custom_taobao_bare",
+    "mount_variant": "custom",
+    "motor_source": "taobao",
+    "tyre_condition": "bare",
+    "condition_ja": "基準：タイヤ別購入。Taobao価格と着荷総額は未確認。",
+    "purchase_priced_subtotal_jpy": 39472,
+    "shipping_priced_subtotal_jpy": 2810,
+    "active_item_ids": [
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "E01",
+      "E02",
+      "C01",
+      "P01",
+      "P03",
+      "P04",
+      "H01",
+      "H02",
+      "D01",
+      "D02",
+      "Q01"
+    ],
+    "active_shipping_ids": [
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08"
+    ],
+    "planning_total_with_contingency_jpy": null,
+    "with_residual_plate_outsourcing": {
+      "priced_and_allowance_subtotal_jpy": 42282,
+      "priced_subtotals_by_kind_jpy": {
+        "observed_carried_from_A3": 8192,
+        "manufacturer_catalog_reference": 1540,
+        "allowance": 7000,
+        "user_allowance": 14000,
+        "observed_2026_09_21": 9240,
+        "observed_condition_carried_from_A": 650,
+        "allowance_carried_from_A": 1000,
+        "observed_standard_condition_2026_09_20": 660,
+        "observed_free_shipping_condition_2026_09_21": 0
+      },
+      "required_unpriced_entries": [
+        {
+          "id": "Q01",
+          "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
+          "reason": "quote_pending"
+        },
+        {
+          "id": "S07",
+          "name": "Taobaoの国内外送料・代行/輸入諸費",
+          "reason": "quote_pending"
+        },
+        {
+          "id": "S08",
+          "name": "製作ブラケットの納入送料",
+          "reason": "quote_pending"
+        },
+        {
+          "id": "K01",
+          "name": "残るキャスター板・ガセットの加工外注追加",
+          "reason": "quote_pending"
+        }
+      ],
+      "planning_total_jpy": null,
+      "planning_total_with_contingency_jpy": null
+    },
+    "note_ja": "数値のある参考価格・仮枠の途中小計。必須見積が残る場合、完成額・価格の下限・税込確定額ではない。主条件はブラケット製作のみ外注、残存板は既所有工具で自加工。"
+  },
+  "scenarios": [
+    {
+      "priced_and_allowance_subtotal_jpy": 42282,
+      "priced_subtotals_by_kind_jpy": {
+        "observed_carried_from_A3": 8192,
+        "manufacturer_catalog_reference": 1540,
+        "allowance": 7000,
+        "user_allowance": 14000,
+        "observed_2026_09_21": 9240,
+        "observed_condition_carried_from_A": 650,
+        "allowance_carried_from_A": 1000,
+        "observed_standard_condition_2026_09_20": 660,
+        "observed_free_shipping_condition_2026_09_21": 0
+      },
+      "required_unpriced_entries": [
+        {
+          "id": "Q01",
+          "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
+          "reason": "quote_pending"
+        },
+        {
+          "id": "S07",
+          "name": "Taobaoの国内外送料・代行/輸入諸費",
+          "reason": "quote_pending"
+        },
+        {
+          "id": "S08",
+          "name": "製作ブラケットの納入送料",
+          "reason": "quote_pending"
+        }
+      ],
+      "planning_total_jpy": null,
+      "id": "custom_taobao_bare",
+      "mount_variant": "custom",
+      "motor_source": "taobao",
+      "tyre_condition": "bare",
+      "condition_ja": "基準：タイヤ別購入。Taobao価格と着荷総額は未確認。",
+      "purchase_priced_subtotal_jpy": 39472,
+      "shipping_priced_subtotal_jpy": 2810,
+      "active_item_ids": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "E01",
+        "E02",
+        "C01",
+        "P01",
+        "P03",
+        "P04",
+        "H01",
+        "H02",
+        "D01",
+        "D02",
+        "Q01"
+      ],
+      "active_shipping_ids": [
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08"
+      ],
+      "planning_total_with_contingency_jpy": null,
+      "with_residual_plate_outsourcing": {
+        "priced_and_allowance_subtotal_jpy": 42282,
+        "priced_subtotals_by_kind_jpy": {
+          "observed_carried_from_A3": 8192,
+          "manufacturer_catalog_reference": 1540,
+          "allowance": 7000,
+          "user_allowance": 14000,
+          "observed_2026_09_21": 9240,
+          "observed_condition_carried_from_A": 650,
+          "allowance_carried_from_A": 1000,
+          "observed_standard_condition_2026_09_20": 660,
+          "observed_free_shipping_condition_2026_09_21": 0
+        },
+        "required_unpriced_entries": [
+          {
+            "id": "Q01",
+            "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
+            "reason": "quote_pending"
+          },
+          {
+            "id": "S07",
+            "name": "Taobaoの国内外送料・代行/輸入諸費",
+            "reason": "quote_pending"
+          },
+          {
+            "id": "S08",
+            "name": "製作ブラケットの納入送料",
+            "reason": "quote_pending"
+          },
+          {
+            "id": "K01",
+            "name": "残るキャスター板・ガセットの加工外注追加",
+            "reason": "quote_pending"
+          }
+        ],
+        "planning_total_jpy": null,
+        "planning_total_with_contingency_jpy": null
+      },
+      "note_ja": "数値のある参考価格・仮枠の途中小計。必須見積が残る場合、完成額・価格の下限・税込確定額ではない。主条件はブラケット製作のみ外注、残存板は既所有工具で自加工。"
+    },
+    {
+      "priced_and_allowance_subtotal_jpy": 33042,
+      "priced_subtotals_by_kind_jpy": {
+        "observed_carried_from_A3": 8192,
+        "manufacturer_catalog_reference": 1540,
+        "allowance": 7000,
+        "user_allowance": 14000,
+        "observed_condition_carried_from_A": 650,
+        "allowance_carried_from_A": 1000,
+        "observed_standard_condition_2026_09_20": 660
+      },
+      "required_unpriced_entries": [
+        {
+          "id": "Q01",
+          "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
+          "reason": "quote_pending"
+        },
+        {
+          "id": "S07",
+          "name": "Taobaoの国内外送料・代行/輸入諸費",
+          "reason": "quote_pending"
+        },
+        {
+          "id": "S08",
+          "name": "製作ブラケットの納入送料",
+          "reason": "quote_pending"
+        }
+      ],
+      "planning_total_jpy": null,
+      "id": "custom_taobao_included",
+      "mount_variant": "custom",
+      "motor_source": "taobao",
+      "tyre_condition": "included",
+      "condition_ja": "比較条件。付属タイヤ一式の適合が確認できた場合だけ有効。Taobao価格と着荷総額は未確認。",
+      "purchase_priced_subtotal_jpy": 30232,
+      "shipping_priced_subtotal_jpy": 2810,
+      "active_item_ids": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "E01",
+        "E02",
+        "C01",
+        "P01",
+        "P03",
+        "P04",
+        "H01",
+        "H02",
+        "D01",
+        "Q01"
+      ],
+      "active_shipping_ids": [
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S07",
+        "S08"
+      ],
+      "planning_total_with_contingency_jpy": null,
+      "with_residual_plate_outsourcing": {
+        "priced_and_allowance_subtotal_jpy": 33042,
+        "priced_subtotals_by_kind_jpy": {
+          "observed_carried_from_A3": 8192,
+          "manufacturer_catalog_reference": 1540,
+          "allowance": 7000,
+          "user_allowance": 14000,
+          "observed_condition_carried_from_A": 650,
+          "allowance_carried_from_A": 1000,
+          "observed_standard_condition_2026_09_20": 660
+        },
+        "required_unpriced_entries": [
+          {
+            "id": "Q01",
+            "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
+            "reason": "quote_pending"
+          },
+          {
+            "id": "S07",
+            "name": "Taobaoの国内外送料・代行/輸入諸費",
+            "reason": "quote_pending"
+          },
+          {
+            "id": "S08",
+            "name": "製作ブラケットの納入送料",
+            "reason": "quote_pending"
+          },
+          {
+            "id": "K01",
+            "name": "残るキャスター板・ガセットの加工外注追加",
+            "reason": "quote_pending"
+          }
+        ],
+        "planning_total_jpy": null,
+        "planning_total_with_contingency_jpy": null
+      },
+      "note_ja": "数値のある参考価格・仮枠の途中小計。必須見積が残る場合、完成額・価格の下限・税込確定額ではない。主条件はブラケット製作のみ外注、残存板は既所有工具で自加工。"
+    },
+    {
+      "priced_and_allowance_subtotal_jpy": 57102,
+      "priced_subtotals_by_kind_jpy": {
+        "observed_carried_from_A3": 8192,
+        "manufacturer_catalog_reference": 1540,
+        "allowance": 7000,
+        "observed_2026_09_21": 38060,
+        "observed_condition_carried_from_A": 650,
+        "allowance_carried_from_A": 1000,
+        "observed_standard_condition_2026_09_20": 660,
+        "observed_free_shipping_condition_2026_09_21": 0
+      },
+      "required_unpriced_entries": [
+        {
+          "id": "Q01",
+          "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
+          "reason": "quote_pending"
+        },
+        {
+          "id": "S08",
+          "name": "製作ブラケットの納入送料",
+          "reason": "quote_pending"
+        }
+      ],
+      "planning_total_jpy": null,
+      "id": "custom_domestic_bare",
+      "mount_variant": "custom",
+      "motor_source": "domestic",
+      "tyre_condition": "bare",
+      "condition_ja": "比較条件。国内モーター欠品のため価格比較のみ。",
+      "purchase_priced_subtotal_jpy": 54292,
+      "shipping_priced_subtotal_jpy": 2810,
+      "active_item_ids": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "E01",
+        "E02",
+        "C01",
+        "P01",
+        "P03",
+        "P04",
+        "H01",
+        "H02",
+        "D03",
+        "D02",
+        "Q01"
+      ],
+      "active_shipping_ids": [
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S08"
+      ],
+      "planning_total_with_contingency_jpy": null,
+      "with_residual_plate_outsourcing": {
+        "priced_and_allowance_subtotal_jpy": 57102,
+        "priced_subtotals_by_kind_jpy": {
+          "observed_carried_from_A3": 8192,
+          "manufacturer_catalog_reference": 1540,
+          "allowance": 7000,
+          "observed_2026_09_21": 38060,
+          "observed_condition_carried_from_A": 650,
+          "allowance_carried_from_A": 1000,
+          "observed_standard_condition_2026_09_20": 660,
+          "observed_free_shipping_condition_2026_09_21": 0
+        },
+        "required_unpriced_entries": [
+          {
+            "id": "Q01",
+            "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
+            "reason": "quote_pending"
+          },
+          {
+            "id": "S08",
+            "name": "製作ブラケットの納入送料",
+            "reason": "quote_pending"
+          },
+          {
+            "id": "K01",
+            "name": "残るキャスター板・ガセットの加工外注追加",
+            "reason": "quote_pending"
+          }
+        ],
+        "planning_total_jpy": null,
+        "planning_total_with_contingency_jpy": null
+      },
+      "note_ja": "数値のある参考価格・仮枠の途中小計。必須見積が残る場合、完成額・価格の下限・税込確定額ではない。主条件はブラケット製作のみ外注、残存板は既所有工具で自加工。"
+    },
+    {
+      "priced_and_allowance_subtotal_jpy": 54382,
+      "priced_subtotals_by_kind_jpy": {
+        "observed_carried_from_A3": 8192,
+        "manufacturer_catalog_reference": 1540,
+        "allowance": 7000,
+        "user_allowance": 14000,
+        "observed_2026_09_21": 21340,
+        "observed_condition_carried_from_A": 650,
+        "allowance_carried_from_A": 1000,
+        "observed_standard_condition_2026_09_20": 660,
+        "observed_free_shipping_condition_2026_09_21": 0
+      },
+      "required_unpriced_entries": [
+        {
+          "id": "Q02",
+          "name": "既製ブラケット用3030取付板の材料・穴加工 見積待ち",
+          "reason": "quote_pending"
+        },
+        {
+          "id": "S07",
+          "name": "Taobaoの国内外送料・代行/輸入諸費",
+          "reason": "quote_pending"
+        }
+      ],
+      "planning_total_jpy": null,
+      "id": "stock_taobao_bare",
+      "mount_variant": "stock",
+      "motor_source": "taobao",
+      "tyre_condition": "bare",
+      "condition_ja": "比較条件。Taobao価格と着荷総額は未確認。",
+      "purchase_priced_subtotal_jpy": 51572,
+      "shipping_priced_subtotal_jpy": 2810,
+      "active_item_ids": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "E01",
+        "E02",
+        "C01",
+        "P01",
+        "P03",
+        "P04",
+        "H01",
+        "H02",
+        "D01",
+        "D02",
+        "B01",
+        "Q02"
+      ],
+      "active_shipping_ids": [
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07"
+      ],
+      "planning_total_with_contingency_jpy": null,
+      "with_residual_plate_outsourcing": {
+        "priced_and_allowance_subtotal_jpy": 54382,
+        "priced_subtotals_by_kind_jpy": {
+          "observed_carried_from_A3": 8192,
+          "manufacturer_catalog_reference": 1540,
+          "allowance": 7000,
+          "user_allowance": 14000,
+          "observed_2026_09_21": 21340,
+          "observed_condition_carried_from_A": 650,
+          "allowance_carried_from_A": 1000,
+          "observed_standard_condition_2026_09_20": 660,
+          "observed_free_shipping_condition_2026_09_21": 0
+        },
+        "required_unpriced_entries": [
+          {
+            "id": "Q02",
+            "name": "既製ブラケット用3030取付板の材料・穴加工 見積待ち",
+            "reason": "quote_pending"
+          },
+          {
+            "id": "S07",
+            "name": "Taobaoの国内外送料・代行/輸入諸費",
+            "reason": "quote_pending"
+          },
+          {
+            "id": "K01",
+            "name": "残るキャスター板・ガセットの加工外注追加",
+            "reason": "quote_pending"
+          }
+        ],
+        "planning_total_jpy": null,
+        "planning_total_with_contingency_jpy": null
+      },
+      "note_ja": "数値のある参考価格・仮枠の途中小計。必須見積が残る場合、完成額・価格の下限・税込確定額ではない。主条件はブラケット製作のみ外注、残存板は既所有工具で自加工。"
+    },
+    {
+      "priced_and_allowance_subtotal_jpy": 45142,
+      "priced_subtotals_by_kind_jpy": {
+        "observed_carried_from_A3": 8192,
+        "manufacturer_catalog_reference": 1540,
+        "allowance": 7000,
+        "user_allowance": 14000,
+        "observed_2026_09_21": 12100,
+        "observed_condition_carried_from_A": 650,
+        "allowance_carried_from_A": 1000,
+        "observed_standard_condition_2026_09_20": 660,
+        "observed_free_shipping_condition_2026_09_21": 0
+      },
+      "required_unpriced_entries": [
+        {
+          "id": "Q02",
+          "name": "既製ブラケット用3030取付板の材料・穴加工 見積待ち",
+          "reason": "quote_pending"
+        },
+        {
+          "id": "S07",
+          "name": "Taobaoの国内外送料・代行/輸入諸費",
+          "reason": "quote_pending"
+        }
+      ],
+      "planning_total_jpy": null,
+      "id": "stock_taobao_included",
+      "mount_variant": "stock",
+      "motor_source": "taobao",
+      "tyre_condition": "included",
+      "condition_ja": "比較条件。付属タイヤ一式の適合が確認できた場合だけ有効。Taobao価格と着荷総額は未確認。",
+      "purchase_priced_subtotal_jpy": 42332,
+      "shipping_priced_subtotal_jpy": 2810,
+      "active_item_ids": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "E01",
+        "E02",
+        "C01",
+        "P01",
+        "P03",
+        "P04",
+        "H01",
+        "H02",
+        "D01",
+        "B01",
+        "Q02"
+      ],
+      "active_shipping_ids": [
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07"
+      ],
+      "planning_total_with_contingency_jpy": null,
+      "with_residual_plate_outsourcing": {
+        "priced_and_allowance_subtotal_jpy": 45142,
+        "priced_subtotals_by_kind_jpy": {
+          "observed_carried_from_A3": 8192,
+          "manufacturer_catalog_reference": 1540,
+          "allowance": 7000,
+          "user_allowance": 14000,
+          "observed_2026_09_21": 12100,
+          "observed_condition_carried_from_A": 650,
+          "allowance_carried_from_A": 1000,
+          "observed_standard_condition_2026_09_20": 660,
+          "observed_free_shipping_condition_2026_09_21": 0
+        },
+        "required_unpriced_entries": [
+          {
+            "id": "Q02",
+            "name": "既製ブラケット用3030取付板の材料・穴加工 見積待ち",
+            "reason": "quote_pending"
+          },
+          {
+            "id": "S07",
+            "name": "Taobaoの国内外送料・代行/輸入諸費",
+            "reason": "quote_pending"
+          },
+          {
+            "id": "K01",
+            "name": "残るキャスター板・ガセットの加工外注追加",
+            "reason": "quote_pending"
+          }
+        ],
+        "planning_total_jpy": null,
+        "planning_total_with_contingency_jpy": null
+      },
+      "note_ja": "数値のある参考価格・仮枠の途中小計。必須見積が残る場合、完成額・価格の下限・税込確定額ではない。主条件はブラケット製作のみ外注、残存板は既所有工具で自加工。"
+    },
+    {
+      "priced_and_allowance_subtotal_jpy": 69202,
+      "priced_subtotals_by_kind_jpy": {
+        "observed_carried_from_A3": 8192,
+        "manufacturer_catalog_reference": 1540,
+        "allowance": 7000,
+        "observed_2026_09_21": 50160,
+        "observed_condition_carried_from_A": 650,
+        "allowance_carried_from_A": 1000,
+        "observed_standard_condition_2026_09_20": 660,
+        "observed_free_shipping_condition_2026_09_21": 0
+      },
+      "required_unpriced_entries": [
+        {
+          "id": "Q02",
+          "name": "既製ブラケット用3030取付板の材料・穴加工 見積待ち",
+          "reason": "quote_pending"
+        }
+      ],
+      "planning_total_jpy": null,
+      "id": "stock_domestic_bare",
+      "mount_variant": "stock",
+      "motor_source": "domestic",
+      "tyre_condition": "bare",
+      "condition_ja": "比較条件。国内モーター欠品のため価格比較のみ。",
+      "purchase_priced_subtotal_jpy": 66392,
+      "shipping_priced_subtotal_jpy": 2810,
+      "active_item_ids": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "E01",
+        "E02",
+        "C01",
+        "P01",
+        "P03",
+        "P04",
+        "H01",
+        "H02",
+        "D03",
+        "D02",
+        "B01",
+        "Q02"
+      ],
+      "active_shipping_ids": [
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06"
+      ],
+      "planning_total_with_contingency_jpy": null,
+      "with_residual_plate_outsourcing": {
+        "priced_and_allowance_subtotal_jpy": 69202,
+        "priced_subtotals_by_kind_jpy": {
+          "observed_carried_from_A3": 8192,
+          "manufacturer_catalog_reference": 1540,
+          "allowance": 7000,
+          "observed_2026_09_21": 50160,
+          "observed_condition_carried_from_A": 650,
+          "allowance_carried_from_A": 1000,
+          "observed_standard_condition_2026_09_20": 660,
+          "observed_free_shipping_condition_2026_09_21": 0
+        },
+        "required_unpriced_entries": [
+          {
+            "id": "Q02",
+            "name": "既製ブラケット用3030取付板の材料・穴加工 見積待ち",
+            "reason": "quote_pending"
+          },
+          {
+            "id": "K01",
+            "name": "残るキャスター板・ガセットの加工外注追加",
+            "reason": "quote_pending"
+          }
+        ],
+        "planning_total_jpy": null,
+        "planning_total_with_contingency_jpy": null
+      },
+      "note_ja": "数値のある参考価格・仮枠の途中小計。必須見積が残る場合、完成額・価格の下限・税込確定額ではない。主条件はブラケット製作のみ外注、残存板は既所有工具で自加工。"
+    }
+  ],
+  "comparison_with_A3": {
+    "source_bom": "../amr04/bom.json",
+    "source_summary": "../amr04/cost_summary.json",
+    "A3_self_fabrication_cash_budget_jpy": 47824,
+    "A4_planning_total_jpy": null,
+    "total_difference_jpy": null,
+    "all_selected_purchase_rows_covered_once": true,
+    "purchase_delta_breakdown": [
+      {
+        "group_ja": "3030定尺",
+        "A3_ids": [
+          "F01",
+          "F02"
+        ],
+        "A4_ids": [
+          "F01",
+          "F02"
+        ],
+        "A3_jpy": 3419,
+        "A4_jpy": 3419,
+        "A4_priced_subtotal_jpy": 3419,
+        "difference_jpy": 0
+      },
+      {
+        "group_ja": "純正接合部・追加溝ナット",
+        "A3_ids": [
+          "F03",
+          "F04"
+        ],
+        "A4_ids": [
+          "F03",
+          "F04"
+        ],
+        "A3_jpy": 2740,
+        "A4_jpy": 2740,
+        "A4_priced_subtotal_jpy": 2740,
+        "difference_jpy": 0
+      },
+      {
+        "group_ja": "モーターと初回タイヤ",
+        "A3_ids": [
+          "D01"
+        ],
+        "A4_ids": [
+          "D01",
+          "D02"
+        ],
+        "A3_jpy": 25982,
+        "A4_jpy": 23240,
+        "A4_priced_subtotal_jpy": 23240,
+        "difference_jpy": -2742
+      },
+      {
+        "group_ja": "USB通信・ケーブル",
+        "A3_ids": [
+          "E01",
+          "E02"
+        ],
+        "A4_ids": [
+          "E01",
+          "E02"
+        ],
+        "A3_jpy": 4900,
+        "A4_jpy": 4900,
+        "A4_priced_subtotal_jpy": 4900,
+        "difference_jpy": 0
+      },
+      {
+        "group_ja": "キャスター",
+        "A3_ids": [
+          "C01"
+        ],
+        "A4_ids": [
+          "C01"
+        ],
+        "A3_jpy": 373,
+        "A4_jpy": 373,
+        "A4_priced_subtotal_jpy": 373,
+        "difference_jpy": 0
+      },
+      {
+        "group_ja": "駆動取付部",
+        "A3_ids": [
+          "P02",
+          "P05",
+          "P06"
+        ],
+        "A4_ids": [
+          "Q01"
+        ],
+        "A3_jpy": 2800,
+        "A4_jpy": null,
+        "A4_priced_subtotal_jpy": 0,
+        "difference_jpy": null
+      },
+      {
+        "group_ja": "共通板素材",
+        "A3_ids": [
+          "P01",
+          "P03"
+        ],
+        "A4_ids": [
+          "P01",
+          "P03"
+        ],
+        "A3_jpy": 1400,
+        "A4_jpy": 1400,
+        "A4_priced_subtotal_jpy": 1400,
+        "difference_jpy": 0
+      },
+      {
+        "group_ja": "PLA消費分",
+        "A3_ids": [
+          "P04"
+        ],
+        "A4_ids": [
+          "P04"
+        ],
+        "A3_jpy": 600,
+        "A4_jpy": 600,
+        "A4_priced_subtotal_jpy": 600,
+        "difference_jpy": 0
+      },
+      {
+        "group_ja": "一般締結材",
+        "A3_ids": [
+          "H01"
+        ],
+        "A4_ids": [
+          "H01"
+        ],
+        "A3_jpy": 2300,
+        "A4_jpy": 2300,
+        "A4_priced_subtotal_jpy": 2300,
+        "difference_jpy": 0
+      },
+      {
+        "group_ja": "ストラップ",
+        "A3_ids": [
+          "H02"
+        ],
+        "A4_ids": [
+          "H02"
+        ],
+        "A3_jpy": 500,
+        "A4_jpy": 500,
+        "A4_priced_subtotal_jpy": 500,
+        "difference_jpy": 0
+      }
+    ],
+    "removed_A3_mount_materials_jpy": 2800,
+    "removed_A3_fabrication_allowance_jpy": 6000,
+    "note_ja": "A3固定材2800円と旧加工6000円は撤去。新しい製作/取付板・配送等が未見積の間、途中小計の差を完成台車の節約額と呼ばない。"
+  },
+  "contingency_fraction": 0.1,
+  "quantity_checks": {
+    "slot_nuts_total": 44,
+    "slot_nuts_included_in_sets": 16,
+    "slot_nuts_additional": 28,
+    "slot_nuts_by_use": {
+      "frame_joints": 16,
+      "gussets": 8,
+      "caster_plate": 4,
+      "low_battery_cradle": 4,
+      "rear_electronics_tray": 4,
+      "front_electronics_tray": 4,
+      "custom_motor_brackets": 4
+    },
+    "kp08_used": 0,
+    "separate_axles_used": 0,
+    "couplers_used": 0,
+    "drive_spacers_used": 0,
+    "caster_spacers_used": 0,
+    "caster_t4_plate_blank_LW_mm_count": [
+      [
+        80,
+        170,
+        1
+      ]
+    ],
+    "gusset_t3_right_triangle_leg_mm_count": [
+      [
+        60,
+        60,
+        4
+      ]
+    ],
+    "printed_parts_planned_LWH_mm_count": [
+      [
+        130,
+        160,
+        37,
+        1
+      ],
+      [
+        85,
+        180,
+        4.4,
+        1
+      ],
+      [
+        145,
+        170,
+        4.4,
+        1
+      ]
+    ],
+    "printed_parts_CAD_solid_PLA_mass_kg": 0.24548495706839338,
+    "PLA_consumption_allowance_g": 300,
+    "battery_straps_planned": 2,
+    "fastener_source": "fasteners.csv",
+    "fastener_status_ja": "最終CADのfasteners.csv/validation_results.jsonと照合済み。溝ナット44個、一般締結材の追加66点。購入パック単価は未見積。タイヤキット付属カバーねじはキット費に含み一般締結予算へ重複計上しない。",
+    "fasteners": [
+      {
+        "specification": "HNTT6-6 slot nut",
+        "installed_quantity": 44,
+        "included_in_HBLFSN6_SET": 16,
+        "additional_installed_quantity": 28
+      },
+      {
+        "specification": "M2.5x12 socket screw",
+        "installed_quantity": 6,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 6
+      },
+      {
+        "specification": "M6 large washer OD18 ID6.6 t1.6",
+        "installed_quantity": 12,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 12
+      },
+      {
+        "specification": "M6 plain hex nut",
+        "installed_quantity": 4,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 4
+      },
+      {
+        "specification": "M6 washer OD13 ID6.6 t1.6",
+        "installed_quantity": 12,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 12
+      },
+      {
+        "specification": "M6x10 socket screw",
+        "installed_quantity": 8,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 8
+      },
+      {
+        "specification": "M6x12 socket screw",
+        "installed_quantity": 36,
+        "included_in_HBLFSN6_SET": 16,
+        "additional_installed_quantity": 20
+      },
+      {
+        "specification": "M6x16 socket screw",
+        "installed_quantity": 4,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 4
+      }
+    ],
+    "M0601C_111_used": 2,
+    "initial_tyre_kits_planned": 2,
+    "custom_brackets_count": 2,
+    "custom_bracket_material": "A6061-T6",
+    "custom_bracket_same_part_rotated": true,
+    "custom_bracket_finished_LWH_mm": [
+      90,
+      30,
+      34
+    ],
+    "custom_flange_LWH_mm": [
+      90,
+      30,
+      5
+    ],
+    "custom_web_LWH_mm": [
+      60,
+      17,
+      34
+    ],
+    "special_pocket_depth_mm": 9,
+    "custom_bracket_rear_wall_mm": 8
+  },
+  "CAD_quantity_crosscheck": {
+    "status": "passed",
+    "sources": [
+      "fasteners.csv",
+      "validation_results.json",
+      "design_parameters.json",
+      "custom_mount_dimensions.json"
+    ],
+    "fastener_specifications": 8,
+    "slot_nuts_total": 44,
+    "general_fasteners_additional_installed": 66,
+    "printed_parts_count": 3,
+    "note_ja": "製作主案のCAD数量を照合。購入パック価格・加工性・実部品適合の保証ではない。既製比較案のCAD数量は未確定。"
+  },
+  "fabrication": {
+    "residual_plate_work": {
+      "id": "K01",
+      "name": "残るキャスター板・ガセットの加工外注追加",
+      "amount_jpy": null,
+      "kind": "quote_pending",
+      "tax_status": "unknown_quote_tax_basis",
+      "note": "共通費に含む板素材の切断/穴加工/バリ取り/必要な外注配送。材料代・製作Q01・既製案Q02の材料加工代は重複しない。自加工条件では自己作業と既所有工具を前提とし、新規工具費は別。"
+    },
+    "removed_A3_fabrication_allowance_jpy": 6000,
+    "note": "旧6000円は引き継がない。Q01/Q02と共通残存板K01の作業範囲を分けて見積を更新する。"
+  },
+  "price_kinds_ja": {
+    "observed_carried_from_A3": "A3の2026-09-20価格記録を引継ぎ、今回は再調査していない。",
+    "observed_2026_09_21": "2026-09-21に直接確認した国内一次販売ページの税込表示。未発注/在庫未確保。",
+    "manufacturer_catalog_reference": "2026年7月の公式価格表を2026-09-20に確認した第二案の記録から引継ぎ。税換算参考値で、個人購入・請求単価・送料は未確定。",
+    "allowance": "材料・消費材・購入パック等の予算仮枠。確定販売価格ではない。",
+    "user_allowance": "ユーザー提示の約7000円/個という計画仮枠。対象商品・付属・税・輸入諸費は未確認。",
+    "quote_pending": "必要な見積が未取得。nullを0円として集計しない。"
+  },
+  "initial_purchase_only": true,
+  "lifetime_maintenance_cost_included": false,
+  "maintenance": {
+    "source": "https://www.switch-science.com/products/9203",
+    "tyre_kit_each_jpy": 4620,
+    "pair_replacement_each_event_jpy": 9240,
+    "pair_replacement_two_events_jpy": 18480,
+    "single_replacement_shipping_jpy": 650,
+    "note": "初回D02とは別の交換費。左右同時注文で通常送料無料。価格・供給期間・寿命・工賃は将来保証しない。Taobao品と補修キットの適合確認が必要。"
+  },
+  "excluded_unpriced_items_ja": [
+    "電池・アダプター（予約空間のみ）",
+    "主計算機・センサー・冷却",
+    "電源変換・過電流保護・非常停止",
+    "車内の電源/RS485配線・コネクター・終端部品",
+    "必要に応じた電源スイッチ/状態表示等の制御器",
+    "完成用ガード・荷台・将来アーム",
+    "新規工具・自己作業費・印刷電気代",
+    "実機試験で追加する対策部品",
+    "将来交換タイヤ・工賃等の維持費（別比較）"
+  ],
+  "procurement_note_ja": "モーター選定に従う設計候補。国内本体は欠品、Taobao商品URL・付属品・着荷額は未確認。ブラケット製作依頼は未送信。",
+  "budget_note_ja": "必要費目にnullがある間は総額・A3との総差額・10%予備費込み総額を未定とする。参考価格と仮枠の途中小計を台車完成額にしない。既製と製作、材料込み見積と別素材、初回タイヤと予備交換タイヤを二重計上しない。電装除外費用は0円ではない。",
+  "self_tests": {
+    "unknown_required_quote_keeps_total_null": "passed",
+    "initial_tyre_case_difference_9240_jpy": "passed"
+  }
+}

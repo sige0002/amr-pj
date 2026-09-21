@@ -1,0 +1,123 @@
+{
+  "status": "nominal_service_volumes_only",
+  "checks": [
+    {
+      "name": "M2p5_inner_tool_L0",
+      "hits": [],
+      "minimum_z_mm": 55.95
+    },
+    {
+      "name": "M2p5_inner_tool_L1",
+      "hits": [],
+      "minimum_z_mm": 44.55
+    },
+    {
+      "name": "M2p5_inner_tool_L2",
+      "hits": [],
+      "minimum_z_mm": 44.55
+    },
+    {
+      "name": "M6_bottom_tool_L52.5",
+      "hits": [],
+      "minimum_z_mm": 18.0
+    },
+    {
+      "name": "M6_bottom_tool_L127.5",
+      "hits": [],
+      "minimum_z_mm": 18.0
+    },
+    {
+      "name": "Tire_outboard_L1",
+      "hits": [],
+      "minimum_z_mm": 0.0
+    },
+    {
+      "name": "Tire_outboard_L5",
+      "hits": [],
+      "minimum_z_mm": 0.0
+    },
+    {
+      "name": "Tire_outboard_L10",
+      "hits": [],
+      "minimum_z_mm": 0.0
+    },
+    {
+      "name": "Tire_outboard_L20",
+      "hits": [],
+      "minimum_z_mm": 0.0
+    },
+    {
+      "name": "Tire_outboard_L40",
+      "hits": [],
+      "minimum_z_mm": 0.0
+    },
+    {
+      "name": "Tire_outboard_L80",
+      "hits": [],
+      "minimum_z_mm": 0.0
+    },
+    {
+      "name": "M2p5_inner_tool_R0",
+      "hits": [],
+      "minimum_z_mm": 55.95
+    },
+    {
+      "name": "M2p5_inner_tool_R1",
+      "hits": [],
+      "minimum_z_mm": 44.55
+    },
+    {
+      "name": "M2p5_inner_tool_R2",
+      "hits": [],
+      "minimum_z_mm": 44.55
+    },
+    {
+      "name": "M6_bottom_tool_R52.5",
+      "hits": [],
+      "minimum_z_mm": 18.0
+    },
+    {
+      "name": "M6_bottom_tool_R127.5",
+      "hits": [],
+      "minimum_z_mm": 18.0
+    },
+    {
+      "name": "Tire_outboard_R1",
+      "hits": [],
+      "minimum_z_mm": 0.0
+    },
+    {
+      "name": "Tire_outboard_R5",
+      "hits": [],
+      "minimum_z_mm": 0.0
+    },
+    {
+      "name": "Tire_outboard_R10",
+      "hits": [],
+      "minimum_z_mm": 0.0
+    },
+    {
+      "name": "Tire_outboard_R20",
+      "hits": [],
+      "minimum_z_mm": 0.0
+    },
+    {
+      "name": "Tire_outboard_R40",
+      "hits": [],
+      "minimum_z_mm": 0.0
+    },
+    {
+      "name": "Tire_outboard_R80",
+      "hits": [],
+      "minimum_z_mm": 0.0
+    }
+  ],
+  "passed": true,
+  "same_part_left_right_rotation_volume_error_mm3": 0.0,
+  "motor_lead_reservation_minimum_z_mm": 28.349999899999993,
+  "bracket_minimum_z_mm": 35,
+  "fixed_rigid_chassis_minimum_z_mm": 32,
+  "motor_screw_head_land_to_slot_edge_nominal_mm": 0.8317930699999998,
+  "motor_clearance_hole_to_slot_ligament_nominal_mm": 1.6817930699999994,
+  "scope": "Tool shaft radii2mm (M2.5) /4mm (M6), straight insertion only. Hex sockets/head recesses not modeled. Tire translated at6 discrete positions after cover removal, using assumed bore/axial datum. Chassis must be supported during service. No real tire fit, wrench handle, fatigue, tolerance or assembly-process certification."
+}

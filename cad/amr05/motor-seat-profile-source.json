@@ -1,0 +1,379 @@
+{
+  "source_url": "https://doc.switch-science.com/media/files/e637ea42-182f-4a1a-b925-4f7053e92b9b.sldprt",
+  "source_sha256": "8836e0053df95dd16ce18dbefafb9d3512925b7c5d1f4d25acac7fe7f132c218",
+  "source_coordinate_system": "X=width,Y=height,Z=thickness; source wheel axis (35,90), front Z=0, seat Z=3, back Z=10",
+  "local_coordinate_system": "X,Y relative motor axis; Z=seat plane at local 0",
+  "native_floor_face": "sldprt:brep:face#481",
+  "native_floor_outer_loop": "sldprt:brep:loop#473",
+  "original_plate_thickness_mm": 10.0,
+  "original_pocket_depth_mm": 3.0,
+  "original_back_wall_mm": 7.0,
+  "mount_holes_diameter_mm": 2.7,
+  "mount_holes_local_xy_mm": [
+    [
+      6.5817930687617,
+      3.8
+    ],
+    [
+      -6.5817930687617,
+      3.8
+    ],
+    [
+      0,
+      -7.6
+    ]
+  ],
+  "segments": [
+    {
+      "source_edge_id": "sldprt:brep:edge#1388",
+      "source_curve_id": "sldprt:brep:curve#1391",
+      "kind": "circle",
+      "start_mm": [
+        9.30698278571301,
+        2.140694145935143,
+        0.0
+      ],
+      "end_mm": [
+        6.507386904968939,
+        6.989736452044397,
+        0.0
+      ],
+      "center_mm": [
+        -3.552713678800501e-14,
+        0.0,
+        0.0
+      ],
+      "radius_mm": 9.550000000000002,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "source_edge_id": "sldprt:brep:edge#464",
+      "source_curve_id": "sldprt:brep:curve#477",
+      "kind": "circle",
+      "start_mm": [
+        6.507386904968939,
+        6.989736452044397,
+        0.0
+      ],
+      "end_mm": [
+        5.058903043150686,
+        8.100000000000023,
+        0.0
+      ],
+      "center_mm": [
+        5.058903043150707,
+        6.600000000000023,
+        0.0
+      ],
+      "radius_mm": 1.5000000000000042,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "source_edge_id": "sldprt:brep:edge#480",
+      "source_curve_id": "sldprt:brep:curve#489",
+      "kind": "line",
+      "start_mm": [
+        5.058903043150686,
+        8.100000000000023,
+        0.0
+      ],
+      "end_mm": [
+        2.4999999999999645,
+        8.100000000000009,
+        0.0
+      ]
+    },
+    {
+      "source_edge_id": "sldprt:brep:edge#484",
+      "source_curve_id": "sldprt:brep:curve#689",
+      "kind": "line",
+      "start_mm": [
+        2.4999999999999645,
+        8.100000000000009,
+        0.0
+      ],
+      "end_mm": [
+        2.4999999999999645,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "source_edge_id": "sldprt:brep:edge#504",
+      "source_curve_id": "sldprt:brep:curve#503",
+      "kind": "circle",
+      "start_mm": [
+        2.4999999999999645,
+        0.0,
+        0.0
+      ],
+      "end_mm": [
+        -2.5000000000000426,
+        0.0,
+        0.0
+      ],
+      "center_mm": [
+        -3.552713678800501e-14,
+        0.0,
+        0.0
+      ],
+      "radius_mm": 2.500000000000002,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "source_edge_id": "sldprt:brep:edge#506",
+      "source_curve_id": "sldprt:brep:curve#505",
+      "kind": "line",
+      "start_mm": [
+        -2.5000000000000426,
+        0.0,
+        0.0
+      ],
+      "end_mm": [
+        -2.5000000000000426,
+        8.100000000000009,
+        0.0
+      ]
+    },
+    {
+      "source_edge_id": "sldprt:brep:edge#487",
+      "source_curve_id": "sldprt:brep:curve#489",
+      "kind": "line",
+      "start_mm": [
+        -2.5000000000000426,
+        8.100000000000009,
+        0.0
+      ],
+      "end_mm": [
+        -5.0589030431507815,
+        8.100000000000009,
+        0.0
+      ]
+    },
+    {
+      "source_edge_id": "sldprt:brep:edge#476",
+      "source_curve_id": "sldprt:brep:curve#1440",
+      "kind": "circle",
+      "start_mm": [
+        -5.0589030431507815,
+        8.100000000000009,
+        0.0
+      ],
+      "end_mm": [
+        -6.5073869049690245,
+        6.989736452044397,
+        0.0
+      ],
+      "center_mm": [
+        -5.058903043150789,
+        6.600000000000023,
+        0.0
+      ],
+      "radius_mm": 1.5000000000000009,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "source_edge_id": "sldprt:brep:edge#488",
+      "source_curve_id": "sldprt:brep:curve#1396",
+      "kind": "circle",
+      "start_mm": [
+        -6.5073869049690245,
+        6.989736452044397,
+        0.0
+      ],
+      "end_mm": [
+        -9.306982785713085,
+        2.1406941459351287,
+        0.0
+      ],
+      "center_mm": [
+        -3.552713678800501e-14,
+        0.0,
+        0.0
+      ],
+      "radius_mm": 9.549999999999999,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "source_edge_id": "sldprt:brep:edge#1443",
+      "source_curve_id": "sldprt:brep:curve#1441",
+      "kind": "circle",
+      "start_mm": [
+        -9.306982785713085,
+        2.1406941459351287,
+        0.0
+      ],
+      "end_mm": [
+        -9.544257292229371,
+        0.33113855065090547,
+        0.0
+      ],
+      "center_mm": [
+        -8.245219186552728,
+        1.081138550650948,
+        0.0
+      ],
+      "radius_mm": 1.4999999999999973,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "source_edge_id": "sldprt:brep:edge#500",
+      "source_curve_id": "sldprt:brep:curve#1398",
+      "kind": "line",
+      "start_mm": [
+        -9.544257292229371,
+        0.33113855065090547,
+        0.0
+      ],
+      "end_mm": [
+        -4.4853542490786324,
+        -8.431138550650957,
+        0.0
+      ]
+    },
+    {
+      "source_edge_id": "sldprt:brep:edge#1439",
+      "source_curve_id": "sldprt:brep:curve#1444",
+      "kind": "circle",
+      "start_mm": [
+        -4.4853542490786324,
+        -8.431138550650957,
+        0.0
+      ],
+      "end_mm": [
+        -2.7995958807440857,
+        -9.130430597979554,
+        0.0
+      ],
+      "center_mm": [
+        -3.1863161434019496,
+        -7.681138550650971,
+        0.0
+      ],
+      "radius_mm": 1.5000000000000009,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "source_edge_id": "sldprt:brep:edge#1393",
+      "source_curve_id": "sldprt:brep:curve#1397",
+      "kind": "circle",
+      "start_mm": [
+        -2.7995958807440857,
+        -9.130430597979554,
+        0.0
+      ],
+      "end_mm": [
+        2.7995958807439862,
+        -9.130430597979554,
+        0.0
+      ],
+      "center_mm": [
+        -3.552713678800501e-14,
+        0.0,
+        0.0
+      ],
+      "radius_mm": 9.550000000000002,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "source_edge_id": "sldprt:brep:edge#1411",
+      "source_curve_id": "sldprt:brep:curve#1438",
+      "kind": "circle",
+      "start_mm": [
+        2.7995958807439862,
+        -9.130430597979554,
+        0.0
+      ],
+      "end_mm": [
+        4.485354249078526,
+        -8.43113855065097,
+        0.0
+      ],
+      "center_mm": [
+        3.1863161434018963,
+        -7.681138550650971,
+        0.0
+      ],
+      "radius_mm": 1.5000000000000173,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "source_edge_id": "sldprt:brep:edge#1390",
+      "source_curve_id": "sldprt:brep:curve#1394",
+      "kind": "line",
+      "start_mm": [
+        4.485354249078526,
+        -8.43113855065097,
+        0.0
+      ],
+      "end_mm": [
+        9.544257292229297,
+        0.3311385506509481,
+        0.0
+      ]
+    },
+    {
+      "source_edge_id": "sldprt:brep:edge#475",
+      "source_curve_id": "sldprt:brep:curve#1435",
+      "kind": "circle",
+      "start_mm": [
+        9.544257292229297,
+        0.3311385506509481,
+        0.0
+      ],
+      "end_mm": [
+        9.30698278571301,
+        2.140694145935143,
+        0.0
+      ],
+      "center_mm": [
+        8.245219186552653,
+        1.081138550650948,
+        0.0
+      ],
+      "radius_mm": 1.5000000000000042,
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    }
+  ],
+  "scope": "Source curve reconstruction of seat floor outline only. Native 0.5 mm entrance chamfer is separate and not included in this floor outline."
+}

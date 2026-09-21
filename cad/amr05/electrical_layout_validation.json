@@ -1,0 +1,294 @@
+{
+  "status": "reference_packaging_only_not_electrical_or_assembly_release",
+  "nominal_geometry_checks_passed": true,
+  "base_document": "AMR01_M0601C_A4",
+  "layout_document": "AMR01_ElectricalLayout_A4",
+  "base_physical_objects": 161,
+  "reference_routes": 11,
+  "front_deck_is_copied_physical_part": true,
+  "reference_vs_chassis_collisions": [],
+  "permanent_reservation_vs_service_collisions": [],
+  "equipment_zone_collisions": [],
+  "route_envelope_intersections": [],
+  "routes_vs_unrelated_equipment": [],
+  "intentional_route_connection_overlaps": [
+    {
+      "a": "Route_M0601FixedHarnessL",
+      "b": "Route_FusedPowerL",
+      "connection_node": "M0601ConnectionL",
+      "kind_a": "integrated_motor_harness",
+      "kind_b": "power",
+      "mm3": 24.286367112032018,
+      "meaning": "Reserved co-location near separate connector ends; not a wire-to-wire short"
+    },
+    {
+      "a": "Route_M0601FixedHarnessL",
+      "b": "Route_RS485_USB_to_L",
+      "connection_node": "M0601ConnectionL",
+      "kind_a": "integrated_motor_harness",
+      "kind_b": "signal",
+      "mm3": 10.712864669740458,
+      "meaning": "Reserved co-location near separate connector ends; not a wire-to-wire short"
+    },
+    {
+      "a": "Route_M0601FixedHarnessL",
+      "b": "Route_RS485_L_to_R",
+      "connection_node": "M0601ConnectionL",
+      "kind_a": "integrated_motor_harness",
+      "kind_b": "signal",
+      "mm3": 2.7048884100840036,
+      "meaning": "Reserved co-location near separate connector ends; not a wire-to-wire short"
+    },
+    {
+      "a": "Route_M0601FixedHarnessR",
+      "b": "Route_FusedPowerR",
+      "connection_node": "M0601ConnectionR",
+      "kind_a": "integrated_motor_harness",
+      "kind_b": "power",
+      "mm3": 24.286377365080195,
+      "meaning": "Reserved co-location near separate connector ends; not a wire-to-wire short"
+    },
+    {
+      "a": "Route_M0601FixedHarnessR",
+      "b": "Route_RS485_L_to_R",
+      "connection_node": "M0601ConnectionR",
+      "kind_a": "integrated_motor_harness",
+      "kind_b": "signal",
+      "mm3": 2.704888410141321,
+      "meaning": "Reserved co-location near separate connector ends; not a wire-to-wire short"
+    },
+    {
+      "a": "Route_FusedPowerL",
+      "b": "Route_RS485_USB_to_L",
+      "connection_node": "M0601ConnectionL",
+      "kind_a": "power",
+      "kind_b": "signal",
+      "mm3": 24.1574772508425,
+      "meaning": "Reserved co-location near separate connector ends; not a wire-to-wire short"
+    },
+    {
+      "a": "Route_FusedPowerL",
+      "b": "Route_RS485_L_to_R",
+      "connection_node": "M0601ConnectionL",
+      "kind_a": "power",
+      "kind_b": "signal",
+      "mm3": 21.659950068189907,
+      "meaning": "Reserved co-location near separate connector ends; not a wire-to-wire short"
+    },
+    {
+      "a": "Route_FusedPowerR",
+      "b": "Route_RS485_L_to_R",
+      "connection_node": "M0601ConnectionR",
+      "kind_a": "power",
+      "kind_b": "signal",
+      "mm3": 21.660068036027457,
+      "meaning": "Reserved co-location near separate connector ends; not a wire-to-wire short"
+    },
+    {
+      "a": "Route_RS485_USB_to_L",
+      "b": "Route_RS485_L_to_R",
+      "connection_node": "M0601ConnectionL",
+      "kind_a": "signal",
+      "kind_b": "signal",
+      "mm3": 9.99737500621468,
+      "meaning": "Reserved co-location near separate connector ends; not a wire-to-wire short"
+    }
+  ],
+  "allowed_equipment_connection_overlaps": [
+    {
+      "route": "Route_M0601FixedHarnessL",
+      "equipment": "M0601ConnectionL",
+      "mm3": 301.15852882630696
+    },
+    {
+      "route": "Route_M0601FixedHarnessR",
+      "equipment": "M0601ConnectionR",
+      "mm3": 301.15852839631714
+    },
+    {
+      "route": "Route_FusedPowerL",
+      "equipment": "M0601ConnectionL",
+      "mm3": 269.60507712143067
+    },
+    {
+      "route": "Route_FusedPowerR",
+      "equipment": "M0601ConnectionR",
+      "mm3": 269.6050772803414
+    },
+    {
+      "route": "Route_LogicSupply",
+      "equipment": "PowerConditioning_RESERVED",
+      "mm3": 20.000000000107615
+    },
+    {
+      "route": "Route_LogicSupply",
+      "equipment": "ComputerAndControl_RESERVED",
+      "mm3": 1.939393939952601
+    },
+    {
+      "route": "Route_RS485_USB_to_L",
+      "equipment": "USBRS485_RESERVED",
+      "mm3": 10.884443537408819
+    },
+    {
+      "route": "Route_RS485_USB_to_L",
+      "equipment": "M0601ConnectionL",
+      "mm3": 167.3598028493589
+    },
+    {
+      "route": "Route_RS485_L_to_R",
+      "equipment": "M0601ConnectionL",
+      "mm3": 133.1120397791824
+    },
+    {
+      "route": "Route_RS485_L_to_R",
+      "equipment": "M0601ConnectionR",
+      "mm3": 133.11203978006554
+    },
+    {
+      "route": "Route_StopSignal",
+      "equipment": "MainFuseAndDistribution_RESERVED",
+      "mm3": 4.266666666884748
+    },
+    {
+      "route": "Route_StopSignal",
+      "equipment": "EmergencyStopAccess_RESERVED",
+      "mm3": 3.8399999960485234
+    }
+  ],
+  "battery_lead_service_overlaps_requiring_disconnection": [
+    {
+      "service": "BatteryUpperRemoval",
+      "reference": "Route_BatteryToFuse",
+      "mm3": 141.37166941154064
+    },
+    {
+      "service": "BatteryConnectorAccess",
+      "reference": "Route_BatteryToFuse",
+      "mm3": 1296.303671489415
+    }
+  ],
+  "invalid_shapes": [],
+  "route_length_check_failures": [],
+  "fixed_harness_centreline_over_budget": [],
+  "route_measurements": {
+    "M0601FixedHarnessL": {
+      "polyline_length_mm": 139.75162877448028,
+      "rounded_length_mm": 133.61711362534595,
+      "radius_mm": 3,
+      "bend_radius_mm": 8,
+      "published_total_nominal_mm": 175,
+      "published_total_minimum_mm": 165,
+      "retained_source_lead_allowance_mm": 10,
+      "route_plus_retained_lead_mm": 143.61711362534595,
+      "remaining_to_minimum_mm": 21.38288637465405,
+      "remaining_to_nominal_mm": 31.38288637465405,
+      "centreline_within_minimum_total": true,
+      "connector_and_slack_fit_verified": false,
+      "cad_wire_length_mm": 133.61711362534592,
+      "analytic_vs_cad_length_difference_mm": 2.842170943040401e-14
+    },
+    "M0601FixedHarnessR": {
+      "polyline_length_mm": 139.75162877448028,
+      "rounded_length_mm": 133.61711362534595,
+      "radius_mm": 3,
+      "bend_radius_mm": 8,
+      "published_total_nominal_mm": 175,
+      "published_total_minimum_mm": 165,
+      "retained_source_lead_allowance_mm": 10,
+      "route_plus_retained_lead_mm": 143.61711362534595,
+      "remaining_to_minimum_mm": 21.38288637465405,
+      "remaining_to_nominal_mm": 31.38288637465405,
+      "centreline_within_minimum_total": true,
+      "connector_and_slack_fit_verified": false,
+      "cad_wire_length_mm": 133.61711362534592,
+      "analytic_vs_cad_length_difference_mm": 2.842170943040401e-14
+    },
+    "BatteryToFuse": {
+      "polyline_length_mm": 123.02082881417188,
+      "rounded_length_mm": 112.71994065724941,
+      "radius_mm": 3,
+      "bend_radius_mm": 8,
+      "cad_wire_length_mm": 112.71994065724941,
+      "analytic_vs_cad_length_difference_mm": 0.0
+    },
+    "FuseToPowerConditioning": {
+      "polyline_length_mm": 15.0,
+      "rounded_length_mm": 15.0,
+      "radius_mm": 3,
+      "bend_radius_mm": 8,
+      "cad_wire_length_mm": 15.0,
+      "analytic_vs_cad_length_difference_mm": 0.0
+    },
+    "FusedPowerL": {
+      "polyline_length_mm": 103.18962010041709,
+      "rounded_length_mm": 96.32236132913543,
+      "radius_mm": 3,
+      "bend_radius_mm": 8,
+      "cad_wire_length_mm": 96.32236132913543,
+      "analytic_vs_cad_length_difference_mm": 0.0
+    },
+    "FusedPowerR": {
+      "polyline_length_mm": 103.18962010041709,
+      "rounded_length_mm": 96.32236132913543,
+      "radius_mm": 3,
+      "bend_radius_mm": 8,
+      "cad_wire_length_mm": 96.32236132913543,
+      "analytic_vs_cad_length_difference_mm": 0.0
+    },
+    "LogicSupply": {
+      "polyline_length_mm": 436.57184894611817,
+      "rounded_length_mm": 423.6957387499651,
+      "radius_mm": 2,
+      "bend_radius_mm": 10,
+      "cad_wire_length_mm": 423.6957387499651,
+      "analytic_vs_cad_length_difference_mm": 0.0
+    },
+    "ComputerToUSB": {
+      "polyline_length_mm": 10.0,
+      "rounded_length_mm": 10.0,
+      "radius_mm": 2,
+      "bend_radius_mm": 8,
+      "cad_wire_length_mm": 10.0,
+      "analytic_vs_cad_length_difference_mm": 0.0
+    },
+    "RS485_USB_to_L": {
+      "polyline_length_mm": 296.86257377762456,
+      "rounded_length_mm": 295.17693305914196,
+      "radius_mm": 2,
+      "bend_radius_mm": 8,
+      "cad_wire_length_mm": 295.17693305914196,
+      "analytic_vs_cad_length_difference_mm": 0.0
+    },
+    "RS485_L_to_R": {
+      "polyline_length_mm": 336.5283853270081,
+      "rounded_length_mm": 329.66112655572647,
+      "radius_mm": 2,
+      "bend_radius_mm": 8,
+      "cad_wire_length_mm": 329.66112655572647,
+      "analytic_vs_cad_length_difference_mm": 0.0
+    },
+    "StopSignal": {
+      "polyline_length_mm": 97.82146478866296,
+      "rounded_length_mm": 94.21926995883732,
+      "radius_mm": 2,
+      "bend_radius_mm": 8,
+      "cad_wire_length_mm": 94.21926995883733,
+      "analytic_vs_cad_length_difference_mm": 1.4210854715202004e-14
+    }
+  },
+  "collision_threshold_mm3": 0.001,
+  "connection_exception_scope": "Only intersection portions inside declared connection boxes are exempt; all outside portions are failures.",
+  "battery_connector_route_must_disconnect_for_service": true,
+  "upper_service_height_mm": 190,
+  "tire_service_requires_chassis_support_or_lift": true,
+  "fixed_harness_connector_and_slack_fit_verified": false,
+  "not_checked": [
+    "Selected battery/adapter geometry, retention and removal mechanism",
+    "Actual USB-RS485B and other device dimensions, terminals, cooling and mounting",
+    "M0601 supplied connector bodies, bundle diameter, minimum bend radius and installation slack",
+    "Tire extraction/fit, fastening tool access and real maintenance procedure",
+    "Cable/clamp installation, current ratings, EMI, bus termination, ground reference and electrical stop circuit",
+    "Battery endurance, protection, regeneration and temperature"
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "source": "8836e0053df95dd16ce18dbefafb9d3512925b7c5d1f4d25acac7fe7f132c218",
+  "segment_checks": [
+    {
+      "edge": "sldprt:brep:edge#1388",
+      "start_end_error_mm": 0.0,
+      "radius_error_mm": 8.171241461241152e-14,
+      "curve_type": "<class 'Part.Circle'>",
+      "length_mm": 5.682658676443874
+    },
+    {
+      "edge": "sldprt:brep:edge#464",
+      "start_end_error_mm": 0.0,
+      "radius_error_mm": 2.2648549702353193e-14,
+      "curve_type": "<class 'Part.Circle'>",
+      "length_mm": 1.9619341136980024
+    },
+    {
+      "edge": "sldprt:brep:edge#480",
+      "start_end_error_mm": 0.0,
+      "radius_error_mm": 0,
+      "curve_type": "<class 'Part.Line'>",
+      "length_mm": 2.558903043150721
+    },
+    {
+      "edge": "sldprt:brep:edge#484",
+      "start_end_error_mm": 0.0,
+      "radius_error_mm": 0,
+      "curve_type": "<class 'Part.Line'>",
+      "length_mm": 8.100000000000009
+    },
+    {
+      "edge": "sldprt:brep:edge#504",
+      "start_end_error_mm": 3.829783502742862e-16,
+      "radius_error_mm": 1.3322676295501878e-15,
+      "curve_type": "<class 'Part.Circle'>",
+      "length_mm": 7.853981633974491
+    },
+    {
+      "edge": "sldprt:brep:edge#506",
+      "start_end_error_mm": 3.829783502742862e-16,
+      "radius_error_mm": 0,
+      "curve_type": "<class 'Part.Line'>",
+      "length_mm": 8.100000000000009
+    },
+    {
+      "edge": "sldprt:brep:edge#487",
+      "start_end_error_mm": 0.0,
+      "radius_error_mm": 0,
+      "curve_type": "<class 'Part.Line'>",
+      "length_mm": 2.558903043150739
+    },
+    {
+      "edge": "sldprt:brep:edge#476",
+      "start_end_error_mm": 0.0,
+      "radius_error_mm": 3.1308289294429414e-14,
+      "curve_type": "<class 'Part.Circle'>",
+      "length_mm": 1.9619341136979844
+    },
+    {
+      "edge": "sldprt:brep:edge#488",
+      "start_end_error_mm": 4.440892098500626e-16,
+      "radius_error_mm": 4.618527782440651e-14,
+      "curve_type": "<class 'Part.Circle'>",
+      "length_mm": 5.68265867644388
+    },
+    {
+      "edge": "sldprt:brep:edge#1443",
+      "start_end_error_mm": 4.440892098500626e-16,
+      "radius_error_mm": 1.0880185641326534e-14,
+      "curve_type": "<class 'Part.Circle'>",
+      "length_mm": 1.9619341136980142
+    },
+    {
+      "edge": "sldprt:brep:edge#500",
+      "start_end_error_mm": 0.0,
+      "radius_error_mm": 0,
+      "curve_type": "<class 'Part.Line'>",
+      "length_mm": 10.117806086301455
+    },
+    {
+      "edge": "sldprt:brep:edge#1439",
+      "start_end_error_mm": 0.0,
+      "radius_error_mm": 6.394884621840902e-14,
+      "curve_type": "<class 'Part.Circle'>",
+      "length_mm": 1.9619341136979978
+    },
+    {
+      "edge": "sldprt:brep:edge#1393",
+      "start_end_error_mm": 8.881784197001252e-16,
+      "radius_error_mm": 2.717825964282383e-13,
+      "curve_type": "<class 'Part.Circle'>",
+      "length_mm": 5.682658676443811
+    },
+    {
+      "edge": "sldprt:brep:edge#1411",
+      "start_end_error_mm": 8.881784197001252e-16,
+      "radius_error_mm": 7.66053886991358e-14,
+      "curve_type": "<class 'Part.Circle'>",
+      "length_mm": 1.9619341136980106
+    },
+    {
+      "edge": "sldprt:brep:edge#1390",
+      "start_end_error_mm": 5.551115123125783e-17,
+      "radius_error_mm": 0,
+      "curve_type": "<class 'Part.Line'>",
+      "length_mm": 10.11780608630152
+    },
+    {
+      "edge": "sldprt:brep:edge#475",
+      "start_end_error_mm": 5.551115123125783e-17,
+      "radius_error_mm": 4.796163466380676e-14,
+      "curve_type": "<class 'Part.Circle'>",
+      "length_mm": 1.9619341136979909
+    }
+  ],
+  "max_endpoint_error_mm": 8.881784197001252e-16,
+  "max_radius_error_mm": 2.717825964282383e-13,
+  "floor_after_holes_area_mm2": 191.2001255126497,
+  "saved_floor_mesh_vertex_count": 205,
+  "maximum_saved_mesh_vertex_outside_reconstructed_face_mm": 3.5106305650389992e-06,
+  "scope": "Native endpoints and radii verified. Does not certify manufacturing tolerances or full-body STEP translation."
+}

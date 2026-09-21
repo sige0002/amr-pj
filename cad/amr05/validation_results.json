@@ -1,0 +1,891 @@
+{
+  "status": "nominal_geometry_checks_only_not_manufacturing_release",
+  "part_objects": 161,
+  "reference_objects": 1,
+  "fastener_objects": 126,
+  "invalid_shapes": [],
+  "all_part_pair_count": 12880,
+  "bounding_box_candidate_boolean_count": 332,
+  "all_part_collisions": [],
+  "battery_reserved_space_collisions": [],
+  "collision_scope": "All modeled physical pairs including screws/nuts. >0.001 mm3 threshold. Battery keepout separately checked against all physical parts. Nominal thread-free shapes; not tolerance/tool/deformation/cable verification.",
+  "frame_LWH_mm": [
+    460.00000000000006,
+    300.0,
+    30.0
+  ],
+  "frame_bottom_top_z_mm": [
+    69.0,
+    99.0
+  ],
+  "assembled_mechanical_LWH_mm": [
+    460.00000000000006,
+    406.6,
+    109.6
+  ],
+  "direct_mount_face_gap_mm": {
+    "CustomMotorMountL": {
+      "Rail400_4": 0.0
+    },
+    "CustomMotorMountR": {
+      "Rail400_1": 0.0
+    },
+    "CasterAdapter": {
+      "Rail400_2": 0.0,
+      "Rail400_3": 0.0
+    },
+    "BatteryCradlePLA": {
+      "Rail400_2": 0.0,
+      "Rail400_3": 0.0
+    }
+  },
+  "drive_mount_spacers": 0,
+  "caster_mount_spacers": 0,
+  "ground_contacts_z_mm": {
+    "TireL": 0.0,
+    "TireR": 0.0,
+    "CasterTire": 0.0
+  },
+  "minimum_fixed_nonwheel_clearance_mm": 32.0,
+  "lowest_component": "BatteryCradlePLA",
+  "drive_track_mm": 349.0,
+  "clearances": [
+    {
+      "a": "CustomMotorMountL",
+      "b": "Rail400_4",
+      "mm": 0.0
+    },
+    {
+      "a": "CustomMotorMountL",
+      "b": "M0601MotorL",
+      "mm": 0.0
+    },
+    {
+      "a": "CustomMotorMountL",
+      "b": "TireL",
+      "mm": 3.0
+    },
+    {
+      "a": "Rail400_4",
+      "b": "TireL",
+      "mm": 3.0
+    },
+    {
+      "a": "MotorFaceBolt_0L",
+      "b": "CustomMotorMountL",
+      "mm": 0.0
+    }
+  ],
+  "caster_sweep_fixed_hits": [],
+  "caster_sweep_scope": "72 nominal orientations at 5 degree spacing against nearby fixed parts including fasteners; not continuous/tolerance proof.",
+  "drive_interfaces_mm": {
+    "fixed_face_to_wheel_center_assumed": 36.5,
+    "tire_width": 43,
+    "fixed_boss_to_case": 15,
+    "frame_to_tire_gap_assumed": 3,
+    "M2p5_screw_engagement_nominal": 4,
+    "M2p5_thread_depth_max": 5,
+    "custom_seat_depth": 9,
+    "custom_back_wall": 8,
+    "frame_flange": 5,
+    "source_motor_lead_pose_removed": true,
+    "tire_axial_stack_provisional": true
+  },
+  "hardware_installed": {
+    "HNTT6-6 slot nut": 44,
+    "M2.5x12 socket screw": 6,
+    "M6 large washer OD18 ID6.6 t1.6": 12,
+    "M6 plain hex nut": 4,
+    "M6 washer OD13 ID6.6 t1.6": 12,
+    "M6x10 socket screw": 8,
+    "M6x12 socket screw": 36,
+    "M6x16 socket screw": 4
+  },
+  "printed_parts": [
+    {
+      "file": "BatteryCradlePLA.stl",
+      "dimensions_mm": [
+        130.0,
+        160.0,
+        37.0
+      ],
+      "watertight": true,
+      "fits_P1S_256_cube": true,
+      "quantity": 1,
+      "solid_PLA_mass_kg": 0.1249828350310878
+    },
+    {
+      "file": "ElectronicsTrayPLA.stl",
+      "dimensions_mm": [
+        85.0,
+        180.0,
+        4.400000095367432
+      ],
+      "watertight": true,
+      "fits_P1S_256_cube": true,
+      "quantity": 1,
+      "solid_PLA_mass_kg": 0.04897946101865277
+    },
+    {
+      "file": "FrontElectronicsTrayPLA.stl",
+      "dimensions_mm": [
+        145.0,
+        170.0,
+        4.400000095367432
+      ],
+      "watertight": true,
+      "fits_P1S_256_cube": true,
+      "quantity": 1,
+      "solid_PLA_mass_kg": 0.07152266101865282
+    }
+  ],
+  "step_roundtrip": {
+    "is_valid": true,
+    "solid_count": 165,
+    "native_solid_count": 165,
+    "volume_difference_mm3": 0.10231797909364104,
+    "reference_battery_excluded": true,
+    "absolute_volume_tolerance_mm3": 1.0,
+    "relative_volume_difference": 4.4879706685628134e-08,
+    "relative_volume_tolerance": 1e-06
+  },
+  "mass": {
+    "mechanical_estimate_kg": 4.687808492626768,
+    "additional_electrical_budget_kg": 2.0999999999999996,
+    "estimated_complete_base_kg": 6.787808492626768,
+    "base_upper_budget_kg": 10,
+    "remaining_budget_kg": 3.212191507373232,
+    "within_upper_budget": true,
+    "note": "Estimate, not measured. PLA modeled solid. Equipment/guards budget does not establish fit; battery reference geometry is not counted as a purchased part.",
+    "breakdown": [
+      {
+        "part": "NFSL6-3030 2.2 m",
+        "kg": 1.672,
+        "basis": "manufacturer 0.76 kg/m"
+      },
+      {
+        "part": "M0601C_111 bare motors x2",
+        "kg": 0.97,
+        "basis": "manufacturer485g each; integrated driver/encoder/factory harness"
+      },
+      {
+        "part": "DDT-M0601C-TIRE kits x2",
+        "kg": 0.5,
+        "basis": "250g each engineering allowance; kit mass not published or measured"
+      },
+      {
+        "part": "HBLFSN6 x8",
+        "kg": 0.12,
+        "basis": "MISUMI official catalog 15 g each; bolts/nuts counted separately"
+      },
+      {
+        "part": "420G-R50",
+        "kg": 0.15,
+        "basis": "engineering allowance, not measured"
+      },
+      {
+        "part": "unmodeled grub screws / retaining hardware",
+        "kg": 0.03,
+        "basis": "allowance; modeled plain nuts counted separately"
+      },
+      {
+        "part": "battery retaining straps x2",
+        "kg": 0.04,
+        "basis": "allowance; unselected and not modeled"
+      },
+      {
+        "part": "JointA_NN120",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointA_NN120",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointB_NN120",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointB_NN120",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointA_NN50",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointA_NN50",
+        "kg": 0.004196587850408667,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointB_NN50",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointB_NN50",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointA_N50",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointA_N50",
+        "kg": 0.004196587850408667,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointB_N50",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointB_N50",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointA_N120",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointA_N120",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointB_N120",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointB_N120",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Gusset_N1N1",
+        "kg": 0.01430288325361952,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "Washer_GussetN1N10",
+        "kg": 0.0012374155409441907,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetBolt_N1N10",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Gusset_N1N10",
+        "kg": 0.00419658785040867,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Washer_GussetN1N11",
+        "kg": 0.0012374155409441904,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetBolt_N1N11",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Gusset_N1N11",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Gusset_N11",
+        "kg": 0.014302883253619485,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "Washer_GussetN110",
+        "kg": 0.0012374155409441907,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetBolt_N110",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Gusset_N110",
+        "kg": 0.00419658785040867,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Washer_GussetN111",
+        "kg": 0.0012374155409441904,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetBolt_N111",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Gusset_N111",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointA_PN120",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointA_PN120",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointB_PN120",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointB_PN120",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointA_PN50",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointA_PN50",
+        "kg": 0.004196587850408667,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointB_PN50",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointB_PN50",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointA_P50",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointA_P50",
+        "kg": 0.004196587850408667,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointB_P50",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointB_P50",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointA_P120",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointA_P120",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "JointB_P120",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_JointB_P120",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Gusset_1N1",
+        "kg": 0.014302883253619517,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "Washer_Gusset1N10",
+        "kg": 0.0012374155409441909,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetBolt_1N10",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Gusset_1N10",
+        "kg": 0.00419658785040867,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Washer_Gusset1N11",
+        "kg": 0.0012374155409441904,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetBolt_1N11",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Gusset_1N11",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Gusset_11",
+        "kg": 0.014302883253619489,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "Washer_Gusset110",
+        "kg": 0.0012374155409441909,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetBolt_110",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Gusset_110",
+        "kg": 0.00419658785040867,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Washer_Gusset111",
+        "kg": 0.0012374155409441904,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "GussetBolt_111",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Gusset_111",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CustomMotorMountL",
+        "kg": 0.10379003178528982,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "MountFrameBolt_52p5L",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Mount_52p5L",
+        "kg": 0.004196587850408667,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MountFrameBolt_127p5L",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Mount_127p5L",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorFaceBolt_0L",
+        "kg": 0.0007745253075729145,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorFaceBolt_1L",
+        "kg": 0.0007745253075729145,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorFaceBolt_2L",
+        "kg": 0.0007745253075729145,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CustomMotorMountR",
+        "kg": 0.10379003178528982,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "MountFrameBolt_52p5R",
+        "kg": 0.006362667601315409,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Mount_52p5R",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MountFrameBolt_127p5R",
+        "kg": 0.006362667601315407,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Mount_127p5R",
+        "kg": 0.004196587850408667,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorFaceBolt_0R",
+        "kg": 0.0007745253075729138,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorFaceBolt_1R",
+        "kg": 0.0007745253075729138,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "MotorFaceBolt_2R",
+        "kg": 0.0007745253075729138,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CasterAdapter",
+        "kg": 0.143924088038608,
+        "basis": "CAD volume x aluminum assumed density; threads omitted"
+      },
+      {
+        "part": "Washer_CasterFrame0",
+        "kg": 0.0012374155409441922,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CasterFrameBolt_0",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Caster_0",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Washer_CasterFrame1",
+        "kg": 0.0012374155409441922,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CasterFrameBolt_1",
+        "kg": 0.006362667601315408,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Caster_1",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Washer_CasterFrame2",
+        "kg": 0.0012374155409441941,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CasterFrameBolt_2",
+        "kg": 0.006362667601315409,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Caster_2",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Washer_CasterFrame3",
+        "kg": 0.0012374155409441941,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CasterFrameBolt_3",
+        "kg": 0.006362667601315409,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Caster_3",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CasterBolt_0",
+        "kg": 0.007250481685219881,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_CasterBolt_0",
+        "kg": 0.002214164522864753,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CasterBolt_1",
+        "kg": 0.007250481685219881,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_CasterBolt_1",
+        "kg": 0.0022141645228647526,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CasterBolt_2",
+        "kg": 0.007250481685219882,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_CasterBolt_2",
+        "kg": 0.0022141645228647535,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CasterBolt_3",
+        "kg": 0.007250481685219882,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "Nut_CasterBolt_3",
+        "kg": 0.0022141645228647535,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "BatteryCradlePLA",
+        "kg": 0.1249828350310878,
+        "basis": "CAD volume x PLA assumed density; threads omitted"
+      },
+      {
+        "part": "LargeWasher_Cradle0",
+        "kg": 0.0027664286854463477,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CradleBolt_0",
+        "kg": 0.006362667601315409,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Cradle_0",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "LargeWasher_Cradle1",
+        "kg": 0.0027664286854463477,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CradleBolt_1",
+        "kg": 0.006362667601315409,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Cradle_1",
+        "kg": 0.004196587850408667,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "LargeWasher_Cradle2",
+        "kg": 0.002766428685446347,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CradleBolt_2",
+        "kg": 0.006362667601315409,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Cradle_2",
+        "kg": 0.004196587850408666,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "LargeWasher_Cradle3",
+        "kg": 0.002766428685446347,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "CradleBolt_3",
+        "kg": 0.006362667601315409,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Cradle_3",
+        "kg": 0.004196587850408666,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "ElectronicsTrayPLA",
+        "kg": 0.04897946101865277,
+        "basis": "CAD volume x PLA assumed density; threads omitted"
+      },
+      {
+        "part": "LargeWasher_Electronics0",
+        "kg": 0.002766428685446342,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "ElectronicsBolt_0",
+        "kg": 0.005918760559363169,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Electronics_0",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "LargeWasher_Electronics1",
+        "kg": 0.0027664286854463416,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "ElectronicsBolt_1",
+        "kg": 0.005918760559363169,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Electronics_1",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "LargeWasher_Electronics2",
+        "kg": 0.0027664286854463434,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "ElectronicsBolt_2",
+        "kg": 0.00591876055936317,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Electronics_2",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "LargeWasher_Electronics3",
+        "kg": 0.0027664286854463434,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "ElectronicsBolt_3",
+        "kg": 0.00591876055936317,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_Electronics_3",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "FrontElectronicsTrayPLA",
+        "kg": 0.07152266101865282,
+        "basis": "CAD volume x PLA assumed density; threads omitted"
+      },
+      {
+        "part": "LargeWasher_Front0",
+        "kg": 0.0027664286854463434,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "FrontDeckBolt_0",
+        "kg": 0.00591876055936317,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_FrontDeck_0",
+        "kg": 0.004196587850408669,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "LargeWasher_Front1",
+        "kg": 0.0027664286854463434,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "FrontDeckBolt_1",
+        "kg": 0.00591876055936317,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_FrontDeck_1",
+        "kg": 0.004196587850408667,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "LargeWasher_Front2",
+        "kg": 0.002766428685446342,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "FrontDeckBolt_2",
+        "kg": 0.005918760559363169,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_FrontDeck_2",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "LargeWasher_Front3",
+        "kg": 0.0027664286854463416,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "FrontDeckBolt_3",
+        "kg": 0.005918760559363169,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      },
+      {
+        "part": "SlotNut_FrontDeck_3",
+        "kg": 0.004196587850408668,
+        "basis": "CAD volume x steel assumed density; threads omitted"
+      }
+    ]
+  },
+  "unverified": [
+    "Actual wire-bundle diameter, connector dimensions, minimum bend radius and 175+/-10 mm harness usable length",
+    "Selected battery/adapter geometry, terminal orientation, runtime and frame-anchored straps",
+    "Power-stop behavior, regenerated energy, protective devices and final wiring ratings",
+    "MISUMI official joint personal procurement and final delivered prices",
+    "PLA creep, print orientation and clamping retention",
+    "Tire wear life, material hardness, floor marking, loaded effective radius and turning resistance",
+    "Taobao motor revision must match public STEP and manufacturer mounting drawing",
+    "Custom seat tolerance chain / received motor fit / local ligaments / impact fatigue and 3030 joint slip",
+    "Tire kit axial installation datum and cover overlap not specified by public dimensions",
+    "Custom CNC bracket quotation, residual plate machining and import delivered cost",
+    "M0601C continuous low-speed temperature and torque at actual minimum bus voltage"
+  ]
+}

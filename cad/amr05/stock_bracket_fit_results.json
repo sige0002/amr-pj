@@ -1,0 +1,40 @@
+{
+  "source_representation": "Native SLDPRT saved display mesh, 2726 triangles; approximate collision volumes only",
+  "fixed_end_face_y_mm": 138,
+  "source_seat_depth_mm": 3,
+  "source_back_wall_mm": 7,
+  "stock_flat_back_y_mm": 131,
+  "original_frame_outer_face_y_mm": 150,
+  "outer_rail_inward_shift_needed_with_5mm_adapter_mm": 24,
+  "unchanged_frame_cases": [
+    {
+      "orientation": "Upright",
+      "rotation_deg": 0,
+      "min_z_mm": -39.650000000000006,
+      "max_z_mm": 75.35,
+      "approx_overlap_with_original_outer_rail_mm3": 205.7627471446997,
+      "meets_nominal_25mm_ground_clearance": false,
+      "fits_unchanged_frame": false
+    },
+    {
+      "orientation": "Sideways",
+      "rotation_deg": 90,
+      "min_z_mm": 15.349999999999989,
+      "max_z_mm": 85.35000000000002,
+      "approx_overlap_with_original_outer_rail_mm3": 7404.681193878514,
+      "meets_nominal_25mm_ground_clearance": false,
+      "fits_unchanged_frame": false
+    },
+    {
+      "orientation": "Inverted",
+      "rotation_deg": 180,
+      "min_z_mm": 25.35000000000001,
+      "max_z_mm": 140.35000000000002,
+      "approx_overlap_with_original_outer_rail_mm3": 7687.60614975692,
+      "meets_nominal_25mm_ground_clearance": true,
+      "fits_unchanged_frame": false
+    }
+  ],
+  "decision": "Custom compact metal bracket is the A4 quote candidate. No unmodified stock orientation tested fits the unchanged frame. Moving rails inward also requires redesigning official frame joints.",
+  "unproven": "No exact STEP conversion, load rating, tyre deformation or full continuous-angle fit proof."
+}

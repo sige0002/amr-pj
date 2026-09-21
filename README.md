@@ -1,55 +1,50 @@
 # amr-pj — 家庭向け小型AMR / 将来MoMa
 
-現行CADは**第一案改A3：DDSM115一体ホイール二輪＋後方キャスター**。Amazonの3030・300/400mm定尺と低床電池を維持し、FIT0185、継手、長い車軸、外付け軸受を置き換えた。ベルトと長い取付スペーサーは使わない。
+現行CADは**第一案改A4：M0601C_111二輪＋後方キャスター**。Amazonの3030・300/400mm定尺、元のフレーム配置、低床電池を維持する。公開ブラケットのモーター受け形状を基に、3030下面へ直接留める一体の金属金具を設計した。
 
-走行余裕を優先したCAD採用候補で、**交換タイヤの確実な調達先・摩耗寿命・取付部の実荷重検証は未確認**。設計理由、費用、未解決事項を各レビューに記録する。
+既製ブラケットは公開SLDPRTの保存メッシュで配置を比較し、現在のレールとの干渉を確認した。専用金具は見積用STEP・寸法図まで作成済み。加工費、購入ロットとのはめあい、実荷重・寿命は未確認。
 
-- [A3の説明・CAD・実画面](cad/amr04/README.ja.md)
-- [部品表](cad/amr04/BOM.csv) / [費用集計](cad/amr04/cost_summary.json) / [費用の根拠](cad/amr04/COST_REVIEW.ja.md)
-- [候補モーターの性能・費用・不採用理由](cad/amr04/MOTOR_COMPARISON.ja.md)
-- [タイヤ摩耗・交換性](cad/amr04/TIRE_WEAR.ja.md) / [取付寸法の一次資料](cad/amr04/DDSM115_INTERFACE.ja.md)
-- [金属マウントの独立レビュー](cad/amr04/MOUNT_REVIEW.ja.md)
-- [電池・配線・整備空間](cad/amr04/ELECTRICAL_PACKAGING.ja.md)
-- [形状・重量検査](cad/amr04/validation_results.json) / [駆動・静的支持・摩耗感度](cad/amr04/calculation_results.json)
+- [A4の設計・CAD・実画面](cad/amr05/README.ja.md)
+- [車体FCStd](cad/amr05/AMR01_M0601C_A4.FCStd) / [車体STEP](cad/amr05/AMR01_M0601C_A4.step)
+- [金具の見積用STEP](cad/amr05/M0601C_custom_mount_quote.step) / [寸法図PDF](cad/amr05/M0601C_custom_mount_quote.pdf) / [加工依頼仕様](cad/amr05/MANUFACTURING_RFQ.ja.md)
+- [BOM](cad/amr05/BOM.csv) / [費用の根拠と比較](cad/amr05/COST_REVIEW.ja.md) / [費用集計](cad/amr05/cost_summary.json)
+- [金具の独立レビュー](cad/amr05/MOUNT_REVIEW.ja.md) / [公開CADの抽出根拠](cad/amr05/BRACKET_SOURCE_REVIEW.ja.md)
+- [本体・タイヤ・交換](cad/amr05/M0601C_INTERFACE.ja.md) / [電池・配線・整備空間](cad/amr05/ELECTRICAL_PACKAGING.ja.md)
 
 | 設計条件・現行案 | 内容 |
 |---|---|
-| 主フレーム | MISUMI 3030、300/400mm定尺。組立460×300mm、純正接合HBLFSN6-SET |
-| 台車質量 | 電池・電装込み10kg以下。現行推計7.09kg、実測前 |
+| 主フレーム | 3030・400mm×4本＋300mm×2本、外形460×300mm、純正接合HBLFSN6-SET |
+| 台車質量 | 電池・電装込み10kg以下。推計6.79kg、未実測 |
 | 荷物・将来アーム | 荷物2kgとアーム系2kgは別枠、最大構成14kgで選定計算 |
-| 駆動 | DDSM115×2、100.7mmタイヤ、輪距349mm、後方50mm自在キャスター |
-| 初期速度 | 0.15m/s、角速度0.3rad/s。実機条件の確認前 |
-| 高さ | フレーム下面69mm、電池搭載面35mm、固定部最低地上高29mm |
-| 骨格外形 | 460×407×109.6mm。完成配置目標500×420×180mm |
-| PLA活用 | 低床電池クレードル、前後電装トレイ。主輪支持はt5金属部材 |
+| 駆動 | M0601C_111×2、100.7mm適合タイヤ、後方50mm自在キャスター |
+| 取付金具 | A6061-T6候補、90×30×34mm、同形2個。一体CNC加工の見積候補 |
+| 高さ | フレーム下面69mm、金具35mm、固定骨格最低32mm。配線予約は約28.35mm |
+| 骨格外形 | 仮のタイヤ組付け位置で460×406.6×109.6mm、輪距349mm |
+| PLA活用 | 低床電池クレードルと前後トレイ。主輪支持は金属 |
+| 配置検査 | 161部品・12,880ペアで公称体積干渉なし。工具軸・配線・整備空間も別検査 |
 
-| 初期予算 | A3 |
-|---|---:|
-| 自加工：購入・材料・送料枠 | **47,824円** |
-| 外注加工6,000円の未見積追加枠込み | **53,824円** |
+**費用は途中小計42,282円＋見積待ち分。** Taobao本体約7,000円/個、適合タイヤ2個を別購入する仮定。タイヤと必要付属品の同梱を確認できれば途中小計33,042円。専用金具の加工・納入送料、Taobao諸費は未見積。共通板材を自加工する条件で、板材も外注する場合は追加見積。電池・主計算機・電源保護・実配線等は別予算であり、完成機総額ではない。
 
-モーター二輪・通信インターフェース込み。参考価格と未見積枠を含み、電池・充電器・主計算機・電源保護・非常停止回路・実配線・完成ガード・荷台・アームは別。純正金具の個人購入経路も未確定。タイヤ補修費を無料とは扱わず、適合部品の調達が確認できるまで寿命費用は未見積とする。
+![M0601C_111のA4・FreeCAD実画面](cad/amr05/cad-screen-underside.png)
 
-![DDSM115のA3・FreeCAD実画面](cad/amr04/cad-screen-isometric.png)
+![専用金属金具・FreeCAD実画面](cad/amr05/cad-screen-drive-module.png)
 
-![下面の金属マウントと低床電池・FreeCAD実画面](cad/amr04/cad-screen-underside.png)
-
-茶色の半透明箱は未選定電池の予約空間。CADは公称寸法による設計検討で、実部品の公差・変形・熱・寿命まで認定した完成機ではない。
+茶色の半透明箱は未選定電池の予約空間。本体は販売元案内のSTEP、タイヤとカバーは公開外形の簡略形状。タイヤの軸方向組付け位置が未確認のため全幅・輪距は暫定。公称CADの合格は、製作公差・衝撃・熱・寿命の認定ではない。
 
 ## 再計算
 
 ```sh
-python3 cad/amr04/calculate_cost.py
-python3 cad/amr04/calculate_design.py
-python3 cad/amr04/calculate_maintenance.py
-python3 -m unittest discover -s cad/amr02 -p test_calculate_design.py -v
+python3 cad/amr05/fetch_vendor_cad.py
+python3 cad/amr05/calculate_cost.py --require-cad --self-test
+python3 cad/amr05/calculate_design.py
 ```
 
-FreeCAD内での再生成は[A3 README](cad/amr04/README.ja.md)を参照。
+FreeCADでの再生成は[A4 README](cad/amr05/README.ja.md)を参照。
 
 ## 比較履歴
 
-- [第一案改A2：FIT0185・スペーサー撤去](cad/amr03/README.ja.md)
+- [A3：DDSM115・一体ホイール検討](cad/amr04/README.ja.md)
+- [A2：FIT0185・スペーサー撤去](cad/amr03/README.ja.md)
 - [第二案B・却下したベルト案C](cad/amr02/README.ja.md)
 - [元の第一案A](cad/amr01/README.ja.md)
 - [第一案の基礎設計書](docs/amr-01/DESIGN.ja.md) / [同資料ZIP](archives/amr_v0_4_1.zip)

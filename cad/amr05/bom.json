@@ -1,0 +1,723 @@
+{
+  "version": "0.8.0",
+  "design": "AMR01_M0601C_A4",
+  "checked_on": "2026-09-21",
+  "currency": "JPY",
+  "all_amounts_include_tax": null,
+  "amount_basis_note_ja": "国内表示は税込参考。Taobao約7000円はユーザー提示の円換算仮枠で税・送料・輸入諸費未確認。未見積はnullとし税込確定総額を出さない。",
+  "scope": "M0601C_111×2、初回タイヤ、製作ブラケット2個、共通機械骨格/PLA/USB通信/ストラップの初期購入・製作予算。基準はTaobao本体約7000円/個＋初回タイヤ別購入。製作ブラケットだけ外注し残存板は自加工する条件と、残存板も外注する条件を分ける。電池・主計算機・電源保護・車内配線等の未選定電装は別予算。未発注。",
+  "default_scenario": "custom_taobao_bare",
+  "common_item_ids": [
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "E01",
+    "E02",
+    "C01",
+    "P01",
+    "P03",
+    "P04",
+    "H01",
+    "H02"
+  ],
+  "price_kinds_ja": {
+    "observed_carried_from_A3": "A3の2026-09-20価格記録を引継ぎ、今回は再調査していない。",
+    "observed_2026_09_21": "2026-09-21に直接確認した国内一次販売ページの税込表示。未発注/在庫未確保。",
+    "manufacturer_catalog_reference": "2026年7月の公式価格表を2026-09-20に確認した第二案の記録から引継ぎ。税換算参考値で、個人購入・請求単価・送料は未確定。",
+    "allowance": "材料・消費材・購入パック等の予算仮枠。確定販売価格ではない。",
+    "user_allowance": "ユーザー提示の約7000円/個という計画仮枠。対象商品・付属・税・輸入諸費は未確認。",
+    "quote_pending": "必要な見積が未取得。nullを0円として集計しない。"
+  },
+  "items": [
+    {
+      "id": "F01",
+      "name": "MISUMI NFSL6-3030-400 4本組",
+      "packs": 1,
+      "pieces_per_pack": 4,
+      "used": 4,
+      "pack_price_jpy": 1952,
+      "price_kind": "observed_carried_from_A3",
+      "url": "https://www.amazon.co.jp/dp/B0DKF2CCW3",
+      "note": "切断不要。左右外周2本と内部2本。",
+      "quantity_unit": "本",
+      "procurement_status": "未発注・受入確認待ち",
+      "tax_status": "tax_included_reference"
+    },
+    {
+      "id": "F02",
+      "name": "MISUMI NFSL6-3030-300 4本組",
+      "packs": 1,
+      "pieces_per_pack": 4,
+      "used": 2,
+      "pack_price_jpy": 1467,
+      "price_kind": "observed_carried_from_A3",
+      "url": "https://www.amazon.co.jp/dp/B0DKDZ8G9G",
+      "note": "切断不要。前後各1本、予備2本も購入費に含む。",
+      "quantity_unit": "本",
+      "procurement_status": "未発注・受入確認待ち",
+      "tax_status": "tax_included_reference"
+    },
+    {
+      "id": "F03",
+      "name": "MISUMI HBLFSN6-SET 純正6シリーズ接合セット",
+      "packs": 8,
+      "pieces_per_pack": 1,
+      "used": 8,
+      "pack_price_jpy": 192.5,
+      "price_kind": "manufacturer_catalog_reference",
+      "url": "https://jp.misumi-ec.com/vona2/detail/110300442340/",
+      "note": "2026年7月の公式表: 本体78円+SET97円=税別175円/組。8組×175×1.10=1540円の参考換算。各組にCBM6-12×2とHNTT6-6×2を含む。請求時の丸め・個人購入経路・送料は未確定。第二案で確認した参考値を引継ぎ、この作業で価格を再照合していない。",
+      "quantity_unit": "組",
+      "procurement_status": "個人購入経路・納入総額未確定",
+      "tax_status": "tax_included_reference"
+    },
+    {
+      "id": "F04",
+      "name": "MISUMI HNTT6-6 追加28個分の予算",
+      "packs": 1,
+      "pieces_per_pack": 28,
+      "used": 28,
+      "pack_price_jpy": 1200,
+      "price_kind": "allowance",
+      "url": "https://jp.misumi-ec.com/vona2/detail/110302610850/",
+      "note": "全44個=接合16+ガセット8+製作モーターブラケット4+キャスター板4+低床クレードル4+後部電装4+前部電装4。SET付属16個を引き追加28個。1200円は数量分仮枠で販売パック未確認。既製ブラケット比較案の再配置数量は未確定。",
+      "quantity_unit": "式（28個分仮枠）",
+      "procurement_status": "個人購入経路・販売単位・現価格未確定",
+      "tax_status": "tax_included_planning_allowance"
+    },
+    {
+      "id": "E01",
+      "name": "Devantech USB-RS485B 通信インターフェース",
+      "packs": 1,
+      "pieces_per_pack": 1,
+      "used": 1,
+      "pack_price_jpy": 4400,
+      "price_kind": "observed_carried_from_A3",
+      "url": "https://www.elefine.jp/SHOP/USB-RS485.html",
+      "note": "2026-09-20の税込表示4400円。USBケーブル別売のためE02へ別計上。通常送料660円をS05へ計上。M0601C_111との実機通信・終端・配線・制御ソフトは未検証。主計算機や電源を含まない。",
+      "quantity_unit": "個",
+      "procurement_status": "予算選定・未発注。確認時在庫わずか表示。最安品との主張ではない",
+      "tax_status": "tax_included_reference"
+    },
+    {
+      "id": "E02",
+      "name": "USB-RS485Bと主計算機を接続するUSBケーブル予算",
+      "packs": 1,
+      "pieces_per_pack": 1,
+      "used": 1,
+      "pack_price_jpy": 500,
+      "price_kind": "allowance",
+      "url": null,
+      "note": "USB-RS485BにはUSBケーブルが付属しないため500円を仮置き。機器側端子・主計算機側端子・長さを確定後、実商品の購入単位全額に更新する。RS485側の車内配線や電源配線は含まない。",
+      "quantity_unit": "本相当",
+      "procurement_status": "端子・長さ・採用品・販売価格未確認",
+      "tax_status": "tax_included_planning_allowance"
+    },
+    {
+      "id": "C01",
+      "name": "ハンマーキャスター 420G-R50",
+      "packs": 1,
+      "pieces_per_pack": 1,
+      "used": 1,
+      "pack_price_jpy": 373,
+      "price_kind": "observed_carried_from_A3",
+      "url": "https://www.tanaka-km.com/view/item/000000036665",
+      "note": "Aの販売情報を引継ぎ: 径50/幅20/高さ65、座59×47、穴ピッチ46×35、トレール16、許容荷重300Nの公称値。段差走行能力を認定する値ではない。個人購入可としたAの販売店を継続候補とし、本州送料650円を別計上。6mm取付スペーサーは撤去。",
+      "quantity_unit": "個",
+      "procurement_status": "未発注・受入確認待ち",
+      "tax_status": "tax_included_reference"
+    },
+    {
+      "id": "P01",
+      "name": "キャスター板用 A5052 t4 素材予算",
+      "packs": 1,
+      "pieces_per_pack": 1,
+      "used": 1,
+      "pack_price_jpy": 900,
+      "price_kind": "allowance",
+      "url": null,
+      "note": "完成板80×170×t4を1枚。900円はこの1枚を切り出す購入素材分の仮枠で、完成加工価格ではない。販売寸法・最小注文単位・切りしろ・つかみ代を確認して更新する。旧200角から車軸板2枚を作る構成は廃止。",
+      "quantity_unit": "式（1枚切出し素材相当）",
+      "procurement_status": "販売単位・素材価格・切出し条件未見積",
+      "tax_status": "tax_included_planning_allowance"
+    },
+    {
+      "id": "P03",
+      "name": "A5052板 t3 150x150mm 素材予算",
+      "packs": 1,
+      "pieces_per_pack": 1,
+      "used": 1,
+      "pack_price_jpy": 500,
+      "price_kind": "allowance",
+      "url": null,
+      "note": "Aの素材仮枠500円を維持。60×60直角三角ガセット4枚。販売単位と加工条件は未確定。",
+      "quantity_unit": "枚相当",
+      "procurement_status": "販売単位・価格・加工条件未確認",
+      "tax_status": "tax_included_planning_allowance"
+    },
+    {
+      "id": "P04",
+      "name": "低床電池クレードル・前後電装トレイ用PLA 消費材料予算",
+      "packs": 1,
+      "pieces_per_pack": 1,
+      "used": 1,
+      "pack_price_jpy": 600,
+      "price_kind": "allowance",
+      "url": null,
+      "note": "既所有PLAの300g相当・600円枠。クレードル130×160×37、後部85×180×4.4、前部145×170×4.4mm各1点。CAD充実PLA推計は合計約245.5gで、実スライス量・再印刷分は未確認。全点P1S公称256mm角内。電池形状は予約空間で実電池の適合を意味しない。新規スプール購入時は販売単位全額へ更新。プリンター・工具・作業時間・電気代は含まない。",
+      "quantity_unit": "式（消費分）",
+      "procurement_status": "既所有PLA使用仮定・実スライス量未確認",
+      "tax_status": "tax_included_planning_allowance"
+    },
+    {
+      "id": "H01",
+      "name": "追加M2.5/M6ねじ・一般ナット・ワッシャ 一式予算",
+      "packs": 1,
+      "pieces_per_pack": 1,
+      "used": 1,
+      "pack_price_jpy": 2300,
+      "price_kind": "allowance",
+      "url": null,
+      "note": "A3の2300円枠を維持。予定追加数はM2.5×12を6本、M6×10を8本、M6×12を20本、M6×16を4本、M6一般ナット4個、M6通常ワッシャ12枚・大径12枚。A3のアングル/キー用M4ねじ・ナット・ワッシャ各12点は撤去。使用数減少から販売パック代が減るとは推定しない。SET付属M6×12を16本、溝ナットF04、タイヤキット付属ねじは重複計上しない。最終fasteners.csvと照合済み。",
+      "quantity_unit": "式",
+      "procurement_status": "A4 CAD数量照合済み・購入パックと単価は未見積",
+      "tax_status": "tax_included_planning_allowance"
+    },
+    {
+      "id": "H02",
+      "name": "電池固定ストラップ2本分の予算",
+      "packs": 1,
+      "pieces_per_pack": 2,
+      "used": 2,
+      "pack_price_jpy": 500,
+      "price_kind": "allowance",
+      "url": null,
+      "note": "低床クレードルに電池を固定する2本分の仮枠。幅・長さ・金具・締付方法・販売単位は未選定で、実在する2本組商品の価格ではない。電池やアダプターの価格は含まない。実電池に合わせて保持方法を確定する。",
+      "quantity_unit": "式（2本分仮枠）",
+      "procurement_status": "採用品・販売単位・保持適合未確認",
+      "tax_status": "tax_included_planning_allowance"
+    },
+    {
+      "id": "D01",
+      "name": "M0601C_111 Taobao購入想定",
+      "packs": 2,
+      "pieces_per_pack": 1,
+      "used": 2,
+      "pack_price_jpy": 7000,
+      "price_kind": "user_allowance",
+      "url": null,
+      "note": "ユーザー提示の約7000円/個を円換算の仮枠とする。対象URL・選択SKU・同一仕様・タイヤ/カバー/ねじ/ケーブル付属・送料・代行/輸入諸費は未確認。基準は本体のみと仮定し、初回タイヤをD02へ別計上。国内販売税込単価とは扱わない。",
+      "quantity_unit": "個",
+      "procurement_status": "ユーザー仮枠・対象商品/付属品/着荷総額未確認",
+      "tax_status": "unverified_user_estimate"
+    },
+    {
+      "id": "D02",
+      "name": "DDT-M0601C-TIRE 初回装着用タイヤキット",
+      "packs": 2,
+      "pieces_per_pack": 1,
+      "used": 2,
+      "pack_price_jpy": 4620,
+      "price_kind": "observed_2026_09_21",
+      "url": "https://www.switch-science.com/products/9203",
+      "note": "M0601C_111への適合記載。1キットにタイヤ1、カバー1、ねじ3。2輪分9240円を同時注文する場合は通常送料無料。初回装着分で、将来交換用の予備キットではない。Taobao品に適合する一式が付属すると確認できた場合のみ初回別購入を除く。",
+      "quantity_unit": "キット",
+      "procurement_status": "確認時在庫6表示・未発注/未確保。輸入品の型式/版と適合は受入確認",
+      "tax_status": "tax_included_reference"
+    },
+    {
+      "id": "D03",
+      "name": "M0601C_111 国内販売価格の比較用本体",
+      "packs": 2,
+      "pieces_per_pack": 1,
+      "used": 2,
+      "pack_price_jpy": 14410,
+      "price_kind": "observed_2026_09_21",
+      "url": "https://www.switch-science.com/products/7646",
+      "note": "国内比較用の本体価格。初回タイヤキットD02を別計上。D01と排他的な比較行で、両方を購入する意味ではない。",
+      "quantity_unit": "個",
+      "procurement_status": "確認時在庫0/売切れ・比較価格のみ",
+      "tax_status": "tax_included_reference"
+    },
+    {
+      "id": "Q01",
+      "name": "A6061-T6 低背一体Lブラケット 左右2個の製作見積",
+      "packs": 1,
+      "pieces_per_pack": 2,
+      "used": 2,
+      "pack_price_jpy": null,
+      "price_kind": "quote_pending",
+      "url": null,
+      "note": "同形状2個を回転して左右に配置。完成包絡90×30×34mm、フランジ90×30×5、web60×17×34、特殊固定受けpocket深さ9mm/背面8mm。最新custom_mount_dimensions.jsonとSTEPを対象に、A6061-T6材料・CNC加工・バリ取り込みの2個一式を見積もる。完成形状寸法は購入ブランク寸法ではない。実際の見積範囲を確認し材料込みなら素材代を別加算しない。未見積を0円や旧加工6000円で代用しない。送料S08・残存板加工K01とは範囲を分ける。",
+      "quantity_unit": "式（同形状2個）",
+      "procurement_status": "CAD見積用形状作成済み・見積未取得/依頼未送信。寸法公差と受入モーター適合は未確定",
+      "tax_status": "unknown_quote_tax_basis",
+      "quote_requested_scope": [
+        "material_A6061_T6",
+        "CNC_machining",
+        "deburring"
+      ],
+      "quoted_scope": null,
+      "quote_geometry_sources": [
+        "M0601C_custom_mount_quote.step",
+        "custom_mount_dimensions.json"
+      ]
+    },
+    {
+      "id": "B01",
+      "name": "DDT-M0601C-BRACKET 既製品の比較案",
+      "packs": 2,
+      "pieces_per_pack": 1,
+      "used": 2,
+      "pack_price_jpy": 6050,
+      "price_kind": "observed_2026_09_21",
+      "url": "https://www.switch-science.com/products/9204",
+      "note": "国内販売額12100円/2個。製作Q01とは排他的。3030へ配置する取付板Q02を別計上。内容物欄はブラケット1個のみ、ねじ付属は記載なし。既製品案の配置・幅・地上高・締結数量は設計比較中。",
+      "quantity_unit": "個",
+      "procurement_status": "確認時在庫6表示・未発注。A4主案の購入行ではない",
+      "tax_status": "tax_included_reference"
+    },
+    {
+      "id": "Q02",
+      "name": "既製ブラケット用3030取付板の材料・穴加工 見積待ち",
+      "packs": 1,
+      "pieces_per_pack": 2,
+      "used": 2,
+      "pack_price_jpy": null,
+      "price_kind": "quote_pending",
+      "url": null,
+      "note": "既製B01を3030へ置く比較案の取付板2枚一式。形状/板厚未確定。購入素材と穴加工・バリ取りの見積で置換し、既製品代だけで完成扱いしない。素材配送はS03の暫定枠を更新し重複加算を避ける。",
+      "quantity_unit": "式（2枚）",
+      "procurement_status": "比較案の形状・材質・加工・金額未確定",
+      "tax_status": "unknown_quote_tax_basis",
+      "quote_requested_scope": [
+        "adapter_plate_material",
+        "hole_machining",
+        "deburring"
+      ],
+      "quoted_scope": null
+    }
+  ],
+  "shipping": [
+    {
+      "id": "S02",
+      "name": "タナカ金物 本州配送",
+      "amount_jpy": 650,
+      "kind": "observed_condition_carried_from_A",
+      "note": "Aの本州・4900円未満条件を引継ぎ。配送先・決済条件で更新。",
+      "tax_status": "tax_included_reference_or_allowance"
+    },
+    {
+      "id": "S03",
+      "name": "Amazon・素材の追加送料枠",
+      "amount_jpy": 1000,
+      "kind": "allowance_carried_from_A",
+      "note": "A3の1000円枠を共通フレーム/残存板材の配送へ暫定維持。既製比較案の取付板素材配送も同枠を更新する。製作Q01の配送はS08へ分ける。発注先・口数は未確定で、同じ費用を二重加算しない。",
+      "tax_status": "tax_included_reference_or_allowance"
+    },
+    {
+      "id": "S04",
+      "name": "純正接合部・追加溝ナットの送料追加枠",
+      "amount_jpy": 500,
+      "kind": "allowance",
+      "note": "個人購入経路未確定のため500円を仮置き。実送料や購入可能性を確認した数字ではない。複数配送や手数料が生じる場合は枠を差替え、同じ費用を二重加算しない。",
+      "tax_status": "tax_included_reference_or_allowance"
+    },
+    {
+      "id": "S05",
+      "name": "エレファイン USB-RS485B 通常配送",
+      "amount_jpy": 660,
+      "kind": "observed_standard_condition_2026_09_20",
+      "url": "https://www.elefine.jp/hpgen/HPB/shop/business.html",
+      "note": "通常送料660円を適用した予算。大型品・配送先・決済方法などの最終条件は注文時確認。代引等の任意手数料は含まない。",
+      "tax_status": "tax_included_reference_or_allowance"
+    },
+    {
+      "id": "S06",
+      "name": "国内モーター/タイヤ/既製ブラケット 通常配送",
+      "amount_jpy": 0,
+      "kind": "observed_free_shipping_condition_2026_09_21",
+      "tax_status": "tax_included_reference",
+      "url": "https://www.switch-science.com/policies/shipping-policy",
+      "note": "当該国内品の同時注文小計8000円以上を適用。タイヤ2個だけでも9240円。国内注文がないタイヤ付属Taobao＋製作案にはこの行を適用しない。"
+    },
+    {
+      "id": "S07",
+      "name": "Taobaoの国内外送料・代行/輸入諸費",
+      "amount_jpy": null,
+      "kind": "quote_pending",
+      "tax_status": "unverified",
+      "url": null,
+      "note": "注文経路、送り先、商品付属/梱包と円換算を確認して総額を更新する。7000円/個に含まれるとは推定せず、無料にも置かない。"
+    },
+    {
+      "id": "S08",
+      "name": "製作ブラケットの納入送料",
+      "amount_jpy": null,
+      "kind": "quote_pending",
+      "tax_status": "unknown_quote_tax_basis",
+      "url": null,
+      "note": "製作見積未取得。Q01に含む見積であることを確認したら、包含を記録し追加額0円へ更新。確認前に無料としない。"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "custom_taobao_bare",
+      "mount_variant": "custom",
+      "motor_source": "taobao",
+      "tyre_condition": "bare",
+      "item_ids": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "E01",
+        "E02",
+        "C01",
+        "P01",
+        "P03",
+        "P04",
+        "H01",
+        "H02",
+        "D01",
+        "D02",
+        "Q01"
+      ],
+      "shipping_ids": [
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08"
+      ],
+      "condition_ja": "基準：タイヤ別購入。Taobao価格と着荷総額は未確認。"
+    },
+    {
+      "id": "custom_taobao_included",
+      "mount_variant": "custom",
+      "motor_source": "taobao",
+      "tyre_condition": "included",
+      "item_ids": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "E01",
+        "E02",
+        "C01",
+        "P01",
+        "P03",
+        "P04",
+        "H01",
+        "H02",
+        "D01",
+        "Q01"
+      ],
+      "shipping_ids": [
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S07",
+        "S08"
+      ],
+      "condition_ja": "比較条件。付属タイヤ一式の適合が確認できた場合だけ有効。Taobao価格と着荷総額は未確認。"
+    },
+    {
+      "id": "custom_domestic_bare",
+      "mount_variant": "custom",
+      "motor_source": "domestic",
+      "tyre_condition": "bare",
+      "item_ids": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "E01",
+        "E02",
+        "C01",
+        "P01",
+        "P03",
+        "P04",
+        "H01",
+        "H02",
+        "D03",
+        "D02",
+        "Q01"
+      ],
+      "shipping_ids": [
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S08"
+      ],
+      "condition_ja": "比較条件。国内モーター欠品のため価格比較のみ。"
+    },
+    {
+      "id": "stock_taobao_bare",
+      "mount_variant": "stock",
+      "motor_source": "taobao",
+      "tyre_condition": "bare",
+      "item_ids": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "E01",
+        "E02",
+        "C01",
+        "P01",
+        "P03",
+        "P04",
+        "H01",
+        "H02",
+        "D01",
+        "D02",
+        "B01",
+        "Q02"
+      ],
+      "shipping_ids": [
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07"
+      ],
+      "condition_ja": "比較条件。Taobao価格と着荷総額は未確認。"
+    },
+    {
+      "id": "stock_taobao_included",
+      "mount_variant": "stock",
+      "motor_source": "taobao",
+      "tyre_condition": "included",
+      "item_ids": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "E01",
+        "E02",
+        "C01",
+        "P01",
+        "P03",
+        "P04",
+        "H01",
+        "H02",
+        "D01",
+        "B01",
+        "Q02"
+      ],
+      "shipping_ids": [
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07"
+      ],
+      "condition_ja": "比較条件。付属タイヤ一式の適合が確認できた場合だけ有効。Taobao価格と着荷総額は未確認。"
+    },
+    {
+      "id": "stock_domestic_bare",
+      "mount_variant": "stock",
+      "motor_source": "domestic",
+      "tyre_condition": "bare",
+      "item_ids": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "E01",
+        "E02",
+        "C01",
+        "P01",
+        "P03",
+        "P04",
+        "H01",
+        "H02",
+        "D03",
+        "D02",
+        "B01",
+        "Q02"
+      ],
+      "shipping_ids": [
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06"
+      ],
+      "condition_ja": "比較条件。国内モーター欠品のため価格比較のみ。"
+    }
+  ],
+  "fabrication": {
+    "residual_plate_work": {
+      "id": "K01",
+      "name": "残るキャスター板・ガセットの加工外注追加",
+      "amount_jpy": null,
+      "kind": "quote_pending",
+      "tax_status": "unknown_quote_tax_basis",
+      "note": "共通費に含む板素材の切断/穴加工/バリ取り/必要な外注配送。材料代・製作Q01・既製案Q02の材料加工代は重複しない。自加工条件では自己作業と既所有工具を前提とし、新規工具費は別。"
+    },
+    "removed_A3_fabrication_allowance_jpy": 6000,
+    "note": "旧6000円は引き継がない。Q01/Q02と共通残存板K01の作業範囲を分けて見積を更新する。"
+  },
+  "quantity_checks": {
+    "slot_nuts_total": 44,
+    "slot_nuts_included_in_sets": 16,
+    "slot_nuts_additional": 28,
+    "slot_nuts_by_use": {
+      "frame_joints": 16,
+      "gussets": 8,
+      "caster_plate": 4,
+      "low_battery_cradle": 4,
+      "rear_electronics_tray": 4,
+      "front_electronics_tray": 4,
+      "custom_motor_brackets": 4
+    },
+    "kp08_used": 0,
+    "separate_axles_used": 0,
+    "couplers_used": 0,
+    "drive_spacers_used": 0,
+    "caster_spacers_used": 0,
+    "caster_t4_plate_blank_LW_mm_count": [
+      [
+        80,
+        170,
+        1
+      ]
+    ],
+    "gusset_t3_right_triangle_leg_mm_count": [
+      [
+        60,
+        60,
+        4
+      ]
+    ],
+    "printed_parts_planned_LWH_mm_count": [
+      [
+        130,
+        160,
+        37,
+        1
+      ],
+      [
+        85,
+        180,
+        4.4,
+        1
+      ],
+      [
+        145,
+        170,
+        4.4,
+        1
+      ]
+    ],
+    "printed_parts_CAD_solid_PLA_mass_kg": 0.24548495706839338,
+    "PLA_consumption_allowance_g": 300,
+    "battery_straps_planned": 2,
+    "fastener_source": "fasteners.csv",
+    "fastener_status_ja": "最終CADのfasteners.csv/validation_results.jsonと照合済み。溝ナット44個、一般締結材の追加66点。購入パック単価は未見積。タイヤキット付属カバーねじはキット費に含み一般締結予算へ重複計上しない。",
+    "fasteners": [
+      {
+        "specification": "HNTT6-6 slot nut",
+        "installed_quantity": 44,
+        "included_in_HBLFSN6_SET": 16,
+        "additional_installed_quantity": 28
+      },
+      {
+        "specification": "M2.5x12 socket screw",
+        "installed_quantity": 6,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 6
+      },
+      {
+        "specification": "M6 large washer OD18 ID6.6 t1.6",
+        "installed_quantity": 12,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 12
+      },
+      {
+        "specification": "M6 plain hex nut",
+        "installed_quantity": 4,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 4
+      },
+      {
+        "specification": "M6 washer OD13 ID6.6 t1.6",
+        "installed_quantity": 12,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 12
+      },
+      {
+        "specification": "M6x10 socket screw",
+        "installed_quantity": 8,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 8
+      },
+      {
+        "specification": "M6x12 socket screw",
+        "installed_quantity": 36,
+        "included_in_HBLFSN6_SET": 16,
+        "additional_installed_quantity": 20
+      },
+      {
+        "specification": "M6x16 socket screw",
+        "installed_quantity": 4,
+        "included_in_HBLFSN6_SET": 0,
+        "additional_installed_quantity": 4
+      }
+    ],
+    "M0601C_111_used": 2,
+    "initial_tyre_kits_planned": 2,
+    "custom_brackets_count": 2,
+    "custom_bracket_material": "A6061-T6",
+    "custom_bracket_same_part_rotated": true,
+    "custom_bracket_finished_LWH_mm": [
+      90,
+      30,
+      34
+    ],
+    "custom_flange_LWH_mm": [
+      90,
+      30,
+      5
+    ],
+    "custom_web_LWH_mm": [
+      60,
+      17,
+      34
+    ],
+    "special_pocket_depth_mm": 9,
+    "custom_bracket_rear_wall_mm": 8
+  },
+  "procurement_note_ja": "モーター選定に従う設計候補。国内本体は欠品、Taobao商品URL・付属品・着荷額は未確認。ブラケット製作依頼は未送信。",
+  "excluded_unpriced_items_ja": [
+    "電池・アダプター（予約空間のみ）",
+    "主計算機・センサー・冷却",
+    "電源変換・過電流保護・非常停止",
+    "車内の電源/RS485配線・コネクター・終端部品",
+    "必要に応じた電源スイッチ/状態表示等の制御器",
+    "完成用ガード・荷台・将来アーム",
+    "新規工具・自己作業費・印刷電気代",
+    "実機試験で追加する対策部品",
+    "将来交換タイヤ・工賃等の維持費（別比較）"
+  ],
+  "contingency_fraction": 0.1,
+  "maintenance": {
+    "source": "https://www.switch-science.com/products/9203",
+    "tyre_kit_each_jpy": 4620,
+    "pair_replacement_each_event_jpy": 9240,
+    "pair_replacement_two_events_jpy": 18480,
+    "single_replacement_shipping_jpy": 650,
+    "note": "初回D02とは別の交換費。左右同時注文で通常送料無料。価格・供給期間・寿命・工賃は将来保証しない。Taobao品と補修キットの適合確認が必要。"
+  },
+  "budget_note_ja": "必要費目にnullがある間は総額・A3との総差額・10%予備費込み総額を未定とする。参考価格と仮枠の途中小計を台車完成額にしない。既製と製作、材料込み見積と別素材、初回タイヤと予備交換タイヤを二重計上しない。電装除外費用は0円ではない。"
+}

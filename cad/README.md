@@ -1,6 +1,6 @@
 # FreeCAD + Codex MCP
 
-AMRの現行案は[DDSM115の第一案改A3](amr04/README.ja.md)です。3030フレームと低床電池を維持し、モーター・継手・外付け車軸/軸受を一体ホイールへ置き換えました。FCStd・STEP・実CAD画面・PLA部品STL・費用・検証結果を収録しています。タイヤ補修部品の調達と実機検証は未完了。[A2](amr03/README.ja.md)、[第一案A](amr01/README.ja.md)、[第二案B・ベルト案C](amr02/README.ja.md)は比較履歴です。
+AMRの現行案は[M0601C_111の第一案改A4](amr05/README.ja.md)です。3030と低床電池を維持し、公開ブラケットの受け形状を参照した専用金属金具へ変更しました。FCStd・STEP・実CAD画面・見積用寸法図・BOM・検証結果を収録しています。加工費と実機のはめあい・荷重検証は未完了。[A3](amr04/README.ja.md)、[A2](amr03/README.ja.md)、[第一案A](amr01/README.ja.md)、[第二案B・ベルト案C](amr02/README.ja.md)は比較履歴です。
 
 導入日: 2026-09-20。Ubuntu 24.04 / ARM64。
 

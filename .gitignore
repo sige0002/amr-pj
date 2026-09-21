@@ -5,3 +5,6 @@ __pycache__/
 # FreeCAD automatic backups (keep the current FCStd and STEP)
 *.FCBak
 *.FCStd1
+
+# Re-download original vendor CAD with the pinned A4 source manifest.
+cad/amr05/vendor-cache/
