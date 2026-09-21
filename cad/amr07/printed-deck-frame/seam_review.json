@@ -1,0 +1,157 @@
+{
+  "date": "2026-09-22",
+  "revision": "P1",
+  "scope": "Read-only audit of saved P1 CAD and builder, no mechanical revision performed",
+  "status": "seam_support_and_connection_unresolved",
+  "CAD_sha256": "8d45b28a25fc0184c5667ae8dd8e360411b4ccbc82c4689f4e9984218cc61139",
+  "panels": [
+    {
+      "panel": "PrintedDeckPanel1",
+      "bounds_xy_mm": [
+        -150.0,
+        37.3,
+        -150.0,
+        37.3
+      ],
+      "frame_bolts": [
+        {
+          "name": "DeckBolt0",
+          "xy_mm": [
+            -110.0,
+            -100.0
+          ]
+        },
+        {
+          "name": "DeckBolt1",
+          "xy_mm": [
+            -110.0,
+            -50.0
+          ]
+        }
+      ]
+    },
+    {
+      "panel": "PrintedDeckPanel2",
+      "bounds_xy_mm": [
+        -150.0,
+        37.3,
+        37.7,
+        150.0
+      ],
+      "frame_bolts": [
+        {
+          "name": "DeckBolt2",
+          "xy_mm": [
+            -110.0,
+            50.0
+          ]
+        },
+        {
+          "name": "DeckBolt3",
+          "xy_mm": [
+            -110.0,
+            100.0
+          ]
+        }
+      ]
+    },
+    {
+      "panel": "PrintedDeckPanel3",
+      "bounds_xy_mm": [
+        37.7,
+        150.0,
+        -150.0,
+        37.3
+      ],
+      "frame_bolts": [
+        {
+          "name": "DeckBolt4",
+          "xy_mm": [
+            75.0,
+            -100.0
+          ]
+        },
+        {
+          "name": "DeckBolt5",
+          "xy_mm": [
+            75.0,
+            -50.0
+          ]
+        }
+      ]
+    },
+    {
+      "panel": "PrintedDeckPanel4",
+      "bounds_xy_mm": [
+        37.7,
+        150.0,
+        37.7,
+        150.0
+      ],
+      "frame_bolts": [
+        {
+          "name": "DeckBolt6",
+          "xy_mm": [
+            75.0,
+            50.0
+          ]
+        },
+        {
+          "name": "DeckBolt7",
+          "xy_mm": [
+            75.0,
+            100.0
+          ]
+        }
+      ]
+    }
+  ],
+  "adjacent_panel_gaps": [
+    {
+      "panels": [
+        1,
+        2
+      ],
+      "minimum_gap_mm": 0.4
+    },
+    {
+      "panels": [
+        3,
+        4
+      ],
+      "minimum_gap_mm": 0.4
+    },
+    {
+      "panels": [
+        1,
+        3
+      ],
+      "minimum_gap_mm": 0.4
+    },
+    {
+      "panels": [
+        2,
+        4
+      ],
+      "minimum_gap_mm": 0.4
+    }
+  ],
+  "direct_seam_joining_features": 0,
+  "direct_seam_joining_basis": "Builder uses four plain rectangular intersections. No lap, tongue, seam splice or seam fastener is present. Each cargo stop and each deck bolt belongs to one panel. Shared upper rails provide an indirect connection only.",
+  "x_seam_at_mm": 37.5,
+  "left_support_inner_edge_x_mm": -95,
+  "left_free_edge_x_mm": 37.3,
+  "left_unsupported_overhang_mm": 132.3,
+  "right_support_inner_edge_x_mm": 60,
+  "right_free_edge_x_mm": 37.7,
+  "right_unsupported_overhang_mm": 22.3,
+  "y_seam_note": "The y=37.5 seam crosses the two upper rails; support is limited to those crossings. It is not continuously supported across the full width.",
+  "fit_checks_do_not_establish": [
+    "relative_seam_deflection",
+    "fastener_hold_down_stiffness",
+    "printed_joint_strength",
+    "long_term_creep",
+    "payload15kg_SF2"
+  ],
+  "required_correction": "Provide an explicit seam load path: support both adjoining edges on structure, or design a bolted splice and assess its load transfer and panel bending. Preserve grid access, deck serviceability, height, mass and cost constraints."
+}
