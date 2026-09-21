@@ -1,6 +1,12 @@
 {
   "revision": "P0",
-  "status": "fit_and_static_comparison_candidate_not_load_qualified",
+  "status": "rejected_by_user_square_bar_cutting_and_drilling",
+  "rejection": {
+    "date": "2026-09-22",
+    "reason_ja": "15mm角の中実アルミ棒を切断・穴あけして使う構成は、加工負担を理由にユーザーが不採用とした。",
+    "replacement_status": "Hole-free assembly using purchased frame and connection hardware under review; not yet selected.",
+    "historical_files_only": true
+  },
   "date": "2026-09-21",
   "plate_size_mm": 300,
   "plate_thickness_mm": 10,
