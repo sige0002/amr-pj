@@ -3,11 +3,11 @@
   "date": "2026-09-21",
   "scope": "A6 flat-floor cargo10 kg; no additional mechanical brake; draft procurement, not an order.",
   "source_hashes": {
-    "bom.json": "293c327b3d7a3e1b3e616c2e398b4446e9659103ab08508e0cbb129125d6917d",
-    "bom_inputs.json": "a00ecb7538b6adc33bc8990339f6d5d44d2ef10132a8bd56712998fc83158ed7",
-    "bom_price_checks.json": "f6decbecc5ae19cc556b15b209c73edafc609c52ecfe4e30bfacdc6fcfbcb73e",
-    "AMR01_M0601C_A6.FCStd": "6974b6589b75018accaffb7504657a3ae8e28a69bc99d2c353b9bfee11a244bd",
-    "requirements.json": "5c779c4d63e6c683581330db63e47fbe03cca0f90ab74ca8fd8411b2bb3f135a"
+    "bom.json": "3ea0ead7cbdef7e3d3256de1e3a7c0ba24ade1151ca8922a5f91614e1f60c6c8",
+    "bom_inputs.json": "0565d2ea1fef3c17f7a354268d277d76b703753ee381643bd9e55d2961360ca5",
+    "bom_price_checks.json": "bb8b3f29cc42d8d32c2390c54eb73f9adb43217d243c72f7475621521f789ebe",
+    "AMR01_M0601C_A6.FCStd": "06e103424fd873f7cfeeb34c18126e3c3e78689d058a6bf05c4bc39559ad0393",
+    "requirements.json": "89a139bce2ee1c8f13ecd2ceaf92da813d5f66f8700b231dbc0f6b018687b2ef"
   },
   "procurement_rows": [
     {
@@ -137,26 +137,26 @@
     },
     {
       "id": "C01",
-      "name": "ハンマーキャスター 420G-R50",
+      "name": "TRUSCO 自在ゴムキャスター TYG-50",
       "quantity": 1,
       "currency": "JPY",
-      "amount": 498,
-      "price_kind": "observed_store_pickup_conditional",
-      "source": "https://nafco-online.com/products/detail.php?product_id=25655902",
-      "note": "ナフコ店舗受取候補。税込498円、1個購入。受取店・在庫未確定。型番/取付寸法を受入照合。",
+      "amount": 273,
+      "price_kind": "observed_Amazon_price_Prime_policy_conditional",
+      "source": "https://www.amazon.co.jp/dp/B0795CNFLR",
+      "note": "Amazon.co.jp販売・発送の税込273円、完成品1個。Prime会員条件の送料はS02。",
       "category": "駆動・支持",
       "name_ja": "自在キャスター",
-      "specification": "ハンマー420G-R50、径50・取付高65mm",
+      "specification": "TRUSCO TYG-50、径50・取付高65mm、穴ピッチ46×35",
       "used_quantity": 1,
       "quantity_unit": "個",
       "planned_purchase_quantity": 1,
       "purchase_unit": "1個×1",
       "planned_purchase_lots": 1,
-      "selection_status": "型式維持・個人購入の店舗受取を第一候補",
-      "procurement_note": "完成品1個。税込498円＋店舗受取送料0円。受取店/在庫未確定、交通費別。ナフコ包装JANは2100256559029、受入時に420G-R50/高さ65/穴ピッチ46×35を照合。",
-      "supplier": "ナフコ（店舗受取）",
+      "selection_status": "Amazon販売発送を確認・Prime会員条件の第一候補",
+      "procurement_note": "完成品1個、税込273円。Amazon.co.jp販売・発送の出品。既存Prime会員の対象配送を条件に送料0円（公式配送規定）。会員としての最終注文画面は未確認。JAN4989999424980、公称高さ65mm・穴46×35を受入照合。",
+      "supplier": "Amazon.co.jp（販売・発送）",
       "price_basis_ja": "販売表示・条件付き",
-      "purchase_lot_unit_price": 498.0,
+      "purchase_lot_unit_price": 273.0,
       "surplus_quantity": 0,
       "cad_physical_object_count": 5
     },
@@ -837,13 +837,13 @@
     },
     {
       "id": "S02",
-      "name": "ナフコ店舗受取送料",
+      "name": "Amazon Prime会員条件のキャスター送料",
       "quantity": 1,
       "currency": "JPY",
       "amount": 0,
-      "price_kind": "observed_store_pickup_conditional",
-      "source": "https://nafco-online.com/products/detail.php?product_id=25655902",
-      "note": "店舗受取なら送料無料。自宅配送は別条件。受取交通費は未計上。",
+      "price_kind": "observed_Amazon_price_Prime_policy_conditional",
+      "source": "https://www.aboutamazon.jp/news/guide/answer-to-7-questions-about-shopping-at-amazon",
+      "note": "公式規定による既存Prime会員の対象配送条件。ログイン後の最終注文額は未確認。新規会費は含めない。",
       "category": "送料",
       "name_ja": "キャスター送料",
       "specification": "",
@@ -852,9 +852,9 @@
       "planned_purchase_quantity": null,
       "purchase_unit": "送料／諸費1式",
       "planned_purchase_lots": null,
-      "selection_status": "店舗受取の場合のみ0円",
-      "procurement_note": "商品ページの店舗受取送料無料条件。自宅配送費ではない。受取店・準備日は注文前に確認。",
-      "supplier": "ナフコ（店舗受取）",
+      "selection_status": "既存Prime会員の対象配送条件で0円",
+      "procurement_note": "Amazon公式の会員配送規定を適用する条件。会員ログイン後の最終注文額ではない。非会員の単品購入は別送料。新規会費は含めない。コーナン店舗受取なら商品283円＋受取送料0円。",
+      "supplier": "Amazon.co.jp（Prime会員条件）",
       "price_basis_ja": "販売表示・条件付き",
       "purchase_lot_unit_price": null,
       "surplus_quantity": null,
@@ -2298,10 +2298,10 @@
     {
       "object_name": "CasterTop",
       "budget_id": "C01",
-      "label": "Hammer420G-R50 | unchanged",
+      "label": "TRUSCO TYG-50 | CasterTop | nominal proxy",
       "material": "purchased",
       "hardware_spec": "",
-      "note": "Nominal simplified part; not a fabrication release."
+      "note": "TYG-50 supplier drawing: D50/W20/H65±1.5, plate59x47, pitch46x35, holes6.5, trail16±1.5, R41, mass165g. Existing simplified proxy retained; exact fork/bearing geometry and loaded contact height require received-part check."
     },
     {
       "object_name": "CasterBolt_0",
@@ -2370,34 +2370,34 @@
     {
       "object_name": "SwivelRace",
       "budget_id": "C01",
-      "label": "SwivelRace",
+      "label": "TRUSCO TYG-50 | SwivelRace | nominal proxy",
       "material": "purchased",
       "hardware_spec": "",
-      "note": "Nominal simplified part; not a fabrication release."
+      "note": "TYG-50 supplier drawing: D50/W20/H65±1.5, plate59x47, pitch46x35, holes6.5, trail16±1.5, R41, mass165g. Existing simplified proxy retained; exact fork/bearing geometry and loaded contact height require received-part check."
     },
     {
       "object_name": "CasterFork",
       "budget_id": "C01",
-      "label": "CasterFork",
+      "label": "TRUSCO TYG-50 | CasterFork | nominal proxy",
       "material": "purchased",
       "hardware_spec": "",
-      "note": "Nominal simplified part; not a fabrication release."
+      "note": "TYG-50 supplier drawing: D50/W20/H65±1.5, plate59x47, pitch46x35, holes6.5, trail16±1.5, R41, mass165g. Existing simplified proxy retained; exact fork/bearing geometry and loaded contact height require received-part check."
     },
     {
       "object_name": "CasterTire",
       "budget_id": "C01",
-      "label": "CasterTire",
+      "label": "TRUSCO TYG-50 | CasterTire | nominal proxy",
       "material": "purchased",
       "hardware_spec": "",
-      "note": "Nominal simplified part; not a fabrication release."
+      "note": "TYG-50 supplier drawing: D50/W20/H65±1.5, plate59x47, pitch46x35, holes6.5, trail16±1.5, R41, mass165g. Existing simplified proxy retained; exact fork/bearing geometry and loaded contact height require received-part check."
     },
     {
       "object_name": "CasterCore",
       "budget_id": "C01",
-      "label": "CasterCore",
+      "label": "TRUSCO TYG-50 | CasterCore | nominal proxy",
       "material": "purchased",
       "hardware_spec": "",
-      "note": "Nominal simplified part; not a fabrication release."
+      "note": "TYG-50 supplier drawing: D50/W20/H65±1.5, plate59x47, pitch46x35, holes6.5, trail16±1.5, R41, mass165g. Existing simplified proxy retained; exact fork/bearing geometry and loaded contact height require received-part check."
     },
     {
       "object_name": "BatteryCradlePLA",
@@ -3206,7 +3206,7 @@
       "USD": 0.0
     },
     "駆動・支持": {
-      "JPY": 24638.0,
+      "JPY": 24413.0,
       "USD": 75.02
     },
     "荷台": {
@@ -3231,7 +3231,7 @@
     }
   },
   "partial_subtotals": {
-    "JPY": 54414.0,
+    "JPY": 54189.0,
     "USD": 82.25
   },
   "completed_vehicle_total": null,

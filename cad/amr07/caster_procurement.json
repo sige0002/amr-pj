@@ -1,20 +1,18 @@
 {
-  "observed_at": "2026-09-21T11:53:07.385742+00:00",
-  "part": "Hammer 420G-R50",
+  "observed_at": "2026-09-21T13:50:34.060375+00:00",
+  "part": "TRUSCO TYG-50",
   "quantity": 1,
-  "personal_purchase_route": "NAFCO online, store pickup",
-  "url": "https://nafco-online.com/products/detail.php?product_id=25655902",
-  "seller_product_code": "n25655902",
-  "seller_internal_JAN": "2100256559029",
-  "manufacturer_JAN": "4956237000046",
-  "identification": "Listed model420 G-R50, H65/D50/30kg/no stopper, product photo with HAMMER CASTER marking. NAFCO own packaging uses a different JAN; confirm model and46x35 mounting pitch on received item.",
-  "unit_JPY_incl_tax": 498,
-  "shipping_JPY_if_store_pickup": 0,
+  "personal_purchase_route": "Amazon Japan, Amazon.co.jp seller/shipper, Prime member shipping condition",
+  "url": "https://www.amazon.co.jp/dp/B0795CNFLR",
+  "seller_product_code": "B0795CNFLR",
+  "manufacturer_JAN": "4989999424980",
+  "identification": "TYG-50, JAN4989999424980. KOHNAN retail specifications agree with manufacturer drawing. Amazon title/model matches but feature bullets mix32mm dimensions; do not use those dimensions.",
+  "unit_JPY_incl_tax": 273,
   "store_stock_verified": false,
   "pickup_store_selected": false,
   "ordered": false,
-  "conditions": "Store pickup offered and free shipping stated on product page. Stock/preparation time and actual pickup store remain to be confirmed. Travel cost excluded; not a home-delivery total.",
-  "manufacturer_dimensions_url": "https://www.hammer-caster.co.jp/products/detail/3119",
+  "conditions": "273JPY observed for one item sold and shipped byAmazon.co.jp. Shipping0 is conditional on existingPrime membership and eligible Amazon-shipped offer under official published policy; not an observed signed-in checkout. Non-member page shows3500JPY free-shipping threshold. Membership fee excluded; no account signup/order.",
+  "manufacturer_dimensions_url": "https://image.trusco-sterra2.com/pdf/zumen/TYG50_4600__ZM.pdf",
   "dimensions_mm": {
     "wheel_diameter": 50,
     "mounting_height": 65,
@@ -27,7 +25,10 @@
       35
     ],
     "hole_diameter": 6.5,
-    "offset": 16
+    "offset": 16,
+    "swivel_radius": 41,
+    "mounting_height_tolerance_plus_minus": 1.5,
+    "offset_tolerance_plus_minus": 1.5
   },
   "catalog_allowable_load_daN": 30,
   "previous_reference": {
@@ -36,25 +37,64 @@
     "total_JPY": 1023,
     "url": "https://www.tanaka-km.com/view/item/000000036665"
   },
-  "conditional_reduction_JPY": 525,
+  "conditional_reduction_JPY": 750,
   "other_routes": [
     {
-      "retailer": "CAINZ",
-      "url": "https://www.cainz.com/g/4956237000046.html",
-      "result": "Catalog listing found, selected-context purchase not available; no confirmed price or store stock."
+      "retailer": "KOHNAN",
+      "part": "TRUSCO TYG-50",
+      "url": "https://www.kohnan-eshop.com/shop/g/g4989999424980/",
+      "unit_JPY_incl_tax": 283,
+      "shipping_JPY_if_store_pickup": 0,
+      "result": "Alternative route with sample store manufacturer-to-store stock842 verified; actual user pickup store and ready date unselected. No shelf-stock claim."
     },
     {
       "retailer": "KOHNAN",
-      "url": "https://www.kohnan-eshop.com/shop/g/g4956237000046/",
-      "result": "Search listing found but live product page says sale ended or unavailable."
+      "part": "YUEI E-50R",
+      "url": "https://www.kohnan-eshop.com/shop/g/g4562182572028/",
+      "unit_JPY_incl_tax": 338,
+      "result": "Not selected: higher price and different56x28 mounting pitch; cannot substitute solely by wheel diameter/height."
     },
     {
       "retailer": "Amazon Japan",
-      "result": "Search did not verify a matching purchasable Prime offer. No Prime promise or price recorded."
+      "part": "Hammer420G-R50",
+      "url": "https://www.amazon.co.jp/dp/B000TGHARG",
+      "result": "No Prime-eligible offer verified. Lowest displayed delivered offer367+600=967JPY; no selected Prime shipping filter for this ASIN."
     }
   ],
   "evidence_hashes": {
-    "nafco-420G-R50.png": "97654c8a968116df64d842a44ae05f0cf03715d83fdb71844cace1a0b31de01a",
-    "nafco-420G-R50.txt": "3c4dc2c1ebace06aeb9506369285dc7fc6aed41755d397be7c841afa815bc40a"
-  }
+    "TYG50-manufacturer-drawing.pdf": "7cf0a13f66335d2548d1772afd7ebab640093b2651c315d276e73561457b99f9",
+    "amazon-TYG-50-offer.png": "3db142a4dc57338bd1a0eaf69669e4087efce7b22ee856d5b10bb741f78d4c82",
+    "amazon-TYG-50-offer.txt": "14f4edf62aaaaa61e58c71706c7d2f8a3d47c65d104fb16f4e3b4542338473fd",
+    "kohnan-TYG-50.png": "695475945d73b9e0392528a7570e13aabd6801108ef2777a332fe9d08a3bddc6",
+    "kohnan-TYG-50.txt": "39cf9ca198308ff5a761eb2495c215c04070ce3d4f8d20158bcdac4a2ef6102c"
+  },
+  "manufacturer_specifications_url": "https://www.orange-book.com/ja/c/products/index.html?itemCd=TYG50+++++++++++++++++++++++++4600",
+  "catalog_mass_kg": 0.165,
+  "previous_CAD_mass_allowance_kg": 0.15,
+  "reduction_from_rejected_NAFCO_route_JPY": 225,
+  "pickup_route_check": {
+    "sample_store_selection_performed": true,
+    "manufacturer_stock_displayed": 842,
+    "store_shelf_stock_verified": false,
+    "user_pickup_store_confirmed": false,
+    "pickup_shipping_policy_url": "https://www.kohnan-eshop.com/shop/pages/uketori.aspx",
+    "service_preparation_time_reference": "2–10 days, may take longer; not a guaranteed ready date"
+  },
+  "rejected_previous_route": {
+    "retailer": "NAFCO",
+    "part": "Hammer 420G-R50",
+    "unit_JPY_incl_tax": 498,
+    "shipping_JPY_if_store_pickup": 0,
+    "reason": "User has no nearby NAFCO; excluded from current procurement.",
+    "evidence_hashes": {
+      "nafco-420G-R50.png": "97654c8a968116df64d842a44ae05f0cf03715d83fdb71844cace1a0b31de01a",
+      "nafco-420G-R50.txt": "3c4dc2c1ebace06aeb9506369285dc7fc6aed41755d397be7c841afa815bc40a"
+    }
+  },
+  "shipping_JPY_if_Prime_member": 0,
+  "shipping_policy_url": "https://www.aboutamazon.jp/news/guide/answer-to-7-questions-about-shopping-at-amazon",
+  "seller": "Amazon.co.jp",
+  "shipper": "Amazon.co.jp",
+  "prime_filtered_search_includes_item": true,
+  "member_checkout_verified": false
 }

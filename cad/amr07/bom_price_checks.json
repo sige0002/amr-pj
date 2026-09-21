@@ -64,6 +64,15 @@
       ],
       "source": "caster_procurement.json",
       "change": "NAFCO store pickup498 JPY +0 shipping replaces historical373+650. Store selection/stock/travel unverified. Earlier records below remain historical checks."
+    },
+    {
+      "date": "2026-09-21",
+      "ids": [
+        "C01",
+        "S02"
+      ],
+      "source": "caster_procurement.json",
+      "change": "NAFCO route excluded by user. TYG-50 Amazon.co.jp seller/shipper273JPY observed; shipping0 conditional on existingPrime membership per officialpolicy. Saves225JPY versus498+0. KOHNAN pickup283+0 is alternative; sample store manufacturer-to-store route verified. Final signed-in checkout and user pickup store not confirmed."
     }
   ]
 }

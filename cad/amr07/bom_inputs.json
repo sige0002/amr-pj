@@ -123,15 +123,15 @@
     "C01": {
       "category": "駆動・支持",
       "name_ja": "自在キャスター",
-      "specification": "ハンマー420G-R50、径50・取付高65mm",
+      "specification": "TRUSCO TYG-50、径50・取付高65mm、穴ピッチ46×35",
       "used_quantity": 1,
       "quantity_unit": "個",
       "planned_purchase_quantity": 1,
       "purchase_unit": "1個×1",
       "planned_purchase_lots": 1,
-      "selection_status": "型式維持・個人購入の店舗受取を第一候補",
-      "procurement_note": "完成品1個。税込498円＋店舗受取送料0円。受取店/在庫未確定、交通費別。ナフコ包装JANは2100256559029、受入時に420G-R50/高さ65/穴ピッチ46×35を照合。",
-      "supplier": "ナフコ（店舗受取）"
+      "selection_status": "Amazon販売発送を確認・Prime会員条件の第一候補",
+      "procurement_note": "完成品1個、税込273円。Amazon.co.jp販売・発送の出品。既存Prime会員の対象配送を条件に送料0円（公式配送規定）。会員としての最終注文画面は未確認。JAN4989999424980、公称高さ65mm・穴46×35を受入照合。",
+      "supplier": "Amazon.co.jp（販売・発送）"
     },
     "P01": {
       "category": "駆動・支持",
@@ -441,9 +441,9 @@
       "planned_purchase_quantity": null,
       "purchase_unit": "送料／諸費1式",
       "planned_purchase_lots": null,
-      "selection_status": "店舗受取の場合のみ0円",
-      "procurement_note": "商品ページの店舗受取送料無料条件。自宅配送費ではない。受取店・準備日は注文前に確認。",
-      "supplier": "ナフコ（店舗受取）"
+      "selection_status": "既存Prime会員の対象配送条件で0円",
+      "procurement_note": "Amazon公式の会員配送規定を適用する条件。会員ログイン後の最終注文額ではない。非会員の単品購入は別送料。新規会費は含めない。コーナン店舗受取なら商品283円＋受取送料0円。",
+      "supplier": "Amazon.co.jp（Prime会員条件）"
     },
     "S03": {
       "category": "送料",

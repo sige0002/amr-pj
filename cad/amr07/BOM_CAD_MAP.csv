@@ -108,7 +108,7 @@ SlotNut_Caster_2,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile030",st
 Washer_CasterFrame3,H01,Washer CasterFrame3,steel,M6 washer OD13 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
 CasterFrameBolt_3,H01,CasterFrameBolt 3,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
 SlotNut_Caster_3,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile031",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
-CasterTop,C01,Hammer420G-R50 | unchanged,purchased,,Nominal simplified part; not a fabrication release.
+CasterTop,C01,TRUSCO TYG-50 | CasterTop | nominal proxy,purchased,,"TYG-50 supplier drawing: D50/W20/H65±1.5, plate59x47, pitch46x35, holes6.5, trail16±1.5, R41, mass165g. Existing simplified proxy retained; exact fork/bearing geometry and loaded contact height require received-part check."
 CasterBolt_0,H01,CasterBolt 0,steel,M6x16 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
 Nut_CasterBolt_0,H01,Nut CasterBolt 0,steel,M6 plain hex nut,Nominal simplified part; not a fabrication release.
 CasterBolt_1,H01,CasterBolt 1,steel,M6x16 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
@@ -117,10 +117,10 @@ CasterBolt_2,H01,CasterBolt 2,steel,M6x16 socket screw,Unthreaded screw envelope
 Nut_CasterBolt_2,H01,Nut CasterBolt 2,steel,M6 plain hex nut,Nominal simplified part; not a fabrication release.
 CasterBolt_3,H01,CasterBolt 3,steel,M6x16 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
 Nut_CasterBolt_3,H01,Nut CasterBolt 3,steel,M6 plain hex nut,Nominal simplified part; not a fabrication release.
-SwivelRace,C01,SwivelRace,purchased,,Nominal simplified part; not a fabrication release.
-CasterFork,C01,CasterFork,purchased,,Nominal simplified part; not a fabrication release.
-CasterTire,C01,CasterTire,purchased,,Nominal simplified part; not a fabrication release.
-CasterCore,C01,CasterCore,purchased,,Nominal simplified part; not a fabrication release.
+SwivelRace,C01,TRUSCO TYG-50 | SwivelRace | nominal proxy,purchased,,"TYG-50 supplier drawing: D50/W20/H65±1.5, plate59x47, pitch46x35, holes6.5, trail16±1.5, R41, mass165g. Existing simplified proxy retained; exact fork/bearing geometry and loaded contact height require received-part check."
+CasterFork,C01,TRUSCO TYG-50 | CasterFork | nominal proxy,purchased,,"TYG-50 supplier drawing: D50/W20/H65±1.5, plate59x47, pitch46x35, holes6.5, trail16±1.5, R41, mass165g. Existing simplified proxy retained; exact fork/bearing geometry and loaded contact height require received-part check."
+CasterTire,C01,TRUSCO TYG-50 | CasterTire | nominal proxy,purchased,,"TYG-50 supplier drawing: D50/W20/H65±1.5, plate59x47, pitch46x35, holes6.5, trail16±1.5, R41, mass165g. Existing simplified proxy retained; exact fork/bearing geometry and loaded contact height require received-part check."
+CasterCore,C01,TRUSCO TYG-50 | CasterCore | nominal proxy,purchased,,"TYG-50 supplier drawing: D50/W20/H65±1.5, plate59x47, pitch46x35, holes6.5, trail16±1.5, R41, mass165g. Existing simplified proxy retained; exact fork/bearing geometry and loaded contact height require received-part check."
 BatteryCradlePLA,P04,PLA low battery cradle130x160 | floor32..35,PLA,,"Temporary load-bearing PLA cradle for0.75kg battery budget; battery120x80x65 is unselected. Add straps anchored to3030. Straps do not eliminate floor/flange creep; check temperature, clamping and retention."
 LargeWasher_Cradle0,H01,LargeWasher Cradle0,steel,M6 large washer OD18 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
 CradleBolt_0,H01,CradleBolt 0,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.

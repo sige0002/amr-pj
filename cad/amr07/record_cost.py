@@ -62,11 +62,11 @@ def main():
     caster=json.loads((HERE/'caster_procurement.json').read_text())
     for r in rows:
         if r['id']=='C01':
-            r.update(amount=caster['unit_JPY_incl_tax'],price_kind='observed_store_pickup_conditional',
-                     source=caster['url'],note='ナフコ店舗受取候補。税込498円、1個購入。受取店・在庫未確定。型番/取付寸法を受入照合。')
+            r.update(name='TRUSCO 自在ゴムキャスター TYG-50',amount=caster['unit_JPY_incl_tax'],price_kind='observed_Amazon_price_Prime_policy_conditional',
+                     source=caster['url'],note='Amazon.co.jp販売・発送の税込273円、完成品1個。Prime会員条件の送料はS02。')
         elif r['id']=='S02':
-            r.update(name='ナフコ店舗受取送料',amount=caster['shipping_JPY_if_store_pickup'],price_kind='observed_store_pickup_conditional',
-                     source=caster['url'],note='店舗受取なら送料無料。自宅配送は別条件。受取交通費は未計上。')
+            r.update(name='Amazon Prime会員条件のキャスター送料',amount=caster['shipping_JPY_if_Prime_member'],price_kind='observed_Amazon_price_Prime_policy_conditional',
+                     source=caster['shipping_policy_url'],note='公式規定による既存Prime会員の対象配送条件。ログイン後の最終注文額は未確認。新規会費は含めない。')
     for key in ('plate','square_bar','cargo_straps'):
         p=deck[key]
         row('DECK_'+key,p['item'],p['quantity'],p['unit_jpy_incl_tax']*p['quantity'],'observed_2026_09_21',p['url'],p['basis'])
@@ -91,7 +91,7 @@ def main():
         'deck_material_shipping_allowance_addition_JPY':deck['self_work_budget_before_contingency_jpy'],
         'electrical_selected_price_subtotal_JPY':electrical['cost']['priced_purchase_subtotal_jpy_incl_tax'],
         'washer_purchase_addition_JPY':float(washer_purchase),
-        'caster_store_pickup_conditional_reduction_JPY':caster['conditional_reduction_JPY'],
+        'caster_procurement_conditional_reduction_JPY':caster['conditional_reduction_JPY'],
         'CAD_mass_estimate':json.loads((HERE/'assembly_validation.json').read_text())['mass'],
         'unpriced':['Taobao送料/輸入費','CNC図面審査による差額・税・住所別送料・決済換算',
                     '荷台等を自加工しない場合の切断/穴加工/バリ取り','自加工の工具/作業費',

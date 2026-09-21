@@ -34,6 +34,15 @@ def main():
     for obj in old.Objects:
         if obj.TypeId=='App::DocumentObjectGroup': copied[obj.Name].Group=[copied[c.Name] for c in obj.Group]
     changed=set()
+    caster=json.loads((HERE/'caster_procurement.json').read_text())
+    # Same nominal D50/W20/H65, 46x35 pitch and 16 mm trail. Keep the
+    # simplified geometry; it is not the supplier's fork/bearing CAD.
+    for name in ('CasterTop','SwivelRace','CasterFork','CasterTire','CasterCore'):
+        o=doc.getObject(name)
+        o.Label='TRUSCO TYG-50 | '+name+' | nominal proxy'
+        o.SourceURL=caster['manufacturer_dimensions_url']
+        o.ModelNote='TYG-50 supplier drawing: D50/W20/H65±1.5, plate59x47, pitch46x35, holes6.5, trail16±1.5, R41, mass165g. Existing simplified proxy retained; exact fork/bearing geometry and loaded contact height require received-part check.'
+        changed.add(name)
     for i,y in enumerate((-135,-65,65,135),1):
         s=profile(400); s.translate(V(-200,y,84)); o=doc.getObject('Rail400_'+str(i)); o.Shape=s
         o.ModelNote='Published slot8/lip2/depth9/max16.5; nominal reconstructed bevels. Internal webs and small radii simplified. Use catalog mass/inertia, not this solid.'; changed.add(o.Name)
@@ -158,7 +167,8 @@ def main():
     # Strap and edge guard mass is in the deck budget, since they are references.
     deck_cfg=json.loads((HERE/'deck_parameters.json').read_text())
     noncad_deck=2*deck_cfg['procurement']['cargo_straps']['catalog_each_mass_kg']+deck_cfg['mass_budget']['edge_protection_and_slack_retention_kg']
-    mass=previous_mass+mount_delta+sum(n['mass_delta_kg'] for n in nut_data)+added_mass+noncad_deck
+    caster_mass_delta=caster['catalog_mass_kg']-caster['previous_CAD_mass_allowance_kg']
+    mass=previous_mass+mount_delta+sum(n['mass_delta_kg'] for n in nut_data)+added_mass+noncad_deck+caster_mass_delta
     report={'status':'nominal_geometry_review_revision_not_manufacturing_or_operating_release',
         'source_A4_sha256':source_hash,'mount_STEP_sha256':digest(mount_path),
         'physical_parts':len(parts),'physical_pair_count':len(parts)*(len(parts)-1)//2,
@@ -166,7 +176,11 @@ def main():
         'reference_collisions':reference_hits,'tool_and_service_access':access,'harness_collisions':harness,
         'wheel_and_caster_floor_contacts_z_mm':contacts,'changed_existing_features':sorted(changed),
         'slot_nut_updates':nut_data,'electrical_reservations_xyz_LWH_mm':reservations,
+        'caster_substitution':{'part':caster['part'],'drawing_source':caster['manufacturer_dimensions_url'],
+            'nominal_mount_and_contact_dimensions_unchanged':True,'exact_supplier_CAD':False,
+            'received_height_and_swivel_clearance_verified':False},
         'mass':{'previous_base_estimate_kg':previous_mass,'mount_change_kg':mount_delta,
+                'caster_catalog_mass_correction_kg':caster_mass_delta,
                 'slot_nut_change_kg':sum(n['mass_delta_kg'] for n in nut_data),'new_CAD_parts_kg':added_mass,
                 'deck_straps_and_edge_guard_allowance_kg':noncad_deck,'electrical_allowance_carried_kg':2.1,
                 'estimated_base_kg':mass,'remaining_to_10kg_kg':10-mass,'is_weighed':False},

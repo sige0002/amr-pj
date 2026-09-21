@@ -32,6 +32,10 @@
     "drive_axis_z_mm": 50.35,
     "caster_pivot_xy_mm": [-150, 0],
     "caster_trail_mm": 16,
+    "caster_mounting_height_mm": 65,
+    "caster_mounting_height_tolerance_plus_minus_mm": 1.5,
+    "caster_trail_tolerance_plus_minus_mm": 1.5,
+    "caster_tolerance_note": "Nominal rigid-body calculations retain16mm trail. Received height/trail tolerances, tire compression and exact fork sweep require acceptance checks; nominal equality is not operating release.",
     "caster_samples": 720,
     "minimum_fixed_ground_clearance_mm": 25,
     "motor_mount_spacer_count": 0,
@@ -92,7 +96,8 @@
     "motor_load_datum_and_revision_confirmed": false,
     "motor_combined_load_rule_known": false,
     "caster_allowable_N": 300,
-    "caster_source": "https://www.hammer-caster.co.jp/products/detail/3119",
+    "caster_model": "TRUSCO TYG-50",
+    "caster_source": "https://image.trusco-sterra2.com/pdf/zumen/TYG50_4600__ZM.pdf",
     "note": "Catalog allowable loads are not yield loads and are not divided by the structural safety factor."
   },
   "operation_release": {

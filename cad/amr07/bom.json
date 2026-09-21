@@ -54,13 +54,13 @@
     },
     {
       "id": "C01",
-      "name": "ハンマーキャスター 420G-R50",
+      "name": "TRUSCO 自在ゴムキャスター TYG-50",
       "quantity": 1,
       "currency": "JPY",
-      "amount": 498,
-      "price_kind": "observed_store_pickup_conditional",
-      "source": "https://nafco-online.com/products/detail.php?product_id=25655902",
-      "note": "ナフコ店舗受取候補。税込498円、1個購入。受取店・在庫未確定。型番/取付寸法を受入照合。"
+      "amount": 273,
+      "price_kind": "observed_Amazon_price_Prime_policy_conditional",
+      "source": "https://www.amazon.co.jp/dp/B0795CNFLR",
+      "note": "Amazon.co.jp販売・発送の税込273円、完成品1個。Prime会員条件の送料はS02。"
     },
     {
       "id": "P01",
@@ -134,13 +134,13 @@
     },
     {
       "id": "S02",
-      "name": "ナフコ店舗受取送料",
+      "name": "Amazon Prime会員条件のキャスター送料",
       "quantity": 1,
       "currency": "JPY",
       "amount": 0,
-      "price_kind": "observed_store_pickup_conditional",
-      "source": "https://nafco-online.com/products/detail.php?product_id=25655902",
-      "note": "店舗受取なら送料無料。自宅配送は別条件。受取交通費は未計上。"
+      "price_kind": "observed_Amazon_price_Prime_policy_conditional",
+      "source": "https://www.aboutamazon.jp/news/guide/answer-to-7-questions-about-shopping-at-amazon",
+      "note": "公式規定による既存Prime会員の対象配送条件。ログイン後の最終注文額は未確認。新規会費は含めない。"
     },
     {
       "id": "S03",
@@ -403,7 +403,7 @@
       "note": "国単位。住所別・税・換算額未確認"
     }
   ],
-  "priced_and_allowance_subtotal_JPY": 54414.0,
+  "priced_and_allowance_subtotal_JPY": 54189.0,
   "observed_automatic_quote_subtotal_USD": 82.25,
   "planning_total_JPY": null,
   "ordered": false,
@@ -412,16 +412,17 @@
   "deck_material_shipping_allowance_addition_JPY": 9814,
   "electrical_selected_price_subtotal_JPY": 7584,
   "washer_purchase_addition_JPY": 319.0,
-  "caster_store_pickup_conditional_reduction_JPY": 525,
+  "caster_procurement_conditional_reduction_JPY": 750,
   "CAD_mass_estimate": {
     "previous_base_estimate_kg": 6.787808492626768,
     "mount_change_kg": 3.453044182967133e-05,
+    "caster_catalog_mass_correction_kg": 0.015000000000000013,
     "slot_nut_change_kg": 0.0830208198153391,
     "new_CAD_parts_kg": 1.582279321882445,
     "deck_straps_and_edge_guard_allowance_kg": 0.28,
     "electrical_allowance_carried_kg": 2.1,
-    "estimated_base_kg": 8.73314316476638,
-    "remaining_to_10kg_kg": 1.2668568352336198,
+    "estimated_base_kg": 8.74814316476638,
+    "remaining_to_10kg_kg": 1.2518568352336192,
     "is_weighed": false
   },
   "unpriced": [

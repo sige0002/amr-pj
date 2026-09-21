@@ -120,6 +120,10 @@
     "CasterTire": 0.0
   },
   "changed_existing_features": [
+    "CasterCore",
+    "CasterFork",
+    "CasterTire",
+    "CasterTop",
     "Cross300_1",
     "Cross300_2",
     "CustomMotorMountL",
@@ -171,7 +175,8 @@
     "SlotNut_Mount_127p5L",
     "SlotNut_Mount_127p5R",
     "SlotNut_Mount_52p5L",
-    "SlotNut_Mount_52p5R"
+    "SlotNut_Mount_52p5R",
+    "SwivelRace"
   ],
   "slot_nut_updates": [
     {
@@ -833,15 +838,23 @@
       40
     ]
   },
+  "caster_substitution": {
+    "part": "TRUSCO TYG-50",
+    "drawing_source": "https://image.trusco-sterra2.com/pdf/zumen/TYG50_4600__ZM.pdf",
+    "nominal_mount_and_contact_dimensions_unchanged": true,
+    "exact_supplier_CAD": false,
+    "received_height_and_swivel_clearance_verified": false
+  },
   "mass": {
     "previous_base_estimate_kg": 6.787808492626768,
     "mount_change_kg": 3.453044182967133e-05,
+    "caster_catalog_mass_correction_kg": 0.015000000000000013,
     "slot_nut_change_kg": 0.0830208198153391,
     "new_CAD_parts_kg": 1.582279321882445,
     "deck_straps_and_edge_guard_allowance_kg": 0.28,
     "electrical_allowance_carried_kg": 2.1,
-    "estimated_base_kg": 8.73314316476638,
-    "remaining_to_10kg_kg": 1.2668568352336198,
+    "estimated_base_kg": 8.74814316476638,
+    "remaining_to_10kg_kg": 1.2518568352336192,
     "is_weighed": false
   },
   "scope": "Reconstructed extrusion/nut interface, nominal tire axial datum, rigid undeformed tires. Reservations are not electronic component fit approval. No local contact/thread/thermal/impact certification.",
