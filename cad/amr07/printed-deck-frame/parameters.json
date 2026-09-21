@@ -1,0 +1,60 @@
+{
+  "revision": "P1",
+  "date": "2026-09-22",
+  "status": "fit_checked_prototype_not_load_released",
+  "frame_x_mm": [
+    -110,
+    75
+  ],
+  "frame_length_mm": 300,
+  "frame_bottom_top_z_mm": [
+    99,
+    129
+  ],
+  "plate_bottom_top_z_mm": [
+    129,
+    141
+  ],
+  "grid_axis_mm": [
+    -125,
+    -75,
+    -25,
+    25,
+    75,
+    125
+  ],
+  "grid_hole_diameter_mm": 4.5,
+  "nut_pocket_AF_depth_mm": [
+    7.3,
+    3.4
+  ],
+  "seam_xy_mm": [
+    37.5,
+    37.5
+  ],
+  "seam_gap_mm": 0.4,
+  "attachment_y_mm": [
+    -100,
+    -50,
+    50,
+    100
+  ],
+  "sleeve_OD_ID_L_mm": [
+    12,
+    6.2,
+    5
+  ],
+  "compression_sleeve_ASIN": "B0GWMC8ZY9",
+  "bracket": "HBLFSN6",
+  "bracket_qty": 8,
+  "bracket_model": "Conservative 30x30x20 envelope, walls4.5, rib edges3; small casting radii/tabs omitted.",
+  "metal_support_cutting": false,
+  "metal_support_drilling": false,
+  "normal_payload_target_kg": 10,
+  "structural_payload_target_kg": 15,
+  "static_factor_target": 2,
+  "PLA_E_comparison_MPa": 2750,
+  "PLA_density_kg_mm3": 1.24e-06,
+  "PLA_cost_reference_JPY_g": 2,
+  "loaded_use_released": false
+}

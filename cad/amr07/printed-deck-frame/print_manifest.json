@@ -1,0 +1,92 @@
+[
+  {
+    "file": "FrontElectronicsTrayPLA.stl",
+    "size_mm": [
+      90.0,
+      170.0,
+      4.400000000000006
+    ],
+    "solid_mass_g": 48.905061018652766
+  },
+  {
+    "file": "ElectronicsTrayPLA.stl",
+    "size_mm": [
+      55.0,
+      180.0,
+      4.400000000000006
+    ],
+    "solid_mass_g": 32.46266101865272
+  },
+  {
+    "file": "PrintedDeckPanel1.stl",
+    "size_mm": [
+      187.3,
+      187.3,
+      12.00000000000004
+    ],
+    "solid_mass_g": 499.55292571878994
+  },
+  {
+    "file": "PrintedDeckPanel2.stl",
+    "size_mm": [
+      187.3,
+      112.30000000000001,
+      12.000000000000034
+    ],
+    "solid_mass_g": 299.82634854213467
+  },
+  {
+    "file": "PrintedDeckPanel3.stl",
+    "size_mm": [
+      112.30000000000001,
+      187.3,
+      12.000000000000044
+    ],
+    "solid_mass_g": 296.7313085421344
+  },
+  {
+    "file": "PrintedDeckPanel4.stl",
+    "size_mm": [
+      112.30000000000001,
+      112.30000000000001,
+      12.000000000000034
+    ],
+    "solid_mass_g": 179.24803507140834
+  },
+  {
+    "file": "PrintedStopXP.stl",
+    "size_mm": [
+      15.0,
+      50.0,
+      15.0
+    ],
+    "solid_mass_g": 13.358359563512701
+  },
+  {
+    "file": "PrintedStopXN.stl",
+    "size_mm": [
+      15.0,
+      50.0,
+      15.0
+    ],
+    "solid_mass_g": 13.358359563512701
+  },
+  {
+    "file": "PrintedStopYP.stl",
+    "size_mm": [
+      50.0,
+      15.0,
+      15.0
+    ],
+    "solid_mass_g": 13.358359563512701
+  },
+  {
+    "file": "PrintedStopYN.stl",
+    "size_mm": [
+      50.0,
+      15.0,
+      15.0
+    ],
+    "solid_mass_g": 13.358359563512701
+  }
+]

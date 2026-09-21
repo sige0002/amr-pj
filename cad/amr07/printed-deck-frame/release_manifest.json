@@ -1,0 +1,74 @@
+{
+  "AMR01_PrintedDeck_P1.FCStd": {
+    "bytes": 1537724,
+    "sha256": "8d45b28a25fc0184c5667ae8dd8e360411b4ccbc82c4689f4e9984218cc61139"
+  },
+  "AMR01_PrintedDeck_P1.step": {
+    "bytes": 7761446,
+    "sha256": "09882b24c3ce9d1f6f201fbbad733395cd675248360387288ff918d67d7bb951"
+  },
+  "ElectronicsTrayPLA.stl": {
+    "bytes": 43084,
+    "sha256": "c926d419db4f1da94dd134bec49a34de6aa3f400bc45d073243e19eae996953c"
+  },
+  "FrontElectronicsTrayPLA.stl": {
+    "bytes": 43084,
+    "sha256": "e241d565d11fdda17147539ccf5e6a6ca744a52108bf5e71d9a8ef1b3b72c4c8"
+  },
+  "P1-print-files.zip": {
+    "bytes": 196920,
+    "sha256": "c03449f2546e6c93c193402c338b7ebb0f573f2412af49c673a869503db93fab"
+  },
+  "PrintedDeckPanel1.stl": {
+    "bytes": 296684,
+    "sha256": "a113bcc1124b76eeb74704d1e8055157a3a2a373e3c8720252cc5731a11c4e6a"
+  },
+  "PrintedDeckPanel2.stl": {
+    "bytes": 168884,
+    "sha256": "27b10f7b7aacb880b248891769b15d1f3f53f27fc057f87f14488588d00acde4"
+  },
+  "PrintedDeckPanel3.stl": {
+    "bytes": 169684,
+    "sha256": "34b874eb6fbf794f41a15ef61f070fe4b74f3fc971bcf98aa44cd47bac2dd96c"
+  },
+  "PrintedDeckPanel4.stl": {
+    "bytes": 88284,
+    "sha256": "1fa25aacd2172758384539b6cc8e1ca17eb015d5c3bf40f001b8bf49e43cd856"
+  },
+  "PrintedStopXN.stl": {
+    "bytes": 21484,
+    "sha256": "55a02ea307e146382084dc5f37868131f79661fa844ee391b17458e6f58f1462"
+  },
+  "PrintedStopXP.stl": {
+    "bytes": 21484,
+    "sha256": "55a02ea307e146382084dc5f37868131f79661fa844ee391b17458e6f58f1462"
+  },
+  "PrintedStopYN.stl": {
+    "bytes": 21484,
+    "sha256": "3bed176bc3296151eeae17f92ffaeae6b582a318d7c344f07246ede14290b7df"
+  },
+  "PrintedStopYP.stl": {
+    "bytes": 21484,
+    "sha256": "3bed176bc3296151eeae17f92ffaeae6b582a318d7c344f07246ede14290b7df"
+  },
+  "cad-screen-frame-connections.png": {
+    "bytes": 201284,
+    "sha256": "d35e7aa72809ed54e8b55f19fb09496c84a85a80b962a3ac07a8487798f47d56"
+  },
+  "cad-screen-isometric.png": {
+    "bytes": 194754,
+    "sha256": "ab0a9ac384acc1f50772e6c817d18c8210e6c63065307afef6e76309e762d1b3"
+  },
+  "cad-screen-joint-detail.png": {
+    "bytes": 285222,
+    "sha256": "665d099df7b3ca0d9438f03c20ef98f8ad44fb68525484af740e516713f82f58"
+  },
+  "viewport-frame-connections.png": {
+    "bytes": 60115,
+    "sha256": "fc1b6dce7e22f5dcf0ef066f21e2e163fed6bbd221d285c5792a9385862166f5"
+  },
+  "viewport-isometric.png": {
+    "bytes": 56045,
+    "sha256": "31dc61bcaad7f94868fbf166a3174a88d972c1da5a3ff9b25bb9ac6643e6e07c"
+  }
+}

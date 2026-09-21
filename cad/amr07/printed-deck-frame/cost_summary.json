@@ -1,0 +1,99 @@
+{
+  "date": "2026-09-22",
+  "source_BOM_revision": "3417383",
+  "scope": "P1 full vehicle running subtotal, with inherited budgets; not a completed quotation",
+  "subtotal": {
+    "JPY": 54074.0,
+    "USD": 82.25
+  },
+  "unpriced_rows": [
+    "S04",
+    "S07",
+    "P1_BRACKET_BOLTS",
+    "P1_STOP_BOLTS",
+    "P1_STOP_NUTS"
+  ],
+  "additional_unknowns": "Inherited electronics/battery/boards/wires, shipping/taxes/labor and print failures remain unresolved. See parent BOM.",
+  "current_observations": [
+    {
+      "id": "F02",
+      "asin": "B0DKDZ8G9G",
+      "url": "https://www.amazon.co.jp/dp/B0DKDZ8G9G",
+      "spec": "NFSL6-3030-300",
+      "pack_qty": 4,
+      "observed_pack_JPY": 1467,
+      "date_JST": "2026-09-22",
+      "source": "Product title and displayed product price, not a cart/checkout quote",
+      "delivery": "Seller/recipient/cart dependent; Prime availability not asserted"
+    },
+    {
+      "id": "F03",
+      "asin": "B0DKF1FCD6",
+      "url": "https://www.amazon.co.jp/dp/B0DKF1FCD6",
+      "spec": "HBLFSN6",
+      "pack_qty": 10,
+      "observed_pack_JPY": 917,
+      "date_JST": "2026-09-22",
+      "source": "Product title and displayed product price, not a cart/checkout quote",
+      "delivery": "Seller/recipient/cart dependent; Prime availability not asserted",
+      "raw_html_sha256": "cb0a1555ee247c85e325d4a428b3d55a27ec6ca93c7eb02a5e3d290938ce5e36",
+      "observed_title": "Amazon.co.jp: ミスミ (MISUMI) 6シリーズ (溝幅8mm) -1列溝用- 突起付反転ブラケット 10個入 HBLFSN6 : 産業・研究開発用品"
+    },
+    {
+      "id": "F04",
+      "asin": "B0DK9C99YH",
+      "url": "https://www.amazon.co.jp/dp/B0DK9C99YH",
+      "spec": "HNTT6-6",
+      "pack_qty": 50,
+      "observed_pack_JPY": 2556,
+      "date_JST": "2026-09-22",
+      "source": "Product title and displayed product price, not a cart/checkout quote",
+      "delivery": "Seller/recipient/cart dependent; Prime availability not asserted",
+      "raw_html_sha256": "931c2b6101c6a9b59622cd7e0caa5d88368a882fdc98cf76679a1e5c5ca8f278",
+      "observed_title": "Amazon | ミスミ (MISUMI) 6シリーズ (溝幅8mm)用 アルミフレーム用先入れナット 50個入 HNTT6-6 6シリーズM6 鉄 | 溝付きナット | DIY・工具・ガーデン 通販"
+    },
+    {
+      "id": "P1_SLEEVE",
+      "asin": "B0GWMC8ZY9",
+      "url": "https://www.amazon.co.jp/dp/B0GWMC8ZY9",
+      "spec": "M6 sleeve ID6.2 OD12 L5mm",
+      "pack_qty": 10,
+      "observed_pack_JPY": 580,
+      "date_JST": "2026-09-22",
+      "source": "Product title and displayed product price, not a cart/checkout quote",
+      "delivery": "Seller/recipient/cart dependent; Prime availability not asserted",
+      "raw_html_sha256": "326224b75bcae4b76967c4ddcbdd9461f45b537c2e631afa887890dcb960238e",
+      "observed_title": "Amazon | アルミスペーサー M6 内径6.2mm×外径12mm×厚さ5mm スペーサー 10個セット丸型スペーサースクリュースタンドオフ | スペーサー | 産業・研究開発用品 通販"
+    },
+    {
+      "id": "P1_BUTTON",
+      "asin": "B0C2CDH79R",
+      "url": "https://www.amazon.co.jp/dp/B0C2CDH79R",
+      "spec": "M6x16 button cap, YAHATA",
+      "pack_qty": 10,
+      "observed_pack_JPY": 410,
+      "date_JST": "2026-09-22",
+      "source": "Product title and displayed product price, not a cart/checkout quote",
+      "delivery": "Seller/recipient/cart dependent; Prime availability not asserted",
+      "raw_html_sha256": "95d2c733c6e1e172e0c0b85b681b538015370140e042f9a4fcd028a4ea0cf622",
+      "observed_title": "Amazon.co.jp: 六角穴付ボタンキャップ ユニクロ Ｍ６×１６ 【10本】キャップボルト ６角 八幡ねじ ネジ : DIY・工具・ガーデン"
+    },
+    {
+      "id": "P1_WASHER",
+      "asin": "B0G2X4FSQX",
+      "url": "https://www.amazon.co.jp/dp/B0G2X4FSQX",
+      "spec": "uxcell M6 washer ID6.4 OD18 t1.6",
+      "pack_qty": 50,
+      "observed_pack_JPY": 845,
+      "date_JST": "2026-09-22",
+      "source": "Product title and displayed product price, not a cart/checkout quote",
+      "delivery": "Seller/recipient/cart dependent; Prime availability not asserted",
+      "raw_html_sha256": "af30811419a552b0f854c1582463397efef960cb7711fea1c1e0ec42830e5c44",
+      "observed_title": "Amazon | uxcell 50枚入り M6平座金 304ステンレス鋼 内径6.4mm×外径18mm×厚さ1.6mm ボルト・ネジ用 工場修理 キッチン 店舗 屋外建設向け シルバー | 平座金 | DIY・工具・ガーデン 通販"
+    }
+  ],
+  "quoted_CNC_motor_mounts_USD_including_observed_shipping": 82.25,
+  "CNC_deck_order_needed": false,
+  "upper_frame_additional_pack_cost_JPY": 0,
+  "complete_purchase_total": false
+}

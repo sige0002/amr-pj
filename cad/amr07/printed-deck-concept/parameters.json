@@ -4,7 +4,7 @@
   "rejection": {
     "date": "2026-09-22",
     "reason_ja": "15mm角の中実アルミ棒を切断・穴あけして使う構成は、加工負担を理由にユーザーが不採用とした。",
-    "replacement_status": "Hole-free assembly using purchased frame and connection hardware under review; not yet selected.",
+    "replacement_status": "Replaced by P1 precut3030 + HBLFSN6; see ../printed-deck-frame/README.ja.md",
     "historical_files_only": true
   },
   "date": "2026-09-21",

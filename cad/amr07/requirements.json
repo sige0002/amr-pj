@@ -9,7 +9,12 @@
     "self_cut_and_drill_solid_square_bar_accepted": false,
     "decision_ja": "15mm角の中実アルミ棒を自宅で切断・穴あけする荷台支持案は不採用。既製の穴・溝と対応金具で締結できる構成を優先する。",
     "affected_designs": ["P0 four support bars", "D2 six support blocks and four cargo stops from the same square stock"],
-    "replacement_selected": false,
+    "replacement_selected": true,
+    "selected_revision": "P1 prototype",
+    "user_clarification_ja": "溝付きフレームのことです",
+    "replacement_ja": "NFSL6-3030-300を2本追加しHBLFSN6を8個追加。4本パックの余りを使用。荷台支持の金属切断・穴加工なし。PLA荷台/ストッパ/電装トレイを再印刷。",
+    "replacement_CAD": "printed-deck-frame/AMR01_PrintedDeck_P1.FCStd",
+    "loaded_use_released": false,
     "scope_note": "This rejection concerns the deck's square-bar fabrication. Previously quoted custom motor mounts remain separately specified."
   },
   "operation_scope": {
@@ -33,7 +38,8 @@
   "geometry": {
     "frame_outer_LW_mm": [460, 300],
     "frame_bottom_top_z_mm": [69, 99],
-    "stock_3030_lengths_mm": [400, 400, 400, 400, 300, 300],
+    "stock_3030_lengths_mm": [400, 400, 400, 400, 300, 300, 300, 300],
+    "P1_upper_supports": {"x_mm": [-110, 75], "direction": "Y", "bottom_top_z_mm": [99, 129], "deck_top_z_mm": 141},
     "drive_axis_x_mm": 90,
     "drive_track_mm": 349,
     "wheel_diameter_mm": 100.7,

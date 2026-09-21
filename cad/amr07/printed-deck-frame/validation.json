@@ -1,0 +1,901 @@
+{
+  "parameters": {
+    "revision": "P1",
+    "date": "2026-09-22",
+    "status": "fit_checked_prototype_not_load_released",
+    "frame_x_mm": [
+      -110,
+      75
+    ],
+    "frame_length_mm": 300,
+    "frame_bottom_top_z_mm": [
+      99,
+      129
+    ],
+    "plate_bottom_top_z_mm": [
+      129,
+      141
+    ],
+    "grid_axis_mm": [
+      -125,
+      -75,
+      -25,
+      25,
+      75,
+      125
+    ],
+    "grid_hole_diameter_mm": 4.5,
+    "nut_pocket_AF_depth_mm": [
+      7.3,
+      3.4
+    ],
+    "seam_xy_mm": [
+      37.5,
+      37.5
+    ],
+    "seam_gap_mm": 0.4,
+    "attachment_y_mm": [
+      -100,
+      -50,
+      50,
+      100
+    ],
+    "sleeve_OD_ID_L_mm": [
+      12,
+      6.2,
+      5
+    ],
+    "compression_sleeve_ASIN": "B0GWMC8ZY9",
+    "bracket": "HBLFSN6",
+    "bracket_qty": 8,
+    "bracket_model": "Conservative 30x30x20 envelope, walls4.5, rib edges3; small casting radii/tabs omitted.",
+    "metal_support_cutting": false,
+    "metal_support_drilling": false,
+    "normal_payload_target_kg": 10,
+    "structural_payload_target_kg": 15,
+    "static_factor_target": 2,
+    "PLA_E_comparison_MPa": 2750,
+    "PLA_density_kg_mm3": 1.24e-06,
+    "PLA_cost_reference_JPY_g": 2,
+    "loaded_use_released": false
+  },
+  "source_revision": "3417383",
+  "source_sha256": "a7c0fb55e04dc9eb03f0667bb53065c2f140aaec1dcf2bcdcc665466e48dc0ad",
+  "all_shapes_valid": true,
+  "physical_parts": 273,
+  "checked_physical_pairs": 37128,
+  "collisions": [],
+  "reference_collisions": {},
+  "driver_access": [
+    {
+      "bolt": "UpperBoltVertical_0_0",
+      "hits": []
+    },
+    {
+      "bolt": "UpperBoltFoot_0_0",
+      "hits": []
+    },
+    {
+      "bolt": "UpperBoltVertical_0_1",
+      "hits": []
+    },
+    {
+      "bolt": "UpperBoltFoot_0_1",
+      "hits": []
+    },
+    {
+      "bolt": "UpperBoltVertical_0_2",
+      "hits": []
+    },
+    {
+      "bolt": "UpperBoltFoot_0_2",
+      "hits": []
+    },
+    {
+      "bolt": "UpperBoltVertical_0_3",
+      "hits": []
+    },
+    {
+      "bolt": "UpperBoltFoot_0_3",
+      "hits": []
+    },
+    {
+      "bolt": "UpperBoltVertical_1_0",
+      "hits": []
+    },
+    {
+      "bolt": "UpperBoltFoot_1_0",
+      "hits": []
+    },
+    {
+      "bolt": "UpperBoltVertical_1_1",
+      "hits": []
+    },
+    {
+      "bolt": "UpperBoltFoot_1_1",
+      "hits": []
+    },
+    {
+      "bolt": "UpperBoltVertical_1_2",
+      "hits": []
+    },
+    {
+      "bolt": "UpperBoltFoot_1_2",
+      "hits": []
+    },
+    {
+      "bolt": "UpperBoltVertical_1_3",
+      "hits": []
+    },
+    {
+      "bolt": "UpperBoltFoot_1_3",
+      "hits": []
+    },
+    {
+      "bolt": "DeckBolt0",
+      "hits": []
+    },
+    {
+      "bolt": "DeckBolt1",
+      "hits": []
+    },
+    {
+      "bolt": "DeckBolt2",
+      "hits": []
+    },
+    {
+      "bolt": "DeckBolt3",
+      "hits": []
+    },
+    {
+      "bolt": "DeckBolt4",
+      "hits": []
+    },
+    {
+      "bolt": "DeckBolt5",
+      "hits": []
+    },
+    {
+      "bolt": "DeckBolt6",
+      "hits": []
+    },
+    {
+      "bolt": "DeckBolt7",
+      "hits": []
+    }
+  ],
+  "grid_stations": [
+    {
+      "xy_mm": [
+        -125,
+        -125
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        -125,
+        -75
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        -125,
+        -25
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        -125,
+        25
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        -125,
+        75
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        -125,
+        125
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        -75,
+        -125
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        -75,
+        -75
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        -75,
+        -25
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        -75,
+        25
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        -75,
+        75
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        -75,
+        125
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        -25,
+        -125
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        -25,
+        -75
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        -25,
+        -25
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        -25,
+        25
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        -25,
+        75
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        -25,
+        125
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        25,
+        -125
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        25,
+        -75
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        25,
+        -25
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        25,
+        25
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        25,
+        75
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        25,
+        125
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        75,
+        -125
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        75,
+        -75
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        75,
+        -25
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        75,
+        25
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        75,
+        75
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        75,
+        125
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        125,
+        -125
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        125,
+        -75
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        125,
+        -25
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        125,
+        25
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        125,
+        75
+      ],
+      "hits": []
+    },
+    {
+      "xy_mm": [
+        125,
+        125
+      ],
+      "hits": []
+    }
+  ],
+  "battery_service": {
+    "continuous_sweep_mm": 180,
+    "removed_parts": [
+      "PrintedDeckPanel1",
+      "PrintedDeckPanel2",
+      "PrintedDeckPanel3",
+      "PrintedDeckPanel4",
+      "DeckSleeve0",
+      "DeckWasher0_0",
+      "DeckWasher0_1",
+      "DeckBolt0",
+      "DeckNut0",
+      "DeckSleeve1",
+      "DeckWasher1_0",
+      "DeckWasher1_1",
+      "DeckBolt1",
+      "DeckNut1",
+      "DeckSleeve2",
+      "DeckWasher2_0",
+      "DeckWasher2_1",
+      "DeckBolt2",
+      "DeckNut2",
+      "DeckSleeve3",
+      "DeckWasher3_0",
+      "DeckWasher3_1",
+      "DeckBolt3",
+      "DeckNut3",
+      "DeckSleeve4",
+      "DeckWasher4_0",
+      "DeckWasher4_1",
+      "DeckBolt4",
+      "DeckNut4",
+      "DeckSleeve5",
+      "DeckWasher5_0",
+      "DeckWasher5_1",
+      "DeckBolt5",
+      "DeckNut5",
+      "DeckSleeve6",
+      "DeckWasher6_0",
+      "DeckWasher6_1",
+      "DeckBolt6",
+      "DeckNut6",
+      "DeckSleeve7",
+      "DeckWasher7_0",
+      "DeckWasher7_1",
+      "DeckBolt7",
+      "DeckNut7",
+      "PrintedStopXP",
+      "PrintedStopXN",
+      "PrintedStopYP",
+      "PrintedStopYN",
+      "StopBolt0",
+      "StopNut0",
+      "StopBolt1",
+      "StopNut1",
+      "StopBolt2",
+      "StopNut2",
+      "StopBolt3",
+      "StopNut3",
+      "StopBolt4",
+      "StopNut4",
+      "StopBolt5",
+      "StopNut5",
+      "StopBolt6",
+      "StopNut6",
+      "StopBolt7",
+      "StopNut7"
+    ],
+    "hits": [],
+    "with_upper_beams_retained_hits": [],
+    "procedure": "Unload and remove deck screws/panels. Upper rails and all brackets remain fixed. Left rail-to-battery nominal gap5mm."
+  },
+  "changed_parts_caster_sweep_hits": [],
+  "deck_upward_sweeps": [
+    {
+      "part": "PrintedDeckPanel1",
+      "hits": []
+    },
+    {
+      "part": "PrintedDeckPanel2",
+      "hits": []
+    },
+    {
+      "part": "PrintedDeckPanel3",
+      "hits": []
+    },
+    {
+      "part": "PrintedDeckPanel4",
+      "hits": []
+    },
+    {
+      "part": "PrintedStopXP",
+      "hits": []
+    },
+    {
+      "part": "PrintedStopXN",
+      "hits": []
+    },
+    {
+      "part": "PrintedStopYP",
+      "hits": []
+    },
+    {
+      "part": "PrintedStopYN",
+      "hits": []
+    },
+    {
+      "part": "StopBolt0",
+      "hits": []
+    },
+    {
+      "part": "StopNut0",
+      "hits": []
+    },
+    {
+      "part": "StopBolt1",
+      "hits": []
+    },
+    {
+      "part": "StopNut1",
+      "hits": []
+    },
+    {
+      "part": "StopBolt2",
+      "hits": []
+    },
+    {
+      "part": "StopNut2",
+      "hits": []
+    },
+    {
+      "part": "StopBolt3",
+      "hits": []
+    },
+    {
+      "part": "StopNut3",
+      "hits": []
+    },
+    {
+      "part": "StopBolt4",
+      "hits": []
+    },
+    {
+      "part": "StopNut4",
+      "hits": []
+    },
+    {
+      "part": "StopBolt5",
+      "hits": []
+    },
+    {
+      "part": "StopNut5",
+      "hits": []
+    },
+    {
+      "part": "StopBolt6",
+      "hits": []
+    },
+    {
+      "part": "StopNut6",
+      "hits": []
+    },
+    {
+      "part": "StopBolt7",
+      "hits": []
+    },
+    {
+      "part": "StopNut7",
+      "hits": []
+    }
+  ],
+  "removed_parts": [
+    "CargoDeckPlate",
+    "CargoDeckSupport0",
+    "CargoDeckSupport1",
+    "CargoDeckSupport2",
+    "CargoDeckSupport3",
+    "CargoDeckSupport4",
+    "CargoDeckSupport5",
+    "CargoStopXP",
+    "CargoStopXN",
+    "CargoStopYP",
+    "CargoStopYN",
+    "CargoDeckWasher0_0",
+    "CargoDeckWasher0_1",
+    "CargoDeckBolt0",
+    "SlotNut_CargoDeck0",
+    "CargoDeckWasher1_0",
+    "CargoDeckWasher1_1",
+    "CargoDeckBolt1",
+    "SlotNut_CargoDeck1",
+    "CargoDeckWasher2_0",
+    "CargoDeckWasher2_1",
+    "CargoDeckBolt2",
+    "SlotNut_CargoDeck2",
+    "CargoDeckWasher3_0",
+    "CargoDeckWasher3_1",
+    "CargoDeckBolt3",
+    "SlotNut_CargoDeck3",
+    "CargoDeckWasher4_0",
+    "CargoDeckWasher4_1",
+    "CargoDeckBolt4",
+    "SlotNut_CargoDeck4",
+    "CargoDeckWasher5_0",
+    "CargoDeckWasher5_1",
+    "CargoDeckBolt5",
+    "SlotNut_CargoDeck5",
+    "CargoStopBolt0",
+    "CargoStopWasher0",
+    "CargoStopNut0",
+    "CargoStopBolt1",
+    "CargoStopWasher1",
+    "CargoStopNut1",
+    "CargoStopBolt2",
+    "CargoStopWasher2",
+    "CargoStopNut2",
+    "CargoStopBolt3",
+    "CargoStopWasher3",
+    "CargoStopNut3",
+    "CargoStopBolt4",
+    "CargoStopWasher4",
+    "CargoStopNut4",
+    "CargoStopBolt5",
+    "CargoStopWasher5",
+    "CargoStopNut5",
+    "CargoStopBolt6",
+    "CargoStopWasher6",
+    "CargoStopNut6",
+    "CargoStopBolt7",
+    "CargoStopWasher7",
+    "CargoStopNut7",
+    "CargoFlatBottomReference",
+    "CargoStrapRouteX",
+    "CargoStrapRouteY",
+    "FixtureM3NutL0",
+    "FixtureM3NutL1",
+    "PrintedAdapterL",
+    "FixtureStackWasherAdapterL0_0",
+    "FixtureStackWasherAdapterL0_1",
+    "FixtureStackWasherAdapterL0_2",
+    "FixtureStackWasherAdapterL0_3",
+    "FixtureTopWasherAdapterL0",
+    "FixtureBottomWasherAdapterL0",
+    "FixtureM4NutAdapterL0",
+    "FixtureBoltAdapterL0",
+    "FixtureStackWasherAdapterL1_0",
+    "FixtureStackWasherAdapterL1_1",
+    "FixtureStackWasherAdapterL1_2",
+    "FixtureStackWasherAdapterL1_3",
+    "FixtureTopWasherAdapterL1",
+    "FixtureBottomWasherAdapterL1",
+    "FixtureM4NutAdapterL1",
+    "FixtureBoltAdapterL1",
+    "FixtureCableEnvelopeL",
+    "PrintedGuideL",
+    "FixtureStackWasherGuideL0_0",
+    "FixtureStackWasherGuideL0_1",
+    "FixtureStackWasherGuideL0_2",
+    "FixtureStackWasherGuideL0_3",
+    "FixtureTopWasherGuideL0",
+    "FixtureBottomWasherGuideL0",
+    "FixtureM4NutGuideL0",
+    "FixtureBoltGuideL0",
+    "FixtureStackWasherGuideL1_0",
+    "FixtureStackWasherGuideL1_1",
+    "FixtureStackWasherGuideL1_2",
+    "FixtureStackWasherGuideL1_3",
+    "FixtureTopWasherGuideL1",
+    "FixtureBottomWasherGuideL1",
+    "FixtureM4NutGuideL1",
+    "FixtureBoltGuideL1",
+    "FixtureM3NutR0",
+    "FixtureM3NutR1",
+    "PrintedAdapterR",
+    "FixtureStackWasherAdapterR0_0",
+    "FixtureStackWasherAdapterR0_1",
+    "FixtureStackWasherAdapterR0_2",
+    "FixtureStackWasherAdapterR0_3",
+    "FixtureTopWasherAdapterR0",
+    "FixtureBottomWasherAdapterR0",
+    "FixtureM4NutAdapterR0",
+    "FixtureBoltAdapterR0",
+    "FixtureStackWasherAdapterR1_0",
+    "FixtureStackWasherAdapterR1_1",
+    "FixtureStackWasherAdapterR1_2",
+    "FixtureStackWasherAdapterR1_3",
+    "FixtureTopWasherAdapterR1",
+    "FixtureBottomWasherAdapterR1",
+    "FixtureM4NutAdapterR1",
+    "FixtureBoltAdapterR1",
+    "FixtureCableEnvelopeR",
+    "PrintedGuideR",
+    "FixtureStackWasherGuideR0_0",
+    "FixtureStackWasherGuideR0_1",
+    "FixtureStackWasherGuideR0_2",
+    "FixtureStackWasherGuideR0_3",
+    "FixtureTopWasherGuideR0",
+    "FixtureBottomWasherGuideR0",
+    "FixtureM4NutGuideR0",
+    "FixtureBoltGuideR0",
+    "FixtureStackWasherGuideR1_0",
+    "FixtureStackWasherGuideR1_1",
+    "FixtureStackWasherGuideR1_2",
+    "FixtureStackWasherGuideR1_3",
+    "FixtureTopWasherGuideR1",
+    "FixtureBottomWasherGuideR1",
+    "FixtureM4NutGuideR1",
+    "FixtureBoltGuideR1"
+  ],
+  "changed_parts": [
+    "FrontElectronicsTrayPLA",
+    "FrontDeckBolt_0",
+    "FrontDeckBolt_1",
+    "SlotNut_FrontDeck_0",
+    "SlotNut_FrontDeck_1",
+    "LargeWasher_Front0",
+    "LargeWasher_Front1",
+    "ElectronicsTrayPLA",
+    "ElectronicsBolt_2",
+    "ElectronicsBolt_3",
+    "SlotNut_Electronics_2",
+    "SlotNut_Electronics_3",
+    "LargeWasher_Electronics2",
+    "LargeWasher_Electronics3"
+  ],
+  "added_parts": [
+    "Upper3030_0",
+    "UpperBracket_0_0",
+    "UpperBoltVertical_0_0",
+    "UpperNutVertical_0_0",
+    "UpperBoltFoot_0_0",
+    "UpperNutFoot_0_0",
+    "UpperBracket_0_1",
+    "UpperBoltVertical_0_1",
+    "UpperNutVertical_0_1",
+    "UpperBoltFoot_0_1",
+    "UpperNutFoot_0_1",
+    "UpperBracket_0_2",
+    "UpperBoltVertical_0_2",
+    "UpperNutVertical_0_2",
+    "UpperBoltFoot_0_2",
+    "UpperNutFoot_0_2",
+    "UpperBracket_0_3",
+    "UpperBoltVertical_0_3",
+    "UpperNutVertical_0_3",
+    "UpperBoltFoot_0_3",
+    "UpperNutFoot_0_3",
+    "Upper3030_1",
+    "UpperBracket_1_0",
+    "UpperBoltVertical_1_0",
+    "UpperNutVertical_1_0",
+    "UpperBoltFoot_1_0",
+    "UpperNutFoot_1_0",
+    "UpperBracket_1_1",
+    "UpperBoltVertical_1_1",
+    "UpperNutVertical_1_1",
+    "UpperBoltFoot_1_1",
+    "UpperNutFoot_1_1",
+    "UpperBracket_1_2",
+    "UpperBoltVertical_1_2",
+    "UpperNutVertical_1_2",
+    "UpperBoltFoot_1_2",
+    "UpperNutFoot_1_2",
+    "UpperBracket_1_3",
+    "UpperBoltVertical_1_3",
+    "UpperNutVertical_1_3",
+    "UpperBoltFoot_1_3",
+    "UpperNutFoot_1_3",
+    "PrintedDeckPanel1",
+    "PrintedDeckPanel2",
+    "PrintedDeckPanel3",
+    "PrintedDeckPanel4",
+    "DeckSleeve0",
+    "DeckWasher0_0",
+    "DeckWasher0_1",
+    "DeckBolt0",
+    "DeckNut0",
+    "DeckSleeve1",
+    "DeckWasher1_0",
+    "DeckWasher1_1",
+    "DeckBolt1",
+    "DeckNut1",
+    "DeckSleeve2",
+    "DeckWasher2_0",
+    "DeckWasher2_1",
+    "DeckBolt2",
+    "DeckNut2",
+    "DeckSleeve3",
+    "DeckWasher3_0",
+    "DeckWasher3_1",
+    "DeckBolt3",
+    "DeckNut3",
+    "DeckSleeve4",
+    "DeckWasher4_0",
+    "DeckWasher4_1",
+    "DeckBolt4",
+    "DeckNut4",
+    "DeckSleeve5",
+    "DeckWasher5_0",
+    "DeckWasher5_1",
+    "DeckBolt5",
+    "DeckNut5",
+    "DeckSleeve6",
+    "DeckWasher6_0",
+    "DeckWasher6_1",
+    "DeckBolt6",
+    "DeckNut6",
+    "DeckSleeve7",
+    "DeckWasher7_0",
+    "DeckWasher7_1",
+    "DeckBolt7",
+    "DeckNut7",
+    "PrintedStopXP",
+    "PrintedStopXN",
+    "PrintedStopYP",
+    "PrintedStopYN",
+    "StopBolt0",
+    "StopNut0",
+    "StopBolt1",
+    "StopNut1",
+    "StopBolt2",
+    "StopNut2",
+    "StopBolt3",
+    "StopNut3",
+    "StopBolt4",
+    "StopNut4",
+    "StopBolt5",
+    "StopNut5",
+    "StopBolt6",
+    "StopNut6",
+    "StopBolt7",
+    "StopNut7",
+    "CargoFlatBottomReference",
+    "CargoStrapRouteX",
+    "CargoStrapRouteY"
+  ],
+  "panel_sizes_mm": [
+    [
+      187.3,
+      187.3,
+      12
+    ],
+    [
+      187.3,
+      112.30000000000001,
+      12
+    ],
+    [
+      112.30000000000001,
+      187.3,
+      12
+    ],
+    [
+      112.30000000000001,
+      112.30000000000001,
+      12
+    ]
+  ],
+  "mass": {
+    "source_D2_kg": 8.51436888918395,
+    "removed_kg": 1.3481774798953068,
+    "added_proxy_kg": 2.476728859120718,
+    "changed_kg": -0.03913440000000011,
+    "rail_and_bracket_catalog_correction_kg": -0.1850638411740336,
+    "solid_panels_kg": 1.2753586178744674,
+    "total_solid_PLA_kg": 1.5351426131969115,
+    "estimated_base_kg": 9.41872202723533,
+    "remaining_to_10kg_kg": 0.5812779727646706,
+    "electrical_allowance_included_kg": 2.1,
+    "straps_allowance_carried_once_kg": 0.28,
+    "actually_sliced": false,
+    "actually_weighed": false
+  },
+  "limitations": [
+    "Nominal proxy shapes; bracket tabs/radii and actual tolerances not resolved",
+    "Compression sleeve and printed floor need fit/preload coupon",
+    "PLA creep, temperature, local bolt hold-down and strap loads unqualified; SF2 not established",
+    "D2 structural FEA does not apply to P1",
+    "Electronics are reservations, not selected-part fit validation"
+  ]
+}

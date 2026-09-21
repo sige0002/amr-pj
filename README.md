@@ -1,46 +1,34 @@
 # amr-pj — 家庭向け小型AMR / 将来MoMa
 
-最新は **A6-D2：平坦な屋内床で通常積載10kg、追加の機械ブレーキなし、構造検証は荷物15kg・静的安全率2**。車体は電池・電装・荷台込み10kg以下を目標とし、現在の推計は**8.51kg**です。25kgは構造計算時の総重量で、積載量ではありません。
+最新の設計変更は **P1：分割PLA荷台を、切断済み3030と既製ブラケットで支持する構成**。中実角棒の切断・穴あけを廃止しました。300mm材4本パックのうち、下段2本・上段2本を使用します。
 
-D2では格子穴アルミ板と小型PLAアダプタ・配線ガイドを組み込み、裏ナットと支持材の干渉を解消しました。板の穴付きシェル解析、全36穴の工具空間、キャスター全周と電池・荷台の整備経路を検査しています。
+M0601C_111二輪、100.7mmタイヤ、TYG-50キャスター、下段460×300mmの骨格を継承。通常積載10kg、構造検証15kg・静的安全率2、電池・電装込み車体10kg以下を設計目標とします。追加機械ブレーキは採用せず、運用範囲は平坦な屋内床です。
 
-レビューを受け、金具の機能公差・ねじ座面・溝ナットと3030溝の寸法、荷台と荷物固定、重心範囲、停止回路の構成と実機試験仕様を修正しました。M0601C_111二輪、Amazon3030の300/400mm定尺、モーター支持スペーサーなしの低床構成を維持しています。
-
-追加の機械ブレーキはユーザー方針により不採用。通常の減速・停止はモーター制御で行い、非常停止の電源遮断は維持します。坂道走行・停電時の坂道保持は初号機の運用範囲に含めず、従来の8kg/5°計算は参考資料として残します。**実機での安全率2、低速連続駆動、平地停止は未確認です。**
-
-- [A6の設計・変更理由・CAD画面](cad/amr07/README.ja.md)
-- [格子穴付きPLA上板の試作案・強度と費用の比較](cad/amr07/printed-deck-concept/README.ja.md)
-- [穴あき板の安価な切り売り・Amazon板材・3Dプリントの価格比較](cad/amr07/deck-procurement/README.ja.md)
-- [格子穴付きアルミ上板のJLCCNC実見積](cad/amr07/aluminum-grid-deck/README.ja.md) / [キャスターの耐荷重・Amazon／コーナン調達](cad/amr07/CASTER_PROCUREMENT.ja.md)
-- [レビュー8項目への対応と残る確認](cad/amr07/REVIEW_RESPONSE.ja.md)
-- [車体FCStd](cad/amr07/AMR01_M0601C_A6.FCStd) / [車体STEP](cad/amr07/AMR01_M0601C_A6.step)
-- [金具STEP](cad/amr07/M0601C_mount_A6_R1.step) / [機能公差付き図面PDF](cad/amr07/M0601C_mount_A6_R1.pdf)
-- [荷台の設計・固定・費用](cad/amr07/DECK_REVIEW.ja.md) / [金具・締結と公差](cad/amr07/MOUNT_INTERFACE_REVIEW.ja.md)
-- [BOM一覧・未選定品](cad/amr07/BOM.ja.md) / [Excel](cad/amr07/BOM.xlsx) / [購入品CSV](cad/amr07/BOM.csv)
-- [加工サイトの実見積と証拠](cad/amr07/MACHINING_QUOTE.ja.md)
-- [電源・停止・回生の構成と試験仕様](cad/amr07/ELECTRICAL_AND_VALIDATION.ja.md)
-- [P1S用PLA仮合わせモックZIP](cad/amr07/print-mock/M0601C_A6_PLA_mock_files.zip) / [使い方](cad/amr07/print-mock/PRINT_GUIDE.ja.md)
-
-| 現行条件 | 内容 |
+| P1の変更と確認 | 内容 |
 |---|---|
-| フレーム | 3030・400mm×4本＋300mm×2本、外形460×300mm、純正接合HBLFSN6-SET |
-| 駆動 | M0601C_111×2、100.7mm適合タイヤ、後方50mm自在キャスター |
-| 金具 | A6061-T6、同形2個、幅90・厚5・ピッチ75。受け着座、穴・座金・機能公差を修正 |
-| 荷台 | 300×300×4mm 6061-T6、50mmピッチ36貫通穴、上面118mm、金属支持6個・4ストッパ・2ベルト |
-| 荷物条件 | 中央200×200mm連続平底、CG前後/左右±30mm・高さ220mm以下。平地で容器込み10kg |
-| 停止・運用範囲 | モーター制御による減速・停止。追加機械ブレーキなし、平坦な屋内床専用 |
-| 質量 | 電装2.10kg枠・荷台固定具込み推計8.514kg、未実測 |
-| CAD検査 | 298物理部品・44,253ペアで公称体積干渉なし。タイヤ/キャスター接地z=0、工具・電池整備空間を確認 |
-| 金具実見積 | 2個75.02 USD＋日本宛表示送料7.23 USD＝82.25 USD、図面審査前の自動見積 |
-| 費用途中小計 | 50,468円＋120.90 USD＋未確定分。キャスターはAmazon.co.jp発送・既存Prime会員の送料無料条件。完成車総額ではない |
+| 荷台支持 | 上段3030×300mmを2本、HBLFSN6を8個追加。溝ナットとM6で固定 |
+| PLA荷台 | 300×300×12mm、4分割、50mmピッチ・φ4.5の36穴 |
+| 荷台高さ | 床上141mm。旧PLA P0の124mmから17mm上昇 |
+| 車体重量 | 推計9.419kg、10kgまで0.581kg。電装2.10kg枠込み、未実測 |
+| 干渉 | 273部品・37,128ペアで公称体積干渉なし。36穴、工具、荷台・電池抜出しも確認 |
+| 製作 | 荷台支持の金属追加工なし。前後電装トレイと4個のストッパも印刷 |
+| 費用 | P1専用BOMに更新。Amazonの実表示価格・購入パックと未確定項目を区別 |
 
-費用はTaobaoモーター約7,000円/個という仮枠、タイヤ別購入、荷台はCNC外注、支持ブロック等は自加工する条件です。追加の荷台と停止回路候補を計上し、使わなくなったUSB-RS485Bとその送料を除きました。電池・主計算機・基板/配線・各店送料・輸入諸費、外注へ切り替える板材加工等は未確定。追加機械ブレーキは購入対象から除外し、従来小計にも計上していなかったため減額はありません。ECB2026-09-21参考レートでの途中小計は約69,480円＋未確定分。決済レート・税・手数料は別です。
+**P1は組付け確認済みの試作設計です。PLAの強度・クリープ・実機の安全率2と停止性能は未確認です。** 旧D2アルミ荷台の解析結果をP1の耐荷重として流用しません。荷物CG上限220mm、車体CG上限目標110mmは実機で確認します。
 
-![A6荷台付き車体・FreeCAD実画面](cad/amr07/cad-screen-isometric.png)
+![P1の上板を外したFreeCAD画面](cad/amr07/printed-deck-frame/cad-screen-frame-connections.png)
 
-![A6下面・FreeCAD実画面](cad/amr07/cad-screen-underside.png)
+- [P1の設計理由・締結拡大画像・費用・検査](cad/amr07/printed-deck-frame/README.ja.md)
+- [P1組立FCStd](cad/amr07/printed-deck-frame/AMR01_PrintedDeck_P1.FCStd) / [STEP](cad/amr07/printed-deck-frame/AMR01_PrintedDeck_P1.step)
+- [P1全車BOM CSV](cad/amr07/printed-deck-frame/BOM.csv) / [途中小計と未確定分](cad/amr07/printed-deck-frame/cost_summary.json)
+- [P1印刷STL一覧](cad/amr07/printed-deck-frame/print_manifest.json)
+- [設計要件](cad/amr07/requirements.json) / [共通の駆動・取付金具設計とD2履歴](cad/amr07/README.ja.md)
+- [モーター金具の実加工見積](cad/amr07/MACHINING_QUOTE.ja.md) / [金具STEP](cad/amr07/M0601C_mount_A6_R1.step)
+- [キャスターのAmazon／コーナン調達](cad/amr07/CASTER_PROCUREMENT.ja.md)
+- [電源・停止・回生と試験仕様](cad/amr07/ELECTRICAL_AND_VALIDATION.ja.md)
+- [旧アルミD2の実見積・解析記録](cad/amr07/aluminum-grid-deck/README.ja.md) / [不採用の旧PLA P0](cad/amr07/printed-deck-concept/README.ja.md)
 
-購入モーターは販売元案内のSTEPを使用。タイヤとカバーは公開外形からの簡略形状で、軸方向組付け位置と全幅・輪距は現物照合が必要です。半透明形状は電池・電装等の予約です。
+P1は `cad/amr07/printed-deck-frame/build_p1.py` をFreeCAD Pythonで実行して再生成します。続いて `python3 cad/amr07/printed-deck-frame/build_bom.py` で部品表を作成します。以下の既存コマンドは駆動計算や旧D2等の履歴用です。
 
 ## 再計算
 
