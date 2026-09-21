@@ -5,6 +5,7 @@
 骨格はM0601C_111二輪＋後方キャスター。Amazonの3030・300/400mm定尺、元のフレーム配置、低床電池を維持する。公開ブラケットのモーター受け形状を基に、3030下面へ直接留める一体の金属金具を比較した。
 
 - [A5の結果・設計理由・CAD実画面](cad/amr06/README.ja.md)
+- [設計レビュー：機能公差・荷重支持・駆動条件と解消項目](cad/amr06/DESIGN_REVIEW_2026-09-21.ja.md)
 - [全5案の実加工見積と証拠](cad/amr06/MACHINING_QUOTE.ja.md) / [費用差分表](cad/amr06/BOM_cost_comparison.csv)
 - [15kg可搬に向けた荷重・強度・駆動の検討](cad/amr06/STRENGTH_REVIEW.ja.md)
 - [D5比較車体FCStd](cad/amr06/AMR01_M0601C_A5.FCStd) / [STEP](cad/amr06/AMR01_M0601C_A5.step)
