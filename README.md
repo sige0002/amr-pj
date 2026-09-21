@@ -8,6 +8,7 @@
 
 - [A6の設計・変更理由・CAD画面](cad/amr07/README.ja.md)
 - [格子穴付きPLA上板の試作案・強度と費用の比較](cad/amr07/printed-deck-concept/README.ja.md)
+- [穴あき板の安価な切り売り・Amazon板材・3Dプリントの価格比較](cad/amr07/deck-procurement/README.ja.md)
 - [格子穴付きアルミ上板のJLCCNC実見積](cad/amr07/aluminum-grid-quote/README.ja.md) / [キャスターの耐荷重・Amazon／コーナン調達](cad/amr07/CASTER_PROCUREMENT.ja.md)
 - [レビュー8項目への対応と残る確認](cad/amr07/REVIEW_RESPONSE.ja.md)
 - [車体FCStd](cad/amr07/AMR01_M0601C_A6.FCStd) / [車体STEP](cad/amr07/AMR01_M0601C_A6.step)
