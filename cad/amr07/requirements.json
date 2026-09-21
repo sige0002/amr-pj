@@ -4,15 +4,23 @@
   "date": "2026-09-21",
   "supersedes_current_requirements_in": "../amr06/requirements.json",
   "status": "design_requirements_accepted_hardware_qualification_pending",
+  "operation_scope": {
+    "environment": "Level, smooth indoor floors only; ramps and slope parking are outside the first prototype scope.",
+    "additional_mechanical_brake_selected": false,
+    "power_off_slope_holding_required": false,
+    "slope_operation_in_scope": false,
+    "normal_stopping": "Motor-controlled deceleration and stopping, subject to flat-floor acceptance tests.",
+    "emergency_stop": "Retain independent motor power isolation and verify the resulting flat-floor stopping distance.",
+    "decision_basis": "User explicitly declined the additional brake after the flat-floor-first proposal. This changes scope, not proof of unpowered holding."
+  },
   "mass": {
     "base_max_kg": 10,
     "normal_payload_kg": 10,
-    "slope_5deg_payload_kg": 8,
     "structural_payload_kg": 15,
     "structural_gross_kg": 25,
     "interpretation": "Payload is cargo only. 25 kg is structural gross mass, never the payload rating.",
     "future_arm": "Include any arm, gripper, battery, deck and electronics in the 10 kg base limit; re-evaluate CG and operating loads after installation.",
-    "user_confirmation": "Latest acceptance of normal cargo 10 kg, cargo 8 kg on 5 degrees, structural cargo 15 kg / factor 2."
+    "user_confirmation": "Normal cargo 10 kg and structural cargo 15 kg / factor 2 retained. After declining the added brake, the former 8 kg / 5 degree case is reference only."
   },
   "geometry": {
     "frame_outer_LW_mm": [460, 300],
@@ -60,8 +68,10 @@
   },
   "cases": [
     {"id": "normal", "payload_kg": 10, "slope_deg": 0, "acceleration_m_s2": 0.2, "lateral_acceleration_m_s2": 0.18, "purpose": "normal flat-floor operating design"},
-    {"id": "slope", "payload_kg": 8, "slope_deg": 5, "acceleration_m_s2": 0.2, "lateral_acceleration_m_s2": 0.18, "purpose": "slope design target, not operation release"},
     {"id": "structure", "payload_kg": 15, "slope_deg": 0, "acceleration_m_s2": 0, "lateral_acceleration_m_s2": 0, "purpose": "static structural verification, not a 15 kg operating rating"}
+  ],
+  "reference_cases": [
+    {"id": "slope", "payload_kg": 8, "slope_deg": 5, "acceleration_m_s2": 0.2, "lateral_acceleration_m_s2": 0.18, "purpose": "historical slope comparison only; outside current prototype operation and required qualification", "in_current_operation_scope": false}
   ],
   "strength": {
     "target_static_safety_factor": 2,
@@ -90,10 +100,11 @@
     "initial_test_floor": "Level, smooth indoor floor, contained test area, initially unloaded.",
     "step_crossing": "No intentional step crossing; impact factor and tire compliance are unqualified.",
     "cargo_restraint_required": true,
+    "slope_operation_in_scope": false,
     "slope_hold_verified": false,
     "regeneration_handling_verified": false,
     "minimum_bus_voltage_performance_verified": false,
     "thermal_duration_verified": false,
-    "note": "These are design limits. Payload 10/8 kg is released only after the linked hardware acceptance tests. No slope test before independent roll-away prevention."
+    "note": "Flat-floor cargo 10 kg is released only after the linked hardware acceptance tests. Slope operation and power-off slope holding are outside this prototype scope, rather than pending mandatory brake procurement."
   }
 }

@@ -27,7 +27,9 @@ for o in features:
     if o.Name.startswith('Reserved_'): o.ViewObject.ShapeColor=(.3,.64,.87)
 for o in doc.Objects:
     if o.TypeId=='App::DocumentObjectGroup':
-        o.Label=o.Label.replace('A4 / M0601C_111 / CNC quote candidate / tire axial stack provisional','A6 / cargo10kg, slope8kg / structure15kg SF2 target')
+        for old_label in ('A4 / M0601C_111 / CNC quote candidate / tire axial stack provisional',
+                          'A6 / cargo10kg, slope8kg / structure15kg SF2 target'):
+            o.Label=o.Label.replace(old_label,'A6 / flat-floor cargo10kg / no added brake / structure15kg SF2 target')
 
 
 def capture(suffix):

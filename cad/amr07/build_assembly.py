@@ -24,7 +24,7 @@ def main():
     source=PREVIOUS/'AMR01_M0601C_A4.FCStd'; source_hash=digest(source)
     assert NAME not in App.listDocuments()
     old=App.openDocument(str(source)); doc=App.newDocument(NAME)
-    doc.Label='AMR-01 A6 | cargo10 / slope8 | structure15 SF2 target'
+    doc.Label='AMR-01 A6 | flat-floor cargo10 | no added brake | structure15 SF2 target'
     copied={}
     for obj in old.Objects:
         if obj.TypeId=='PartDesign::Feature': copied[obj.Name]=doc.copyObject(obj,False)

@@ -127,21 +127,26 @@ def calculate():
     raw = (HERE/'requirements.json').read_bytes()
     c = json.loads(raw)
     results = [envelope(c, case) for case in c['cases']]
+    reference_results = [envelope(c, case) for case in c['reference_cases']]
     # Independent exact central equilibrium: equal drives and known caster load.
     test = reactions(25, [0,0,0], [(90,174.5),(90,-174.5),(-166,0)], 9.80665, 0, 0)
     assert abs(test[2]-25*9.80665*90/256) < 1e-10 and abs(test[0]-test[1]) < 1e-10
-    sizing = [torque(c,10,0),torque(c,8,5),torque(c,10,5),torque(c,15,5)]
-    assert sizing[0]['numeric_margin_check'] and sizing[1]['numeric_margin_check']
-    assert not sizing[2]['numeric_margin_check'] and not sizing[3]['numeric_margin_check']
+    sizing = [torque(c,c['mass']['normal_payload_kg'],0)]
+    reference_sizing = [torque(c,8,5),torque(c,10,5),torque(c,15,5)]
+    assert sizing[0]['numeric_margin_check'] and reference_sizing[0]['numeric_margin_check']
+    assert not reference_sizing[1]['numeric_margin_check'] and not reference_sizing[2]['numeric_margin_check']
     cat = c['catalog_comparison_only']
-    for result in results:
+    for result in results + reference_results:
         result['below_individual_catalog_comparison_values'] = (
             result['conservative_radial_comparison_N'] < cat['motor_radial_N'] and
             result['conservative_axial_comparison_N'] < cat['motor_axial_N'] and
             result['normal_reaction_extrema']['caster']['max_N'] < cat['caster_allowable_N'])
         assert result['below_individual_catalog_comparison_values']
     return {'requirements_sha256':hashlib.sha256(raw).hexdigest(), 'load_cases':results,
-            'torque_cases':sizing, 'mount':mount_comparison(c),
+            'torque_cases':sizing, 'reference_load_cases':reference_results,
+            'reference_torque_cases':reference_sizing,
+            'reference_scope':'Slope comparisons are retained for history, outside the current flat-floor prototype operation and required qualification.',
+            'mount':mount_comparison(c),
             'limits':'Rigid chassis, three floor contacts, no impact or wheel unloading; CG limits and tire datum must be verified. Positive reactions do not establish grip or thermal capability.',
             'operation_approved':False, 'strength_safety_factor_achieved':False}
 

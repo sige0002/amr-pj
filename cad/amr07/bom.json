@@ -440,8 +440,15 @@
     "heatsink fixing and guarding",
     "wiring and shipping",
     "battery and charger",
-    "main computer and its converter",
-    "mechanical power-off holding device"
+    "main computer and its converter"
+  ],
+  "excluded_by_design": [
+    {
+      "item": "additional mechanical power-off holding brake",
+      "reason": "User declined; slope operation is outside the current prototype scope.",
+      "previously_priced_JPY": 0,
+      "deduction_JPY": 0
+    }
   ],
   "note": "材料小売価格、既存仮枠、部品候補、自動加工見積を通貨別計上。完成車確定総額ではない。電装は実装・試験未完。"
 }

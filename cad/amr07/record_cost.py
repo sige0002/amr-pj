@@ -79,6 +79,7 @@ def main():
         'unpriced':['Taobao送料/輸入費','CNC図面審査による差額・税・住所別送料・決済換算',
                     '荷台等を自加工しない場合の切断/穴加工/バリ取り','自加工の工具/作業費',
                     'WILCOと追加電装各店の送料',*electrical['cost']['unpriced']],
+        'excluded_by_design':electrical['cost']['excluded_by_design'],
         'note':'材料小売価格、既存仮枠、部品候補、自動加工見積を通貨別計上。完成車確定総額ではない。電装は実装・試験未完。'}
     (HERE/'bom.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     with (HERE/'BOM.csv').open('w',newline='',encoding='utf-8-sig') as f:

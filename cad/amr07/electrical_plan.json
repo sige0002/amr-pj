@@ -13,7 +13,9 @@
     "electrical_schematic_complete": false,
     "pcb_built": false,
     "supervisor_firmware_built": false,
-    "industrial_functional_safety_certification_claimed": false
+    "industrial_functional_safety_certification_claimed": false,
+    "mechanical_power_off_hold_required": false,
+    "slope_in_current_scope": false
   },
   "motor_published": {
     "part": "M0601C_111",
@@ -251,7 +253,7 @@
     "resistor_surface_acceptance_max_C": 60,
     "wire_connector_temperature_rise_max_K": 20,
     "small_Pololu_shunt_board_selected": false,
-    "small_Pololu_reason": "Manufacturer limits unmodified boards to short pulses, not continuous downhill absorption.",
+    "small_Pololu_reason": "No replacement in this scope update. Compare short-pulse limits and actual repeated-stop waveforms before any separate redesign.",
     "failure_open_resistor_or_clamp_behaviour_verified": false,
     "requirements": [
       "Metal heatsinking with verified temperature",
@@ -259,7 +261,9 @@
       "keep away from battery and PLA",
       "retain clamp connection on motor side when relays open",
       "do not count generic TVS as continuous energy absorber"
-    ]
+    ],
+    "continuous_test_required_for_current_scope": false,
+    "continuous_test_note": "5 W / 60 min retained as optional reference for continuous absorption; current flat-floor acceptance requires the pulse test and measured repetitive vehicle stops."
   },
   "candidate_parts": [
     {
@@ -398,7 +402,7 @@
     "shipping_included": false,
     "completed_electrical_system_total_jpy": null,
     "purchased": false,
-    "old_BOM_delta_determined": false,
+    "old_BOM_delta_determined": true,
     "unpriced": [
       "ARM pushbutton",
       "debounce and power-on reset",
@@ -411,9 +415,17 @@
       "heatsink fixing and guarding",
       "wiring and shipping",
       "battery and charger",
-      "main computer and its converter",
-      "mechanical power-off holding device"
-    ]
+      "main computer and its converter"
+    ],
+    "excluded_by_design": [
+      {
+        "item": "additional mechanical power-off holding brake",
+        "reason": "User declined; slope operation is outside the current prototype scope.",
+        "previously_priced_JPY": 0,
+        "deduction_JPY": 0
+      }
+    ],
+    "old_USB_RS485B_and_shipping_removed_JPY": 5060
   },
   "cad_reservations": [
     {
@@ -477,14 +489,6 @@
         "torque_Nm_per_wheel": 0.24882944824999997,
         "torque_with_margin_1p5_Nm_per_wheel": 0.37324417237499996,
         "status": "calculation_not_hardware_validation"
-      },
-      {
-        "id": "slope",
-        "gross_mass_kg": 18,
-        "slope_deg": 5,
-        "torque_Nm_per_wheel": 0.6107491564310012,
-        "torque_with_margin_1p5_Nm_per_wheel": 0.9161237346465019,
-        "status": "calculation_not_hardware_validation"
       }
     ],
     "kinematics_and_energy": [
@@ -495,8 +499,7 @@
         "inner_rpm": 18.52013528451668,
         "outer_rpm": 38.37736174932872,
         "ideal_stop_m": 0.08625,
-        "translation_energy_gross20kg_J": 0.22499999999999998,
-        "downhill_potential_power_gross18kg_5deg_W": 2.3077058344640693
+        "translation_energy_gross20kg_J": 0.22499999999999998
       },
       {
         "id": "later",
@@ -505,16 +508,9 @@
         "inner_rpm": 37.04027056903336,
         "outer_rpm": 76.75472349865744,
         "ideal_stop_m": 0.285,
-        "translation_energy_gross20kg_J": 0.8999999999999999,
-        "downhill_potential_power_gross18kg_5deg_W": 4.615411668928139
+        "translation_energy_gross20kg_J": 0.8999999999999999
       }
-    ],
-    "hold_grade5_gross18kg": {
-      "force_N": 15.384705563093796,
-      "total_wheel_torque_Nm": 0.7746199251017726,
-      "total_mechanical_hold_torque_with_margin2_Nm": 1.5492398502035452,
-      "each_if_evenly_shared_with_margin2_Nm": 0.7746199251017726
-    }
+    ]
   },
   "validation": {
     "all_results": "not_run",
@@ -526,8 +522,7 @@
     "inrush_cycles_per_corner": 20,
     "stop_and_comm_fault_cycles_each": 10,
     "thermal_test_torques_Nm": [
-      0.37324417237499996,
-      0.9161237346465019
+      0.37324417237499996
     ],
     "thermal_initial_rpm": [
       18.52013528451668,
@@ -543,22 +538,14 @@
     "initial_yaw_change_after_stop_max_deg": 10,
     "initial_wheel_path_after_trip_max_m": 0.16,
     "acceptance_applies_to": "Maximum observed result, not mean; only actual tested load/voltage/ambient/duration are released.",
-    "mechanical_hold": {
-      "selected_part": null,
-      "qualification_done": false,
-      "slope_operation_released": false,
-      "test_gross_kg": 18,
-      "test_grade_deg": 5,
-      "test_both_orientations": true,
-      "static_test_min": 10,
-      "power_loss_and_fault_trials_each": 10,
-      "movement_after_engagement_acceptance_mm": 5,
-      "requires_independent_rollaway_restraint_before_test": true,
-      "chocks": "Parking and fixture preparation only, not automatic stopping/holding."
-    },
     "thermal_screening_duration_min": 10,
-    "thermal_matrix_strategy": "At 18 V stage from 0.373 to 0.916 Nm. Screen 15.5/18/21 V x 18.52/38.38 rpm for 10 min each and straight-line 28.45 rpm; then run 60 min at the thermally severe point and both initial-speed endpoints at 18 V. Release only the actual tested voltage/ambient/duration; screening is not continuous qualification.",
-    "temperature_sensor_note": "70 C is the reported stator-temperature trip, not proof of winding temperature or sensor lag. Also log housing temperature."
+    "thermal_matrix_strategy": "Stage from unloaded to the flat-floor case 0.373 Nm. Screen 15.5/18/21 V x 18.52/38.38 rpm for 10 min each and straight-line 28.45 rpm; then run 60 min at the thermally severe point and both initial-speed endpoints at 18 V. Release only the actual tested voltage/ambient/duration; screening is not continuous qualification.",
+    "temperature_sensor_note": "70 C is the reported stator-temperature trip, not proof of winding temperature or sensor lag. Also log housing temperature.",
+    "mechanical_hold": {
+      "required_for_current_prototype": false,
+      "status": "out_of_scope_after_user_declined_added_brake",
+      "qualification_claimed": false
+    }
   },
   "sources": {
     "motor_current": "https://shop.directdrive.com/pages/m0601c-111-specs",
@@ -571,5 +558,62 @@
     "comparator_datasheet": "https://akizukidenshi.com/goodsaffix/LM393G.pdf",
     "clamp_mosfet_datasheet": "https://akizukidenshi.com/goodsaffix/2sk2232.pdf",
     "control_supply_datasheet": "https://akizukidenshi.com/goodsaffix/m78ar-1.pdf"
+  },
+  "mechanical_brake": {
+    "selected": false,
+    "decision": "user_declined_additional_mechanical_brake",
+    "scope": "Level smooth indoor floors only. Retain motor-controlled service stopping and emergency power isolation.",
+    "power_off_slope_holding_required": false,
+    "incremental_cost_JPY": 0,
+    "cost_note": "No mechanical brake was previously priced. Exclusion does not reduce the existing partial subtotal or CAD mass."
+  },
+  "reference_only": {
+    "previous_slope_load_cases": [
+      {
+        "id": "slope",
+        "gross_mass_kg": 18,
+        "slope_deg": 5,
+        "torque_Nm_per_wheel": 0.6107491564310012,
+        "torque_with_margin_1p5_Nm_per_wheel": 0.9161237346465019,
+        "status": "reference_only_outside_current_prototype_operation"
+      }
+    ],
+    "downhill_potential_power": [
+      {
+        "id": "initial",
+        "speed_m_s": 0.15,
+        "gross_mass_kg": 18,
+        "slope_deg": 5,
+        "power_W": 2.3077058344640693
+      },
+      {
+        "id": "later",
+        "speed_m_s": 0.3,
+        "gross_mass_kg": 18,
+        "slope_deg": 5,
+        "power_W": 4.615411668928139
+      }
+    ],
+    "hold_grade5_gross18kg": {
+      "force_N": 15.384705563093796,
+      "total_wheel_torque_Nm": 0.7746199251017726,
+      "total_mechanical_hold_torque_with_margin2_Nm": 1.5492398502035452,
+      "each_if_evenly_shared_with_margin2_Nm": 0.7746199251017726
+    },
+    "previous_mechanical_hold_test_plan": {
+      "selected_part": null,
+      "qualification_done": false,
+      "slope_operation_released": false,
+      "test_gross_kg": 18,
+      "test_grade_deg": 5,
+      "test_both_orientations": true,
+      "static_test_min": 10,
+      "power_loss_and_fault_trials_each": 10,
+      "movement_after_engagement_acceptance_mm": 5,
+      "requires_independent_rollaway_restraint_before_test": true,
+      "chocks": "Parking and fixture preparation only, not automatic stopping/holding."
+    },
+    "previous_slope_thermal_test_torque_Nm": 0.9161237346465019,
+    "status": "Historical calculations and test plans only; not required qualification or permission for the current flat-floor prototype."
   }
 }
