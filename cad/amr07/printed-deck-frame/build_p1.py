@@ -307,6 +307,8 @@ def main():
         manifest.append(dict(file=name+'.stl',size_mm=[b.XLength,b.YLength,b.ZLength],solid_mass_g=s.Volume*1.24e-3))
     (HERE/'print_manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
     Part.export(physical,str(HERE/(NAME+'.step')))
+    step=HERE/(NAME+'.step')
+    step.write_text('\n'.join(line.rstrip() for line in step.read_text().splitlines())+'\n')
     print('P1 build complete',flush=True)
 
 

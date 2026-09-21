@@ -80,7 +80,7 @@ rows[-1]['明細金額']=str(pla_g*2);rows[-1]['購入予定数']='0'
 add('P1_STRAP_SHIP','荷物ベルト送料参考','旧地域表示から継承',1,note='旧角棒送料600円を除去。配送先別未確認。',basis='過去地域表示参考')
 rows[-1]['明細金額']='600'
 with (HERE/'BOM.csv').open('w',encoding='utf-8-sig',newline='') as f:
-    w=csv.DictWriter(f,fields);w.writeheader();w.writerows(rows)
+    w=csv.DictWriter(f,fields,lineterminator='\n');w.writeheader();w.writerows(rows)
 totals={c:round(sum(float(r['明細金額']) for r in rows if r['通貨']==c and r['明細金額']),2) for c in ['JPY','USD']}
 summary=dict(date='2026-09-22',source_BOM_revision='3417383',scope='P1 full vehicle running subtotal, with inherited budgets; not a completed quotation',
     subtotal=totals,unpriced_rows=[r['ID'] for r in rows if not r['明細金額']],
