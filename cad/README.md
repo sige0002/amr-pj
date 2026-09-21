@@ -1,6 +1,6 @@
 # FreeCAD + Codex MCP
 
-AMRの現行案は[M0601C_111の第一案改A4](amr05/README.ja.md)です。3030と低床電池を維持し、公開ブラケットの受け形状を参照した専用金属金具へ変更しました。FCStd・STEP・実CAD画面・見積用寸法図・BOM・検証結果を収録しています。[実CADによる加工サイト自動見積](amr05/MACHINING_QUOTE.ja.md)も取得済み。正式な加工審査と実機のはめあい・荷重検証は未完了。[A3](amr04/README.ja.md)、[A2](amr03/README.ja.md)、[第一案A](amr01/README.ja.md)、[第二案B・ベルト案C](amr02/README.ja.md)は比較履歴です。
+AMRの現行案は[M0601C_111のA6-D2](amr07/README.ja.md)です。格子穴アルミ荷台とPLA小物、干渉検査、荷台の線形シェル解析を追加しました。3030と低床電池を維持し、公開ブラケットの受け形状を参照した専用金属金具へ変更しました。FCStd・STEP・実CAD画面・見積用寸法図・BOM・検証結果を収録しています。[実CADによる加工サイト自動見積](amr07/MACHINING_QUOTE.ja.md)も取得済み。正式な加工審査と実機のはめあい・荷重検証は未完了。[A3](amr04/README.ja.md)、[A2](amr03/README.ja.md)、[第一案A](amr01/README.ja.md)、[第二案B・ベルト案C](amr02/README.ja.md)は比較履歴です。
 
 導入日: 2026-09-20。Ubuntu 24.04 / ARM64。
 
@@ -45,7 +45,7 @@ MCPの初期化・17ツールの列挙・RPC/GUIの正常状態・モデル作�
 - `CenterHolePlate.png`: プレビュー。
 - `create_sample.py`: サンプル再作成コード。FreeCADのGUI内で実行する。
 
-FEM解析とCAM加工経路は今回の検証対象外。
+環境導入時の検証はFEM・CAMを含まない。後日実施したD2荷台の線形解析は[荷台解析記録](amr07/aluminum-grid-deck/README.ja.md)を参照。
 
 ## 配置
 

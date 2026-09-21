@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "tests": {
+    "battery_upward_swept_box_0_to160_mm": [],
+    "caster_full360_R43_H65_cylinder_vs_chassis": [],
+    "caster_rotating_proxy_vs_mounting_bolts": [],
+    "deck_and_fixtures_upward_swept_boxes_0_to160_mm": []
+  },
+  "caster_fixing_clearance": {
+    "minimum_sampled_mm": 4.0665218839070665,
+    "angular_step_deg": 2,
+    "maximum_motion_to_nearest_sample_mm": 0.7504820528601583,
+    "continuous_gap_lower_bound_mm": 3.316039831046908
+  },
+  "quoted_plate_symmetric_difference_mm3": 0.0,
+  "quoted_STEP_sha256": "60c1442cde55d90bfcd4b6b8cbafcdc4a3560e4c4d35523c417fd08a4043051e",
+  "local_D6_bundle_to_frame_vertical_clearance": {
+    "L": {
+      "bundle_floor_z_mm": 102.5,
+      "frame_top_z_mm": 99,
+      "vertical_nominal_gap_mm": 3.5
+    },
+    "R": {
+      "bundle_floor_z_mm": 102.5,
+      "frame_top_z_mm": 99,
+      "vertical_nominal_gap_mm": 3.5
+    }
+  },
+  "conditions": [
+    "Power off; cargo/straps removed and deck cable unplugged before deck removal. Six M6 bolts withdrawn; retain six loose support blocks.",
+    "Caster nominal envelopeR43/H65 includes side-view reach41 plus half wheel width10. Proxy rotating boxes fit insideR43. Exact supplier fork and received tolerances/deflection remain unverified.",
+    "Tire service remains the separately recorded axial samples; actual tire deformation/fastener details need received-part fit.",
+    "Local cable gauge only; full routing, connector envelopes and bend radii remain unselected."
+  ]
+}

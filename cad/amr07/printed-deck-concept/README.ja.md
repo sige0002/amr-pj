@@ -1,5 +1,7 @@
 # 格子穴付きPLA上板 P0 — 強度評価前の試作案
 
+> このページは比較履歴です。2026-09-22の採用構成・実見積・検査は[D2荷台](../aluminum-grid-deck/README.ja.md)を参照してください。
+
 **上板の3Dプリント化は候補にできる。今回、50mmピッチ・M4用の格子穴36個を持つ4分割板をCADにした。** 既存A6のアルミ板を同じ厚さのPLAへ置き換える構成は採らず、内側3030にも金属支持棒を追加し、板厚を10mmとした。通常積載10kg、構造検証15kg・安全率2という要求は維持するが、PLA案での達成は未確認。
 
 [組立FCStd](AMR01_PrintedDeck_P0.FCStd) / [組立STEP](AMR01_PrintedDeck_P0.step) / [印刷・比較資料ZIP](printed-deck-P0.zip) / [費用差分CSV](comparison_bom.csv) / [形状検査](validation.json) / [計算](screening.json)
@@ -78,3 +80,5 @@ E＝2,000MPaは感度を見る仮定で、材料の保証下限ではない。�
 python3 cad/amr07/printed-deck-concept/screening.py
 # build_concept.py は独立したFreeCADのheadlessプロセスで実行
 ```
+
+P0を再生成する際の元車体・荷台パラメータはgit改訂`7f6bf0501322def11120138fecc62a40ea970170`へ固定した。現在のD2を旧P0の支持構成へ混ぜない。履歴を含むgitチェックアウトが必要。

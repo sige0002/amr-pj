@@ -11,8 +11,8 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
 from cargo_deck import build_deck_specs, parameters
 
-p = parameters()
-plate = next(s['shape'] for s in build_deck_specs(include_reference=False)
+p = json.loads((HERE/'deck_parameters_Q1.json').read_text())
+plate = next(s['shape'] for s in build_deck_specs(cfg=p, include_reference=False)
              if s['name'] == 'CargoDeckPlate').copy()
 plate.translate(App.Vector(0, 0, -p['geometry']['plate_bottom_top_z_mm'][0]))
 grid = [-125, -75, -25, 25, 75, 125]

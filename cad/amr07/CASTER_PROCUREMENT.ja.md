@@ -53,6 +53,6 @@ Amazon説明欄には別サイズ32mmの仕様が混在していたため、そ�
 
 ## BOMへの反映
 
-C01＝273円、S02＝既存Prime会員条件の0円。途中小計は**54,189円＋82.25 USD＋未確定分**です。直前の54,414円から225円減、旧タナカ金物373円＋送料650円との比較では750円減。コーナン店舗受取を選ぶ場合は10円増で54,199円です。CNC上板の比較見積は現行素材代へ重複計上しません。車体質量の推計はキャスターの15g補正後で**8.748kg**です。
+C01＝273円、S02＝既存Prime会員条件の0円。A6-D2の途中小計は**50,468円＋120.90USD＋未確定分**。コーナン店舗受取を選ぶ場合は10円増。荷台板はD2のCNC見積へ置換済みで、車体の最新推計は**8.514kg**。[BOM](BOM.ja.md)。キャスター変更自体の減額は旧タナカ金物経路に対して750円、直前のAmazon498円に対して225円。
 
-[取得条件JSON](caster_procurement.json) / [Amazon表示記録](procurement-evidence/amazon-TYG-50-offer.txt) / [コーナン表示記録](procurement-evidence/kohnan-TYG-50.txt) / [メーカー図面保存](procurement-evidence/TYG50-manufacturer-drawing.pdf) / [BOM](BOM.ja.md)
+[取得条件JSON](caster_procurement.json) / [Amazon表示記録](procurement-evidence/amazon-TYG-50-offer.txt) / [コーナン表示記録](procurement-evidence/kohnan-TYG-50.txt) / [メーカー図面保存](procurement-evidence/TYG50-manufacturer-drawing.pdf)

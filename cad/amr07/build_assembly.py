@@ -12,6 +12,7 @@ PREVIOUS = HERE.parent/'amr05'
 sys.path.insert(0,str(HERE))
 from hardware_geometry import profile, slotnut_at, deck_slotnut, screw_axis_and_head
 from cargo_deck import build_deck_specs
+from printed_accessories import build_accessory_specs, export_print_files
 
 V=App.Vector
 NAME='AMR01_M0601C_A6'
@@ -24,7 +25,7 @@ def main():
     source=PREVIOUS/'AMR01_M0601C_A4.FCStd'; source_hash=digest(source)
     assert NAME not in App.listDocuments()
     old=App.openDocument(str(source)); doc=App.newDocument(NAME)
-    doc.Label='AMR-01 A6 | flat-floor cargo10 | no added brake | structure15 SF2 target'
+    doc.Label='AMR-01 A6-D2 | CNC grid deck + PLA fixtures | cargo10 | structure15 SF2 target'
     copied={}
     for obj in old.Objects:
         if obj.TypeId=='PartDesign::Feature': copied[obj.Name]=doc.copyObject(obj,False)
@@ -105,6 +106,9 @@ def main():
             spec['shape']=deck_slotnut(bb.Center.x,bb.Center.y,99,(0,0,-1))
             spec['note']='HNTT6-6 catalog dimensions with reconstructed taper; bolt engagement per mount_interface.json.'
         add(spec)
+    accessory_specs=build_accessory_specs()
+    for spec in accessory_specs: add(spec)
+    print_manifest=export_print_files(accessory_specs)
     # Explicit electronic reservations, separated from the real cargo deck.
     reservations={
         'Protection':[155,-120,112,70,70,35],
@@ -148,10 +152,45 @@ def main():
         for travel in (1,5,10,20,40,80):
             tire=doc.getObject('Tire'+side).Shape.copy(); tire.translate(V(0,sign*travel,0))
             check('Tire_outboard_'+side+str(travel),tire,['Tire'+side,'TireCover'+side])
-    deck_names=[s['name'] for s in deck_specs]
+    deck_names=[s['name'] for s in deck_specs+accessory_specs]
     for distance in (1,20,80,160):
         b=doc.getObject('BatteryReservedSpace').Shape.copy(); b.translate(V(0,0,distance))
         check('Battery_lift_deck_removed_'+str(distance),b,deck_names)
+    # A generic M4x12/washer/nut set fits each grid location individually.
+    # Accessories in use at that hole are removed for this substitution test.
+    # Cargo is removed before fitting a bolt within its 200x200 footprint.
+    grid_checks=[]
+    grid=json.loads((HERE/'deck_parameters.json').read_text())['geometry']['grid_coordinates_from_center_mm']
+    fixture_names=[s['name'] for s in accessory_specs]
+    removable=set(deck_names)-set(fixture_names)
+    min_grid_gap=1e9;min_tool_gap=1e9
+    for x in grid:
+        for y in grid:
+            top=Part.makeCylinder(4.5,.8,V(x,y,118)).cut(Part.makeCylinder(2.15,.8,V(x,y,118)))
+            lower=Part.makeCylinder(4.5,4,V(x,y,110)).cut(Part.makeCylinder(2.1,4,V(x,y,110)))
+            bolt=Part.makeCylinder(2,12,V(x,y,106.8)).fuse(Part.makeCylinder(3.5,4,V(x,y,118.8)))
+            gauge=Part.makeCompound([top,lower,bolt])
+            gb=gauge.BoundBox
+            check('Grid_M4x12_'+str(x)+'_'+str(y),gauge,fixture_names)
+            # D12 nut socket from below, on the removed deck. Frame/electronics
+            # need not provide tool access with the deck still installed.
+            tool=Part.makeCylinder(6,30,V(x,y,84))
+            tool_hits=[]
+            for o in parts:
+                if o.Name in fixture_names:continue
+                if o.Name!='CargoDeckPlate':
+                    ob=boxes[o.Name]
+                    lower_bound=sum(max(getattr(gb,k+'Min')-getattr(ob,k+'Max'),getattr(ob,k+'Min')-getattr(gb,k+'Max'),0)**2 for k in ('X','Y','Z'))**.5
+                    if lower_bound<min_grid_gap:
+                        gap=gauge.distToShape(o.Shape)[0]
+                        min_grid_gap=min(min_grid_gap,gap)
+                if o.Name in removable and o.Name!='CargoDeckPlate':
+                    gap=tool.distToShape(o.Shape)[0];min_tool_gap=min(min_tool_gap,gap)
+                    if gap<1e-6 and tool.common(o.Shape).Volume>.001:tool_hits.append(o.Name)
+            grid_checks.append({'xy_mm':[x,y],'installed_hardware_hits':access[-1]['hits'],
+                                'D12_nut_tool_on_removed_deck_hits':tool_hits})
+    for i,(x,y) in enumerate(json.loads((HERE/'deck_parameters.json').read_text())['geometry']['frame_holes_xy_mm']):
+        check('Deck_M6_driver_'+str(i),Part.makeCylinder(3,40,V(x,y,127.2)))
     electrical=App.openDocument(str(PREVIOUS/'AMR01_ElectricalLayout_A4.FCStd'))
     harness=[]
     for side in ('L','R'):
@@ -162,7 +201,7 @@ def main():
     contacts={n:boxes[n].ZMin for n in ('TireL','TireR','CasterTire')}
     previous_mass=json.loads((PREVIOUS/'validation_results.json').read_text())['mass']['estimated_complete_base_kg']
     mount_delta=sum((doc.getObject('CustomMotorMount'+s).Shape.Volume-old.getObject('CustomMotorMount'+s).Shape.Volume)*2.7e-6 for s in ('L','R'))
-    added_mass=sum(o.Shape.Volume*(7.85e-6 if o.MaterialBasis=='steel' else 2.7e-6)
+    added_mass=sum(o.Shape.Volume*({'steel':7.85e-6,'PLA':1.24e-6}.get(o.MaterialBasis,2.7e-6))
                    for o in parts if old.getObject(o.Name) is None)
     # Strap and edge guard mass is in the deck budget, since they are references.
     deck_cfg=json.loads((HERE/'deck_parameters.json').read_text())
@@ -174,6 +213,11 @@ def main():
         'physical_parts':len(parts),'physical_pair_count':len(parts)*(len(parts)-1)//2,
         'bounding_box_candidate_booleans':boolean_count,'collisions':collisions,
         'reference_collisions':reference_hits,'tool_and_service_access':access,'harness_collisions':harness,
+        'grid_access':{'checked_locations':36,'hardware':'M4x12 + 9mm washers + 7AF nut envelope, each location individually',
+            'minimum_nominal_hardware_to_other_parts_mm':min_grid_gap,
+            'minimum_nominal_D12_tool_to_removed_deck_parts_mm':min_tool_gap,'checks':grid_checks,
+            'condition':'Fit nuts with deck removed. Remove cargo for inner holes; fixtures occupying selected holes are removed. No general device or connector envelope approval.'},
+        'printed_accessories':print_manifest,
         'wheel_and_caster_floor_contacts_z_mm':contacts,'changed_existing_features':sorted(changed),
         'slot_nut_updates':nut_data,'electrical_reservations_xyz_LWH_mm':reservations,
         'caster_substitution':{'part':caster['part'],'drawing_source':caster['manufacturer_dimensions_url'],
@@ -189,6 +233,7 @@ def main():
     print(json.dumps({k:v for k,v in report.items() if k not in ('slot_nut_updates','tool_and_service_access')},ensure_ascii=False))
     assert not collisions and not reference_hits and not harness
     assert all(not a['hits'] for a in access)
+    assert all(not a['D12_nut_tool_on_removed_deck_hits'] for a in grid_checks)
     assert all(abs(z)<1e-6 for z in contacts.values())
     assert mass<10
     doc.saveAs(str(HERE/(NAME+'.FCStd')))

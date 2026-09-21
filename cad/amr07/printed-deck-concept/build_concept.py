@@ -5,6 +5,8 @@ import hashlib
 import json
 import math
 import sys
+import subprocess
+import tempfile
 import FreeCAD as App
 import Part
 import MeshPart
@@ -21,7 +23,14 @@ NAME = 'AMR01_PrintedDeck_P0'
 
 
 def main():
-    source = BASE/'AMR01_M0601C_A6.FCStd'
+    # P0 is a historical comparison. Do not silently inherit D2's six-block
+    # supports and extra fixtures when regenerating the old printed concept.
+    revision='7f6bf0501322def11120138fecc62a40ea970170'
+    snapshot=tempfile.TemporaryDirectory(prefix='amr-p0-source-')
+    source=Path(snapshot.name)/'AMR01_M0601C_A6.FCStd'
+    def historical(name):
+        return subprocess.check_output(['git','-C',str(BASE),'show',revision+':cad/amr07/'+name])
+    source.write_bytes(historical(source.name))
     source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
     old = App.openDocument(str(source))
     height_change = P['plate_thickness_mm']-4
@@ -65,7 +74,7 @@ def main():
     cut_height = z1-z0+2
     plate = Part.makeBox(300, 300, z1-z0, V(-150, -150, z0))
     cuts = []
-    cfg = json.loads((BASE/'deck_parameters.json').read_text())
+    cfg = json.loads(historical('deck_parameters.json'))
     cfg['geometry']['plate_bottom_top_z_mm'] = [z0, z1]
     for spec in build_deck_specs(cfg=cfg, include_reference=True):
         if spec['name'].startswith('CargoStrapRoute'):
@@ -179,7 +188,7 @@ def main():
     added=[o for o in physical if old.getObject(o.Name) is None]
     added_mass=sum(o.Shape.Volume*density[o.MaterialBasis] for o in added)
     bolt_delta=sum((o.Shape.Volume-old.getObject(o.Name).Shape.Volume)*7.85e-6 for o in physical if o.Name.startswith('CargoStopBolt'))
-    old_mass=json.loads((BASE/'assembly_validation.json').read_text())['mass']['estimated_base_kg']
+    old_mass=json.loads(historical('assembly_validation.json'))['mass']['estimated_base_kg']
     panel_mass=sum(o.Shape.Volume*1.24e-6 for o in panels)
     report={'status':P['status'],'base_CAD_sha256':source_hash,'all_shapes_valid':all(o.Shape.isValid() for o in physical),'physical_parts':len(physical),
             'collisions':hits,'reference_collisions':reference_hits,'grid_stations':grid_access,'removed_existing_parts':removed,

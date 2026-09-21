@@ -1,0 +1,24 @@
+Opening plate.poly.
+Constructing Delaunay triangulation by divide-and-conquer method.
+Recovering segments in Delaunay triangulation.
+Removing unwanted triangles.
+Adding Steiner points to enforce quality.
+Adding vertices for second-order triangles.
+
+Writing plate.1.node.
+Writing plate.1.ele.
+Writing plate.1.poly.
+
+Statistics:
+
+  Input vertices: 1336
+  Input segments: 1336
+  Input holes: 54
+
+  Mesh vertices: 24676
+  Mesh triangles: 11627
+  Mesh edges: 18178
+  Mesh exterior boundary edges: 1475
+  Mesh interior boundary edges: 246
+  Mesh subsegments (constrained edges): 1721
+

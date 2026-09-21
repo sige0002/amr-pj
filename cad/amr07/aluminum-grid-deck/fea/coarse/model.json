@@ -1,0 +1,24 @@
+{
+  "nodes": 24676,
+  "S6_elements": 11627,
+  "maximum_triangle_area_mm2": 30.0,
+  "circle_segments": 24,
+  "mesh_plan_area_mm2": 88417.4320280727,
+  "CAD_plan_area_mm2": 88405.84123689825,
+  "loaded_actual_material_area_mm2": 39748.42788816035,
+  "service_force_N": 242.79039,
+  "nodal_force_sum_N": -242.79039,
+  "minimum_thickness_mm": 3.9,
+  "E_MPa": 69000,
+  "nu": 0.33,
+  "support_node_counts": [
+    369,
+    351,
+    344,
+    357,
+    337,
+    346
+  ],
+  "input_sha256": "76f49d0c8f397da26466983171157c2ac51b66663deb49bbc25c1dd00f9ab430",
+  "deck_parameters_sha256": "2fda16b9b294ed771c9f73c11fd29337508207648f203a43fdd4d5de27576454"
+}

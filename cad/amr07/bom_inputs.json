@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "date": "2026-09-21",
+  "date": "2026-09-22",
   "scope": "A6 flat-floor cargo10 kg; no additional mechanical brake; draft procurement, not an order.",
   "items": {
     "F01": {
@@ -148,16 +148,16 @@
     },
     "DECK_plate": {
       "category": "荷台",
-      "name_ja": "荷台用アルミ板",
-      "specification": "ESCO EA441VC-41、A5052 300×300×4mm",
+      "name_ja": "格子穴アルミ荷台 D2",
+      "specification": "6061-T6 300×300×4、36×φ4.5格子、14取付穴、4長穴",
       "used_quantity": 1,
       "quantity_unit": "枚",
       "planned_purchase_quantity": 1,
       "purchase_unit": "1枚×1",
       "planned_purchase_lots": 1,
-      "selection_status": "材料候補",
-      "procurement_note": "14丸穴＋30×6長穴4か所を自加工。調質・板厚受入確認。",
-      "supplier": "モノタロウ"
+      "selection_status": "採用設計・自動見積取得・手動審査前",
+      "procurement_note": "D2のSTEP/PDFを実サイトへ投入。材料・全穴加工込み。板素材4521円は置換して二重計上しない。",
+      "supplier": "JLCCNC"
     },
     "DECK_square_bar": {
       "category": "荷台",
@@ -169,7 +169,7 @@
       "purchase_unit": "定尺995mm×1",
       "planned_purchase_lots": 1,
       "selection_status": "材料候補",
-      "procurement_note": "300mm×2＋50mm×4＝800mm使用。切りしろ18mm想定、端材約177mm。",
+      "procurement_note": "20mm×6＋50mm×4＝320mm使用。切りしろ30mm、端材約645mm。1本1507円の購入費は維持。",
       "supplier": "あきばおー／Yahoo!"
     },
     "DECK_cargo_straps": {
@@ -213,7 +213,7 @@
     },
     "P04": {
       "category": "電池・PLA",
-      "name_ja": "電池クレードル・電装トレイ用PLA",
+      "name_ja": "電池クレードル・電装トレイ・小型固定具用PLA",
       "specification": "手持ちPLAの消費量300g仮枠",
       "used_quantity": 300,
       "quantity_unit": "g",
@@ -221,7 +221,7 @@
       "purchase_unit": "手持ち材料から消費／購入0",
       "planned_purchase_lots": 0,
       "selection_status": "既所有材料を使う前提",
-      "procurement_note": "CAD内3部品を製作。実スライス未実施。600円は材料消費評価で、新規スプール購入額ではない。金具の仮合わせモックは別。",
+      "procurement_note": "CAD計7部品。中実換算約262g＋印刷余裕を300g枠に含む。600円は手持ち材料消費評価、実スライス未実施。モーターモックは別。",
       "supplier": "手持ちPLA"
     },
     "H02": {
@@ -507,7 +507,7 @@
       "purchase_unit": "送料／諸費1式",
       "planned_purchase_lots": null,
       "selection_status": "参考・条件付き",
-      "procurement_note": "角棒600円＋ベルト600円の地域表示例。荷台板通常送料0円条件。",
+      "procurement_note": "角棒600円＋ベルト600円の地域表示例。荷台板のUPS送料はDECK_CNC_SHIPに別計上。",
       "supplier": "Yahoo!ほか"
     },
     "S08": {
@@ -522,6 +522,32 @@
       "selection_status": "参考・条件付き",
       "procurement_note": "OCS表示7.23USD。住所別差額・税・決済換算別。",
       "supplier": "JLCCNC／OCS"
+    },
+    "DECK_CNC_SHIP": {
+      "category": "送料",
+      "name_ja": "D2荷台板 日本宛UPS表示送料",
+      "specification": "UPS Worldwide Express Saver",
+      "used_quantity": 1,
+      "quantity_unit": "式",
+      "planned_purchase_quantity": null,
+      "purchase_unit": "送料／諸費1式",
+      "planned_purchase_lots": null,
+      "selection_status": "実サイト自動送料・国単位",
+      "procurement_note": "9.98USD。個別配送見積で計上し、モーター金具との同梱割引は仮定しない。住所別・税未確認。",
+      "supplier": "JLCCNC"
+    },
+    "FIXTURE_HARDWARE": {
+      "category": "締結材",
+      "name_ja": "PLA小物の締結材・結束材",
+      "specification": "M4x16×8、通常座金40、大径座金8、M4ナット8、M3ナット4、2.5mm結束バンド2",
+      "used_quantity": 1,
+      "quantity_unit": "式",
+      "planned_purchase_quantity": null,
+      "purchase_unit": "販売パック未確定",
+      "planned_purchase_lots": null,
+      "selection_status": "800円の予算枠・販売価格未確認",
+      "procurement_note": "68金属形状＋結束バンド2本。通常座金4枚積層を各8か所に使用。厚さを実測・選別してPLAの厚さを合わせる。",
+      "supplier": "未選定"
     }
   },
   "unselected": [
@@ -638,7 +664,7 @@
       "name": "電源線・信号線・圧着端子・結束材",
       "needed_quantity": "長さ・個数未定",
       "specification": "主幹/延長線0.75mm²を出発点、RS485はツイストペア",
-      "decision_needed": "配線図と実経路から線長・端子数を確定。工場付属ハーネスとの重複を避ける",
+      "decision_needed": "配線図と実経路から線長・端子数を確定。工場付属ハーネスとの重複を避ける。今回の配線ガイド用結束バンド2本はFIXTURE_HARDWARE計上済み。",
       "phase": "走行台車",
       "cost": null
     },
@@ -655,8 +681,8 @@
       "id": "U15",
       "name": "電装固定板・ケース・スタンドオフ",
       "needed_quantity": "数量未定",
-      "specification": "CADは予約空間のみ",
-      "decision_needed": "既存PLAトレイだけで新電装の取付成立とはしない",
+      "specification": "小型PLAアダプタ2個とガイド2個をCADへ反映、電装本体は予約形状",
+      "decision_needed": "実機器の穴配置・放熱・M3ねじ長・最終配線を確定。汎用小物の追加だけで全電装の適合確認済みとはしない。",
       "phase": "走行台車",
       "cost": null
     },
@@ -671,10 +697,10 @@
     },
     {
       "id": "U17",
-      "name": "加工工具・作業費・外注に切り替えた板加工",
+      "name": "加工工具・作業費・残る自加工品の外注費",
       "needed_quantity": "必要に応じて",
       "specification": "穴加工、切断、面取り、締付・測定工具",
-      "decision_needed": "素材代に工賃は含まない。金具以外の外注見積なし",
+      "decision_needed": "モーター金具とD2上板は実自動見積あり。支持材・ストッパ・キャスター板・ガセットの工具・工賃は未見積。",
       "phase": "走行台車",
       "cost": null
     },

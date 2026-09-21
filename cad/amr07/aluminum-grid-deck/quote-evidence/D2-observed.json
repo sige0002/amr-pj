@@ -1,0 +1,42 @@
+{
+  "tag": "C45",
+  "name": "AMR_GridDeck_C45_D2",
+  "observed_at": "2026-09-21T15:42:34.311359+00:00",
+  "quantity": 1,
+  "material_UI": "Aluminum 6061",
+  "material_requested": "6061-T6",
+  "finish": "none / as machined",
+  "highest_tolerance_UI": "+/-0.10mm",
+  "currency": "USD",
+  "shipping_country": "Japan",
+  "shipping_service": "UPS Worldwide Express Saver",
+  "automatic_not_manual": true,
+  "manual_drawing_review_complete": false,
+  "ordered": false,
+  "paid": false,
+  "drawing_attachment_verified": true,
+  "drawing_verification": "Read-only rendered part metadata confirms matching D2 STEP/PDF and pairedFiles; quantity1 and threads No verified.",
+  "threads_requested": false,
+  "tap_count_in_drawing": 0,
+  "tap_cost_line_separately_verified": false,
+  "upload_package_sha256": "e8a114e4dc4b0b31099c9fa836901aa66b6b6cab519e04a8da5b5d398917345d",
+  "remarks": "QUOTE ONLY qty1; 6061-T6,Rp0.2>=240MPa(confirm lot),as machined. D2 PDF: 300x300x4 plate; 36xD4.5 through grid, NO THREADS,50 pitch. Plus6xD6.6 frame holes X=-105,0,105;Y=+-135,8xD4.5 stop holes(all14 unthreaded),4x30x6R3 slots. Hole/slot coordinates +/-0.10; thickness4+/-0.10; flatness0.5; other ISO2768-m. Deburr both faces, edge break<=0.2. Include material/all features; no hardware. No geometry changes. Fit/load validation pending.",
+  "records": [
+    {
+      "speed": "standard",
+      "manufacturing_label": "標準: 5 日",
+      "parts_lot_USD": 30.69,
+      "shipping_USD": 9.98,
+      "total_USD": 40.67
+    },
+    {
+      "speed": "economic",
+      "manufacturing_label": "経済的: 10 日",
+      "parts_lot_USD": 28.67,
+      "shipping_USD": 9.98,
+      "total_USD": 38.65
+    }
+  ],
+  "step_sha256": "60c1442cde55d90bfcd4b6b8cbafcdc4a3560e4c4d35523c417fd08a4043051e",
+  "pdf_sha256": "9d74e928fca4f2eeb8f1bc9314a7634480b01f92bb807af968e8017da5427259"
+}

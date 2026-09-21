@@ -1,0 +1,54 @@
+[
+  {
+    "file": "PrintedAdapterL.stl",
+    "quantity": 1,
+    "bed_dimensions_mm": [
+      64.0,
+      16.0,
+      3.200000047683716
+    ],
+    "watertight": true,
+    "solid_CAD_mass_kg": 0.0033111311566942944,
+    "actual_slicing_done": false,
+    "fit_and_load_qualified": false
+  },
+  {
+    "file": "PrintedGuideL.stl",
+    "quantity": 1,
+    "bed_dimensions_mm": [
+      64.0,
+      23.0,
+      12.0
+    ],
+    "watertight": true,
+    "solid_CAD_mass_kg": 0.004710385665023322,
+    "actual_slicing_done": false,
+    "fit_and_load_qualified": false
+  },
+  {
+    "file": "PrintedAdapterR.stl",
+    "quantity": 1,
+    "bed_dimensions_mm": [
+      64.0,
+      16.0,
+      3.200000047683716
+    ],
+    "watertight": true,
+    "solid_CAD_mass_kg": 0.0033111311566942944,
+    "actual_slicing_done": false,
+    "fit_and_load_qualified": false
+  },
+  {
+    "file": "PrintedGuideR.stl",
+    "quantity": 1,
+    "bed_dimensions_mm": [
+      64.0,
+      23.0,
+      12.0
+    ],
+    "watertight": true,
+    "solid_CAD_mass_kg": 0.00471038566502332,
+    "actual_slicing_done": false,
+    "fit_and_load_qualified": false
+  }
+]

@@ -166,9 +166,13 @@ MotorSeatWasher_2L,MW,FW-2505-05EB | 2.7x5x0.5 | L002,steel,2.7x5x0.5 steel plai
 MotorSeatWasher_0R,MW,FW-2505-05EB | 2.7x5x0.5 | R,steel,2.7x5x0.5 steel plain washer,Purchased washer nominal geometry; received head/washer seating and hardness require checking.
 MotorSeatWasher_1R,MW,FW-2505-05EB | 2.7x5x0.5 | R001,steel,2.7x5x0.5 steel plain washer,Purchased washer nominal geometry; received head/washer seating and hardness require checking.
 MotorSeatWasher_2R,MW,FW-2505-05EB | 2.7x5x0.5 | R002,steel,2.7x5x0.5 steel plain washer,Purchased washer nominal geometry; received head/washer seating and hardness require checking.
-CargoDeckPlate,DECK_plate,A5052 cargo plate 300x300x4 | top Z118,aluminum,,14 round holes +4 obround slots; deburr and pad webbing edges. Temper/proof strength and minimum thickness require confirmation.
-CargoDeckSupportR,DECK_square_bar,Al solid bar 15x15 L300 | continuous rail bearing,aluminum,,Nominal fabrication candidate; inspect and validate before loaded use.
-CargoDeckSupportL,DECK_square_bar,Al solid bar 15x15 L300 | continuous rail bearing001,aluminum,,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoDeckPlate,DECK_plate,6061-T6 D2 grid plate 300x300x4 | 36xD4.5 | top Z118,aluminum,,"D2:36 grid+14 mounting round holes,4 strap slots. No threads. Received thickness>=3.9 and lot6061-T6 properties; body/fixture checks are not operating release."
+CargoDeckSupport0,DECK_square_bar,Al support20x15x15 | M6 through | direct frame bearing,aluminum,,"Cut/drill from15mm square stock. Check parallel faces and support contact; carry compression into3030, no PLA in cargo support."
+CargoDeckSupport1,DECK_square_bar,Al support20x15x15 | M6 through | direct frame bearing001,aluminum,,"Cut/drill from15mm square stock. Check parallel faces and support contact; carry compression into3030, no PLA in cargo support."
+CargoDeckSupport2,DECK_square_bar,Al support20x15x15 | M6 through | direct frame bearing002,aluminum,,"Cut/drill from15mm square stock. Check parallel faces and support contact; carry compression into3030, no PLA in cargo support."
+CargoDeckSupport3,DECK_square_bar,Al support20x15x15 | M6 through | direct frame bearing003,aluminum,,"Cut/drill from15mm square stock. Check parallel faces and support contact; carry compression into3030, no PLA in cargo support."
+CargoDeckSupport4,DECK_square_bar,Al support20x15x15 | M6 through | direct frame bearing004,aluminum,,"Cut/drill from15mm square stock. Check parallel faces and support contact; carry compression into3030, no PLA in cargo support."
+CargoDeckSupport5,DECK_square_bar,Al support20x15x15 | M6 through | direct frame bearing005,aluminum,,"Cut/drill from15mm square stock. Check parallel faces and support contact; carry compression into3030, no PLA in cargo support."
 CargoStopXP,DECK_square_bar,Al stop 15x15 L50 | inner face102 | not a lifting point,aluminum,,Nominal fabrication candidate; inspect and validate before loaded use.
 CargoStopXN,DECK_square_bar,Al stop 15x15 L50 | inner face102 | not a lifting point001,aluminum,,Nominal fabrication candidate; inspect and validate before loaded use.
 CargoStopYP,DECK_square_bar,Al stop 15x15 L50 | inner face102 | not a lifting point002,aluminum,,Nominal fabrication candidate; inspect and validate before loaded use.
@@ -221,3 +225,75 @@ CargoStopNut6,DECK_fasteners_and_extra_slotnuts,CargoStopNut6,steel,M4 plain hex
 CargoStopBolt7,DECK_fasteners_and_extra_slotnuts,CargoStopBolt7,steel,M4x25 socket screw,Unthreaded envelope; verify thread engagement and tightening for received hardware.
 CargoStopWasher7,DECK_fasteners_and_extra_slotnuts,CargoStopWasher7,steel,M4 plain washer 9x4.3x0.8,Nominal fabrication candidate; inspect and validate before loaded use.
 CargoStopNut7,DECK_fasteners_and_extra_slotnuts,CargoStopNut7,steel,M4 plain hex nut,Nominal fabrication candidate; inspect and validate before loaded use.
+FixtureM3NutL0,FIXTURE_HARDWARE,M3 captured nut | adapter20mm pitch,steel,M3 plain hex nut,"Actual device, screw length and thermal mounting unselected. End of M3 bolt must remain below deck underside114."
+FixtureM3NutL1,FIXTURE_HARDWARE,M3 captured nut | adapter20mm pitch001,steel,M3 plain hex nut,"Actual device, screw length and thermal mounting unselected. End of M3 bolt must remain below deck underside114."
+PrintedAdapterL,P04,PLA Adapter | outer grid row | removable,PLA,,"64x16x3.2 PLA,50mm M4 mounting to20mm M3 nut pockets. Fit model for light electronics, no cargo/arm anchorage rating."
+FixtureStackWasherAdapterL0_0,FIXTURE_HARDWARE,M4 washer compression stack 1/4,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherAdapterL0_1,FIXTURE_HARDWARE,M4 washer compression stack 2/4,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherAdapterL0_2,FIXTURE_HARDWARE,M4 washer compression stack 3/4,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherAdapterL0_3,FIXTURE_HARDWARE,M4 washer compression stack 4/4,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureTopWasherAdapterL0,FIXTURE_HARDWARE,M4 top washer,steel,M4 plain washer 9x4.3x0.8,
+FixtureBottomWasherAdapterL0,FIXTURE_HARDWARE,M4 large retention washer,steel,M4 large washer 12x4.3x1,
+FixtureM4NutAdapterL0,FIXTURE_HARDWARE,M4 fixture nut,steel,M4 plain hex nut,
+FixtureBoltAdapterL0,FIXTURE_HARDWARE,M4x16 fixture bolt,steel,M4x16 socket screw,"Nominal tip102.8, above frame99 by3.8. Recheck stack tolerances and loaded deflection; fit fixtures on removed deck."
+FixtureStackWasherAdapterL1_0,FIXTURE_HARDWARE,M4 washer compression stack 1/001,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherAdapterL1_1,FIXTURE_HARDWARE,M4 washer compression stack 2/001,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherAdapterL1_2,FIXTURE_HARDWARE,M4 washer compression stack 3/001,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherAdapterL1_3,FIXTURE_HARDWARE,M4 washer compression stack 4/001,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureTopWasherAdapterL1,FIXTURE_HARDWARE,M4 top washer001,steel,M4 plain washer 9x4.3x0.8,
+FixtureBottomWasherAdapterL1,FIXTURE_HARDWARE,M4 large retention washer001,steel,M4 large washer 12x4.3x1,
+FixtureM4NutAdapterL1,FIXTURE_HARDWARE,M4 fixture nut001,steel,M4 plain hex nut,
+FixtureBoltAdapterL1,FIXTURE_HARDWARE,M4x16 fixture bolt001,steel,M4x16 socket screw,"Nominal tip102.8, above frame99 by3.8. Recheck stack tolerances and loaded deflection; fit fixtures on removed deck."
+PrintedGuideL,P04,PLA Guide | outer grid row | removable,PLA,,64x16x3.2 PLA plus open7mm cable saddle;2.5mm tie retained through3.2x1.2 window. No snap fit or unsupported adhesive.
+FixtureStackWasherGuideL0_0,FIXTURE_HARDWARE,M4 washer compression stack 1/002,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherGuideL0_1,FIXTURE_HARDWARE,M4 washer compression stack 2/002,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherGuideL0_2,FIXTURE_HARDWARE,M4 washer compression stack 3/002,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherGuideL0_3,FIXTURE_HARDWARE,M4 washer compression stack 4/002,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureTopWasherGuideL0,FIXTURE_HARDWARE,M4 top washer002,steel,M4 plain washer 9x4.3x0.8,
+FixtureBottomWasherGuideL0,FIXTURE_HARDWARE,M4 large retention washer002,steel,M4 large washer 12x4.3x1,
+FixtureM4NutGuideL0,FIXTURE_HARDWARE,M4 fixture nut002,steel,M4 plain hex nut,
+FixtureBoltGuideL0,FIXTURE_HARDWARE,M4x16 fixture bolt002,steel,M4x16 socket screw,"Nominal tip102.8, above frame99 by3.8. Recheck stack tolerances and loaded deflection; fit fixtures on removed deck."
+FixtureStackWasherGuideL1_0,FIXTURE_HARDWARE,M4 washer compression stack 1/003,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherGuideL1_1,FIXTURE_HARDWARE,M4 washer compression stack 2/003,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherGuideL1_2,FIXTURE_HARDWARE,M4 washer compression stack 3/003,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherGuideL1_3,FIXTURE_HARDWARE,M4 washer compression stack 4/003,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureTopWasherGuideL1,FIXTURE_HARDWARE,M4 top washer003,steel,M4 plain washer 9x4.3x0.8,
+FixtureBottomWasherGuideL1,FIXTURE_HARDWARE,M4 large retention washer003,steel,M4 large washer 12x4.3x1,
+FixtureM4NutGuideL1,FIXTURE_HARDWARE,M4 fixture nut003,steel,M4 plain hex nut,
+FixtureBoltGuideL1,FIXTURE_HARDWARE,M4x16 fixture bolt003,steel,M4x16 socket screw,"Nominal tip102.8, above frame99 by3.8. Recheck stack tolerances and loaded deflection; fit fixtures on removed deck."
+FixtureM3NutR0,FIXTURE_HARDWARE,M3 captured nut | adapter20mm pitch002,steel,M3 plain hex nut,"Actual device, screw length and thermal mounting unselected. End of M3 bolt must remain below deck underside114."
+FixtureM3NutR1,FIXTURE_HARDWARE,M3 captured nut | adapter20mm pitch003,steel,M3 plain hex nut,"Actual device, screw length and thermal mounting unselected. End of M3 bolt must remain below deck underside114."
+PrintedAdapterR,P04,PLA Adapter | outer grid row | removable001,PLA,,"64x16x3.2 PLA,50mm M4 mounting to20mm M3 nut pockets. Fit model for light electronics, no cargo/arm anchorage rating."
+FixtureStackWasherAdapterR0_0,FIXTURE_HARDWARE,M4 washer compression stack 1/004,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherAdapterR0_1,FIXTURE_HARDWARE,M4 washer compression stack 2/004,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherAdapterR0_2,FIXTURE_HARDWARE,M4 washer compression stack 3/004,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherAdapterR0_3,FIXTURE_HARDWARE,M4 washer compression stack 4/004,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureTopWasherAdapterR0,FIXTURE_HARDWARE,M4 top washer004,steel,M4 plain washer 9x4.3x0.8,
+FixtureBottomWasherAdapterR0,FIXTURE_HARDWARE,M4 large retention washer004,steel,M4 large washer 12x4.3x1,
+FixtureM4NutAdapterR0,FIXTURE_HARDWARE,M4 fixture nut004,steel,M4 plain hex nut,
+FixtureBoltAdapterR0,FIXTURE_HARDWARE,M4x16 fixture bolt004,steel,M4x16 socket screw,"Nominal tip102.8, above frame99 by3.8. Recheck stack tolerances and loaded deflection; fit fixtures on removed deck."
+FixtureStackWasherAdapterR1_0,FIXTURE_HARDWARE,M4 washer compression stack 1/005,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherAdapterR1_1,FIXTURE_HARDWARE,M4 washer compression stack 2/005,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherAdapterR1_2,FIXTURE_HARDWARE,M4 washer compression stack 3/005,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherAdapterR1_3,FIXTURE_HARDWARE,M4 washer compression stack 4/005,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureTopWasherAdapterR1,FIXTURE_HARDWARE,M4 top washer005,steel,M4 plain washer 9x4.3x0.8,
+FixtureBottomWasherAdapterR1,FIXTURE_HARDWARE,M4 large retention washer005,steel,M4 large washer 12x4.3x1,
+FixtureM4NutAdapterR1,FIXTURE_HARDWARE,M4 fixture nut005,steel,M4 plain hex nut,
+FixtureBoltAdapterR1,FIXTURE_HARDWARE,M4x16 fixture bolt005,steel,M4x16 socket screw,"Nominal tip102.8, above frame99 by3.8. Recheck stack tolerances and loaded deflection; fit fixtures on removed deck."
+PrintedGuideR,P04,PLA Guide | outer grid row | removable001,PLA,,64x16x3.2 PLA plus open7mm cable saddle;2.5mm tie retained through3.2x1.2 window. No snap fit or unsupported adhesive.
+FixtureStackWasherGuideR0_0,FIXTURE_HARDWARE,M4 washer compression stack 1/006,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherGuideR0_1,FIXTURE_HARDWARE,M4 washer compression stack 2/006,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherGuideR0_2,FIXTURE_HARDWARE,M4 washer compression stack 3/006,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherGuideR0_3,FIXTURE_HARDWARE,M4 washer compression stack 4/006,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureTopWasherGuideR0,FIXTURE_HARDWARE,M4 top washer006,steel,M4 plain washer 9x4.3x0.8,
+FixtureBottomWasherGuideR0,FIXTURE_HARDWARE,M4 large retention washer006,steel,M4 large washer 12x4.3x1,
+FixtureM4NutGuideR0,FIXTURE_HARDWARE,M4 fixture nut006,steel,M4 plain hex nut,
+FixtureBoltGuideR0,FIXTURE_HARDWARE,M4x16 fixture bolt006,steel,M4x16 socket screw,"Nominal tip102.8, above frame99 by3.8. Recheck stack tolerances and loaded deflection; fit fixtures on removed deck."
+FixtureStackWasherGuideR1_0,FIXTURE_HARDWARE,M4 washer compression stack 1/007,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherGuideR1_1,FIXTURE_HARDWARE,M4 washer compression stack 2/007,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherGuideR1_2,FIXTURE_HARDWARE,M4 washer compression stack 3/007,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureStackWasherGuideR1_3,FIXTURE_HARDWARE,M4 washer compression stack 4/007,steel,M4 plain washer 9x4.3x0.8,Four washers nominal3.2; measure/sort to match printed thickness. Metal-to-metal clamp path.
+FixtureTopWasherGuideR1,FIXTURE_HARDWARE,M4 top washer007,steel,M4 plain washer 9x4.3x0.8,
+FixtureBottomWasherGuideR1,FIXTURE_HARDWARE,M4 large retention washer007,steel,M4 large washer 12x4.3x1,
+FixtureM4NutGuideR1,FIXTURE_HARDWARE,M4 fixture nut007,steel,M4 plain hex nut,
+FixtureBoltGuideR1,FIXTURE_HARDWARE,M4x16 fixture bolt007,steel,M4x16 socket screw,"Nominal tip102.8, above frame99 by3.8. Recheck stack tolerances and loaded deflection; fit fixtures on removed deck."

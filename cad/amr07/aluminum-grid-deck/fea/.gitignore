@@ -1,0 +1,12 @@
+# Reproducible solver intermediates; exact input and DAT are in the ZIPs.
+*.inp
+*.dat
+*.frd
+*.poly
+*.node
+*.ele
+*.npz
+*.12d
+*.cvg
+*.sta
+spooles.out

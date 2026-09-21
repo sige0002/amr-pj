@@ -1,0 +1,27 @@
+{
+  "status": "PASS_consistent_review_artifacts",
+  "date": "2026-09-22",
+  "CAD_parts": 298,
+  "grid_locations": 36,
+  "physical_collisions": 0,
+  "nominal_service_sweeps_passed": true,
+  "quote_STEP_and_PDF_same_uploaded_revision": true,
+  "quote_matches_assembly_plate": true,
+  "FEA_input_archives_and_current_structural_parameters_match": true,
+  "BOM_subtotals": {
+    "JPY": 50468.0,
+    "USD": 120.9
+  },
+  "manufacturing_release": false,
+  "operating_release": false,
+  "artifact_hashes": {
+    "AMR01_M0601C_A6.FCStd": "a7c0fb55e04dc9eb03f0667bb53065c2f140aaec1dcf2bcdcc665466e48dc0ad",
+    "AMR01_M0601C_A6.step": "45f937b151ff6a90a5eb718b6b1c864e04fe64154238f32092ceefae9b724044",
+    "assembly_validation.json": "019907555f29a97e0e6c38b7284936686cd3c25f6554be5f124883685981917d",
+    "service_envelope_validation.json": "210843aaead2fb279173f2851e7ed84e729b70b905d6a696f16e0b248af1667d",
+    "BOM.xlsx": "b6dbaffb084e600f35f0a6e16b786473718ca05edfdac58de4775e78d952c0e1",
+    "procurement_bom.json": "e8ee8b8c36cd62593b7caa7c26cde497bf1d47c04a9e36b89b619f13b5069358",
+    "aluminum-grid-deck/fea/summary.json": "50e24756c537dfda5c0c68972f0b72821bb738f00300999bf811fbd21d3bd5ff",
+    "aluminum-grid-deck/quote-evidence/D2-observed.json": "4c0540b4d874a4581b82d21618af7ceb2b9cbdc0ee630c07592195503bdf7fb6"
+  }
+}

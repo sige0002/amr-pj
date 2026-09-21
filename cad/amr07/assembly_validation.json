@@ -2,9 +2,9 @@
   "status": "nominal_geometry_review_revision_not_manufacturing_or_operating_release",
   "source_A4_sha256": "48f20465f6d0b2259eef9cea50c229f72ebb58e20c435035a0c11b006eacfb3b",
   "mount_STEP_sha256": "790986f799318a681d220ad8c6d4676e5f879409067c87b8af5ff7fc0ccc039d",
-  "physical_parts": 222,
-  "physical_pair_count": 24531,
-  "bounding_box_candidate_booleans": 468,
+  "physical_parts": 298,
+  "physical_pair_count": 44253,
+  "bounding_box_candidate_booleans": 658,
   "collisions": [],
   "reference_collisions": [],
   "tool_and_service_access": [
@@ -111,9 +111,528 @@
     {
       "name": "Battery_lift_deck_removed_160",
       "hits": []
+    },
+    {
+      "name": "Grid_M4x12_-125_-125",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_-125_-75",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_-125_-25",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_-125_25",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_-125_75",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_-125_125",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_-75_-125",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_-75_-75",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_-75_-25",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_-75_25",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_-75_75",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_-75_125",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_-25_-125",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_-25_-75",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_-25_-25",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_-25_25",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_-25_75",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_-25_125",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_25_-125",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_25_-75",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_25_-25",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_25_25",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_25_75",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_25_125",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_75_-125",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_75_-75",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_75_-25",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_75_25",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_75_75",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_75_125",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_125_-125",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_125_-75",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_125_-25",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_125_25",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_125_75",
+      "hits": []
+    },
+    {
+      "name": "Grid_M4x12_125_125",
+      "hits": []
+    },
+    {
+      "name": "Deck_M6_driver_0",
+      "hits": []
+    },
+    {
+      "name": "Deck_M6_driver_1",
+      "hits": []
+    },
+    {
+      "name": "Deck_M6_driver_2",
+      "hits": []
+    },
+    {
+      "name": "Deck_M6_driver_3",
+      "hits": []
+    },
+    {
+      "name": "Deck_M6_driver_4",
+      "hits": []
+    },
+    {
+      "name": "Deck_M6_driver_5",
+      "hits": []
     }
   ],
   "harness_collisions": [],
+  "grid_access": {
+    "checked_locations": 36,
+    "hardware": "M4x12 + 9mm washers + 7AF nut envelope, each location individually",
+    "minimum_nominal_hardware_to_other_parts_mm": 1.118033988749895,
+    "minimum_nominal_D12_tool_to_removed_deck_parts_mm": 4.307764064044157,
+    "checks": [
+      {
+        "xy_mm": [
+          -125,
+          -125
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          -125,
+          -75
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          -125,
+          -25
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          -125,
+          25
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          -125,
+          75
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          -125,
+          125
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          -75,
+          -125
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          -75,
+          -75
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          -75,
+          -25
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          -75,
+          25
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          -75,
+          75
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          -75,
+          125
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          -25,
+          -125
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          -25,
+          -75
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          -25,
+          -25
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          -25,
+          25
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          -25,
+          75
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          -25,
+          125
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          25,
+          -125
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          25,
+          -75
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          25,
+          -25
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          25,
+          25
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          25,
+          75
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          25,
+          125
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          75,
+          -125
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          75,
+          -75
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          75,
+          -25
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          75,
+          25
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          75,
+          75
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          75,
+          125
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          125,
+          -125
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          125,
+          -75
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          125,
+          -25
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          125,
+          25
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          125,
+          75
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      },
+      {
+        "xy_mm": [
+          125,
+          125
+        ],
+        "installed_hardware_hits": [],
+        "D12_nut_tool_on_removed_deck_hits": []
+      }
+    ],
+    "condition": "Fit nuts with deck removed. Remove cargo for inner holes; fixtures occupying selected holes are removed. No general device or connector envelope approval."
+  },
+  "printed_accessories": [
+    {
+      "file": "PrintedAdapterL.stl",
+      "quantity": 1,
+      "bed_dimensions_mm": [
+        64.0,
+        16.0,
+        3.200000047683716
+      ],
+      "watertight": true,
+      "solid_CAD_mass_kg": 0.0033111311566942944,
+      "actual_slicing_done": false,
+      "fit_and_load_qualified": false
+    },
+    {
+      "file": "PrintedGuideL.stl",
+      "quantity": 1,
+      "bed_dimensions_mm": [
+        64.0,
+        23.0,
+        12.0
+      ],
+      "watertight": true,
+      "solid_CAD_mass_kg": 0.004710385665023322,
+      "actual_slicing_done": false,
+      "fit_and_load_qualified": false
+    },
+    {
+      "file": "PrintedAdapterR.stl",
+      "quantity": 1,
+      "bed_dimensions_mm": [
+        64.0,
+        16.0,
+        3.200000047683716
+      ],
+      "watertight": true,
+      "solid_CAD_mass_kg": 0.0033111311566942944,
+      "actual_slicing_done": false,
+      "fit_and_load_qualified": false
+    },
+    {
+      "file": "PrintedGuideR.stl",
+      "quantity": 1,
+      "bed_dimensions_mm": [
+        64.0,
+        23.0,
+        12.0
+      ],
+      "watertight": true,
+      "solid_CAD_mass_kg": 0.00471038566502332,
+      "actual_slicing_done": false,
+      "fit_and_load_qualified": false
+    }
+  ],
   "wheel_and_caster_floor_contacts_z_mm": {
     "TireL": 0.0,
     "TireR": 0.0,
@@ -850,17 +1369,17 @@
     "mount_change_kg": 3.453044182967133e-05,
     "caster_catalog_mass_correction_kg": 0.015000000000000013,
     "slot_nut_change_kg": 0.0830208198153391,
-    "new_CAD_parts_kg": 1.582279321882445,
+    "new_CAD_parts_kg": 1.3485050463000139,
     "deck_straps_and_edge_guard_allowance_kg": 0.28,
     "electrical_allowance_carried_kg": 2.1,
-    "estimated_base_kg": 8.74814316476638,
-    "remaining_to_10kg_kg": 1.2518568352336192,
+    "estimated_base_kg": 8.51436888918395,
+    "remaining_to_10kg_kg": 1.4856311108160494,
     "is_weighed": false
   },
   "scope": "Reconstructed extrusion/nut interface, nominal tire axial datum, rigid undeformed tires. Reservations are not electronic component fit approval. No local contact/thread/thermal/impact certification.",
   "STEP_roundtrip": {
     "valid": true,
-    "solids": 226,
-    "volume_difference_mm3": 0.10268322192132473
+    "solids": 302,
+    "volume_difference_mm3": 0.10296233044937253
   }
 }

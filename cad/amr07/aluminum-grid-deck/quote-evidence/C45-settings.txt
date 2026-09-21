@@ -1,0 +1,63 @@
+6061-T6アルミニウム合金は、熱処理と予備延伸工程を経て製造される高品質アルミニウム合金製品です。
+
+
+
+
+機械的特性：
+
+引張強度（MPa） ≥ 290
+
+降伏強度（MPa） ≥ 240
+
+伸び（％） ≥ 8
+
+熱処理：T6
+
+
+
+
+利点：
+
+優れた強度重量比；優れた切削性；安定した信頼性の高い品質。
+
+仕様を編集
+AMR_...5_D2.step
+素材
+アルミニウム
+ステンレス
+合金鋼
+銅合金
+プラスチック
+アルミニウムのタイプ
+資料を見る
+表面仕上げ
+はい
+いいえ
+仕上げを見る
+表面仕上げを施さない場合、部品には工具跡や傷が残ってしまいます. 比較画像を見る >
+最も厳しい公差
+ISO 2768 medium
+±0.10mm
+±0.05mm
+±0.02mm
+外観要件
+標準
+厳格
+プレミアム
+穴あけ
+いいえ
+はい
+サブアセンブリ
+いいえ
+はい
+枚数
+商品概要
+CNC備考
+ 
+価格
+$30.69
+詳細 >
+保存
+
+Persisted remarks:
+QUOTE ONLY qty1; 6061-T6,Rp0.2>=240MPa(confirm lot),as machined. D2 PDF: 300x300x4 plate; 36xD4.5 through grid, NO THREADS,50 pitch. Plus6xD6.6 frame holes X=-105,0,105;Y=+-135,8xD4.5 stop holes(all14 unthreaded),4x30x6R3 slots. Hole/slot coordinates +/-0.10; thickness4+/-0.10; flatness0.5; other ISO2768-m. Deburr both faces, edge break<=0.2. Include material/all features; no hardware. No geometry changes. Fit/load validation pending.

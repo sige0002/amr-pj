@@ -35,7 +35,8 @@ def screening(cfg=None):
     point_section = point_width*t*t/6
     point_stress = (load*span/4)/point_section
     return {
-        'scope': 'Central200x200 uniform equivalent load including plate-borne dead mass and four strap legs. Upward strap-anchor reactions are ignored for this comparison. Local forces/contact and joints remain to be verified.',
+        'scope': 'REFERENCE ONLY: former continuous-support strip, not the six-pad D2 acceptance model. See aluminum-grid-deck/fea/summary.json. Central200x200 uniform equivalent load includes dead mass and strap legs.',
+        'applicable_to_current_six_block_support':False,
         'payload_kg': s['payload_kg'], 'payload_force_N': payload_force,
         'plate_borne_dead_mass_allowance_kg': s['plate_borne_dead_mass_allowance_kg'],
         'dead_force_N': dead_force, 'strap_vertical_force_N': restraint_force,
@@ -102,6 +103,9 @@ def build_deck_specs(cfg=None, include_reference=True, slotnut_factory=None):
     cut_height = z1-z0+2
     holes = [cyl(g['frame_hole_diameter_mm']/2, cut_height, x, y, z0-1) for x, y in mount_holes]
     holes += [cyl(g['stop_hole_diameter_mm']/2, cut_height, x, y, z0-1) for x, y in stop_holes]
+    grid = g.get('grid_coordinates_from_center_mm', [])
+    holes += [cyl(g['grid_hole_diameter_mm']/2, cut_height, x, y, z0-1)
+              for x in grid for y in grid]
     for slot in g['strap_slots']:
         x, y = slot['center_xy_mm']
         length, width = slot['overall_length_width_mm']
@@ -113,15 +117,26 @@ def build_deck_specs(cfg=None, include_reference=True, slotnut_factory=None):
         cutter.translate(V(x, y, 0))
         holes.append(cutter)
     add('CargoDeckPlate', cut(box(-150, -150, z0, 300, 300, z1-z0), holes),
-        label='A5052 cargo plate 300x300x4 | top Z118',
+        label=('6061-T6 D2 grid plate 300x300x4 | 36xD4.5 | top Z118' if grid else 'A5052 cargo plate 300x300x4 | top Z118'),
         source=p['procurement']['plate']['url'],
-        note='14 round holes +4 obround slots; deburr and pad webbing edges. Temper/proof strength and minimum thickness require confirmation.')
-    for name, y in [('R', -135), ('L', 135)]:
-        support = box(-150, y-7.5, g['frame_top_z_mm'], 300, 15, 15)
-        support = cut(support, [cyl(3.3, 17, x, y, 98) for x in (-120, 0, 120)])
-        add('CargoDeckSupport'+name, support,
-            label='Al solid bar 15x15 L300 | continuous rail bearing',
-            source=p['procurement']['square_bar']['url'])
+        note=('D2:36 grid+14 mounting round holes,4 strap slots. No threads. Received thickness>=3.9 and lot6061-T6 properties; body/fixture checks are not operating release.' if grid else
+              '14 round holes +4 obround slots; deburr and pad webbing edges. Temper/proof strength and minimum thickness require confirmation.'))
+    if g.get('support_mode') == 'six_blocks':
+        for i, (x,y) in enumerate(mount_holes):
+            length,width,height=g['support_block_LWT_mm']
+            support=cut(box(x-length/2,y-width/2,g['frame_top_z_mm'],length,width,height),
+                        [cyl(3.3,height+2,x,y,g['frame_top_z_mm']-1)])
+            add('CargoDeckSupport'+str(i),support,
+                label='Al support20x15x15 | M6 through | direct frame bearing',
+                note='Cut/drill from15mm square stock. Check parallel faces and support contact; carry compression into3030, no PLA in cargo support.',
+                source=p['procurement']['square_bar']['url'])
+    else:
+        for name, y in [('R', -135), ('L', 135)]:
+            support = box(-150, y-7.5, g['frame_top_z_mm'], 300, 15, 15)
+            support = cut(support, [cyl(3.3, 17, x, y, 98) for x in (-120, 0, 120)])
+            add('CargoDeckSupport'+name, support,
+                label='Al solid bar 15x15 L300 | continuous rail bearing',
+                source=p['procurement']['square_bar']['url'])
     for name, radial, axis in [('XP', 109.5, 'x'), ('XN', -109.5, 'x'), ('YP', 109.5, 'y'), ('YN', -109.5, 'y')]:
         if axis == 'x':
             stop = box(radial-7.5, -25, z1, 15, 50, 15)

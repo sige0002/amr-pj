@@ -58,6 +58,10 @@ def budget_for(name):
         return 'C01'
     if name in ('BatteryCradlePLA', 'ElectronicsTrayPLA', 'FrontElectronicsTrayPLA'):
         return 'P04'
+    if name.startswith(('PrintedAdapter','PrintedGuide')):
+        return 'P04'
+    if name.startswith('Fixture'):
+        return 'FIXTURE_HARDWARE'
     if name.startswith('MotorSeatWasher_'):
         return 'MW'
     if name == 'CargoDeckPlate':
@@ -96,11 +100,11 @@ def cad_inventory():
         rows.append({'object_name': name, 'budget_id': budget_for(name),
                      'label': props.get('Label', ''), 'material': props['MaterialBasis'],
                      'hardware_spec': spec, 'note': props.get('ModelNote', '')})
-    assert len(rows) == read_json('assembly_validation.json')['physical_parts'] == 222
+    assert len(rows) == read_json('assembly_validation.json')['physical_parts'] == 298
     assert len({r['object_name'] for r in rows}) == len(rows)
     expected = {'F01': 4, 'F02': 2, 'F03': 40, 'F04': 28, 'P03': 4, 'Q01': 2,
-                'D01': 2, 'D02': 4, 'P01': 1, 'C01': 5, 'P04': 3, 'MW': 6,
-                'DECK_plate': 1, 'DECK_square_bar': 6,
+                'D01': 2, 'D02': 4, 'P01': 1, 'C01': 5, 'P04': 7, 'MW': 6,
+                'DECK_plate': 1, 'DECK_square_bar': 10, 'FIXTURE_HARDWARE':68,
                 'DECK_fasteners_and_extra_slotnuts': 48, 'H01': 66}
     assert dict(Counter(r['budget_id'] for r in rows)) == expected
     return rows
@@ -130,7 +134,7 @@ def fasteners(inventory):
                        'included_in_sets': included, 'additional_needed': len(objects) - included,
                        'budget_ids': ', '.join(ids), 'note': note,
                        'cad_object_names': ';'.join(o['object_name'] for o in objects)})
-    assert sum(r['installed_quantity'] for r in result) == 180
+    assert sum(r['installed_quantity'] for r in result) == 248
     result.append({'specification': 'タイヤキット付属ねじ（寸法未公表）',
                    'installed_quantity': 6, 'included_in_sets': 6, 'additional_needed': 0,
                    'budget_ids': 'D02', 'note': '各キット3本×2。CADには個別形状なし。別購入しない。',
@@ -144,12 +148,14 @@ def manufacture():
         ('M01', '専用モーター金具', 2, 'A6061-T6／90×30×34mm', 'CNC外注', 'Q01', 'M0601C_mount_A6_R1.step', '左右同形2個、図面PDF同送。75.02USD/2個の自動見積。'),
         ('M02', 'キャスター取付板', 1, 'A5052／80×170×4mm', '自加工', 'P01', 'AMR01_M0601C_A6.FCStd', '材料費のみ。切断・穴加工・面取り。'),
         ('M03', 'コーナーガセット', 4, 'A5052／直角二辺60mm・t3', '自加工', 'P03', 'AMR01_M0601C_A6.FCStd', '150角素材から4枚。加工図はCADから作成が必要。'),
-        ('M04', '荷台板', 1, 'A5052／300×300×4mm', '自加工', 'DECK_plate', 'DECK_REVIEW.ja.md', '14丸穴＋30×6長穴4か所。'),
-        ('M05', '荷台支持棒', 2, 'アルミ／15×15×300mm', '自加工', 'DECK_square_bar', 'DECK_REVIEW.ja.md', '支持棒2本＋ストッパ4個を同じ995mm材1本から製作。'),
+        ('M04', '格子穴荷台板 D2', 1, '6061-T6／300×300×4mm', 'CNC外注', 'DECK_plate', 'aluminum-grid-deck/AMR_GridDeck_C45_D2.pdf', '36格子穴＋14取付穴＋30×6長穴4か所。D2 STEP/PDFの自動見積、手動審査前。'),
+        ('M05', '荷台支持ブロック', 6, 'アルミ／20×15×15mm', '自加工', 'DECK_square_bar', 'DECK_REVIEW.ja.md', '支持6個＋ストッパ4個を同じ995mm材1本から製作。'),
         ('M06', '荷物ストッパ', 4, 'アルミ／15×15×50mm', '自加工', 'DECK_square_bar', 'DECK_REVIEW.ja.md', '支持棒と同じ材料行。素材代を二重計上しない。'),
         ('M07', '電池クレードル', 1, 'PLA／130×160×37mm', 'P1Sで印刷', 'P04', 'AMR01_M0601C_A6.FCStd', '電池型式未定。スライス・印刷条件・実電池の適合未確認。'),
         ('M08', '後部電装トレイ', 1, 'PLA／85×180×4.4mm', 'P1Sで印刷', 'P04', 'AMR01_M0601C_A6.FCStd', '現CADの部品。新電装用ケース・固定具は未選定表で別管理。'),
-        ('M09', '前部電装トレイ', 1, 'PLA／145×170×4.4mm', 'P1Sで印刷', 'P04', 'AMR01_M0601C_A6.FCStd', 'PLA消費材料費は3部品まとめてP04。')]
+        ('M09', '前部電装トレイ', 1, 'PLA／145×170×4.4mm', 'P1Sで印刷', 'P04', 'AMR01_M0601C_A6.FCStd', 'PLA消費材料費は計7部品まとめてP04。'),
+        ('M10', '小型機器用アダプタ', 2, 'PLA／64×16×3.2mm', 'P1Sで印刷', 'P04', 'printed-accessories/README.ja.md', '50mm M4格子→20mm M3ナット。実機器と取付ねじ長は未確定。'),
+        ('M11', '配線ガイド', 2, 'PLA／64×23×12mm', 'P1Sで印刷', 'P04', 'printed-accessories/README.ja.md', 'φ6束の局所逃げ、2.5mm結束バンド用。全配線経路は未確定。')]
     fields = ['id', 'name', 'quantity', 'specification', 'method', 'budget_id', 'drawing', 'note']
     return [dict(zip(fields, row)) for row in rows]
 
@@ -184,14 +190,16 @@ def build():
         rows.append(r)
     rows.sort(key=lambda r: CATEGORIES.index(r['category']))
     total = lambda currency: sum(Decimal(str(r['amount'])) for r in rows if r['currency'] == currency and r['amount'] is not None)
-    assert total('JPY') == Decimal('54189') == Decimal(str(ledger['priced_and_allowance_subtotal_JPY']))
-    assert total('USD') == Decimal('82.25') == Decimal(str(ledger['observed_automatic_quote_subtotal_USD']))
+    assert total('JPY') == Decimal(str(ledger['priced_and_allowance_subtotal_JPY']))
+    assert total('USD') == Decimal(str(ledger['observed_automatic_quote_subtotal_USD']))
     category_totals = {cat: {cur: float(sum(Decimal(str(r['amount'])) for r in rows if r['category'] == cat and r['currency'] == cur and r['amount'] is not None)) for cur in ('JPY', 'USD')} for cat in CATEGORIES}
     data = {'design': ledger['design'], 'date': inputs['date'], 'scope': inputs['scope'],
             'source_hashes': {n: sha(HERE / n) for n in ['bom.json', 'bom_inputs.json', 'bom_price_checks.json', 'AMR01_M0601C_A6.FCStd', 'requirements.json']},
             'procurement_rows': rows, 'fasteners': fasteners(inventory), 'manufactured_parts': manufacture(),
             'unselected': inputs['unselected'], 'cad_inventory': inventory, 'category_totals': category_totals,
             'partial_subtotals': {'JPY': float(total('JPY')), 'USD': float(total('USD'))},
+            'CAD_mass_estimate':ledger['CAD_mass_estimate'],
+            'reference_JPY_conversion':ledger['reference_JPY_conversion'],
             'completed_vehicle_total': None, 'physical_CAD_objects_reconciled': len(inventory),
             'added_mechanical_brake': 'excluded_by_user', 'ordered': False,
             'price_note': '価格の再確認範囲はbom_price_checks.json。未見積額は0円にせず空欄。PLA消費評価と仮枠を含む途中小計。'}
@@ -227,14 +235,14 @@ def table(headers, rows):
 
 def write_markdown(d):
     lines = ['# A6 BOM — 平地10kg・追加機械ブレーキなし', '',
-             '2026-09-21更新。**途中小計54,189円＋82.25 USD＋未確定分**。キャスターをAmazon273円＋既存Prime会員条件の送料0円で計上した条件付き金額です。車体の完成価格ではありません。購入・材料消費・仮枠を含み、通貨を換算せず集計しています。', '',
+             f'2026-09-22更新。**途中小計{d["partial_subtotals"]["JPY"]:,.0f}円＋{d["partial_subtotals"]["USD"]:.2f} USD＋未確定分**。キャスターをAmazon273円＋既存Prime会員条件の送料0円で計上した条件付き金額です。車体の完成価格ではありません。購入・材料消費・仮枠を含み、通貨を換算せず集計しています。', '',
              '[Excel](BOM.xlsx) / [購入一覧CSV](BOM.csv) / [締結部品CSV](fasteners.csv) / [製作品CSV](manufactured_parts.csv)', '',
-             'CADの物理形状222点を各費用行へ照合しました。完成キャスターやタイヤキットは、CAD形状数ではなく完成品の購入数で計上します。電装の半透明予約形状は購入品に数えていません。', '',
+             'CADの物理形状298点を各費用行へ照合しました。完成キャスターやタイヤキットは、CAD形状数ではなく完成品の購入数で計上します。電装の半透明予約形状は購入品に数えていません。', '',
              'フレーム300mmは2本使用・4本組1セット購入。溝ナットは合計50個＝接合セット付属16個＋別購入34個です。未確定の販売パックを架空の「1セット」として確定していません。', '',
              '小径座金は10枚以上の単価29円が**税別**だったため、10枚税込319円へ訂正しました。旧小計との差は29円です。10枚は数量割引の選択で、最小注文数ではありません。[WILCOの価格表](https://wilco.jp/products/F/FW-EB.html)', '',
              'タイヤ・キャスター・座金・タイヤ送料条件を今回再確認しました。フレームのAmazon価格は再取得できず、既存価格を参考値として引き継いでいます。その他の価格も全行再調査ではなく、既存調査・見積・仮枠です。[確認記録](bom_price_checks.json)', '',
-             'キャスターは取付寸法を照合したTRUSCO TYG-50に変更し、Amazon.co.jp販売・発送273円＋既存Prime会員条件の送料0円を第一候補とします。直前の498円から225円減。会員ログイン後の最終注文額は未確認。コーナン店舗受取283円＋送料0円も代替経路として確認しました。[購入経路と条件](CASTER_PROCUREMENT.ja.md)。[格子穴アルミ板のCNC比較見積](aluminum-grid-quote/README.ja.md)は代替案として別記し、現行の板素材代へ重複加算していません。', '',
-             '## 分類別小計', '', table(['分類', '円', 'USD'], [[cat, amount(v['JPY']), amount(v['USD'], 'USD')] for cat, v in d['category_totals'].items()]), '',
+             'キャスターは取付寸法を照合したTRUSCO TYG-50に変更し、Amazon.co.jp販売・発送273円＋既存Prime会員条件の送料0円を第一候補とします。直前の498円から225円減。会員ログイン後の最終注文額は未確認。コーナン店舗受取283円＋送料0円も代替経路として確認しました。[購入経路と条件](CASTER_PROCUREMENT.ja.md)。[D2格子穴アルミ板の実見積](aluminum-grid-deck/README.ja.md)を採用し、旧板素材4521円を置換しました。PLA小物の締結材800円は販売価格未確認の予算枠です。', '',
+             f'参考円換算は約{d["reference_JPY_conversion"]["subtotal_JPY_rounded_to_10"]:,.0f}円＋未確定分（ECB2026-09-21の1USD＝157.2671889円）。決済レート・税・手数料は別です。', '', '## 分類別小計', '', table(['分類', '円', 'USD'], [[cat, amount(v['JPY']), amount(v['USD'], 'USD')] for cat, v in d['category_totals'].items()]), '',
              '金額空欄・未見積の項目は小計に含みません。未選定品は末尾にまとめています。各行の購入予定は実発注・在庫確保を意味しません。']
     for cat in CATEGORIES:
         lines += ['', '## ' + cat, '']
@@ -254,14 +262,14 @@ def write_markdown(d):
     lines += ['', '## 締結部品の数量明細', '', '以下は上のセット・一式予算の内訳です。金額を追加加算しません。荷台用M6平座金と基礎部用の座金は寸法が異なるため別行です。', '',
               table(['仕様', '使用数', 'セット付属', '別途必要数', '計上先'], [[r['specification'], r['installed_quantity'], r['included_in_sets'], r['additional_needed'], r['budget_ids']] for r in d['fasteners']]), '',
               'M6×12は36本のうち16本が接合SET付属、追加20本です。タイヤ付属ねじ6本は寸法未公表・CAD個別形状なしで、モーター固定用M2.5×12の6本とは別です。締結材の販売パック・強度区分・厚さ選別は未確定部分が残ります。', '',
-              '## 製作品', '', '素材の購入費は親の費用行に含みます。専用モーター金具以外は自加工前提で、工具・工賃や外注完成価格は未計上です。', '',
+              '## 製作品', '', '素材の購入費は親の費用行に含みます。専用モーター金具とD2荷台板はCNC外注。支持ブロック・ストッパ・他の板材は自加工前提で、工具・工賃は未計上です。', '',
               table(['部品', '数量', '材質・寸法', '製作', '材料・費用行', '設計資料'], [[r['name'], r['quantity'], r['specification'], r['method'], r['budget_id'], f"[資料]({r['drawing']})"] for r in d['manufactured_parts']]), '',
-              '角棒は995mmを1本購入し、300mm×2本と50mm×4個へ切断します。必要完成長800mm、切りしろ18mmの想定です。PLA3部品はP1Sの造形範囲内ですが、実スライスは未実施です。', '',
+              '角棒は995mmを1本購入し、20mm×6個と50mm×4個へ切断します。必要完成長320mm、切りしろ30mmの想定です。PLA7部品はP1Sの造形範囲内ですが、実スライスは未実施です。', '',
               '## 未選定・未見積', '',
               table(['ID', '必要なもの', '数量', '残る決定', '段階'], [[r['id'], r['name'], r['needed_quantity'], r['decision_needed'], r['phase']] for r in d['unselected']]), '',
               '追加機械ブレーキ、旧USB-RS485B、既製の背の高いモーターブラケットは現行購入対象に含みません。通常の減速・停止用のモーター制御と回生対策は電装候補へ含めています。', '',
               '## データと更新', '',
-              '[数量・購入条件の入力](bom_inputs.json)、[費用台帳](bom.json)、[生成BOM JSON](procurement_bom.json)、[CAD対応表](BOM_CAD_MAP.csv)。CAD形状・金具見積STEP/PDFはこのBOM作成では変更していません。', '',
+              '[数量・購入条件の入力](bom_inputs.json)、[費用台帳](bom.json)、[生成BOM JSON](procurement_bom.json)、[CAD対応表](BOM_CAD_MAP.csv)。CADはD2荷台とPLA小物へ更新しました。モーター金具の見積STEP/PDFは維持しています。', '',
               '```sh', 'python3 cad/amr07/record_cost.py', 'python3 cad/amr07/build_bom.py', '# Excelも更新する場合（openpyxl 3.1.5）', 'python3 cad/amr07/build_bom.py --xlsx', '```', '',
               'Excel・CSVは生成物です。数量・購入条件はbom_inputs.json、費用はrecord_cost.pyとその参照元へ変更を反映してから再生成してください。bom.jsonはrecord_cost.pyで上書きされます。Excelの金額空欄は未見積で、概要の合計は既知金額だけの途中小計です。', '']
     (HERE / 'BOM.ja.md').write_text('\n'.join(lines))

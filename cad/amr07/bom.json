@@ -1,6 +1,6 @@
 {
-  "design": "AMR01_M0601C_A6",
-  "date": "2026-09-21",
+  "design": "AMR01_M0601C_A6_D2",
+  "date": "2026-09-22",
   "items": [
     {
       "id": "F01",
@@ -183,16 +183,6 @@
       "note": "注文経路、送り先、商品付属/梱包と円換算を確認して総額を更新する。7000円/個に含まれるとは推定せず、無料にも置かない。"
     },
     {
-      "id": "DECK_plate",
-      "name": "ESCO EA441VC-41 A5052 300x300x4, one sheet",
-      "quantity": 1,
-      "currency": "JPY",
-      "amount": 4521,
-      "price_kind": "observed_2026_09_21",
-      "source": "https://www.monotaro.com/p/4993/2618/",
-      "note": "Seller display4521税込, one plate0.972kg. Order4110税別 exceeds3500 free-standard-shipping threshold; special/region charges final at checkout. Temper unlisted, acceptance minimum thickness3.85mm must be confirmed/measured."
-    },
-    {
       "id": "DECK_square_bar",
       "name": "Hikari AS6151 aluminum15x15x995, one stock",
       "quantity": 1,
@@ -200,7 +190,7 @@
       "amount": 1507,
       "price_kind": "observed_2026_09_21",
       "source": "https://store.shopping.yahoo.co.jp/akibaoo/4977720061511.html",
-      "note": "Seller displayed retail price/region example shipping; material is aluminum with B2 anodize, alloy/temper not published. One stock supplies all six pieces."
+      "note": "Same purchased995mm stock; cut six20mm supports plus four50mm stops,320mm finished+30mm kerf allowance. Alloy/temper unconfirmed; compression comparison below."
     },
     {
       "id": "DECK_cargo_straps",
@@ -211,6 +201,36 @@
       "price_kind": "observed_2026_09_21",
       "source": "https://store.shopping.yahoo.co.jp/hcbrico/4977292226752.html",
       "note": "Seller displayed price; manufacturer125g and0.8kN working force. Product force is not a rating of the assembled deck/slots."
+    },
+    {
+      "id": "DECK_plate",
+      "name": "AMR_GridDeck_C45_D2,6061-T6,300x300x4,50 round holes+4 slots",
+      "quantity": 1,
+      "currency": "USD",
+      "amount": 28.67,
+      "price_kind": "vendor_automatic_quote",
+      "source": "https://jlccnc.com/jp/cnc-machining-quote",
+      "note": "D2 STEP/PDF uploaded toJLCCNC; qty1 economic10days,6061-T6 requested,as-machined,UPS Japan. Automatic estimate; manual review pending."
+    },
+    {
+      "id": "DECK_CNC_SHIP",
+      "name": "D2荷台板 日本宛UPS表示送料",
+      "quantity": 1,
+      "currency": "USD",
+      "amount": 9.98,
+      "price_kind": "vendor_automatic_quote",
+      "source": "https://jlccnc.com/jp/cnc-machining-quote",
+      "note": "板1枚の独立配送見積。モーター金具との同梱割引は仮定しない。"
+    },
+    {
+      "id": "FIXTURE_HARDWARE",
+      "name": "PLA小物の締結材・結束材",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 800,
+      "price_kind": "allowance",
+      "source": "",
+      "note": "M4x16×8、M4通常座金40、大径座金8、M4ナット8、M3ナット4、2.5mm結束バンド2。販売パック・実価格は未確定。"
     },
     {
       "id": "DECK_SHIP",
@@ -403,13 +423,34 @@
       "note": "国単位。住所別・税・換算額未確認"
     }
   ],
-  "priced_and_allowance_subtotal_JPY": 54189.0,
-  "observed_automatic_quote_subtotal_USD": 82.25,
+  "priced_and_allowance_subtotal_JPY": 50468.0,
+  "observed_automatic_quote_subtotal_USD": 120.9,
+  "reference_JPY_conversion": {
+    "rate": {
+      "provider": "European Central Bank",
+      "source_url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
+      "USD_reference_page": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+      "JPY_reference_page": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-jpy.en.html",
+      "reference_date": "2026-09-21",
+      "USD_per_EUR": "1.1490",
+      "JPY_per_EUR": "180.70",
+      "JPY_per_USD_calculated": "157.2671888598781549173194082",
+      "formula": "JPY_per_EUR / USD_per_EUR",
+      "downloaded_XML_sha256": "4ba0c6fbd667ebea8c8acf25b1a2e446ea2d0df6add9d5f266d5f17cd809eb8c",
+      "source_type": "Daily reference rate; not card, PayPal or supplier guaranteed settlement rate",
+      "saved_XML": "quote-evidence/ecb-2026-09-21.xml"
+    },
+    "subtotal_JPY_rounded_to_10": 69480,
+    "subtotal_JPY_unrounded": "69481.60313315926892950391645",
+    "settlement_amount": false,
+    "unpriced_items_and_fees_excluded": true
+  },
   "planning_total_JPY": null,
   "ordered": false,
   "previous_partial_subtotal_JPY": 42282,
   "removed_old_USB_RS485B_and_its_shipping_JPY": 5060,
-  "deck_material_shipping_allowance_addition_JPY": 9814,
+  "deck_material_shipping_allowance_addition_JPY": 5293,
+  "printed_fixture_hardware_allowance_JPY": 800,
   "electrical_selected_price_subtotal_JPY": 7584,
   "washer_purchase_addition_JPY": 319.0,
   "caster_procurement_conditional_reduction_JPY": 750,
@@ -418,17 +459,17 @@
     "mount_change_kg": 3.453044182967133e-05,
     "caster_catalog_mass_correction_kg": 0.015000000000000013,
     "slot_nut_change_kg": 0.0830208198153391,
-    "new_CAD_parts_kg": 1.582279321882445,
+    "new_CAD_parts_kg": 1.3485050463000139,
     "deck_straps_and_edge_guard_allowance_kg": 0.28,
     "electrical_allowance_carried_kg": 2.1,
-    "estimated_base_kg": 8.74814316476638,
-    "remaining_to_10kg_kg": 1.2518568352336192,
+    "estimated_base_kg": 8.51436888918395,
+    "remaining_to_10kg_kg": 1.4856311108160494,
     "is_weighed": false
   },
   "unpriced": [
     "Taobao送料/輸入費",
     "CNC図面審査による差額・税・住所別送料・決済換算",
-    "荷台等を自加工しない場合の切断/穴加工/バリ取り",
+    "支持ブロック・ストッパ等を自加工しない場合の切断/穴加工/バリ取り",
     "自加工の工具/作業費",
     "WILCOと追加電装各店の送料",
     "ARM pushbutton",
