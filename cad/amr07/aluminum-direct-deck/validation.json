@@ -1,0 +1,804 @@
+{
+  "parameters": {
+    "revision": "D3",
+    "date": "2026-09-22",
+    "status": "nominal_fit_candidate_not_load_released",
+    "plate_LWT_mm": [
+      300,
+      300,
+      4
+    ],
+    "plate_bottom_top_z_mm": [
+      99,
+      103
+    ],
+    "frame_top_z_mm": 99,
+    "additional_support_rails": 0,
+    "under_deck_spacers": 0,
+    "grid_x_mm": [
+      -125,
+      -75,
+      -25,
+      25,
+      75,
+      125
+    ],
+    "grid_y_mm": [
+      -115,
+      -65,
+      -15,
+      35,
+      85,
+      135
+    ],
+    "grid_pitch_mm": 50,
+    "grid_diameter_mm": 4.5,
+    "grid_count": 36,
+    "grid_slotnut_rows_y_mm": [
+      -65,
+      135
+    ],
+    "grid_slotnut": "HNTT6-4",
+    "frame_holes_xy_mm": [
+      [
+        -105,
+        -135
+      ],
+      [
+        -105,
+        135
+      ],
+      [
+        0,
+        -135
+      ],
+      [
+        0,
+        135
+      ],
+      [
+        105,
+        -135
+      ],
+      [
+        105,
+        135
+      ]
+    ],
+    "frame_hole_diameter_mm": 6.6,
+    "stop_holes_xy_mm": [
+      [
+        -109.5,
+        -39
+      ],
+      [
+        -109.5,
+        -11
+      ],
+      [
+        109.5,
+        -39
+      ],
+      [
+        109.5,
+        -11
+      ],
+      [
+        -14,
+        -109.5
+      ],
+      [
+        -14,
+        109.5
+      ],
+      [
+        14,
+        -109.5
+      ],
+      [
+        14,
+        109.5
+      ]
+    ],
+    "strap_slots": [
+      {
+        "center_xy_mm": [
+          -140,
+          10
+        ],
+        "long_axis": "y"
+      },
+      {
+        "center_xy_mm": [
+          140,
+          10
+        ],
+        "long_axis": "y"
+      },
+      {
+        "center_xy_mm": [
+          60,
+          -105
+        ],
+        "long_axis": "x"
+      },
+      {
+        "center_xy_mm": [
+          60,
+          105
+        ],
+        "long_axis": "x"
+      }
+    ],
+    "slot_LWR_mm": [
+      30,
+      6,
+      3
+    ],
+    "frame_bolt": "M6x12 cap, direct on aluminum, no washer",
+    "frame_nut": "HNTT6-6",
+    "battery_bottom_top_z_mm": [
+      28,
+      93
+    ],
+    "battery_cradle_floor_z_mm": 25,
+    "normal_payload_target_kg": 10,
+    "structural_payload_target_kg": 15,
+    "static_factor_target": 2,
+    "metal_support_cutting": false,
+    "metal_support_drilling": false,
+    "loaded_use_released": false
+  },
+  "source_revision": "3417383",
+  "source_sha256": "a7c0fb55e04dc9eb03f0667bb53065c2f140aaec1dcf2bcdcc665466e48dc0ad",
+  "all_shapes_valid": true,
+  "physical_parts": 208,
+  "checked_physical_pairs": 21528,
+  "collisions": [],
+  "reference_collisions": {},
+  "grid_stations": [
+    {
+      "x": -125,
+      "y": -115,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": -65,
+      "mode": "M4 HNTT6-4 in existing frame slot",
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": -15,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": 35,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": 85,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": 135,
+      "mode": "M4 HNTT6-4 in existing frame slot",
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": -115,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": -65,
+      "mode": "M4 HNTT6-4 in existing frame slot",
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": -15,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": 35,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": 85,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": 135,
+      "mode": "M4 HNTT6-4 in existing frame slot",
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": -115,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": -65,
+      "mode": "M4 HNTT6-4 in existing frame slot",
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": -15,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": 35,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": 85,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": 135,
+      "mode": "M4 HNTT6-4 in existing frame slot",
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": -115,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": -65,
+      "mode": "M4 HNTT6-4 in existing frame slot",
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": -15,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": 35,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": 85,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": 135,
+      "mode": "M4 HNTT6-4 in existing frame slot",
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": -115,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": -65,
+      "mode": "M4 HNTT6-4 in existing frame slot",
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": -15,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": 35,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": 85,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": 135,
+      "mode": "M4 HNTT6-4 in existing frame slot",
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": -115,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": -65,
+      "mode": "M4 HNTT6-4 in existing frame slot",
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": -15,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": 35,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": 85,
+      "mode": "M4 hex nut directly on aluminum; preassemble with deck removed",
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": 135,
+      "mode": "M4 HNTT6-4 in existing frame slot",
+      "hits": []
+    }
+  ],
+  "driver_access": [
+    {
+      "part": "DeckBolt0",
+      "hits": []
+    },
+    {
+      "part": "DeckBolt1",
+      "hits": []
+    },
+    {
+      "part": "DeckBolt2",
+      "hits": []
+    },
+    {
+      "part": "DeckBolt3",
+      "hits": []
+    },
+    {
+      "part": "DeckBolt4",
+      "hits": []
+    },
+    {
+      "part": "DeckBolt5",
+      "hits": []
+    }
+  ],
+  "deck_removal_sweeps": [
+    {
+      "part": "AluminumDeckD3",
+      "hits": []
+    },
+    {
+      "part": "DeckBolt0",
+      "hits": []
+    },
+    {
+      "part": "DeckBolt1",
+      "hits": []
+    },
+    {
+      "part": "DeckBolt2",
+      "hits": []
+    },
+    {
+      "part": "DeckBolt3",
+      "hits": []
+    },
+    {
+      "part": "DeckBolt4",
+      "hits": []
+    },
+    {
+      "part": "DeckBolt5",
+      "hits": []
+    },
+    {
+      "part": "PrintedStopXN",
+      "hits": []
+    },
+    {
+      "part": "PrintedStopXP",
+      "hits": []
+    },
+    {
+      "part": "PrintedStopYN",
+      "hits": []
+    },
+    {
+      "part": "PrintedStopYP",
+      "hits": []
+    },
+    {
+      "part": "StopBolt0",
+      "hits": []
+    },
+    {
+      "part": "StopWasher0",
+      "hits": []
+    },
+    {
+      "part": "StopNut0",
+      "hits": []
+    },
+    {
+      "part": "StopBolt1",
+      "hits": []
+    },
+    {
+      "part": "StopWasher1",
+      "hits": []
+    },
+    {
+      "part": "StopNut1",
+      "hits": []
+    },
+    {
+      "part": "StopBolt2",
+      "hits": []
+    },
+    {
+      "part": "StopWasher2",
+      "hits": []
+    },
+    {
+      "part": "StopNut2",
+      "hits": []
+    },
+    {
+      "part": "StopBolt3",
+      "hits": []
+    },
+    {
+      "part": "StopWasher3",
+      "hits": []
+    },
+    {
+      "part": "StopNut3",
+      "hits": []
+    },
+    {
+      "part": "StopBolt4",
+      "hits": []
+    },
+    {
+      "part": "StopWasher4",
+      "hits": []
+    },
+    {
+      "part": "StopNut4",
+      "hits": []
+    },
+    {
+      "part": "StopBolt5",
+      "hits": []
+    },
+    {
+      "part": "StopWasher5",
+      "hits": []
+    },
+    {
+      "part": "StopNut5",
+      "hits": []
+    },
+    {
+      "part": "StopBolt6",
+      "hits": []
+    },
+    {
+      "part": "StopWasher6",
+      "hits": []
+    },
+    {
+      "part": "StopNut6",
+      "hits": []
+    },
+    {
+      "part": "StopBolt7",
+      "hits": []
+    },
+    {
+      "part": "StopWasher7",
+      "hits": []
+    },
+    {
+      "part": "StopNut7",
+      "hits": []
+    }
+  ],
+  "battery_lift_hits": [],
+  "changed_parts_caster_sweep_hits": [],
+  "tire_outward_service": [
+    {
+      "side": "L",
+      "hits": []
+    },
+    {
+      "side": "R",
+      "hits": []
+    }
+  ],
+  "removed_parts": [
+    "CargoDeckPlate",
+    "CargoDeckSupport0",
+    "CargoDeckSupport1",
+    "CargoDeckSupport2",
+    "CargoDeckSupport3",
+    "CargoDeckSupport4",
+    "CargoDeckSupport5",
+    "CargoStopXP",
+    "CargoStopXN",
+    "CargoStopYP",
+    "CargoStopYN",
+    "CargoDeckWasher0_0",
+    "CargoDeckWasher0_1",
+    "CargoDeckBolt0",
+    "SlotNut_CargoDeck0",
+    "CargoDeckWasher1_0",
+    "CargoDeckWasher1_1",
+    "CargoDeckBolt1",
+    "SlotNut_CargoDeck1",
+    "CargoDeckWasher2_0",
+    "CargoDeckWasher2_1",
+    "CargoDeckBolt2",
+    "SlotNut_CargoDeck2",
+    "CargoDeckWasher3_0",
+    "CargoDeckWasher3_1",
+    "CargoDeckBolt3",
+    "SlotNut_CargoDeck3",
+    "CargoDeckWasher4_0",
+    "CargoDeckWasher4_1",
+    "CargoDeckBolt4",
+    "SlotNut_CargoDeck4",
+    "CargoDeckWasher5_0",
+    "CargoDeckWasher5_1",
+    "CargoDeckBolt5",
+    "SlotNut_CargoDeck5",
+    "CargoStopBolt0",
+    "CargoStopWasher0",
+    "CargoStopNut0",
+    "CargoStopBolt1",
+    "CargoStopWasher1",
+    "CargoStopNut1",
+    "CargoStopBolt2",
+    "CargoStopWasher2",
+    "CargoStopNut2",
+    "CargoStopBolt3",
+    "CargoStopWasher3",
+    "CargoStopNut3",
+    "CargoStopBolt4",
+    "CargoStopWasher4",
+    "CargoStopNut4",
+    "CargoStopBolt5",
+    "CargoStopWasher5",
+    "CargoStopNut5",
+    "CargoStopBolt6",
+    "CargoStopWasher6",
+    "CargoStopNut6",
+    "CargoStopBolt7",
+    "CargoStopWasher7",
+    "CargoStopNut7",
+    "CargoFlatBottomReference",
+    "CargoStrapRouteX",
+    "CargoStrapRouteY",
+    "FixtureM3NutL0",
+    "FixtureM3NutL1",
+    "PrintedAdapterL",
+    "FixtureStackWasherAdapterL0_0",
+    "FixtureStackWasherAdapterL0_1",
+    "FixtureStackWasherAdapterL0_2",
+    "FixtureStackWasherAdapterL0_3",
+    "FixtureTopWasherAdapterL0",
+    "FixtureBottomWasherAdapterL0",
+    "FixtureM4NutAdapterL0",
+    "FixtureBoltAdapterL0",
+    "FixtureStackWasherAdapterL1_0",
+    "FixtureStackWasherAdapterL1_1",
+    "FixtureStackWasherAdapterL1_2",
+    "FixtureStackWasherAdapterL1_3",
+    "FixtureTopWasherAdapterL1",
+    "FixtureBottomWasherAdapterL1",
+    "FixtureM4NutAdapterL1",
+    "FixtureBoltAdapterL1",
+    "FixtureCableEnvelopeL",
+    "PrintedGuideL",
+    "FixtureStackWasherGuideL0_0",
+    "FixtureStackWasherGuideL0_1",
+    "FixtureStackWasherGuideL0_2",
+    "FixtureStackWasherGuideL0_3",
+    "FixtureTopWasherGuideL0",
+    "FixtureBottomWasherGuideL0",
+    "FixtureM4NutGuideL0",
+    "FixtureBoltGuideL0",
+    "FixtureStackWasherGuideL1_0",
+    "FixtureStackWasherGuideL1_1",
+    "FixtureStackWasherGuideL1_2",
+    "FixtureStackWasherGuideL1_3",
+    "FixtureTopWasherGuideL1",
+    "FixtureBottomWasherGuideL1",
+    "FixtureM4NutGuideL1",
+    "FixtureBoltGuideL1",
+    "FixtureM3NutR0",
+    "FixtureM3NutR1",
+    "PrintedAdapterR",
+    "FixtureStackWasherAdapterR0_0",
+    "FixtureStackWasherAdapterR0_1",
+    "FixtureStackWasherAdapterR0_2",
+    "FixtureStackWasherAdapterR0_3",
+    "FixtureTopWasherAdapterR0",
+    "FixtureBottomWasherAdapterR0",
+    "FixtureM4NutAdapterR0",
+    "FixtureBoltAdapterR0",
+    "FixtureStackWasherAdapterR1_0",
+    "FixtureStackWasherAdapterR1_1",
+    "FixtureStackWasherAdapterR1_2",
+    "FixtureStackWasherAdapterR1_3",
+    "FixtureTopWasherAdapterR1",
+    "FixtureBottomWasherAdapterR1",
+    "FixtureM4NutAdapterR1",
+    "FixtureBoltAdapterR1",
+    "FixtureCableEnvelopeR",
+    "PrintedGuideR",
+    "FixtureStackWasherGuideR0_0",
+    "FixtureStackWasherGuideR0_1",
+    "FixtureStackWasherGuideR0_2",
+    "FixtureStackWasherGuideR0_3",
+    "FixtureTopWasherGuideR0",
+    "FixtureBottomWasherGuideR0",
+    "FixtureM4NutGuideR0",
+    "FixtureBoltGuideR0",
+    "FixtureStackWasherGuideR1_0",
+    "FixtureStackWasherGuideR1_1",
+    "FixtureStackWasherGuideR1_2",
+    "FixtureStackWasherGuideR1_3",
+    "FixtureTopWasherGuideR1",
+    "FixtureBottomWasherGuideR1",
+    "FixtureM4NutGuideR1",
+    "FixtureBoltGuideR1"
+  ],
+  "changed_parts": [
+    "BatteryCradlePLA",
+    "BatteryReservedSpace",
+    "FrontElectronicsTrayPLA",
+    "FrontDeckBolt_0",
+    "LargeWasher_Front0",
+    "SlotNut_FrontDeck_0",
+    "FrontDeckBolt_1",
+    "LargeWasher_Front1",
+    "SlotNut_FrontDeck_1",
+    "FrontDeckBolt_2",
+    "LargeWasher_Front2",
+    "SlotNut_FrontDeck_2",
+    "FrontDeckBolt_3",
+    "LargeWasher_Front3",
+    "SlotNut_FrontDeck_3",
+    "ElectronicsTrayPLA",
+    "ElectronicsBolt_0",
+    "LargeWasher_Electronics0",
+    "SlotNut_Electronics_0",
+    "ElectronicsBolt_1",
+    "LargeWasher_Electronics1",
+    "SlotNut_Electronics_1",
+    "ElectronicsBolt_2",
+    "LargeWasher_Electronics2",
+    "SlotNut_Electronics_2",
+    "ElectronicsBolt_3",
+    "LargeWasher_Electronics3",
+    "SlotNut_Electronics_3"
+  ],
+  "added_parts": [
+    "AluminumDeckD3",
+    "DeckBolt0",
+    "DeckSlotNut0",
+    "DeckBolt1",
+    "DeckSlotNut1",
+    "DeckBolt2",
+    "DeckSlotNut2",
+    "DeckBolt3",
+    "DeckSlotNut3",
+    "DeckBolt4",
+    "DeckSlotNut4",
+    "DeckBolt5",
+    "DeckSlotNut5",
+    "PrintedStopXN",
+    "PrintedStopXP",
+    "PrintedStopYN",
+    "PrintedStopYP",
+    "StopBolt0",
+    "StopWasher0",
+    "StopNut0",
+    "StopBolt1",
+    "StopWasher1",
+    "StopNut1",
+    "StopBolt2",
+    "StopWasher2",
+    "StopNut2",
+    "StopBolt3",
+    "StopWasher3",
+    "StopNut3",
+    "StopBolt4",
+    "StopWasher4",
+    "StopNut4",
+    "StopBolt5",
+    "StopWasher5",
+    "StopNut5",
+    "StopBolt6",
+    "StopWasher6",
+    "StopNut6",
+    "StopBolt7",
+    "StopWasher7",
+    "StopNut7",
+    "CargoEnvelopeD3",
+    "StrapRouteX",
+    "StrapRouteY",
+    "BatteryConnectorEnvelope"
+  ],
+  "clearances_mm": {
+    "frame_to_plate": 0,
+    "plate_to_battery": 6,
+    "battery_to_X_belt": 3.5,
+    "Y_belt_to_inner_rail": 1.5,
+    "plate_to_front_and_rear_trays": 5,
+    "cradle_ground": 25,
+    "grid_nut_flat_to_adjacent_frame": 1.5,
+    "grid_screw_tip_to_battery": 1.8
+  },
+  "mass": {
+    "source_D2_kg": 8.51436888918395,
+    "removed_kg": 1.3481774798953068,
+    "added_kg": 1.1093397346270386,
+    "changed_kg": -0.02916480000000012,
+    "estimated_base_kg": 8.246366343915682,
+    "remaining_to_10kg_kg": 1.7536336560843182,
+    "deck_kg": 0.9547830853585014,
+    "total_solid_PLA_kg": 0.2585935953224441,
+    "electrical_allowance_included_kg": 2.1,
+    "straps_allowance_carried_once_kg": 0.28,
+    "actually_weighed": false
+  },
+  "limitations": [
+    "Nominal CAD fit, not tolerance or loaded-deflection proof",
+    "Frame profiles, nuts and caster are nominal reconstructed shapes; verify received dimensions",
+    "Free grid nuts have1.5mm nominal side clearance; no underside grid washer in the fit example; verify actual fastener stacks",
+    "M6 direct head seating, actual slot depth and bolt projection7.5..8.0mm need received-part inspection",
+    "M4 accessory bolt length must be chosen for actual accessory thickness; sample is3mm plate+0.8top washer, M4x12 free / M4x14 over frame, no underside washer",
+    "Belt route, battery restraints, buckle/edge guards and actual electrical harness remain physical qualification items",
+    "Vehicle15kg/SF2 and loaded operation are not certified"
+  ]
+}

@@ -1,0 +1,295 @@
+{
+  "revision": "D3",
+  "physical_CAD_validation": "validation.json",
+  "quote": "quote-evidence/D3-observed.json",
+  "actual_FreeCAD_GUI_screenshots": true,
+  "loaded_operation_released": false,
+  "files": [
+    {
+      "file": "AMR01_AluminumDirect_D3.FCStd",
+      "bytes": 1348835,
+      "sha256": "757b8b00b27caff1c256ce95f3f8b53e6ffd64a0b764ff895648b9f5dc281c47"
+    },
+    {
+      "file": "AMR01_AluminumDirect_D3.step",
+      "bytes": 6576540,
+      "sha256": "98d4cbb74e7e93a81f6f4c849ddf5ce3584997ec73a783930f2482baf928b3f6"
+    },
+    {
+      "file": "AMR_GridDeck_C45_D3.FCStd",
+      "bytes": 14348,
+      "sha256": "c6f1789317dd159dee2d37b81036e8e5c40481307e35df4100761c212c34bea4"
+    },
+    {
+      "file": "AMR_GridDeck_C45_D3.pdf",
+      "bytes": 6679,
+      "sha256": "e1428bb6273c0ab40b53fd2bbdb0904d620a0ff47ee51243ff735e6c8cf034bb"
+    },
+    {
+      "file": "AMR_GridDeck_C45_D3.step",
+      "bytes": 108273,
+      "sha256": "c38862f7ac33c2f30bba198fce54ff1bcb22bd75820bd994dd8b4a5e7f5c0d4c"
+    },
+    {
+      "file": "AMR_GridDeck_C45_D3.zip",
+      "bytes": 26987,
+      "sha256": "2e7b8d291b0528776a28d92ed8c3a83d96953e0d6f8243524bfc84f0e41e94ed"
+    },
+    {
+      "file": "BOM.csv",
+      "bytes": 13470,
+      "sha256": "80c960be673991162bd3cc8efc1f7e9a2a60d81be5690630ec12387e3cede187"
+    },
+    {
+      "file": "BatteryCradlePLA.stl",
+      "bytes": 47084,
+      "sha256": "4bca1a9c2238303c32a909aa8a8636ab5841d472c049e11f29be7bb9498961bc"
+    },
+    {
+      "file": "D3-print-files.zip",
+      "bytes": 42922,
+      "sha256": "1bded02c584ec3b75d03b28456296396a6a20aa0149216b1cb8f4049f081b8bc"
+    },
+    {
+      "file": "ElectronicsTrayPLA.stl",
+      "bytes": 43084,
+      "sha256": "cccde9119867e7e53da07d64678ecfea1f4a9ac696e3bd67c485fc42223e84de"
+    },
+    {
+      "file": "FrontElectronicsTrayPLA.stl",
+      "bytes": 43084,
+      "sha256": "5f11a1c96fae56c22d7909bb6d6d894679d3b5c80d09f412203a844cccaa985a"
+    },
+    {
+      "file": "PrintedStopXN.stl",
+      "bytes": 21484,
+      "sha256": "cd006a55c410dbbd67363afc5b3f99bf272233af9b20dae8da64726743e6f495"
+    },
+    {
+      "file": "PrintedStopXP.stl",
+      "bytes": 21484,
+      "sha256": "cd006a55c410dbbd67363afc5b3f99bf272233af9b20dae8da64726743e6f495"
+    },
+    {
+      "file": "PrintedStopYN.stl",
+      "bytes": 21484,
+      "sha256": "8c2ca453a009985d83a387c09cb786c5e47f347a5d06eb929e81e357e26fba7d"
+    },
+    {
+      "file": "PrintedStopYP.stl",
+      "bytes": 21484,
+      "sha256": "8c2ca453a009985d83a387c09cb786c5e47f347a5d06eb929e81e357e26fba7d"
+    },
+    {
+      "file": "README.ja.md",
+      "bytes": 10142,
+      "sha256": "63674df7c7f2dd0f215cedaab93774cf0af5d55a51011984368cbc7da14f7b7c"
+    },
+    {
+      "file": "analysis_parameters.json",
+      "bytes": 4136,
+      "sha256": "34ab1045cc43e969b8e64097fc5db6f28aaf2b81d407be5daf5d319188dbb821"
+    },
+    {
+      "file": "analyze_plate.py",
+      "bytes": 10269,
+      "sha256": "730b016570f117acd64facbd772651db20427e9318f7bde7088d8d6a76a48ba0"
+    },
+    {
+      "file": "build_bom.py",
+      "bytes": 7092,
+      "sha256": "f0b9cd4abcb147362f5138c7aa099fbf57a3a683e6824a14a7d0de8e10732409"
+    },
+    {
+      "file": "build_d3.py",
+      "bytes": 17518,
+      "sha256": "d57cf5ce9783335462b081d11dd90cc34c27568450971de168154ff227faf8df"
+    },
+    {
+      "file": "cad-screen-direct-support.png",
+      "bytes": 196813,
+      "sha256": "32cfe1d72b3b27571bb0a389514e4c19cd3b154bf62957b1375bb6f231a9064d"
+    },
+    {
+      "file": "cad-screen-grid-top.png",
+      "bytes": 170931,
+      "sha256": "613ede0ee2d773b62e2fc9825e9ded7e8ef3520cc573a754c9114beeadb9e196"
+    },
+    {
+      "file": "cad-screen-isometric.png",
+      "bytes": 194524,
+      "sha256": "f45ee3e9f329d8bba1b7dce143064217693b6d50219e7c1b1920f7428d09a54c"
+    },
+    {
+      "file": "cad-screen-low-profile.png",
+      "bytes": 161065,
+      "sha256": "3de9d6965894dfc440afc3eb7f3ac98c4adc2cd32e3f2f3644a2b88d0335798e"
+    },
+    {
+      "file": "cad-screen-routing.png",
+      "bytes": 210994,
+      "sha256": "b7c1d215e926b85f8bade350a9b37ad063bf8c4ace331a677461ad5d6b626777"
+    },
+    {
+      "file": "capture_screens.py",
+      "bytes": 3114,
+      "sha256": "33d56d9ce7a4bb7feed8140b94e06c1ee279e5f032111afa768619a96237d127"
+    },
+    {
+      "file": "cost_summary.json",
+      "bytes": 1469,
+      "sha256": "9a77097d9aabf9ccc6c84402851984a2250dcc012f33e47484ffb6a886e9b193"
+    },
+    {
+      "file": "drawing_manifest.json",
+      "bytes": 4381,
+      "sha256": "46721b3371762149d87e50410f79c67bd9d25f2d9853378b1068b0da461e16d8"
+    },
+    {
+      "file": "fea/coarse/deflection.png",
+      "bytes": 375736,
+      "sha256": "42a9050414d3b0f75b81208be65ad85f956b9aaef48aee179ac5ae36de9915ec"
+    },
+    {
+      "file": "fea/coarse/input_parameters.json",
+      "bytes": 4136,
+      "sha256": "34ab1045cc43e969b8e64097fc5db6f28aaf2b81d407be5daf5d319188dbb821"
+    },
+    {
+      "file": "fea/coarse/model.json",
+      "bytes": 643,
+      "sha256": "c4c3b70cb217a73ad21ddd4959ed64efc677c583c12b831f65bf9b83eb47cafb"
+    },
+    {
+      "file": "fea/coarse/result.json",
+      "bytes": 1686,
+      "sha256": "ebc88dc4df8ae1ae2d8cd0e4b32b23fc10345fb41bb6ab4c02e9f070f280b0e7"
+    },
+    {
+      "file": "fea/coarse/solver-input-output.zip",
+      "bytes": 2297965,
+      "sha256": "88d94736c6aa8856e57daf9069893b4666117b0f85793c9b5576d7c655200b55"
+    },
+    {
+      "file": "fea/fine/deflection.png",
+      "bytes": 416221,
+      "sha256": "bac54f9211167ccbd12f4776e31f7849fc54666cf05b6048b5aad9eac857c45f"
+    },
+    {
+      "file": "fea/fine/input_parameters.json",
+      "bytes": 4136,
+      "sha256": "34ab1045cc43e969b8e64097fc5db6f28aaf2b81d407be5daf5d319188dbb821"
+    },
+    {
+      "file": "fea/fine/model.json",
+      "bytes": 644,
+      "sha256": "8357c3d80a818ddd66d02a105ac111d6f9b32e8be5c8386487b07a17b4079c67"
+    },
+    {
+      "file": "fea/fine/result.json",
+      "bytes": 1699,
+      "sha256": "a1d77bd1134147cfe5d048ae55b172c2338258f13637fe4c91f0d86e3676d6fd"
+    },
+    {
+      "file": "fea/fine/solver-input-output.zip",
+      "bytes": 7946156,
+      "sha256": "25ec8f8a9f2f35e43bea815def34a56f15bbb0a98d62d349aea4a73cd65b940d"
+    },
+    {
+      "file": "fea/summary.json",
+      "bytes": 4027,
+      "sha256": "df1788ef397e691d8102846286ad1dbd4c230424573725126d6c71eee6b3a8f6"
+    },
+    {
+      "file": "geometry.json",
+      "bytes": 2490,
+      "sha256": "d3fd3e442db69630fd1b0db32cde9c01beebac115612d7dd340ac3a3f20b0c65"
+    },
+    {
+      "file": "jpy_conversion.json",
+      "bytes": 1695,
+      "sha256": "4e77131149d155c045abc60aa7e3c6cb53d0de7abdabba0df33058832c56561a"
+    },
+    {
+      "file": "make_drawings.py",
+      "bytes": 5572,
+      "sha256": "d215291d1778a562124246bde495ca1621c35ceb568cbdef59fbf40f182746d1"
+    },
+    {
+      "file": "parameters.json",
+      "bytes": 1985,
+      "sha256": "53a6987955966966b553a9213463ec9cf1eb05d58a1198b2c2e5ff96f97b97c5"
+    },
+    {
+      "file": "print_manifest.json",
+      "bytes": 1028,
+      "sha256": "e0e3ad546bc6ae844b46d195de05081e8ce124e0395756f82ff9e3704bb96eef"
+    },
+    {
+      "file": "quote-evidence/C45-economic.png",
+      "bytes": 275747,
+      "sha256": "3ff28c72a5d62e533573deca36978856d317c8b159ff57ec7a36deaabc8e98b1"
+    },
+    {
+      "file": "quote-evidence/C45-file-association.json",
+      "bytes": 355,
+      "sha256": "e80991600f697e73d323aecc352fa588b44ada30b6c22df89ebe2830aab90f0e"
+    },
+    {
+      "file": "quote-evidence/C45-settings-notes.png",
+      "bytes": 235659,
+      "sha256": "9338b6d9c8ebb0721aff4aca2b5a226766e73421c66b744b72b4f92fd5debc64"
+    },
+    {
+      "file": "quote-evidence/C45-settings.png",
+      "bytes": 185179,
+      "sha256": "afdbe53c7d87f9b14a0c3e126be6c1e8754d21850a007ddc19b5e9dd4da83386"
+    },
+    {
+      "file": "quote-evidence/C45-shipping.png",
+      "bytes": 194047,
+      "sha256": "bb833025c25f2ff3fc302df72657fda78da1fbd2c85a506e8a5c0467f2011bf1"
+    },
+    {
+      "file": "quote-evidence/C45-standard.png",
+      "bytes": 208778,
+      "sha256": "66b350fbcadc5bef0716ed2929787fda74aa0d161634bb102058561368fb7f13"
+    },
+    {
+      "file": "quote-evidence/D3-observed.json",
+      "bytes": 1929,
+      "sha256": "ba8e46bad916edb579b29e73510a9f460ebb5447a906a1b8805387b4672b7c17"
+    },
+    {
+      "file": "saved_artifact_validation.json",
+      "bytes": 644,
+      "sha256": "36a9d3206454893c86f4c4cbb84e4d02a180113fffb8998b5c34ed5c10518843"
+    },
+    {
+      "file": "validation.json",
+      "bytes": 16978,
+      "sha256": "f8f57f0730ff111fb69695b49d538807df5bec08fae62c424e5dabf8bd21f75c"
+    },
+    {
+      "file": "viewport-direct-support.png",
+      "bytes": 52140,
+      "sha256": "f80c275289fbe703bc9a32f9ccab18475c1deeba466421d40fba3f0186db0d23"
+    },
+    {
+      "file": "viewport-isometric.png",
+      "bytes": 51069,
+      "sha256": "a632d4dc694ee006a4007c27c7bb723364bed5c1cf0a4768c077995821212999"
+    },
+    {
+      "file": "viewport-low-profile.png",
+      "bytes": 15861,
+      "sha256": "cb0ef8eafd9eac4e7e9756a7df570ba8594f428cd49543e790d8acb0b283c9b5"
+    },
+    {
+      "file": "viewport-routing.png",
+      "bytes": 69727,
+      "sha256": "90b1b887aee48c2c2f4dc9edc63ff85b0bc19f19a3a803499044d2e0cb492478"
+    }
+  ],
+  "saved_artifacts_validation": "saved_artifact_validation.json"
+}

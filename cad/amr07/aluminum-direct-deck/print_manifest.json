@@ -1,0 +1,65 @@
+[
+  {
+    "file": "BatteryCradlePLA.stl",
+    "size_mm": [
+      130.0,
+      160.0,
+      44.0
+    ],
+    "solid_mass_g": 131.7532350310878
+  },
+  {
+    "file": "FrontElectronicsTrayPLA.stl",
+    "size_mm": [
+      75.0,
+      170.0,
+      4.400000000000006
+    ],
+    "solid_mass_g": 41.09306101865274
+  },
+  {
+    "file": "ElectronicsTrayPLA.stl",
+    "size_mm": [
+      75.0,
+      180.0,
+      4.400000000000006
+    ],
+    "solid_mass_g": 43.47386101865275
+  },
+  {
+    "file": "PrintedStopXN.stl",
+    "size_mm": [
+      15.0,
+      40.0,
+      15.0
+    ],
+    "solid_mass_g": 10.568359563512702
+  },
+  {
+    "file": "PrintedStopXP.stl",
+    "size_mm": [
+      15.0,
+      40.0,
+      15.0
+    ],
+    "solid_mass_g": 10.568359563512702
+  },
+  {
+    "file": "PrintedStopYN.stl",
+    "size_mm": [
+      40.0,
+      15.0,
+      15.0
+    ],
+    "solid_mass_g": 10.568359563512702
+  },
+  {
+    "file": "PrintedStopYP.stl",
+    "size_mm": [
+      40.0,
+      15.0,
+      15.0
+    ],
+    "solid_mass_g": 10.568359563512702
+  }
+]

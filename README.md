@@ -1,38 +1,37 @@
 # amr-pj — 家庭向け小型AMR / 将来MoMa
 
-最新の設計変更は **P1：分割PLA荷台を、切断済み3030と既製ブラケットで支持する構成**。中実角棒の切断・穴あけを廃止しました。300mm材4本パックのうち、下段2本・上段2本を使用します。
+現行案は **D3：一枚アルミ天板を、元の下段3030へ直接固定する構成**。分割PLA天板から戻し、嵩上げ用フレーム・天板下スペーサーを取り除きました。天板上面は床上103mmです。
 
-**P1の継ぎ目には支持・連結の修正が必要です。** 各板のM6固定はありますが、板同士は未連結で、最長132.3mmの片持ち部分があります。[継ぎ目レビュー](cad/amr07/printed-deck-frame/SEAM_REVIEW.ja.md)。現時点のCAD・STLは修正前です。
+M0601C_111二輪、100.7mmタイヤ、TYG-50キャスター、下段460×300mmの骨格を継承。通常積載10kg、構造検証15kg・静的安全率2、電池・電装込み車体10kg以下を設計目標とします。運用範囲は平坦な屋内床、追加機械ブレーキなし。
 
-M0601C_111二輪、100.7mmタイヤ、TYG-50キャスター、下段460×300mmの骨格を継承。通常積載10kg、構造検証15kg・静的安全率2、電池・電装込み車体10kg以下を設計目標とします。追加機械ブレーキは採用せず、運用範囲は平坦な屋内床です。
-
-| P1の変更と確認 | 内容 |
+| D3の変更と確認 | 内容 |
 |---|---|
-| 荷台支持 | 上段3030×300mmを2本、HBLFSN6を8個追加。溝ナットとM6で固定 |
-| PLA荷台 | 300×300×12mm、4分割、50mmピッチ・φ4.5の36穴 |
-| 荷台高さ | 床上141mm。旧PLA P0の124mmから17mm上昇 |
-| 車体重量 | 推計9.419kg、10kgまで0.581kg。電装2.10kg枠込み、未実測 |
-| 干渉 | 273部品・37,128ペアで公称体積干渉なし。36穴、工具、荷台・電池抜出しも確認 |
-| 製作 | 荷台支持の金属追加工なし。前後電装トレイと4個のストッパも印刷 |
-| 費用 | P1専用BOMに更新。Amazonの実表示価格・購入パックと未確定項目を区別 |
+| 天板 | 6061-T6・300×300×4mmの一枚板、継ぎ目なし |
+| 高さ・固定 | 床上103mm。下段へM6と溝ナット6組で直付け。P1より38mm低い |
+| 拡張性 | 50mm格子・φ4.5の36通し穴。24穴は裏ナット、12穴はフレーム溝のM4ナットを使用 |
+| 干渉修正 | 電池受けを7mm下げ、前後トレイ・穴・ベルト経路を修正。地上高25mmを維持 |
+| 検査 | 208部品・21,528ペアで公称干渉なし。36穴、工具、天板・電池・タイヤの取外しも確認 |
+| 車体重量 | 推計8.246kg、10kgまで1.754kg。電池・電装2.10kg枠込み、未実測 |
+| 天板の再見積 | 修正版STEP/PDFで加工28.67＋日本向けUPS9.98＝38.65 USD、参考約6,080円 |
+| 全車の途中小計 | 46,212円＋120.90 USD＋未確定分。既知部分はP1より参考約1,784円減 |
 
-**P1は組付け確認済みの試作設計です。PLAの強度・クリープ・実機の安全率2と停止性能は未確認です。** 旧D2アルミ荷台の解析結果をP1の耐荷重として流用しません。荷物CG上限220mm、車体CG上限目標110mmは実機で確認します。
+![D3直付けアルミ天板のFreeCAD画面](cad/amr07/aluminum-direct-deck/cad-screen-isometric.png)
 
-![格子穴付き上板を載せたP1のFreeCAD画面](cad/amr07/printed-deck-frame/cad-screen-isometric.png)
+[側面から見た高さ](cad/amr07/aluminum-direct-deck/cad-screen-low-profile.png) / [格子穴の真上画像](cad/amr07/aluminum-direct-deck/cad-screen-grid-top.png)。画像は組立CADの実画面です。
 
-拡張用の格子板は4分割PLAで組付け済み。50mmピッチ・φ4.5の36穴と、M4用の裏ナットポケットを備えます。[真上から見た格子穴](cad/amr07/printed-deck-frame/cad-screen-grid-top.png)。締結説明に使う骨格だけの画像は、支持部分を見せるため一時的に上板を非表示にしています。
+CAD検査は公称形状による確認で、実機の耐荷重・安全率2を保証するものではありません。自動加工見積は担当者審査前、円表示はECB2026-09-21による参考換算で、税・決済費用などは別です。
 
-- [P1の設計理由・締結拡大画像・費用・検査](cad/amr07/printed-deck-frame/README.ja.md)
-- [P1組立FCStd](cad/amr07/printed-deck-frame/AMR01_PrintedDeck_P1.FCStd) / [STEP](cad/amr07/printed-deck-frame/AMR01_PrintedDeck_P1.step)
-- [P1全車BOM CSV](cad/amr07/printed-deck-frame/BOM.csv) / [途中小計と未確定分](cad/amr07/printed-deck-frame/cost_summary.json)
-- [P1印刷STL一覧](cad/amr07/printed-deck-frame/print_manifest.json)
-- [設計要件](cad/amr07/requirements.json) / [共通の駆動・取付金具設計とD2履歴](cad/amr07/README.ja.md)
-- [モーター金具の実加工見積](cad/amr07/MACHINING_QUOTE.ja.md) / [金具STEP](cad/amr07/M0601C_mount_A6_R1.step)
-- [キャスターのAmazon／コーナン調達](cad/amr07/CASTER_PROCUREMENT.ja.md)
+- [D3の設計理由・干渉修正・締結・費用](cad/amr07/aluminum-direct-deck/README.ja.md)
+- [現行組立FCStd](cad/amr07/aluminum-direct-deck/AMR01_AluminumDirect_D3.FCStd) / [STEP](cad/amr07/aluminum-direct-deck/AMR01_AluminumDirect_D3.step)
+- [現行BOM CSV](cad/amr07/aluminum-direct-deck/BOM.csv) / [小計と未確定項目](cad/amr07/aluminum-direct-deck/cost_summary.json)
+- [D3加工用STEP](cad/amr07/aluminum-direct-deck/AMR_GridDeck_C45_D3.step) / [図面PDF](cad/amr07/aluminum-direct-deck/AMR_GridDeck_C45_D3.pdf) / [実見積画面](cad/amr07/aluminum-direct-deck/quote-evidence/C45-economic.png)
+- [設計要件](cad/amr07/requirements.json) / [検査・質量内訳](cad/amr07/aluminum-direct-deck/validation.json)
+- [電池受け・トレイ・ストッパの印刷7部品](cad/amr07/aluminum-direct-deck/D3-print-files.zip)
+- [モーター金具の実加工見積](cad/amr07/MACHINING_QUOTE.ja.md) / [キャスター調達](cad/amr07/CASTER_PROCUREMENT.ja.md)
 - [電源・停止・回生と試験仕様](cad/amr07/ELECTRICAL_AND_VALIDATION.ja.md)
-- [旧アルミD2の実見積・解析記録](cad/amr07/aluminum-grid-deck/README.ja.md) / [不採用の旧PLA P0](cad/amr07/printed-deck-concept/README.ja.md)
+- [旧P1と継ぎ目レビュー](cad/amr07/printed-deck-frame/README.ja.md) / [旧D2の記録](cad/amr07/aluminum-grid-deck/README.ja.md)
 
-P1は `cad/amr07/printed-deck-frame/build_p1.py` をFreeCAD Pythonで実行して再生成します。続いて `python3 cad/amr07/printed-deck-frame/build_bom.py` で部品表を作成します。以下の既存コマンドは駆動計算や旧D2等の履歴用です。
+D3の再生成は `cad/amr07/aluminum-direct-deck/build_d3.py` をFreeCAD Pythonで実行し、`python3 cad/amr07/aluminum-direct-deck/build_bom.py` でBOMを更新します。以下は共通駆動計算と旧D2の履歴用コマンドです。
 
 ## 再計算
 

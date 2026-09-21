@@ -1,0 +1,40 @@
+{
+  "purpose": "D3 actual quote, historical ECB2026-09-21 reference, not payment rate",
+  "quote_source_sha256": "ba8e46bad916edb579b29e73510a9f460ebb5447a906a1b8805387b4672b7c17",
+  "rate": {
+    "provider": "European Central Bank",
+    "source_url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
+    "USD_reference_page": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+    "JPY_reference_page": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-jpy.en.html",
+    "reference_date": "2026-09-21",
+    "USD_per_EUR": "1.1490",
+    "JPY_per_EUR": "180.70",
+    "JPY_per_USD_calculated": "157.2671888598781549173194082",
+    "formula": "JPY_per_EUR / USD_per_EUR",
+    "downloaded_XML_sha256": "4ba0c6fbd667ebea8c8acf25b1a2e446ea2d0df6add9d5f266d5f17cd809eb8c",
+    "source_type": "Daily reference rate; not card, PayPal or supplier guaranteed settlement rate",
+    "saved_XML": "../aluminum-grid-deck/quote-evidence/ecb-2026-09-21.xml"
+  },
+  "records": [
+    {
+      "speed": "standard",
+      "manufacturing_label": "標準: 5 日",
+      "parts_lot_USD": 30.69,
+      "shipping_USD": 9.98,
+      "total_USD": 40.67,
+      "total_JPY_reference": 6396.056570931245,
+      "total_JPY_rounded_to_10": 6400
+    },
+    {
+      "speed": "economic",
+      "manufacturing_label": "経済的: 10 日",
+      "parts_lot_USD": 28.67,
+      "shipping_USD": 9.98,
+      "total_USD": 38.65,
+      "total_JPY_reference": 6078.37684943429,
+      "total_JPY_rounded_to_10": 6080
+    }
+  ],
+  "fees_import_taxes_included": false,
+  "settlement_JPY": null
+}

@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-22",
+  "scope": "D3 full vehicle running subtotal; includes inherited budget allowances, not a complete quote",
+  "subtotal": {
+    "JPY": 46212.0,
+    "USD": 120.9
+  },
+  "unpriced_rows": [
+    "S04",
+    "S07",
+    "D3_M6",
+    "D3_STOP_BOLTS",
+    "D3_STOP_NUTS",
+    "D3_STOP_WASHERS"
+  ],
+  "quoted_deck_USD": {
+    "speed": "economic",
+    "manufacturing_label": "経済的: 10 日",
+    "parts_lot_USD": 28.67,
+    "shipping_USD": 9.98,
+    "total_USD": 38.65
+  },
+  "quoted_deck_JPY_reference": 6080,
+  "full_running_subtotal_JPY_reference": 65225.60313315927,
+  "known_subtotal_delta_vs_P1_JPY_reference": -1783.6231505657083,
+  "frame300_used": 2,
+  "frame300_purchased": 4,
+  "upper_rails": 0,
+  "deck_spacers": 0,
+  "optional_grid_hardware": {
+    "slotnut": "HNTT6-4",
+    "maximum_simultaneous_qty": 12,
+    "installed_in_base_CAD": false,
+    "price_verified": false,
+    "personal_procurement_route_verified": false,
+    "note": "拡張機器用。フレーム上の2列で使用。先入れはフレーム組立前に準備、又は横材を外して追加。全36穴で同時使用する必要はない。追加時は費用・質量に加算。"
+  },
+  "inherited_price_evidence": "../printed-deck-frame/cost_summary.json",
+  "additional_unknowns": "電池・電装の未選定部品、輸入/決済/送料差額、加工未見積の既存下段板、労務等は親BOMの留保を継承。",
+  "complete_purchase_total": false
+}

@@ -1,0 +1,17 @@
+{
+  "saved_FCStd_and_plate_STEP_match": true,
+  "plate_symmetric_difference_tolerance_mm3": 1e-05,
+  "assembly_STEP_valid": true,
+  "physical_parts": 208,
+  "solids": 212,
+  "assembly_volume_relative_error": 4.193931592487836e-08,
+  "assembly_volume_relative_tolerance": 1e-06,
+  "volume_tolerance_basis": "One part per million for STEP numerical translation; measured difference0.103mm3 in2.45million mm3. No missing solids.",
+  "deck_bottom_top_mm": [
+    99.0,
+    103.0
+  ],
+  "no_upper_rails_or_sleeves": true,
+  "cradle_ground_clearance_mm": 25,
+  "quote_STEP_sha256": "c38862f7ac33c2f30bba198fce54ff1bcb22bd75820bd994dd8b4a5e7f5c0d4c"
+}
