@@ -1,0 +1,87 @@
+{
+  "revision": "P0",
+  "status": "fit_and_static_comparison_candidate_not_load_qualified",
+  "date": "2026-09-21",
+  "plate_size_mm": 300,
+  "plate_thickness_mm": 10,
+  "plate_bottom_z_mm": 114,
+  "seam_xy_mm": [
+    37.5,
+    37.5
+  ],
+  "seam_gap_mm": 0.4,
+  "grid_pitch_mm": 50,
+  "grid_axis_mm": [
+    -125,
+    -75,
+    -25,
+    25,
+    75,
+    125
+  ],
+  "grid_hole_diameter_mm": 4.5,
+  "grid_fastener": "M4 screw with optional underside captured hex nut; select screw tip not below plate bottom",
+  "nut_pocket_across_flats_mm": 7.3,
+  "nut_pocket_depth_mm": 3.4,
+  "nut_fit_status": "Nominal M4 envelope plus print-fit allowance; actual nuts and printer coupon must be checked",
+  "support_y_mm": [
+    -135,
+    -65,
+    65,
+    135
+  ],
+  "attachment_x_mm": [
+    -120,
+    0,
+    120
+  ],
+  "attachment_recess_floor_z_mm": 118,
+  "attachment_counterbore_diameter_mm": 14,
+  "compression_sleeve_OD_ID_L_mm": [
+    10,
+    6.6,
+    4
+  ],
+  "compression_sleeves_qty": 10,
+  "sleeve_selection_status": "Unselected purchase/manufacture; dimensional acceptance and preload need checking. Sleeve must carry bolt preload into metal support, not crush PLA.",
+  "material": "User PLA unconfirmed; Bambu PLA Basic used only for comparison",
+  "material_source": "https://store.bblcdn.com/s7/default/b189de92249a4b9ebed28b8ea1f080f0/Bambu_PLA_Basic_Technical_Data_Sheet.pdf",
+  "density_g_cm3": 1.24,
+  "comparison_bending_modulus_MPa": 2750,
+  "lower_stiffness_sensitivity_MPa": 2000,
+  "manufacturer_specimens": "100% infill, annealed/dried55C8h. Typical sample results, not allowables for untested user prints.",
+  "printer_build_volume_mm": [
+    256,
+    256,
+    256
+  ],
+  "printer_source": "https://store.bblcdn.com/7032c40b1ca64c70bcb3239d46cc72aa.pdf",
+  "solid_geometry_cost_rate_JPY_g": 2,
+  "cost_rate_basis": "Existing project PLA allowance600JPY/300g; not newly observed retail cost; excludes failed prints, purge, electricity and labor",
+  "additional_support_stock_qty": 1,
+  "additional_support_stock_price_JPY_reference": 1507,
+  "support_stock_reference": "https://store.shopping.yahoo.co.jp/akibaoo/4977720061511.html",
+  "purchase_scope": "Comparison only; do not add to existing A6 BOM. Alternative replaces DECK_plate and removes old front/rear PLA trays and their fasteners.",
+  "removed_feature_prefixes": [
+    "ElectronicsTrayPLA",
+    "FrontElectronicsTrayPLA",
+    "ElectronicsBolt_",
+    "FrontDeckBolt_",
+    "Washer_ElectronicsBolt_",
+    "Washer_FrontDeckBolt_",
+    "SlotNut_Electronics_",
+    "SlotNut_FrontDeck_",
+    "LargeWasher_Electronics",
+    "LargeWasher_Front"
+  ],
+  "normal_payload_kg": 10,
+  "structural_payload_kg": 15,
+  "static_factor_target": 2,
+  "loaded_use_released": false,
+  "inner_attachment_x_mm": [
+    -115,
+    115
+  ],
+  "strap_relief_channels": "PLA underside: 26x32x2mm at x0,y+-65; route Y raised locally over support bars, no extra metal notches",
+  "thickness_choice": "10mm solid first candidate to reduce short-term deflection; not a creep/SF2 approval. Compare8mm and10mm in screening.json."
+}

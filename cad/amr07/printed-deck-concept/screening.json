@@ -1,0 +1,115 @@
+{
+  "method": "Independent split-panel Euler-Bernoulli overhang strip, simple supports with bolt hold-down; sampling0.094mm or finer. No joint stiffness claim.",
+  "source": "https://store.bblcdn.com/s7/default/b189de92249a4b9ebed28b8ea1f080f0/Bambu_PLA_Basic_Technical_Data_Sheet.pdf",
+  "comparison_only": true,
+  "same_geometry_Al_to_PLA_deflection_ratio": 25.454545454545453,
+  "PLA_E_2000_status": "Engineering sensitivity, not a measured lower material bound",
+  "manufacturer_conditions": "100% infill, annealed/dried55C8h. Typical sample results, not allowables for untested user prints.",
+  "cases": [
+    {
+      "thickness_mm": 8,
+      "comparison_E_MPa": 2750,
+      "cargo_kg": 10,
+      "net_width_mm": 86.0120582094944,
+      "outer_support_reaction_N": -43.896088929164904,
+      "inner_support_reaction_N": 135.2103898219299,
+      "factored_nominal_bending_stress_MPa": 7.581253830548237,
+      "short_term_service_deflection_mm": 1.6711143987449855,
+      "conditional_on_hold_down_fasteners": true,
+      "safety_factor_achieved": null
+    },
+    {
+      "thickness_mm": 8,
+      "comparison_E_MPa": 2750,
+      "cargo_kg": 15,
+      "net_width_mm": 86.0120582094944,
+      "outer_support_reaction_N": -55.004675185578336,
+      "inner_support_reaction_N": 169.42747646315584,
+      "factored_nominal_bending_stress_MPa": 9.499807719126117,
+      "short_term_service_deflection_mm": 2.0940158210732784,
+      "conditional_on_hold_down_fasteners": true,
+      "safety_factor_achieved": null
+    },
+    {
+      "thickness_mm": 8,
+      "comparison_E_MPa": 2000,
+      "cargo_kg": 10,
+      "net_width_mm": 86.0120582094944,
+      "outer_support_reaction_N": -43.896088929164904,
+      "inner_support_reaction_N": 135.2103898219299,
+      "factored_nominal_bending_stress_MPa": 7.581253830548237,
+      "short_term_service_deflection_mm": 2.2977822982743548,
+      "conditional_on_hold_down_fasteners": true,
+      "safety_factor_achieved": null
+    },
+    {
+      "thickness_mm": 8,
+      "comparison_E_MPa": 2000,
+      "cargo_kg": 15,
+      "net_width_mm": 86.0120582094944,
+      "outer_support_reaction_N": -55.004675185578336,
+      "inner_support_reaction_N": 169.42747646315584,
+      "factored_nominal_bending_stress_MPa": 9.499807719126117,
+      "short_term_service_deflection_mm": 2.879271753975758,
+      "conditional_on_hold_down_fasteners": true,
+      "safety_factor_achieved": null
+    },
+    {
+      "thickness_mm": 10,
+      "comparison_E_MPa": 2750,
+      "cargo_kg": 10,
+      "net_width_mm": 86.0120582094944,
+      "outer_support_reaction_N": -43.896088929164904,
+      "inner_support_reaction_N": 135.2103898219299,
+      "factored_nominal_bending_stress_MPa": 4.852002451550872,
+      "short_term_service_deflection_mm": 0.8556105721574324,
+      "conditional_on_hold_down_fasteners": true,
+      "safety_factor_achieved": null
+    },
+    {
+      "thickness_mm": 10,
+      "comparison_E_MPa": 2750,
+      "cargo_kg": 15,
+      "net_width_mm": 86.0120582094944,
+      "outer_support_reaction_N": -55.004675185578336,
+      "inner_support_reaction_N": 169.42747646315584,
+      "factored_nominal_bending_stress_MPa": 6.079876940240715,
+      "short_term_service_deflection_mm": 1.0721361003895185,
+      "conditional_on_hold_down_fasteners": true,
+      "safety_factor_achieved": null
+    },
+    {
+      "thickness_mm": 10,
+      "comparison_E_MPa": 2000,
+      "cargo_kg": 10,
+      "net_width_mm": 86.0120582094944,
+      "outer_support_reaction_N": -43.896088929164904,
+      "inner_support_reaction_N": 135.2103898219299,
+      "factored_nominal_bending_stress_MPa": 4.852002451550872,
+      "short_term_service_deflection_mm": 1.1764645367164697,
+      "conditional_on_hold_down_fasteners": true,
+      "safety_factor_achieved": null
+    },
+    {
+      "thickness_mm": 10,
+      "comparison_E_MPa": 2000,
+      "cargo_kg": 15,
+      "net_width_mm": 86.0120582094944,
+      "outer_support_reaction_N": -55.004675185578336,
+      "inner_support_reaction_N": 169.42747646315584,
+      "factored_nominal_bending_stress_MPa": 6.079876940240715,
+      "short_term_service_deflection_mm": 1.474187138035588,
+      "conditional_on_hold_down_fasteners": true,
+      "safety_factor_achieved": null
+    }
+  ],
+  "not_in_model": [
+    "Creep/time/temperature",
+    "Full2D pressure redistribution",
+    "Local nut-hole and slot stress concentration",
+    "Plate fastener/sleeve fit/preload",
+    "Belt-anchor local forces",
+    "Drop/impact/fatigue"
+  ],
+  "conclusion": "10mm is a trial candidate with lower short-term deflection than8mm. No PLA deck SF2 or10kg operating rating has been established."
+}

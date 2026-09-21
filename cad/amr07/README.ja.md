@@ -26,6 +26,7 @@
 - [組立FCStd](AMR01_M0601C_A6.FCStd) / [組立STEP](AMR01_M0601C_A6.step)
 - [金具STEP](M0601C_mount_A6_R1.step) / [見積図面PDF・2ページ](M0601C_mount_A6_R1.pdf) / [金具・ねじの公差と設計理由](MOUNT_INTERFACE_REVIEW.ja.md)
 - [荷台の材料・穴位置・支持・固定・着脱・計算](DECK_REVIEW.ja.md)
+- [拡張用格子穴・4分割PLA上板の試作CADと比較](printed-deck-concept/README.ja.md)
 - [駆動・輪荷重の計算入力](requirements.json) / [計算結果](load_calculations.json)
 - [電源・停止回路の構成、候補部品、故障・熱試験](ELECTRICAL_AND_VALIDATION.ja.md)
 - [BOM一覧・未選定品](BOM.ja.md) / [Excel](BOM.xlsx) / [購入品CSV](BOM.csv)

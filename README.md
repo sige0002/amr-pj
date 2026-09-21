@@ -7,6 +7,7 @@
 追加の機械ブレーキはユーザー方針により不採用。通常の減速・停止はモーター制御で行い、非常停止の電源遮断は維持します。坂道走行・停電時の坂道保持は初号機の運用範囲に含めず、従来の8kg/5°計算は参考資料として残します。**実機での安全率2、低速連続駆動、平地停止は未確認です。**
 
 - [A6の設計・変更理由・CAD画面](cad/amr07/README.ja.md)
+- [格子穴付きPLA上板の試作案・強度と費用の比較](cad/amr07/printed-deck-concept/README.ja.md)
 - [レビュー8項目への対応と残る確認](cad/amr07/REVIEW_RESPONSE.ja.md)
 - [車体FCStd](cad/amr07/AMR01_M0601C_A6.FCStd) / [車体STEP](cad/amr07/AMR01_M0601C_A6.step)
 - [金具STEP](cad/amr07/M0601C_mount_A6_R1.step) / [機能公差付き図面PDF](cad/amr07/M0601C_mount_A6_R1.pdf)

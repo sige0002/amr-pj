@@ -1,0 +1,390 @@
+{
+  "status": "fit_and_static_comparison_candidate_not_load_qualified",
+  "base_CAD_sha256": "6974b6589b75018accaffb7504657a3ae8e28a69bc99d2c353b9bfee11a244bd",
+  "all_shapes_valid": true,
+  "physical_parts": 227,
+  "collisions": [],
+  "reference_collisions": [],
+  "grid_stations": [
+    {
+      "xy_mm": [
+        -125,
+        -125
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        -125,
+        -75
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        -125,
+        -25
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        -125,
+        25
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        -125,
+        75
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        -125,
+        125
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        -75,
+        -125
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        -75,
+        -75
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        -75,
+        -25
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        -75,
+        25
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        -75,
+        75
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        -75,
+        125
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        -25,
+        -125
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        -25,
+        -75
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        -25,
+        -25
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        -25,
+        25
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        -25,
+        75
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        -25,
+        125
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        25,
+        -125
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        25,
+        -75
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        25,
+        -25
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        25,
+        25
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        25,
+        75
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        25,
+        125
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        75,
+        -125
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        75,
+        -75
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        75,
+        -25
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        75,
+        25
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        75,
+        75
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        75,
+        125
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        125,
+        -125
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        125,
+        -75
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        125,
+        -25
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        125,
+        25
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        125,
+        75
+      ],
+      "fixture_envelope_hits": []
+    },
+    {
+      "xy_mm": [
+        125,
+        125
+      ],
+      "fixture_envelope_hits": []
+    }
+  ],
+  "removed_existing_parts": [
+    "ElectronicsTrayPLA",
+    "LargeWasher_Electronics0",
+    "ElectronicsBolt_0",
+    "SlotNut_Electronics_0",
+    "LargeWasher_Electronics1",
+    "ElectronicsBolt_1",
+    "SlotNut_Electronics_1",
+    "LargeWasher_Electronics2",
+    "ElectronicsBolt_2",
+    "SlotNut_Electronics_2",
+    "LargeWasher_Electronics3",
+    "ElectronicsBolt_3",
+    "SlotNut_Electronics_3",
+    "FrontElectronicsTrayPLA",
+    "LargeWasher_Front0",
+    "FrontDeckBolt_0",
+    "SlotNut_FrontDeck_0",
+    "LargeWasher_Front1",
+    "FrontDeckBolt_1",
+    "SlotNut_FrontDeck_1",
+    "LargeWasher_Front2",
+    "FrontDeckBolt_2",
+    "SlotNut_FrontDeck_2",
+    "LargeWasher_Front3",
+    "FrontDeckBolt_3",
+    "SlotNut_FrontDeck_3",
+    "CargoDeckPlate"
+  ],
+  "panel_sizes_mm": [
+    [
+      187.3,
+      187.3,
+      10
+    ],
+    [
+      187.3,
+      112.30000000000001,
+      10
+    ],
+    [
+      112.30000000000001,
+      187.3,
+      10
+    ],
+    [
+      112.30000000000001,
+      112.30000000000001,
+      10
+    ]
+  ],
+  "mass": {
+    "solid_PLA_panels_kg": 1.071737854541364,
+    "removed_CAD_mass_kg": 1.1996177154894916,
+    "added_CAD_mass_kg": 1.5093795402403134,
+    "stop_bolt_change_kg": 0.003945840372908777,
+    "estimated_base_kg": 9.046850829890111,
+    "actual_slicing_done": false,
+    "weighed": false
+  },
+  "cost_comparison": {
+    "PLA_consumption_reference_JPY": 2143.475709082728,
+    "extra_support_stock_reference_JPY": 1507,
+    "replaced_aluminum_plate_reference_JPY": 4521,
+    "incremental_complete_cost_JPY": null,
+    "unpriced": [
+      "10 metal compression sleeves",
+      "4 M6x30 +8 washers;4 HNTT6-6 reused from removed trays",
+      "8 M4x30 replacement bolts",
+      "new shipping/tools/labor/printing overhead",
+      "expansion fixture screws/nuts when used"
+    ]
+  },
+  "not_qualified": [
+    "Actual filament and print process",
+    "Long-term creep/temperature",
+    "Local hole/nut retention",
+    "Strap slot and split-panel load transfer",
+    "Cargo-deck SF2 and impact",
+    "Electronics remounting after removing old trays"
+  ],
+  "STEP_roundtrip": {
+    "valid": true,
+    "solids": 231,
+    "volume_difference_mm3": 0.10295506753027439
+  },
+  "STL_checks": [
+    {
+      "file": "PrintedDeckPanel1.stl",
+      "closed": true,
+      "facets": 6248,
+      "size_mm": [
+        187.3000030517578,
+        187.3000030517578,
+        10.0
+      ]
+    },
+    {
+      "file": "PrintedDeckPanel2.stl",
+      "closed": true,
+      "facets": 3756,
+      "size_mm": [
+        187.3000030517578,
+        112.30000305175781,
+        10.0
+      ]
+    },
+    {
+      "file": "PrintedDeckPanel3.stl",
+      "closed": true,
+      "facets": 3328,
+      "size_mm": [
+        112.3000030517578,
+        187.3000030517578,
+        10.0
+      ]
+    },
+    {
+      "file": "PrintedDeckPanel4.stl",
+      "closed": true,
+      "facets": 1764,
+      "size_mm": [
+        112.3000030517578,
+        112.30000305175781,
+        10.0
+      ]
+    }
+  ]
+}
