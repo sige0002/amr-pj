@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "design": "AMR01_M0601C_A6_review_revision",
+  "date": "2026-09-21",
+  "supersedes_current_requirements_in": "../amr06/requirements.json",
+  "status": "design_requirements_accepted_hardware_qualification_pending",
+  "mass": {
+    "base_max_kg": 10,
+    "normal_payload_kg": 10,
+    "slope_5deg_payload_kg": 8,
+    "structural_payload_kg": 15,
+    "structural_gross_kg": 25,
+    "interpretation": "Payload is cargo only. 25 kg is structural gross mass, never the payload rating.",
+    "future_arm": "Include any arm, gripper, battery, deck and electronics in the 10 kg base limit; re-evaluate CG and operating loads after installation.",
+    "user_confirmation": "Latest acceptance of normal cargo 10 kg, cargo 8 kg on 5 degrees, structural cargo 15 kg / factor 2."
+  },
+  "geometry": {
+    "frame_outer_LW_mm": [460, 300],
+    "frame_bottom_top_z_mm": [69, 99],
+    "stock_3030_lengths_mm": [400, 400, 400, 400, 300, 300],
+    "drive_axis_x_mm": 90,
+    "drive_track_mm": 349,
+    "wheel_diameter_mm": 100.7,
+    "drive_axis_z_mm": 50.35,
+    "caster_pivot_xy_mm": [-150, 0],
+    "caster_trail_mm": 16,
+    "caster_samples": 720,
+    "minimum_fixed_ground_clearance_mm": 25,
+    "motor_mount_spacer_count": 0,
+    "tire_axial_stack_confirmed": false
+  },
+  "load_placement": {
+    "reviewed_base_mass_interval_kg": [6, 10],
+    "base_cg_x_interval_mm": [-10, 10],
+    "base_cg_y_interval_mm": [-10, 10],
+    "base_cg_max_z_mm": 110,
+    "payload_cg_x_interval_mm": [-30, 30],
+    "payload_cg_y_interval_mm": [-30, 30],
+    "payload_cg_max_z_mm": 220,
+    "status": "Design and acceptance limits, not measured CG values. Place and restrain the cargo by its CG, not merely by its footprint.",
+    "change_control": "Recalculate before operating outside any reviewed mass, CG, support, tire or acceleration limit."
+  },
+  "drive": {
+    "motor": "M0601C_111 x 2",
+    "rated_torque_Nm_each": 0.96,
+    "rated_speed_rpm": 115,
+    "rated_voltage_V": 18,
+    "acceleration_and_service_deceleration_max_m_s2": 0.2,
+    "initial_speed_m_s": 0.15,
+    "initial_yaw_rate_rad_s": 0.3,
+    "later_speed_m_s": 0.3,
+    "later_yaw_rate_rad_s": 0.6,
+    "lateral_acceleration_comparison_m_s2": 0.18,
+    "rolling_resistance_assumption": 0.03,
+    "continuous_torque_sizing_margin": 1.5,
+    "gravity_m_s2": 9.80665,
+    "motor_spec_source": "https://shop.directdrive.com/pages/m0601c-111-specs",
+    "rated_low_speed_torque_verified": false,
+    "speed_note": "The initial limits apply first. Later limits require the thermal, stopping and handling checks. Stall torque is not used for continuous sizing."
+  },
+  "cases": [
+    {"id": "normal", "payload_kg": 10, "slope_deg": 0, "acceleration_m_s2": 0.2, "lateral_acceleration_m_s2": 0.18, "purpose": "normal flat-floor operating design"},
+    {"id": "slope", "payload_kg": 8, "slope_deg": 5, "acceleration_m_s2": 0.2, "lateral_acceleration_m_s2": 0.18, "purpose": "slope design target, not operation release"},
+    {"id": "structure", "payload_kg": 15, "slope_deg": 0, "acceleration_m_s2": 0, "lateral_acceleration_m_s2": 0, "purpose": "static structural verification, not a 15 kg operating rating"}
+  ],
+  "strength": {
+    "target_static_safety_factor": 2,
+    "mount_comparison_vertical_N": 245.16625,
+    "mount_comparison_torque_Nm": 0.96,
+    "mount_comparison_lateral_N": 30,
+    "comparison_note": "Entire 25 kg gross weight on one isolated mount is a conservative fixture design envelope, not a permissible motor wheel load or an impact qualification.",
+    "certified_material_yield_MPa": null,
+    "procurement_minimum_yield_MPa": 240,
+    "achieved": false,
+    "motor_female_thread_material_confirmed": false,
+    "frame_slot_pullout_verified": false,
+    "contact_and_preload_verified": false
+  },
+  "catalog_comparison_only": {
+    "motor_radial_N": 120,
+    "motor_axial_N": 60,
+    "motor_load_datum_and_revision_confirmed": false,
+    "motor_combined_load_rule_known": false,
+    "caster_allowable_N": 300,
+    "caster_source": "https://www.hammer-caster.co.jp/products/detail/3119",
+    "note": "Catalog allowable loads are not yield loads and are not divided by the structural safety factor."
+  },
+  "operation_release": {
+    "released": false,
+    "initial_test_floor": "Level, smooth indoor floor, contained test area, initially unloaded.",
+    "step_crossing": "No intentional step crossing; impact factor and tire compliance are unqualified.",
+    "cargo_restraint_required": true,
+    "slope_hold_verified": false,
+    "regeneration_handling_verified": false,
+    "minimum_bus_voltage_performance_verified": false,
+    "thermal_duration_verified": false,
+    "note": "These are design limits. Payload 10/8 kg is released only after the linked hardware acceptance tests. No slope test before independent roll-away prevention."
+  }
+}

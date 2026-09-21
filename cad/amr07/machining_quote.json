@@ -1,0 +1,49 @@
+{
+  "candidate": "A6-R1",
+  "name": "M0601C_mount_A6_R1",
+  "observed_at": "2026-09-21T06:51:03.965184+00:00",
+  "remarks": "QUOTE ONLY; qty2 identical,6061-T6,as-machined,no threads. Attached A6-R1 PDF controls: profile0.10 to A/B/C incl.location; 3xD3.2+0.1/0 holes and D6.2x0.50+/-0.05 washer recesses,position D0.10; back8+/-0.05; A/B flat0.05,B perpendicular0.05; M6 headC0.3+/-0.1; wire6.5+/-0.1; pocketZ15.18 vs hole-groupZ15.35 deliberate offset. Other ISO2768-m. Both PDF sheets required; no geometry changes. Fit/load qualification pending.",
+  "quantity": 2,
+  "currency": "USD",
+  "automatic_not_manual": true,
+  "records": [
+    {
+      "speed": "standard",
+      "manufacturing_label": "標準: 5 日",
+      "parts_lot_USD": 84.66,
+      "shipping_USD": 7.23,
+      "displayed_total_USD": 91.89
+    },
+    {
+      "speed": "economic",
+      "manufacturing_label": "経済的: 10 日",
+      "parts_lot_USD": 75.02,
+      "shipping_USD": 7.23,
+      "displayed_total_USD": 82.25
+    }
+  ],
+  "step_sha256": "790986f799318a681d220ad8c6d4676e5f879409067c87b8af5ff7fc0ccc039d",
+  "pdf_sha256": "f22225a522412d3dbdefe40fae6dba50f497551ef73ff7a1d22d7124738d9a34",
+  "material": "A6061-T6",
+  "finish": "none",
+  "threads": false,
+  "shipping_country": "Japan",
+  "shipping_service": "OCS Express",
+  "highest_tolerance_UI": "±0.05mm",
+  "functional_tolerance_scope": "A6-R1 two-sheet PDF, not the old A4 flat-only tolerance",
+  "final_manual_review": false,
+  "ordered": false,
+  "paid": false,
+  "evidence_hashes": {
+    "A6-R1-economic.png": "63afb00922daf952d817b743f887289c9931491f69a11e36633983794b6116b6",
+    "A6-R1-economic.txt": "8f15235753f3e558156b3e5e0e15336662beca1a2c2257dad612c9a51de9aabf",
+    "A6-R1-observed.json": "ae6586710ba76cdf173404ac465ac9c840a04b3e5a385f06c46d7e1922f64073",
+    "A6-R1-settings-notes.png": "c8c94bdaafcb77f889815681ac328d12d01660caf1c8fd7005cc65ee20826411",
+    "A6-R1-settings.png": "f158b15bcc32dbde99413d7282e5a238feddc709f894c301d6dab1ddc51932b0",
+    "A6-R1-settings.txt": "fb1544853ae7c6001b2e9664b7f588b16c5502274170f390d906e188cc9e1fa4",
+    "A6-R1-shipping.png": "48bbbfd64c282f704499c3f12138ec0811d928cc91d0b2fa555c1b97764321b6",
+    "A6-R1-shipping.txt": "e64d8eed55987ca1b8fae8d988fc19328de025f3e0370052ce9f11cc3d4814e5",
+    "A6-R1-standard.png": "2dc353af1a8dabfc5385cba11157da0db9864d236512ebc6671c551f0b17ee63",
+    "A6-R1-standard.txt": "7381cda4b2b123d7649b44117b2b8134a343f4f6404d61bbc3511443cca7b6d7"
+  }
+}

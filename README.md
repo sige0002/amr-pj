@@ -1,68 +1,56 @@
 # amr-pj — 家庭向け小型AMR / 将来MoMa
 
-最新の検討は**A5：可搬15kg・安全率2に向けた車輪固定金具の加工費・強度比較**。5案の実STEP・寸法図でJLCCNC自動見積を取得したが、今回は旧A4より安くならなかった。A4を価格比較の基準に残し、小型D5は組付けCAD・PLA仮合わせ用に保存した。どちらも新しい荷重要件への適合は未認定。
+最新は **A6：通常積載10kg、5°登坂時8kg、構造検証は荷物15kg・静的安全率2**。車体は電池・電装・荷台込み10kg以下を目標とし、現在の推計は**8.73kg**です。25kgは構造計算時の総重量で、積載量ではありません。
 
-骨格はM0601C_111二輪＋後方キャスター。Amazonの3030・300/400mm定尺、元のフレーム配置、低床電池を維持する。公開ブラケットのモーター受け形状を基に、3030下面へ直接留める一体の金属金具を比較した。
+レビューを受け、金具の機能公差・ねじ座面・溝ナットと3030溝の寸法、荷台と荷物固定、重心範囲、停止回路の構成と実機試験仕様を修正しました。M0601C_111二輪、Amazon3030の300/400mm定尺、モーター支持スペーサーなしの低床構成を維持しています。
 
-- [A5の結果・設計理由・CAD実画面](cad/amr06/README.ja.md)
-- [設計レビュー：機能公差・荷重支持・駆動条件と解消項目](cad/amr06/DESIGN_REVIEW_2026-09-21.ja.md)
-- [全5案の実加工見積と証拠](cad/amr06/MACHINING_QUOTE.ja.md) / [費用差分表](cad/amr06/BOM_cost_comparison.csv)
-- [15kg可搬に向けた荷重・強度・駆動の検討](cad/amr06/STRENGTH_REVIEW.ja.md)
-- [D5比較車体FCStd](cad/amr06/AMR01_M0601C_A5.FCStd) / [STEP](cad/amr06/AMR01_M0601C_A5.step)
-- [P1S用PLAモックZIP](cad/amr06/print-mock/M0601C_A5_PLA_mock_files.zip) / [印刷・仮合わせ手順](cad/amr06/print-mock/PRINT_GUIDE.ja.md)
+**実機での安全率2、低速連続駆動、坂道保持は未確認です。** CAD検査・条件付き計算の完了を製作・運用の承認とはしていません。
 
-従来のA4資料と購入品の根拠：
+- [A6の設計・変更理由・CAD画面](cad/amr07/README.ja.md)
+- [レビュー8項目への対応と残る確認](cad/amr07/REVIEW_RESPONSE.ja.md)
+- [車体FCStd](cad/amr07/AMR01_M0601C_A6.FCStd) / [車体STEP](cad/amr07/AMR01_M0601C_A6.step)
+- [金具STEP](cad/amr07/M0601C_mount_A6_R1.step) / [機能公差付き図面PDF](cad/amr07/M0601C_mount_A6_R1.pdf)
+- [荷台の設計・固定・費用](cad/amr07/DECK_REVIEW.ja.md) / [金具・締結と公差](cad/amr07/MOUNT_INTERFACE_REVIEW.ja.md)
+- [加工サイトの実見積と証拠](cad/amr07/MACHINING_QUOTE.ja.md) / [BOM](cad/amr07/BOM.csv)
+- [電源・停止・回生の構成と試験仕様](cad/amr07/ELECTRICAL_AND_VALIDATION.ja.md)
+- [P1S用PLA仮合わせモックZIP](cad/amr07/print-mock/M0601C_A6_PLA_mock_files.zip) / [使い方](cad/amr07/print-mock/PRINT_GUIDE.ja.md)
 
-- [A4の設計・CAD・実画面](cad/amr05/README.ja.md)
-- [車体FCStd](cad/amr05/AMR01_M0601C_A4.FCStd) / [車体STEP](cad/amr05/AMR01_M0601C_A4.step)
-- [金具の見積用STEP](cad/amr05/M0601C_custom_mount_quote.step) / [寸法図PDF](cad/amr05/M0601C_custom_mount_quote.pdf) / [加工依頼仕様](cad/amr05/MANUFACTURING_RFQ.ja.md)
-- [BOM](cad/amr05/BOM.csv) / [費用の根拠と比較](cad/amr05/COST_REVIEW.ja.md) / [費用集計](cad/amr05/cost_summary.json)
-- [加工サイトの実見積・画面・条件](cad/amr05/MACHINING_QUOTE.ja.md)
-- [同じ方法で加工見積を取得するCodexスキル](skills/cnc-quote/SKILL.md)
-- [金具の独立レビュー](cad/amr05/MOUNT_REVIEW.ja.md) / [公開CADの抽出根拠](cad/amr05/BRACKET_SOURCE_REVIEW.ja.md)
-- [本体・タイヤ・交換](cad/amr05/M0601C_INTERFACE.ja.md) / [電池・配線・整備空間](cad/amr05/ELECTRICAL_PACKAGING.ja.md)
-
-| 設計条件・現在の扱い | 内容 |
+| 現行条件 | 内容 |
 |---|---|
-| 主フレーム | 3030・400mm×4本＋300mm×2本、外形460×300mm、純正接合HBLFSN6-SET |
-| 台車質量 | 電池・電装込み10kg以下。A4推計6.79kg、D5比較6.74kg、未実測 |
-| 新しい荷重条件 | 暫定で荷物15kg＋車体最大10kg＝総25kg。安全率2は目標、達成未確認。将来アーム追加分・15kg荷台は別検討 |
+| フレーム | 3030・400mm×4本＋300mm×2本、外形460×300mm、純正接合HBLFSN6-SET |
 | 駆動 | M0601C_111×2、100.7mm適合タイヤ、後方50mm自在キャスター |
-| 取付金具 | A6061-T6、同形2個。A4は90×30×34mm・厚5、小型D5比較は75×30×34mm・厚6 |
-| 高さ | フレーム下面69mm、金具35mm、固定骨格最低32mm。配線予約は約28.35mm |
-| 骨格外形 | 仮のタイヤ組付け位置で460×406.6×109.6mm、輪距349mm |
-| PLA活用 | 低床電池クレードルと前後トレイ。主輪支持は金属 |
-| 配置検査 | 161部品・12,880ペアで公称体積干渉なし。工具軸・配線・整備空間も別検査 |
-| 駆動の制約 | 総25kg・5°・加速度0.2m/s²・余裕1.5では1.272N·m/輪が必要で、公表定格0.96N·mを超える。平地候補も熱・偏積み等は未確認 |
+| 金具 | A6061-T6、同形2個、幅90・厚5・ピッチ75。受け着座、穴・座金・機能公差を修正 |
+| 荷台 | 300×300×4mm A5052、上面118mm、金属支持・4ストッパ・2ベルト |
+| 荷物条件 | 中央200×200mm連続平底、CG前後/左右±30mm・高さ220mm以下。容器込み10kg/5°時8kg |
+| 質量 | 電装2.10kg枠・荷台固定具込み推計8.733kg、未実測 |
+| CAD検査 | 222物理部品・24,531ペアで公称体積干渉なし。タイヤ/キャスター接地z=0、工具・電池整備空間を確認 |
+| 金具実見積 | 2個75.02 USD＋日本宛表示送料7.23 USD＝82.25 USD、図面審査前の自動見積 |
+| 費用途中小計 | 54,910円＋82.25 USD＋未確定分。完成車総額ではない |
 
-**費用は途中小計42,282円＋専用金具と送料のサイト自動見積81.73 USD＋残る未確定分。** Taobao本体約7,000円/個、適合タイヤ2個を別購入する仮定。タイヤと必要付属品の同梱を確認できれば円小計33,042円。JLCCNCの製造10日・金具2個74.50 USD＋日本宛OCS送料7.23 USDを原通貨で計上した。図面審査後の価格、税・住所別送料・決済換算、Taobao諸費は未確定。共通板材を自加工する条件で、板材も外注する場合は追加見積。電池・主計算機・電源保護・実配線等は別予算であり、完成機総額ではない。
+費用はTaobaoモーター約7,000円/個という仮枠、タイヤ別購入、荷台等の板材は自加工する条件です。追加の荷台と停止回路候補を計上し、使わなくなったUSB-RS485Bとその送料を除きました。電池・主計算機・基板/配線・保持機構・各店送料・輸入諸費、外注へ切り替える板材加工等は未確定。円とUSDを推定レートで合算していません。
 
-小型D5は2個80.08 USD＋表示送料7.23 USD＝87.31 USDとなり、A4より5.58 USD高かった。受けRの拡大や根元Rの統一だけでは値下げにならないという結果を、[形状比較](cad/amr06/candidates/ROOT_FILLET_DFM_REVIEW.ja.md)に記録した。旧14kg計算は比較履歴とし、25kg条件へ読み替えない。
+![A6荷台付き車体・FreeCAD実画面](cad/amr07/cad-screen-isometric.png)
 
-![金具比較：A4灰・D4青・D5橙のFreeCAD実画面](cad/amr06/cad-screen-mount-comparison.png)
+![A6下面・FreeCAD実画面](cad/amr07/cad-screen-underside.png)
 
-![D5比較車体下面・FreeCAD実画面](cad/amr06/cad-screen-underside.png)
-
-茶色の半透明箱は未選定電池の予約空間。本体は販売元案内のSTEP、タイヤとカバーは公開外形の簡略形状。タイヤの軸方向組付け位置が未確認のため全幅・輪距は暫定。公称CADの合格は、製作公差・衝撃・熱・寿命の認定ではない。
+購入モーターは販売元案内のSTEPを使用。タイヤとカバーは公開外形からの簡略形状で、軸方向組付け位置と全幅・輪距は現物照合が必要です。半透明形状は電池・電装等の予約です。
 
 ## 再計算
 
 ```sh
-python3 cad/amr05/fetch_vendor_cad.py
-python3 cad/amr05/calculate_cost.py --require-cad --self-test
-python3 cad/amr05/calculate_design.py
-python3 cad/amr06/calculate_mount_loads.py --check-only
-python3 cad/amr06/record_quote_results.py
-python3 cad/amr06/calculate_cost_comparison.py
+python3 cad/amr07/calculate_design.py --check-only
+python3 cad/amr07/cargo_deck.py
+python3 cad/amr07/record_cost.py
 ```
 
-FreeCADでの再生成は[A5 README](cad/amr06/README.ja.md)と[A4 README](cad/amr05/README.ja.md)を参照。
+再生成は[A6 README](cad/amr07/README.ja.md)。見積済み図面/STEPを変更するときは別改訂で見積り直します。
 
-## 比較履歴
+## 比較履歴・共通資料
 
-- [A3：DDSM115・一体ホイール検討](cad/amr04/README.ja.md)
-- [A2：FIT0185・スペーサー撤去](cad/amr03/README.ja.md)
-- [第二案B・却下したベルト案C](cad/amr02/README.ja.md)
-- [元の第一案A](cad/amr01/README.ja.md)
-- [第一案の基礎設計書](docs/amr-01/DESIGN.ja.md) / [同資料ZIP](archives/amr_v0_4_1.zip)
-- [FreeCAD環境](cad/README.md)
+- [A5：5案の実加工費・強度比較](cad/amr06/README.ja.md) / [修正元の設計レビュー](cad/amr06/DESIGN_REVIEW_2026-09-21.ja.md)
+- [A4：M0601C_111と専用低背金具](cad/amr05/README.ja.md)
+- [メーカーCAD・モーター仕様・タイヤ交換](cad/amr05/M0601C_INTERFACE.ja.md)
+- [実加工サイト見積のスキル](skills/cnc-quote/SKILL.md)
+- [A3：DDSM115](cad/amr04/README.ja.md) / [A2：FIT0185](cad/amr03/README.ja.md)
+- [第二案B・却下したベルト案C](cad/amr02/README.ja.md) / [第一案](cad/amr01/README.ja.md)
+- [初期基礎設計書](docs/amr-01/DESIGN.ja.md) / [FreeCAD環境](cad/README.md)

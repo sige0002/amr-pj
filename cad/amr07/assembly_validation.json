@@ -1,0 +1,853 @@
+{
+  "status": "nominal_geometry_review_revision_not_manufacturing_or_operating_release",
+  "source_A4_sha256": "48f20465f6d0b2259eef9cea50c229f72ebb58e20c435035a0c11b006eacfb3b",
+  "mount_STEP_sha256": "790986f799318a681d220ad8c6d4676e5f879409067c87b8af5ff7fc0ccc039d",
+  "physical_parts": 222,
+  "physical_pair_count": 24531,
+  "bounding_box_candidate_booleans": 468,
+  "collisions": [],
+  "reference_collisions": [],
+  "tool_and_service_access": [
+    {
+      "name": "M2p5_driver_L0",
+      "hits": []
+    },
+    {
+      "name": "M2p5_driver_L1",
+      "hits": []
+    },
+    {
+      "name": "M2p5_driver_L2",
+      "hits": []
+    },
+    {
+      "name": "M6_driver_L52.5",
+      "hits": []
+    },
+    {
+      "name": "M6_driver_L127.5",
+      "hits": []
+    },
+    {
+      "name": "Tire_outboard_L1",
+      "hits": []
+    },
+    {
+      "name": "Tire_outboard_L5",
+      "hits": []
+    },
+    {
+      "name": "Tire_outboard_L10",
+      "hits": []
+    },
+    {
+      "name": "Tire_outboard_L20",
+      "hits": []
+    },
+    {
+      "name": "Tire_outboard_L40",
+      "hits": []
+    },
+    {
+      "name": "Tire_outboard_L80",
+      "hits": []
+    },
+    {
+      "name": "M2p5_driver_R0",
+      "hits": []
+    },
+    {
+      "name": "M2p5_driver_R1",
+      "hits": []
+    },
+    {
+      "name": "M2p5_driver_R2",
+      "hits": []
+    },
+    {
+      "name": "M6_driver_R52.5",
+      "hits": []
+    },
+    {
+      "name": "M6_driver_R127.5",
+      "hits": []
+    },
+    {
+      "name": "Tire_outboard_R1",
+      "hits": []
+    },
+    {
+      "name": "Tire_outboard_R5",
+      "hits": []
+    },
+    {
+      "name": "Tire_outboard_R10",
+      "hits": []
+    },
+    {
+      "name": "Tire_outboard_R20",
+      "hits": []
+    },
+    {
+      "name": "Tire_outboard_R40",
+      "hits": []
+    },
+    {
+      "name": "Tire_outboard_R80",
+      "hits": []
+    },
+    {
+      "name": "Battery_lift_deck_removed_1",
+      "hits": []
+    },
+    {
+      "name": "Battery_lift_deck_removed_20",
+      "hits": []
+    },
+    {
+      "name": "Battery_lift_deck_removed_80",
+      "hits": []
+    },
+    {
+      "name": "Battery_lift_deck_removed_160",
+      "hits": []
+    }
+  ],
+  "harness_collisions": [],
+  "wheel_and_caster_floor_contacts_z_mm": {
+    "TireL": 0.0,
+    "TireR": 0.0,
+    "CasterTire": 0.0
+  },
+  "changed_existing_features": [
+    "Cross300_1",
+    "Cross300_2",
+    "CustomMotorMountL",
+    "CustomMotorMountR",
+    "Rail400_1",
+    "Rail400_2",
+    "Rail400_3",
+    "Rail400_4",
+    "SlotNut_Caster_0",
+    "SlotNut_Caster_1",
+    "SlotNut_Caster_2",
+    "SlotNut_Caster_3",
+    "SlotNut_Cradle_0",
+    "SlotNut_Cradle_1",
+    "SlotNut_Cradle_2",
+    "SlotNut_Cradle_3",
+    "SlotNut_Electronics_0",
+    "SlotNut_Electronics_1",
+    "SlotNut_Electronics_2",
+    "SlotNut_Electronics_3",
+    "SlotNut_FrontDeck_0",
+    "SlotNut_FrontDeck_1",
+    "SlotNut_FrontDeck_2",
+    "SlotNut_FrontDeck_3",
+    "SlotNut_Gusset_110",
+    "SlotNut_Gusset_111",
+    "SlotNut_Gusset_1N10",
+    "SlotNut_Gusset_1N11",
+    "SlotNut_Gusset_N110",
+    "SlotNut_Gusset_N111",
+    "SlotNut_Gusset_N1N10",
+    "SlotNut_Gusset_N1N11",
+    "SlotNut_JointA_N120",
+    "SlotNut_JointA_N50",
+    "SlotNut_JointA_NN120",
+    "SlotNut_JointA_NN50",
+    "SlotNut_JointA_P120",
+    "SlotNut_JointA_P50",
+    "SlotNut_JointA_PN120",
+    "SlotNut_JointA_PN50",
+    "SlotNut_JointB_N120",
+    "SlotNut_JointB_N50",
+    "SlotNut_JointB_NN120",
+    "SlotNut_JointB_NN50",
+    "SlotNut_JointB_P120",
+    "SlotNut_JointB_P50",
+    "SlotNut_JointB_PN120",
+    "SlotNut_JointB_PN50",
+    "SlotNut_Mount_127p5L",
+    "SlotNut_Mount_127p5R",
+    "SlotNut_Mount_52p5L",
+    "SlotNut_Mount_52p5R"
+  ],
+  "slot_nut_updates": [
+    {
+      "name": "SlotNut_JointA_NN120",
+      "frame_surface_xyz_mm": [
+        -200.0,
+        -102.0,
+        84.0
+      ],
+      "inward": [
+        -1.0,
+        1.578983857244667e-15,
+        0.0
+      ],
+      "mass_delta_kg": 0.0018868368139849793
+    },
+    {
+      "name": "SlotNut_JointB_NN120",
+      "frame_surface_xyz_mm": [
+        -185.0,
+        -120.0,
+        84.0
+      ],
+      "inward": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "mass_delta_kg": 0.0018868368139849793
+    },
+    {
+      "name": "SlotNut_JointA_NN50",
+      "frame_surface_xyz_mm": [
+        -200.0,
+        -32.0,
+        84.0
+      ],
+      "inward": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "mass_delta_kg": 0.0018868368139849838
+    },
+    {
+      "name": "SlotNut_JointB_NN50",
+      "frame_surface_xyz_mm": [
+        -185.0,
+        -50.0,
+        84.0
+      ],
+      "inward": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "mass_delta_kg": 0.0018868368139849793
+    },
+    {
+      "name": "SlotNut_JointA_N50",
+      "frame_surface_xyz_mm": [
+        -200.0,
+        32.0,
+        84.0
+      ],
+      "inward": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "mass_delta_kg": 0.0018868368139849838
+    },
+    {
+      "name": "SlotNut_JointB_N50",
+      "frame_surface_xyz_mm": [
+        -185.0,
+        50.0,
+        84.0
+      ],
+      "inward": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "mass_delta_kg": 0.0018868368139849784
+    },
+    {
+      "name": "SlotNut_JointA_N120",
+      "frame_surface_xyz_mm": [
+        -200.0,
+        102.0,
+        84.0
+      ],
+      "inward": [
+        -1.0,
+        -1.578983857244667e-15,
+        0.0
+      ],
+      "mass_delta_kg": 0.0018868368139849801
+    },
+    {
+      "name": "SlotNut_JointB_N120",
+      "frame_surface_xyz_mm": [
+        -185.0,
+        120.0,
+        84.0
+      ],
+      "inward": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "mass_delta_kg": 0.0018868368139849793
+    },
+    {
+      "name": "SlotNut_Gusset_N1N10",
+      "frame_surface_xyz_mm": [
+        -185.0,
+        -135.0,
+        99.0
+      ],
+      "inward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849758
+    },
+    {
+      "name": "SlotNut_Gusset_N1N11",
+      "frame_surface_xyz_mm": [
+        -215.0,
+        -105.0,
+        99.0
+      ],
+      "inward": [
+        3.157967714489334e-15,
+        0.0,
+        -1.0
+      ],
+      "mass_delta_kg": 0.001886836813984981
+    },
+    {
+      "name": "SlotNut_Gusset_N110",
+      "frame_surface_xyz_mm": [
+        -185.0,
+        135.0,
+        99.0
+      ],
+      "inward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849767
+    },
+    {
+      "name": "SlotNut_Gusset_N111",
+      "frame_surface_xyz_mm": [
+        -215.0,
+        105.0,
+        99.0
+      ],
+      "inward": [
+        3.157967714489334e-15,
+        0.0,
+        -1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849819
+    },
+    {
+      "name": "SlotNut_JointA_PN120",
+      "frame_surface_xyz_mm": [
+        200.0,
+        -102.0,
+        84.0
+      ],
+      "inward": [
+        1.0,
+        1.578983857244667e-15,
+        0.0
+      ],
+      "mass_delta_kg": 0.0018868368139849801
+    },
+    {
+      "name": "SlotNut_JointB_PN120",
+      "frame_surface_xyz_mm": [
+        185.0,
+        -120.0,
+        84.0
+      ],
+      "inward": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "mass_delta_kg": 0.0018868368139849793
+    },
+    {
+      "name": "SlotNut_JointA_PN50",
+      "frame_surface_xyz_mm": [
+        200.0,
+        -32.0,
+        84.0
+      ],
+      "inward": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "mass_delta_kg": 0.0018868368139849838
+    },
+    {
+      "name": "SlotNut_JointB_PN50",
+      "frame_surface_xyz_mm": [
+        185.0,
+        -50.0,
+        84.0
+      ],
+      "inward": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "mass_delta_kg": 0.0018868368139849793
+    },
+    {
+      "name": "SlotNut_JointA_P50",
+      "frame_surface_xyz_mm": [
+        200.0,
+        32.0,
+        84.0
+      ],
+      "inward": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "mass_delta_kg": 0.0018868368139849838
+    },
+    {
+      "name": "SlotNut_JointB_P50",
+      "frame_surface_xyz_mm": [
+        185.0,
+        50.0,
+        84.0
+      ],
+      "inward": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "mass_delta_kg": 0.0018868368139849784
+    },
+    {
+      "name": "SlotNut_JointA_P120",
+      "frame_surface_xyz_mm": [
+        200.0,
+        102.0,
+        84.0
+      ],
+      "inward": [
+        1.0,
+        -1.578983857244667e-15,
+        0.0
+      ],
+      "mass_delta_kg": 0.0018868368139849801
+    },
+    {
+      "name": "SlotNut_JointB_P120",
+      "frame_surface_xyz_mm": [
+        185.0,
+        120.0,
+        84.0
+      ],
+      "inward": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "mass_delta_kg": 0.0018868368139849793
+    },
+    {
+      "name": "SlotNut_Gusset_1N10",
+      "frame_surface_xyz_mm": [
+        185.0,
+        -135.0,
+        99.0
+      ],
+      "inward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849758
+    },
+    {
+      "name": "SlotNut_Gusset_1N11",
+      "frame_surface_xyz_mm": [
+        215.0,
+        -105.0,
+        99.0
+      ],
+      "inward": [
+        -3.157967714489334e-15,
+        0.0,
+        -1.0
+      ],
+      "mass_delta_kg": 0.001886836813984981
+    },
+    {
+      "name": "SlotNut_Gusset_110",
+      "frame_surface_xyz_mm": [
+        185.0,
+        135.0,
+        99.0
+      ],
+      "inward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849767
+    },
+    {
+      "name": "SlotNut_Gusset_111",
+      "frame_surface_xyz_mm": [
+        215.0,
+        105.0,
+        99.0
+      ],
+      "inward": [
+        -3.157967714489334e-15,
+        0.0,
+        -1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849819
+    },
+    {
+      "name": "SlotNut_Mount_52p5L",
+      "frame_surface_xyz_mm": [
+        52.5,
+        135.0,
+        69.0
+      ],
+      "inward": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849784
+    },
+    {
+      "name": "SlotNut_Mount_127p5L",
+      "frame_surface_xyz_mm": [
+        127.5,
+        135.0,
+        69.0
+      ],
+      "inward": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849767
+    },
+    {
+      "name": "SlotNut_Mount_52p5R",
+      "frame_surface_xyz_mm": [
+        127.49999999999997,
+        -135.0,
+        69.0
+      ],
+      "inward": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849784
+    },
+    {
+      "name": "SlotNut_Mount_127p5R",
+      "frame_surface_xyz_mm": [
+        52.499999999999986,
+        -134.99999999999997,
+        69.0
+      ],
+      "inward": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mass_delta_kg": 0.001886836813984981
+    },
+    {
+      "name": "SlotNut_Caster_0",
+      "frame_surface_xyz_mm": [
+        -180.0,
+        -65.0,
+        69.0
+      ],
+      "inward": [
+        3.1579677144893316e-15,
+        0.0,
+        1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849793
+    },
+    {
+      "name": "SlotNut_Caster_1",
+      "frame_surface_xyz_mm": [
+        -180.0,
+        65.0,
+        69.0
+      ],
+      "inward": [
+        3.1579677144893316e-15,
+        0.0,
+        1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849801
+    },
+    {
+      "name": "SlotNut_Caster_2",
+      "frame_surface_xyz_mm": [
+        -120.0,
+        -65.0,
+        69.0
+      ],
+      "inward": [
+        1.5789838572446658e-15,
+        0.0,
+        1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849801
+    },
+    {
+      "name": "SlotNut_Caster_3",
+      "frame_surface_xyz_mm": [
+        -120.0,
+        65.0,
+        69.0
+      ],
+      "inward": [
+        1.5789838572446658e-15,
+        0.0,
+        1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849801
+    },
+    {
+      "name": "SlotNut_Cradle_0",
+      "frame_surface_xyz_mm": [
+        -80.0,
+        -65.0,
+        69.0
+      ],
+      "inward": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849784
+    },
+    {
+      "name": "SlotNut_Cradle_1",
+      "frame_surface_xyz_mm": [
+        -80.0,
+        65.0,
+        69.0
+      ],
+      "inward": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849793
+    },
+    {
+      "name": "SlotNut_Cradle_2",
+      "frame_surface_xyz_mm": [
+        20.0,
+        -65.0,
+        69.0
+      ],
+      "inward": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mass_delta_kg": 0.001886836813984981
+    },
+    {
+      "name": "SlotNut_Cradle_3",
+      "frame_surface_xyz_mm": [
+        20.0,
+        65.0,
+        69.0
+      ],
+      "inward": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849801
+    },
+    {
+      "name": "SlotNut_Electronics_0",
+      "frame_surface_xyz_mm": [
+        -178.0,
+        -65.0,
+        99.0
+      ],
+      "inward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849784
+    },
+    {
+      "name": "SlotNut_Electronics_1",
+      "frame_surface_xyz_mm": [
+        -178.0,
+        65.0,
+        99.0
+      ],
+      "inward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849793
+    },
+    {
+      "name": "SlotNut_Electronics_2",
+      "frame_surface_xyz_mm": [
+        -117.0,
+        -65.0,
+        99.0
+      ],
+      "inward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849784
+    },
+    {
+      "name": "SlotNut_Electronics_3",
+      "frame_surface_xyz_mm": [
+        -117.0,
+        65.0,
+        99.0
+      ],
+      "inward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849793
+    },
+    {
+      "name": "SlotNut_FrontDeck_0",
+      "frame_surface_xyz_mm": [
+        75.0,
+        -65.0,
+        99.0
+      ],
+      "inward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849793
+    },
+    {
+      "name": "SlotNut_FrontDeck_1",
+      "frame_surface_xyz_mm": [
+        75.0,
+        65.0,
+        99.0
+      ],
+      "inward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "mass_delta_kg": 0.0018868368139849801
+    },
+    {
+      "name": "SlotNut_FrontDeck_2",
+      "frame_surface_xyz_mm": [
+        175.00000000000003,
+        -65.0,
+        99.0
+      ],
+      "inward": [
+        -3.552713678800507e-15,
+        0.0,
+        -1.0
+      ],
+      "mass_delta_kg": 0.001886836813984981
+    },
+    {
+      "name": "SlotNut_FrontDeck_3",
+      "frame_surface_xyz_mm": [
+        175.00000000000003,
+        65.0,
+        99.0
+      ],
+      "inward": [
+        -3.552713678800507e-15,
+        0.0,
+        -1.0
+      ],
+      "mass_delta_kg": 0.001886836813984981
+    }
+  ],
+  "electrical_reservations_xyz_LWH_mm": {
+    "Protection": [
+      155,
+      -120,
+      112,
+      70,
+      70,
+      35
+    ],
+    "ClampAndPower": [
+      175,
+      -45,
+      106,
+      50,
+      90,
+      35
+    ],
+    "EmergencyStop": [
+      175,
+      65,
+      112,
+      40,
+      40,
+      60
+    ],
+    "SupervisorRS485": [
+      -225,
+      40,
+      112,
+      70,
+      45,
+      30
+    ],
+    "Computer": [
+      -225,
+      -45,
+      106,
+      70,
+      80,
+      40
+    ]
+  },
+  "mass": {
+    "previous_base_estimate_kg": 6.787808492626768,
+    "mount_change_kg": 3.453044182967133e-05,
+    "slot_nut_change_kg": 0.0830208198153391,
+    "new_CAD_parts_kg": 1.582279321882445,
+    "deck_straps_and_edge_guard_allowance_kg": 0.28,
+    "electrical_allowance_carried_kg": 2.1,
+    "estimated_base_kg": 8.73314316476638,
+    "remaining_to_10kg_kg": 1.2668568352336198,
+    "is_weighed": false
+  },
+  "scope": "Reconstructed extrusion/nut interface, nominal tire axial datum, rigid undeformed tires. Reservations are not electronic component fit approval. No local contact/thread/thermal/impact certification.",
+  "STEP_roundtrip": {
+    "valid": true,
+    "solids": 226,
+    "volume_difference_mm3": 0.10268322192132473
+  }
+}

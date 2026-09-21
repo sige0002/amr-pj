@@ -1,0 +1,354 @@
+{
+  "design": "AMR A6 removable low cargo deck",
+  "updated": "2026-09-21",
+  "status": "fabrication_candidate_material_joints_and_loaded_test_pending",
+  "geometry": {
+    "plate_LWT_mm": [
+      300,
+      300,
+      4
+    ],
+    "plate_bottom_top_z_mm": [
+      114,
+      118
+    ],
+    "frame_top_z_mm": 99,
+    "support_bar_section_mm": [
+      15,
+      15
+    ],
+    "support_bar_length_mm": 300,
+    "support_bar_y_mm": [
+      -135,
+      135
+    ],
+    "frame_holes_xy_mm": [
+      [
+        -120,
+        -135
+      ],
+      [
+        0,
+        -135
+      ],
+      [
+        120,
+        -135
+      ],
+      [
+        -120,
+        135
+      ],
+      [
+        0,
+        135
+      ],
+      [
+        120,
+        135
+      ]
+    ],
+    "frame_hole_diameter_mm": 6.6,
+    "stop_inner_face_distance_from_origin_mm": 102,
+    "stop_bar_LWH_mm": [
+      50,
+      15,
+      15
+    ],
+    "stop_holes_xy_mm": [
+      [
+        109.5,
+        -19
+      ],
+      [
+        109.5,
+        19
+      ],
+      [
+        -109.5,
+        -19
+      ],
+      [
+        -109.5,
+        19
+      ],
+      [
+        -19,
+        109.5
+      ],
+      [
+        19,
+        109.5
+      ],
+      [
+        -19,
+        -109.5
+      ],
+      [
+        19,
+        -109.5
+      ]
+    ],
+    "stop_hole_diameter_mm": 4.5,
+    "strap_slots": [
+      {
+        "center_xy_mm": [
+          120,
+          0
+        ],
+        "overall_length_width_mm": [
+          30,
+          6
+        ],
+        "long_axis": "y"
+      },
+      {
+        "center_xy_mm": [
+          -120,
+          0
+        ],
+        "overall_length_width_mm": [
+          30,
+          6
+        ],
+        "long_axis": "y"
+      },
+      {
+        "center_xy_mm": [
+          0,
+          120
+        ],
+        "overall_length_width_mm": [
+          30,
+          6
+        ],
+        "long_axis": "x"
+      },
+      {
+        "center_xy_mm": [
+          0,
+          -120
+        ],
+        "overall_length_width_mm": [
+          30,
+          6
+        ],
+        "long_axis": "x"
+      }
+    ],
+    "bar_stock_cut_plan_mm": [
+      300,
+      300,
+      50,
+      50,
+      50,
+      50
+    ],
+    "bar_stock_total_finished_length_mm": 800,
+    "bar_stock_purchased_length_mm": 995,
+    "saw_kerf_allowance_mm": 18,
+    "minimum_deck_to_battery_reserved_top_mm": 14,
+    "minimum_deck_to_existing_electronics_screw_top_mm": 5,
+    "battery_service": "Remove cargo/straps, undo six M6 bolts, lift deck and bars; battery then exits upward. Power isolated first."
+  },
+  "hardware": {
+    "frame_bolt": "M6x30 socket screw plus two JIS B1256 grade A M6 washers per bolt",
+    "frame_bolt_length_mm": 30,
+    "frame_bolt_qty": 6,
+    "slot_nut": "MISUMI HNTT6-6",
+    "slot_nut_qty": 6,
+    "slot_nut_geometry_status": "Provided by assembly slotnut_factory(x,y,99,(0,0,-1)); absent callback omits six nuts from CAD and carries8g/each mass allowance; no old geometry reused.",
+    "stop_bolt": "M4x25 socket screw",
+    "stop_bolt_qty": 8,
+    "stop_nut": "M4 plain hex nut",
+    "stop_nut_qty": 8,
+    "stop_washer": "M4 9x4.3x0.8 plain washer under nut",
+    "stop_washer_qty": 8,
+    "thread_preload_grade_qualification": false,
+    "nominal_M6_seating_z_mm": 121.2,
+    "nominal_M6_tip_z_mm": 91.2,
+    "actual_slot_bottom_and_thread_engagement_verified": false,
+    "frame_washer": "M6 JIS B1256 grade A / ISO7089 nominal12x6.4x1.6",
+    "frame_washer_qty": 12,
+    "frame_washer_each_thickness_mm": 1.6,
+    "frame_washer_actual_thickness_range_mm": [
+      1.4,
+      1.8
+    ],
+    "frame_bolt_actual_length_range_mm": [
+      29.58,
+      30.42
+    ],
+    "nominal_slot_bottom_clearance_mm": 1.2,
+    "nominal_nut_body_bottom_z_mm": 91.5,
+    "nut_nose_top_z_mm": 97.8,
+    "partial_tolerance_slot_clearance_min_mm": 0.23,
+    "measured_screw_penetration_from_frame_face_acceptance_mm": [
+      7.5,
+      8
+    ],
+    "dimensional_sources": [
+      "https://www.nbk1560.com/images/ja-JP/product/technical_data/rokkaku_bolt_NBK/rokkaku_bolt_NBK_1.pdf",
+      "https://www.nbk1560.com/images/ja-JP/product/technical_data/hira_zagane_NBK/hira_zagane_NBK_1.pdf"
+    ],
+    "tolerance_note": "0.23mm is a partial stack calculation only (plate3.85..4.15, bar15 nominal, two washers2.8..3.6, bolt29.58..30.42); bar/slot/nut tolerances excluded. Measure all six stacks, select washer pairs/bolt lengths so nominal penetration7.5..8.0 and confirm actual floor clearance>=1mm. Complete thread engagement/preload remain separate checks."
+  },
+  "cargo_conditions": {
+    "normal_payload_kg": 10,
+    "five_degree_climb_payload_kg": 8,
+    "structural_screening_payload_kg": 15,
+    "container_and_load_spreader_mass_in_payload": true,
+    "flat_bottom_container_footprint_mm": [
+      200,
+      200
+    ],
+    "container_location_xy_mm": [
+      0,
+      0
+    ],
+    "stop_clearance_each_side_mm": 2,
+    "payload_cg_x_range_mm": [
+      -30,
+      30
+    ],
+    "payload_cg_y_range_mm": [
+      -30,
+      30
+    ],
+    "payload_cg_max_z_mm": 220,
+    "pressure_distribution_for_plate_SF2_screening": "Approximately uniform over central continuous200x200. CG envelope for vehicle reactions is not proof of this pressure distribution.",
+    "point_feet_or_hard_point_load": "Not approved; add a separately checked load-spreader or re-evaluate actual contacts.",
+    "restraint": "Four metal stops and two perpendicular25mm cam-buckle straps. Container sides must bear on stops; protect strap edges, retain slack, hand tension only. No lifting.",
+    "strap_pretension_limit_N_each": 20,
+    "strap_pretension_limit_status": "Target20N/strap. Use a force gauge or spring balance to limit tail pull and verify retained tension on actual restraint fixture; no unchecked hand-tight/rachet operation. Measuring equipment unselected and excluded from materials budget.50N sensitivity is not permission.",
+    "whole_vehicle_loaded_use_released": false
+  },
+  "structural_screening": {
+    "payload_kg": 15,
+    "static_safety_factor_target": 2,
+    "support_span_mm": 270,
+    "effective_strip_width_mm": 200,
+    "loaded_length_mm": 200,
+    "minimum_thickness_for_screening_mm": 3.85,
+    "minimum_thickness_status": "Conservative design acceptance minimum; vendor tolerance not specified, measure/confirm received plate.",
+    "youngs_modulus_MPa": 70000,
+    "conditional_proof_stress_MPa": 65,
+    "proof_stress_status": "Conditional A5052 O minimum reference only; purchased temper/proof strength not confirmed, no H34 strength assumed.",
+    "material_reference": "https://www.alumitech.co.jp/al-plate-mp",
+    "rejected_point_load_patch_width_mm": 50,
+    "excluded": [
+      "Hole/slot stress concentration and strap-anchor upward reactions",
+      "Actual nonuniform cargo and strap pressure/contact",
+      "Frame slot and nut engagement/preload",
+      "Impact and fatigue",
+      "Whole-frame and wheel-mount SF2"
+    ],
+    "plate_borne_dead_mass_allowance_kg": 1.6,
+    "strap_pretension_N_each": 20,
+    "strap_vertical_legs": 4,
+    "pretension_basis": "Four vertical legs each20N add80N to payload+1.6kg dead allowance. Treated as uniform200x200 equivalent load; actual rigid bottom spread/contact must be verified. Gauge-limited tail pull and actual tension check are prerequisites, not just a hand-tight warning."
+  },
+  "procurement": {
+    "date_checked": "2026-09-21",
+    "plate": {
+      "item": "ESCO EA441VC-41 A5052 300x300x4, one sheet",
+      "quantity": 1,
+      "unit_jpy_incl_tax": 4521,
+      "shipping_jpy_reference": 0,
+      "url": "https://www.monotaro.com/p/4993/2618/",
+      "shipping_source": "https://help.monotaro.com/app/answers/detail/a_id/19",
+      "personal_purchase_source": "https://www.monotaro.com/main/rule/",
+      "basis": "Seller display4521税込, one plate0.972kg. Order4110税別 exceeds3500 free-standard-shipping threshold; special/region charges final at checkout. Temper unlisted, acceptance minimum thickness3.85mm must be confirmed/measured."
+    },
+    "square_bar": {
+      "item": "Hikari AS6151 aluminum15x15x995, one stock",
+      "quantity": 1,
+      "unit_jpy_incl_tax": 1507,
+      "shipping_jpy_reference": 600,
+      "url": "https://store.shopping.yahoo.co.jp/akibaoo/4977720061511.html",
+      "specification_url": "https://www.orange-book.com/ja/c/products/index.html?itemCd=AS6151++++++++++++++++++++++++6174",
+      "catalog_stock_mass_kg": 0.602,
+      "basis": "Seller displayed retail price/region example shipping; material is aluminum with B2 anodize, alloy/temper not published. One stock supplies all six pieces."
+    },
+    "cargo_straps": {
+      "item": "E-Value BT-2520BK25mmx2m",
+      "quantity": 2,
+      "unit_jpy_incl_tax": 393,
+      "shipping_jpy_reference_one_order": 600,
+      "catalog_each_mass_kg": 0.125,
+      "maximum_working_force_N_each": 800,
+      "url": "https://store.shopping.yahoo.co.jp/hcbrico/4977292226752.html",
+      "specification_url": "https://www.fujiwarasangyo-markeweb2.com/DispDetail.do?itemID=t000100214475&volumeName=00017",
+      "basis": "Seller displayed price; manufacturer125g and0.8kN working force. Product force is not a rating of the assembled deck/slots."
+    },
+    "fasteners_and_extra_slotnuts": {
+      "planning_allowance_jpy": 1500,
+      "quoted": false,
+      "basis": "Six M6x30, twelve M6 grade A washers plus sorting spares, six HNTT6-6, eight M4x25/washer/nut sets; purchasing units and personal MISUMI supply unresolved."
+    },
+    "edge_protection_and_slack_retention": {
+      "planning_allowance_jpy": 300,
+      "quoted": false,
+      "basis": "Protect all webbing/metal contact edges and secure tails; final pad selection unconfirmed."
+    },
+    "machining": {
+      "quoted_jpy": null,
+      "self_work_includes_tools_or_labor": false,
+      "operations": "Six bar cuts; plate14 circular holes+four6x30 obround slots; support bars six6.6 holes; stop bars eight4.5 holes; deburr all edges and verify flat bearing."
+    },
+    "displayed_goods_subtotal_jpy": 6814,
+    "reference_shipping_subtotal_jpy": 1200,
+    "planning_allowances_subtotal_jpy": 1800,
+    "self_work_budget_before_contingency_jpy": 9814,
+    "machined_delivered_total_jpy": null,
+    "note": "No order or inquiry sent. Seller price is not a delivered machining quote or a guarantee of stock; regional shipping/cart combination must be checked. Container/load-spreader is cargo and unselected. Existing battery straps remain separate.",
+    "excluded_tools": "Drill/saw/vice, deburring tools and strap force measuring equipment unselected; no tool costs or labor included."
+  },
+  "mass_budget": {
+    "geometry_calculated_in_cargo_deck_mass_report": true,
+    "two_catalog_straps_kg": 0.25,
+    "edge_protection_and_slack_retention_kg": 0.03,
+    "measured": false,
+    "note": "Final55-part geometry uses hardware_geometry.deck_slotnut. Full bought strap mass0.25kg and edge-protection allowance0.03kg are added once. Fallback8g/nut is only used without callback. Unmeasured.",
+    "unmodeled_slot_nut_each_allowance_kg": 0.008,
+    "calculated_added_base_mass_kg": 1.8619517554777376,
+    "calculated_cad_metal_fasteners_kg": 1.5819517554777376,
+    "slotnut_shapes_supplied": true
+  },
+  "validation": {
+    "date": "2026-09-21",
+    "headless_FreeCAD": "1.1.3",
+    "physical_parts": 55,
+    "all_valid": true,
+    "internal_interference_count": 0,
+    "geometry_scope": "Nominal metal/hardware only; complete assembly check is in assembly_validation.json; references are not purchased shapes.",
+    "screening": {
+      "scope": "Central200x200 uniform equivalent load including plate-borne dead mass and four strap legs. Upward strap-anchor reactions are ignored for this comparison. Local forces/contact and joints remain to be verified.",
+      "payload_kg": 15,
+      "payload_force_N": 147.09975,
+      "plate_borne_dead_mass_allowance_kg": 1.6,
+      "dead_force_N": 15.69064,
+      "strap_vertical_force_N": 80,
+      "service_force_N": 242.79039,
+      "factored_force_N": 485.58078,
+      "minimum_thickness_mm": 3.85,
+      "strip_section_modulus_mm3": 494.0833333333333,
+      "service_bending_moment_Nmm": 10318.591575,
+      "service_bending_stress_MPa": 20.884314201383035,
+      "factored_bending_stress_MPa": 41.76862840276607,
+      "conditional_proof_stress_MPa": 65,
+      "conditional_simple_bending_safety_factor": 3.112383742804227,
+      "service_center_deflection_mm": 1.1611007091554324,
+      "factored_center_deflection_mm": 2.322201418310865,
+      "conditional_simple_bending_meets_target": true,
+      "arbitrary_total_load_on_50mm_strip_service_MPa": 132.67681963231573,
+      "arbitrary_point_load_factored_MPa": 265.35363926463145,
+      "point_load_permitted": false,
+      "rejected_3mm_at_min2p87_factored_MPa": 75.16365313406743,
+      "sensitivity_50N_each_strap_factored_MPa": 62.41291917692697,
+      "sensitivity_50N_is_operating_permission": false,
+      "vehicle_SF2_certified": false,
+      "deck_SF2_certified": false
+    }
+  }
+}

@@ -1,0 +1,503 @@
+{
+  "schema_version": "1.0",
+  "revision": "A6-R1-interface-review",
+  "date": "2026-09-21",
+  "status": "quote_and_fit_definition_complete_structural_and_hardware_qualification_pending",
+  "review_items": [
+    "DR01",
+    "DR02",
+    "DR07"
+  ],
+  "units": "mm, N, N*m unless stated",
+  "scope": {
+    "geometry_correction": true,
+    "manufacturing_release": false,
+    "operation_release": false,
+    "safety_factor_2_proven": false,
+    "note": "Dimensions and conditional fit calculations only. No contact FEA, certified preload, female-thread stripping or frame-slot proof completed."
+  },
+  "requirements_reference": "requirements.json",
+  "geometry": {
+    "outer_LWH_mm": [
+      90,
+      30,
+      34
+    ],
+    "flange_thickness_limits_mm": [
+      4.9,
+      5.1
+    ],
+    "web_width_thickness_mm": [
+      60,
+      17
+    ],
+    "frame_M6_pitch_mm": 75,
+    "quote_origin_world_mm": [
+      45,
+      120,
+      35
+    ],
+    "motor_fixed_face_world_y_mm": 138,
+    "pocket_center_world_xz_mm": [
+      90,
+      50.18
+    ],
+    "motor_hole_group_center_world_xz_mm": [
+      90,
+      50.35
+    ],
+    "intentional_hole_group_above_pocket_mm": 0.17,
+    "motor_axis_nominal_world_z_mm": 50.35,
+    "pocket_depth_limits_mm": [
+      8.9,
+      9.1
+    ],
+    "unrecessed_rear_wall_limits_mm": [
+      7.95,
+      8.05
+    ],
+    "pocket": {
+      "source": "../amr05/motor-seat-profile-source.json",
+      "analytic_uniform_offset_mm": 0.12,
+      "big_arc_radius_basic_mm": 9.67,
+      "flat_distance_basic_mm": 8.22,
+      "small_corner_radius_basic_mm": 1.62,
+      "total_surface_profile_zone_mm": 0.1,
+      "profile_zone_symmetric": true,
+      "profile_includes_location": true,
+      "note": "Uniform 0.12 outward offset from published bracket analytic profile; all functional wall segments controlled. Cable cutouts excluded."
+    },
+    "motor_holes": {
+      "quantity_each": 3,
+      "diameter_limits_mm": [
+        3.2,
+        3.3
+      ],
+      "PCD_basic_mm": 15.2,
+      "centers_local_xz_basic_mm": [
+        [
+          45,
+          22.95
+        ],
+        [
+          38.4182069312383,
+          11.55
+        ],
+        [
+          51.5817930687617,
+          11.55
+        ]
+      ],
+      "position_diametral_zone_mm": 0.1,
+      "rear_counterbore": {
+        "diameter_limits_mm": [
+          6.2,
+          6.3
+        ],
+        "depth_limits_mm": [
+          0.45,
+          0.55
+        ],
+        "remaining_wall_limits_mm": [
+          7.4,
+          7.6
+        ],
+        "purpose": "Floating small steel washer; bottom must support washer without burrs. Opening near the cable relief is intentional if encountered.",
+        "position_diametral_zone_mm": 0.1,
+        "position_datums": [
+          "A",
+          "B",
+          "C"
+        ],
+        "axis_basic_location": "Same basic X/Z coordinates as the three clearance holes; counterbore included in position control."
+      }
+    },
+    "cable": {
+      "rear_throat_width_limits_mm": [
+        6.4,
+        6.6
+      ],
+      "rear_round_top_radius_nominal_mm": 3.25,
+      "front_and_lower_width_nominal_mm": 9.5,
+      "path_reservation_diameter_mm": 6,
+      "source_STEP_local_bundle_approx_mm": 4.8,
+      "nominal_radial_path_clearance_mm": 0.25,
+      "min_radial_clearance_width_only_mm": 0.2,
+      "note": "STEP wire diameter is not a supplier cable tolerance. Verify actual bundle, insulation, bend radius and relief center placement."
+    },
+    "frame_holes": {
+      "quantity_each": 2,
+      "diameter_limits_mm": [
+        6.6,
+        6.8
+      ],
+      "centers_local_xy_mm": [
+        [
+          7.5,
+          15
+        ],
+        [
+          82.5,
+          15
+        ]
+      ],
+      "head_side_chamfer_C_limits_mm": [
+        0.2,
+        0.4
+      ],
+      "head_side_chamfer_nominal_mm": 0.3,
+      "note": "Center screw/nut to clearance hole; underhead fillet seating is an inspection item, not guaranteed from a cylinder-only collision model."
+    },
+    "datums": {
+      "A": {
+        "feature": "3030 contact plane, local Z34",
+        "flatness_mm": 0.05
+      },
+      "B": {
+        "feature": "Motor endface seating plane, local Y18",
+        "flatness_mm": 0.05,
+        "perpendicularity_to_A_mm": 0.05
+      },
+      "C": {
+        "feature": "Derived median plane of outside local X0/X90 faces"
+      },
+      "rear_parallelism_to_B_mm": 0.05,
+      "note": "Basic XYZ and contour coordinates locate to A|B|C. Do not add a second +/-0.05 pocket-axis error on top of surface-profile total zone."
+    }
+  },
+  "motor_source_limits": {
+    "motor": "M0601C_111",
+    "fixed_side_thread": "3 x M2.5 x 0.45",
+    "published_fixed_side_thread_depth_mm": 5,
+    "diameter_limits_mm": [
+      18.85,
+      19.05
+    ],
+    "flat_distance_limits_mm": [
+      7.85,
+      8.15
+    ],
+    "PCD_limits_mm": [
+      15.12,
+      15.28
+    ],
+    "motor_hole_position_radial_acceptance_mm": 0.05,
+    "motor_hole_position_condition_verified": false,
+    "note": "PCD tolerance alone does not prove hole-angle, boss concentricity or complete hole-pattern position. Lot gauging remains required. Do not reuse DDSM115 depth6."
+  },
+  "conditional_fit": {
+    "purpose": "Approximate translational seating envelope from straight-flat and large-arc extrema, conditional on full-profile inspection and parallel endfaces",
+    "nominal_upward_seating_mm": 0.17,
+    "centered_flat_gap_limits_mm": [
+      0.02,
+      0.42
+    ],
+    "centered_large_arc_gap_limits_mm": [
+      0.095,
+      0.295
+    ],
+    "upward_flat_normal_component": 0.5,
+    "upward_seating_envelope_mm": [
+      0.04,
+      0.295
+    ],
+    "installed_axis_world_z_envelope_mm": [
+      50.22,
+      50.475
+    ],
+    "axis_error_from_nominal_mm": [
+      -0.13,
+      0.125
+    ],
+    "largest_assumed_axis_error_mm": 0.13,
+    "bracket_hole_position_radial_mm": 0.05,
+    "motor_hole_position_radial_mm": 0.05,
+    "combined_hole_center_error_bound_mm": 0.23,
+    "shank_radial_clearance_min_mm": 0.35,
+    "remaining_shank_radial_clearance_mm": 0.12,
+    "optional_assembly_reserve_mm": 0.05,
+    "remaining_with_assembly_reserve_mm": 0.07,
+    "inequality": "max_abs(delta_seat-0.17)+e_bracket+e_motor+c_assembly <= (D_hole_min-d_screw_max)/2",
+    "equality_evaluation": "0.13+0.05+0.05+0.05 = 0.28 <= 0.35",
+    "limitations": [
+      "Upward seating can occur on an inclined flat before the top arc.",
+      "This is not an all-direction contact or rotational backlash proof.",
+      "Actual x translation, angular seating, entry chamfers and blended corners require actual-profile and three-screw assembly gauging.",
+      "Adjust caster contact based on measured installed height and loaded tire deflection; CAD nominal contact is not physical contact certification."
+    ]
+  },
+  "motor_fasteners": {
+    "screw": {
+      "preferred_candidate": "WILCO FC-2512",
+      "alternative_candidate": "MISUMI CB2.5-12",
+      "quantity_total": 6,
+      "specification": "M2.5 x 0.45 x 12, JIS B1176, strength class12.9, SCM435, black oxide, full thread",
+      "length_limits_mm": [
+        11.65,
+        12.35
+      ],
+      "nominal_head_diameter_mm": 4.5,
+      "minimum_head_outer_diameter_mm": 4.32,
+      "minimum_bearing_face_diameter_mm": 4.18,
+      "maximum_underhead_fillet_envelope_diameter_mm": 3.1,
+      "shank_diameter_limits_mm": [
+        2.36,
+        2.5
+      ],
+      "tip_incomplete_thread_max_mm": 0.9,
+      "source_price_JPY_each_at_10_pieces": 25,
+      "price_excludes_shipping": true
+    },
+    "washer": {
+      "candidate": "WILCO FW-2505-05EB",
+      "quantity_total": 6,
+      "material_public": "steel, black trivalent chromate",
+      "nominal_ID_OD_thickness_mm": [
+        2.7,
+        5,
+        0.5
+      ],
+      "acceptance_target_standard": "JIS B1256 small-series gradeA / ISO7092 dimensional limits",
+      "acceptance_ID_limits_mm": [
+        2.7,
+        2.84
+      ],
+      "acceptance_OD_limits_mm": [
+        4.7,
+        5
+      ],
+      "acceptance_thickness_limits_mm": [
+        0.45,
+        0.55
+      ],
+      "listed_product_standard_compliance_confirmed": false,
+      "hardness_grade_confirmed": false,
+      "source_price_JPY_each_at_10_pieces": 29,
+      "price_excludes_shipping": true,
+      "maximum_radial_float_vs_min_shank_mm": 0.24,
+      "maximum_radial_offset_from_mount_hole_assumption_mm": 0.47,
+      "minimum_radial_space_to_counterbore_mm": 0.13,
+      "minimum_edge_distance_to_rear_slot_width_only_mm": 0.3117930687617336,
+      "minimum_projected_plate_support_area_mm2": 7.7283179278308936,
+      "minimum_projected_head_support_area_mm2": 7.388083443447114,
+      "note": "Areas are ideal flat-contact screening values after full seating; washer bending, edge chamfers, coatings, hardness and preload not qualified. Centering and full support inspection required."
+    },
+    "stack": {
+      "formula": "L_screw - (rear_wall - counterbore_depth + washer_thickness)",
+      "clamped_stack_nominal_mm": 8,
+      "clamped_stack_limits_mm": [
+        7.85,
+        8.15
+      ],
+      "geometric_penetration_nominal_mm": 4,
+      "geometric_penetration_limits_mm": [
+        3.5,
+        4.5
+      ],
+      "remaining_depth_at_5mm_nominal_limit_min_mm": 0.5,
+      "male_full_profile_overlap_lower_screen_mm": 2.6,
+      "female_entry_and_end_allowance_mm": null,
+      "effective_full_thread_engagement_verified": false,
+      "note": "Depth5 is a published thread callout, not a measured hard bottom or guaranteed usable full-thread length. Measure usable depth and incomplete threads. No torque inferred from property class."
+    }
+  },
+  "frame_fasteners": {
+    "screw": {
+      "preferred_candidate": "WILCO FC-0612",
+      "alternative_candidate": "MISUMI CB6-12",
+      "quantity_total": 4,
+      "specification": "M6 x 1 x 12, JIS B1176, class12.9, SCM435, black oxide",
+      "length_limits_mm": [
+        11.65,
+        12.35
+      ],
+      "minimum_bearing_face_diameter_mm": 9.38,
+      "maximum_underhead_fillet_envelope_diameter_mm": 6.8,
+      "maximum_hole_mouth_diameter_mm": 7.6,
+      "minimum_projected_bearing_area_mm2": 23.738188249789843,
+      "source_price_JPY_each_at_10_pieces": 33,
+      "price_excludes_shipping": true
+    },
+    "nut": {
+      "candidate": "MISUMI HNTT6-6",
+      "quantity_total": 4,
+      "material": "S10C equivalent",
+      "nose_width_A_mm": 7.8,
+      "maximum_body_width_B_mm": 15,
+      "body_thickness_E_mm": 5.5,
+      "total_thickness_T_mm": 6.3,
+      "rail_axis_length_L_mm": 14,
+      "nose_projection_mm": 0.8,
+      "body_shape": "Tapered body toward groove bottom; not a rectangular15x14x5.5 block",
+      "profile_corner_dimensions_fully_published": false,
+      "lot_dimensions_verified": false
+    },
+    "extrusion": {
+      "candidate": "MISUMI NFSL6-3030",
+      "nominal_slot_mouth_width_mm": 8,
+      "nominal_lip_thickness_mm": 2,
+      "nominal_max_cavity_width_mm": 16.5,
+      "nominal_total_depth_mm": 9,
+      "bottom_shape": "Sloping cavity walls and model-specific slot-bottom detail; depth9 is nominal deepest depth",
+      "old_CAD_error": "8mm mouth/3mm lip/13mm cavity/8mm depth and 12.8-square t4 nut were simplified incorrectly",
+      "groove_dimensions_lot_verified": false
+    },
+    "seated_nut_nominal_depths_from_frame_face_mm": {
+      "nose": 1.2,
+      "load_bearing_shoulder": 2,
+      "back": 7.5
+    },
+    "bottom_slot_world_z_mm": {
+      "nose": 70.2,
+      "shoulder": 71,
+      "back": 76.5,
+      "deepest_slot_bottom": 78
+    },
+    "upper_slot_world_z_mm": {
+      "nose": 97.8,
+      "shoulder": 97,
+      "back": 91.5,
+      "deepest_slot_bottom": 90
+    },
+    "mount_chain": {
+      "frame_bottom_world_z_mm": 69,
+      "head_bearing_plane_world_z_mm": 64,
+      "nominal_tip_world_z_mm": 76,
+      "geometric_thread_overlap_nominal_mm": 5.8,
+      "deepest_slot_bottom_clearance_nominal_mm": 2,
+      "screw_and_flange_tolerances_only_overlap_limits_mm": [
+        5.35,
+        6.25
+      ],
+      "screw_and_flange_tolerances_only_bottom_clearance_limits_mm": [
+        1.55,
+        2.45
+      ],
+      "male_tip_incomplete_thread_max_mm": 2,
+      "thread_engagement_screen_after_male_tip_only_min_mm": 3.35,
+      "note": "These intervals exclude actual nut/nose/lip tolerances, female thread lead, groove bottom projection and clamping deformation. Effective engagement is not5.8 by definition."
+    },
+    "general_chain_formulas": {
+      "penetration": "p = L - t_clamped",
+      "nut_nose_depth": "u = h_lip - (T_nut-E_nut)",
+      "nominal_overlap": "l_geom = min(p,h_lip+E_nut)-u",
+      "effective_overlap": "l_eff = l_geom - male_tip_incomplete - female_entry_incomplete - other_nonengaging_length",
+      "bottom_clearance": "g_bottom = h_slot_actual_at_screw_tip - p"
+    },
+    "tightening_torque_Nm": null,
+    "verified_preload_N": null,
+    "note": "The manufacturer's11.7Nm nut reference torque is not adopted as the torque for this thin aluminum bracket/slot joint."
+  },
+  "verification_gates": [
+    {
+      "id": "DR01_profile_and_pattern",
+      "required": "Vendor acknowledges both drawing pages and basic STEP; inspect full profile0.10 and hole-position0.10 to common datums. Record actual motor fit and hole pattern."
+    },
+    {
+      "id": "DR02_contact_and_M2p5",
+      "required": "Seat to upward load contour, inspect three screws inserted without forcing, full endface contact, washer/fillet fit and cable clearance. Confirm female thread material, usable full engagement and torque/preload before strength qualification."
+    },
+    {
+      "id": "DR07_M6_stack",
+      "required": "Use actual HNTT6/NFSL cross sections. Measure lip/slot/nut/bolt/clamped stack, verify no bottoming, complete head seating, effective thread engagement and access before assembly release."
+    },
+    {
+      "id": "strength",
+      "required": "Evaluate contact pressure, washer bending, thread stripping, preload, prying and groove-lip pullout for accepted load cases. SF2 is unproven; static CAD collision absence does not satisfy it."
+    },
+    {
+      "id": "fixture",
+      "required": "Do not apply245.16625N or490.3325N fixture load through a motor solely because the mount is tested. Use a separately reviewed representative dummy boss/fixture; motor catalogradial120N/axial60N has a different scope."
+    }
+  ],
+  "sources": [
+    {
+      "id": "motor_manual",
+      "url": "https://d2air1d4eqhwg2.cloudfront.net/media/files/a48110eb-432c-4083-a159-9e0f35913b23.pdf",
+      "use": "p8 fixed-side geometry/threaddepth5; lot application unconfirmed"
+    },
+    {
+      "id": "motor_STEP",
+      "url": "https://github.com/takasumasakazu/DirectDriveTech_test/blob/main/STEPdata/M0601C_111.STEP",
+      "use": "published nominal motor interface; not manufacturing tolerance"
+    },
+    {
+      "id": "vendor_bracket",
+      "url": "https://www.switch-science.com/products/9204",
+      "use": "published analytic pocket profile; original depth3/rear7 differs from new design"
+    },
+    {
+      "id": "motor_current_specs",
+      "url": "https://shop.directdrive.com/pages/m0601c-111-specs",
+      "use": "ratedradial120N/axial60N; load datum and lot applicability unconfirmed"
+    },
+    {
+      "id": "screw_candidate",
+      "url": "https://wilco.jp/products/F/FC.html",
+      "use": "FC-2512/FC-0612 product specs and individual procurement"
+    },
+    {
+      "id": "washer_candidate",
+      "url": "https://wilco.jp/products/F/FW-EB.html",
+      "use": "FW-2505-05EB nominal dimensions and small quantities; hardness and grade not published"
+    },
+    {
+      "id": "cap_screw_standard",
+      "url": "https://www.nbk1560.com/images/ja-JP/product/technical_data/rokkaku_bolt_NBK/rokkaku_bolt_NBK_1.pdf",
+      "use": "JIS B1176:2015 excerpt: lengths, da/dw, incomplete threads"
+    },
+    {
+      "id": "washer_standard",
+      "url": "https://www.nbk1560.com/images/ja-JP/product/technical_data/hira_zagane_NBK/hira_zagane_NBK_1.pdf",
+      "use": "JIS B1256:2008 small-series gradeA dimensional limits; purchase conformity is separate"
+    },
+    {
+      "id": "nut_dimensions",
+      "url": "https://sg.misumi-ec.com/pdf/fa/2013/p1871.pdf",
+      "use": "HNTT6 nominal A/B/E/T/L and taper; current purchase drawing/lot remains to be checked"
+    },
+    {
+      "id": "nut_current",
+      "url": "https://jp.misumi-ec.com/vona2/detail/110302610850/",
+      "use": "HNTT6 material, applicability and reference torque"
+    },
+    {
+      "id": "frame_current",
+      "url": "https://jp.misumi-ec.com/vona2/detail/110311092329/",
+      "use": "NFSL6-3030 current product and nominal cross section"
+    },
+    {
+      "id": "frame_drawing",
+      "url": "https://jp.misumi-ec.com/linked/item/10311092329/img/drw_20_005.gif",
+      "use": "current primary drawing:8/16.5/2/7"
+    },
+    {
+      "id": "frame_slot_detail",
+      "url": "https://my.misumi-ec.com/pdf/fa/2014/p2_569.pdf",
+      "use": "slotdepth9 and model-specific sloped bottom detail"
+    }
+  ],
+  "verification_record": {
+    "CAD_metadata_file": "M0601C_mount_A6_R1.json",
+    "CAD_step_sha256_reviewed": "790986f799318a681d220ad8c6d4676e5f879409067c87b8af5ff7fc0ccc039d",
+    "two_page_quote_drawing_visually_reviewed": true,
+    "drawing_followups_sent": [
+      "Include motor flat limits as well as diameter in seating-envelope note.",
+      "Explicitly apply position phi0.10 A|B|C to washer counterbores."
+    ],
+    "independent_checks_passed": [
+      "JSON parse",
+      "16 corner combinations of M2.5 screw/rear/counterbore/washer stack",
+      "4 corner combinations of M6 screw/flange stack",
+      "HNTT6 top/bottom slot coordinate transforms",
+      "Screw radial-clearance inequality"
+    ],
+    "not_done": [
+      "Actual hardware gauging",
+      "Physical assembly",
+      "Structural test",
+      "Contact FEA",
+      "Release authorization"
+    ]
+  }
+}

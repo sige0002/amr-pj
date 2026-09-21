@@ -1,0 +1,493 @@
+{
+  "design": "A6",
+  "revision": "A6-R1",
+  "source_metadata_file": "../M0601C_mount_A6_R1.json",
+  "source_metadata_sha256": "893dd53f7e4727cea75aec4d16f0510955140848709aa49d6972119a7830518d",
+  "source_status": "quote_and_fit_mock_only_not_released",
+  "build_started_unix_s": 1789973820.237133,
+  "purpose": "PLA hand-fit geometry mock only; no load test or loaded driving",
+  "source_step": "../M0601C_mount_A6_R1.step",
+  "source_sha256": "790986f799318a681d220ad8c6d4676e5f879409067c87b8af5ff7fc0ccc039d",
+  "source_dimensions_mm": [
+    90.0,
+    30.0,
+    34.0
+  ],
+  "source_valid_solid_count": 1,
+  "source_CAD_volume_mm3": 38447.14703933507,
+  "nominal_full_mount_matches_source_STEP": true,
+  "full_inverse_transform_symmetric_difference_mm3": 0.0,
+  "coupon_inverse_transform_symmetric_difference_mm3": 0.0,
+  "no_fit_compensation_added": true,
+  "coupon_source_box_origin_mm": [
+    33.0,
+    10,
+    0
+  ],
+  "coupon_source_box_size_mm": [
+    24,
+    17,
+    29
+  ],
+  "coupon_pocket_depth_mm": 9,
+  "coupon_rear_wall_mm": 8,
+  "coupon_pocket_opening_direction": "+print Z",
+  "coupon_interface": {
+    "checked_against_STEP_faces_and_solid_probes": true,
+    "motor_holes_diameter_mm": 3.2,
+    "motor_holes_x_z_ymin_ymax_mm": [
+      [
+        38.418206931238,
+        11.55,
+        10.5,
+        18.0
+      ],
+      [
+        45.0,
+        22.95,
+        10.5,
+        18.0
+      ],
+      [
+        51.581793068762,
+        11.55,
+        10.5,
+        18.0
+      ]
+    ],
+    "motor_holes_PCD_mm": [
+      15.200000000000466,
+      15.2,
+      15.200000000000466
+    ],
+    "washer_counterbore_diameter_mm": 6.2,
+    "washer_counterbores_x_z_ymin_ymax_mm": [
+      [
+        38.418206931238,
+        11.55,
+        10.0,
+        10.5
+      ],
+      [
+        45.0,
+        22.95,
+        10.0,
+        10.5
+      ],
+      [
+        51.581793068762,
+        11.55,
+        10.0,
+        10.5
+      ]
+    ],
+    "rear_wall_nominal_mm": 8,
+    "straight_hole_land_after_counterbore_mm": 7.5,
+    "seat_depth_mm": 9,
+    "seat_small_relief_radius_mm": 1.62,
+    "seat_small_relief_count": 6,
+    "seat_large_arc_radius_mm": 9.67,
+    "seat_axis_local_xz_mm": [
+      45,
+      15.18
+    ],
+    "hole_pattern_center_local_xz_mm": [
+      45.0,
+      15.35
+    ],
+    "hole_pattern_above_seat_axis_mm": 0.16999999999999993,
+    "rear_cable_throat_width_mm": 6.5,
+    "lower_cable_relief_width_mm": 9.5,
+    "solid_probes": {
+      "rear_throat_void": {
+        "origin_mm": [
+          41.75,
+          10.6,
+          8
+        ],
+        "size_mm": [
+          6.5,
+          7.3,
+          1
+        ],
+        "probe_volume_mm3": 47.44999999999999,
+        "occupied_volume_mm3": 0.0,
+        "expected_solid": false
+      },
+      "rear_throat_left_wall": {
+        "origin_mm": [
+          41.55,
+          10.6,
+          8
+        ],
+        "size_mm": [
+          0.1,
+          7.3,
+          1
+        ],
+        "probe_volume_mm3": 0.7300000000000102,
+        "occupied_volume_mm3": 0.7300000000000102,
+        "expected_solid": true
+      },
+      "rear_throat_right_wall": {
+        "origin_mm": [
+          48.35,
+          10.6,
+          8
+        ],
+        "size_mm": [
+          0.1,
+          7.3,
+          1
+        ],
+        "probe_volume_mm3": 0.7300000000000102,
+        "occupied_volume_mm3": 0.7300000000000102,
+        "expected_solid": true
+      },
+      "lower_9p5_relief_void": {
+        "origin_mm": [
+          40.25,
+          10.6,
+          3
+        ],
+        "size_mm": [
+          9.5,
+          7.3,
+          1
+        ],
+        "probe_volume_mm3": 69.35,
+        "occupied_volume_mm3": 0.0,
+        "expected_solid": false
+      },
+      "lower_relief_left_wall": {
+        "origin_mm": [
+          40.05,
+          10.6,
+          3
+        ],
+        "size_mm": [
+          0.1,
+          7.3,
+          1
+        ],
+        "probe_volume_mm3": 0.7300000000000102,
+        "occupied_volume_mm3": 0.7300000000000102,
+        "expected_solid": true
+      },
+      "lower_relief_right_wall": {
+        "origin_mm": [
+          49.85,
+          10.6,
+          3
+        ],
+        "size_mm": [
+          0.1,
+          7.3,
+          1
+        ],
+        "probe_volume_mm3": 0.7300000000000102,
+        "occupied_volume_mm3": 0.7300000000000102,
+        "expected_solid": true
+      }
+    },
+    "scope": "Checks nominal STEP geometry and full retention of these features in the coupon; it does not establish printed fit, purchased washer dimensions or motor lot tolerances."
+  },
+  "frame_interface": {
+    "frame_holes_diameter_mm": 6.6,
+    "frame_holes_x_y_zmin_zmax_mm": [
+      [
+        7.5,
+        15.0,
+        29.3,
+        34.0
+      ],
+      [
+        82.5,
+        15.0,
+        29.3,
+        34.0
+      ]
+    ],
+    "frame_hole_pitch_mm": 75.0,
+    "flange_thickness_mm": 5.0,
+    "frame_cylindrical_land_mm": 4.699999999999999,
+    "head_side_chamfer_depth_mm": 0.3000000000001357
+  },
+  "coupon_volume_fraction_of_full_solid": 0.19619632963396555,
+  "mesh_linear_deflection_mm": 0.02,
+  "mesh_angular_deflection_rad": 0.08,
+  "files": [
+    {
+      "file": "M0601C_mount_A6_R1_PLA_mock.stl",
+      "units": "mm",
+      "scale": 1.0,
+      "dimensions_mm": [
+        90.0,
+        30.0,
+        34.00000000000001
+      ],
+      "bed_z_min_mm": -7.105427357601002e-15,
+      "CAD_volume_mm3": 38447.14703933507,
+      "STL_volume_mm3": 38447.66796875,
+      "relative_volume_error": 1.3549234599872466e-05,
+      "triangles": 7392,
+      "closed_solid": true,
+      "connected_components": 1,
+      "non_manifold_edges": false,
+      "self_intersections": false,
+      "within_P1S_nominal_256mm_cube": true,
+      "sha256": "a643e75c58bdf6fcd04db83f4600abad9930d350c9d766854f3ee71ba2d82988"
+    },
+    {
+      "file": "M0601C_seat_A6_fit_coupon.stl",
+      "units": "mm",
+      "scale": 1.0,
+      "dimensions_mm": [
+        24.0,
+        29.0,
+        17.0
+      ],
+      "bed_z_min_mm": -1.7763568394002505e-15,
+      "CAD_volume_mm3": 7543.189134014926,
+      "STL_volume_mm3": 7543.45458984375,
+      "relative_volume_error": 3.5191458693121316e-05,
+      "triangles": 5156,
+      "closed_solid": true,
+      "connected_components": 1,
+      "non_manifold_edges": false,
+      "self_intersections": false,
+      "within_P1S_nominal_256mm_cube": true,
+      "sha256": "35220b10227d04a92f3e342a5a33387685218d4f9868fc9a09e310e516f80570"
+    }
+  ],
+  "preview_document": {
+    "file": "M0601C_PLA_Mock_A6.FCStd",
+    "sha256": "e771da3c5b65eebe1781f8254467f9d6f32e77445f2d038e599d01b0be1596d7",
+    "BRep_sha256": {
+      "FullMountMock.Shape.brp": "afce863fc7b8367cefc8e664b2422dd4e9a90757fbffcccbf36e906469cb684e",
+      "FullMountMock.SuppressedShape.brp": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "SeatFitCoupon.Shape.brp": "4f4c7962571f104e5b2c9a32037349f9dab3b4d361f77358fd958a7222f75cdb",
+      "SeatFitCoupon.SuppressedShape.brp": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "initial_creation_without_GUI": true,
+    "saved_without_GUI": false,
+    "serialized_FCStd_readback_checked": true,
+    "saved_GUI_visibility_verified": true,
+    "GUI_preview_captured_in_this_run": true,
+    "GUI_preview_verified": true,
+    "requires_GUI_visibility_finalize": false,
+    "BRep_sha256_at_generation": {
+      "FullMountMock.Shape.brp": "3b28115a6a484e0f3786b24c7f4fa36edea9f34d503e8d22fdaf9f5b3e625052",
+      "FullMountMock.SuppressedShape.brp": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "SeatFitCoupon.Shape.brp": "331346a1f9c3fddea612ae068a6205f44ab7c96d22ac48cd22dbcd99580cc053",
+      "SeatFitCoupon.SuppressedShape.brp": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "GUI_finalization_kept_BRep_unchanged": false,
+    "GUI_finalization_kept_geometry_unchanged": true
+  },
+  "GUI_evidence": [
+    {
+      "file": "viewport-mock.png",
+      "sha256": "1437bf965e2b2dbea3978f26f096fd6c4f25e4a56acc5aa15cdd1c3eb251dc66"
+    },
+    {
+      "file": "cad-screen-mock.png",
+      "sha256": "7a8cec719ef1eef2d76e68aa2953b3547e628633ece85b86df6daee443537ef8"
+    }
+  ],
+  "sliced": false,
+  "physical_print_tested": false,
+  "load_testing_permitted": false,
+  "manufacturing_released": false,
+  "payload_15kg_and_SF2_verified_by_mock": false,
+  "print_duration_filament_mass_and_cost": null,
+  "note": "Import unitless STL as mm at 100%. FDM fit cannot certify the metal drawing tolerances, motor revision, load capacity or SF2.",
+  "print_guide_sha256": "0c5a1b3e1986a5247780e25627f83e30b14a51c08ca7eb4ea566f506110c6f29",
+  "GUI_save_geometry_checks": [
+    {
+      "passed": true,
+      "method": "headless readback, topology, volume, area, bounds and both-direction Boolean differences",
+      "source_sha256": "790986f799318a681d220ad8c6d4676e5f879409067c87b8af5ff7fc0ccc039d",
+      "volume_tolerance_mm3": 0.0001,
+      "area_tolerance_mm2": 0.0001,
+      "coordinate_tolerance_mm": 1e-06,
+      "placement_scope": "Saved-before vs saved-after includes display placement. STEP comparison translates each solid to its own bbox origin and does not rotate it.",
+      "objects": {
+        "FullMountMock": {
+          "previous_saved_vs_GUI_saved": {
+            "valid_single_solids": true,
+            "topology_before_and_after": {
+              "Solids": 1,
+              "Shells": 1,
+              "Faces": 46,
+              "Wires": 60,
+              "Edges": 120,
+              "Vertexes": 80
+            },
+            "before_volume_mm3": 38447.147039335076,
+            "after_volume_mm3": 38447.147039335076,
+            "volume_difference_mm3": 0.0,
+            "area_difference_mm2": 0.0,
+            "before_minus_after_volume_mm3": 0.0,
+            "after_minus_before_volume_mm3": 0.0,
+            "maximum_bbox_coordinate_difference_mm": 0.0,
+            "before_bbox_mm": [
+              0.0,
+              3.552713678800501e-15,
+              0.0,
+              90.0,
+              30.000000000000004,
+              34.0
+            ],
+            "after_bbox_mm": [
+              0.0,
+              3.552713678800501e-15,
+              0.0,
+              90.0,
+              30.000000000000004,
+              34.0
+            ]
+          },
+          "source_STEP_vs_GUI_saved_after_translation_only": {
+            "valid_single_solids": true,
+            "topology_before_and_after": {
+              "Solids": 1,
+              "Shells": 1,
+              "Faces": 46,
+              "Wires": 60,
+              "Edges": 120,
+              "Vertexes": 80
+            },
+            "before_volume_mm3": 38447.14703933507,
+            "after_volume_mm3": 38447.14703933507,
+            "volume_difference_mm3": 0.0,
+            "area_difference_mm2": 0.0,
+            "before_minus_after_volume_mm3": 0.0,
+            "after_minus_before_volume_mm3": 0.0,
+            "maximum_bbox_coordinate_difference_mm": 6.123233998228043e-16,
+            "before_bbox_mm": [
+              0.0,
+              -6.123233998228043e-16,
+              -4.041334481182156e-16,
+              90.0,
+              30.0,
+              34.0
+            ],
+            "after_bbox_mm": [
+              0.0,
+              0.0,
+              0.0,
+              90.0,
+              30.0,
+              34.0
+            ]
+          }
+        },
+        "SeatFitCoupon": {
+          "previous_saved_vs_GUI_saved": {
+            "valid_single_solids": true,
+            "topology_before_and_after": {
+              "Solids": 1,
+              "Shells": 1,
+              "Faces": 37,
+              "Wires": 46,
+              "Edges": 98,
+              "Vertexes": 66
+            },
+            "before_volume_mm3": 7543.189134014926,
+            "after_volume_mm3": 7543.189134014926,
+            "volume_difference_mm3": 0.0,
+            "area_difference_mm2": 0.0,
+            "before_minus_after_volume_mm3": 0.0,
+            "after_minus_before_volume_mm3": 0.0,
+            "maximum_bbox_coordinate_difference_mm": 0.0,
+            "before_bbox_mm": [
+              108.0,
+              0.0,
+              0.0,
+              132.0,
+              29.0,
+              17.000000000000004
+            ],
+            "after_bbox_mm": [
+              108.0,
+              0.0,
+              0.0,
+              132.0,
+              29.0,
+              17.000000000000004
+            ]
+          },
+          "source_STEP_vs_GUI_saved_after_translation_only": {
+            "valid_single_solids": true,
+            "topology_before_and_after": {
+              "Solids": 1,
+              "Shells": 1,
+              "Faces": 37,
+              "Wires": 46,
+              "Edges": 98,
+              "Vertexes": 66
+            },
+            "before_volume_mm3": 7543.189134014926,
+            "after_volume_mm3": 7543.189134014924,
+            "volume_difference_mm3": -1.8189894035458565e-12,
+            "area_difference_mm2": 0.0,
+            "before_minus_after_volume_mm3": 0.0,
+            "after_minus_before_volume_mm3": 0.0,
+            "maximum_bbox_coordinate_difference_mm": 3.552713678800501e-15,
+            "before_bbox_mm": [
+              0.0,
+              0.0,
+              0.0,
+              24.0,
+              29.000000000000004,
+              17.000000000000007
+            ],
+            "after_bbox_mm": [
+              0.0,
+              0.0,
+              0.0,
+              24.0,
+              29.0,
+              17.000000000000004
+            ]
+          }
+        }
+      },
+      "previous_FCStd_sha256": "d2c39589ba49e5dd2ec946f8736e9b3296979422fbfbfd6e6587160901ad0a55",
+      "current_FCStd_sha256": "e771da3c5b65eebe1781f8254467f9d6f32e77445f2d038e599d01b0be1596d7",
+      "previous_FCStd_reference": "M0601C_A6_PLA_mock_files.zip:M0601C_PLA_Mock_A6.FCStd",
+      "serialized_BRep_differences": {
+        "FullMountMock.Shape.brp": {
+          "byte_lengths": [
+            91482,
+            91482
+          ],
+          "line_counts": [
+            2559,
+            2559
+          ],
+          "changed_lines": 9,
+          "changed_tokens": 10,
+          "all_changed_tokens_numeric": true,
+          "maximum_numeric_token_delta": 1.0000000000000002e-17
+        },
+        "SeatFitCoupon.Shape.brp": {
+          "byte_lengths": [
+            75093,
+            75093
+          ],
+          "line_counts": [
+            2092,
+            2092
+          ],
+          "changed_lines": 9,
+          "changed_tokens": 10,
+          "all_changed_tokens_numeric": true,
+          "maximum_numeric_token_delta": 1.0000000000000002e-17
+        }
+      }
+    }
+  ],
+  "GUI_finalized_unix_s": 1789973871.7931113
+}

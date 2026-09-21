@@ -1,0 +1,20 @@
+{
+  "revision": "A6-R1",
+  "status": "quotation_only_not_manufacturing_release",
+  "pdf_pages": 2,
+  "step_sha256": "790986f799318a681d220ad8c6d4676e5f879409067c87b8af5ff7fc0ccc039d",
+  "pdf_sha256": "f22225a522412d3dbdefe40fae6dba50f497551ef73ff7a1d22d7124738d9a34",
+  "svg_sha256": "7e0c3d965481b5a3e9a5490e17acf97f39a46f11539dfd829ad0a193d4d77b3b",
+  "notes_svg_sha256": "efc67912c58898fef87536a5ea01ef23a19eb0515505796bebabbf53757ac39a",
+  "drawing_generator_sha256": "b5009c1ebbfa37932f649bc4493e3649c0adf85364b7cb81f9d510da341fc37e",
+  "functional_tolerance_total_profile_mm": 0.1,
+  "position_diameter_mm": 0.1,
+  "critical_back_wall_tolerance_pm_mm": 0.05,
+  "projection_source": "exact same-stem STEP",
+  "bbox_mm": [
+    90.0,
+    30.0,
+    34.0
+  ],
+  "volume_mm3": 38447.14703933507
+}

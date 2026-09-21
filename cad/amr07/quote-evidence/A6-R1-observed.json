@@ -1,0 +1,23 @@
+{
+  "candidate": "A6-R1",
+  "name": "M0601C_mount_A6_R1",
+  "observed_at": "2026-09-21T06:51:03.965184+00:00",
+  "remarks": "QUOTE ONLY; qty2 identical,6061-T6,as-machined,no threads. Attached A6-R1 PDF controls: profile0.10 to A/B/C incl.location; 3xD3.2+0.1/0 holes and D6.2x0.50+/-0.05 washer recesses,position D0.10; back8+/-0.05; A/B flat0.05,B perpendicular0.05; M6 headC0.3+/-0.1; wire6.5+/-0.1; pocketZ15.18 vs hole-groupZ15.35 deliberate offset. Other ISO2768-m. Both PDF sheets required; no geometry changes. Fit/load qualification pending.",
+  "quantity": 2,
+  "currency": "USD",
+  "automatic_not_manual": true,
+  "records": [
+    {
+      "speed": "standard",
+      "manufacturing_label": "標準: 5 日",
+      "parts_lot_USD": 84.66,
+      "shipping_USD": 7.23
+    },
+    {
+      "speed": "economic",
+      "manufacturing_label": "経済的: 10 日",
+      "parts_lot_USD": 75.02,
+      "shipping_USD": 7.23
+    }
+  ]
+}

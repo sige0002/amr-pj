@@ -1,0 +1,447 @@
+{
+  "design": "AMR01_M0601C_A6",
+  "date": "2026-09-21",
+  "items": [
+    {
+      "id": "F01",
+      "name": "MISUMI NFSL6-3030-400 4本組",
+      "quantity": 4,
+      "currency": "JPY",
+      "amount": 1952,
+      "price_kind": "observed_carried_from_A3",
+      "source": "https://www.amazon.co.jp/dp/B0DKF2CCW3",
+      "note": "切断不要。左右外周2本と内部2本。"
+    },
+    {
+      "id": "F02",
+      "name": "MISUMI NFSL6-3030-300 4本組",
+      "quantity": 2,
+      "currency": "JPY",
+      "amount": 1467,
+      "price_kind": "observed_carried_from_A3",
+      "source": "https://www.amazon.co.jp/dp/B0DKDZ8G9G",
+      "note": "切断不要。前後各1本、予備2本も購入費に含む。"
+    },
+    {
+      "id": "F03",
+      "name": "MISUMI HBLFSN6-SET 純正6シリーズ接合セット",
+      "quantity": 8,
+      "currency": "JPY",
+      "amount": 1540.0,
+      "price_kind": "manufacturer_catalog_reference",
+      "source": "https://jp.misumi-ec.com/vona2/detail/110300442340/",
+      "note": "2026年7月の公式表: 本体78円+SET97円=税別175円/組。8組×175×1.10=1540円の参考換算。各組にCBM6-12×2とHNTT6-6×2を含む。請求時の丸め・個人購入経路・送料は未確定。第二案で確認した参考値を引継ぎ、この作業で価格を再照合していない。"
+    },
+    {
+      "id": "F04",
+      "name": "MISUMI HNTT6-6 追加28個分の予算",
+      "quantity": 28,
+      "currency": "JPY",
+      "amount": 1200,
+      "price_kind": "allowance",
+      "source": "https://jp.misumi-ec.com/vona2/detail/110302610850/",
+      "note": "全44個=接合16+ガセット8+製作モーターブラケット4+キャスター板4+低床クレードル4+後部電装4+前部電装4。SET付属16個を引き追加28個。1200円は数量分仮枠で販売パック未確認。既製ブラケット比較案の再配置数量は未確定。"
+    },
+    {
+      "id": "E02",
+      "name": "USB-RS485Bと主計算機を接続するUSBケーブル予算",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 500,
+      "price_kind": "allowance",
+      "source": null,
+      "note": "USB-RS485BにはUSBケーブルが付属しないため500円を仮置き。機器側端子・主計算機側端子・長さを確定後、実商品の購入単位全額に更新する。RS485側の車内配線や電源配線は含まない。"
+    },
+    {
+      "id": "C01",
+      "name": "ハンマーキャスター 420G-R50",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 373,
+      "price_kind": "observed_carried_from_A3",
+      "source": "https://www.tanaka-km.com/view/item/000000036665",
+      "note": "Aの販売情報を引継ぎ: 径50/幅20/高さ65、座59×47、穴ピッチ46×35、トレール16、許容荷重300Nの公称値。段差走行能力を認定する値ではない。個人購入可としたAの販売店を継続候補とし、本州送料650円を別計上。6mm取付スペーサーは撤去。"
+    },
+    {
+      "id": "P01",
+      "name": "キャスター板用 A5052 t4 素材予算",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 900,
+      "price_kind": "allowance",
+      "source": null,
+      "note": "完成板80×170×t4を1枚。900円はこの1枚を切り出す購入素材分の仮枠で、完成加工価格ではない。販売寸法・最小注文単位・切りしろ・つかみ代を確認して更新する。旧200角から車軸板2枚を作る構成は廃止。"
+    },
+    {
+      "id": "P03",
+      "name": "A5052板 t3 150x150mm 素材予算",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 500,
+      "price_kind": "allowance",
+      "source": null,
+      "note": "Aの素材仮枠500円を維持。60×60直角三角ガセット4枚。販売単位と加工条件は未確定。"
+    },
+    {
+      "id": "P04",
+      "name": "低床電池クレードル・前後電装トレイ用PLA 消費材料予算",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 600,
+      "price_kind": "allowance",
+      "source": null,
+      "note": "既所有PLAの300g相当・600円枠。クレードル130×160×37、後部85×180×4.4、前部145×170×4.4mm各1点。CAD充実PLA推計は合計約245.5gで、実スライス量・再印刷分は未確認。全点P1S公称256mm角内。電池形状は予約空間で実電池の適合を意味しない。新規スプール購入時は販売単位全額へ更新。プリンター・工具・作業時間・電気代は含まない。"
+    },
+    {
+      "id": "H01",
+      "name": "追加M2.5/M6ねじ・一般ナット・ワッシャ 一式予算",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 2300,
+      "price_kind": "allowance",
+      "source": null,
+      "note": "A3の2300円枠を維持。予定追加数はM2.5×12を6本、M6×10を8本、M6×12を20本、M6×16を4本、M6一般ナット4個、M6通常ワッシャ12枚・大径12枚。A3のアングル/キー用M4ねじ・ナット・ワッシャ各12点は撤去。使用数減少から販売パック代が減るとは推定しない。SET付属M6×12を16本、溝ナットF04、タイヤキット付属ねじは重複計上しない。最終fasteners.csvと照合済み。"
+    },
+    {
+      "id": "H02",
+      "name": "電池固定ストラップ2本分の予算",
+      "quantity": 2,
+      "currency": "JPY",
+      "amount": 500,
+      "price_kind": "allowance",
+      "source": null,
+      "note": "低床クレードルに電池を固定する2本分の仮枠。幅・長さ・金具・締付方法・販売単位は未選定で、実在する2本組商品の価格ではない。電池やアダプターの価格は含まない。実電池に合わせて保持方法を確定する。"
+    },
+    {
+      "id": "D01",
+      "name": "M0601C_111 Taobao購入想定",
+      "quantity": 2,
+      "currency": "JPY",
+      "amount": 14000,
+      "price_kind": "user_allowance",
+      "source": null,
+      "note": "ユーザー提示の約7000円/個を円換算の仮枠とする。対象URL・選択SKU・同一仕様・タイヤ/カバー/ねじ/ケーブル付属・送料・代行/輸入諸費は未確認。基準は本体のみと仮定し、初回タイヤをD02へ別計上。国内販売税込単価とは扱わない。"
+    },
+    {
+      "id": "D02",
+      "name": "DDT-M0601C-TIRE 初回装着用タイヤキット",
+      "quantity": 2,
+      "currency": "JPY",
+      "amount": 9240,
+      "price_kind": "observed_2026_09_21",
+      "source": "https://www.switch-science.com/products/9203",
+      "note": "M0601C_111への適合記載。1キットにタイヤ1、カバー1、ねじ3。2輪分9240円を同時注文する場合は通常送料無料。初回装着分で、将来交換用の予備キットではない。Taobao品に適合する一式が付属すると確認できた場合のみ初回別購入を除く。"
+    },
+    {
+      "id": "S02",
+      "name": "タナカ金物 本州配送",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 650,
+      "price_kind": "observed_condition_carried_from_A",
+      "source": "",
+      "note": "Aの本州・4900円未満条件を引継ぎ。配送先・決済条件で更新。"
+    },
+    {
+      "id": "S03",
+      "name": "Amazon・素材の追加送料枠",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 1000,
+      "price_kind": "allowance_carried_from_A",
+      "source": "",
+      "note": "A3の1000円枠を共通フレーム/残存板材の配送へ暫定維持。既製比較案の取付板素材配送も同枠を更新する。製作Q01の配送はS08へ分ける。発注先・口数は未確定で、同じ費用を二重加算しない。"
+    },
+    {
+      "id": "S04",
+      "name": "純正接合部・追加溝ナットの送料追加枠",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 500,
+      "price_kind": "allowance",
+      "source": "",
+      "note": "個人購入経路未確定のため500円を仮置き。実送料や購入可能性を確認した数字ではない。複数配送や手数料が生じる場合は枠を差替え、同じ費用を二重加算しない。"
+    },
+    {
+      "id": "S06",
+      "name": "国内モーター/タイヤ/既製ブラケット 通常配送",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 0,
+      "price_kind": "observed_free_shipping_condition_2026_09_21",
+      "source": "https://www.switch-science.com/policies/shipping-policy",
+      "note": "当該国内品の同時注文小計8000円以上を適用。タイヤ2個だけでも9240円。国内注文がないタイヤ付属Taobao＋製作案にはこの行を適用しない。"
+    },
+    {
+      "id": "S07",
+      "name": "Taobaoの国内外送料・代行/輸入諸費",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": null,
+      "price_kind": "quote_pending",
+      "source": null,
+      "note": "注文経路、送り先、商品付属/梱包と円換算を確認して総額を更新する。7000円/個に含まれるとは推定せず、無料にも置かない。"
+    },
+    {
+      "id": "DECK_plate",
+      "name": "ESCO EA441VC-41 A5052 300x300x4, one sheet",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 4521,
+      "price_kind": "observed_2026_09_21",
+      "source": "https://www.monotaro.com/p/4993/2618/",
+      "note": "Seller display4521税込, one plate0.972kg. Order4110税別 exceeds3500 free-standard-shipping threshold; special/region charges final at checkout. Temper unlisted, acceptance minimum thickness3.85mm must be confirmed/measured."
+    },
+    {
+      "id": "DECK_square_bar",
+      "name": "Hikari AS6151 aluminum15x15x995, one stock",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 1507,
+      "price_kind": "observed_2026_09_21",
+      "source": "https://store.shopping.yahoo.co.jp/akibaoo/4977720061511.html",
+      "note": "Seller displayed retail price/region example shipping; material is aluminum with B2 anodize, alloy/temper not published. One stock supplies all six pieces."
+    },
+    {
+      "id": "DECK_cargo_straps",
+      "name": "E-Value BT-2520BK25mmx2m",
+      "quantity": 2,
+      "currency": "JPY",
+      "amount": 786,
+      "price_kind": "observed_2026_09_21",
+      "source": "https://store.shopping.yahoo.co.jp/hcbrico/4977292226752.html",
+      "note": "Seller displayed price; manufacturer125g and0.8kN working force. Product force is not a rating of the assembled deck/slots."
+    },
+    {
+      "id": "DECK_SHIP",
+      "name": "荷台材料の表示送料参考",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 1200,
+      "price_kind": "displayed_regional_reference",
+      "source": "",
+      "note": "地域・同梱条件は注文時確定"
+    },
+    {
+      "id": "DECK_fasteners_and_extra_slotnuts",
+      "name": "fasteners_and_extra_slotnuts",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 1500,
+      "price_kind": "allowance",
+      "source": "",
+      "note": "Six M6x30, twelve M6 grade A washers plus sorting spares, six HNTT6-6, eight M4x25/washer/nut sets; purchasing units and personal MISUMI supply unresolved."
+    },
+    {
+      "id": "DECK_edge_protection_and_slack_retention",
+      "name": "edge_protection_and_slack_retention",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 300,
+      "price_kind": "allowance",
+      "source": "",
+      "note": "Protect all webbing/metal contact edges and secure tails; final pad selection unconfirmed."
+    },
+    {
+      "id": "MW",
+      "name": "WILCO FW-2505-05EB 2.7x5x0.5",
+      "quantity": 6,
+      "currency": "JPY",
+      "amount": 290,
+      "price_kind": "observed_pack_minimum",
+      "source": "https://wilco.jp/products/F/FW-EB.html",
+      "note": "10個×29円を購入、6個使用。未発注、送料別。従来H01は他のねじの仮枠。"
+    },
+    {
+      "id": "ELEC_S1",
+      "name": "IDEC XA1E-BV302R",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 3298,
+      "price_kind": "observed_candidate_2026_09_21",
+      "source": "https://www.monotaro.com/p/6051/3817/",
+      "note": "2 NC emergency-stop switch; panel hole 16.2 mm"
+    },
+    {
+      "id": "ELEC_K1_K2",
+      "name": "Omron G5LE-1 DC5",
+      "quantity": 2,
+      "currency": "JPY",
+      "amount": 770,
+      "price_kind": "observed_candidate_2026_09_21",
+      "source": "https://jp.rs-online.com/web/p/power-relays/0369466",
+      "note": "Series NO contacts; 385 JPY each; 8 A / 30 V DC resistive rating is not an inrush rating"
+    },
+    {
+      "id": "ELEC_U1",
+      "name": "Raspberry Pi Pico H SC0917",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 920,
+      "price_kind": "observed_candidate_2026_09_21",
+      "source": "https://akizukidenshi.com/catalog/g/g118085/",
+      "note": "51 x 21 mm board, sole RS485 master; firmware not implemented"
+    },
+    {
+      "id": "ELEC_U2",
+      "name": "CD74HC123E",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 140,
+      "price_kind": "observed_candidate_2026_09_21",
+      "source": "https://eleshop.jp/shop/g/gT11488/",
+      "note": "External retriggerable heartbeat monitor"
+    },
+    {
+      "id": "ELEC_U3",
+      "name": "TC74HC74AP",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 33,
+      "price_kind": "observed_candidate_2026_09_21",
+      "source": "https://eleshop.jp/shop/g/gT11476/",
+      "note": "Edge-operated ARM latch; power-on reset and debounce required"
+    },
+    {
+      "id": "ELEC_PS1",
+      "name": "M78AR05-1",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 850,
+      "price_kind": "observed_candidate_2026_09_21",
+      "source": "https://akizukidenshi.com/catalog/g/g113536/",
+      "note": "5 V 1 A supply reserved for supervisor and relay coils, not ROS computer"
+    },
+    {
+      "id": "ELEC_U4",
+      "name": "MAX3485ED (HTC)",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 70,
+      "price_kind": "observed_candidate_2026_09_21",
+      "source": "https://akizukidenshi.com/catalog/g/g116211/",
+      "note": "3.3 V IC, not assembled converter"
+    },
+    {
+      "id": "ELEC_RDUMP",
+      "name": "ARCOL HS50 22R J",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 1033,
+      "price_kind": "observed_candidate_2026_09_21",
+      "source": "https://www.monotaro.com/g/02255191/",
+      "note": "22 ohm 50 W only with specified thermal conditions"
+    },
+    {
+      "id": "ELEC_U5",
+      "name": "LM393GN",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 30,
+      "price_kind": "observed_candidate_2026_09_21",
+      "source": "https://akizukidenshi.com/catalog/g/g116987/",
+      "note": "Bus clamp comparator"
+    },
+    {
+      "id": "ELEC_U6",
+      "name": "TL431A (HTC)",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 20,
+      "price_kind": "observed_candidate_2026_09_21",
+      "source": "https://akizukidenshi.com/catalog/g/g112018/",
+      "note": "Clamp reference; initial reference tolerance requires calibration"
+    },
+    {
+      "id": "ELEC_QCLAMP",
+      "name": "2SK2232",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 100,
+      "price_kind": "observed_candidate_2026_09_21",
+      "source": "https://akizukidenshi.com/catalog/g/g102414/",
+      "note": "Switching dump resistor, not unqualified linear dissipation"
+    },
+    {
+      "id": "ELEC_PS2",
+      "name": "LM78L12",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 20,
+      "price_kind": "observed_candidate_2026_09_21",
+      "source": "https://akizukidenshi.com/catalog/g/g113464/",
+      "note": "Clamp control power from motor bus"
+    },
+    {
+      "id": "ELEC_D0",
+      "name": "SBM1060LSS",
+      "quantity": 1,
+      "currency": "JPY",
+      "amount": 300,
+      "price_kind": "observed_candidate_2026_09_21",
+      "source": "https://akizukidenshi.com/catalog/g/g116378/",
+      "note": "One used; mandatory purchase pack contains 10; reverse current block"
+    },
+    {
+      "id": "Q01",
+      "name": "A6-R1専用金具、同形2個",
+      "quantity": 2,
+      "currency": "USD",
+      "amount": 75.02,
+      "price_kind": "vendor_automatic_quote",
+      "source": "https://jlccnc.com/jp/cnc-machining-quote",
+      "note": "STEP/PDF一致、手動審査前"
+    },
+    {
+      "id": "S08",
+      "name": "日本宛OCS Express表示送料",
+      "quantity": 1,
+      "currency": "USD",
+      "amount": 7.23,
+      "price_kind": "vendor_automatic_quote",
+      "source": "https://jlccnc.com/jp/cnc-machining-quote",
+      "note": "国単位。住所別・税・換算額未確認"
+    }
+  ],
+  "priced_and_allowance_subtotal_JPY": 54910.0,
+  "observed_automatic_quote_subtotal_USD": 82.25,
+  "planning_total_JPY": null,
+  "ordered": false,
+  "previous_partial_subtotal_JPY": 42282,
+  "removed_old_USB_RS485B_and_its_shipping_JPY": 5060,
+  "deck_material_shipping_allowance_addition_JPY": 9814,
+  "electrical_selected_price_subtotal_JPY": 7584,
+  "washer_purchase_addition_JPY": 290,
+  "CAD_mass_estimate": {
+    "previous_base_estimate_kg": 6.787808492626768,
+    "mount_change_kg": 3.453044182967133e-05,
+    "slot_nut_change_kg": 0.0830208198153391,
+    "new_CAD_parts_kg": 1.582279321882445,
+    "deck_straps_and_edge_guard_allowance_kg": 0.28,
+    "electrical_allowance_carried_kg": 2.1,
+    "estimated_base_kg": 8.73314316476638,
+    "remaining_to_10kg_kg": 1.2668568352336198,
+    "is_weighed": false
+  },
+  "unpriced": [
+    "Taobao送料/輸入費",
+    "CNC図面審査による差額・税・住所別送料・決済換算",
+    "荷台等を自加工しない場合の切断/穴加工/バリ取り",
+    "自加工の工具/作業費",
+    "WILCOと追加電装各店の送料",
+    "ARM pushbutton",
+    "debounce and power-on reset",
+    "logic level translation",
+    "relay coil drivers and suppression",
+    "fuses and holders",
+    "PCB and connectors",
+    "passive components and calibration",
+    "voltage/current/temperature measurement",
+    "heatsink fixing and guarding",
+    "wiring and shipping",
+    "battery and charger",
+    "main computer and its converter",
+    "mechanical power-off holding device"
+  ],
+  "note": "材料小売価格、既存仮枠、部品候補、自動加工見積を通貨別計上。完成車確定総額ではない。電装は実装・試験未完。"
+}

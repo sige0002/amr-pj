@@ -1,0 +1,84 @@
+{
+  "revision": "A6-R1",
+  "status": "quote_and_fit_mock_only_not_released",
+  "step_file": "M0601C_mount_A6_R1.step",
+  "step_sha256": "790986f799318a681d220ad8c6d4676e5f879409067c87b8af5ff7fc0ccc039d",
+  "date": "2026-09-21",
+  "material": "A6061-T6",
+  "quantity": 2,
+  "same_part_both_sides": true,
+  "quote_origin_world_mm": [
+    45,
+    120,
+    35
+  ],
+  "overall_LWH_mm": [
+    90,
+    30,
+    34
+  ],
+  "flange_thickness_mm": 5,
+  "frame_hole_pitch_mm": 75,
+  "frame_holes_diameter_mm": 6.6,
+  "web_width_thickness_mm": [
+    60,
+    17
+  ],
+  "seat_depth_mm": 9,
+  "rear_wall_mm": 8,
+  "source_profile_offset_mm": 0.12,
+  "seat_small_corner_radius_mm": 1.62,
+  "seat_large_arc_radius_mm": 9.67,
+  "seat_flat_distance_mm": 8.22,
+  "seat_axis_local_xz_mm": [
+    45,
+    15.18
+  ],
+  "motor_axis_local_xz_mm": [
+    45,
+    15.35
+  ],
+  "motor_holes_local_xz_mm": [
+    [
+      38.4182069312383,
+      11.550000000000004
+    ],
+    [
+      51.5817930687617,
+      11.550000000000004
+    ],
+    [
+      45,
+      22.950000000000003
+    ]
+  ],
+  "motor_holes_diameter_mm": 3.2,
+  "motor_holes_size_limits_mm": [
+    3.2,
+    3.3
+  ],
+  "motor_holes_PCD_mm": 15.2,
+  "functional_profile_total_zone_mm": 0.1,
+  "profile_includes_location": true,
+  "hole_position_diametral_zone_mm": 0.1,
+  "rear_wall_size_tolerance_pm_mm": 0.05,
+  "datum_A_flatness_mm": 0.05,
+  "datum_B_flatness_mm": 0.05,
+  "datum_B_perpendicularity_to_A_mm": 0.05,
+  "datums": {
+    "A": "frame contact surface local Z34",
+    "B": "motor end seating plane local Y18",
+    "C": "derived median plane of outside X0 and X90 faces"
+  },
+  "motor_washer_counterbore_diameter_mm": 6.2,
+  "motor_washer_counterbore_depth_mm": 0.5,
+  "motor_washer": "WILCO FW-2505-05EB 2.7x5x0.5, received dimensions and seating must be inspected",
+  "frame_head_side_chamfer_mm": 0.3,
+  "cable_through_throat_width_mm": 6.5,
+  "cable_front_and_lower_relief_width_mm": 9.5,
+  "nominal_motor_upward_seating_offset_mm": 0.17,
+  "volume_mm3_each": 38447.14703933528,
+  "mass_kg_each_estimate": 0.10380729700620525,
+  "roundtrip_symmetric_difference_mm3": 0.0,
+  "scope": "Basic contour dimensions controlled by total profile zone 0.10 to A|B|C; do not add an independent +/-0.05 axis-location error. Actual motor profile/hole-pattern gauges and local strength remain required."
+}

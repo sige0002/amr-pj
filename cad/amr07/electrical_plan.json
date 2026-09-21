@@ -1,0 +1,575 @@
+{
+  "schema_version": "1.0",
+  "design": "AMR01_M0601C_A6",
+  "date": "2026-09-21",
+  "status": "electrical_architecture_and_acceptance_plan_not_implemented",
+  "requirements_file": "requirements.json",
+  "document": "ELECTRICAL_AND_VALIDATION.ja.md",
+  "operation_release": {
+    "flat_floor": false,
+    "slope": false,
+    "later_speed": false,
+    "mechanical_power_off_hold_designed": false,
+    "electrical_schematic_complete": false,
+    "pcb_built": false,
+    "supervisor_firmware_built": false,
+    "industrial_functional_safety_certification_claimed": false
+  },
+  "motor_published": {
+    "part": "M0601C_111",
+    "quantity": 2,
+    "rated_voltage_V": 18,
+    "rated_speed_rpm": 115,
+    "rated_torque_Nm": 0.96,
+    "rated_current_A": 1.25,
+    "stall_torque_Nm": 2,
+    "stall_current_max_A": 2.7,
+    "current_web_voltage_range_V": [
+      7.5,
+      28
+    ],
+    "legacy_manual_max_input_V": 24,
+    "winding_temperature_limit_C": 80,
+    "low_speed_continuous_torque_verified": false,
+    "communication_loss_stop_timeout_documented": false,
+    "regen_absorption_spec_documented": false,
+    "power_off_hold_torque_documented": false,
+    "brake_command": {
+      "only_valid_in": "velocity_mode",
+      "command_hex": "0x64",
+      "byte_index_zero_based": 7,
+      "value_hex": "0xFF"
+    },
+    "temperature_query_hex": "0x74",
+    "internal_faults_auto_recover": true,
+    "sources": [
+      "motor_current",
+      "motor_manual"
+    ]
+  },
+  "mass_budget_kg": {
+    "battery": 0.75,
+    "protection_and_power_conversion": 0.4,
+    "computer": 0.5,
+    "wiring": 0.4,
+    "communication_and_supervision": 0.05,
+    "total": 2.1,
+    "is_measured_mass": false
+  },
+  "power": {
+    "battery": {
+      "nominal_class_V": 18,
+      "maximum_charged_voltage_V": 21,
+      "part": null,
+      "mass_budget_kg": 0.75,
+      "protection_and_adapter_compatibility_verified": false,
+      "runtime_1h_verified": false,
+      "note": "No assumption that a tool battery retains cell protection through a two-terminal adapter. No regenerative charging assumed."
+    },
+    "motor_bus_test_voltages_V": [
+      15.5,
+      18,
+      21
+    ],
+    "motor_bus_continuous_minimum_verified": false,
+    "conservative_absolute_operating_ceiling_V": 24,
+    "transient_acceptance_max_V": 23.5,
+    "positive_path": [
+      "battery",
+      "manual_isolator",
+      "F0",
+      "Fdrv",
+      "D0",
+      "K1_NO",
+      "K2_NO",
+      "MOTOR_BUS",
+      "FL_or_FR",
+      "motor"
+    ],
+    "unswitched_branches": [
+      "Fctl_to_PS1_supervisor_and_coils",
+      "Fpc_to_unselected_computer_converter"
+    ],
+    "motor_bus_local_parallel_branches": [
+      "self_powered_clamp_RDUMP",
+      "Cbus",
+      "bleed_resistor"
+    ],
+    "fuse_starting_values_A": {
+      "F0": 10,
+      "Fdrv": 7.5,
+      "FL": 3,
+      "FR": 3,
+      "Fctl": 1,
+      "Fpc": null
+    },
+    "fuse_part_and_time_current_coordination_complete": false,
+    "extension_copper_wire_starting_area_mm2": 0.75,
+    "negative_return": "Dedicated copper, not 3030. Thin signal ground must not become a load return.",
+    "Cbus_candidate_uF": 470,
+    "Cbus_min_rating_V": 35,
+    "bleed_candidate_ohm": 1000,
+    "bleed_candidate_W": 1,
+    "inrush_qualification_pending": true,
+    "manual_isolation_required_for_service": true
+  },
+  "restart_and_watchdog": {
+    "controller": "Pico H",
+    "rs485_sole_master": true,
+    "previous_USB_RS485B": "Not paralleled as a second bus master; may be kept as a disconnected service tool.",
+    "heartbeat_period_ms": 20,
+    "heartbeat_generation": "One software GPIO transition after a complete supervisor main-loop iteration; no autonomous PWM heartbeat.",
+    "external_watchdog_part": "CD74HC123E",
+    "watchdog_supply_V": 5,
+    "watchdog_R_ohm": 330000,
+    "watchdog_C_F": 1e-06,
+    "watchdog_nominal_ms": 148.5,
+    "watchdog_acceptance_ms": [
+      120,
+      180
+    ],
+    "fault_to_relay_open_acceptance_max_ms": 200,
+    "logic_levels": "Level translation between Pico 3.3 V and external 5 V logic; no direct 5 V GPIO connection.",
+    "arm_latch_part": "TC74HC74AP",
+    "arm_latch_clock": "Debounced fresh physical ARM rising edge",
+    "arm_latch_D": "READY",
+    "asynchronous_latch_clear_OR": [
+      "EStop_open",
+      "external_watchdog_not_OK",
+      "power_on_reset",
+      "supervisor_trip"
+    ],
+    "holding_ARM_must_not_restart_after_fault": true,
+    "estop_NC_contact_1": "Series with K1 coil power",
+    "estop_NC_contact_2": "Series with K2 coil power",
+    "power_relay_contact_topology": "Two NO contacts in series on positive motor feed",
+    "default_power_up_state": "DISARMED",
+    "rearm_requires": [
+      "EStop_closed",
+      "external_watchdog_OK",
+      "bus_voltage_in_range",
+      "host_zero_command_500ms",
+      "ARM_released_then_new_press",
+      "stationary_confirmed",
+      "both_open_low_energy_weld_test_passed"
+    ],
+    "arm_power_up_motor_handshake_timeout_ms": 200,
+    "stationary_weld_self_test": "With both power contacts OFF, wait 3 s; inject at most about 0.5 mA from control 5 V through blocking diode and 10 kohm into relay midpoint. Motor bus has 1 kohm bleed. Require midpoint 3 to 5.5 V and bus below 1 V. No power-contact closure to diagnose a possible welded contact.",
+    "bus_bleed_wait_before_stationary_self_test_s": 3,
+    "software_automatic_rearm": false,
+    "single_fault_coverage": "Two contact paths and selected fault injections, not all component/common-cause failures or a certified safety controller.",
+    "state_sequence": [
+      "DISARMED",
+      "stationary_both_open_low_energy_SELFTEST",
+      "fresh_ARM_edge",
+      "both_relays_on_zero_mode_handshake",
+      "RUN_ZERO",
+      "fresh_motion_command_RUN"
+    ],
+    "weld_test": {
+      "source_V": 5,
+      "series_blocking_diode": true,
+      "series_R_ohm": 10000,
+      "midpoint_measurement_divider_ohm": [
+        100000,
+        10000
+      ],
+      "motor_bus_bleed_ohm": 1000,
+      "expected_healthy_midpoint_approx_V": 4.3,
+      "expected_K2_weld_midpoint_approx_V": 0.43,
+      "expected_K1_weld_midpoint": "battery voltage",
+      "healthy_midpoint_acceptance_V": [
+        3,
+        5.5
+      ],
+      "healthy_motor_bus_max_V": 1,
+      "component_tolerance_and_fault_test_done": false
+    }
+  },
+  "control": {
+    "rs485_baud": 115200,
+    "format": "8N1",
+    "command_rate_per_motor_Hz": 50,
+    "temperature_poll_per_motor_Hz": 10,
+    "command_stale_ms": 100,
+    "motor_feedback_stale_ms": 100,
+    "host_loss_with_healthy_motor_bus": "Local 0.2 m/s2 stop ramp; open relays after confirmed stop; latch fault.",
+    "host_loss_stop_deadline_initial_s": 1,
+    "host_loss_stop_deadline_later_s": 1.8,
+    "motor_bus_fault_or_supervisor_hang_or_estop": "Open relay power path; validate coast distance. No assumed internal motor watchdog.",
+    "service_accel_decel_max_m_s2": 0.2,
+    "brake_byte_use": "Only after lifted-wheel validation; do not assume zero-speed or unpowered holding.",
+    "temperature_warn_C": 60,
+    "temperature_trip_C": 70,
+    "temperature_rearm_below_C": 50,
+    "current_measurement_note": "External branch current is measured by test equipment. Onboard current trip uses motor-reported current with validated protocol scale; reported current is not assumed equal to DC bus current. Neither proves low-speed torque from the rated-speed torque constant.",
+    "bus_software_overvoltage_trip_V": 22.8,
+    "software_voltage_sampling_min_Hz": 100,
+    "future_RPM_cap": 90,
+    "later_speed_release": false,
+    "acceleration_note": "Integer rpm command quantization and driver acceleration must be measured. A commanded ramp is not a verified mechanical acceleration bound.",
+    "reported_motor_current_trip_A": 2,
+    "reported_motor_current_trip_duration_s": 0.2,
+    "motor_branch_current_60s_RMS_provisional_max_A_test_equipment": 1.25
+  },
+  "regeneration": {
+    "architecture": "D0 blocks charging current to battery; downstream motor-bus powered comparator switches external resistor independently of supervisor.",
+    "parts": [
+      "LM393GN",
+      "TL431A",
+      "LM78L12",
+      "2SK2232",
+      "ARCOL HS50 22R J"
+    ],
+    "turn_on_target_V": 22,
+    "turn_on_tolerance_after_calibration_V": 0.2,
+    "turn_off_target_approx_V": 21.8,
+    "divider_start_Rtop_ohm": 78000,
+    "divider_start_Rbottom_ohm": 10000,
+    "positive_feedback_start_ohm": 4700000,
+    "output_pullup_to_12V_ohm": 4700,
+    "gate_series_ohm": 100,
+    "gate_pulldown_ohm": 100000,
+    "nominal_resistor_ohm": 22,
+    "catalog_resistor_W_with_specified_heatsink": 50,
+    "nominal_ON_current_at22V_A": 1,
+    "nominal_ON_power_at22V_W": 22,
+    "resistor_source_max_envelope_mm": [
+      72.5,
+      28,
+      14.8
+    ],
+    "resistor_body_length_mm": 49.1,
+    "self_powered_clamp_verified": false,
+    "threshold_and_loop_stability_verified": false,
+    "test_continuous_absorption_W": 5,
+    "test_duration_min": 60,
+    "test_pulse_current_A": 0.9,
+    "test_pulse_duration_s": 0.5,
+    "test_pulse_energy_approx_J": 9.9,
+    "test_pulse_count": 10,
+    "resistor_surface_acceptance_max_C": 60,
+    "wire_connector_temperature_rise_max_K": 20,
+    "small_Pololu_shunt_board_selected": false,
+    "small_Pololu_reason": "Manufacturer limits unmodified boards to short pulses, not continuous downhill absorption.",
+    "failure_open_resistor_or_clamp_behaviour_verified": false,
+    "requirements": [
+      "Metal heatsinking with verified temperature",
+      "terminal insulation and touch guard",
+      "keep away from battery and PLA",
+      "retain clamp connection on motor side when relays open",
+      "do not count generic TVS as continuous energy absorber"
+    ]
+  },
+  "candidate_parts": [
+    {
+      "id": "S1",
+      "part_number": "IDEC XA1E-BV302R",
+      "used_quantity": 1,
+      "purchased_quantity": 1,
+      "purchase_price_jpy_incl_tax": 3298,
+      "source": "https://www.monotaro.com/p/6051/3817/",
+      "note": "2 NC emergency-stop switch; panel hole 16.2 mm",
+      "status": "candidate_not_purchased"
+    },
+    {
+      "id": "K1_K2",
+      "part_number": "Omron G5LE-1 DC5",
+      "used_quantity": 2,
+      "purchased_quantity": 2,
+      "purchase_price_jpy_incl_tax": 770,
+      "source": "https://jp.rs-online.com/web/p/power-relays/0369466",
+      "note": "Series NO contacts; 385 JPY each; 8 A / 30 V DC resistive rating is not an inrush rating",
+      "status": "candidate_not_purchased"
+    },
+    {
+      "id": "U1",
+      "part_number": "Raspberry Pi Pico H SC0917",
+      "used_quantity": 1,
+      "purchased_quantity": 1,
+      "purchase_price_jpy_incl_tax": 920,
+      "source": "https://akizukidenshi.com/catalog/g/g118085/",
+      "note": "51 x 21 mm board, sole RS485 master; firmware not implemented",
+      "status": "candidate_not_purchased"
+    },
+    {
+      "id": "U2",
+      "part_number": "CD74HC123E",
+      "used_quantity": 1,
+      "purchased_quantity": 1,
+      "purchase_price_jpy_incl_tax": 140,
+      "source": "https://eleshop.jp/shop/g/gT11488/",
+      "note": "External retriggerable heartbeat monitor",
+      "status": "candidate_not_purchased"
+    },
+    {
+      "id": "U3",
+      "part_number": "TC74HC74AP",
+      "used_quantity": 1,
+      "purchased_quantity": 1,
+      "purchase_price_jpy_incl_tax": 33,
+      "source": "https://eleshop.jp/shop/g/gT11476/",
+      "note": "Edge-operated ARM latch; power-on reset and debounce required",
+      "status": "candidate_not_purchased"
+    },
+    {
+      "id": "PS1",
+      "part_number": "M78AR05-1",
+      "used_quantity": 1,
+      "purchased_quantity": 1,
+      "purchase_price_jpy_incl_tax": 850,
+      "source": "https://akizukidenshi.com/catalog/g/g113536/",
+      "note": "5 V 1 A supply reserved for supervisor and relay coils, not ROS computer",
+      "status": "candidate_not_purchased"
+    },
+    {
+      "id": "U4",
+      "part_number": "MAX3485ED (HTC)",
+      "used_quantity": 1,
+      "purchased_quantity": 1,
+      "purchase_price_jpy_incl_tax": 70,
+      "source": "https://akizukidenshi.com/catalog/g/g116211/",
+      "note": "3.3 V IC, not assembled converter",
+      "status": "candidate_not_purchased"
+    },
+    {
+      "id": "RDUMP",
+      "part_number": "ARCOL HS50 22R J",
+      "used_quantity": 1,
+      "purchased_quantity": 1,
+      "purchase_price_jpy_incl_tax": 1033,
+      "source": "https://www.monotaro.com/g/02255191/",
+      "note": "22 ohm 50 W only with specified thermal conditions",
+      "status": "candidate_not_purchased"
+    },
+    {
+      "id": "U5",
+      "part_number": "LM393GN",
+      "used_quantity": 1,
+      "purchased_quantity": 1,
+      "purchase_price_jpy_incl_tax": 30,
+      "source": "https://akizukidenshi.com/catalog/g/g116987/",
+      "note": "Bus clamp comparator",
+      "status": "candidate_not_purchased"
+    },
+    {
+      "id": "U6",
+      "part_number": "TL431A (HTC)",
+      "used_quantity": 1,
+      "purchased_quantity": 1,
+      "purchase_price_jpy_incl_tax": 20,
+      "source": "https://akizukidenshi.com/catalog/g/g112018/",
+      "note": "Clamp reference; initial reference tolerance requires calibration",
+      "status": "candidate_not_purchased"
+    },
+    {
+      "id": "QCLAMP",
+      "part_number": "2SK2232",
+      "used_quantity": 1,
+      "purchased_quantity": 1,
+      "purchase_price_jpy_incl_tax": 100,
+      "source": "https://akizukidenshi.com/catalog/g/g102414/",
+      "note": "Switching dump resistor, not unqualified linear dissipation",
+      "status": "candidate_not_purchased"
+    },
+    {
+      "id": "PS2",
+      "part_number": "LM78L12",
+      "used_quantity": 1,
+      "purchased_quantity": 1,
+      "purchase_price_jpy_incl_tax": 20,
+      "source": "https://akizukidenshi.com/catalog/g/g113464/",
+      "note": "Clamp control power from motor bus",
+      "status": "candidate_not_purchased"
+    },
+    {
+      "id": "D0",
+      "part_number": "SBM1060LSS",
+      "used_quantity": 1,
+      "purchased_quantity": 10,
+      "purchase_price_jpy_incl_tax": 300,
+      "source": "https://akizukidenshi.com/catalog/g/g116378/",
+      "note": "One used; mandatory purchase pack contains 10; reverse current block",
+      "status": "candidate_not_purchased"
+    }
+  ],
+  "cost": {
+    "priced_purchase_subtotal_jpy_incl_tax": 7584,
+    "shipping_included": false,
+    "completed_electrical_system_total_jpy": null,
+    "purchased": false,
+    "old_BOM_delta_determined": false,
+    "unpriced": [
+      "ARM pushbutton",
+      "debounce and power-on reset",
+      "logic level translation",
+      "relay coil drivers and suppression",
+      "fuses and holders",
+      "PCB and connectors",
+      "passive components and calibration",
+      "voltage/current/temperature measurement",
+      "heatsink fixing and guarding",
+      "wiring and shipping",
+      "battery and charger",
+      "main computer and its converter",
+      "mechanical power-off holding device"
+    ]
+  },
+  "cad_reservations": [
+    {
+      "id": "StopAndDistribution",
+      "xyz_LWH_mm": [
+        155,
+        -120,
+        112,
+        70,
+        70,
+        35
+      ],
+      "status": "reservation_not_validated_assembly"
+    },
+    {
+      "id": "ClampAndConversion",
+      "xyz_LWH_mm": [
+        175,
+        -45,
+        106,
+        50,
+        90,
+        35
+      ],
+      "status": "reservation_not_validated_assembly",
+      "note": "HS50 long direction along Y; metal mounting, keep power electronics away from hot resistor"
+    },
+    {
+      "id": "EmergencyStopAccess",
+      "xyz_LWH_mm": [
+        175,
+        65,
+        112,
+        40,
+        40,
+        60
+      ],
+      "status": "reservation_not_validated_assembly",
+      "panel_hole_diameter_mm": 16.2
+    },
+    {
+      "id": "SupervisorAndRS485",
+      "xyz_LWH_mm": [
+        -225,
+        40,
+        112,
+        70,
+        45,
+        30
+      ],
+      "status": "reservation_not_validated_assembly"
+    }
+  ],
+  "calculations": {
+    "formula_torque": "m*(a+g*(sin(theta)+Crr*cos(theta)))*r/2; then x1.5",
+    "load_cases": [
+      {
+        "id": "normal",
+        "gross_mass_kg": 20,
+        "slope_deg": 0,
+        "torque_Nm_per_wheel": 0.24882944824999997,
+        "torque_with_margin_1p5_Nm_per_wheel": 0.37324417237499996,
+        "status": "calculation_not_hardware_validation"
+      },
+      {
+        "id": "slope",
+        "gross_mass_kg": 18,
+        "slope_deg": 5,
+        "torque_Nm_per_wheel": 0.6107491564310012,
+        "torque_with_margin_1p5_Nm_per_wheel": 0.9161237346465019,
+        "status": "calculation_not_hardware_validation"
+      }
+    ],
+    "kinematics_and_energy": [
+      {
+        "id": "initial",
+        "speed_m_s": 0.15,
+        "yaw_rate_rad_s": 0.3,
+        "inner_rpm": 18.52013528451668,
+        "outer_rpm": 38.37736174932872,
+        "ideal_stop_m": 0.08625,
+        "translation_energy_gross20kg_J": 0.22499999999999998,
+        "downhill_potential_power_gross18kg_5deg_W": 2.3077058344640693
+      },
+      {
+        "id": "later",
+        "speed_m_s": 0.3,
+        "yaw_rate_rad_s": 0.6,
+        "inner_rpm": 37.04027056903336,
+        "outer_rpm": 76.75472349865744,
+        "ideal_stop_m": 0.285,
+        "translation_energy_gross20kg_J": 0.8999999999999999,
+        "downhill_potential_power_gross18kg_5deg_W": 4.615411668928139
+      }
+    ],
+    "hold_grade5_gross18kg": {
+      "force_N": 15.384705563093796,
+      "total_wheel_torque_Nm": 0.7746199251017726,
+      "total_mechanical_hold_torque_with_margin2_Nm": 1.5492398502035452,
+      "each_if_evenly_shared_with_margin2_Nm": 0.7746199251017726
+    }
+  },
+  "validation": {
+    "all_results": "not_run",
+    "initial_test_environment": "Level smooth indoor floor in contained area; lift wheels for electrical faults first; unloaded -> 5 kg cargo -> 10 kg cargo.",
+    "initial_ambient_test_range_C": [
+      15,
+      35
+    ],
+    "inrush_cycles_per_corner": 20,
+    "stop_and_comm_fault_cycles_each": 10,
+    "thermal_test_torques_Nm": [
+      0.37324417237499996,
+      0.9161237346465019
+    ],
+    "thermal_initial_rpm": [
+      18.52013528451668,
+      28.4487485169227,
+      38.37736174932872
+    ],
+    "thermal_duration_min": 60,
+    "thermal_last15min_rise_max_C": 2,
+    "thermal_max_C": 70,
+    "speed_tracking_error_max_percent": 10,
+    "flat_stop_acceptance_initial_max_m": 0.1,
+    "flat_stop_acceptance_later_max_m": 0.3,
+    "initial_yaw_change_after_stop_max_deg": 10,
+    "initial_wheel_path_after_trip_max_m": 0.16,
+    "acceptance_applies_to": "Maximum observed result, not mean; only actual tested load/voltage/ambient/duration are released.",
+    "mechanical_hold": {
+      "selected_part": null,
+      "qualification_done": false,
+      "slope_operation_released": false,
+      "test_gross_kg": 18,
+      "test_grade_deg": 5,
+      "test_both_orientations": true,
+      "static_test_min": 10,
+      "power_loss_and_fault_trials_each": 10,
+      "movement_after_engagement_acceptance_mm": 5,
+      "requires_independent_rollaway_restraint_before_test": true,
+      "chocks": "Parking and fixture preparation only, not automatic stopping/holding."
+    },
+    "thermal_screening_duration_min": 10,
+    "thermal_matrix_strategy": "At 18 V stage from 0.373 to 0.916 Nm. Screen 15.5/18/21 V x 18.52/38.38 rpm for 10 min each and straight-line 28.45 rpm; then run 60 min at the thermally severe point and both initial-speed endpoints at 18 V. Release only the actual tested voltage/ambient/duration; screening is not continuous qualification.",
+    "temperature_sensor_note": "70 C is the reported stator-temperature trip, not proof of winding temperature or sensor lag. Also log housing temperature."
+  },
+  "sources": {
+    "motor_current": "https://shop.directdrive.com/pages/m0601c-111-specs",
+    "motor_manual": "https://d2air1d4eqhwg2.cloudfront.net/media/files/a48110eb-432c-4083-a159-9e0f35913b23.pdf",
+    "relay_datasheet": "https://akizukidenshi.com/goodsaffix/g5le.pdf",
+    "watchdog_datasheet": "https://www.ti.com/lit/ds/symlink/cd74hc123.pdf",
+    "latch_datasheet": "https://toshiba.semicon-storage.com/info/TC74HC74AP_datasheet_en_20140301.pdf?did=16727&prodName=TC74HC74AP",
+    "dump_resistor_datasheet": "https://www.ohmite.com/hs-aluminium-housed-resistors/",
+    "short_pulse_shunt_limit": "https://www.pololu.com/category/249/shunt-regulators",
+    "comparator_datasheet": "https://akizukidenshi.com/goodsaffix/LM393G.pdf",
+    "clamp_mosfet_datasheet": "https://akizukidenshi.com/goodsaffix/2sk2232.pdf",
+    "control_supply_datasheet": "https://akizukidenshi.com/goodsaffix/m78ar-1.pdf"
+  }
+}
