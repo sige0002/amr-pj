@@ -1,0 +1,75 @@
+{
+  "calculated_at_UTC": "2026-09-21T14:52:57.580355+00:00",
+  "purpose": "Compare purchase costs for one existing C45 quote; not a final JPY payment or new JLCCNC quotation",
+  "quote_source": "evidence/C45-observed.json",
+  "quote_source_sha256": "9bebde06d217d6c87de014d5ff5789d613d0c65f308d9e54f851683b52a33bb7",
+  "quote_observed_at": "2026-09-21T12:01:37.521545+00:00",
+  "quantity": 1,
+  "part_name": "AMR_GridDeck_C45_Q1",
+  "size_mm": [
+    300,
+    300,
+    4
+  ],
+  "material_requested": "6061-T6",
+  "grid_holes": {
+    "count": 36,
+    "diameter_mm": 4.5,
+    "square_pitch_mm": 50,
+    "edge_offset_mm": 25,
+    "threaded": false
+  },
+  "rate": {
+    "provider": "European Central Bank",
+    "source_url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
+    "USD_reference_page": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html",
+    "JPY_reference_page": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-jpy.en.html",
+    "reference_date": "2026-09-21",
+    "USD_per_EUR": "1.1490",
+    "JPY_per_EUR": "180.70",
+    "JPY_per_USD_calculated": "157.2671888598781549173194082",
+    "formula": "JPY_per_EUR / USD_per_EUR",
+    "downloaded_XML_sha256": "4ba0c6fbd667ebea8c8acf25b1a2e446ea2d0df6add9d5f266d5f17cd809eb8c",
+    "source_type": "Daily reference rate; not card, PayPal or supplier guaranteed settlement rate"
+  },
+  "rounding": "Calculate with unrounded cross rate, display JPY rounded to nearest 10 yen using HALF_UP",
+  "records": [
+    {
+      "speed": "standard",
+      "manufacturing_label": "標準: 5 日",
+      "parts_lot_USD": 30.69,
+      "shipping_USD": 9.98,
+      "total_USD": 40.67,
+      "parts_lot_JPY_calculated": "4826.530026109660574412532638",
+      "parts_lot_JPY_rounded_to_10": 4830,
+      "shipping_JPY_calculated": "1569.526544821583986074847694",
+      "shipping_JPY_rounded_to_10": 1570,
+      "total_JPY_calculated": "6396.056570931244560487380331",
+      "total_JPY_rounded_to_10": 6400
+    },
+    {
+      "speed": "economic",
+      "manufacturing_label": "経済的: 10 日",
+      "parts_lot_USD": 28.67,
+      "shipping_USD": 9.98,
+      "total_USD": 38.65,
+      "parts_lot_JPY_calculated": "4508.850304612706701479547433",
+      "parts_lot_JPY_rounded_to_10": 4510,
+      "shipping_JPY_calculated": "1569.526544821583986074847694",
+      "shipping_JPY_rounded_to_10": 1570,
+      "total_JPY_calculated": "6078.376849434290687554395127",
+      "total_JPY_rounded_to_10": 6080
+    }
+  ],
+  "excluded_costs": [
+    "Card or payment-provider conversion spreads/fees",
+    "Import duties/taxes and clearance-related fees if charged",
+    "Support bars, fasteners, cargo stops and straps"
+  ],
+  "fees_and_import_costs_JPY": null,
+  "final_payment_JPY": null,
+  "manual_review_complete": false,
+  "fit_and_load_validation_complete": false,
+  "adopted_into_current_CAD_or_BOM": false,
+  "orders_placed": false
+}
