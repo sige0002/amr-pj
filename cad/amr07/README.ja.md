@@ -19,7 +19,7 @@
 | CAD検査 | **222物理部品、24,531ペア、体積干渉なし**。工具、タイヤ抜出し、荷台撤去後の電池抜出し、配線予約も確認 |
 | 接地 | 無変形・公称寸法で駆動輪2個とキャスターの床面z=0。実物では着座公差・タイヤたわみを調整 |
 | 加工費 | A6金具2個75.02 USD＋日本宛表示送料7.23 USD＝**82.25 USD**、自動見積・手動審査前 |
-| 費用全体 | 途中小計**54,910円＋82.25 USD＋未確定分**。完成車総額ではない |
+| 費用全体 | 途中小計**54,939円＋82.25 USD＋未確定分**。完成車総額ではない |
 
 重さは旧A4推計6.788kgへ、荷台と固定具約1.862kg、実寸ナットへの補正約0.083kg、小径座金と金具差約0.00036kgを加えた。旧A4内の電装2.10kg枠をそのまま1回だけ含む。候補部品を選んだことだけで電装の実質量・収納・連続運転を確認済みとは扱わない。[質量と幾何検査の記録](assembly_validation.json)。
 
@@ -28,7 +28,8 @@
 - [荷台の材料・穴位置・支持・固定・着脱・計算](DECK_REVIEW.ja.md)
 - [駆動・輪荷重の計算入力](requirements.json) / [計算結果](load_calculations.json)
 - [電源・停止回路の構成、候補部品、故障・熱試験](ELECTRICAL_AND_VALIDATION.ja.md)
-- [実加工見積と証拠](MACHINING_QUOTE.ja.md) / [BOM CSV](BOM.csv) / [費用と未計上項目](bom.json)
+- [BOM一覧・未選定品](BOM.ja.md) / [Excel](BOM.xlsx) / [購入品CSV](BOM.csv)
+- [実加工見積と証拠](MACHINING_QUOTE.ja.md) / [費用台帳](bom.json)
 - [P1S用PLA仮合わせモック](print-mock/M0601C_A6_PLA_mock_files.zip) / [印刷・仮合わせ手順](print-mock/PRINT_GUIDE.ja.md)
 
 ![A6下面・FreeCAD実画面](cad-screen-underside.png)
@@ -45,7 +46,10 @@
 python3 cad/amr07/calculate_design.py --check-only
 python3 cad/amr07/cargo_deck.py
 python3 cad/amr07/record_cost.py
+python3 cad/amr07/build_bom.py
 ```
+
+Excelも更新する場合は、openpyxl 3.1.5を入れたPython環境で`python3 cad/amr07/build_bom.py --xlsx`を実行する。[BOMの入力と生成物](BOM.ja.md#データと更新)を参照。
 
 FreeCADの独立したheadlessプロセスで`build_mount.py`→`build_assembly.py`を実行する。`make_quote_drawing.py`は通常のPythonから実STEP投影の2ページ図面を作る。GUIでは`capture_screens.py`を実行し、保存済みファイルを開き直した上で実画面を保存する。既に開いている文書の未保存編集を上書きしない。
 

@@ -1,0 +1,41 @@
+﻿id,name,quantity,currency,amount,price_kind,source,note
+F01,MISUMI NFSL6-3030-400 4本組,4,JPY,1952,observed_carried_from_A3,https://www.amazon.co.jp/dp/B0DKF2CCW3,切断不要。左右外周2本と内部2本。
+F02,MISUMI NFSL6-3030-300 4本組,2,JPY,1467,observed_carried_from_A3,https://www.amazon.co.jp/dp/B0DKDZ8G9G,切断不要。前後各1本、予備2本も購入費に含む。
+F03,MISUMI HBLFSN6-SET 純正6シリーズ接合セット,8,JPY,1540.0,manufacturer_catalog_reference,https://jp.misumi-ec.com/vona2/detail/110300442340/,2026年7月の公式表: 本体78円+SET97円=税別175円/組。8組×175×1.10=1540円の参考換算。各組にCBM6-12×2とHNTT6-6×2を含む。請求時の丸め・個人購入経路・送料は未確定。第二案で確認した参考値を引継ぎ、この作業で価格を再照合していない。
+F04,MISUMI HNTT6-6 追加28個分の予算,28,JPY,1200,allowance,https://jp.misumi-ec.com/vona2/detail/110302610850/,A6全50個のうち接合SET付属16個、基礎部の別購入28個、荷台用6個。ここは28個分の1200円仮枠。荷台6個はDECK_fasteners_and_extra_slotnutsに含み、重複加算しない。販売単位・個人購入経路は未確定。
+E02,主計算機／外部PCとPico Hを接続するUSBデータケーブル予算,1,JPY,500,allowance,,Pico H側はmicro-B。ホスト側端子と長さを確定してデータ通信対応品を選ぶ。旧USB-RS485Bは搭載しない。500円は仮枠。
+C01,ハンマーキャスター 420G-R50,1,JPY,373,observed_carried_from_A3,https://www.tanaka-km.com/view/item/000000036665,Aの販売情報を引継ぎ: 径50/幅20/高さ65、座59×47、穴ピッチ46×35、トレール16、許容荷重300Nの公称値。段差走行能力を認定する値ではない。個人購入可としたAの販売店を継続候補とし、本州送料650円を別計上。6mm取付スペーサーは撤去。
+P01,キャスター板用 A5052 t4 素材予算,1,JPY,900,allowance,,完成板80×170×t4を1枚。900円はこの1枚を切り出す購入素材分の仮枠で、完成加工価格ではない。販売寸法・最小注文単位・切りしろ・つかみ代を確認して更新する。旧200角から車軸板2枚を作る構成は廃止。
+P03,A5052板 t3 150x150mm 素材予算,1,JPY,500,allowance,,Aの素材仮枠500円を維持。60×60直角三角ガセット4枚。販売単位と加工条件は未確定。
+P04,低床電池クレードル・前後電装トレイ用PLA 消費材料予算,1,JPY,600,allowance,,既所有PLAの300g相当・600円枠。クレードル130×160×37、後部85×180×4.4、前部145×170×4.4mm各1点。CAD充実PLA推計は合計約245.5gで、実スライス量・再印刷分は未確認。全点P1S公称256mm角内。電池形状は予約空間で実電池の適合を意味しない。新規スプール購入時は販売単位全額へ更新。プリンター・工具・作業時間・電気代は含まない。
+H01,追加M2.5/M6ねじ・一般ナット・ワッシャ 一式予算,1,JPY,2300,allowance,,基礎部の別購入：M2.5×12を6本、M6×10を8本、M6×12を20本、M6×16を4本、M6六角ナット4個、M6平座金OD13×12枚、大径OD18×12枚。SET付属M6×12の16本、溝ナット、MW座金、荷台締結材、タイヤ付属ねじを重複計上しない。購入パック未確定。
+H02,電池固定ストラップ2本分の予算,2,JPY,500,allowance,,低床クレードルに電池を固定する2本分の仮枠。幅・長さ・金具・締付方法・販売単位は未選定で、実在する2本組商品の価格ではない。電池やアダプターの価格は含まない。実電池に合わせて保持方法を確定する。
+D01,M0601C_111 Taobao購入想定,2,JPY,14000,user_allowance,,ユーザー提示の約7000円/個を円換算の仮枠とする。対象URL・選択SKU・同一仕様・タイヤ/カバー/ねじ/ケーブル付属・送料・代行/輸入諸費は未確認。基準は本体のみと仮定し、初回タイヤをD02へ別計上。国内販売税込単価とは扱わない。
+D02,DDT-M0601C-TIRE 初回装着用タイヤキット,2,JPY,9240,observed_2026_09_21,https://www.switch-science.com/products/9203,M0601C_111への適合記載。1キットにタイヤ1、カバー1、ねじ3。2輪分9240円を同時注文する場合は通常送料無料。初回装着分で、将来交換用の予備キットではない。Taobao品に適合する一式が付属すると確認できた場合のみ初回別購入を除く。
+S02,タナカ金物 本州配送,1,JPY,650,observed_condition_carried_from_A,,Aの本州・4900円未満条件を引継ぎ。配送先・決済条件で更新。
+S03,Amazon・素材の追加送料枠,1,JPY,1000,allowance_carried_from_A,,A3の1000円枠を共通フレーム/残存板材の配送へ暫定維持。既製比較案の取付板素材配送も同枠を更新する。製作Q01の配送はS08へ分ける。発注先・口数は未確定で、同じ費用を二重加算しない。
+S04,純正接合部・追加溝ナットの送料追加枠,1,JPY,500,allowance,,個人購入経路未確定のため500円を仮置き。実送料や購入可能性を確認した数字ではない。複数配送や手数料が生じる場合は枠を差替え、同じ費用を二重加算しない。
+S06,国内モーター/タイヤ/既製ブラケット 通常配送,1,JPY,0,observed_free_shipping_condition_2026_09_21,https://www.switch-science.com/policies/shipping-policy,当該国内品の同時注文小計8000円以上を適用。タイヤ2個だけでも9240円。国内注文がないタイヤ付属Taobao＋製作案にはこの行を適用しない。
+S07,Taobaoの国内外送料・代行/輸入諸費,1,JPY,,quote_pending,,注文経路、送り先、商品付属/梱包と円換算を確認して総額を更新する。7000円/個に含まれるとは推定せず、無料にも置かない。
+DECK_plate,"ESCO EA441VC-41 A5052 300x300x4, one sheet",1,JPY,4521,observed_2026_09_21,https://www.monotaro.com/p/4993/2618/,"Seller display4521税込, one plate0.972kg. Order4110税別 exceeds3500 free-standard-shipping threshold; special/region charges final at checkout. Temper unlisted, acceptance minimum thickness3.85mm must be confirmed/measured."
+DECK_square_bar,"Hikari AS6151 aluminum15x15x995, one stock",1,JPY,1507,observed_2026_09_21,https://store.shopping.yahoo.co.jp/akibaoo/4977720061511.html,"Seller displayed retail price/region example shipping; material is aluminum with B2 anodize, alloy/temper not published. One stock supplies all six pieces."
+DECK_cargo_straps,E-Value BT-2520BK25mmx2m,2,JPY,786,observed_2026_09_21,https://store.shopping.yahoo.co.jp/hcbrico/4977292226752.html,Seller displayed price; manufacturer125g and0.8kN working force. Product force is not a rating of the assembled deck/slots.
+DECK_SHIP,荷台材料の表示送料参考,1,JPY,1200,displayed_regional_reference,,地域・同梱条件は注文時確定
+DECK_fasteners_and_extra_slotnuts,fasteners_and_extra_slotnuts,1,JPY,1500,allowance,,"Six M6x30, twelve M6 grade A washers plus sorting spares, six HNTT6-6, eight M4x25/washer/nut sets; purchasing units and personal MISUMI supply unresolved."
+DECK_edge_protection_and_slack_retention,edge_protection_and_slack_retention,1,JPY,300,allowance,,Protect all webbing/metal contact edges and secure tails; final pad selection unconfirmed.
+MW,WILCO FW-2505-05EB 2.7x5x0.5,6,JPY,319.0,observed_quantity_break_tax_added,https://wilco.jp/products/F/FW-EB.html,10個購入予定・6個使用。29円/個は10個以上の税別単価：290円＋消費税29円＝319円。1個から購入可だが数量割引を選択。未発注、送料別。H01と別計上。
+ELEC_S1,IDEC XA1E-BV302R,1,JPY,3298,observed_candidate_2026_09_21,https://www.monotaro.com/p/6051/3817/,2 NC emergency-stop switch; panel hole 16.2 mm
+ELEC_K1_K2,Omron G5LE-1 DC5,2,JPY,770,observed_candidate_2026_09_21,https://jp.rs-online.com/web/p/power-relays/0369466,Series NO contacts; 385 JPY each; 8 A / 30 V DC resistive rating is not an inrush rating
+ELEC_U1,Raspberry Pi Pico H SC0917,1,JPY,920,observed_candidate_2026_09_21,https://akizukidenshi.com/catalog/g/g118085/,"51 x 21 mm board, sole RS485 master; firmware not implemented"
+ELEC_U2,CD74HC123E,1,JPY,140,observed_candidate_2026_09_21,https://eleshop.jp/shop/g/gT11488/,External retriggerable heartbeat monitor
+ELEC_U3,TC74HC74AP,1,JPY,33,observed_candidate_2026_09_21,https://eleshop.jp/shop/g/gT11476/,Edge-operated ARM latch; power-on reset and debounce required
+ELEC_PS1,M78AR05-1,1,JPY,850,observed_candidate_2026_09_21,https://akizukidenshi.com/catalog/g/g113536/,"5 V 1 A supply reserved for supervisor and relay coils, not ROS computer"
+ELEC_U4,MAX3485ED (HTC),1,JPY,70,observed_candidate_2026_09_21,https://akizukidenshi.com/catalog/g/g116211/,"3.3 V IC, not assembled converter"
+ELEC_RDUMP,ARCOL HS50 22R J,1,JPY,1033,observed_candidate_2026_09_21,https://www.monotaro.com/g/02255191/,22 ohm 50 W only with specified thermal conditions
+ELEC_U5,LM393GN,1,JPY,30,observed_candidate_2026_09_21,https://akizukidenshi.com/catalog/g/g116987/,Bus clamp comparator
+ELEC_U6,TL431A (HTC),1,JPY,20,observed_candidate_2026_09_21,https://akizukidenshi.com/catalog/g/g112018/,Clamp reference; initial reference tolerance requires calibration
+ELEC_QCLAMP,2SK2232,1,JPY,100,observed_candidate_2026_09_21,https://akizukidenshi.com/catalog/g/g102414/,"Switching dump resistor, not unqualified linear dissipation"
+ELEC_PS2,LM78L12,1,JPY,20,observed_candidate_2026_09_21,https://akizukidenshi.com/catalog/g/g113464/,Clamp control power from motor bus
+ELEC_D0,SBM1060LSS,1,JPY,300,observed_candidate_2026_09_21,https://akizukidenshi.com/catalog/g/g116378/,One used; mandatory purchase pack contains 10; reverse current block
+Q01,A6-R1専用金具、同形2個,2,USD,75.02,vendor_automatic_quote,https://jlccnc.com/jp/cnc-machining-quote,STEP/PDF一致、手動審査前
+S08,日本宛OCS Express表示送料,1,USD,7.23,vendor_automatic_quote,https://jlccnc.com/jp/cnc-machining-quote,国単位。住所別・税・換算額未確認

@@ -48,6 +48,13 @@ def main():
     for item in old['items']:
         if item['id'] not in previous['active_item_ids'] or item['id'] in ('E01','Q01'): continue
         row(item['id'],item['name'],item['used'],item['pack_price_jpy']*item['packs'],item['price_kind'],item.get('url',''),item.get('note',''))
+        if item['id']=='E02':
+            rows[-1].update(name='主計算機／外部PCとPico Hを接続するUSBデータケーブル予算',
+                            note='Pico H側はmicro-B。ホスト側端子と長さを確定してデータ通信対応品を選ぶ。旧USB-RS485Bは搭載しない。500円は仮枠。')
+        elif item['id']=='F04':
+            rows[-1]['note']='A6全50個のうち接合SET付属16個、基礎部の別購入28個、荷台用6個。ここは28個分の1200円仮枠。荷台6個はDECK_fasteners_and_extra_slotnutsに含み、重複加算しない。販売単位・個人購入経路は未確定。'
+        elif item['id']=='H01':
+            rows[-1]['note']='基礎部の別購入：M2.5×12を6本、M6×10を8本、M6×12を20本、M6×16を4本、M6六角ナット4個、M6平座金OD13×12枚、大径OD18×12枚。SET付属M6×12の16本、溝ナット、MW座金、荷台締結材、タイヤ付属ねじを重複計上しない。購入パック未確定。'
     for item in old['shipping']:
         if item['id'] not in previous['active_shipping_ids'] or item['id'] in ('S05','S08'): continue
         row(item['id'],item['name'],1,item['amount_jpy'],item['kind'],item.get('url',''),item.get('note',''))
@@ -58,13 +65,14 @@ def main():
     row('DECK_SHIP','荷台材料の表示送料参考',1,deck['reference_shipping_subtotal_jpy'],'displayed_regional_reference',note='地域・同梱条件は注文時確定')
     for key in ('fasteners_and_extra_slotnuts','edge_protection_and_slack_retention'):
         p=deck[key]; row('DECK_'+key,key,1,p['planning_allowance_jpy'],'allowance',note=p['basis'])
-    row('MW','WILCO FW-2505-05EB 2.7x5x0.5',6,290,'observed_pack_minimum','https://wilco.jp/products/F/FW-EB.html','10個×29円を購入、6個使用。未発注、送料別。従来H01は他のねじの仮枠。')
+    washer_purchase=Decimal('29')*10*Decimal('1.10')
+    row('MW','WILCO FW-2505-05EB 2.7x5x0.5',6,float(washer_purchase),'observed_quantity_break_tax_added','https://wilco.jp/products/F/FW-EB.html','10個購入予定・6個使用。29円/個は10個以上の税別単価：290円＋消費税29円＝319円。1個から購入可だが数量割引を選択。未発注、送料別。H01と別計上。')
     for p in electrical['candidate_parts']:
         row('ELEC_'+p['id'],p['part_number'],p['used_quantity'],p['purchase_price_jpy_incl_tax'],'observed_candidate_2026_09_21',p['source'],p['note'])
     row('Q01','A6-R1専用金具、同形2個',2,economic['parts_lot_USD'],'vendor_automatic_quote','https://jlccnc.com/jp/cnc-machining-quote','STEP/PDF一致、手動審査前',currency='USD')
     row('S08','日本宛OCS Express表示送料',1,economic['shipping_USD'],'vendor_automatic_quote','https://jlccnc.com/jp/cnc-machining-quote','国単位。住所別・税・換算額未確認',currency='USD')
     subtotal=sum(Decimal(str(r['amount'])) for r in rows if r['currency']=='JPY' and r['amount'] is not None)
-    expected=Decimal(str(previous['priced_and_allowance_subtotal_jpy']))-5060+Decimal(str(deck['self_work_budget_before_contingency_jpy']))+Decimal(str(electrical['cost']['priced_purchase_subtotal_jpy_incl_tax']))+290
+    expected=Decimal(str(previous['priced_and_allowance_subtotal_jpy']))-5060+Decimal(str(deck['self_work_budget_before_contingency_jpy']))+Decimal(str(electrical['cost']['priced_purchase_subtotal_jpy_incl_tax']))+washer_purchase
     assert subtotal==expected
     result={'design':'AMR01_M0601C_A6','date':'2026-09-21','items':rows,
         'priced_and_allowance_subtotal_JPY':float(subtotal),
@@ -74,7 +82,7 @@ def main():
         'removed_old_USB_RS485B_and_its_shipping_JPY':5060,
         'deck_material_shipping_allowance_addition_JPY':deck['self_work_budget_before_contingency_jpy'],
         'electrical_selected_price_subtotal_JPY':electrical['cost']['priced_purchase_subtotal_jpy_incl_tax'],
-        'washer_purchase_addition_JPY':290,
+        'washer_purchase_addition_JPY':float(washer_purchase),
         'CAD_mass_estimate':json.loads((HERE/'assembly_validation.json').read_text())['mass'],
         'unpriced':['Taobao送料/輸入費','CNC図面審査による差額・税・住所別送料・決済換算',
                     '荷台等を自加工しない場合の切断/穴加工/バリ取り','自加工の工具/作業費',
@@ -82,9 +90,10 @@ def main():
         'excluded_by_design':electrical['cost']['excluded_by_design'],
         'note':'材料小売価格、既存仮枠、部品候補、自動加工見積を通貨別計上。完成車確定総額ではない。電装は実装・試験未完。'}
     (HERE/'bom.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
-    with (HERE/'BOM.csv').open('w',newline='',encoding='utf-8-sig') as f:
-        writer=csv.DictWriter(f,fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
+    with (HERE/'cost_ledger.csv').open('w',newline='',encoding='utf-8-sig') as f:
+        writer=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator='\n'); writer.writeheader(); writer.writerows(rows)
     print(json.dumps({k:result[k] for k in ['priced_and_allowance_subtotal_JPY','observed_automatic_quote_subtotal_USD','planning_total_JPY']},ensure_ascii=False))
+    print('Run build_bom.py next to refresh the purchasing BOM and optional Excel workbook.')
 
 
 if __name__=='__main__':main()

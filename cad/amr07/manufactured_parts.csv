@@ -1,0 +1,10 @@
+﻿id,name,quantity,specification,method,budget_id,drawing,note
+M01,専用モーター金具,2,A6061-T6／90×30×34mm,CNC外注,Q01,M0601C_mount_A6_R1.step,左右同形2個、図面PDF同送。75.02USD/2個の自動見積。
+M02,キャスター取付板,1,A5052／80×170×4mm,自加工,P01,AMR01_M0601C_A6.FCStd,材料費のみ。切断・穴加工・面取り。
+M03,コーナーガセット,4,A5052／直角二辺60mm・t3,自加工,P03,AMR01_M0601C_A6.FCStd,150角素材から4枚。加工図はCADから作成が必要。
+M04,荷台板,1,A5052／300×300×4mm,自加工,DECK_plate,DECK_REVIEW.ja.md,14丸穴＋30×6長穴4か所。
+M05,荷台支持棒,2,アルミ／15×15×300mm,自加工,DECK_square_bar,DECK_REVIEW.ja.md,支持棒2本＋ストッパ4個を同じ995mm材1本から製作。
+M06,荷物ストッパ,4,アルミ／15×15×50mm,自加工,DECK_square_bar,DECK_REVIEW.ja.md,支持棒と同じ材料行。素材代を二重計上しない。
+M07,電池クレードル,1,PLA／130×160×37mm,P1Sで印刷,P04,AMR01_M0601C_A6.FCStd,電池型式未定。スライス・印刷条件・実電池の適合未確認。
+M08,後部電装トレイ,1,PLA／85×180×4.4mm,P1Sで印刷,P04,AMR01_M0601C_A6.FCStd,現CADの部品。新電装用ケース・固定具は未選定表で別管理。
+M09,前部電装トレイ,1,PLA／145×170×4.4mm,P1Sで印刷,P04,AMR01_M0601C_A6.FCStd,PLA消費材料費は3部品まとめてP04。

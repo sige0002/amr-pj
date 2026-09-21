@@ -195,7 +195,6 @@
   },
   "cargo_conditions": {
     "normal_payload_kg": 10,
-    "five_degree_climb_payload_kg": 8,
     "structural_screening_payload_kg": 15,
     "container_and_load_spreader_mass_in_payload": true,
     "flat_bottom_container_footprint_mm": [
@@ -221,7 +220,8 @@
     "restraint": "Four metal stops and two perpendicular25mm cam-buckle straps. Container sides must bear on stops; protect strap edges, retain slack, hand tension only. No lifting.",
     "strap_pretension_limit_N_each": 20,
     "strap_pretension_limit_status": "Target20N/strap. Use a force gauge or spring balance to limit tail pull and verify retained tension on actual restraint fixture; no unchecked hand-tight/rachet operation. Measuring equipment unselected and excluded from materials budget.50N sensitivity is not permission.",
-    "whole_vehicle_loaded_use_released": false
+    "whole_vehicle_loaded_use_released": false,
+    "operation_scope": "Level smooth indoor floors only; former 8 kg / 5 degree case is reference only in requirements.json."
   },
   "structural_screening": {
     "payload_kg": 15,

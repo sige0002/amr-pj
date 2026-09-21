@@ -1,0 +1,58 @@
+{
+  "checks_recorded_at_UTC": "2026-09-21 09:54:32 UTC",
+  "purpose": "BOM retail spot checks; CNC quote is preserved without rerunning or altering it.",
+  "records": [
+    {
+      "id": "D02",
+      "url": "https://www.switch-science.com/products/9203",
+      "result": "confirmed",
+      "unit_JPY_incl_tax": 4620,
+      "bundle": "1 tire + 1 cover + 3 screws; screw dimensions unpublished"
+    },
+    {
+      "id": "S06",
+      "url": "https://www.switch-science.com/policies/shipping-policy",
+      "result": "confirmed",
+      "shipping_JPY": 0,
+      "condition": "Standard shipping for a single order of at least 8000 JPY; two tire kits total9240."
+    },
+    {
+      "id": "C01",
+      "url": "https://www.tanaka-km.com/view/item/000000036665",
+      "result": "confirmed",
+      "unit_JPY_incl_tax": 373
+    },
+    {
+      "id": "MW",
+      "url": "https://wilco.jp/products/F/FW-EB.html",
+      "result": "corrected_tax_and_purchase_unit",
+      "size_mm": [
+        2.7,
+        5,
+        0.5
+      ],
+      "unit_JPY_excl_tax_at_10pcs": 29,
+      "unit_JPY_excl_tax_below_10pcs": 140,
+      "purchase_quantity_chosen": 10,
+      "used_quantity": 6,
+      "lot_JPY_incl_tax_at_10_percent": 319,
+      "minimum_order_quantity_claimed": false
+    },
+    {
+      "id": "F01",
+      "url": "https://www.amazon.co.jp/dp/B0DKF2CCW3",
+      "result": "not_retrievable",
+      "retained_historical_lot_JPY": 1952,
+      "note": "Do not present retained price as newly verified."
+    },
+    {
+      "id": "F02",
+      "url": "https://www.amazon.co.jp/dp/B0DKDZ8G9G",
+      "result": "not_retrievable",
+      "retained_historical_lot_JPY": 1467,
+      "note": "Do not present retained price as newly verified."
+    }
+  ],
+  "other_prices": "Existing dated records and clearly labeled allowances; not all rows rechecked.",
+  "orders_placed": false
+}

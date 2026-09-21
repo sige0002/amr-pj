@@ -1,0 +1,223 @@
+﻿object_name,budget_id,label,material,hardware_spec,note
+Rail400_1,F01,"NFSL6-3030-400 | stock, no cuts",aluminum,,"Published slot8/lip2/depth9/max16.5; nominal reconstructed bevels. Internal webs and small radii simplified. Use catalog mass/inertia, not this solid."
+Rail400_2,F01,"NFSL6-3030-400 | stock, no cuts001",aluminum,,"Published slot8/lip2/depth9/max16.5; nominal reconstructed bevels. Internal webs and small radii simplified. Use catalog mass/inertia, not this solid."
+Rail400_3,F01,"NFSL6-3030-400 | stock, no cuts002",aluminum,,"Published slot8/lip2/depth9/max16.5; nominal reconstructed bevels. Internal webs and small radii simplified. Use catalog mass/inertia, not this solid."
+Rail400_4,F01,"NFSL6-3030-400 | stock, no cuts003",aluminum,,"Published slot8/lip2/depth9/max16.5; nominal reconstructed bevels. Internal webs and small radii simplified. Use catalog mass/inertia, not this solid."
+Cross300_1,F02,"NFSL6-3030-300 | stock, no cuts",aluminum,,"Published slot8/lip2/depth9/max16.5; nominal reconstructed bevels. Internal webs and small radii simplified. Use catalog mass/inertia, not this solid."
+Cross300_2,F02,"NFSL6-3030-300 | stock, no cuts001",aluminum,,"Published slot8/lip2/depth9/max16.5; nominal reconstructed bevels. Internal webs and small radii simplified. Use catalog mass/inertia, not this solid."
+Bracket_NN120,F03,MISUMI HBLFSN6-SET | series6,aluminum,,"Official specified part, simplified nominal ribs/tabs. Personal purchasing path unconfirmed."
+JointA_NN120,F03,JointA NN120,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_JointA_NN120,F03,"HNTT6-6 | catalog6.3 thick, tapered nominal profile",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+JointB_NN120,F03,JointB NN120,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_JointB_NN120,F03,"HNTT6-6 | catalog6.3 thick, tapered nominal profile001",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+Bracket_NN50,F03,MISUMI HBLFSN6-SET | series001,aluminum,,"Official specified part, simplified nominal ribs/tabs. Personal purchasing path unconfirmed."
+JointA_NN50,F03,JointA NN50,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_JointA_NN50,F03,"HNTT6-6 | catalog6.3 thick, tapered nominal profile002",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+JointB_NN50,F03,JointB NN50,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_JointB_NN50,F03,"HNTT6-6 | catalog6.3 thick, tapered nominal profile003",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+Bracket_N50,F03,MISUMI HBLFSN6-SET | series002,aluminum,,"Official specified part, simplified nominal ribs/tabs. Personal purchasing path unconfirmed."
+JointA_N50,F03,JointA N50,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_JointA_N50,F03,"HNTT6-6 | catalog6.3 thick, tapered nominal profile004",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+JointB_N50,F03,JointB N50,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_JointB_N50,F03,"HNTT6-6 | catalog6.3 thick, tapered nominal profile005",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+Bracket_N120,F03,MISUMI HBLFSN6-SET | series003,aluminum,,"Official specified part, simplified nominal ribs/tabs. Personal purchasing path unconfirmed."
+JointA_N120,F03,JointA N120,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_JointA_N120,F03,"HNTT6-6 | catalog6.3 thick, tapered nominal profile006",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+JointB_N120,F03,JointB N120,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_JointB_N120,F03,"HNTT6-6 | catalog6.3 thick, tapered nominal profile007",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+Gusset_N1N1,P03,A5052 t3 corner gusset | retained,aluminum,,Nominal simplified part; not a fabrication release.
+Washer_GussetN1N10,H01,Washer GussetN1N10,steel,M6 washer OD13 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+GussetBolt_N1N10,H01,GussetBolt N1N10,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Gusset_N1N10,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile008",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+Washer_GussetN1N11,H01,Washer GussetN1N11,steel,M6 washer OD13 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+GussetBolt_N1N11,H01,GussetBolt N1N11,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Gusset_N1N11,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile009",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+Gusset_N11,P03,A5052 t3 corner gusset | retained001,aluminum,,Nominal simplified part; not a fabrication release.
+Washer_GussetN110,H01,Washer GussetN110,steel,M6 washer OD13 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+GussetBolt_N110,H01,GussetBolt N110,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Gusset_N110,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile010",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+Washer_GussetN111,H01,Washer GussetN111,steel,M6 washer OD13 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+GussetBolt_N111,H01,GussetBolt N111,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Gusset_N111,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile011",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+Bracket_PN120,F03,MISUMI HBLFSN6-SET | series004,aluminum,,"Official specified part, simplified nominal ribs/tabs. Personal purchasing path unconfirmed."
+JointA_PN120,F03,JointA PN120,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_JointA_PN120,F03,"HNTT6-6 | catalog6.3 thick, tapered nominal profile012",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+JointB_PN120,F03,JointB PN120,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_JointB_PN120,F03,"HNTT6-6 | catalog6.3 thick, tapered nominal profile013",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+Bracket_PN50,F03,MISUMI HBLFSN6-SET | series005,aluminum,,"Official specified part, simplified nominal ribs/tabs. Personal purchasing path unconfirmed."
+JointA_PN50,F03,JointA PN50,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_JointA_PN50,F03,"HNTT6-6 | catalog6.3 thick, tapered nominal profile014",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+JointB_PN50,F03,JointB PN50,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_JointB_PN50,F03,"HNTT6-6 | catalog6.3 thick, tapered nominal profile015",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+Bracket_P50,F03,MISUMI HBLFSN6-SET | series006,aluminum,,"Official specified part, simplified nominal ribs/tabs. Personal purchasing path unconfirmed."
+JointA_P50,F03,JointA P50,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_JointA_P50,F03,"HNTT6-6 | catalog6.3 thick, tapered nominal profile016",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+JointB_P50,F03,JointB P50,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_JointB_P50,F03,"HNTT6-6 | catalog6.3 thick, tapered nominal profile017",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+Bracket_P120,F03,MISUMI HBLFSN6-SET | series007,aluminum,,"Official specified part, simplified nominal ribs/tabs. Personal purchasing path unconfirmed."
+JointA_P120,F03,JointA P120,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_JointA_P120,F03,"HNTT6-6 | catalog6.3 thick, tapered nominal profile018",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+JointB_P120,F03,JointB P120,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_JointB_P120,F03,"HNTT6-6 | catalog6.3 thick, tapered nominal profile019",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+Gusset_1N1,P03,A5052 t3 corner gusset | retained002,aluminum,,Nominal simplified part; not a fabrication release.
+Washer_Gusset1N10,H01,Washer Gusset1N10,steel,M6 washer OD13 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+GussetBolt_1N10,H01,GussetBolt 1N10,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Gusset_1N10,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile020",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+Washer_Gusset1N11,H01,Washer Gusset1N11,steel,M6 washer OD13 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+GussetBolt_1N11,H01,GussetBolt 1N11,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Gusset_1N11,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile021",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+Gusset_11,P03,A5052 t3 corner gusset | retained003,aluminum,,Nominal simplified part; not a fabrication release.
+Washer_Gusset110,H01,Washer Gusset110,steel,M6 washer OD13 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+GussetBolt_110,H01,GussetBolt 110,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Gusset_110,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile022",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+Washer_Gusset111,H01,Washer Gusset111,steel,M6 washer OD13 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+GussetBolt_111,H01,GussetBolt 111,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Gusset_111,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile023",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+CustomMotorMountL,Q01,A6-R1 CNC mount L | seated pocket + washer recesses,aluminum,,"A4 width90/t5 retained; profile +.12, seat axisZ50.18, hole groupZ50.35,3x3.2 holes,6.2x.5 washer recesses,wire6.5. Conditional lot fit and strength still pending."
+MountFrameBolt_52p5L,H01,MountFrameBolt 52p5L,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Mount_52p5L,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile024",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+MountFrameBolt_127p5L,H01,MountFrameBolt 127p5L,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Mount_127p5L,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile025",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+MotorFaceBolt_0L,H01,MotorFaceBolt 0L,steel,M2.5x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+MotorFaceBolt_1L,H01,MotorFaceBolt 1L,steel,M2.5x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+MotorFaceBolt_2L,H01,MotorFaceBolt 2L,steel,M2.5x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+M0601MotorL,D01,M0601C_111 | vendor STEP rigid body | 485g catalog,purchased,,Vendor STEP. Flexible stored lead pose clipped below its rigid exit; threaded bores opened locally for screw-envelope collision check. Original source retained separately; drawing thread-depth5mm governs.
+TireL,D02,DDT-M0601C-TIRE | nominal100.7x43 | axial datum provisional,purchased,,Catalog outer dimensions; bore/tread simplified. Axial stack is an assembly assumption pending kit drawing or physical measurement.
+TireCoverL,D02,Tire kit cover | nominal67x10 | included3 screws not dimensioned,purchased,,"Simplified cover envelope with assumed overlap/clearance against rotor. Kit includes3 screws per wheel, size/length unconfirmed; counted with kit, not standalone hardware."
+CustomMotorMountR,Q01,A6-R1 CNC mount R | seated pocket + washer recesses,aluminum,,"A4 width90/t5 retained; profile +.12, seat axisZ50.18, hole groupZ50.35,3x3.2 holes,6.2x.5 washer recesses,wire6.5. Conditional lot fit and strength still pending."
+MountFrameBolt_52p5R,H01,MountFrameBolt 52p5R,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Mount_52p5R,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile026",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+MountFrameBolt_127p5R,H01,MountFrameBolt 127p5R,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Mount_127p5R,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile027",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+MotorFaceBolt_0R,H01,MotorFaceBolt 0R,steel,M2.5x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+MotorFaceBolt_1R,H01,MotorFaceBolt 1R,steel,M2.5x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+MotorFaceBolt_2R,H01,MotorFaceBolt 2R,steel,M2.5x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+M0601MotorR,D01,M0601C_111 | vendor STEP rigid body | 485g catalog001,purchased,,Vendor STEP. Flexible stored lead pose clipped below its rigid exit; threaded bores opened locally for screw-envelope collision check. Original source retained separately; drawing thread-depth5mm governs.
+TireR,D02,DDT-M0601C-TIRE | nominal100.7x43 | axial datum provisional001,purchased,,Catalog outer dimensions; bore/tread simplified. Axial stack is an assembly assumption pending kit drawing or physical measurement.
+TireCoverR,D02,Tire kit cover | nominal67x10 | included3 screws not dimensioned001,purchased,,"Simplified cover envelope with assumed overlap/clearance against rotor. Kit includes3 screws per wheel, size/length unconfirmed; counted with kit, not standalone hardware."
+CasterAdapter,P01,A5052 t4 | direct to frame | no6mm spacers,aluminum,,Nominal simplified part; not a fabrication release.
+Washer_CasterFrame0,H01,Washer CasterFrame0,steel,M6 washer OD13 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+CasterFrameBolt_0,H01,CasterFrameBolt 0,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Caster_0,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile028",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+Washer_CasterFrame1,H01,Washer CasterFrame1,steel,M6 washer OD13 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+CasterFrameBolt_1,H01,CasterFrameBolt 1,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Caster_1,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile029",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+Washer_CasterFrame2,H01,Washer CasterFrame2,steel,M6 washer OD13 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+CasterFrameBolt_2,H01,CasterFrameBolt 2,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Caster_2,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile030",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+Washer_CasterFrame3,H01,Washer CasterFrame3,steel,M6 washer OD13 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+CasterFrameBolt_3,H01,CasterFrameBolt 3,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Caster_3,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile031",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+CasterTop,C01,Hammer420G-R50 | unchanged,purchased,,Nominal simplified part; not a fabrication release.
+CasterBolt_0,H01,CasterBolt 0,steel,M6x16 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+Nut_CasterBolt_0,H01,Nut CasterBolt 0,steel,M6 plain hex nut,Nominal simplified part; not a fabrication release.
+CasterBolt_1,H01,CasterBolt 1,steel,M6x16 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+Nut_CasterBolt_1,H01,Nut CasterBolt 1,steel,M6 plain hex nut,Nominal simplified part; not a fabrication release.
+CasterBolt_2,H01,CasterBolt 2,steel,M6x16 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+Nut_CasterBolt_2,H01,Nut CasterBolt 2,steel,M6 plain hex nut,Nominal simplified part; not a fabrication release.
+CasterBolt_3,H01,CasterBolt 3,steel,M6x16 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+Nut_CasterBolt_3,H01,Nut CasterBolt 3,steel,M6 plain hex nut,Nominal simplified part; not a fabrication release.
+SwivelRace,C01,SwivelRace,purchased,,Nominal simplified part; not a fabrication release.
+CasterFork,C01,CasterFork,purchased,,Nominal simplified part; not a fabrication release.
+CasterTire,C01,CasterTire,purchased,,Nominal simplified part; not a fabrication release.
+CasterCore,C01,CasterCore,purchased,,Nominal simplified part; not a fabrication release.
+BatteryCradlePLA,P04,PLA low battery cradle130x160 | floor32..35,PLA,,"Temporary load-bearing PLA cradle for0.75kg battery budget; battery120x80x65 is unselected. Add straps anchored to3030. Straps do not eliminate floor/flange creep; check temperature, clamping and retention."
+LargeWasher_Cradle0,H01,LargeWasher Cradle0,steel,M6 large washer OD18 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+CradleBolt_0,H01,CradleBolt 0,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Cradle_0,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile032",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+LargeWasher_Cradle1,H01,LargeWasher Cradle1,steel,M6 large washer OD18 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+CradleBolt_1,H01,CradleBolt 1,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Cradle_1,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile033",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+LargeWasher_Cradle2,H01,LargeWasher Cradle2,steel,M6 large washer OD18 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+CradleBolt_2,H01,CradleBolt 2,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Cradle_2,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile034",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+LargeWasher_Cradle3,H01,LargeWasher Cradle3,steel,M6 large washer OD18 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+CradleBolt_3,H01,CradleBolt 3,steel,M6x12 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Cradle_3,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile035",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+ElectronicsTrayPLA,P04,PLA rear electronics deck85x180 | low battery access kept clear,PLA,,Nominal simplified part; not a fabrication release.
+LargeWasher_Electronics0,H01,LargeWasher Electronics0,steel,M6 large washer OD18 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+ElectronicsBolt_0,H01,ElectronicsBolt 0,steel,M6x10 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Electronics_0,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile036",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+LargeWasher_Electronics1,H01,LargeWasher Electronics1,steel,M6 large washer OD18 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+ElectronicsBolt_1,H01,ElectronicsBolt 1,steel,M6x10 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Electronics_1,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile037",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+LargeWasher_Electronics2,H01,LargeWasher Electronics2,steel,M6 large washer OD18 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+ElectronicsBolt_2,H01,ElectronicsBolt 2,steel,M6x10 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Electronics_2,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile038",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+LargeWasher_Electronics3,H01,LargeWasher Electronics3,steel,M6 large washer OD18 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+ElectronicsBolt_3,H01,ElectronicsBolt 3,steel,M6x10 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_Electronics_3,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile039",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+FrontElectronicsTrayPLA,P04,PLA front deck145x170 |battery access notch,PLA,,Nominal simplified part; not a fabrication release.
+LargeWasher_Front0,H01,LargeWasher Front0,steel,M6 large washer OD18 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+FrontDeckBolt_0,H01,FrontDeckBolt 0,steel,M6x10 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_FrontDeck_0,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile040",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+LargeWasher_Front1,H01,LargeWasher Front1,steel,M6 large washer OD18 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+FrontDeckBolt_1,H01,FrontDeckBolt 1,steel,M6x10 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_FrontDeck_1,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile041",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+LargeWasher_Front2,H01,LargeWasher Front2,steel,M6 large washer OD18 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+FrontDeckBolt_2,H01,FrontDeckBolt 2,steel,M6x10 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_FrontDeck_2,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile042",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+LargeWasher_Front3,H01,LargeWasher Front3,steel,M6 large washer OD18 ID6.6 t1.6,Nominal simplified part; not a fabrication release.
+FrontDeckBolt_3,H01,FrontDeckBolt 3,steel,M6x10 socket screw,Unthreaded screw envelope; separate nuts/washers counted in fasteners.csv.
+SlotNut_FrontDeck_3,F04,"HNTT6-6 | catalog6.3 thick, tapered nominal profile043",steel,HNTT6-6 slot nut,A7.8/B15/E5.5/T6.3/L14. Rear taper reconstructed from catalog view; thread and corner radii omitted. Received slot/nut measurements required.
+MotorSeatWasher_0L,MW,FW-2505-05EB | 2.7x5x0.5 | L,steel,2.7x5x0.5 steel plain washer,Purchased washer nominal geometry; received head/washer seating and hardness require checking.
+MotorSeatWasher_1L,MW,FW-2505-05EB | 2.7x5x0.5 | L001,steel,2.7x5x0.5 steel plain washer,Purchased washer nominal geometry; received head/washer seating and hardness require checking.
+MotorSeatWasher_2L,MW,FW-2505-05EB | 2.7x5x0.5 | L002,steel,2.7x5x0.5 steel plain washer,Purchased washer nominal geometry; received head/washer seating and hardness require checking.
+MotorSeatWasher_0R,MW,FW-2505-05EB | 2.7x5x0.5 | R,steel,2.7x5x0.5 steel plain washer,Purchased washer nominal geometry; received head/washer seating and hardness require checking.
+MotorSeatWasher_1R,MW,FW-2505-05EB | 2.7x5x0.5 | R001,steel,2.7x5x0.5 steel plain washer,Purchased washer nominal geometry; received head/washer seating and hardness require checking.
+MotorSeatWasher_2R,MW,FW-2505-05EB | 2.7x5x0.5 | R002,steel,2.7x5x0.5 steel plain washer,Purchased washer nominal geometry; received head/washer seating and hardness require checking.
+CargoDeckPlate,DECK_plate,A5052 cargo plate 300x300x4 | top Z118,aluminum,,14 round holes +4 obround slots; deburr and pad webbing edges. Temper/proof strength and minimum thickness require confirmation.
+CargoDeckSupportR,DECK_square_bar,Al solid bar 15x15 L300 | continuous rail bearing,aluminum,,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoDeckSupportL,DECK_square_bar,Al solid bar 15x15 L300 | continuous rail bearing001,aluminum,,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoStopXP,DECK_square_bar,Al stop 15x15 L50 | inner face102 | not a lifting point,aluminum,,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoStopXN,DECK_square_bar,Al stop 15x15 L50 | inner face102 | not a lifting point001,aluminum,,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoStopYP,DECK_square_bar,Al stop 15x15 L50 | inner face102 | not a lifting point002,aluminum,,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoStopYN,DECK_square_bar,Al stop 15x15 L50 | inner face102 | not a lifting point003,aluminum,,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoDeckWasher0_0,DECK_fasteners_and_extra_slotnuts,CargoDeckWasher0_0,steel,M6 JIS B1256 grade A washer 12x6.4x1.6,Two standard washers per frame screw; measure combined thickness and seating. Not a spring washer.
+CargoDeckWasher0_1,DECK_fasteners_and_extra_slotnuts,CargoDeckWasher0_1,steel,M6 JIS B1256 grade A washer 12x6.4x1.6,Two standard washers per frame screw; measure combined thickness and seating. Not a spring washer.
+CargoDeckBolt0,DECK_fasteners_and_extra_slotnuts,CargoDeckBolt0,steel,M6x30 socket screw,Unthreaded envelope; verify thread engagement and tightening for received hardware.
+SlotNut_CargoDeck0,DECK_fasteners_and_extra_slotnuts,SlotNut_CargoDeck0,steel,HNTT6-6 slot nut,HNTT6-6 catalog dimensions with reconstructed taper; bolt engagement per mount_interface.json.
+CargoDeckWasher1_0,DECK_fasteners_and_extra_slotnuts,CargoDeckWasher1_0,steel,M6 JIS B1256 grade A washer 12x6.4x1.6,Two standard washers per frame screw; measure combined thickness and seating. Not a spring washer.
+CargoDeckWasher1_1,DECK_fasteners_and_extra_slotnuts,CargoDeckWasher1_1,steel,M6 JIS B1256 grade A washer 12x6.4x1.6,Two standard washers per frame screw; measure combined thickness and seating. Not a spring washer.
+CargoDeckBolt1,DECK_fasteners_and_extra_slotnuts,CargoDeckBolt1,steel,M6x30 socket screw,Unthreaded envelope; verify thread engagement and tightening for received hardware.
+SlotNut_CargoDeck1,DECK_fasteners_and_extra_slotnuts,SlotNut_CargoDeck1,steel,HNTT6-6 slot nut,HNTT6-6 catalog dimensions with reconstructed taper; bolt engagement per mount_interface.json.
+CargoDeckWasher2_0,DECK_fasteners_and_extra_slotnuts,CargoDeckWasher2_0,steel,M6 JIS B1256 grade A washer 12x6.4x1.6,Two standard washers per frame screw; measure combined thickness and seating. Not a spring washer.
+CargoDeckWasher2_1,DECK_fasteners_and_extra_slotnuts,CargoDeckWasher2_1,steel,M6 JIS B1256 grade A washer 12x6.4x1.6,Two standard washers per frame screw; measure combined thickness and seating. Not a spring washer.
+CargoDeckBolt2,DECK_fasteners_and_extra_slotnuts,CargoDeckBolt2,steel,M6x30 socket screw,Unthreaded envelope; verify thread engagement and tightening for received hardware.
+SlotNut_CargoDeck2,DECK_fasteners_and_extra_slotnuts,SlotNut_CargoDeck2,steel,HNTT6-6 slot nut,HNTT6-6 catalog dimensions with reconstructed taper; bolt engagement per mount_interface.json.
+CargoDeckWasher3_0,DECK_fasteners_and_extra_slotnuts,CargoDeckWasher3_0,steel,M6 JIS B1256 grade A washer 12x6.4x1.6,Two standard washers per frame screw; measure combined thickness and seating. Not a spring washer.
+CargoDeckWasher3_1,DECK_fasteners_and_extra_slotnuts,CargoDeckWasher3_1,steel,M6 JIS B1256 grade A washer 12x6.4x1.6,Two standard washers per frame screw; measure combined thickness and seating. Not a spring washer.
+CargoDeckBolt3,DECK_fasteners_and_extra_slotnuts,CargoDeckBolt3,steel,M6x30 socket screw,Unthreaded envelope; verify thread engagement and tightening for received hardware.
+SlotNut_CargoDeck3,DECK_fasteners_and_extra_slotnuts,SlotNut_CargoDeck3,steel,HNTT6-6 slot nut,HNTT6-6 catalog dimensions with reconstructed taper; bolt engagement per mount_interface.json.
+CargoDeckWasher4_0,DECK_fasteners_and_extra_slotnuts,CargoDeckWasher4_0,steel,M6 JIS B1256 grade A washer 12x6.4x1.6,Two standard washers per frame screw; measure combined thickness and seating. Not a spring washer.
+CargoDeckWasher4_1,DECK_fasteners_and_extra_slotnuts,CargoDeckWasher4_1,steel,M6 JIS B1256 grade A washer 12x6.4x1.6,Two standard washers per frame screw; measure combined thickness and seating. Not a spring washer.
+CargoDeckBolt4,DECK_fasteners_and_extra_slotnuts,CargoDeckBolt4,steel,M6x30 socket screw,Unthreaded envelope; verify thread engagement and tightening for received hardware.
+SlotNut_CargoDeck4,DECK_fasteners_and_extra_slotnuts,SlotNut_CargoDeck4,steel,HNTT6-6 slot nut,HNTT6-6 catalog dimensions with reconstructed taper; bolt engagement per mount_interface.json.
+CargoDeckWasher5_0,DECK_fasteners_and_extra_slotnuts,CargoDeckWasher5_0,steel,M6 JIS B1256 grade A washer 12x6.4x1.6,Two standard washers per frame screw; measure combined thickness and seating. Not a spring washer.
+CargoDeckWasher5_1,DECK_fasteners_and_extra_slotnuts,CargoDeckWasher5_1,steel,M6 JIS B1256 grade A washer 12x6.4x1.6,Two standard washers per frame screw; measure combined thickness and seating. Not a spring washer.
+CargoDeckBolt5,DECK_fasteners_and_extra_slotnuts,CargoDeckBolt5,steel,M6x30 socket screw,Unthreaded envelope; verify thread engagement and tightening for received hardware.
+SlotNut_CargoDeck5,DECK_fasteners_and_extra_slotnuts,SlotNut_CargoDeck5,steel,HNTT6-6 slot nut,HNTT6-6 catalog dimensions with reconstructed taper; bolt engagement per mount_interface.json.
+CargoStopBolt0,DECK_fasteners_and_extra_slotnuts,CargoStopBolt0,steel,M4x25 socket screw,Unthreaded envelope; verify thread engagement and tightening for received hardware.
+CargoStopWasher0,DECK_fasteners_and_extra_slotnuts,CargoStopWasher0,steel,M4 plain washer 9x4.3x0.8,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoStopNut0,DECK_fasteners_and_extra_slotnuts,CargoStopNut0,steel,M4 plain hex nut,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoStopBolt1,DECK_fasteners_and_extra_slotnuts,CargoStopBolt1,steel,M4x25 socket screw,Unthreaded envelope; verify thread engagement and tightening for received hardware.
+CargoStopWasher1,DECK_fasteners_and_extra_slotnuts,CargoStopWasher1,steel,M4 plain washer 9x4.3x0.8,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoStopNut1,DECK_fasteners_and_extra_slotnuts,CargoStopNut1,steel,M4 plain hex nut,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoStopBolt2,DECK_fasteners_and_extra_slotnuts,CargoStopBolt2,steel,M4x25 socket screw,Unthreaded envelope; verify thread engagement and tightening for received hardware.
+CargoStopWasher2,DECK_fasteners_and_extra_slotnuts,CargoStopWasher2,steel,M4 plain washer 9x4.3x0.8,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoStopNut2,DECK_fasteners_and_extra_slotnuts,CargoStopNut2,steel,M4 plain hex nut,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoStopBolt3,DECK_fasteners_and_extra_slotnuts,CargoStopBolt3,steel,M4x25 socket screw,Unthreaded envelope; verify thread engagement and tightening for received hardware.
+CargoStopWasher3,DECK_fasteners_and_extra_slotnuts,CargoStopWasher3,steel,M4 plain washer 9x4.3x0.8,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoStopNut3,DECK_fasteners_and_extra_slotnuts,CargoStopNut3,steel,M4 plain hex nut,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoStopBolt4,DECK_fasteners_and_extra_slotnuts,CargoStopBolt4,steel,M4x25 socket screw,Unthreaded envelope; verify thread engagement and tightening for received hardware.
+CargoStopWasher4,DECK_fasteners_and_extra_slotnuts,CargoStopWasher4,steel,M4 plain washer 9x4.3x0.8,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoStopNut4,DECK_fasteners_and_extra_slotnuts,CargoStopNut4,steel,M4 plain hex nut,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoStopBolt5,DECK_fasteners_and_extra_slotnuts,CargoStopBolt5,steel,M4x25 socket screw,Unthreaded envelope; verify thread engagement and tightening for received hardware.
+CargoStopWasher5,DECK_fasteners_and_extra_slotnuts,CargoStopWasher5,steel,M4 plain washer 9x4.3x0.8,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoStopNut5,DECK_fasteners_and_extra_slotnuts,CargoStopNut5,steel,M4 plain hex nut,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoStopBolt6,DECK_fasteners_and_extra_slotnuts,CargoStopBolt6,steel,M4x25 socket screw,Unthreaded envelope; verify thread engagement and tightening for received hardware.
+CargoStopWasher6,DECK_fasteners_and_extra_slotnuts,CargoStopWasher6,steel,M4 plain washer 9x4.3x0.8,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoStopNut6,DECK_fasteners_and_extra_slotnuts,CargoStopNut6,steel,M4 plain hex nut,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoStopBolt7,DECK_fasteners_and_extra_slotnuts,CargoStopBolt7,steel,M4x25 socket screw,Unthreaded envelope; verify thread engagement and tightening for received hardware.
+CargoStopWasher7,DECK_fasteners_and_extra_slotnuts,CargoStopWasher7,steel,M4 plain washer 9x4.3x0.8,Nominal fabrication candidate; inspect and validate before loaded use.
+CargoStopNut7,DECK_fasteners_and_extra_slotnuts,CargoStopNut7,steel,M4 plain hex nut,Nominal fabrication candidate; inspect and validate before loaded use.

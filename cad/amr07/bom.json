@@ -40,17 +40,17 @@
       "amount": 1200,
       "price_kind": "allowance",
       "source": "https://jp.misumi-ec.com/vona2/detail/110302610850/",
-      "note": "全44個=接合16+ガセット8+製作モーターブラケット4+キャスター板4+低床クレードル4+後部電装4+前部電装4。SET付属16個を引き追加28個。1200円は数量分仮枠で販売パック未確認。既製ブラケット比較案の再配置数量は未確定。"
+      "note": "A6全50個のうち接合SET付属16個、基礎部の別購入28個、荷台用6個。ここは28個分の1200円仮枠。荷台6個はDECK_fasteners_and_extra_slotnutsに含み、重複加算しない。販売単位・個人購入経路は未確定。"
     },
     {
       "id": "E02",
-      "name": "USB-RS485Bと主計算機を接続するUSBケーブル予算",
+      "name": "主計算機／外部PCとPico Hを接続するUSBデータケーブル予算",
       "quantity": 1,
       "currency": "JPY",
       "amount": 500,
       "price_kind": "allowance",
       "source": null,
-      "note": "USB-RS485BにはUSBケーブルが付属しないため500円を仮置き。機器側端子・主計算機側端子・長さを確定後、実商品の購入単位全額に更新する。RS485側の車内配線や電源配線は含まない。"
+      "note": "Pico H側はmicro-B。ホスト側端子と長さを確定してデータ通信対応品を選ぶ。旧USB-RS485Bは搭載しない。500円は仮枠。"
     },
     {
       "id": "C01",
@@ -100,7 +100,7 @@
       "amount": 2300,
       "price_kind": "allowance",
       "source": null,
-      "note": "A3の2300円枠を維持。予定追加数はM2.5×12を6本、M6×10を8本、M6×12を20本、M6×16を4本、M6一般ナット4個、M6通常ワッシャ12枚・大径12枚。A3のアングル/キー用M4ねじ・ナット・ワッシャ各12点は撤去。使用数減少から販売パック代が減るとは推定しない。SET付属M6×12を16本、溝ナットF04、タイヤキット付属ねじは重複計上しない。最終fasteners.csvと照合済み。"
+      "note": "基礎部の別購入：M2.5×12を6本、M6×10を8本、M6×12を20本、M6×16を4本、M6六角ナット4個、M6平座金OD13×12枚、大径OD18×12枚。SET付属M6×12の16本、溝ナット、MW座金、荷台締結材、タイヤ付属ねじを重複計上しない。購入パック未確定。"
     },
     {
       "id": "H02",
@@ -247,10 +247,10 @@
       "name": "WILCO FW-2505-05EB 2.7x5x0.5",
       "quantity": 6,
       "currency": "JPY",
-      "amount": 290,
-      "price_kind": "observed_pack_minimum",
+      "amount": 319.0,
+      "price_kind": "observed_quantity_break_tax_added",
       "source": "https://wilco.jp/products/F/FW-EB.html",
-      "note": "10個×29円を購入、6個使用。未発注、送料別。従来H01は他のねじの仮枠。"
+      "note": "10個購入予定・6個使用。29円/個は10個以上の税別単価：290円＋消費税29円＝319円。1個から購入可だが数量割引を選択。未発注、送料別。H01と別計上。"
     },
     {
       "id": "ELEC_S1",
@@ -403,7 +403,7 @@
       "note": "国単位。住所別・税・換算額未確認"
     }
   ],
-  "priced_and_allowance_subtotal_JPY": 54910.0,
+  "priced_and_allowance_subtotal_JPY": 54939.0,
   "observed_automatic_quote_subtotal_USD": 82.25,
   "planning_total_JPY": null,
   "ordered": false,
@@ -411,7 +411,7 @@
   "removed_old_USB_RS485B_and_its_shipping_JPY": 5060,
   "deck_material_shipping_allowance_addition_JPY": 9814,
   "electrical_selected_price_subtotal_JPY": 7584,
-  "washer_purchase_addition_JPY": 290,
+  "washer_purchase_addition_JPY": 319.0,
   "CAD_mass_estimate": {
     "previous_base_estimate_kg": 6.787808492626768,
     "mount_change_kg": 3.453044182967133e-05,

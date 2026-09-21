@@ -11,7 +11,8 @@
 - [車体FCStd](cad/amr07/AMR01_M0601C_A6.FCStd) / [車体STEP](cad/amr07/AMR01_M0601C_A6.step)
 - [金具STEP](cad/amr07/M0601C_mount_A6_R1.step) / [機能公差付き図面PDF](cad/amr07/M0601C_mount_A6_R1.pdf)
 - [荷台の設計・固定・費用](cad/amr07/DECK_REVIEW.ja.md) / [金具・締結と公差](cad/amr07/MOUNT_INTERFACE_REVIEW.ja.md)
-- [加工サイトの実見積と証拠](cad/amr07/MACHINING_QUOTE.ja.md) / [BOM](cad/amr07/BOM.csv)
+- [BOM一覧・未選定品](cad/amr07/BOM.ja.md) / [Excel](cad/amr07/BOM.xlsx) / [購入品CSV](cad/amr07/BOM.csv)
+- [加工サイトの実見積と証拠](cad/amr07/MACHINING_QUOTE.ja.md)
 - [電源・停止・回生の構成と試験仕様](cad/amr07/ELECTRICAL_AND_VALIDATION.ja.md)
 - [P1S用PLA仮合わせモックZIP](cad/amr07/print-mock/M0601C_A6_PLA_mock_files.zip) / [使い方](cad/amr07/print-mock/PRINT_GUIDE.ja.md)
 
@@ -26,7 +27,7 @@
 | 質量 | 電装2.10kg枠・荷台固定具込み推計8.733kg、未実測 |
 | CAD検査 | 222物理部品・24,531ペアで公称体積干渉なし。タイヤ/キャスター接地z=0、工具・電池整備空間を確認 |
 | 金具実見積 | 2個75.02 USD＋日本宛表示送料7.23 USD＝82.25 USD、図面審査前の自動見積 |
-| 費用途中小計 | 54,910円＋82.25 USD＋未確定分。完成車総額ではない |
+| 費用途中小計 | 54,939円＋82.25 USD＋未確定分。完成車総額ではない |
 
 費用はTaobaoモーター約7,000円/個という仮枠、タイヤ別購入、荷台等の板材は自加工する条件です。追加の荷台と停止回路候補を計上し、使わなくなったUSB-RS485Bとその送料を除きました。電池・主計算機・基板/配線・各店送料・輸入諸費、外注へ切り替える板材加工等は未確定。追加機械ブレーキは購入対象から除外し、従来小計にも計上していなかったため減額はありません。円とUSDを推定レートで合算していません。
 
@@ -42,9 +43,10 @@
 python3 cad/amr07/calculate_design.py --check-only
 python3 cad/amr07/cargo_deck.py
 python3 cad/amr07/record_cost.py
+python3 cad/amr07/build_bom.py
 ```
 
-再生成は[A6 README](cad/amr07/README.ja.md)。見積済み図面/STEPを変更するときは別改訂で見積り直します。
+Excelの更新方法は[BOMのデータと更新](cad/amr07/BOM.ja.md#データと更新)、CAD再生成は[A6 README](cad/amr07/README.ja.md)。見積済み図面/STEPを変更するときは別改訂で見積り直します。
 
 ## 比較履歴・共通資料
 
