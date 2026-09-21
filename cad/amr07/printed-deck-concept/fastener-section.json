@@ -1,0 +1,49 @@
+{
+  "source_file": "AMR01_PrintedDeck_P0.FCStd",
+  "source_sha256": "d5b982a1f8c4e270330e31790e1cadf84b73ef535c0c53e5024942e1a5edf438",
+  "source_objects": [
+    "Rail400_3",
+    "ExtraSupportL",
+    "PrintedDeckPanel4",
+    "ExtraFrameBoltL1",
+    "ExtraWasherL10",
+    "ExtraWasherL11",
+    "CompressionSleeve9",
+    "ExtraSlotNutL1"
+  ],
+  "section_plane_x_mm": 115,
+  "bolt_xy_mm": [
+    115,
+    65
+  ],
+  "crop_bounds_mm": [
+    97,
+    40,
+    65,
+    115,
+    90,
+    130
+  ],
+  "display_transform": "translate(-115,-65,-99); rotate Z -90 degrees",
+  "design_modified": false,
+  "status": "P0 nominal section; sleeve selection, tolerances and preload unverified",
+  "bolt": "M6x30",
+  "support_bar_mm": [
+    300,
+    15,
+    15
+  ],
+  "support_through_hole_mm": 6.6,
+  "sleeve_OD_ID_L_mm": [
+    10,
+    6.6,
+    4
+  ],
+  "washer_count": 2,
+  "washer_thickness_mm": 1.6,
+  "fastener_count_outer_inner": [
+    6,
+    4
+  ],
+  "maintenance": "Same bolts retain deck and support bars; bars are not independently fastened."
+}
