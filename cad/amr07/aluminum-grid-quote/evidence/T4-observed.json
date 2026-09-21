@@ -1,0 +1,42 @@
+{
+  "tag": "T4",
+  "name": "AMR_GridDeck_T4_Q1",
+  "observed_at": "2026-09-21T12:01:18.663443+00:00",
+  "quantity": 1,
+  "material_UI": "Aluminum 6061",
+  "material_requested": "6061-T6",
+  "finish": "none / as machined",
+  "highest_tolerance_UI": "+/-0.10mm",
+  "currency": "USD",
+  "shipping_country": "Japan",
+  "shipping_service": "UPS Worldwide Express Saver",
+  "automatic_not_manual": true,
+  "manual_drawing_review_complete": false,
+  "ordered": false,
+  "paid": false,
+  "drawing_attachment_verified": true,
+  "remarks": "QUOTE ONLY qty1; 6061-T6, as machined. PDF: 300x300x4 plate; 36xM4x0.7-6H through threads on grid; STEP D3.3 bores are pilots only,50 pitch. Plus6xD6.6 frame holes,8xD4.5 stop holes(all14 unthreaded),4x30x6R3 slots. Hole/slot coordinates +/-0.10; thickness4+/-0.10; flatness0.5; other ISO2768-m. Deburr both faces, edge break<=0.2. Include material/all features; no hardware. No geometry changes. Fit/load validation pending.",
+  "records": [
+    {
+      "speed": "standard",
+      "manufacturing_label": "標準: 5 日",
+      "parts_lot_USD": 30.44,
+      "shipping_USD": 9.98,
+      "total_USD": 40.42
+    },
+    {
+      "speed": "economic",
+      "manufacturing_label": "経済的: 10 日",
+      "parts_lot_USD": 28.46,
+      "shipping_USD": 9.98,
+      "total_USD": 38.44
+    }
+  ],
+  "step_sha256": "8d79d37fda7591f84ca79d677785913bda73e97ba0a26710acb1f9097eee2874",
+  "pdf_sha256": "345b7ec45bacab3d78d4e8d5903fb2ea9f34fda0c3a89cedb126318ae649cfb7",
+  "drawing_verification": "Read-only part metadata bound to rendered quote card; ZIP contained same-name STEP/PDF. Threads PDF also attached in UI.",
+  "threads_requested": true,
+  "tap_count_in_drawing": 36,
+  "tap_cost_line_separately_verified": false,
+  "upload_package_sha256": "34caf8287385e2bab7774d675e11802e768b5a5314f4c7dbea05473b6bf8da13"
+}

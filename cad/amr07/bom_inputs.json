@@ -129,9 +129,9 @@
       "planned_purchase_quantity": 1,
       "purchase_unit": "1個×1",
       "planned_purchase_lots": 1,
-      "selection_status": "型式選定済",
-      "procurement_note": "キャスター構成部5形状を完成品1個として購入。送料S02。",
-      "supplier": "タナカ金物"
+      "selection_status": "型式維持・個人購入の店舗受取を第一候補",
+      "procurement_note": "完成品1個。税込498円＋店舗受取送料0円。受取店/在庫未確定、交通費別。ナフコ包装JANは2100256559029、受入時に420G-R50/高さ65/穴ピッチ46×35を照合。",
+      "supplier": "ナフコ（店舗受取）"
     },
     "P01": {
       "category": "駆動・支持",
@@ -441,9 +441,9 @@
       "planned_purchase_quantity": null,
       "purchase_unit": "送料／諸費1式",
       "planned_purchase_lots": null,
-      "selection_status": "参考・条件付き",
-      "procurement_note": "本州・4900円未満という旧確認条件。配送先で確定。",
-      "supplier": "タナカ金物"
+      "selection_status": "店舗受取の場合のみ0円",
+      "procurement_note": "商品ページの店舗受取送料無料条件。自宅配送費ではない。受取店・準備日は注文前に確認。",
+      "supplier": "ナフコ（店舗受取）"
     },
     "S03": {
       "category": "送料",
@@ -711,6 +711,7 @@
     "planned_purchase_quantity=nullは販売単位未確認。0円を意味しない。",
     "加工品・締結詳細は親行の材料費／一式予算に含み、加算しない。",
     "梱包数量が確定している行だけ余剰数を表示。",
-    "購入予定は実発注・在庫確保を意味しない。"
+    "購入予定は実発注・在庫確保を意味しない。",
+    "調達は個人で購入できる通常小売を優先し、送料込みで比較する。キャスター等の汎用品はホームセンター店舗受取を第一候補、難しい場合は配送先に対するAmazon Prime対象出品を確認する。法人専用の仕様ページだけでは購入先確定としない。"
   ]
 }

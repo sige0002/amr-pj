@@ -57,10 +57,10 @@
       "name": "ハンマーキャスター 420G-R50",
       "quantity": 1,
       "currency": "JPY",
-      "amount": 373,
-      "price_kind": "observed_carried_from_A3",
-      "source": "https://www.tanaka-km.com/view/item/000000036665",
-      "note": "Aの販売情報を引継ぎ: 径50/幅20/高さ65、座59×47、穴ピッチ46×35、トレール16、許容荷重300Nの公称値。段差走行能力を認定する値ではない。個人購入可としたAの販売店を継続候補とし、本州送料650円を別計上。6mm取付スペーサーは撤去。"
+      "amount": 498,
+      "price_kind": "observed_store_pickup_conditional",
+      "source": "https://nafco-online.com/products/detail.php?product_id=25655902",
+      "note": "ナフコ店舗受取候補。税込498円、1個購入。受取店・在庫未確定。型番/取付寸法を受入照合。"
     },
     {
       "id": "P01",
@@ -134,13 +134,13 @@
     },
     {
       "id": "S02",
-      "name": "タナカ金物 本州配送",
+      "name": "ナフコ店舗受取送料",
       "quantity": 1,
       "currency": "JPY",
-      "amount": 650,
-      "price_kind": "observed_condition_carried_from_A",
-      "source": "",
-      "note": "Aの本州・4900円未満条件を引継ぎ。配送先・決済条件で更新。"
+      "amount": 0,
+      "price_kind": "observed_store_pickup_conditional",
+      "source": "https://nafco-online.com/products/detail.php?product_id=25655902",
+      "note": "店舗受取なら送料無料。自宅配送は別条件。受取交通費は未計上。"
     },
     {
       "id": "S03",
@@ -403,7 +403,7 @@
       "note": "国単位。住所別・税・換算額未確認"
     }
   ],
-  "priced_and_allowance_subtotal_JPY": 54939.0,
+  "priced_and_allowance_subtotal_JPY": 54414.0,
   "observed_automatic_quote_subtotal_USD": 82.25,
   "planning_total_JPY": null,
   "ordered": false,
@@ -412,6 +412,7 @@
   "deck_material_shipping_allowance_addition_JPY": 9814,
   "electrical_selected_price_subtotal_JPY": 7584,
   "washer_purchase_addition_JPY": 319.0,
+  "caster_store_pickup_conditional_reduction_JPY": 525,
   "CAD_mass_estimate": {
     "previous_base_estimate_kg": 6.787808492626768,
     "mount_change_kg": 3.453044182967133e-05,

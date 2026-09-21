@@ -59,6 +59,14 @@ def main():
         if item['id'] not in previous['active_shipping_ids'] or item['id'] in ('S05','S08'): continue
         row(item['id'],item['name'],1,item['amount_jpy'],item['kind'],item.get('url',''),item.get('note',''))
     assert round(sum(x['amount'] or 0 for x in rows))==previous['priced_and_allowance_subtotal_jpy']-4400-660
+    caster=json.loads((HERE/'caster_procurement.json').read_text())
+    for r in rows:
+        if r['id']=='C01':
+            r.update(amount=caster['unit_JPY_incl_tax'],price_kind='observed_store_pickup_conditional',
+                     source=caster['url'],note='ナフコ店舗受取候補。税込498円、1個購入。受取店・在庫未確定。型番/取付寸法を受入照合。')
+        elif r['id']=='S02':
+            r.update(name='ナフコ店舗受取送料',amount=caster['shipping_JPY_if_store_pickup'],price_kind='observed_store_pickup_conditional',
+                     source=caster['url'],note='店舗受取なら送料無料。自宅配送は別条件。受取交通費は未計上。')
     for key in ('plate','square_bar','cargo_straps'):
         p=deck[key]
         row('DECK_'+key,p['item'],p['quantity'],p['unit_jpy_incl_tax']*p['quantity'],'observed_2026_09_21',p['url'],p['basis'])
@@ -72,7 +80,7 @@ def main():
     row('Q01','A6-R1専用金具、同形2個',2,economic['parts_lot_USD'],'vendor_automatic_quote','https://jlccnc.com/jp/cnc-machining-quote','STEP/PDF一致、手動審査前',currency='USD')
     row('S08','日本宛OCS Express表示送料',1,economic['shipping_USD'],'vendor_automatic_quote','https://jlccnc.com/jp/cnc-machining-quote','国単位。住所別・税・換算額未確認',currency='USD')
     subtotal=sum(Decimal(str(r['amount'])) for r in rows if r['currency']=='JPY' and r['amount'] is not None)
-    expected=Decimal(str(previous['priced_and_allowance_subtotal_jpy']))-5060+Decimal(str(deck['self_work_budget_before_contingency_jpy']))+Decimal(str(electrical['cost']['priced_purchase_subtotal_jpy_incl_tax']))+washer_purchase
+    expected=Decimal(str(previous['priced_and_allowance_subtotal_jpy']))-5060+Decimal(str(deck['self_work_budget_before_contingency_jpy']))+Decimal(str(electrical['cost']['priced_purchase_subtotal_jpy_incl_tax']))+washer_purchase-Decimal(str(caster['conditional_reduction_JPY']))
     assert subtotal==expected
     result={'design':'AMR01_M0601C_A6','date':'2026-09-21','items':rows,
         'priced_and_allowance_subtotal_JPY':float(subtotal),
@@ -83,6 +91,7 @@ def main():
         'deck_material_shipping_allowance_addition_JPY':deck['self_work_budget_before_contingency_jpy'],
         'electrical_selected_price_subtotal_JPY':electrical['cost']['priced_purchase_subtotal_jpy_incl_tax'],
         'washer_purchase_addition_JPY':float(washer_purchase),
+        'caster_store_pickup_conditional_reduction_JPY':caster['conditional_reduction_JPY'],
         'CAD_mass_estimate':json.loads((HERE/'assembly_validation.json').read_text())['mass'],
         'unpriced':['Taobao送料/輸入費','CNC図面審査による差額・税・住所別送料・決済換算',
                     '荷台等を自加工しない場合の切断/穴加工/バリ取り','自加工の工具/作業費',

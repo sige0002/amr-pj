@@ -184,7 +184,7 @@ def build():
         rows.append(r)
     rows.sort(key=lambda r: CATEGORIES.index(r['category']))
     total = lambda currency: sum(Decimal(str(r['amount'])) for r in rows if r['currency'] == currency and r['amount'] is not None)
-    assert total('JPY') == Decimal('54939') == Decimal(str(ledger['priced_and_allowance_subtotal_JPY']))
+    assert total('JPY') == Decimal('54414') == Decimal(str(ledger['priced_and_allowance_subtotal_JPY']))
     assert total('USD') == Decimal('82.25') == Decimal(str(ledger['observed_automatic_quote_subtotal_USD']))
     category_totals = {cat: {cur: float(sum(Decimal(str(r['amount'])) for r in rows if r['category'] == cat and r['currency'] == cur and r['amount'] is not None)) for cur in ('JPY', 'USD')} for cat in CATEGORIES}
     data = {'design': ledger['design'], 'date': inputs['date'], 'scope': inputs['scope'],
@@ -227,12 +227,13 @@ def table(headers, rows):
 
 def write_markdown(d):
     lines = ['# A6 BOM — 平地10kg・追加機械ブレーキなし', '',
-             '2026-09-21作成。**途中小計54,939円＋82.25 USD＋未確定分**。車体の完成価格ではありません。購入・材料消費・仮枠を含み、通貨を換算せず集計しています。', '',
+             '2026-09-21更新。**途中小計54,414円＋82.25 USD＋未確定分**。キャスターをナフコ店舗受取498円＋送料0円で計上した条件付き金額です。車体の完成価格ではありません。購入・材料消費・仮枠を含み、通貨を換算せず集計しています。', '',
              '[Excel](BOM.xlsx) / [購入一覧CSV](BOM.csv) / [締結部品CSV](fasteners.csv) / [製作品CSV](manufactured_parts.csv)', '',
              'CADの物理形状222点を各費用行へ照合しました。完成キャスターやタイヤキットは、CAD形状数ではなく完成品の購入数で計上します。電装の半透明予約形状は購入品に数えていません。', '',
              'フレーム300mmは2本使用・4本組1セット購入。溝ナットは合計50個＝接合セット付属16個＋別購入34個です。未確定の販売パックを架空の「1セット」として確定していません。', '',
              '小径座金は10枚以上の単価29円が**税別**だったため、10枚税込319円へ訂正しました。旧小計との差は29円です。10枚は数量割引の選択で、最小注文数ではありません。[WILCOの価格表](https://wilco.jp/products/F/FW-EB.html)', '',
              'タイヤ・キャスター・座金・タイヤ送料条件を今回再確認しました。Amazonの価格は再取得できず、既存価格を参考値として引き継いでいます。その他の価格も全行再調査ではなく、既存調査・見積・仮枠です。[確認記録](bom_price_checks.json)', '',
+             'キャスターの購入先は、同じ420G-R50のナフコ店舗受取を第一候補へ変更しました。旧373円＋送料650円から、498円＋店舗受取送料0円へ525円減。受取店・在庫・交通費は未確認です。[購入経路と条件](CASTER_PROCUREMENT.ja.md)。[格子穴アルミ板のCNC比較見積](aluminum-grid-quote/README.ja.md)は代替案として別記し、現行の板素材代へ重複加算していません。', '',
              '## 分類別小計', '', table(['分類', '円', 'USD'], [[cat, amount(v['JPY']), amount(v['USD'], 'USD')] for cat, v in d['category_totals'].items()]), '',
              '金額空欄・未見積の項目は小計に含みません。未選定品は末尾にまとめています。各行の購入予定は実発注・在庫確保を意味しません。']
     for cat in CATEGORIES:

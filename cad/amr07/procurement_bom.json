@@ -3,9 +3,9 @@
   "date": "2026-09-21",
   "scope": "A6 flat-floor cargo10 kg; no additional mechanical brake; draft procurement, not an order.",
   "source_hashes": {
-    "bom.json": "e5dbd1429c76fac393b18eebf467ba68517d880730d70f4d3d75b99e549bdd9b",
-    "bom_inputs.json": "2f267743c05df6515802002796fccf2ce7f0d50fdc3b495ad59932d4af1f24c7",
-    "bom_price_checks.json": "d38ad811de923d014af5bee92768f5df60e035593bc5b59f8869ffb5e168d430",
+    "bom.json": "293c327b3d7a3e1b3e616c2e398b4446e9659103ab08508e0cbb129125d6917d",
+    "bom_inputs.json": "a00ecb7538b6adc33bc8990339f6d5d44d2ef10132a8bd56712998fc83158ed7",
+    "bom_price_checks.json": "f6decbecc5ae19cc556b15b209c73edafc609c52ecfe4e30bfacdc6fcfbcb73e",
     "AMR01_M0601C_A6.FCStd": "6974b6589b75018accaffb7504657a3ae8e28a69bc99d2c353b9bfee11a244bd",
     "requirements.json": "5c779c4d63e6c683581330db63e47fbe03cca0f90ab74ca8fd8411b2bb3f135a"
   },
@@ -140,10 +140,10 @@
       "name": "ハンマーキャスター 420G-R50",
       "quantity": 1,
       "currency": "JPY",
-      "amount": 373,
-      "price_kind": "observed_carried_from_A3",
-      "source": "https://www.tanaka-km.com/view/item/000000036665",
-      "note": "Aの販売情報を引継ぎ: 径50/幅20/高さ65、座59×47、穴ピッチ46×35、トレール16、許容荷重300Nの公称値。段差走行能力を認定する値ではない。個人購入可としたAの販売店を継続候補とし、本州送料650円を別計上。6mm取付スペーサーは撤去。",
+      "amount": 498,
+      "price_kind": "observed_store_pickup_conditional",
+      "source": "https://nafco-online.com/products/detail.php?product_id=25655902",
+      "note": "ナフコ店舗受取候補。税込498円、1個購入。受取店・在庫未確定。型番/取付寸法を受入照合。",
       "category": "駆動・支持",
       "name_ja": "自在キャスター",
       "specification": "ハンマー420G-R50、径50・取付高65mm",
@@ -152,11 +152,11 @@
       "planned_purchase_quantity": 1,
       "purchase_unit": "1個×1",
       "planned_purchase_lots": 1,
-      "selection_status": "型式選定済",
-      "procurement_note": "キャスター構成部5形状を完成品1個として購入。送料S02。",
-      "supplier": "タナカ金物",
-      "price_basis_ja": "過去価格の引継ぎ",
-      "purchase_lot_unit_price": 373.0,
+      "selection_status": "型式維持・個人購入の店舗受取を第一候補",
+      "procurement_note": "完成品1個。税込498円＋店舗受取送料0円。受取店/在庫未確定、交通費別。ナフコ包装JANは2100256559029、受入時に420G-R50/高さ65/穴ピッチ46×35を照合。",
+      "supplier": "ナフコ（店舗受取）",
+      "price_basis_ja": "販売表示・条件付き",
+      "purchase_lot_unit_price": 498.0,
       "surplus_quantity": 0,
       "cad_physical_object_count": 5
     },
@@ -837,13 +837,13 @@
     },
     {
       "id": "S02",
-      "name": "タナカ金物 本州配送",
+      "name": "ナフコ店舗受取送料",
       "quantity": 1,
       "currency": "JPY",
-      "amount": 650,
-      "price_kind": "observed_condition_carried_from_A",
-      "source": "",
-      "note": "Aの本州・4900円未満条件を引継ぎ。配送先・決済条件で更新。",
+      "amount": 0,
+      "price_kind": "observed_store_pickup_conditional",
+      "source": "https://nafco-online.com/products/detail.php?product_id=25655902",
+      "note": "店舗受取なら送料無料。自宅配送は別条件。受取交通費は未計上。",
       "category": "送料",
       "name_ja": "キャスター送料",
       "specification": "",
@@ -852,10 +852,10 @@
       "planned_purchase_quantity": null,
       "purchase_unit": "送料／諸費1式",
       "planned_purchase_lots": null,
-      "selection_status": "参考・条件付き",
-      "procurement_note": "本州・4900円未満という旧確認条件。配送先で確定。",
-      "supplier": "タナカ金物",
-      "price_basis_ja": "過去価格の引継ぎ",
+      "selection_status": "店舗受取の場合のみ0円",
+      "procurement_note": "商品ページの店舗受取送料無料条件。自宅配送費ではない。受取店・準備日は注文前に確認。",
+      "supplier": "ナフコ（店舗受取）",
+      "price_basis_ja": "販売表示・条件付き",
       "purchase_lot_unit_price": null,
       "surplus_quantity": null,
       "cad_physical_object_count": 0
@@ -3206,7 +3206,7 @@
       "USD": 0.0
     },
     "駆動・支持": {
-      "JPY": 24513.0,
+      "JPY": 24638.0,
       "USD": 75.02
     },
     "荷台": {
@@ -3226,12 +3226,12 @@
       "USD": 0.0
     },
     "送料": {
-      "JPY": 3350.0,
+      "JPY": 2700.0,
       "USD": 7.23
     }
   },
   "partial_subtotals": {
-    "JPY": 54939.0,
+    "JPY": 54414.0,
     "USD": 82.25
   },
   "completed_vehicle_total": null,

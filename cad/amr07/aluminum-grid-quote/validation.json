@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-09-21T12:05:35.829547+00:00",
+  "candidates": [
+    {
+      "tag": "C45",
+      "checked_quantity": 1,
+      "quote_matches_files": true,
+      "paired_drawing_verified": true,
+      "native_geometry_valid_single_solid": true,
+      "step_roundtrip_volume_error_mm3": 0,
+      "quote_arithmetic_matches_saved_page": true,
+      "manual_review_complete": false
+    },
+    {
+      "tag": "T4",
+      "checked_quantity": 1,
+      "quote_matches_files": true,
+      "paired_drawing_verified": true,
+      "native_geometry_valid_single_solid": true,
+      "step_roundtrip_volume_error_mm3": 0,
+      "quote_arithmetic_matches_saved_page": true,
+      "manual_review_complete": false
+    }
+  ],
+  "strength_certified": false,
+  "orders_placed": false,
+  "evidence_sha256": {
+    "C45-economic.png": "9fcca9c00d5ab1b3df57bff86c10319922f4f76b2097efa7ea68c15de3f6a632",
+    "C45-economic.txt": "697ccbde9b96e9986229a82dace54c8e5235d9f82f010de9b132c835661c73f3",
+    "C45-file-association.json": "5f6279b4ed954d8b58eb2067c29393d4a59c47f536128647a5e83b92b933f5df",
+    "C45-observed.json": "9bebde06d217d6c87de014d5ff5789d613d0c65f308d9e54f851683b52a33bb7",
+    "C45-remarks.txt": "ccb44bf29164430fbea6ab546fae31bf2e3fee3cd63efddd56ca03409749e541",
+    "C45-settings-notes.png": "e1eb3d124d2398e4477b140e6320f94e279d3c9f2943aca80d83c98ef5d7470d",
+    "C45-settings.png": "e87b4147e7171a5099fc5ed2d19d2db5c3bec1468200dc96cba62d9e7c449a0d",
+    "C45-settings.txt": "0afcde73c6f88bcfac870af1245d1b5d5b0613688155f658e5a8003e6c7d9017",
+    "C45-shipping.png": "3944f76b08bf4dd3d2c7a175d81d7eef489fa97aa67e0594c7b89cf944c35987",
+    "C45-shipping.txt": "1a47f43b9f2f2be9597e5da19f962568a64ae288bfb2e126d80f5a769cee9f33",
+    "C45-standard.png": "d0d54b99d2fcd1a4fe305c8c89fbc73170b5d786ee27f9675d5a529fbd0ce29d",
+    "C45-standard.txt": "58185a25f7f4c75d02ea3debb510d731dc61ca242cce984ba2823476d81a273c",
+    "T4-economic.png": "47962d2579884f4d555f8e6b1cbf4c35422ffd5c4afefb9ed4492706a021779c",
+    "T4-economic.txt": "2a20747b798dd72c5bef65ff36b60b5b97b9e8c72b7597060a26e983ad9d70f2",
+    "T4-file-association.json": "e52f26ae7f3374fd5da79fa24c30e860f99cd8c201cd8ed12cf49fb7aae76a33",
+    "T4-observed.json": "62028f104076ca2b1d7bc78f79533990e0fab9538991c3a0c2ab17a217692031",
+    "T4-remarks.txt": "98404e00013bc03c649b891f5fbfdc123397298470aebcddcdcd4c838cedb2dd",
+    "T4-settings-notes.png": "760bd8a8be4f4b4ae7b60a04ba3df06016852fbf1b935c20f5628bfe00397afd",
+    "T4-settings.png": "76bf800dafb57fdc781bbaf58219a67238cc2fd3a0fc4f12a60ce99d5e33ec16",
+    "T4-settings.txt": "c4339aef87f03e9ad16dcc778214bba1f0f108def00129769e96840eb3a7a181",
+    "T4-shipping.png": "197bec067a962233bc615dd26998a73133e921fe61d7dedef6b5fe3936dea964",
+    "T4-shipping.txt": "1a47f43b9f2f2be9597e5da19f962568a64ae288bfb2e126d80f5a769cee9f33",
+    "T4-standard.png": "51cdde8317c873b2cce9091e2a6be950faa180cc72c2583943d4eb1ff29a8cb6",
+    "T4-standard.txt": "88692a098067909251001432489e869205a52e2ba7535133e42654684441a492"
+  }
+}

@@ -54,5 +54,16 @@
     }
   ],
   "other_prices": "Existing dated records and clearly labeled allowances; not all rows rechecked.",
-  "orders_placed": false
+  "orders_placed": false,
+  "subsequent_updates": [
+    {
+      "date": "2026-09-21",
+      "ids": [
+        "C01",
+        "S02"
+      ],
+      "source": "caster_procurement.json",
+      "change": "NAFCO store pickup498 JPY +0 shipping replaces historical373+650. Store selection/stock/travel unverified. Earlier records below remain historical checks."
+    }
+  ]
 }

@@ -1,0 +1,60 @@
+{
+  "observed_at": "2026-09-21T11:53:07.385742+00:00",
+  "part": "Hammer 420G-R50",
+  "quantity": 1,
+  "personal_purchase_route": "NAFCO online, store pickup",
+  "url": "https://nafco-online.com/products/detail.php?product_id=25655902",
+  "seller_product_code": "n25655902",
+  "seller_internal_JAN": "2100256559029",
+  "manufacturer_JAN": "4956237000046",
+  "identification": "Listed model420 G-R50, H65/D50/30kg/no stopper, product photo with HAMMER CASTER marking. NAFCO own packaging uses a different JAN; confirm model and46x35 mounting pitch on received item.",
+  "unit_JPY_incl_tax": 498,
+  "shipping_JPY_if_store_pickup": 0,
+  "store_stock_verified": false,
+  "pickup_store_selected": false,
+  "ordered": false,
+  "conditions": "Store pickup offered and free shipping stated on product page. Stock/preparation time and actual pickup store remain to be confirmed. Travel cost excluded; not a home-delivery total.",
+  "manufacturer_dimensions_url": "https://www.hammer-caster.co.jp/products/detail/3119",
+  "dimensions_mm": {
+    "wheel_diameter": 50,
+    "mounting_height": 65,
+    "mounting_plate": [
+      59,
+      47
+    ],
+    "hole_pitch": [
+      46,
+      35
+    ],
+    "hole_diameter": 6.5,
+    "offset": 16
+  },
+  "catalog_allowable_load_daN": 30,
+  "previous_reference": {
+    "unit_JPY": 373,
+    "shipping_JPY": 650,
+    "total_JPY": 1023,
+    "url": "https://www.tanaka-km.com/view/item/000000036665"
+  },
+  "conditional_reduction_JPY": 525,
+  "other_routes": [
+    {
+      "retailer": "CAINZ",
+      "url": "https://www.cainz.com/g/4956237000046.html",
+      "result": "Catalog listing found, selected-context purchase not available; no confirmed price or store stock."
+    },
+    {
+      "retailer": "KOHNAN",
+      "url": "https://www.kohnan-eshop.com/shop/g/g4956237000046/",
+      "result": "Search listing found but live product page says sale ended or unavailable."
+    },
+    {
+      "retailer": "Amazon Japan",
+      "result": "Search did not verify a matching purchasable Prime offer. No Prime promise or price recorded."
+    }
+  ],
+  "evidence_hashes": {
+    "nafco-420G-R50.png": "97654c8a968116df64d842a44ae05f0cf03715d83fdb71844cace1a0b31de01a",
+    "nafco-420G-R50.txt": "3c4dc2c1ebace06aeb9506369285dc7fc6aed41755d397be7c841afa815bc40a"
+  }
+}

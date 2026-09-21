@@ -1,0 +1,42 @@
+{
+  "tag": "C45",
+  "name": "AMR_GridDeck_C45_Q1",
+  "observed_at": "2026-09-21T12:01:37.521545+00:00",
+  "quantity": 1,
+  "material_UI": "Aluminum 6061",
+  "material_requested": "6061-T6",
+  "finish": "none / as machined",
+  "highest_tolerance_UI": "+/-0.10mm",
+  "currency": "USD",
+  "shipping_country": "Japan",
+  "shipping_service": "UPS Worldwide Express Saver",
+  "automatic_not_manual": true,
+  "manual_drawing_review_complete": false,
+  "ordered": false,
+  "paid": false,
+  "drawing_attachment_verified": true,
+  "drawing_verification": "matching uploaded-part fileName2D / fileName3D and pairedFiles; T4 also displayed in Threads attachment field",
+  "threads_requested": false,
+  "tap_count_in_drawing": 0,
+  "tap_cost_line_separately_verified": false,
+  "upload_package_sha256": "6903ce027ecc8fd569baa3d394efb08df1f2dd8742582f034156e31c6a66b28d",
+  "remarks": "QUOTE ONLY qty1; 6061-T6, as machined. PDF: 300x300x4 plate; 36xD4.5 through grid, NO THREADS,50 pitch. Plus6xD6.6 frame holes,8xD4.5 stop holes(all14 unthreaded),4x30x6R3 slots. Hole/slot coordinates +/-0.10; thickness4+/-0.10; flatness0.5; other ISO2768-m. Deburr both faces, edge break<=0.2. Include material/all features; no hardware. No geometry changes. Fit/load validation pending.",
+  "records": [
+    {
+      "speed": "standard",
+      "manufacturing_label": "標準: 5 日",
+      "parts_lot_USD": 30.69,
+      "shipping_USD": 9.98,
+      "total_USD": 40.67
+    },
+    {
+      "speed": "economic",
+      "manufacturing_label": "経済的: 10 日",
+      "parts_lot_USD": 28.67,
+      "shipping_USD": 9.98,
+      "total_USD": 38.65
+    }
+  ],
+  "step_sha256": "f2aa6636ca8e33750a751ec8608bb4ee5fa09c8697a88eafe99bdc6d1607e79b",
+  "pdf_sha256": "19b2a5eb374d660bb6291a5bf0eb3b4f5e63ca2d5001450313b88155cc21a266"
+}

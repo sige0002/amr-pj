@@ -1,0 +1,12 @@
+{
+  "fileName2D": "AMR_GridDeck_T4_Q1.pdf",
+  "fileName3D": "AMR_GridDeck_T4_Q1.step",
+  "pairedFiles": [
+    "AMR_GridDeck_T4_Q1.pdf",
+    "AMR_GridDeck_T4_Q1.step"
+  ],
+  "quantity": 1,
+  "threadsFlag": true,
+  "thread_choice_UI": "はい",
+  "method": "Read-only part metadata bound to rendered quote card; ZIP contained same-name STEP/PDF. Threads PDF also attached in UI."
+}

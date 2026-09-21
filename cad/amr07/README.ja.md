@@ -19,7 +19,7 @@
 | CAD検査 | **222物理部品、24,531ペア、体積干渉なし**。工具、タイヤ抜出し、荷台撤去後の電池抜出し、配線予約も確認 |
 | 接地 | 無変形・公称寸法で駆動輪2個とキャスターの床面z=0。実物では着座公差・タイヤたわみを調整 |
 | 加工費 | A6金具2個75.02 USD＋日本宛表示送料7.23 USD＝**82.25 USD**、自動見積・手動審査前 |
-| 費用全体 | 途中小計**54,939円＋82.25 USD＋未確定分**。完成車総額ではない |
+| 費用全体 | 途中小計**54,414円＋82.25 USD＋未確定分**。キャスターをナフコ店舗受取とする条件。完成車総額ではない |
 
 重さは旧A4推計6.788kgへ、荷台と固定具約1.862kg、実寸ナットへの補正約0.083kg、小径座金と金具差約0.00036kgを加えた。旧A4内の電装2.10kg枠をそのまま1回だけ含む。候補部品を選んだことだけで電装の実質量・収納・連続運転を確認済みとは扱わない。[質量と幾何検査の記録](assembly_validation.json)。
 
@@ -27,6 +27,7 @@
 - [金具STEP](M0601C_mount_A6_R1.step) / [見積図面PDF・2ページ](M0601C_mount_A6_R1.pdf) / [金具・ねじの公差と設計理由](MOUNT_INTERFACE_REVIEW.ja.md)
 - [荷台の材料・穴位置・支持・固定・着脱・計算](DECK_REVIEW.ja.md)
 - [拡張用格子穴・4分割PLA上板の試作CADと比較](printed-deck-concept/README.ja.md)
+- [格子穴アルミ上板のJLCCNC実見積](aluminum-grid-quote/README.ja.md) / [キャスターの個人購入・店舗受取](CASTER_PROCUREMENT.ja.md)
 - [駆動・輪荷重の計算入力](requirements.json) / [計算結果](load_calculations.json)
 - [電源・停止回路の構成、候補部品、故障・熱試験](ELECTRICAL_AND_VALIDATION.ja.md)
 - [BOM一覧・未選定品](BOM.ja.md) / [Excel](BOM.xlsx) / [購入品CSV](BOM.csv)
