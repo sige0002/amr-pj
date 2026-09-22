@@ -20,8 +20,8 @@
       "sha256": "958c75270b74765b64e51a075940c4c93945960ae9e65aa179d64a54f263f9b2"
     },
     "D6-first-floor-print-files.zip": {
-      "bytes": 35058,
-      "sha256": "996a53362de303c59d0619c21eba8661d11a565cfd12891ed618e4114eb03617"
+      "bytes": 35348,
+      "sha256": "3351dab9e0365bc64ccf55bed1f7af870e1158aba934893416e4a83234a31fbf"
     },
     "FloorPLA_0_0.stl": {
       "bytes": 38684,
@@ -39,9 +39,13 @@
       "bytes": 37484,
       "sha256": "c778a4a5e4648980cd997c4c33a96774aa30e2fa525f89bfe2eaeb6e218dad97"
     },
+    "JOINT_REVIEW.ja.md": {
+      "bytes": 5379,
+      "sha256": "9609936a8d26b313a82b079f0167b4aa4161d0283b7f77ddac1a56fdec188959"
+    },
     "README.ja.md": {
-      "bytes": 10168,
-      "sha256": "b1f89ac7a5eea0398cefdde0ef9a26f3bb5f56c84392e3bf6bf81cdd06416328"
+      "bytes": 10809,
+      "sha256": "144649a5994ed267c194402b7a42d3b438fe77bdd77759e02d5c7a7366653bda"
     },
     "REFERENCE_DESIGNS.ja.md": {
       "bytes": 4206,
@@ -100,12 +104,16 @@
       "sha256": "a3b5696191b5862d494e0f616df88932b46a73512ca376dab5eea1f9aedd8e26"
     },
     "check_structure.py": {
-      "bytes": 4188,
-      "sha256": "0b435331d82c22a6647a2918990ba149b506d4a5dec5adc88f85a9ed9a9a16e7"
+      "bytes": 5020,
+      "sha256": "19866724f5cd87c493a9ddd2660b91d69420e04a09103516925268141ea00d41"
     },
     "cost_summary.json": {
       "bytes": 1110,
       "sha256": "2e371005a7bb60bc03d48734739a1be5ea55160ed605e36f2f92055639bba0e7"
+    },
+    "joint_review.json": {
+      "bytes": 2698,
+      "sha256": "8b194ec94ea60f37b2629dba0716f3ee7e0219cec166a1bcf4f90566d7191735"
     },
     "parameters.json": {
       "bytes": 2231,
@@ -123,13 +131,17 @@
       "bytes": 3375,
       "sha256": "c54ed0259b4d188f795889bb6d7c0ee10070640a634f9a11881c110bea693f4e"
     },
+    "review_joints.py": {
+      "bytes": 5600,
+      "sha256": "3d52697f4ee60206a07a79516b52bf1e6e44ec0141257dd433ce7a72ab8904f8"
+    },
     "saved_artifact_validation.json": {
       "bytes": 4437,
       "sha256": "d6c3044899eb3a8228f14f3849239146f2e8a16416eebf05182e4c53d8692bb5"
     },
     "structure_screening.json": {
-      "bytes": 2905,
-      "sha256": "48686b84c960993d4a0857b253a02a9c7c15b8272e5dcf526b4c028c2a8f60fd"
+      "bytes": 3743,
+      "sha256": "714f0e34802c2ea1929f4dec9de5e7816dfb77c22516ee70fbbc4da4f40fc22c"
     },
     "validate_saved.py": {
       "bytes": 4534,

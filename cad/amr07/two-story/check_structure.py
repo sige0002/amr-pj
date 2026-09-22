@@ -16,11 +16,15 @@ post_area=.84/2700*1e6;post_I=28700.;post_L=100.
 # Vertical comparison deliberately puts the complete upper force on ONE post.
 post_stress=SF*force/post_area
 euler=math.pi**2*E*post_I/(2*post_L)**2
-#60N frame push is an assembly test target, not a qualified operating load.
-# Four equal paths assumed for the bracket-strip screen; joint slipping,
-# uneven sharing, casting radii and prying are outside this calculation.
-push=60.;joint_moment=push/4*post_L
-bracket_screen=6*joint_moment/(20*4.5**2)
+#60N is a proposed assembly-test load, not a qualified operating load.
+# Record external moments about the base/post plane, not individual joint
+# moments: vertical reaction couples and joint stiffness determine sharing.
+# Withdraw the old equal-share root-strip calculation. It omitted upper-rail
+# height, contact/preload, casting geometry and the real frame load paths.
+push=60.;base_plane_z=99.
+push_moments=[dict(application_height_mm=z,lever_above_post_base_mm=z-base_plane_z,
+                   external_moment_about_base_plane_Nm=push*(z-base_plane_z)/1000)
+              for z in [233.,330.]]
 fea=json.loads((D3/'fea/summary.json').read_text())
 out=dict(revision='D6',date='2026-09-22',scope='member-level elastic screening, not whole-frame SF2 release',
     upper_vertical_service_force_N=force,static_factor=SF,
@@ -34,8 +38,13 @@ out=dict(revision='D6',date='2026-09-22',scope='member-level elastic screening, 
         source='https://fa.sus.co.jp/service/detail?ItemNo=SFF-324'),
     joints=dict(new_brackets=8,arrangement='one bottom and one top bracket on opposite post faces; post ends bear directly on horizontal rails',
         physical_push_test_target_N=push,physical_push_test_completed=False,
-        equal_share_bracket_strip_stress_MPa=bracket_screen,
-        assumptions='four equal paths;20x4.5mm root strip under1500Nmm. No casting strength or joint slip acceptance inferred.',
+        external_horizontal_push_cases=push_moments,
+        individual_joint_moments_resolved=False,
+        old_equal_share_strip_screen_withdrawn=True,
+        assumptions='External overturning moment is shared by joint moments and vertical reaction couples; do not divide by4 and infer bracket acceptance. Old20x4.5mm root-strip model omitted the real joint/contact load paths.',
+        catalog_bracket=dict(part='HBLFSN6',vertical_arrangement_allowable_N=1176,
+            source='https://jp.misumi-ec.com/vona2/detail/110300442340/',
+            scope='Manufacturer horizontal crossbeam supported underneath by two brackets; all mounting holes bolted. Not a published all-axis moment rating for this assembly.'),
         mixed_manufacturer_interface='HBLFSN6/HNTT6-6 vs SUS SF2; nominal CAD fit only; actual tabs/seating/bolt bottoming to verify',
         clamp_torque_or_preload_qualified=False,frame_racking_qualified=False),
     previous_plate_FEA=dict(files='aluminum-direct-deck/fea',

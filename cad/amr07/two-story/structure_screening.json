@@ -30,8 +30,27 @@
     "arrangement": "one bottom and one top bracket on opposite post faces; post ends bear directly on horizontal rails",
     "physical_push_test_target_N": 60.0,
     "physical_push_test_completed": false,
-    "equal_share_bracket_strip_stress_MPa": 22.22222222222222,
-    "assumptions": "four equal paths;20x4.5mm root strip under1500Nmm. No casting strength or joint slip acceptance inferred.",
+    "external_horizontal_push_cases": [
+      {
+        "application_height_mm": 233.0,
+        "lever_above_post_base_mm": 134.0,
+        "external_moment_about_base_plane_Nm": 8.04
+      },
+      {
+        "application_height_mm": 330.0,
+        "lever_above_post_base_mm": 231.0,
+        "external_moment_about_base_plane_Nm": 13.86
+      }
+    ],
+    "individual_joint_moments_resolved": false,
+    "old_equal_share_strip_screen_withdrawn": true,
+    "assumptions": "External overturning moment is shared by joint moments and vertical reaction couples; do not divide by4 and infer bracket acceptance. Old20x4.5mm root-strip model omitted the real joint/contact load paths.",
+    "catalog_bracket": {
+      "part": "HBLFSN6",
+      "vertical_arrangement_allowable_N": 1176,
+      "source": "https://jp.misumi-ec.com/vona2/detail/110300442340/",
+      "scope": "Manufacturer horizontal crossbeam supported underneath by two brackets; all mounting holes bolted. Not a published all-axis moment rating for this assembly."
+    },
     "mixed_manufacturer_interface": "HBLFSN6/HNTT6-6 vs SUS SF2; nominal CAD fit only; actual tabs/seating/bolt bottoming to verify",
     "clamp_torque_or_preload_qualified": false,
     "frame_racking_qualified": false

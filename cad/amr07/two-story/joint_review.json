@@ -1,0 +1,67 @@
+{
+  "revision": "D6 review only",
+  "date": "2026-09-22",
+  "native_sha256": "0bc02bf9fd16c9e4b0c243867776738e8560af2148fbe597d5def024df59c30e",
+  "original_base_mass_kg": 9.728198669430933,
+  "candidates": [
+    {
+      "candidate": "opposing_lower",
+      "added_brackets": 4,
+      "added_M6x12": 8,
+      "added_HNTT6_6": 8,
+      "added_mass_kg": 0.16688727568384262,
+      "estimated_base_kg": 9.895085945114776,
+      "additional_bracket_pack_cost_JPY": 0,
+      "cost_basis": "D6 planned 20 brackets with4 unused,100 nuts with34 unused;917JPY/10-pack carried from same-day observation. Additional screws/shipping unpriced. Nothing already owned assumed.",
+      "mass_basis": "Same nominal BRep/density ledger as D6; bracket15g catalog mass not substituted into only the candidate.",
+      "collisions": [],
+      "service_collisions": [],
+      "tool_collisions": [],
+      "tire_service": [
+        {
+          "side": -1,
+          "hits": []
+        },
+        {
+          "side": 1,
+          "hits": []
+        }
+      ],
+      "nominal_geometry_and_access_passed": true,
+      "CAD_modified": false,
+      "strength_qualified": false,
+      "limitation": "Opposing X brackets address opening in the X-Z plane; Y loading, racking, preload and mixed-brand seating are not qualified by adding parts."
+    },
+    {
+      "candidate": "opposing_lower_and_upper",
+      "added_brackets": 8,
+      "added_M6x12": 16,
+      "added_HNTT6_6": 16,
+      "added_mass_kg": 0.33377455136768536,
+      "estimated_base_kg": 10.061973220798619,
+      "additional_bracket_pack_cost_JPY": 917,
+      "cost_basis": "D6 planned 20 brackets with4 unused,100 nuts with34 unused;917JPY/10-pack carried from same-day observation. Additional screws/shipping unpriced. Nothing already owned assumed.",
+      "mass_basis": "Same nominal BRep/density ledger as D6; bracket15g catalog mass not substituted into only the candidate.",
+      "collisions": [],
+      "service_collisions": [],
+      "tool_collisions": [],
+      "tire_service": [
+        {
+          "side": -1,
+          "hits": []
+        },
+        {
+          "side": 1,
+          "hits": []
+        }
+      ],
+      "nominal_geometry_and_access_passed": true,
+      "CAD_modified": false,
+      "strength_qualified": false,
+      "limitation": "Opposing X brackets address opening in the X-Z plane; Y loading, racking, preload and mixed-brand seating are not qualified by adding parts."
+    }
+  ],
+  "current_design_qualified": false,
+  "candidate_adopted": false,
+  "finding": "Member vertical screening does not certify single-sided joints. Need directional moment/slip and assembly-racking validation; CAD clearance is independent of that."
+}
