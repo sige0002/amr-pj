@@ -6,32 +6,40 @@
   "status": "design_requirements_accepted_hardware_qualification_pending",
   "battery_service": {
     "date": "2026-09-22",
-    "revision": "D4",
-    "CAD": "battery-drawer/AMR01_BatteryDrawer_D4.FCStd",
-    "design_intent_ja": "電池の交換時に荷物・荷物ベルト・アルミ天板を外さない。電池固定と受け皿の抜け止めの両方を設計する。",
-    "battery_product_selected": false,
-    "old_reservation_only_mm": [
-      120,
-      80,
-      65
+    "revision": "D5",
+    "CAD": "makita-power/AMR01_MakitaPower_D5.FCStd",
+    "design_intent_ja": "BL1860B6Ahをアダプターごと後端で上へ取り出す。工具不要、天板・荷物は残す。36mm厚制約を撤回。",
+    "battery_product_selected": true,
+    "battery_part": "Makita BL1860B A-60464",
+    "charger_part": "Makita DC18RF",
+    "adapter_part": "Netkey diy-adapter03",
+    "battery_catalog_LWH_mm": [
+      113,
+      75,
+      62
     ],
-    "accepted_body_XYZ_mm": [
-      50,
-      112,
-      36
+    "battery_installed_XYZ_mm": [
+      75,
+      113,
+      62
     ],
-    "battery_body_XYZ_fit_example_mm": [
-      40,
-      104,
-      34.5
+    "battery_origin_xyz_mm": [
+      -240,
+      -56.5,
+      112
     ],
     "additional_metal_machining": false,
-    "retention": "two battery straps and padded stops; two guides; two M4 retention screws; existing four M6 frame joints",
+    "retention": "padded rear tray + one25mm cam-buckle belt; four reused M6 frame mounts",
     "ground_clearance_mm": 25,
-    "service_travel_mm": 220,
+    "service_translation_xyz_mm": [
+      0,
+      0,
+      140
+    ],
     "disconnect_before_withdrawal": true,
-    "prototype_retention_test_force_N": 39.3,
+    "prototype_retention_test_force_N": 45,
     "prototype_retention_test_done": false,
+    "actual_latched_adapter_envelope_measured": false,
     "loaded_use_released": false
   },
   "deck_manufacturing_constraints": {
@@ -45,8 +53,8 @@
     "replacement_selected": true,
     "selected_revision": "D3 direct aluminum",
     "user_clarification_ja": "アルミ板へ戻し、嵩上げを廃止。干渉は修正する。",
-    "replacement_ja": "300x300x4mm一枚アルミ板を下段3030上面へ直接固定。上段フレーム・天板下スペーサーなし。電池受け床を7mm下げ最低地上高25mmを維持、電装トレイを前後へ移設。",
-    "replacement_CAD": "battery-drawer/AMR01_BatteryDrawer_D4.FCStd",
+    "replacement_ja": "D3アルミ板300x300x4、床上103mmをそのまま使用。D5は後端へ電池、旧電池位置へ計算機を移設。上段フレーム・天板下スペーサーなし。",
+    "replacement_CAD": "makita-power/AMR01_MakitaPower_D5.FCStd",
     "loaded_use_released": false,
     "scope_note": "This rejection concerns the deck's square-bar fabrication. Previously quoted custom motor mounts remain separately specified."
   },
@@ -69,15 +77,48 @@
     "user_confirmation": "Normal cargo 10 kg and structural cargo 15 kg / factor 2 retained. After declining the added brake, the former 8 kg / 5 degree case is reference only."
   },
   "geometry": {
-    "frame_outer_LW_mm": [460, 300],
-    "frame_bottom_top_z_mm": [69, 99],
-    "stock_3030_lengths_mm": [400, 400, 400, 400, 300, 300],
-    "D3_direct_deck": {"LWT_mm": [300, 300, 4], "bottom_top_z_mm": [99, 103], "upper_frame_count": 0, "under_deck_spacer_count": 0, "frame_fastener_count": 6, "grid_pitch_mm": 50, "grid_count": 36, "grid_y_offset_mm": 10, "battery_cradle_floor_z_mm": 25},
+    "frame_outer_LW_mm": [
+      460,
+      300
+    ],
+    "frame_bottom_top_z_mm": [
+      69,
+      99
+    ],
+    "stock_3030_lengths_mm": [
+      400,
+      400,
+      400,
+      400,
+      300,
+      300
+    ],
+    "D3_direct_deck": {
+      "LWT_mm": [
+        300,
+        300,
+        4
+      ],
+      "bottom_top_z_mm": [
+        99,
+        103
+      ],
+      "upper_frame_count": 0,
+      "under_deck_spacer_count": 0,
+      "frame_fastener_count": 6,
+      "grid_pitch_mm": 50,
+      "grid_count": 36,
+      "grid_y_offset_mm": 10,
+      "battery_cradle_floor_z_mm": 25
+    },
     "drive_axis_x_mm": 90,
     "drive_track_mm": 349,
     "wheel_diameter_mm": 100.7,
     "drive_axis_z_mm": 50.35,
-    "caster_pivot_xy_mm": [-150, 0],
+    "caster_pivot_xy_mm": [
+      -150,
+      0
+    ],
     "caster_trail_mm": 16,
     "caster_mounting_height_mm": 65,
     "caster_mounting_height_tolerance_plus_minus_mm": 1.5,
@@ -86,17 +127,49 @@
     "caster_samples": 720,
     "minimum_fixed_ground_clearance_mm": 25,
     "motor_mount_spacer_count": 0,
-    "tire_axial_stack_confirmed": false
+    "tire_axial_stack_confirmed": false,
+    "D5_power_module": {
+      "battery_bottom_top_z_mm": [
+        112,
+        174
+      ],
+      "adapter_conservative_top_z_mm": 204,
+      "buckle_rear_x_mm": -272,
+      "frame_rear_x_mm": -230,
+      "computer_origin_LWH_mm": [
+        -45,
+        -40,
+        30,
+        70,
+        80,
+        40
+      ]
+    }
   },
   "load_placement": {
-    "reviewed_base_mass_interval_kg": [6, 10],
-    "base_cg_x_interval_mm": [-10, 10],
-    "base_cg_y_interval_mm": [-10, 10],
-    "base_cg_max_z_mm": 110,
-    "payload_cg_x_interval_mm": [-30, 30],
-    "payload_cg_y_interval_mm": [-30, 30],
+    "reviewed_base_mass_interval_kg": [
+      6,
+      10
+    ],
+    "base_cg_x_interval_mm": [
+      -25,
+      25
+    ],
+    "base_cg_y_interval_mm": [
+      -10,
+      10
+    ],
+    "base_cg_max_z_mm": 115,
+    "payload_cg_x_interval_mm": [
+      -30,
+      30
+    ],
+    "payload_cg_y_interval_mm": [
+      -30,
+      30
+    ],
     "payload_cg_max_z_mm": 220,
-    "status": "Design and acceptance limits, not measured CG values. Place and restrain the cargo by its CG, not merely by its footprint.",
+    "status": "D5 revised acceptance envelope; not measured CG. Conditional mass-moment comparison includes rear battery and lowered computer; measured vehicle must fit these limits.",
     "change_control": "Recalculate before operating outside any reviewed mass, CG, support, tire or acceleration limit."
   },
   "drive": {
@@ -118,11 +191,33 @@
     "speed_note": "The initial limits apply first. Later limits require the thermal, stopping and handling checks. Stall torque is not used for continuous sizing."
   },
   "cases": [
-    {"id": "normal", "payload_kg": 10, "slope_deg": 0, "acceleration_m_s2": 0.2, "lateral_acceleration_m_s2": 0.18, "purpose": "normal flat-floor operating design"},
-    {"id": "structure", "payload_kg": 15, "slope_deg": 0, "acceleration_m_s2": 0, "lateral_acceleration_m_s2": 0, "purpose": "static structural verification, not a 15 kg operating rating"}
+    {
+      "id": "normal",
+      "payload_kg": 10,
+      "slope_deg": 0,
+      "acceleration_m_s2": 0.2,
+      "lateral_acceleration_m_s2": 0.18,
+      "purpose": "normal flat-floor operating design"
+    },
+    {
+      "id": "structure",
+      "payload_kg": 15,
+      "slope_deg": 0,
+      "acceleration_m_s2": 0,
+      "lateral_acceleration_m_s2": 0,
+      "purpose": "static structural verification, not a 15 kg operating rating"
+    }
   ],
   "reference_cases": [
-    {"id": "slope", "payload_kg": 8, "slope_deg": 5, "acceleration_m_s2": 0.2, "lateral_acceleration_m_s2": 0.18, "purpose": "historical slope comparison only; outside current prototype operation and required qualification", "in_current_operation_scope": false}
+    {
+      "id": "slope",
+      "payload_kg": 8,
+      "slope_deg": 5,
+      "acceleration_m_s2": 0.2,
+      "lateral_acceleration_m_s2": 0.18,
+      "purpose": "historical slope comparison only; outside current prototype operation and required qualification",
+      "in_current_operation_scope": false
+    }
   ],
   "strength": {
     "target_static_safety_factor": 2,

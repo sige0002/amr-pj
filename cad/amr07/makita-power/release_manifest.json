@@ -1,0 +1,127 @@
+{
+  "revision": "D5",
+  "date": "2026-09-22",
+  "source_revision": "099686bacaad0f72e8bc4ce15005cd708a5b2f83",
+  "files": {
+    "AMR01_MakitaPower_D5.FCStd": {
+      "bytes": 1410459,
+      "sha256": "74ff8d8fadf85bf26ddedcdf015559d6484c8090860dc183c34fc295969419c2"
+    },
+    "AMR01_MakitaPower_D5.step": {
+      "bytes": 6689627,
+      "sha256": "c2977c0fabbfb7b2a373feeb93ed123eaa3b094d8efd331e9459822e48651d62"
+    },
+    "AMR01_MakitaPower_D5-with-power-envelopes.step": {
+      "bytes": 6702739,
+      "sha256": "4415db56f7ba4375b5dc41986d3a553ab06fecf00f41fe659e10b4138bf44baf"
+    },
+    "D5-power-print-files.zip": {
+      "bytes": 29635,
+      "sha256": "2fc1cf5c6f4fdb38e4999af0b6e3668250c836f8fdd991cbfa3eb8810c4da6ee"
+    },
+    "validation.json": {
+      "bytes": 10138,
+      "sha256": "9b77779fc75a0e5c9dad6b4121752847f06fe3e60a0d856f39d687033692cef1"
+    },
+    "saved_artifact_validation.json": {
+      "bytes": 1959,
+      "sha256": "461c1880892032c06b84fd39e63a6519dd23704dd89aaf95b5d2abd8ad79a7d3"
+    },
+    "BOM.csv": {
+      "bytes": 15937,
+      "sha256": "a2b4575a478eb395be197cf3a143282ad6963e3aaecdbac3f438019e51feca67"
+    },
+    "cost_summary.json": {
+      "bytes": 7744,
+      "sha256": "8c029f484dcc3cbaab3d0b1281bc0df6a7c67e1fa04b03a669a00a702eec83b6"
+    },
+    "parameters.json": {
+      "bytes": 1420,
+      "sha256": "282a8189a733e743c2312fab6e37d538a53aac2b7cfe7a92fa654a7804cd9909"
+    },
+    "print_manifest.json": {
+      "bytes": 301,
+      "sha256": "17fcaab601e605abdaf609dc1818856e912d3084b535e41b4502c633f311168e"
+    },
+    "power_selection.json": {
+      "bytes": 6770,
+      "sha256": "8b0fa7677f3ad381f8db8a1d9d35c2587691703f093831eb045f65c6ebf14937"
+    },
+    "README.ja.md": {
+      "bytes": 13114,
+      "sha256": "0216ec0dd8c775c4a121bca0e1e3f0a438ea124058d0189a1c26d88b6a6b4277"
+    },
+    "build_d5.py": {
+      "bytes": 18062,
+      "sha256": "54796c43c23a1adc7ef28a00632359b10c36bd569729dd9188766c4c6c0626a8"
+    },
+    "build_bom.py": {
+      "bytes": 5174,
+      "sha256": "17046ea91c1d100dac899c1ec04954dbd41470390008644e6d620e05a47dc6eb"
+    },
+    "validate_saved.py": {
+      "bytes": 3832,
+      "sha256": "2859d2da6e1e1f7a0aba10b9ee4270b375c22f85c2d475d5cfa4fe2477cd45f1"
+    },
+    "capture_screens.py": {
+      "bytes": 3870,
+      "sha256": "161e6ad888536a463027a7493363a28759e88ee6bf44338077893443cc691156"
+    },
+    "release.py": {
+      "bytes": 3256,
+      "sha256": "20a65a4b2614cd7db846525ffb2fb7797c83a0a4bc6d661bb43f5f6244d74c53"
+    },
+    "cad-screen-assembled.png": {
+      "bytes": 211444,
+      "sha256": "6da6a0affde91de106063ce3173e190d720e6a830ba90a6e6cf32e6c4d797684"
+    },
+    "cad-screen-battery-exchange.png": {
+      "bytes": 213194,
+      "sha256": "6853162bb0fa2b0d220caf5ebedbf6feb0708cfef48e708e32cf6a8a7270d569"
+    },
+    "cad-screen-battery-retention.png": {
+      "bytes": 180737,
+      "sha256": "fe1bc37644ced6bf6149053cddb91214252fcb42b9d7a04979a15d810dbff3c7"
+    },
+    "cad-screen-low-electronics.png": {
+      "bytes": 170719,
+      "sha256": "44a0c29ba7096f334ae2d011dc75769e2bc3259df3b9e19a9bf3ddc8483f4f3e"
+    },
+    "cad-screen-side-layout.png": {
+      "bytes": 168916,
+      "sha256": "908fbc2e094bd073eb5d8a98f52cb489abd2cda41f57853ded5a5cc8b9102571"
+    },
+    "cad-screen-top-layout.png": {
+      "bytes": 175540,
+      "sha256": "6e514b598872dbeb7aefcf0f316cd858766d08c13a22b17a960881bc4aa09289"
+    }
+  },
+  "linked_current_design_files": {
+    "requirements.json": "e310922561508517fc8df9da9488e6cd1cde6ad3aeee6de4b2665cd579e1df3f",
+    "electrical_plan.json": "a6ff84dbf02e09ac3ec7e1e30c79d778625dd80a1c3735acd579f20330622001",
+    "load_calculations.json": "f8b944e3978abceeb50e418986f721ab1070e97a928c38dbb5a927b31b69c4bf",
+    "caster_load_check.json": "30b89e4af11be801031c9f278fd6adc6cabcc2f29cc13b7c891bc78a56ac7483"
+  },
+  "quoted_plate_files_unchanged": {
+    "AMR_GridDeck_C45_D3.step": "c38862f7ac33c2f30bba198fce54ff1bcb22bd75820bd994dd8b4a5e7f5c0d4c",
+    "AMR_GridDeck_C45_D3.pdf": "e1428bb6273c0ab40b53fd2bbdb0904d620a0ff47ee51243ff735e6c8cf034bb"
+  },
+  "battery_selected": true,
+  "charger_new_purchase": true,
+  "loaded_use_released": false,
+  "new_metal_quote_requested": false,
+  "supplier_power_geometry": "catalog envelopes; received mating dimensions not verified",
+  "revised_CG_bounds_contain_conditional_mass_model": true,
+  "current_load_and_caster_calculations_match_requirements": true,
+  "source_D3_prints_still_used": [
+    "FrontElectronicsTrayPLA",
+    "PrintedStopXN",
+    "PrintedStopXP",
+    "PrintedStopYN",
+    "PrintedStopYP"
+  ],
+  "source_D3_prints_replaced": [
+    "BatteryCradlePLA",
+    "ElectronicsTrayPLA"
+  ]
+}

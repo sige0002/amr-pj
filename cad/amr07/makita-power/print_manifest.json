@@ -1,0 +1,20 @@
+[
+  {
+    "file": "RearBatteryTrayPLA.stl",
+    "size_mm": [
+      99.0,
+      160.0,
+      36.0
+    ],
+    "solid_mass_g": 124.43326703367373
+  },
+  {
+    "file": "LowElectronicsCradlePLA.stl",
+    "size_mm": [
+      130.0,
+      160.0,
+      44.0
+    ],
+    "solid_mass_g": 124.91763087108785
+  }
+]

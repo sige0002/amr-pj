@@ -1,0 +1,64 @@
+{
+  "revision": "D5",
+  "date": "2026-09-22",
+  "battery": "Makita BL1860B A-60464",
+  "battery_selected": true,
+  "charger": "Makita DC18RF JPADC18RF",
+  "adapter": "Netkey diy-adapter03",
+  "source_revision": "099686bacaad0f72e8bc4ce15005cd708a5b2f83",
+  "battery_catalog_LWH_mm": [
+    113,
+    75,
+    62
+  ],
+  "battery_installed_XYZ_mm": [
+    75,
+    113,
+    62
+  ],
+  "battery_origin_xyz_mm": [
+    -240,
+    -56.5,
+    112
+  ],
+  "battery_catalog_mass_budget_kg": 0.68,
+  "adapter_catalog_LWH_mm": [
+    95,
+    90,
+    30
+  ],
+  "adapter_installed_XYZ_mm": [
+    90,
+    95,
+    30
+  ],
+  "adapter_origin_xyz_mm": [
+    -247.5,
+    -47.5,
+    174
+  ],
+  "adapter_catalog_mass_kg": 0.123,
+  "mating_insertion_depth_credited_mm": 0,
+  "battery_and_adapter_geometry": "catalog bounding envelopes; interface offsets must be measured",
+  "module_retention": "one25mm webbing/cam buckle belt through tray; padded body stops",
+  "exchange": "power off, unplug external connector, open belt, lift whole battery+adapter module",
+  "service_translation_xyz_mm": [
+    0,
+    0,
+    140
+  ],
+  "deck_LWH_mm": [
+    300,
+    300,
+    4
+  ],
+  "deck_top_z_mm": 103,
+  "minimum_fixed_ground_mm": 25,
+  "normal_payload_kg": 10,
+  "structural_payload_kg": 15,
+  "new_metal_machining": false,
+  "box_body": false,
+  "charger_on_vehicle": false,
+  "loaded_use_released": false,
+  "electrical_protection_qualification": false
+}

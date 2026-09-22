@@ -1,0 +1,76 @@
+{
+  "revision": "D5",
+  "native_document": "AMR01_MakitaPower_D5",
+  "physical_parts": 208,
+  "native_solids": 212,
+  "STEP_solids": 212,
+  "native_volume_mm3": 2506533.386866453,
+  "STEP_delta_mm3": 0.10264119505882263,
+  "STEP_relative_tolerance": 1e-06,
+  "with_power_STEP_solids": 214,
+  "power_STEP_scope": "two catalog envelopes added, not mating-interface CAD",
+  "quoted_files_SHA256": {
+    "AMR_GridDeck_C45_D3.step": "c38862f7ac33c2f30bba198fce54ff1bcb22bd75820bd994dd8b4a5e7f5c0d4c",
+    "AMR_GridDeck_C45_D3.pdf": "e1428bb6273c0ab40b53fd2bbdb0904d620a0ff47ee51243ff735e6c8cf034bb"
+  },
+  "quoted_plate_BRep_matches": true,
+  "saved_service_samples_mm": [
+    0,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    110,
+    120,
+    130,
+    140
+  ],
+  "saved_service_sample_hits": [],
+  "continuous_conservative_lift_envelopes_passed": true,
+  "meshes": [
+    {
+      "file": "RearBatteryTrayPLA.stl",
+      "closed": true,
+      "size_mm": [
+        99.0,
+        160.0,
+        36.0
+      ]
+    },
+    {
+      "file": "LowElectronicsCradlePLA.stl",
+      "closed": true,
+      "size_mm": [
+        130.0,
+        160.0,
+        44.0
+      ]
+    }
+  ],
+  "battery_part_selected": "Makita BL1860B",
+  "charger_part_selected": "Makita DC18RF",
+  "adapter_part_selected": "Netkey diy-adapter03",
+  "actual_latched_module_measured": false,
+  "mass": {
+    "source_D3_kg": 8.246366343915682,
+    "removed_prints_kg": 0.17522709604974054,
+    "new_prints_kg": 0.24935089790476167,
+    "old_battery_allocation_removed_kg": 0.75,
+    "battery_kg": 0.68,
+    "adapter_kg": 0.123,
+    "new_straps_and_pads_allowance_kg": 0.18,
+    "electrical_total_kg": 2.1530000000000005,
+    "estimated_base_kg": 8.553490145770702,
+    "remaining_to_10kg_kg": 1.4465098542292978,
+    "total_solid_PLA_kg": 0.33271739717746524,
+    "actually_weighed": false
+  },
+  "electrical_operating_release": false,
+  "loaded_use_released": false
+}

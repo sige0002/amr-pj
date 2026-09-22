@@ -1,0 +1,506 @@
+{
+  "parameters": {
+    "revision": "D5",
+    "date": "2026-09-22",
+    "battery": "Makita BL1860B A-60464",
+    "battery_selected": true,
+    "charger": "Makita DC18RF JPADC18RF",
+    "adapter": "Netkey diy-adapter03",
+    "source_revision": "099686bacaad0f72e8bc4ce15005cd708a5b2f83",
+    "battery_catalog_LWH_mm": [
+      113,
+      75,
+      62
+    ],
+    "battery_installed_XYZ_mm": [
+      75,
+      113,
+      62
+    ],
+    "battery_origin_xyz_mm": [
+      -240,
+      -56.5,
+      112
+    ],
+    "battery_catalog_mass_budget_kg": 0.68,
+    "adapter_catalog_LWH_mm": [
+      95,
+      90,
+      30
+    ],
+    "adapter_installed_XYZ_mm": [
+      90,
+      95,
+      30
+    ],
+    "adapter_origin_xyz_mm": [
+      -247.5,
+      -47.5,
+      174
+    ],
+    "adapter_catalog_mass_kg": 0.123,
+    "mating_insertion_depth_credited_mm": 0,
+    "battery_and_adapter_geometry": "catalog bounding envelopes; interface offsets must be measured",
+    "module_retention": "one25mm webbing/cam buckle belt through tray; padded body stops",
+    "exchange": "power off, unplug external connector, open belt, lift whole battery+adapter module",
+    "service_translation_xyz_mm": [
+      0,
+      0,
+      140
+    ],
+    "deck_LWH_mm": [
+      300,
+      300,
+      4
+    ],
+    "deck_top_z_mm": 103,
+    "minimum_fixed_ground_mm": 25,
+    "normal_payload_kg": 10,
+    "structural_payload_kg": 15,
+    "new_metal_machining": false,
+    "box_body": false,
+    "charger_on_vehicle": false,
+    "loaded_use_released": false,
+    "electrical_protection_qualification": false
+  },
+  "physical_parts": 208,
+  "all_shapes_valid": true,
+  "checked_physical_pairs": 21528,
+  "collisions": [],
+  "reference_collisions": {},
+  "reference_pair_collisions": [],
+  "continuous_module_lift": [
+    {
+      "part": "BatteryBL1860B",
+      "hits": []
+    },
+    {
+      "part": "BatteryAdapter03",
+      "hits": []
+    },
+    {
+      "part": "BatteryBeltTopPad",
+      "hits": []
+    },
+    {
+      "part": "BatteryModuleHarness",
+      "hits": []
+    },
+    {
+      "part": "BatteryServiceConnector",
+      "hits": []
+    }
+  ],
+  "finger_access_proxy_hits": [],
+  "caster_sweep_hits": [],
+  "tire_outward_service": [
+    {
+      "side": -1,
+      "hits": []
+    },
+    {
+      "side": 1,
+      "hits": []
+    }
+  ],
+  "grid_fastener_envelopes": [
+    {
+      "x": -125,
+      "y": -115,
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": -65,
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": -15,
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": 35,
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": 85,
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": 135,
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": -115,
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": -65,
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": -15,
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": 35,
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": 85,
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": 135,
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": -115,
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": -65,
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": -15,
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": 35,
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": 85,
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": 135,
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": -115,
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": -65,
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": -15,
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": 35,
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": 85,
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": 135,
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": -115,
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": -65,
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": -15,
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": 35,
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": 85,
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": 135,
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": -115,
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": -65,
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": -15,
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": 35,
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": 85,
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": 135,
+      "hits": []
+    }
+  ],
+  "added_parts": [
+    "RearBatteryTrayPLA",
+    "BatteryBL1860B",
+    "BatteryAdapter03",
+    "BatteryPad0",
+    "BatteryPad1",
+    "BatteryPad2",
+    "BatteryPad3",
+    "BatteryPad4",
+    "BatteryBeltTopPad",
+    "BatteryRetentionBelt",
+    "BatteryBuckleEnvelope",
+    "BatteryModuleHarness",
+    "BatteryServiceConnector",
+    "BatteryVehicleConnector",
+    "BatteryVehicleHarness",
+    "LowElectronicsCradlePLA",
+    "LowElectronicsPad",
+    "LowElectronicsBelt0",
+    "LowElectronicsBelt1"
+  ],
+  "removed_parts": [
+    "BatteryCradlePLA",
+    "BatteryReservedSpace",
+    "BatteryConnectorEnvelope",
+    "ElectronicsTrayPLA"
+  ],
+  "changed_parts": [
+    "Reserved_Computer",
+    "Reserved_SupervisorRS485"
+  ],
+  "moving_parts": [
+    "BatteryBL1860B",
+    "BatteryAdapter03",
+    "BatteryBeltTopPad",
+    "BatteryModuleHarness",
+    "BatteryServiceConnector"
+  ],
+  "released_before_service": [
+    "BatteryRetentionBelt",
+    "BatteryBuckleEnvelope"
+  ],
+  "unchanged_physical_parts": 206,
+  "unchanged_parts_BRep_equal": true,
+  "clearances_mm": {
+    "deck_to_adapter": 7.5,
+    "deck_to_belt": 3.5,
+    "deck_to_tray": 5,
+    "ground": 25,
+    "computer_to_deck": 29,
+    "highest_underdeck_electronics_strap_to_grid_tip": 15.3,
+    "buckle_body_extension_behind_frame": 42,
+    "module_height_conservative": 92
+  },
+  "mass": {
+    "source_D3_kg": 8.246366343915682,
+    "removed_prints_kg": 0.17522709604974054,
+    "new_prints_kg": 0.24935089790476167,
+    "old_battery_allocation_removed_kg": 0.75,
+    "battery_kg": 0.68,
+    "adapter_kg": 0.123,
+    "new_straps_and_pads_allowance_kg": 0.18,
+    "electrical_total_kg": 2.1530000000000005,
+    "estimated_base_kg": 8.553490145770702,
+    "remaining_to_10kg_kg": 1.4465098542292978,
+    "total_solid_PLA_kg": 0.33271739717746524,
+    "actually_weighed": false
+  },
+  "cg_difference": {
+    "ledger": [
+      {
+        "name": "remove BatteryCradlePLA",
+        "mass_kg": -0.1317532350310878,
+        "center_mm": [
+          -29.999999999999993,
+          -4.188476921068823e-15,
+          44.2937340074108
+        ]
+      },
+      {
+        "name": "remove ElectronicsTrayPLA",
+        "mass_kg": -0.04347386101865274,
+        "center_mm": [
+          -192.63583461627675,
+          -2.661882951852305e-15,
+          100.38749804615934
+        ]
+      },
+      {
+        "name": "add RearBatteryTrayPLA",
+        "mass_kg": 0.1244332670336738,
+        "center_mm": [
+          -203.72218491942732,
+          -1.039784696358583e-14,
+          109.01980775973587
+        ]
+      },
+      {
+        "name": "add LowElectronicsCradlePLA",
+        "mass_kg": 0.12491763087108786,
+        "center_mm": [
+          -29.3159888527811,
+          -6.230111433146667e-15,
+          45.29560251691001
+        ]
+      },
+      {
+        "name": "remove old battery allocation",
+        "mass_kg": -0.75,
+        "center_mm": [
+          -30,
+          0,
+          60.5
+        ]
+      },
+      {
+        "name": "BL1860B",
+        "mass_kg": 0.68,
+        "center_mm": [
+          -202.5,
+          0,
+          143
+        ]
+      },
+      {
+        "name": "adapter03",
+        "mass_kg": 0.123,
+        "center_mm": [
+          -202.5,
+          0,
+          189
+        ]
+      },
+      {
+        "name": "battery full catalog strap plus pads",
+        "mass_kg": 0.15,
+        "center_mm": [
+          -205,
+          0,
+          145
+        ]
+      },
+      {
+        "name": "low electronics pads/straps",
+        "mass_kg": 0.03,
+        "center_mm": [
+          -30,
+          0,
+          50
+        ]
+      },
+      {
+        "name": "remove old Reserved_Computer",
+        "mass_kg": -0.5,
+        "center_mm": [
+          -190.0,
+          -5.0,
+          126.0
+        ]
+      },
+      {
+        "name": "relocate Reserved_Computer",
+        "mass_kg": 0.5,
+        "center_mm": [
+          -9.999999999999998,
+          -4.2294210461910733e-16,
+          49.99999999999999
+        ]
+      },
+      {
+        "name": "remove old Reserved_SupervisorRS485",
+        "mass_kg": -0.05,
+        "center_mm": [
+          -190.0,
+          62.5,
+          127.0
+        ]
+      },
+      {
+        "name": "relocate Reserved_SupervisorRS485",
+        "mass_kg": 0.05,
+        "center_mm": [
+          -75.0,
+          -8.685915008995425e-16,
+          52.5
+        ]
+      }
+    ],
+    "mass_change_kg": 0.3071238018550212,
+    "moment_change_kg_mm": [
+      -92.69218035864242,
+      -0.6250000000000013,
+      65.660835321066
+    ],
+    "conditional_base_cg_xyz_ranges_mm": [
+      [
+        -20.477704517425035,
+        -1.1958296257046743
+      ],
+      [
+        -9.71400703375338,
+        9.567867857966982
+      ],
+      [
+        89.62446457402508,
+        113.72680818867553
+      ]
+    ],
+    "basis": "conditional on D3 CGx/y+-10,z85..110mm assumptions; envelope-centered electrical mass; not an absolute measured CG",
+    "requires_updated_stability_envelope": true
+  },
+  "limitations": [
+    "Pack and adapter CAD are conservative catalog envelopes, not manufacturer interface STEP.",
+    "Check actual latched module offsets, buckle/switch/fuse access, casing tolerances and harness bend radius with a dummy module before final printing.",
+    "PLA tray, belt and four rail joints require dummy-load, temperature/creep and repeated service tests.",
+    "Two-wire adapter does not establish individual-cell, temperature or undervoltage protection. Complete and qualify vehicle power protection before operation.",
+    "Normal10kg/structural15kg SF2 are design targets; loaded operation has not been released."
+  ]
+}

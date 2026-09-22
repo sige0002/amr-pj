@@ -1,0 +1,201 @@
+{
+  "revision": "D5",
+  "date": "2026-09-22",
+  "subtotal": {
+    "JPY": 69633.0,
+    "USD": 120.9
+  },
+  "selected_power_delivered_Tokyo_reference_JPY": 23380,
+  "new_power_hardware_selected": true,
+  "charger_new_purchase": true,
+  "unpriced_rows": [
+    "S04",
+    "S07",
+    "D3_M6",
+    "D3_STOP_BOLTS",
+    "D3_STOP_NUTS",
+    "D3_STOP_WASHERS",
+    "POWER_PADS",
+    "POWER_LOW_STRAPS"
+  ],
+  "unselected_remaining": [
+    {
+      "id": "U01",
+      "name": "電池の低電圧・セル・温度保護と全負荷遮断回路",
+      "needed_quantity": "1式",
+      "specification": "BL1860B + diy-adapter03。電池・充電器・アダプター代はD5で選定計上済み。",
+      "decision_needed": "2線アダプターで純正工具と同じ保護が成立するとは扱わない。独立遮断とセル・温度保護を確定して実負荷検証。",
+      "phase": "走行台車",
+      "cost": null
+    },
+    {
+      "id": "U03",
+      "name": "上位計算機・記憶媒体・冷却",
+      "needed_quantity": "1式",
+      "specification": "初期は外部PC利用も可能、搭載型式未定",
+      "decision_needed": "現在の0.50kg枠への収まりを確認。外部PCを流用する場合は購入除外を明記",
+      "phase": "走行台車",
+      "cost": null
+    },
+    {
+      "id": "U04",
+      "name": "上位計算機用DC/DC",
+      "needed_quantity": "1台",
+      "specification": "計算機決定後に出力を決定",
+      "decision_needed": "監視用5V/1Aとは別回路",
+      "phase": "走行台車",
+      "cost": null
+    },
+    {
+      "id": "U05",
+      "name": "ARM押ボタン",
+      "needed_quantity": "1個",
+      "specification": "新しい押下エッジを検出",
+      "decision_needed": "接点・デバウンスを確定",
+      "phase": "走行台車",
+      "cost": null
+    },
+    {
+      "id": "U06",
+      "name": "主コネクタ・必要なDC主遮断器",
+      "needed_quantity": "1式",
+      "specification": "DC電源に適合",
+      "decision_needed": "アダプターのスイッチだけでDC遮断・突入定格が満たされるか確認。絶縁付きXT60級コネクタとサービス配線を確定。",
+      "phase": "走行台車",
+      "cost": null
+    },
+    {
+      "id": "U07",
+      "name": "ヒューズ・ホルダー",
+      "needed_quantity": "5回路＋計算機系",
+      "specification": "仮値F0 10A/Fdrv 7.5A/FL・FR各3A/Fctl 1A、Fpc未定",
+      "decision_needed": "DC遮断定格、突入、線材許容電流で型式と数量を確定",
+      "phase": "走行台車",
+      "cost": null
+    },
+    {
+      "id": "U08",
+      "name": "制御・分配基板とコネクタ",
+      "needed_quantity": "1式",
+      "specification": "回路図・PCB未完",
+      "decision_needed": "候補ICを実装するための基板、端子台、取付を確定",
+      "phase": "走行台車",
+      "cost": null
+    },
+    {
+      "id": "U09",
+      "name": "リレーコイル駆動・保護部品",
+      "needed_quantity": "2回路分",
+      "specification": "トランジスタ・逆起電力保護",
+      "decision_needed": "実回路の部品型式・定数・数量を確定",
+      "phase": "走行台車",
+      "cost": null
+    },
+    {
+      "id": "U10",
+      "name": "レベル変換・デバウンス・電源投入リセット",
+      "needed_quantity": "1式",
+      "specification": "Pico3.3Vと5V監視回路間",
+      "decision_needed": "回路確定後に受動部品まで展開",
+      "phase": "走行台車",
+      "cost": null
+    },
+    {
+      "id": "U11",
+      "name": "抵抗・コンデンサ・終端抵抗",
+      "needed_quantity": "1式",
+      "specification": "クランプ・監視・RS485周辺",
+      "decision_needed": "値の候補は回路資料にあるが実装数量・終端内蔵有無未確定",
+      "phase": "走行台車",
+      "cost": null
+    },
+    {
+      "id": "U12",
+      "name": "電圧・電流計測部品",
+      "needed_quantity": "1式",
+      "specification": "車載監視と調整用",
+      "decision_needed": "実装回路・測定レンジ・校正を確定",
+      "phase": "走行台車",
+      "cost": null
+    },
+    {
+      "id": "U13",
+      "name": "電源線・信号線・圧着端子・結束材",
+      "needed_quantity": "長さ・個数未定",
+      "specification": "主幹/延長線0.75mm²を出発点、RS485はツイストペア",
+      "decision_needed": "配線図と実経路から線長・端子数を確定。工場付属ハーネスとの重複を避ける。今回の配線ガイド用結束バンド2本はFIXTURE_HARDWARE計上済み。",
+      "phase": "走行台車",
+      "cost": null
+    },
+    {
+      "id": "U14",
+      "name": "放熱固定具・ガード・絶縁材",
+      "needed_quantity": "1式",
+      "specification": "回生抵抗と電源回路用",
+      "decision_needed": "放熱面・端子カバー・温度を確認",
+      "phase": "走行台車",
+      "cost": null
+    },
+    {
+      "id": "U15",
+      "name": "電装固定板・ケース・スタンドオフ",
+      "needed_quantity": "数量未定",
+      "specification": "D5低位置電装受け、前トレイ。後トレイは電池用へ転用。",
+      "decision_needed": "計算機70x80x40と監視部30x70x45は予約。実機の放熱・コネクタ・保持を確定。",
+      "phase": "走行台車",
+      "cost": null
+    },
+    {
+      "id": "U16",
+      "name": "未確定送料・税・決済換算",
+      "needed_quantity": "1式",
+      "specification": "WILCO・電装店・Taobao・CNC等",
+      "decision_needed": "送料行で計上済みの分を重複加算しない",
+      "phase": "走行台車",
+      "cost": null
+    },
+    {
+      "id": "U17",
+      "name": "加工工具・作業費・残る自加工品の外注費",
+      "needed_quantity": "必要に応じて",
+      "specification": "穴加工、切断、面取り、締付・測定工具",
+      "decision_needed": "モーター金具とD2上板は実自動見積あり。支持材・ストッパ・キャスター板・ガセットの工具・工賃は未見積。",
+      "phase": "走行台車",
+      "cost": null
+    },
+    {
+      "id": "U18",
+      "name": "PLA仮合わせモックの材料消費",
+      "needed_quantity": "スライス後",
+      "specification": "金具本体・確認片の試作",
+      "decision_needed": "P04の車体用300g枠とは別。印刷時間・材料量未確定",
+      "phase": "製作補助",
+      "cost": null
+    },
+    {
+      "id": "U19",
+      "name": "自律移動用LiDAR・IMU・カメラ等",
+      "needed_quantity": "未選定",
+      "specification": "後工程の自己位置推定・障害物検出",
+      "decision_needed": "今回の小計は走行台車と電装候補。自律移動一式の完成価格ではない",
+      "phase": "将来自律移動",
+      "cost": null
+    },
+    {
+      "id": "U20",
+      "name": "荷物容器・敷板",
+      "needed_quantity": "1式",
+      "specification": "連続平底200×200mm、重心範囲内",
+      "decision_needed": "荷台上の積載物として重量算入。手持ち品利用可",
+      "phase": "積載物",
+      "cost": null
+    }
+  ],
+  "full_running_subtotal_JPY_reference": 88646.60313315927,
+  "FX_reference_JPY_per_USD": 157.26718885987816,
+  "FX_date": "2026-09-21",
+  "source_D3_plate_and_mount_quotes_unchanged": true,
+  "new_metal_quote_needed": false,
+  "complete_purchase_total": false,
+  "note": "既存予算枠込みの走行台車小計。電池・充電器・接続アダプターは選定価格を追加。保護回路、主コネクタ、配線、計算機、送料差額・税・決済料等は未完。"
+}

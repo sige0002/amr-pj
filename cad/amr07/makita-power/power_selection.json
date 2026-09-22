@@ -1,0 +1,155 @@
+{
+  "revision": "D5",
+  "checked_date_JST": "2026-09-22",
+  "ownership": "User owns neither Makita battery nor charger; all are new purchases.",
+  "selected": {
+    "battery": {
+      "manufacturer": "Makita",
+      "part": "BL1860B",
+      "japan_part_number": "A-60464",
+      "nominal_V": 18,
+      "nominal_Ah": 6,
+      "nominal_Wh": 108,
+      "full_charge_design_V": 21,
+      "dimensions_LWH_mm": [
+        113,
+        75,
+        62
+      ],
+      "HK_catalog_mass_kg": 0.66,
+      "NZ_catalog_mass_kg": 0.68,
+      "design_mass_kg": 0.68,
+      "mass_and_regional_casing_verified_on_received_Japan_pack": false,
+      "sources": [
+        "https://www.makita.com.hk/en/products/detail/1028/",
+        "https://www.makita.co.nz/products/model/BL1860B"
+      ]
+    },
+    "charger": {
+      "manufacturer": "Makita",
+      "part": "DC18RF",
+      "japan_part_number": "JPADC18RF",
+      "Japan_AC_input_V": 100,
+      "BL1860B_full_charge_min_catalog": 40,
+      "BL1860B_practical_charge_min_catalog": 27,
+      "on_vehicle": false,
+      "source": "https://www.makita.co.jp/product/detail/?gmodel=HR182D_DV",
+      "note": "Seller text mixes40/55min; Japanese manufacturer40min is used. Actual time depends on pack temperature/state."
+    },
+    "battery_charger_purchase": {
+      "store": "高橋本社Yahoo!店",
+      "SKU": "0088381464031-0088381523394-s",
+      "contents": "genuine BL1860B x1 + DC18RF x1; new tool-kit split, no retail boxes",
+      "price_incl_tax_JPY": 19800,
+      "displayed_Tokyo_shipping_JPY": 600,
+      "displayed_total_JPY": 20400,
+      "points_deducted": false,
+      "checkout_or_purchase_performed": false,
+      "availability": "Cart offered / stock-limited listing; exact delivery to user not checked",
+      "source": "https://store.shopping.yahoo.co.jp/takahashihonsha/0088381464031-0088381523394-s.html"
+    },
+    "adapter": {
+      "store": "ネットキーストア",
+      "SKU": "diy-adapter03",
+      "part_selected_for_prototype": true,
+      "published_approx_dimensions_LWH_mm": [
+        95,
+        90,
+        30
+      ],
+      "published_approx_mass_kg": 0.123,
+      "published_lead_AWG": 14,
+      "published_lead_length_mm": 400,
+      "published_fuse_A": 30,
+      "published_output_max_A": 30,
+      "continuous_current_verified": false,
+      "undervoltage_or_individual_cell_protection_credited": false,
+      "price_incl_tax_JPY": 2180,
+      "displayed_Tokyo_shipping_JPY": 800,
+      "displayed_total_JPY": 2980,
+      "availability": "Cart offered; lead time shown, actual destination not checked",
+      "source": "https://store.shopping.yahoo.co.jp/netkey-store/diy-adapter03.html",
+      "spec_access": "Seller product-description HTML lists approximate dimensions/mass/lead/fuse. Published30A(MAX) is not treated as qualified continuous rating or battery protection.",
+      "mechanical_use": "Do not drill or modify adapter. Latch onto battery normally and remove the complete module from its padded tray for charging.",
+      "remaining_qualification": "Confirm mating offset, switch/fuse/latch access, polarity, voltage drop and heating under actual peak duty. Fit a coordinated10A starting-value source fuse and vehicle undervoltage cutoff; do not rely on the supplied30A fuse for this small harness."
+    },
+    "retention_belt": {
+      "part": "E-Value BT-2520BK",
+      "width_mm": 25,
+      "full_length_mm": 2000,
+      "catalog_mass_kg": 0.125,
+      "catalog_complete_product_WHD_mm": [
+        30,
+        2050,
+        18
+      ],
+      "CAD_buckle_envelope_mm": [
+        20,
+        35,
+        55
+      ],
+      "catalog_maximum_working_force_N": 800,
+      "on_vehicle_retention_test_pending": true,
+      "price_JPY": 393,
+      "shipping": "same order as existing two cargo belts;600JPY already counted once",
+      "source": "https://www.fujiwarasangyo-markeweb2.com/DispDetail.do?itemID=t000100214475&volumeName=00017",
+      "price_source": "https://store.shopping.yahoo.co.jp/hcbrico/4977292226752.html",
+      "note": "Full125g mass retained in budget even when excess webbing is cut and secured. Published working force is not printed-tray strength."
+    }
+  },
+  "comparison": [
+    {
+      "choice": "BL1830B3Ah + DC18RF",
+      "energy_Wh": 54,
+      "price_incl_tax_JPY": 17860,
+      "displayed_Tokyo_shipping_JPY": 756,
+      "displayed_total_JPY": 18616,
+      "source": "https://store.shopping.yahoo.co.jp/esuwantool/bl1830b-dc18rf-1.html",
+      "decision": "Not selected. Saves1784JPY versus6Ah set, but halves energy. Both are new genuine split-kit listings. Not a claim of market-wide lowest price."
+    },
+    {
+      "choice": "BL1860B + slower DC18WC",
+      "displayed_set_price_JPY": 24735,
+      "shipping_included_verified": false,
+      "source": "https://store.shopping.yahoo.co.jp/takahashihonsha/2aeaaaa555a.html",
+      "decision": "Category-level comparison only, exact SKU checkout not verified. No observed cost benefit over selectedDC18RF kit."
+    },
+    {
+      "choice": "D4 VANT5S2200mAh",
+      "energy_Wh": 40.7,
+      "decision": "Thin36mm constraint withdrawn. Charger/protection total was unresolved; not retained as current pack."
+    },
+    {
+      "choice": "compatible non-genuine Makita pack",
+      "decision": "Not selected for first vehicle: exact cell provenance, capacity, charger/pack protection and physical case vary by seller SKU; no validated like-for-like offer established."
+    },
+    {
+      "choice": "Makita ADP15 USB-PD as traction output",
+      "source": "https://www.makita.co.jp/product/files/catalog/AUTO_97.pdf?2026424=",
+      "decision": "Not selected. USB-PD negotiation/conversion adds parts, and105W maximum is too close to the estimated motor-pair stall input97.2W before computer and losses."
+    }
+  ],
+  "energy_model": {
+    "usable_fraction_assumption": 0.8,
+    "usable_Wh_assumption": 86.4,
+    "average_input_W_cases": [
+      45,
+      60,
+      80
+    ],
+    "runtime_h_cases": [
+      1.92,
+      1.44,
+      1.08
+    ],
+    "motor_pair_rated_input_W_at18V": 45,
+    "motor_pair_stall_input_W_at18V": 97.2,
+    "auxiliary_input_budget_W": 25,
+    "peak_input_budget_W": 122.2,
+    "peak_current_at16p5V_A": 7.4061,
+    "model_limits": "Input budget, not a measured operating duty cycle. Stall current supply-side applicability, startup, conversion losses and low-voltage performance need bench tests. Runtime is illustrative, not a1h guarantee."
+  },
+  "subtotal_new_selected_power_JPY": 23380,
+  "power_subtotal_scope": "battery+charger+adapter and both displayedTokyo shipping fees. Excludes vehicle protection, connector, fuse/coordination, wiring, mount straps/prints and unpriced electronics. User address not entered. No purchase.",
+  "electrical_operating_release": false
+}

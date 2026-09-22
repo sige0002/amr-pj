@@ -1,61 +1,61 @@
 {
   "part": "TRUSCO TYG-50",
-  "requirements_sha256": "89a139bce2ee1c8f13ecd2ceaf92da813d5f66f8700b231dbc0f6b018687b2ef",
+  "requirements_sha256": "e310922561508517fc8df9da9488e6cd1cde6ad3aeee6de4b2665cd579e1df3f",
   "method": "Existing rigid three-contact equilibrium and CG/mass/acceleration limits, caster yaw sampled every0.5deg. Trail nominal and tolerance endpoints checked.",
   "cases": [
     {
       "case": "normal",
       "trail_mm": 14.5,
-      "maximum_reaction_N": 98.60146341463414,
-      "minimum_reaction_N": 39.36810216110019,
-      "twice_maximum_reaction_N": 197.20292682926828,
+      "maximum_reaction_N": 105.16907982261638,
+      "minimum_reaction_N": 35.876555992141455,
+      "twice_maximum_reaction_N": 210.33815964523276,
       "catalog_allowable_N": 300,
-      "catalog_to_reaction_ratio": 3.0425511915422025
+      "catalog_to_reaction_ratio": 2.8525494423455595
     },
     {
       "case": "structure",
       "trail_mm": 14.5,
-      "maximum_reaction_N": 121.76771618625276,
-      "minimum_reaction_N": 53.17554813359529,
-      "twice_maximum_reaction_N": 243.5354323725055,
+      "maximum_reaction_N": 128.2909866962306,
+      "minimum_reaction_N": 49.70757760314342,
+      "twice_maximum_reaction_N": 256.5819733924612,
       "catalog_allowable_N": 300,
-      "catalog_to_reaction_ratio": 2.4637072074270305
+      "catalog_to_reaction_ratio": 2.338433959591758
     },
     {
       "case": "normal",
       "trail_mm": 16,
-      "maximum_reaction_N": 99.26174107142856,
-      "minimum_reaction_N": 39.137429687499996,
-      "twice_maximum_reaction_N": 198.52348214285712,
+      "maximum_reaction_N": 105.8733370535714,
+      "minimum_reaction_N": 35.666341796875,
+      "twice_maximum_reaction_N": 211.7466741071428,
       "catalog_allowable_N": 300,
-      "catalog_to_reaction_ratio": 3.0223124918201925
+      "catalog_to_reaction_ratio": 2.83357461235213
     },
     {
       "case": "structure",
       "trail_mm": 16,
-      "maximum_reaction_N": 122.58312499999998,
-      "minimum_reaction_N": 52.863972656250006,
-      "twice_maximum_reaction_N": 245.16624999999996,
+      "maximum_reaction_N": 129.150078125,
+      "minimum_reaction_N": 49.416322265625,
+      "twice_maximum_reaction_N": 258.30015625,
       "catalog_allowable_N": 300,
-      "catalog_to_reaction_ratio": 2.447318911147028
+      "catalog_to_reaction_ratio": 2.3228789665124334
     },
     {
       "case": "normal",
       "trail_mm": 17.5,
-      "maximum_reaction_N": 99.9309213483146,
-      "minimum_reaction_N": 38.90944466019417,
-      "twice_maximum_reaction_N": 199.8618426966292,
+      "maximum_reaction_N": 106.58708988764043,
+      "minimum_reaction_N": 35.45857669902913,
+      "twice_maximum_reaction_N": 213.17417977528086,
       "catalog_allowable_N": 300,
-      "catalog_to_reaction_ratio": 3.0020737920981824
+      "catalog_to_reaction_ratio": 2.8145997823587003
     },
     {
       "case": "structure",
       "trail_mm": 17.5,
-      "maximum_reaction_N": 123.40952808988762,
-      "minimum_reaction_N": 52.556027184466025,
-      "twice_maximum_reaction_N": 246.81905617977523,
+      "maximum_reaction_N": 130.02075280898876,
+      "minimum_reaction_N": 49.12846019417476,
+      "twice_maximum_reaction_N": 260.0415056179775,
       "catalog_allowable_N": 300,
-      "catalog_to_reaction_ratio": 2.4309306148670258
+      "catalog_to_reaction_ratio": 2.307323973433109
     }
   ],
   "height_tolerance_scope": "65±1.5mm mounting height requires received-part contact-height check/adjustment. Chassis tilt and tire compression are not modeled here.",

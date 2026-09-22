@@ -553,19 +553,10 @@
   "unselected": [
     {
       "id": "U01",
-      "name": "電池・保護回路・接続アダプター",
+      "name": "電池の低電圧・セル・温度保護と全負荷遮断回路",
       "needed_quantity": "1式",
-      "specification": "18V級・満充電21V以下の現行構成、電池質量枠0.75kg",
-      "decision_needed": "セル保護・電流・コネクタ・120×80×65mm予約との適合を確定",
-      "phase": "走行台車",
-      "cost": null
-    },
-    {
-      "id": "U02",
-      "name": "適合充電器",
-      "needed_quantity": "1台",
-      "specification": "選定電池専用品",
-      "decision_needed": "車体から分離充電。電池と同時選定",
+      "specification": "BL1860B + diy-adapter03。電池・充電器・アダプター代はD5で選定計上済み。",
+      "decision_needed": "2線アダプターで純正工具と同じ保護が成立するとは扱わない。独立遮断とセル・温度保護を確定して実負荷検証。",
       "phase": "走行台車",
       "cost": null
     },
@@ -598,10 +589,10 @@
     },
     {
       "id": "U06",
-      "name": "主電源スイッチ・主コネクタ",
+      "name": "主コネクタ・必要なDC主遮断器",
       "needed_quantity": "1式",
       "specification": "DC電源に適合",
-      "decision_needed": "電池・突入電流・抜け止め条件に合わせる",
+      "decision_needed": "アダプターのスイッチだけでDC遮断・突入定格が満たされるか確認。絶縁付きXT60級コネクタとサービス配線を確定。",
       "phase": "走行台車",
       "cost": null
     },
@@ -681,8 +672,8 @@
       "id": "U15",
       "name": "電装固定板・ケース・スタンドオフ",
       "needed_quantity": "数量未定",
-      "specification": "小型PLAアダプタ2個とガイド2個をCADへ反映、電装本体は予約形状",
-      "decision_needed": "実機器の穴配置・放熱・M3ねじ長・最終配線を確定。汎用小物の追加だけで全電装の適合確認済みとはしない。",
+      "specification": "D5低位置電装受け、前トレイ。後トレイは電池用へ転用。",
+      "decision_needed": "計算機70x80x40と監視部30x70x45は予約。実機の放熱・コネクタ・保持を確定。",
       "phase": "走行台車",
       "cost": null
     },
@@ -739,5 +730,6 @@
     "梱包数量が確定している行だけ余剰数を表示。",
     "購入予定は実発注・在庫確保を意味しない。",
     "調達は個人で購入できる通常小売を優先し、送料込みで比較する。キャスター等の汎用品はホームセンター店舗受取を第一候補、難しい場合は配送先に対するAmazon Prime対象出品を確認する。法人専用の仕様ページだけでは購入先確定としない。"
-  ]
+  ],
+  "current_power_selection": "makita-power/power_selection.json"
 }
