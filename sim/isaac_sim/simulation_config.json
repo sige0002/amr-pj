@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "design_revision": "D6.1",
+  "target_isaac_sim": "5.0 / 5.1",
+  "wheel_radius_m": 0.05035,
+  "track_m": 0.349,
+  "caster_radius_m": 0.025,
+  "caster_trail_m": 0.016,
+  "base_origin_in_cad_mm": [
+    90,
+    0,
+    50.35
+  ],
+  "spawn_translation_m": [
+    0,
+    0,
+    0.05235
+  ],
+  "max_motor_torque_Nm": 0.96,
+  "rated_motor_speed_rad_s": 12.042771838760874,
+  "initial_speed_m_s": 0.15,
+  "initial_yaw_rate_rad_s": 0.3,
+  "acceleration_limit_m_s2": 0.2,
+  "drive_damping_Nm_per_rad_s": 0.4,
+  "tire_static_friction": 0.8,
+  "tire_dynamic_friction": 0.6,
+  "physics_dt_s": 0.004166666666666667,
+  "gravity_m_s2": 9.80665,
+  "driven_joints": [
+    "left_wheel_joint",
+    "right_wheel_joint"
+  ],
+  "passive_joints": [
+    "caster_swivel_joint",
+    "caster_wheel_joint"
+  ],
+  "contact_note": "Friction and velocity servo gain are starting assumptions, not measured tire/controller properties."
+}

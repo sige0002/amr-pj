@@ -1,0 +1,503 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="amr_d61_payload_10kg">
+  <!--Generated from D6.1. SI units; +X forward, +Y left, +Z up. Inertias are estimates.-->
+  <material name="aluminum">
+    <color rgba="0.72 0.75 0.79 1" />
+  </material>
+  <material name="steel">
+    <color rgba="0.38 0.4 0.43 1" />
+  </material>
+  <material name="pla">
+    <color rgba="0.22 0.61 0.38 1" />
+  </material>
+  <material name="posts">
+    <color rgba="0.12 0.13 0.15 1" />
+  </material>
+  <material name="mounts">
+    <color rgba="0.15 0.43 0.69 1" />
+  </material>
+  <material name="motor">
+    <color rgba="0.3 0.31 0.33 1" />
+  </material>
+  <material name="rubber">
+    <color rgba="0.055 0.06 0.065 1" />
+  </material>
+  <material name="battery">
+    <color rgba="0.02 0.4 0.4 1" />
+  </material>
+  <material name="computer">
+    <color rgba="0.5 0.54 0.57 1" />
+  </material>
+  <material name="electronics">
+    <color rgba="0.12 0.37 0.67 1" />
+  </material>
+  <material name="estop">
+    <color rgba="0.85 0.08 0.06 1" />
+  </material>
+  <material name="belts">
+    <color rgba="0.88 0.47 0.07 1" />
+  </material>
+  <material name="wires">
+    <color rgba="0.76 0.3 0.08 1" />
+  </material>
+  <material name="payload">
+    <color rgba="0.66 0.44 0.23 1" />
+  </material>
+  <link name="left_wheel_link">
+    <inertial>
+      <origin xyz="2.68715937167e-07 0.000842844210193 -1.43130870062e-06" rpy="0 0 0" />
+      <mass value="0.45" />
+      <inertia ixx="0.000337824360516" ixy="2.57511255333e-09" ixz="-2.83491628371e-11" iyy="0.000517319399072" iyz="-1.83797301139e-08" izz="0.000337817873043" />
+    </inertial>
+    <visual name="left_wheel_link_motor">
+      <geometry>
+        <mesh filename="meshes/left_wheel_link_motor.stl" scale="1 1 1" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <visual name="left_wheel_link_rubber">
+      <geometry>
+        <mesh filename="meshes/left_wheel_link_rubber.stl" scale="1 1 1" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="left_wheel_link_rolling_contact">
+      <origin xyz="0 0 0" rpy="1.57079632679 0 0" />
+      <geometry>
+        <cylinder radius="0.05035" length="0.043" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-0.0934123624767 -0.000838661994572 0.0827997693565" rpy="0 0 0" />
+      <mass value="8.87086255317" />
+      <inertia ixx="0.124227155104" ixy="0.00168170505231" ixz="0.00515841368992" iyy="0.177634628723" iyz="0.000135323530696" izz="0.226057184438" />
+    </inertial>
+    <visual name="base_link_motor">
+      <geometry>
+        <mesh filename="meshes/base_link_motor.stl" scale="1 1 1" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <visual name="base_link_steel">
+      <geometry>
+        <mesh filename="meshes/base_link_steel.stl" scale="1 1 1" />
+      </geometry>
+      <material name="steel" />
+    </visual>
+    <visual name="base_link_aluminum">
+      <geometry>
+        <mesh filename="meshes/base_link_aluminum.stl" scale="1 1 1" />
+      </geometry>
+      <material name="aluminum" />
+    </visual>
+    <visual name="base_link_mounts">
+      <geometry>
+        <mesh filename="meshes/base_link_mounts.stl" scale="1 1 1" />
+      </geometry>
+      <material name="mounts" />
+    </visual>
+    <visual name="base_link_pla">
+      <geometry>
+        <mesh filename="meshes/base_link_pla.stl" scale="1 1 1" />
+      </geometry>
+      <material name="pla" />
+    </visual>
+    <visual name="base_link_posts">
+      <geometry>
+        <mesh filename="meshes/base_link_posts.stl" scale="1 1 1" />
+      </geometry>
+      <material name="posts" />
+    </visual>
+    <visual name="base_link_electronics">
+      <geometry>
+        <mesh filename="meshes/base_link_electronics.stl" scale="1 1 1" />
+      </geometry>
+      <material name="electronics" />
+    </visual>
+    <visual name="base_link_estop">
+      <geometry>
+        <mesh filename="meshes/base_link_estop.stl" scale="1 1 1" />
+      </geometry>
+      <material name="estop" />
+    </visual>
+    <visual name="base_link_computer">
+      <geometry>
+        <mesh filename="meshes/base_link_computer.stl" scale="1 1 1" />
+      </geometry>
+      <material name="computer" />
+    </visual>
+    <visual name="base_link_battery">
+      <geometry>
+        <mesh filename="meshes/base_link_battery.stl" scale="1 1 1" />
+      </geometry>
+      <material name="battery" />
+    </visual>
+    <visual name="base_link_rubber">
+      <geometry>
+        <mesh filename="meshes/base_link_rubber.stl" scale="1 1 1" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <visual name="base_link_belts">
+      <geometry>
+        <mesh filename="meshes/base_link_belts.stl" scale="1 1 1" />
+      </geometry>
+      <material name="belts" />
+    </visual>
+    <visual name="base_link_wires">
+      <geometry>
+        <mesh filename="meshes/base_link_wires.stl" scale="1 1 1" />
+      </geometry>
+      <material name="wires" />
+    </visual>
+    <visual name="base_link_belts_loaded">
+      <geometry>
+        <mesh filename="meshes/base_link_belts_loaded.stl" scale="1 1 1" />
+      </geometry>
+      <material name="belts" />
+    </visual>
+    <collision name="base_link_Rail400_1">
+      <origin xyz="-0.09 -0.135 0.03365" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.03 0.03" />
+      </geometry>
+    </collision>
+    <collision name="base_link_Rail400_2">
+      <origin xyz="-0.09 -0.065 0.03365" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.03 0.03" />
+      </geometry>
+    </collision>
+    <collision name="base_link_Rail400_3">
+      <origin xyz="-0.09 0.065 0.03365" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.03 0.03" />
+      </geometry>
+    </collision>
+    <collision name="base_link_Rail400_4">
+      <origin xyz="-0.09 0.135 0.03365" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.03 0.03" />
+      </geometry>
+    </collision>
+    <collision name="base_link_Cross300_1">
+      <origin xyz="-0.305 0 0.03365" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.3 0.03" />
+      </geometry>
+    </collision>
+    <collision name="base_link_Cross300_2">
+      <origin xyz="0.125 0 0.03365" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.3 0.03" />
+      </geometry>
+    </collision>
+    <collision name="base_link_CustomMotorMountL">
+      <origin xyz="0 0.135 0.00165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.03 0.034" />
+      </geometry>
+    </collision>
+    <collision name="base_link_CustomMotorMountR">
+      <origin xyz="0 -0.135 0.00165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.03 0.034" />
+      </geometry>
+    </collision>
+    <collision name="base_link_CasterAdapter">
+      <origin xyz="-0.24 0 0.01665" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.17 0.004" />
+      </geometry>
+    </collision>
+    <collision name="base_link_CasterTop">
+      <origin xyz="-0.24 0 0.0134" rpy="0 0 0" />
+      <geometry>
+        <box size="0.059 0.047 0.0025" />
+      </geometry>
+    </collision>
+    <collision name="base_link_Reserved_Protection">
+      <origin xyz="0.08 -0.075 0.07915" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.07 0.035" />
+      </geometry>
+    </collision>
+    <collision name="base_link_Reserved_ClampAndPower">
+      <origin xyz="0.09 0.02 0.07915" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.09 0.035" />
+      </geometry>
+    </collision>
+    <collision name="base_link_Reserved_EmergencyStop">
+      <origin xyz="0.105 0.085 0.09165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.04 0.06" />
+      </geometry>
+    </collision>
+    <collision name="base_link_Reserved_SupervisorRS485">
+      <origin xyz="-0.05 0.0875 0.06865" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.045 0.03" />
+      </geometry>
+    </collision>
+    <collision name="base_link_Reserved_Computer">
+      <origin xyz="-0.09 0 0.08365" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.1 0.06" />
+      </geometry>
+    </collision>
+    <collision name="base_link_AluminumDeckD3">
+      <origin xyz="-0.09 0 0.18065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.3 0.004" />
+      </geometry>
+    </collision>
+    <collision name="base_link_PrintedStopXN">
+      <origin xyz="-0.1995 -0.025 0.19015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.04 0.015" />
+      </geometry>
+    </collision>
+    <collision name="base_link_PrintedStopXP">
+      <origin xyz="0.0195 -0.025 0.19015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.04 0.015" />
+      </geometry>
+    </collision>
+    <collision name="base_link_PrintedStopYN">
+      <origin xyz="-0.09 -0.1095 0.19015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.015 0.015" />
+      </geometry>
+    </collision>
+    <collision name="base_link_PrintedStopYP">
+      <origin xyz="-0.09 0.1095 0.19015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.015 0.015" />
+      </geometry>
+    </collision>
+    <collision name="base_link_Upright3030_0">
+      <origin xyz="-0.195 -0.135 0.09865" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.1" />
+      </geometry>
+    </collision>
+    <collision name="base_link_Upright3030_1">
+      <origin xyz="-0.195 0.135 0.09865" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.1" />
+      </geometry>
+    </collision>
+    <collision name="base_link_Upright3030_2">
+      <origin xyz="0.015 -0.135 0.09865" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.1" />
+      </geometry>
+    </collision>
+    <collision name="base_link_Upright3030_3">
+      <origin xyz="0.015 0.135 0.09865" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.1" />
+      </geometry>
+    </collision>
+    <collision name="base_link_UpperRail3030_0">
+      <origin xyz="-0.09 -0.135 0.16365" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.03 0.03" />
+      </geometry>
+    </collision>
+    <collision name="base_link_UpperRail3030_1">
+      <origin xyz="-0.09 0.135 0.16365" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.03 0.03" />
+      </geometry>
+    </collision>
+    <collision name="base_link_FloorPLA_0_0">
+      <origin xyz="-0.2051 -0.0751 0.04985" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2298 0.1498 0.0024" />
+      </geometry>
+    </collision>
+    <collision name="base_link_FloorPLA_0_1">
+      <origin xyz="-0.2051 0.0751 0.04985" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2298 0.1498 0.0024" />
+      </geometry>
+    </collision>
+    <collision name="base_link_FloorPLA_1_0">
+      <origin xyz="0.0251 -0.0751 0.04985" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2298 0.1498 0.0024" />
+      </geometry>
+    </collision>
+    <collision name="base_link_FloorPLA_1_1">
+      <origin xyz="0.0251 0.0751 0.04985" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2298 0.1498 0.0024" />
+      </geometry>
+    </collision>
+    <collision name="base_link_BatteryBL1860B">
+      <origin xyz="-0.2265 0 0.08465" rpy="0 0 0" />
+      <geometry>
+        <box size="0.113 0.075 0.062" />
+      </geometry>
+    </collision>
+    <collision name="base_link_BatteryAdapter03">
+      <origin xyz="-0.2265 0 0.13065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.095 0.09 0.03" />
+      </geometry>
+    </collision>
+    <collision name="base_link_BatteryBuckleEnvelope">
+      <origin xyz="-0.302 0 0.11715" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.035 0.055" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="right_wheel_link">
+    <inertial>
+      <origin xyz="-2.68715937167e-07 -0.000842844210193 -1.43130870061e-06" rpy="0 0 0" />
+      <mass value="0.45" />
+      <inertia ixx="0.000337824360516" ixy="2.57511255324e-09" ixz="2.83491629754e-11" iyy="0.000517319399072" iyz="1.83797301136e-08" izz="0.000337817873043" />
+    </inertial>
+    <visual name="right_wheel_link_motor">
+      <geometry>
+        <mesh filename="meshes/right_wheel_link_motor.stl" scale="1 1 1" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <visual name="right_wheel_link_rubber">
+      <geometry>
+        <mesh filename="meshes/right_wheel_link_rubber.stl" scale="1 1 1" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="right_wheel_link_rolling_contact">
+      <origin xyz="0 0 0" rpy="1.57079632679 0 0" />
+      <geometry>
+        <cylinder radius="0.05035" length="0.043" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="caster_swivel_link">
+    <inertial>
+      <origin xyz="-0.00208368833284 3.45547710101e-19 -0.0060383207606" rpy="0 0 0" />
+      <mass value="0.0887160418696" />
+      <inertia ixx="2.00832544816e-05" ixy="4.85850705141e-22" ixz="-4.29660604946e-06" iyy="1.90849352283e-05" iyz="-2.53397249247e-22" izz="1.76394659271e-05" />
+    </inertial>
+    <visual name="caster_swivel_link_steel">
+      <geometry>
+        <mesh filename="meshes/caster_swivel_link_steel.stl" scale="1 1 1" />
+      </geometry>
+      <material name="steel" />
+    </visual>
+    <collision name="caster_swivel_link_swivel_race">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.009" />
+      </geometry>
+    </collision>
+    <collision name="caster_swivel_link_fork_0">
+      <origin xyz="-0.003 -0.0125 -0.01875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.003 0.0285" />
+      </geometry>
+    </collision>
+    <collision name="caster_swivel_link_fork_1">
+      <origin xyz="-0.003 0.0125 -0.01875" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.003 0.0285" />
+      </geometry>
+    </collision>
+    <collision name="caster_swivel_link_fork_2">
+      <origin xyz="-0.016 0 -0.033" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.032 0.006" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="caster_wheel_link">
+    <inertial>
+      <origin xyz="2.84217094304e-17 2.29472925463e-19 0" rpy="0 0 0" />
+      <mass value="0.035507350075" />
+      <inertia ixx="6.57068391835e-06" ixy="2.3584551378e-23" ixz="-1.75899594661e-20" iyy="1.0774211165e-05" iyz="-2.27653595497e-22" izz="6.57068391835e-06" />
+    </inertial>
+    <visual name="caster_wheel_link_rubber">
+      <geometry>
+        <mesh filename="meshes/caster_wheel_link_rubber.stl" scale="1 1 1" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <visual name="caster_wheel_link_steel">
+      <geometry>
+        <mesh filename="meshes/caster_wheel_link_steel.stl" scale="1 1 1" />
+      </geometry>
+      <material name="steel" />
+    </visual>
+    <collision name="caster_wheel_link_rolling_contact">
+      <origin xyz="0 0 0" rpy="1.57079632679 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.02" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="payload_link">
+    <inertial>
+      <origin xyz="-5.30457172566e-19 -7.01068832617e-19 5.68434188608e-17" rpy="0 0 0" />
+      <mass value="10" />
+      <inertia ixx="0.0546666666667" ixy="-5.62054261308e-20" ixz="1.6452128394e-18" iyy="0.0546666666667" iyz="1.71989237667e-18" izz="0.0666666666667" />
+    </inertial>
+    <visual name="example_cargo">
+      <geometry>
+        <box size="0.2 0.2 0.16" />
+      </geometry>
+      <material name="payload" />
+    </visual>
+    <collision name="payload_link_cargo_box">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.2 0.16" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_wheel_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="left_wheel_link" />
+    <origin xyz="0 0.1745 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit effort="0.96" velocity="12.0427718388" />
+    <dynamics damping="0" friction="0" />
+  </joint>
+  <joint name="right_wheel_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="right_wheel_link" />
+    <origin xyz="0 -0.1745 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit effort="0.96" velocity="12.0427718388" />
+    <dynamics damping="0" friction="0" />
+  </joint>
+  <joint name="caster_swivel_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="caster_swivel_link" />
+    <origin xyz="-0.24 0 0.00765" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit effort="0" velocity="30" />
+    <dynamics damping="0" friction="0" />
+  </joint>
+  <joint name="caster_wheel_joint" type="continuous">
+    <parent link="caster_swivel_link" />
+    <child link="caster_wheel_link" />
+    <origin xyz="-0.016 0 -0.033" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit effort="0" velocity="30" />
+    <dynamics damping="0" friction="0" />
+  </joint>
+  <joint name="payload_fixed_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="payload_link" />
+    <origin xyz="-0.09 0 0.26265" rpy="0 0 0" />
+  </joint>
+</robot>

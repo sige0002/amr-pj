@@ -1,0 +1,136 @@
+{
+  "status": "passed",
+  "validator_versions": {
+    "numpy": "2.5.3",
+    "trimesh": "5.1.0",
+    "yourdfpy": "0.0.60"
+  },
+  "mesh_files": 21,
+  "variants": {
+    "amr_d61.urdf": {
+      "status": "passed",
+      "links": 5,
+      "moving_joints": 4,
+      "mass_kg": 9.895085945114596,
+      "inertia_eigenvalues_kg_m2": {
+        "left_wheel_link": [
+          0.0003378178710394907,
+          0.00033782436060060674,
+          0.000517319400990903
+        ],
+        "base_link": [
+          0.11754261257940765,
+          0.1713784648807029,
+          0.2256368759588895
+        ],
+        "right_wheel_link": [
+          0.00033781787103949067,
+          0.00033782436060060674,
+          0.0005173194009909027
+        ],
+        "caster_swivel_link": [
+          1.4394387049177412e-05,
+          1.9084935228300004e-05,
+          2.332833335952259e-05
+        ],
+        "caster_wheel_link": [
+          6.570683918349982e-06,
+          6.570683918350017e-06,
+          1.0774211164999998e-05
+        ]
+      },
+      "floor_contacts_z_m": {
+        "left_wheel_link": 0.0,
+        "right_wheel_link": 0.0,
+        "caster_wheel_link": -3.469446951953614e-18
+      },
+      "visual_bounds_base_frame_m": [
+        [
+          -0.3199999928474426,
+          -0.20330000323057174,
+          -0.05034999921917915
+        ],
+        [
+          0.14000000059604645,
+          0.20330000323057174,
+          0.2016499936580658
+        ]
+      ],
+      "caster_90deg_axle_position_m": [
+        -0.24,
+        -0.016,
+        -0.02535
+      ]
+    },
+    "amr_d61_payload_10kg.urdf": {
+      "status": "passed",
+      "links": 6,
+      "moving_joints": 4,
+      "mass_kg": 19.895085945114594,
+      "inertia_eigenvalues_kg_m2": {
+        "left_wheel_link": [
+          0.0003378178710394907,
+          0.00033782436060060674,
+          0.000517319400990903
+        ],
+        "base_link": [
+          0.12391442613636712,
+          0.1776857197040443,
+          0.22631882242458856
+        ],
+        "right_wheel_link": [
+          0.00033781787103949067,
+          0.00033782436060060674,
+          0.0005173194009909027
+        ],
+        "caster_swivel_link": [
+          1.4394387049177412e-05,
+          1.9084935228300004e-05,
+          2.332833335952259e-05
+        ],
+        "caster_wheel_link": [
+          6.570683918349982e-06,
+          6.570683918350017e-06,
+          1.0774211164999998e-05
+        ],
+        "payload_link": [
+          0.0546666666667,
+          0.0546666666667,
+          0.06666666666669999
+        ]
+      },
+      "floor_contacts_z_m": {
+        "left_wheel_link": 0.0,
+        "right_wheel_link": 0.0,
+        "caster_wheel_link": -3.469446951953614e-18
+      },
+      "visual_bounds_base_frame_m": [
+        [
+          -0.3199999928474426,
+          -0.20330000323057174,
+          -0.05034999921917915
+        ],
+        [
+          0.14000000059604645,
+          0.20330000323057174,
+          0.34564998745918274
+        ]
+      ],
+      "caster_90deg_axle_position_m": [
+        -0.24,
+        -0.016,
+        -0.02535
+      ]
+    }
+  },
+  "drive_0p1m_s_rad_s": [
+    1.9860973187686197,
+    1.9860973187686197
+  ],
+  "spin_left_0p3rad_s_wheel_rad_s": [
+    -1.0397219463753722,
+    1.0397219463753722
+  ],
+  "isaac_sim_runtime_tested": false,
+  "scope": "URDF parser, link tree, mesh integrity/units/bounds, positive physical inertias, mass ledger, forward kinematics and contact heights. Not an Isaac Sim run."
+}

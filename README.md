@@ -4,6 +4,8 @@
 
 **[費用の割合と読みやすいBOM](cad/amr07/two-story/BOM.ja.md)** — 部位別の金額・購入数・購入先・未計上品を確認できます。
 
+**[Isaac Sim 5向けURDF・取込手順](sim/isaac_sim/README.ja.md)** — 空車／積載10kg、左右駆動輪と受動キャスター。 [データ一式ZIP](sim/isaac_sim/amr_d61_isaac5.zip)。URDF検査とMuJoCo補助走行は実施済み、Isaac Sim本体での実行は未確認です。
+
 ![FreeCAD実画面：D6.1組立](cad/amr07/two-story/cad-screen-assembled.png)
 
 ![FreeCAD実画面：1階の電池・計算機・回路](cad/amr07/two-story/cad-screen-first-floor.png)

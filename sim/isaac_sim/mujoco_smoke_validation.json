@@ -1,0 +1,133 @@
+{
+  "status": "passed",
+  "simulator": "MuJoCo 3.13.0",
+  "isaac_sim_runtime_tested": false,
+  "urdf_models": {
+    "amr_d61.urdf": {
+      "straight": {
+        "status": "passed",
+        "command_m_s": 0.1,
+        "command_yaw_rad_s": 0,
+        "simulated_seconds": 7.999999999999866,
+        "mass_kg": 9.895085945114596,
+        "final_xyz_m": [
+          0.4997134383746784,
+          -2.5075182745707052e-05,
+          0.0503063615290365
+        ],
+        "final_yaw_rad": -2.0162590450783645e-05,
+        "final_linear_speed_m_s": 3.841390544817544e-07,
+        "maximum_drive_torque_Nm": 0.052057262669246554,
+        "maximum_body_tilt_deg": 0.08079864713705327,
+        "minimum_base_origin_z_m": 0.04906076405319177,
+        "nonwheel_floor_contacts": 0,
+        "pose_after_settle_and_drive_m": [
+          [
+            -6.978006219622107e-05,
+            -9.207073187211518e-09,
+            0.05030636154180051
+          ],
+          [
+            0.4719932587603083,
+            -2.390477388711888e-05,
+            0.05030636155479503
+          ]
+        ]
+      },
+      "turn_left": {
+        "status": "passed",
+        "command_m_s": 0,
+        "command_yaw_rad_s": 0.3,
+        "simulated_seconds": 7.999999999999866,
+        "mass_kg": 9.895085945114596,
+        "final_xyz_m": [
+          0.0034909909144345995,
+          -0.0039666001164001125,
+          0.050308050695334935
+        ],
+        "final_yaw_rad": 1.0865443889694908,
+        "final_linear_speed_m_s": 8.059322039540446e-05,
+        "maximum_drive_torque_Nm": 0.2632421992279434,
+        "maximum_body_tilt_deg": 0.10019227289355753,
+        "minimum_base_origin_z_m": 0.04906076405319177,
+        "nonwheel_floor_contacts": 0,
+        "pose_after_settle_and_drive_m": [
+          [
+            -6.978006219622107e-05,
+            -9.207073187211518e-09,
+            0.05030636154180051
+          ],
+          [
+            0.0037820227927473304,
+            -0.003377690168072922,
+            0.05033953085193963
+          ]
+        ]
+      }
+    },
+    "amr_d61_payload_10kg.urdf": {
+      "straight": {
+        "status": "passed",
+        "command_m_s": 0.1,
+        "command_yaw_rad_s": 0,
+        "simulated_seconds": 7.999999999999866,
+        "mass_kg": 19.895085945114594,
+        "final_xyz_m": [
+          0.4996012837797472,
+          -2.171751626661023e-05,
+          0.050292064695744605
+        ],
+        "final_yaw_rad": -1.8434053056445366e-05,
+        "final_linear_speed_m_s": 3.845332305509066e-07,
+        "maximum_drive_torque_Nm": 0.12209807408223461,
+        "maximum_body_tilt_deg": 0.12526974785201506,
+        "minimum_base_origin_z_m": 0.049056449175839005,
+        "nonwheel_floor_contacts": 0,
+        "pose_after_settle_and_drive_m": [
+          [
+            -0.00011083300056279687,
+            -1.5377808484263922e-08,
+            0.05029206470313466
+          ],
+          [
+            0.4686924427170859,
+            -2.0536763169929004e-05,
+            0.05029206472289468
+          ]
+        ]
+      },
+      "turn_left": {
+        "status": "passed",
+        "command_m_s": 0,
+        "command_yaw_rad_s": 0.3,
+        "simulated_seconds": 7.999999999999866,
+        "mass_kg": 19.895085945114594,
+        "final_xyz_m": [
+          0.004544645150121707,
+          -0.0029028171464760694,
+          0.05029449898069045
+        ],
+        "final_yaw_rad": 0.829395012740973,
+        "final_linear_speed_m_s": 0.00022340186225670906,
+        "maximum_drive_torque_Nm": 0.30408322421719547,
+        "maximum_body_tilt_deg": 0.1403895377793346,
+        "minimum_base_origin_z_m": 0.049056449175839005,
+        "nonwheel_floor_contacts": 0,
+        "pose_after_settle_and_drive_m": [
+          [
+            -0.00011083300056279687,
+            -1.5377808484263922e-08,
+            0.05029206470313466
+          ],
+          [
+            0.005254287060642465,
+            -0.002115448015934889,
+            0.05030632052410813
+          ]
+        ]
+      }
+    }
+  },
+  "added_test_fixtures": "floating base, flat floor, no self collision, torque-limited SI velocity servo",
+  "scope": "CPU smoke check only: contact, mass/inertia loading, straight/turn/stop. Friction is assumed; no rolling-resistance, controller latency, tire deformation or power model."
+}
