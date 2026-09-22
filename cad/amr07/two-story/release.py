@@ -13,7 +13,15 @@ saved=json.loads((HERE/'saved_artifact_validation.json').read_text())
 req=json.loads((BASE/'requirements.json').read_text())
 loads=json.loads((BASE/'load_calculations.json').read_text())
 caster=json.loads((BASE/'caster_load_check.json').read_text())
+payload=json.loads((HERE/'payload_budget.json').read_text())
+costs=json.loads((HERE/'BOM-costs.json').read_text())
 assert loads['requirements_sha256']==caster['requirements_sha256']==digest(BASE/'requirements.json')
+assert payload['requirements_sha256']==loads['requirements_sha256']
+assert costs['BOM_sha256']==digest(HERE/'BOM.csv')
+assert payload['vehicle_mass_estimate_kg']==v['mass']['estimated_base_kg']
+assert payload['normal_cargo_design_target_kg']==req['mass']['normal_payload_kg']==10
+assert v['parameters']['new_HBLFSN6_qty']==12
+assert saved['physical_parts']==v['physical_parts']==275
 assert all(c['below_individual_catalog_comparison_values'] for c in loads['load_cases'])
 b=req['load_placement'];ranges=v['cg_difference']['conditional_base_cg_xyz_ranges_mm']
 for axis,key in enumerate(['base_cg_x_interval_mm','base_cg_y_interval_mm']):
@@ -25,7 +33,7 @@ assert len(list(HERE.glob('cad-screen-*.png')))==9
 names=[p.name for p in sorted(HERE.iterdir()) if p.is_file() and p.suffix in ['.py','.json','.md','.csv','.stl','.step','.FCStd','.png','.zip'] and p.name!='release_manifest.json']
 files={n:dict(bytes=(HERE/n).stat().st_size,sha256=digest(HERE/n)) for n in names}
 linked=[BASE/n for n in ['requirements.json','electrical_plan.json','load_calculations.json','caster_load_check.json','hardware_geometry.py','printed-deck-frame/build_p1.py','makita-power/power_selection.json','aluminum-direct-deck/validation.json','aluminum-direct-deck/fea/summary.json']]
-out=dict(revision='D6',date='2026-09-22',source_D3_revision=v['parameters']['source_revision'],files=files,
+out=dict(revision=v['parameters']['revision'],date='2026-09-22',source_D3_revision=v['parameters']['source_revision'],files=files,
     linked_design_files={str(p.relative_to(BASE)):digest(p) for p in linked},
     quoted_plate_files_unchanged=saved['quoted_files_SHA256'],
     source_D3_prints_still_used=['PrintedStopXN.stl','PrintedStopXP.stl','PrintedStopYN.stl','PrintedStopYP.stl'],

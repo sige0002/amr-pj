@@ -1,4 +1,4 @@
-"""D6 two-storey AMR. Run with FreeCAD Python; no GUI required.
+"""D6.1 two-storey AMR. Run with FreeCAD Python; no GUI required.
 
 The quoted D3 cargo plate is translated only. All electronics stand ABOVE
 the lower rails. Four precut 100mm SF2 posts and two spare 300mm rails carry
@@ -27,7 +27,7 @@ V=App.Vector
 NAME='AMR01_TwoStorey_D6'
 SOURCE='099686bacaad0f72e8bc4ce15005cd708a5b2f83'
 RHO={'aluminum':2.7e-6,'steel':7.85e-6,'PLA':1.24e-6,'rubber':1.1e-6}
-P=dict(revision='D6',date='2026-09-22',source_revision=SOURCE,
+P=dict(revision='D6.1',date='2026-09-22',source_revision=SOURCE,
     architecture='1F battery/computer/power above base rails; 2F independent aluminum cargo deck',
     base_rail_top_z_mm=99,floor_bottom_top_z_mm=[99,101.4],equipment_seat_z_mm=104,
     upright_part='SUS SF2-30・30 BLACK, SF9-322 Amazon pack,100mm',upright_qty=4,
@@ -35,7 +35,9 @@ P=dict(revision='D6',date='2026-09-22',source_revision=SOURCE,
     upright_bottom_top_z_mm=[99,199],upper_rail_part='MISUMI NFSL6-3030-300',
     upper_rail_qty=2,upper_rail_bottom_top_z_mm=[199,229],
     upper_rail_purchase='reuse the two unused pieces of the already budgeted four-pack',
-    new_HBLFSN6_qty=8,new_M6x12_qty=16,new_HNTT6_6_qty=16,
+    new_HBLFSN6_qty=12,new_M6x12_qty=24,new_HNTT6_6_qty=24,
+    lower_joint_brackets_per_post=2,upper_joint_brackets_per_post=1,
+    reinforcement='opposing X brackets at all four post bases; directional stiffness qualification still pending',
     deck_LWH_mm=[300,300,4],deck_bottom_top_z_mm=[229,233],deck_translation_z_mm=130,
     battery='Makita BL1860B A-60464',charger='Makita DC18RF JPADC18RF',
     adapter='Netkey diy-adapter03',battery_origin_xyz_mm=[-193,-37.5,104],
@@ -81,7 +83,7 @@ def main():
     src=Path(temp.name)/'D3.FCStd'
     src.write_bytes(subprocess.check_output(['git','-C',str(BASE),'show',SOURCE+':cad/amr07/aluminum-direct-deck/AMR01_AluminumDirect_D3.FCStd']))
     old=App.openDocument(str(src));doc=App.newDocument(NAME)
-    doc.Label='AMR D6 | 1F electronics / 2F cargo233mm | rear battery service'
+    doc.Label='AMR D6.1 | double lower brackets | 1F electronics / 2F cargo233mm'
     removed=['BatteryCradlePLA','BatteryReservedSpace','BatteryConnectorEnvelope','ElectronicsTrayPLA','FrontElectronicsTrayPLA']
     for o in old.Objects:
         if o.TypeId=='PartDesign::Feature' and o.Name not in removed:doc.copyObject(o,False)
@@ -115,7 +117,9 @@ def main():
         s=profile(300);s.translate(V(-150,cy,214))
         add('UpperRail3030_'+str(i),s,'aluminum','Existing purchased4pack300mm has two spare rails. Reuse unmodified;0.76kg/m.',mass=.228)
     for i,(cx,cy) in enumerate(P['upright_centers_xy_mm']):
-        for end,dx,z in [('Lower',-1 if cx>0 else 1,99),('Upper',1 if cx>0 else -1,199)]:
+        for end,dx,z in [('Lower',-1 if cx>0 else 1,99),
+                         ('LowerOpposite',1 if cx>0 else -1,99),
+                         ('Upper',1 if cx>0 else -1,199)]:
             inv=end=='Upper';dz=-1 if inv else 1
             # Proper orthogonal rotation: local u points away from post,
             # local w points up at bottom / down at top.

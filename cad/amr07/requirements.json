@@ -208,7 +208,16 @@
           -230,
           8
         ]
-      ]
+      ],
+      "post_joints": {
+        "revision": "D6.1",
+        "lower_brackets_per_post": 2,
+        "upper_brackets_per_post": 1,
+        "HBLFSN6_qty": 12,
+        "M6x12_qty": 24,
+        "HNTT6_6_qty": 24,
+        "decision_ja": "根元4箇所を両側固定する案をユーザー承認。通常積載10kg・車体上限10kgは維持。方向別剛性・実物試験は未完了。"
+      }
     }
   },
   "load_placement": {
@@ -318,5 +327,6 @@
     "minimum_bus_voltage_performance_verified": false,
     "thermal_duration_verified": false,
     "note": "Flat-floor cargo 10 kg is released only after the linked hardware acceptance tests. Slope operation and power-off slope holding are outside this prototype scope, rather than pending mandatory brake procurement."
-  }
+  },
+  "design_revision": "D6.1"
 }

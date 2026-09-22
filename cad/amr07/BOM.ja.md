@@ -1,6 +1,6 @@
 # A6 BOM — 平地10kg・追加機械ブレーキなし
 
-> **現行案は[D6：1階電装・2階荷台](two-story/README.ja.md)。現行全車BOMは[D6 CSV](two-story/BOM.csv)を参照。** 以下は旧構成の履歴。
+> **[現行D6.1 BOM：費用の割合と購入リスト](two-story/BOM.ja.md)** を参照。スマホ向けの費用一覧と部位別の購入明細へ整理済み。以下とこの階層のCSV・Excelは旧構成の履歴。
 
 > **2026-09-22：DECK_square_barは加工負担のため不採用。** このBOMと添付CSV・Excelの金額・数量は変更前のD2 CADに対する履歴。現行D6の数量・購入数は上のリンク先を参照する。角棒をこの表どおり購入しない。[製作条件](requirements.json)
 

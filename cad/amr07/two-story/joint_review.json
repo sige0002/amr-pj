@@ -1,6 +1,7 @@
 {
-  "revision": "D6 review only",
+  "revision": "D6 comparison baseline; lower candidate adopted in D6.1",
   "date": "2026-09-22",
+  "baseline_commit": "36a04d66ae328ab08f1ddd29812729b2b37c602b",
   "native_sha256": "0bc02bf9fd16c9e4b0c243867776738e8560af2148fbe597d5def024df59c30e",
   "original_base_mass_kg": 9.728198669430933,
   "candidates": [
@@ -62,6 +63,7 @@
     }
   ],
   "current_design_qualified": false,
-  "candidate_adopted": false,
+  "candidate_adopted": "opposing_lower",
+  "adoption_revision": "D6.1",
   "finding": "Member vertical screening does not certify single-sided joints. Need directional moment/slip and assembly-racking validation; CAD clearance is independent of that."
 }

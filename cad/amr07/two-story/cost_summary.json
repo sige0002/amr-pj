@@ -1,5 +1,5 @@
 {
-  "revision": "D6",
+  "revision": "D6.1",
   "date": "2026-09-22",
   "subtotal": {
     "JPY": 73699.0,
@@ -15,8 +15,16 @@
     "brackets_extra10pack_JPY": 917,
     "nuts_extra50pack_JPY": 2556,
     "upper300mm_rails_JPY": 0,
-    "extra_M6x12_qty": 16,
+    "extra_M6x12_qty": 24,
     "extra_M6x12_JPY": null
+  },
+  "reinforcement_from_D6": {
+    "added_brackets": 4,
+    "added_M6x12": 8,
+    "added_HNTT6_6": 8,
+    "additional_bracket_and_nut_pack_cost_JPY": 0,
+    "additional_screws_JPY": null,
+    "basis": "Use4 brackets and8 nuts from purchase-planned D6 packs; no ownership assumed."
   },
   "selected_power_delivered_Tokyo_reference_JPY": 23380,
   "source_D3_plate_and_mount_quotes_unchanged": true,
@@ -29,7 +37,26 @@
     "D3_STOP_NUTS",
     "D3_STOP_WASHERS",
     "POWER_PADS",
-    "POWER_LOW_STRAPS"
+    "POWER_LOW_STRAPS",
+    "U01",
+    "U03",
+    "U04",
+    "U05",
+    "U06",
+    "U07",
+    "U08",
+    "U09",
+    "U10",
+    "U11",
+    "U12",
+    "U13",
+    "U14",
+    "U15",
+    "U16",
+    "U17",
+    "U18",
+    "U19",
+    "U20"
   ],
   "complete_purchase_total": false,
   "note": "継承予算枠込みの車体小計。今回の支持金物は表示価格で3968円追加、上段300mm2本は購入予定パック内。追加M6ねじ・送料差額・電装未選定品・税/決済料などは別。"

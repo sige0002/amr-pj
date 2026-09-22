@@ -26,7 +26,7 @@ push_moments=[dict(application_height_mm=z,lever_above_post_base_mm=z-base_plane
                    external_moment_about_base_plane_Nm=push*(z-base_plane_z)/1000)
               for z in [233.,330.]]
 fea=json.loads((D3/'fea/summary.json').read_text())
-out=dict(revision='D6',date='2026-09-22',scope='member-level elastic screening, not whole-frame SF2 release',
+out=dict(revision='D6.1',date='2026-09-22',scope='member-level elastic screening, not whole-frame SF2 release',
     upper_vertical_service_force_N=force,static_factor=SF,
     upper_rails=dict(part='NFSL6-3030',support_span_mm=rail_L,I_mm4=rail_I,E_MPa=E,
         force_per_rail_N=rail_F,factored_stress_MPa=stress,factored_center_deflection_mm=deflection,
@@ -36,7 +36,7 @@ out=dict(revision='D6',date='2026-09-22',scope='member-level elastic screening, 
         area_from_catalog_mass_mm2=post_area,one_post_factored_compression_MPa=post_stress,
         ideal_Euler_load_K2_N=euler,
         source='https://fa.sus.co.jp/service/detail?ItemNo=SFF-324'),
-    joints=dict(new_brackets=8,arrangement='one bottom and one top bracket on opposite post faces; post ends bear directly on horizontal rails',
+    joints=dict(new_brackets=12,arrangement='two opposing bottom brackets and one top bracket per post; post ends bear directly on horizontal rails',
         physical_push_test_target_N=push,physical_push_test_completed=False,
         external_horizontal_push_cases=push_moments,
         individual_joint_moments_resolved=False,

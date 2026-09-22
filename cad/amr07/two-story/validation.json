@@ -1,6 +1,6 @@
 {
   "parameters": {
-    "revision": "D6",
+    "revision": "D6.1",
     "date": "2026-09-22",
     "source_revision": "099686bacaad0f72e8bc4ce15005cd708a5b2f83",
     "architecture": "1F battery/computer/power above base rails; 2F independent aluminum cargo deck",
@@ -42,9 +42,12 @@
       229
     ],
     "upper_rail_purchase": "reuse the two unused pieces of the already budgeted four-pack",
-    "new_HBLFSN6_qty": 8,
-    "new_M6x12_qty": 16,
-    "new_HNTT6_6_qty": 16,
+    "new_HBLFSN6_qty": 12,
+    "new_M6x12_qty": 24,
+    "new_HNTT6_6_qty": 24,
+    "lower_joint_brackets_per_post": 2,
+    "upper_joint_brackets_per_post": 1,
+    "reinforcement": "opposing X brackets at all four post bases; directional stiffness qualification still pending",
     "deck_LWH_mm": [
       300,
       300,
@@ -116,9 +119,9 @@
     "new_metal_machining": false,
     "loaded_use_released": false
   },
-  "physical_parts": 255,
+  "physical_parts": 275,
   "all_shapes_valid": true,
-  "checked_physical_pairs": 32385,
+  "checked_physical_pairs": 37675,
   "collisions": [],
   "reference_collisions": {},
   "reference_pair_collisions": [],
@@ -563,6 +566,14 @@
       "hits": []
     },
     {
+      "bolt": "LevelBolt_0_LowerOpposite_Post",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_0_LowerOpposite_Rail",
+      "hits": []
+    },
+    {
       "bolt": "LevelBolt_0_Upper_Post",
       "hits": []
     },
@@ -576,6 +587,14 @@
     },
     {
       "bolt": "LevelBolt_1_Lower_Rail",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_1_LowerOpposite_Post",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_1_LowerOpposite_Rail",
       "hits": []
     },
     {
@@ -595,6 +614,14 @@
       "hits": []
     },
     {
+      "bolt": "LevelBolt_2_LowerOpposite_Post",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_2_LowerOpposite_Rail",
+      "hits": []
+    },
+    {
       "bolt": "LevelBolt_2_Upper_Post",
       "hits": []
     },
@@ -608,6 +635,14 @@
     },
     {
       "bolt": "LevelBolt_3_Lower_Rail",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_3_LowerOpposite_Post",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_3_LowerOpposite_Rail",
       "hits": []
     },
     {
@@ -633,6 +668,11 @@
     "LevelNut_0_Lower_Post",
     "LevelBolt_0_Lower_Rail",
     "LevelNut_0_Lower_Rail",
+    "LevelBracket_0_LowerOpposite",
+    "LevelBolt_0_LowerOpposite_Post",
+    "LevelNut_0_LowerOpposite_Post",
+    "LevelBolt_0_LowerOpposite_Rail",
+    "LevelNut_0_LowerOpposite_Rail",
     "LevelBracket_0_Upper",
     "LevelBolt_0_Upper_Post",
     "LevelNut_0_Upper_Post",
@@ -643,6 +683,11 @@
     "LevelNut_1_Lower_Post",
     "LevelBolt_1_Lower_Rail",
     "LevelNut_1_Lower_Rail",
+    "LevelBracket_1_LowerOpposite",
+    "LevelBolt_1_LowerOpposite_Post",
+    "LevelNut_1_LowerOpposite_Post",
+    "LevelBolt_1_LowerOpposite_Rail",
+    "LevelNut_1_LowerOpposite_Rail",
     "LevelBracket_1_Upper",
     "LevelBolt_1_Upper_Post",
     "LevelNut_1_Upper_Post",
@@ -653,6 +698,11 @@
     "LevelNut_2_Lower_Post",
     "LevelBolt_2_Lower_Rail",
     "LevelNut_2_Lower_Rail",
+    "LevelBracket_2_LowerOpposite",
+    "LevelBolt_2_LowerOpposite_Post",
+    "LevelNut_2_LowerOpposite_Post",
+    "LevelBolt_2_LowerOpposite_Rail",
+    "LevelNut_2_LowerOpposite_Rail",
     "LevelBracket_2_Upper",
     "LevelBolt_2_Upper_Post",
     "LevelNut_2_Upper_Post",
@@ -663,6 +713,11 @@
     "LevelNut_3_Lower_Post",
     "LevelBolt_3_Lower_Rail",
     "LevelNut_3_Lower_Rail",
+    "LevelBracket_3_LowerOpposite",
+    "LevelBolt_3_LowerOpposite_Post",
+    "LevelNut_3_LowerOpposite_Post",
+    "LevelBolt_3_LowerOpposite_Rail",
+    "LevelNut_3_LowerOpposite_Rail",
     "LevelBracket_3_Upper",
     "LevelBolt_3_Upper_Post",
     "LevelNut_3_Upper_Post",
@@ -784,14 +839,14 @@
   },
   "mass": {
     "source_D3_kg": 8.246366343915682,
-    "estimated_base_kg": 9.728198669430933,
-    "remaining_to_10kg_kg": 0.2718013305690672,
+    "estimated_base_kg": 9.895085945114776,
+    "remaining_to_10kg_kg": 0.10491405488522432,
     "electrical_total_kg": 2.153,
     "battery_kg": 0.68,
     "adapter_kg": 0.123,
     "new_straps_and_pads_allowance_kg": 0.18,
     "total_solid_PLA_kg": 0.3816513694700097,
-    "added_metal_and_hardware_kg": 1.1257745513676853,
+    "added_metal_and_hardware_kg": 1.2926618270515282,
     "mass_overrides_kg": {
       "Upright3030_0": 0.084,
       "Upright3030_1": 0.084,
@@ -931,6 +986,51 @@
         ]
       },
       {
+        "name": "add LevelBracket_0_LowerOpposite",
+        "mass_kg": 0.016829634389542554,
+        "center_mm": [
+          -129.79403525673374,
+          -135.0,
+          108.86154925551628
+        ]
+      },
+      {
+        "name": "add LevelBolt_0_LowerOpposite_Post",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          -123.73255813953489,
+          -135.0,
+          114.00000000000001
+        ]
+      },
+      {
+        "name": "add LevelNut_0_LowerOpposite_Post",
+        "mass_kg": 0.006083424664393646,
+        "center_mm": [
+          -115.83480988292341,
+          -135.0,
+          114.0
+        ]
+      },
+      {
+        "name": "add LevelBolt_0_LowerOpposite_Rail",
+        "mass_kg": 0.006362667601315406,
+        "center_mm": [
+          -138.00000000000003,
+          -135.00000000000003,
+          102.73255813953487
+        ]
+      },
+      {
+        "name": "add LevelNut_0_LowerOpposite_Rail",
+        "mass_kg": 0.006083424664393645,
+        "center_mm": [
+          -138.0,
+          -135.0,
+          94.83480988292341
+        ]
+      },
+      {
         "name": "add LevelBracket_0_Upper",
         "mass_kg": 0.016829634389542554,
         "center_mm": [
@@ -1016,6 +1116,51 @@
         "mass_kg": 0.006083424664393646,
         "center_mm": [
           -72.0,
+          135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "add LevelBracket_1_LowerOpposite",
+        "mass_kg": 0.016829634389542554,
+        "center_mm": [
+          -129.79403525673374,
+          135.0,
+          108.86154925551628
+        ]
+      },
+      {
+        "name": "add LevelBolt_1_LowerOpposite_Post",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          -123.73255813953489,
+          135.0,
+          114.00000000000001
+        ]
+      },
+      {
+        "name": "add LevelNut_1_LowerOpposite_Post",
+        "mass_kg": 0.006083424664393646,
+        "center_mm": [
+          -115.83480988292341,
+          135.0,
+          114.0
+        ]
+      },
+      {
+        "name": "add LevelBolt_1_LowerOpposite_Rail",
+        "mass_kg": 0.006362667601315406,
+        "center_mm": [
+          -138.00000000000003,
+          135.00000000000003,
+          102.73255813953487
+        ]
+      },
+      {
+        "name": "add LevelNut_1_LowerOpposite_Rail",
+        "mass_kg": 0.006083424664393646,
+        "center_mm": [
+          -138.0,
           135.0,
           94.83480988292341
         ]
@@ -1111,6 +1256,51 @@
         ]
       },
       {
+        "name": "add LevelBracket_2_LowerOpposite",
+        "mass_kg": 0.016829634389542554,
+        "center_mm": [
+          129.79403525673374,
+          -135.0,
+          108.86154925551628
+        ]
+      },
+      {
+        "name": "add LevelBolt_2_LowerOpposite_Post",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          123.73255813953489,
+          -135.0,
+          113.99999999999999
+        ]
+      },
+      {
+        "name": "add LevelNut_2_LowerOpposite_Post",
+        "mass_kg": 0.006083424664393646,
+        "center_mm": [
+          115.83480988292341,
+          -135.0,
+          114.0
+        ]
+      },
+      {
+        "name": "add LevelBolt_2_LowerOpposite_Rail",
+        "mass_kg": 0.006362667601315406,
+        "center_mm": [
+          138.00000000000003,
+          -135.00000000000003,
+          102.73255813953487
+        ]
+      },
+      {
+        "name": "add LevelNut_2_LowerOpposite_Rail",
+        "mass_kg": 0.006083424664393645,
+        "center_mm": [
+          138.0,
+          -135.0,
+          94.83480988292341
+        ]
+      },
+      {
         "name": "add LevelBracket_2_Upper",
         "mass_kg": 0.016829634389542554,
         "center_mm": [
@@ -1196,6 +1386,51 @@
         "mass_kg": 0.006083424664393646,
         "center_mm": [
           72.0,
+          135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "add LevelBracket_3_LowerOpposite",
+        "mass_kg": 0.016829634389542554,
+        "center_mm": [
+          129.79403525673374,
+          135.0,
+          108.86154925551628
+        ]
+      },
+      {
+        "name": "add LevelBolt_3_LowerOpposite_Post",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          123.73255813953489,
+          135.0,
+          113.99999999999999
+        ]
+      },
+      {
+        "name": "add LevelNut_3_LowerOpposite_Post",
+        "mass_kg": 0.006083424664393646,
+        "center_mm": [
+          115.83480988292341,
+          135.0,
+          114.0
+        ]
+      },
+      {
+        "name": "add LevelBolt_3_LowerOpposite_Rail",
+        "mass_kg": 0.006362667601315406,
+        "center_mm": [
+          138.00000000000003,
+          135.00000000000003,
+          102.73255813953487
+        ]
+      },
+      {
+        "name": "add LevelNut_3_LowerOpposite_Rail",
+        "mass_kg": 0.006083424664393646,
+        "center_mm": [
+          138.0,
           135.0,
           94.83480988292341
         ]
@@ -2371,24 +2606,24 @@
         ]
       }
     ],
-    "mass_change_kg": 1.4818323255152506,
+    "mass_change_kg": 1.6487196011990934,
     "moment_change_kg_mm": [
       -5.370561906928735,
-      10.015716479999876,
-      499.5569043170694
+      10.01571647999988,
+      517.483016845469
     ],
     "conditional_base_cg_xyz_ranges_mm": [
       [
-        -9.028827260907859,
-        7.92470468088598
+        -8.876550020209729,
+        7.791049209662408
       ],
       [
-        -7.44721087849606,
-        9.50632106329778
+        -7.321608661208712,
+        9.345990568663424
       ],
       [
-        123.40393986013522,
-        144.5958547873775
+        123.13426713386362,
+        143.96876617120378
       ]
     ],
     "basis": "Conditional on historical D3 CGx/y+-10,z85..110mm; equipment envelope centroids and mass budgets, not measured CG. Protection0.4kg split equally between two reserved cases; cable routing moment remains in historical uncertainty."

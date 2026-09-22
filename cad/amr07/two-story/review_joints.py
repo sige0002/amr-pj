@@ -6,12 +6,20 @@ no joint strength, preload or lateral-stiffness qualification is inferred.
 from pathlib import Path
 import hashlib
 import json
+import subprocess
+import tempfile
 import FreeCAD as App
 import Part
 
 HERE = Path(__file__).resolve().parent
-native = HERE / 'AMR01_TwoStorey_D6.FCStd'
-report = json.loads((HERE / 'validation.json').read_text())
+baseline_commit = '36a04d66ae328ab08f1ddd29812729b2b37c602b'
+baseline_path = 'cad/amr07/two-story/'
+def baseline(name):
+    return subprocess.check_output(['git','-C',str(HERE),'show',baseline_commit+':'+baseline_path+name])
+temporary = tempfile.TemporaryDirectory(prefix='amr-d6-joint-review-')
+native = Path(temporary.name) / 'AMR01_TwoStorey_D6.FCStd'
+native.write_bytes(baseline('AMR01_TwoStorey_D6.FCStd'))
+report = json.loads(baseline('validation.json'))
 doc = App.openDocument(str(native))
 V = App.Vector
 rho = {'aluminum': 2.7e-6, 'steel': 7.85e-6}
@@ -103,10 +111,11 @@ for ends in [('Lower',), ('Lower', 'Upper')]:
         limitation='Opposing X brackets address opening in the X-Z plane; Y loading, racking, preload and mixed-brand seating are not qualified by adding parts.'))
 
 out = dict(
-    revision='D6 review only', date='2026-09-22',
+    revision='D6 comparison baseline; lower candidate adopted in D6.1', date='2026-09-22',
+    baseline_commit=baseline_commit,
     native_sha256=hashlib.sha256(native.read_bytes()).hexdigest(),
     original_base_mass_kg=report['mass']['estimated_base_kg'], candidates=results,
-    current_design_qualified=False, candidate_adopted=False,
+    current_design_qualified=False, candidate_adopted='opposing_lower',adoption_revision='D6.1',
     finding='Member vertical screening does not certify single-sided joints. Need directional moment/slip and assembly-racking validation; CAD clearance is independent of that.')
 (HERE / 'joint_review.json').write_text(json.dumps(out, ensure_ascii=False, indent=2)+'\n')
 print(json.dumps(out, ensure_ascii=False))

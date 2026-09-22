@@ -1,5 +1,5 @@
 {
-  "revision": "D6",
+  "revision": "D6.1",
   "date": "2026-09-22",
   "scope": "member-level elastic screening, not whole-frame SF2 release",
   "upper_vertical_service_force_N": 242.79039,
@@ -26,8 +26,8 @@
     "source": "https://fa.sus.co.jp/service/detail?ItemNo=SFF-324"
   },
   "joints": {
-    "new_brackets": 8,
-    "arrangement": "one bottom and one top bracket on opposite post faces; post ends bear directly on horizontal rails",
+    "new_brackets": 12,
+    "arrangement": "two opposing bottom brackets and one top bracket per post; post ends bear directly on horizontal rails",
     "physical_push_test_target_N": 60.0,
     "physical_push_test_completed": false,
     "external_horizontal_push_cases": [

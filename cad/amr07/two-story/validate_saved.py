@@ -53,7 +53,10 @@ for entry in json.loads((HERE/'print_manifest.json').read_text()):
 assert r['unchanged_parts_BRep_equal'] and r['quoted_plate_unchanged']
 assert doc.getObject('Reserved_Computer').Shape.BoundBox.ZMin==104
 assert doc.getObject('BatteryBL1860B').Shape.BoundBox.ZMin==104
-out=dict(revision='D6',native_document=NAME,physical_parts=len(physical),
+assert len([o for o in physical if o.Name.startswith('LevelBracket_')])==12
+assert len([o for o in physical if o.Name.startswith('LevelBolt_')])==24
+assert len([o for o in physical if o.Name.startswith('LevelNut_')])==24
+out=dict(revision=r['parameters']['revision'],native_document=NAME,physical_parts=len(physical),
     native_solids=sum(len(o.Shape.Solids) for o in physical),STEP_solids=len(step.Solids),
     native_volume_mm3=native_volume,STEP_delta_mm3=step.Volume-native_volume,
     with_equipment_STEP_solids=len(with_equipment.Solids),
