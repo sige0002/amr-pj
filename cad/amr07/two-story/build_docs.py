@@ -7,6 +7,8 @@ ROOT=HERE.parents[2]
 def read(name):return json.loads((HERE/name).read_text())
 v=read('validation.json');p=read('payload_budget.json');c=read('cost_summary.json')
 f=read('floor_support_review.json');prints=read('print_manifest.json')
+pla=read('pla-strength/summary.json')
+pla_feet={x['belt_tension_each_leg_N']:x for x in pla['mesh_comparison'] if x['contact']=='four_10mm_feet'}
 mass=p['vehicle_mass_estimate_kg'];delta=p['corner_rework_increase_from_D62_kg']
 delta_word=f"約{abs(delta)*1000:.0f}g{'減' if delta<0 else '増'}"
 grams=sum(x['solid_mass_g'] for x in prints)
@@ -94,7 +96,9 @@ PLAを挟む部分へ金属同士と同じM6締付トルクを使わない。締
 
 リブ単独・梁単独へそれぞれ50Nを中央集中させた短時間の単純梁比較を行った。リブは床幅40mmだけを有効幅とし、端のテーパーを1mm刻みの断面積分に含めた。弾性率1000MPaと仮定したたわみは、リブ{f['short_term_elastic_screens']['panel_rib']['deflection_mm_by_E_MPa']['1000']:.2f}mm、梁{f['short_term_elastic_screens']['seam_beam']['deflection_mm_by_E_MPa']['1000']:.2f}mm。1000MPaは感度確認用の仮定で、許容値ではない。[メーカー資料](https://store.bblcdn.com/s1/default/58b85d0f3db94878854a28fdb8a0006e/Bambu_PLA_Basic_Technical_Data_Sheet.pdf)のXY曲げ弾性率2750±160MPaも比較値として記録した。
 
-このPLA床は電装用で、荷物15kgを支える上段の金属構造とは別。印刷方向、長期クリープ、機器温度、ベルトの締めすぎ、ねじの緩みを含む強度は未検証。50Nの分散載荷試験と、実機相当重量・温度での保持試験を実施してから使用範囲を決める。
+実CADの床4枚＋支持梁について、電装2.4kgとPLA自重を与えた二次四面体解析も追加した。100%充填の均質体・E=1000MPaを仮定し、機器を10mm角の脚4個で受ける場合、最大たわみは重力だけで{pla_feet[0]['max_down_mm']:.2f}mm、ベルト張力10N／脚で{pla_feet[10]['max_down_mm']:.2f}mm、30N／脚で{pla_feet[30]['max_down_mm']:.2f}mm。粗細2メッシュのたわみ差は2%以内だが、皿ねじ等の局所応力は収束未確認。[計算条件・応力・ねじ締付け・改善点](pla-strength/README.ja.md)
+
+このPLA床は電装用で、荷物15kgを支える上段の金属構造とは別。荷重分散とベルト反力の取り方、中央皿穴に残る0.65mmの薄肉を優先して見直す。印刷方向・長期クリープ・機器温度・締付け軸力まで含む安全率2は未確認。実物の既知重量・測定したベルト張力で解析を照合し、実機相当温度での保持を確認して使用範囲を決める。暫定の印刷条件は上記計算書に記載した。
 
 前版D6.2との重量差は{delta_word}。PLA材料消費の参考増額は{filament_delta:,}円（2円/gの既存基準）。今回の金具・ねじの追加は0個。三角板4枚とM6ねじ・座金・溝ナット各8個を削除し、床ねじ4組を隅へ移設する。三角板の素材仮枠500円を除き、計上小計は410円減。ねじ類の購入パック価格は未確定のため、16点のねじ・座金削減による金額効果を追加で差し引かない。従来の未計上価格は残るが、今回の追加金属切断・穴加工・CNC見積は発生しない。
 
@@ -141,6 +145,8 @@ readme=f'''# D6.3：床の四隅を延長し、平面三角板を廃止
 通常荷物10kg、構造比較荷物15kg/SF2は設計目標で、実機認定ではない。今回の比較範囲は車体10.5kgまで。車体CGはX±25・Y±15・Z160mm以下、荷物CGはX/Y±30・Z330mm以下。追加機械ブレーキなし、平坦な屋内床を対象とする。
 
 上段レールの2倍荷重比較は応力7.13MPa・たわみ0.0253mm、支柱1本へ集中する圧縮比較は1.56MPa。天板は同じ加工形状・6固定点なので従来の板単体解析を限定的に参照する。接合部の柔軟性、PLAの長期保持、実機温度・停止性能は含まない。[部材計算と限界](structure_screening.json)
+
+1階PLAは実形状5部品の解析を追加した。電装2.4kg＋PLA自重・100%充填相当・E=1000MPaの仮定で、脚4個の機器を載せた最大たわみは{pla_feet[0]['max_down_mm']:.2f}mm、ベルト10N／脚では{pla_feet[10]['max_down_mm']:.2f}mm。皿ねじ座面・ベルト反力の取り方を優先して見直す。局所応力の収束、締付けと長期保持は未確認。[PLA計算書・解析画像](pla-strength/README.ja.md)
 
 ## 四隅の見直し
 
@@ -217,6 +223,8 @@ PLA材料消費参考は{filament_delta:,}円増（従来基準2円/g、中実�
 
 実物の座面・締付け、前後左右の横揺れと対角ねじれ、PLAの長期保持は未確認。組立は金属骨格→支持梁→床→電装の順。必要な剛性が得られない場合は、床へ補強を負担させず金属接合を見直す。
 
+[PLA床の実形状解析](pla-strength/README.ja.md)は鉛直の電装荷重とベルト荷重を評価するもの。床を筋交いとしてフレームの横揺れ・ねじりに寄与させた計算ではなく、三角板廃止後の骨格全体の安全率2を証明しない。
+
 [保存CADの検査値](corner_joint_review.json)／[床固定・印刷](FLOOR_REVIEW.ja.md)／[費用表](BOM.ja.md)／[重量・積載](PAYLOAD_REVIEW.ja.md)
 '''
 (HERE/'CORNER_REVIEW.ja.md').write_text(corner_text)
@@ -228,6 +236,8 @@ start=s.index('D5からの小計増は') if 'D5からの小計増は' in s else 
 end=s.index('\n- [現行',start)
 s=s[:start]+f'全車の途中小計は{c["subtotal"]["JPY"]:,.0f}円＋{c["subtotal"]["USD"]:.2f}USD＋未計上分、記録済み参考為替では約{c["full_running_subtotal_JPY_reference"]:,.0f}円。今回の四隅変更は28部品削減、追加0個。PLA材料参考は{filament_delta:,}円増、三角板の素材仮枠500円を削除し、計上小計は410円減です。従来からの未計上品は残り、完成車購入総額ではありません。\n'+s[end:]
 s=s.replace('電装床4枚の印刷ZIP','電装床4枚＋支持梁の印刷ZIP')
+if 'pla-strength/README.ja.md' not in s:
+    s=s.replace('- [現行D6：', '- [PLA床の実形状解析・たわみ画像・締付けの課題](cad/amr07/two-story/pla-strength/README.ja.md)\n- [現行D6：')
 if 'cad-screen-floor-fixings-top.png' not in s:
     s=s.replace('![FreeCAD実画面：D6.3組立]', '![FreeCAD実画面：各床4点・計16点の固定](cad/amr07/two-story/cad-screen-floor-fixings-top.png)\n\n![FreeCAD実画面：D6.3組立]')
 root.write_text(s)

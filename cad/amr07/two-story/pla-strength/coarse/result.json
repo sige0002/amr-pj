@@ -1,0 +1,1243 @@
+{
+  "revision": "D6.3",
+  "source_cad_sha256": "04ff9a2cdd8b4236bd79e8970ddd06476e909bdb9ec8a59ff5a76cea9c14a1ab",
+  "geometry_sha256": "a3448d510f098be9274ce2dd25ad9d486dabe6d727fe7ea9071642cde77501d3",
+  "solver": "CalculiX2.21",
+  "mesher": "Gmsh4.15.0",
+  "element": "C3D10 quadratic tetrahedron",
+  "E_MPa": 1000.0,
+  "nu": 0.35,
+  "material": "Assumed isotropic reduced stiffness. Not a tested print modulus or creep allowable.",
+  "solver_threads": 1,
+  "analysis_script_sha256": "4e04d5397e4e813f9d0779419603c7aa6a7ade763d67433526919b267232d011",
+  "maximum_mesh_size_mm": 4.0,
+  "meshes": [
+    {
+      "part": "FloorPLA_0_0",
+      "nodes": 47296,
+      "elements": 23656,
+      "straight_corner_tetra_volume_error": 5.6360366296859254e-05,
+      "support_patch_nodes": [
+        372,
+        389,
+        348,
+        199
+      ],
+      "force_balance_residuals_N": [
+        -6.392566334056937e-07,
+        -1.900940862498146e-07,
+        -5.757618160018296e-09,
+        1.6384871348584795e-07,
+        -5.105020006723748e-07
+      ],
+      "moment_balance_residuals_Nmm": [
+        [
+          1.8750746984286812e-05,
+          6.044334038456112e-05,
+          -4.4908123102278227e-10
+        ],
+        [
+          3.033768436008278e-05,
+          -5.135007036806416e-05,
+          -9.909109992906903e-10
+        ],
+        [
+          3.632970474048286e-06,
+          6.854631106803684e-06,
+          -1.8843867461697333e-10
+        ],
+        [
+          -6.242495697472705e-06,
+          -2.243339553231749e-06,
+          -3.301103882931928e-10
+        ],
+        [
+          0.00015967469214928087,
+          -5.272677979917262e-05,
+          1.5716120994483166e-09
+        ]
+      ],
+      "input_sha256": "02a0ec914c4af4d1485e1b5821d38ad9583e1e5a3fdb3ab8c9c2a33af9c430be",
+      "output_dat_sha256": "6f96d2fe0777dc0ca165eeac6c3ce24092835b04e1905f9212c56b237a2258f9"
+    },
+    {
+      "part": "FloorPLA_0_1",
+      "nodes": 47132,
+      "elements": 23559,
+      "straight_corner_tetra_volume_error": 5.635785773039359e-05,
+      "support_patch_nodes": [
+        366,
+        400,
+        349,
+        209
+      ],
+      "force_balance_residuals_N": [
+        8.75985151083114e-08,
+        1.2583881208172443e-06,
+        -6.381932760035625e-10,
+        -6.669791363655975e-08,
+        8.639200004267877e-07
+      ],
+      "moment_balance_residuals_Nmm": [
+        [
+          2.061789053970633e-06,
+          -7.000338333672745e-06,
+          -4.8676576138989505e-11
+        ],
+        [
+          5.325978336383013e-05,
+          8.793445011634571e-05,
+          1.2847762849936082e-10
+        ],
+        [
+          2.9428460805447365e-06,
+          -9.648485611025472e-06,
+          3.938018473038359e-11
+        ],
+        [
+          4.584785442296457e-06,
+          -2.4147783034500492e-05,
+          8.549161894865816e-11
+        ],
+        [
+          7.377091857407869e-05,
+          3.6172277429358246e-05,
+          1.5840697363377674e-09
+        ]
+      ],
+      "input_sha256": "404ce97f1d94c21422febfea53c363cc2c3a166aef3a52adb0e6944eeca71a77",
+      "output_dat_sha256": "859ba947927fd12c485d4321475ca06705aba64ef6bf644d2ed8d308d2009f34"
+    },
+    {
+      "part": "FloorPLA_1_0",
+      "nodes": 46874,
+      "elements": 23555,
+      "straight_corner_tetra_volume_error": 5.808236773763298e-05,
+      "support_patch_nodes": [
+        370,
+        403,
+        333,
+        208
+      ],
+      "force_balance_residuals_N": [
+        -5.06457330295973e-07,
+        -6.710414259814002e-07,
+        1.2803720542131636e-08,
+        1.84595172092461e-07,
+        -1.8423220016217101e-06
+      ],
+      "moment_balance_residuals_Nmm": [
+        [
+          2.6554404953423906e-05,
+          0.0001521712597227047,
+          -2.0238379828007993e-10
+        ],
+        [
+          6.170771498511564e-06,
+          8.674018916991419e-05,
+          -2.679249586854992e-10
+        ],
+        [
+          -2.911480252894283e-07,
+          -7.576630789759425e-06,
+          5.808453454894403e-11
+        ],
+        [
+          -4.7505911401901635e-06,
+          -1.3286759833142092e-05,
+          5.985100800613213e-11
+        ],
+        [
+          4.840285529095212e-05,
+          0.0001248631152250823,
+          4.172107749169135e-09
+        ]
+      ],
+      "input_sha256": "0dda95c7b229eab3fdbeea028bf67dbe8b3d83b0d923cb9e4c945502c12beb2f",
+      "output_dat_sha256": "506f6d577a60833f1641b14cfee7ee578066223c6075e729c8ae0fa6ddca5ecd"
+    },
+    {
+      "part": "FloorPLA_1_1",
+      "nodes": 45823,
+      "elements": 23008,
+      "straight_corner_tetra_volume_error": 5.872142679708148e-05,
+      "support_patch_nodes": [
+        372,
+        381,
+        343,
+        212
+      ],
+      "force_balance_residuals_N": [
+        -8.873158563460493e-08,
+        -4.298823803594587e-07,
+        2.3778711416566622e-08,
+        6.501623758814468e-08,
+        -5.279220021137121e-07
+      ],
+      "moment_balance_residuals_Nmm": [
+        [
+          -1.0377523299256682e-05,
+          7.549878319890218e-05,
+          -5.045297801970628e-10
+        ],
+        [
+          -2.639091831814456e-05,
+          7.215996732623558e-05,
+          -7.681897973043968e-10
+        ],
+        [
+          3.988841907887064e-06,
+          -3.193136920209838e-06,
+          -4.151833552678494e-11
+        ],
+        [
+          9.232953720683668e-06,
+          6.174753034826619e-06,
+          -8.296237905017375e-11
+        ],
+        [
+          -2.916341721059812e-05,
+          0.00013105553748937737,
+          6.671794932967654e-10
+        ]
+      ],
+      "input_sha256": "0ee08618b5e0b1cfe1e7f11605a4512c309b2cc36735993768b6ca3430512708",
+      "output_dat_sha256": "004aa4631136b68a8d9d843a129415a3f19381355ab67b6218ed4fd60b3ba4fc"
+    },
+    {
+      "part": "SeamBeamPLA",
+      "nodes": 41658,
+      "elements": 22941,
+      "straight_corner_tetra_volume_error": 0.00031649255702093093,
+      "support_patch_nodes": [
+        299,
+        300,
+        285,
+        308
+      ],
+      "force_balance_residuals_N": [
+        -3.971141970815495e-09,
+        1.191600007555138e-08,
+        -1.7392699946938706e-08,
+        5.137001934940599e-11,
+        -6.18160000964707e-09
+      ],
+      "moment_balance_residuals_Nmm": [
+        [
+          -2.612352397780805e-06,
+          -8.800785724368107e-07,
+          -4.994433421452726e-07
+        ],
+        [
+          -1.837931490333844e-07,
+          2.8875157181834643e-06,
+          7.550801464466239e-07
+        ],
+        [
+          -1.395337078005654e-06,
+          2.688201145531477e-06,
+          1.6366707172518757e-07
+        ],
+        [
+          2.846506357290224e-07,
+          3.072932656278393e-06,
+          -2.5387906402163374e-08
+        ],
+        [
+          5.463398076444026e-07,
+          -2.2351114770113867e-07,
+          4.088997703211028e-07
+        ]
+      ],
+      "input_sha256": "4b234d75ac8673ca346df7bc9d8d67689f0d876ce54cf115a12c5831d08c2af8",
+      "output_dat_sha256": "371587486db6fbc0285bfc45fbb49d7656c930552d63f21c5110c49df2546e5b"
+    }
+  ],
+  "coupling": {
+    "panel_center_stiffness_N_mm": [
+      1.1646003925249995,
+      1.1714133613,
+      1.1603974338,
+      1.1629963249740003
+    ],
+    "beam_flexibility_mm_N": [
+      [
+        0.0034150198373158534,
+        0.001195502828355375,
+        0.001507248428756611,
+        0.0007650134769929506
+      ],
+      [
+        0.0011955028753036635,
+        0.003399641482183164,
+        0.0007601702459430804,
+        0.0015073876210286354
+      ],
+      [
+        0.0015072484191920974,
+        0.0007601702429996995,
+        0.0034099605080251056,
+        0.0012108360156560369
+      ],
+      [
+        0.0007650134761372265,
+        0.001507387609800481,
+        0.0012108359798649662,
+        0.0034302244726152906
+      ]
+    ],
+    "reciprocity_relative_error": 1.3686651980809164e-08,
+    "coupling": "(I+C*K)*d = d_beam_gravity - C*R_floor_fixed; all four seam displacements coupled",
+    "other_rail_contact_included": false
+  },
+  "cases": [
+    {
+      "equipment_contact": "full_pads",
+      "belt_tension_each_leg_N": 0,
+      "total_equipment_mass_kg": 2.4,
+      "total_printed_mass_kg": 0.5558857504316725,
+      "parts": [
+        {
+          "part": "FloorPLA_0_0",
+          "max_down_mm": 0.170762725881928,
+          "max_up_mm": 0.0022952581305688,
+          "max_displacement_norm_mm": 0.17083034295308444,
+          "peak_tensile_principal_MPa": 1.2097779339603334,
+          "peak_compressive_principal_MPa": 2.63746896425977,
+          "tensile_peak_element_IP": [
+            2018,
+            1
+          ],
+          "max_down_node_xyz_mm": [
+            -109.0,
+            -0.2,
+            99.0
+          ],
+          "tensile_peak_element_centroid_mm": [
+            -17.67379140402218,
+            -25.151973807862657,
+            99.74818881819817
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            0.39381928116137144,
+            0.4618932881321266,
+            3.8229347406813026,
+            3.662905322930843
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.38818772647297145
+        },
+        {
+          "part": "FloorPLA_0_1",
+          "max_down_mm": 0.1705121835364104,
+          "max_up_mm": 0.002400448830250337,
+          "max_displacement_norm_mm": 0.17058021110440535,
+          "peak_tensile_principal_MPa": 1.3890385536048293,
+          "peak_compressive_principal_MPa": 3.564660973853101,
+          "tensile_peak_element_IP": [
+            1311,
+            4
+          ],
+          "max_down_node_xyz_mm": [
+            -109.0,
+            0.2,
+            99.0
+          ],
+          "tensile_peak_element_centroid_mm": [
+            -18.719518582457233,
+            24.117253211250123,
+            99.86015537583688
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            0.39127767710674966,
+            0.4611141079080634,
+            3.823780424360191,
+            3.6641798294420758
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.39220017282883746
+        },
+        {
+          "part": "FloorPLA_1_0",
+          "max_down_mm": 0.17826789100560175,
+          "max_up_mm": 0.005529410924848743,
+          "max_displacement_norm_mm": 0.17828431592331717,
+          "peak_tensile_principal_MPa": 0.7531311185028398,
+          "peak_compressive_principal_MPa": 2.0342226290769982,
+          "tensile_peak_element_IP": [
+            1516,
+            2
+          ],
+          "max_down_node_xyz_mm": [
+            123.5964334506939,
+            -91.566483396521,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            17.67348674659481,
+            -27.20029533964586,
+            100.4441340032101
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            0.5224320050736649,
+            1.315334554949732,
+            2.1714806570855503,
+            2.1466122347552274
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.2992821657150492
+        },
+        {
+          "part": "FloorPLA_1_1",
+          "max_down_mm": 0.1284809296577211,
+          "max_up_mm": 0.0027313980623827365,
+          "max_displacement_norm_mm": 0.1284947355635039,
+          "peak_tensile_principal_MPa": 0.6569871663735568,
+          "peak_compressive_principal_MPa": 1.4758758733583708,
+          "tensile_peak_element_IP": [
+            46,
+            2
+          ],
+          "max_down_node_xyz_mm": [
+            96.34245414798984,
+            95.30228179971928,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            17.50940841553773,
+            27.14277236764398,
+            100.1564856627939
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            0.7351019793053142,
+            0.62731278032119,
+            1.9832664650496659,
+            2.2481478273102904
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.24909927565205076
+        },
+        {
+          "part": "SeamBeamPLA",
+          "max_down_mm": 0.03958375088389328,
+          "max_up_mm": 0.0010202661507269113,
+          "max_displacement_norm_mm": 0.03958617185776952,
+          "peak_tensile_principal_MPa": 0.4048390226746983,
+          "peak_compressive_principal_MPa": 0.491119619208142,
+          "tensile_peak_element_IP": [
+            21425,
+            3
+          ],
+          "max_down_node_xyz_mm": [
+            -2.216868934143738,
+            0.3378754608729908,
+            95.25
+          ],
+          "tensile_peak_element_centroid_mm": [
+            -13.66188252717192,
+            22.997365679042126,
+            94.12901579273814
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            3.484095729971542,
+            2.61734457350807,
+            3.5115335423574368,
+            2.6646141075592986
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.20731883557331882
+        }
+      ],
+      "max_down_mm": 0.17826789100560175,
+      "max_tensile_MPa": 1.3890385536048293,
+      "max_compression_MPa": 3.564660973853101
+    },
+    {
+      "equipment_contact": "full_pads",
+      "belt_tension_each_leg_N": 10,
+      "total_equipment_mass_kg": 2.4,
+      "total_printed_mass_kg": 0.5558857504316725,
+      "parts": [
+        {
+          "part": "FloorPLA_0_0",
+          "max_down_mm": 0.3574568476855306,
+          "max_up_mm": 0.30078534132131435,
+          "max_displacement_norm_mm": 0.35749990316108676,
+          "peak_tensile_principal_MPa": 2.777027840778576,
+          "peak_compressive_principal_MPa": 3.6754412510458705,
+          "tensile_peak_element_IP": [
+            22651,
+            2
+          ],
+          "max_down_node_xyz_mm": [
+            -89.74091832009984,
+            -74.4815652318706,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            -60.45420182976265,
+            -8.43910870321432,
+            100.54833984375
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            1.1222570135247985,
+            1.098889676540648,
+            2.646763752689631,
+            3.4476561002896924
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.7115050207260585
+        },
+        {
+          "part": "FloorPLA_0_1",
+          "max_down_mm": 0.3557159016055672,
+          "max_up_mm": 0.2948921177724533,
+          "max_displacement_norm_mm": 0.3557582287835173,
+          "peak_tensile_principal_MPa": 2.655266021540842,
+          "peak_compressive_principal_MPa": 3.8166503049075935,
+          "tensile_peak_element_IP": [
+            22539,
+            2
+          ],
+          "max_down_node_xyz_mm": [
+            -89.73385720290152,
+            74.46476864743968,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            -60.45420182976265,
+            8.43910870321432,
+            100.54833984375
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            1.1158339890846967,
+            1.1012829457380384,
+            2.6074613294406,
+            3.5417773058866793
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.6999204522417268
+        },
+        {
+          "part": "FloorPLA_1_0",
+          "max_down_mm": 0.26144208240385136,
+          "max_up_mm": 0.3025540298445816,
+          "max_displacement_norm_mm": 0.3034330126249113,
+          "peak_tensile_principal_MPa": 2.698533367702182,
+          "peak_compressive_principal_MPa": 3.5023225760611627,
+          "tensile_peak_element_IP": [
+            22633,
+            2
+          ],
+          "max_down_node_xyz_mm": [
+            108.5859330210201,
+            -93.43729528160142,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            60.45420182976265,
+            -8.439108703214323,
+            100.54833984375
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            0.9379826025063084,
+            1.5202176386425097,
+            1.362946947367538,
+            2.572201098526462
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.539610329636521
+        },
+        {
+          "part": "FloorPLA_1_1",
+          "max_down_mm": 0.2750527439116691,
+          "max_up_mm": 0.615412435580627,
+          "max_displacement_norm_mm": 0.6159696415916425,
+          "peak_tensile_principal_MPa": 2.818219279836156,
+          "peak_compressive_principal_MPa": 3.4590679700331313,
+          "tensile_peak_element_IP": [
+            21998,
+            2
+          ],
+          "max_down_node_xyz_mm": [
+            45.98254798634433,
+            73.59287766764945,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            60.45420182976265,
+            8.43910870321432,
+            100.54833984375
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            0.817812841369447,
+            0.48981785358847124,
+            1.0922523362288408,
+            2.95644005040415
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.9133768837816205
+        },
+        {
+          "part": "SeamBeamPLA",
+          "max_down_mm": 0.04203654388130933,
+          "max_up_mm": 0.0010665938861410403,
+          "max_displacement_norm_mm": 0.042037096898461454,
+          "peak_tensile_principal_MPa": 0.4024596250881198,
+          "peak_compressive_principal_MPa": 0.49119709813217594,
+          "tensile_peak_element_IP": [
+            21425,
+            3
+          ],
+          "max_down_node_xyz_mm": [
+            -1.468616548326359,
+            0.9446889362484443,
+            95.25
+          ],
+          "tensile_peak_element_centroid_mm": [
+            -13.66188252717192,
+            22.997365679042126,
+            94.12901579273814
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            3.4317086673264225,
+            2.968730555746105,
+            3.5202901153352104,
+            3.1530879604496733
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.21384719362793725
+        }
+      ],
+      "max_down_mm": 0.3574568476855306,
+      "max_tensile_MPa": 2.818219279836156,
+      "max_compression_MPa": 3.8166503049075935
+    },
+    {
+      "equipment_contact": "full_pads",
+      "belt_tension_each_leg_N": 30,
+      "total_equipment_mass_kg": 2.4,
+      "total_printed_mass_kg": 0.5558857504316725,
+      "parts": [
+        {
+          "part": "FloorPLA_0_0",
+          "max_down_mm": 0.8721238668110064,
+          "max_up_mm": 1.1659707187945865,
+          "max_displacement_norm_mm": 1.169016901804189,
+          "peak_tensile_principal_MPa": 8.628959700233858,
+          "peak_compressive_principal_MPa": 11.490259282910568,
+          "tensile_peak_element_IP": [
+            22651,
+            2
+          ],
+          "max_down_node_xyz_mm": [
+            -85.97835102830106,
+            -74.56419514929021,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            -60.45420182976265,
+            -8.43910870321432,
+            100.54833984375
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            2.579132478251655,
+            2.37288245335769,
+            0.294421776706276,
+            3.017157655007387
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 2.0827921462941377
+        },
+        {
+          "part": "FloorPLA_0_1",
+          "max_down_mm": 0.8685049445936677,
+          "max_up_mm": 1.1479615394051337,
+          "max_displacement_norm_mm": 1.1507577680549024,
+          "peak_tensile_principal_MPa": 9.290034583860635,
+          "peak_compressive_principal_MPa": 11.128269404360346,
+          "tensile_peak_element_IP": [
+            22614,
+            1
+          ],
+          "max_down_node_xyz_mm": [
+            -85.96526582020104,
+            74.53184119874578,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            -18.296377193066082,
+            22.343712584739265,
+            99.40637638848565
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            2.56494661304059,
+            2.3816206213979902,
+            0.1748231396014166,
+            3.296972258775888
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 2.0777111319130723
+        },
+        {
+          "part": "FloorPLA_1_0",
+          "max_down_mm": 0.4505994287622798,
+          "max_up_mm": 0.9645088655028566,
+          "max_displacement_norm_mm": 0.9667998061187121,
+          "peak_tensile_principal_MPa": 8.656646510900194,
+          "peak_compressive_principal_MPa": 10.54821396310234,
+          "tensile_peak_element_IP": [
+            715,
+            3
+          ],
+          "max_down_node_xyz_mm": [
+            89.40433270011317,
+            -84.07510458701547,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            18.744838098277963,
+            -22.478693116212554,
+            99.28960159998553
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            1.7690837973715963,
+            1.929983806028065,
+            -0.2541204720684831,
+            3.4233788260689293
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 1.3719824134644976
+        },
+        {
+          "part": "FloorPLA_1_1",
+          "max_down_mm": 0.6355653041369725,
+          "max_up_mm": 1.9522203951409083,
+          "max_displacement_norm_mm": 1.9543646101208052,
+          "peak_tensile_principal_MPa": 8.708279016533846,
+          "peak_compressive_principal_MPa": 10.42670057216533,
+          "tensile_peak_element_IP": [
+            21998,
+            2
+          ],
+          "max_down_node_xyz_mm": [
+            44.23531016244247,
+            74.56944681758273,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            60.45420182976265,
+            8.43910870321432,
+            100.54833984375
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            0.9832345654977108,
+            0.21482800012303338,
+            -0.6897759214128101,
+            4.373024496591871
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 2.708760889025914
+        },
+        {
+          "part": "SeamBeamPLA",
+          "max_down_mm": 0.04731298005127951,
+          "max_up_mm": 0.00123144089466891,
+          "max_displacement_norm_mm": 0.04731388887722449,
+          "peak_tensile_principal_MPa": 0.48805963363095045,
+          "peak_compressive_principal_MPa": 0.5851673287640052,
+          "tensile_peak_element_IP": [
+            18666,
+            2
+          ],
+          "max_down_node_xyz_mm": [
+            1.206241252756698,
+            1.423870565476896,
+            95.25
+          ],
+          "tensile_peak_element_centroid_mm": [
+            13.668362761288229,
+            22.993953681850485,
+            94.18479709611388
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            3.3269345420361844,
+            3.6715025202221763,
+            3.537803261290757,
+            4.130035666230423
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.2456821726125897
+        }
+      ],
+      "max_down_mm": 0.8721238668110064,
+      "max_tensile_MPa": 9.290034583860635,
+      "max_compression_MPa": 11.490259282910568
+    },
+    {
+      "equipment_contact": "four_10mm_feet",
+      "belt_tension_each_leg_N": 0,
+      "total_equipment_mass_kg": 2.4,
+      "total_printed_mass_kg": 0.5558857504316725,
+      "parts": [
+        {
+          "part": "FloorPLA_0_0",
+          "max_down_mm": 0.17341907317209465,
+          "max_up_mm": 0.0032944521427873594,
+          "max_displacement_norm_mm": 0.1734839390537366,
+          "peak_tensile_principal_MPa": 1.3116971159137498,
+          "peak_compressive_principal_MPa": 2.7060806745723136,
+          "tensile_peak_element_IP": [
+            2018,
+            1
+          ],
+          "max_down_node_xyz_mm": [
+            -95.45641673283126,
+            -71.03012320311942,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            -17.67379140402218,
+            -25.151973807862657,
+            99.74818881819817
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            0.571636349526628,
+            0.6439548962383591,
+            3.7521781658717304,
+            3.373180771245604
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.39764291478996394
+        },
+        {
+          "part": "FloorPLA_0_1",
+          "max_down_mm": 0.17271372787461597,
+          "max_up_mm": 0.0032279276899110023,
+          "max_displacement_norm_mm": 0.1727787895091686,
+          "peak_tensile_principal_MPa": 1.3113820085326653,
+          "peak_compressive_principal_MPa": 3.575205593955072,
+          "tensile_peak_element_IP": [
+            1968,
+            2
+          ],
+          "max_down_node_xyz_mm": [
+            -95.4582990260241,
+            71.02208777581123,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            -17.854506341274593,
+            25.986248719611957,
+            100.05507092602625
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            0.5686103824049141,
+            0.6461894022297854,
+            3.7455404636402267,
+            3.380611354750486
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.3933282474718873
+        },
+        {
+          "part": "FloorPLA_1_0",
+          "max_down_mm": 0.20298356697010883,
+          "max_up_mm": 0.005201976550109868,
+          "max_displacement_norm_mm": 0.20300238707096618,
+          "peak_tensile_principal_MPa": 0.9668964627212053,
+          "peak_compressive_principal_MPa": 2.656372038498959,
+          "tensile_peak_element_IP": [
+            1516,
+            2
+          ],
+          "max_down_node_xyz_mm": [
+            112.8461538461538,
+            -118.0,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            17.67348674659481,
+            -27.20029533964586,
+            100.4441340032101
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            0.5931746000775853,
+            1.3575079544800794,
+            2.6191274900512473,
+            2.0202893678697724
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.33221802663243205
+        },
+        {
+          "part": "FloorPLA_1_1",
+          "max_down_mm": 0.16832863674836593,
+          "max_up_mm": 0.014493152541752334,
+          "max_displacement_norm_mm": 0.16834222616132322,
+          "peak_tensile_principal_MPa": 0.8385851812111839,
+          "peak_compressive_principal_MPa": 1.81873308547152,
+          "tensile_peak_element_IP": [
+            22972,
+            3
+          ],
+          "max_down_node_xyz_mm": [
+            94.5875369652077,
+            90.34547480759187,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            17.264156662263556,
+            28.20997450376969,
+            101.0344920668275
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            0.8235355692250361,
+            0.7697442739738141,
+            1.5823144409366123,
+            1.9839988044629933
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.29475848677430333
+        },
+        {
+          "part": "SeamBeamPLA",
+          "max_down_mm": 0.036428236779369114,
+          "max_up_mm": 0.0009426998689598047,
+          "max_displacement_norm_mm": 0.036430565253472144,
+          "peak_tensile_principal_MPa": 0.3732934100862591,
+          "peak_compressive_principal_MPa": 0.45218061191893366,
+          "tensile_peak_element_IP": [
+            21425,
+            3
+          ],
+          "max_down_node_xyz_mm": [
+            -2.216868934143738,
+            0.3378754608729908,
+            95.25
+          ],
+          "tensile_peak_element_centroid_mm": [
+            -13.66188252717192,
+            22.997365679042126,
+            94.12901579273814
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            3.2202347890743495,
+            2.434908133723141,
+            3.2402903974719,
+            2.4183897139113384
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.19092764116823382
+        }
+      ],
+      "max_down_mm": 0.20298356697010883,
+      "max_tensile_MPa": 1.3116971159137498,
+      "max_compression_MPa": 3.575205593955072
+    },
+    {
+      "equipment_contact": "four_10mm_feet",
+      "belt_tension_each_leg_N": 10,
+      "total_equipment_mass_kg": 2.4,
+      "total_printed_mass_kg": 0.5558857504316725,
+      "parts": [
+        {
+          "part": "FloorPLA_0_0",
+          "max_down_mm": 0.6372598045582265,
+          "max_up_mm": 0.5380337877716579,
+          "max_displacement_norm_mm": 0.6372929912180978,
+          "peak_tensile_principal_MPa": 5.4167324783709185,
+          "peak_compressive_principal_MPa": 5.535688116015097,
+          "tensile_peak_element_IP": [
+            164,
+            2
+          ],
+          "max_down_node_xyz_mm": [
+            -84.54960926494431,
+            -72.77545481040572,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            -16.666098326713428,
+            -20.856439404073,
+            99.6
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            1.8056318427776241,
+            1.7575459967945068,
+            2.534138760732895,
+            2.2162114358523555
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 1.2451270850984906
+        },
+        {
+          "part": "FloorPLA_0_1",
+          "max_down_mm": 0.6355870295089471,
+          "max_up_mm": 0.5327589201182128,
+          "max_displacement_norm_mm": 0.6356191615149132,
+          "peak_tensile_principal_MPa": 5.05396768651711,
+          "peak_compressive_principal_MPa": 7.123779467563161,
+          "tensile_peak_element_IP": [
+            383,
+            1
+          ],
+          "max_down_node_xyz_mm": [
+            -85.96526582020104,
+            74.53184119874578,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            -17.080588424900615,
+            20.943637998364892,
+            99.6
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            1.7964318278816798,
+            1.7693909929674283,
+            2.4715730410850667,
+            2.3309788609779307
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 1.2445471828248964
+        },
+        {
+          "part": "FloorPLA_1_0",
+          "max_down_mm": 0.3974747917787251,
+          "max_up_mm": 0.388623695845006,
+          "max_displacement_norm_mm": 0.3974849677608725,
+          "peak_tensile_principal_MPa": 3.457010844604076,
+          "peak_compressive_principal_MPa": 5.296083922398767,
+          "tensile_peak_element_IP": [
+            92,
+            2
+          ],
+          "max_down_node_xyz_mm": [
+            96.2221139494103,
+            -84.12827464747659,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            15.642467575602083,
+            -20.728466931670912,
+            99.48064238419374
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            1.2860671656455591,
+            1.7417913877718494,
+            2.0731579958369006,
+            1.7269194036924014
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.7598205559483306
+        },
+        {
+          "part": "FloorPLA_1_1",
+          "max_down_mm": 0.38580493396598586,
+          "max_up_mm": 0.4566261093226245,
+          "max_displacement_norm_mm": 0.4568691341643765,
+          "peak_tensile_principal_MPa": 3.7227665788121227,
+          "peak_compressive_principal_MPa": 3.8930968184722117,
+          "tensile_peak_element_IP": [
+            416,
+            3
+          ],
+          "max_down_node_xyz_mm": [
+            59.84261816028901,
+            64.67239140126806,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            16.999766673376385,
+            21.39480816538123,
+            99.43820479300233
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            1.1279178709841235,
+            0.9237495711981428,
+            0.9592763600968586,
+            1.9108152336538335
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.9380263107074388
+        },
+        {
+          "part": "SeamBeamPLA",
+          "max_down_mm": 0.027888359042999723,
+          "max_up_mm": 0.0007047173987040755,
+          "max_displacement_norm_mm": 0.027888676399868306,
+          "peak_tensile_principal_MPa": 0.26604384321924995,
+          "peak_compressive_principal_MPa": 0.32437181328168996,
+          "tensile_peak_element_IP": [
+            21425,
+            3
+          ],
+          "max_down_node_xyz_mm": [
+            -1.468616548326359,
+            0.9446889362484443,
+            95.25
+          ],
+          "tensile_peak_element_centroid_mm": [
+            -13.66188252717192,
+            22.997365679042126,
+            94.12901579273814
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            2.274599651372656,
+            2.010096714308874,
+            2.3531767821320773,
+            2.102794517307973
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.14028452359466786
+        }
+      ],
+      "max_down_mm": 0.6372598045582265,
+      "max_tensile_MPa": 5.4167324783709185,
+      "max_compression_MPa": 7.123779467563161
+    },
+    {
+      "equipment_contact": "four_10mm_feet",
+      "belt_tension_each_leg_N": 30,
+      "total_equipment_mass_kg": 2.4,
+      "total_printed_mass_kg": 0.5558857504316725,
+      "parts": [
+        {
+          "part": "FloorPLA_0_0",
+          "max_down_mm": 1.570990310349093,
+          "max_up_mm": 1.7474878309843669,
+          "max_displacement_norm_mm": 1.7511627529291511,
+          "peak_tensile_principal_MPa": 16.965366613569877,
+          "peak_compressive_principal_MPa": 13.166283588873783,
+          "tensile_peak_element_IP": [
+            164,
+            2
+          ],
+          "max_down_node_xyz_mm": [
+            -82.88028450068377,
+            -73.533010768353,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            -16.666098326713428,
+            -20.856439404073,
+            99.6
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            4.273622829279615,
+            3.9847281979068,
+            0.09805995045519822,
+            -0.09772723493414048
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 3.3755059249387505
+        },
+        {
+          "part": "FloorPLA_0_1",
+          "max_down_mm": 1.5672640844284271,
+          "max_up_mm": 1.7307947806134751,
+          "max_displacement_norm_mm": 1.7342213483371283,
+          "peak_tensile_principal_MPa": 16.157734152528054,
+          "peak_compressive_principal_MPa": 16.457378315435175,
+          "tensile_peak_element_IP": [
+            383,
+            1
+          ],
+          "max_down_node_xyz_mm": [
+            -82.85943302978148,
+            73.52409226068852,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            -17.080588424900615,
+            20.943637998364892,
+            99.6
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            4.252074718835206,
+            4.015794174442712,
+            -0.07636180402524229,
+            0.23171387343282746
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 3.381079339664975
+        },
+        {
+          "part": "FloorPLA_1_0",
+          "max_down_mm": 0.8527222872433321,
+          "max_up_mm": 1.19765443992928,
+          "max_displacement_norm_mm": 1.2005107042862442,
+          "peak_tensile_principal_MPa": 10.995444205862324,
+          "peak_compressive_principal_MPa": 12.173860100399319,
+          "tensile_peak_element_IP": [
+            715,
+            3
+          ],
+          "max_down_node_xyz_mm": [
+            73.70574288203154,
+            -72.5064189818536,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            18.744838098277963,
+            -22.478693116212554,
+            99.28960159998553
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            2.6718522967815055,
+            2.51035825435539,
+            0.981219007408197,
+            1.1401794753376553
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 1.9214541133831526
+        },
+        {
+          "part": "FloorPLA_1_1",
+          "max_down_mm": 0.8823061389666529,
+          "max_up_mm": 1.4858040664034846,
+          "max_displacement_norm_mm": 1.4875792338367433,
+          "peak_tensile_principal_MPa": 10.923401145634354,
+          "peak_compressive_principal_MPa": 11.251373392363206,
+          "tensile_peak_element_IP": [
+            416,
+            3
+          ],
+          "max_down_node_xyz_mm": [
+            58.24546213959621,
+            63.78139702763681,
+            100.2
+          ],
+          "tensile_peak_element_centroid_mm": [
+            16.999766673376385,
+            21.39480816538123,
+            99.43820479300233
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            1.7366824745022953,
+            1.2317601656467987,
+            -0.28679980158265295,
+            1.764448092035515
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 2.5355479170610438
+        },
+        {
+          "part": "SeamBeamPLA",
+          "max_down_mm": 0.011867749094416243,
+          "max_up_mm": 0.0003271194896687765,
+          "max_displacement_norm_mm": 0.011875390586225543,
+          "peak_tensile_principal_MPa": 0.17899653698501175,
+          "peak_compressive_principal_MPa": 0.21112904152906647,
+          "tensile_peak_element_IP": [
+            20283,
+            1
+          ],
+          "max_down_node_xyz_mm": [
+            8.346077174291452,
+            2.90122760658265,
+            95.25
+          ],
+          "tensile_peak_element_centroid_mm": [
+            14.457150351906922,
+            22.63602786811083,
+            94.18494703686406
+          ],
+          "rail_fixing_vertical_reactions_N": [
+            0.38332937596926975,
+            1.1604738754803405,
+            0.5789495514524324,
+            1.4716041241012432
+          ],
+          "bulk_tensile_IP_percentile99_MPa": 0.08138770748953736
+        }
+      ],
+      "max_down_mm": 1.570990310349093,
+      "max_tensile_MPa": 16.965366613569877,
+      "max_compression_MPa": 16.457378315435175
+    }
+  ],
+  "force_balance_passed": true,
+  "physical_strength_qualified": false,
+  "omitted": [
+    "rail bearing away from fixing patches",
+    "bolt preload and friction/slip",
+    "polymer creep and temperature",
+    "orthotropic shear constants",
+    "impact/fatigue",
+    "real equipment foot and belt contact",
+    "local contact against metal screw/washer",
+    "beam/floor rotational compliance at the small seam fixing patches; translation-only coupling"
+  ]
+}

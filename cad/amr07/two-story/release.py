@@ -9,7 +9,10 @@ with zipfile.ZipFile(HERE/'D6-first-floor-print-files.zip','w',zipfile.ZIP_DEFLA
     for name in [p['file'] for p in parts]+['print_manifest.json','parameters.json','README.ja.md',
             'FLOOR_REVIEW.ja.md','floor_support_review.json','cad-screen-floor-fixings-top.png',
             'cad-screen-floor-support-under.png','cad-screen-seam-beam-anchors.png',
-            'CORNER_REVIEW.ja.md','corner_joint_review.json','cad-screen-corner-joint.png']:
+            'CORNER_REVIEW.ja.md','corner_joint_review.json','cad-screen-corner-joint.png',
+            'pla-strength/README.ja.md','pla-strength/summary.json',
+            'pla-strength/fine/result.json','pla-strength/coarse/result.json',
+            'pla-strength/fine/floor-deflection-T0.png','pla-strength/fine/floor-deflection-T10.png']:
         z.write(HERE/name,name)
 v=json.loads((HERE/'validation.json').read_text())
 saved=json.loads((HERE/'saved_artifact_validation.json').read_text())
@@ -42,7 +45,16 @@ assert all(c['auxiliary_flat_gusset_removed'] and c['outer_floor_corner_continuo
 assert corners['additional_parts']==0 and corners['removed_parts']==28
 assert len(corners['retained_lower_frame_joints'])==8
 assert req['mass']['base_target_is_hard_limit'] is False
+pla=json.loads((HERE/'pla-strength/summary.json').read_text())
+assert pla['source_cad_sha256']==floor['native_sha256']
+for level in ['coarse','fine']:
+    fea=json.loads((HERE/f'pla-strength/{level}/result.json').read_text())
+    assert fea['source_cad_sha256']==floor['native_sha256'] and fea['force_balance_passed']
+    assert fea['analysis_script_sha256']==digest(HERE/'pla-strength/analyze.py')
+    assert len(fea['meshes'])==5 and len(fea['cases'])==6
 names=[p.name for p in sorted(HERE.iterdir()) if p.is_file() and p.suffix in ['.py','.json','.md','.csv','.stl','.step','.FCStd','.png','.zip'] and p.name!='release_manifest.json']
+names += [str(p.relative_to(HERE)) for p in sorted((HERE/'pla-strength').rglob('*'))
+          if p.is_file() and p.suffix in ['.py','.json','.md','.step','.png','.zip']]
 files={n:dict(bytes=(HERE/n).stat().st_size,sha256=digest(HERE/n)) for n in names}
 linked=[BASE/n for n in ['requirements.json','electrical_plan.json','load_calculations.json','caster_load_check.json','hardware_geometry.py','printed-deck-frame/build_p1.py','makita-power/power_selection.json','aluminum-direct-deck/validation.json','aluminum-direct-deck/fea/summary.json']]
 out=dict(revision=v['parameters']['revision'],date='2026-09-22',source_D3_revision=v['parameters']['source_revision'],files=files,
@@ -53,6 +65,7 @@ out=dict(revision=v['parameters']['revision'],date='2026-09-22',source_D3_revisi
     nominal_CAD_checks_passed=True,current_load_calculations_match_requirements=True,
     conditional_CG_model_within_reviewed_bounds=True,loaded_use_released=False,
     battery_adapter_interface_measured=False,mixed_brand_frame_joint_physically_qualified=False,
+    PLA_actual_solid_elastic_screen_complete=True,PLA_printed_strength_or_creep_qualified=False,
     new_metal_quote_needed=False,
     supplier_profile_source=dict(url='https://fa.sus.co.jp/service/cad/SFF-324-STP.lzh',
         archive_sha256='4aa1e58e04fde3e0a28c5a7d3add0be6f6e1316ad692eb38cfc7f66705ec9961',file='SUS-SFF-324-source.step',

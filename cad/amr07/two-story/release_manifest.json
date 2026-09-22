@@ -32,16 +32,16 @@
       "sha256": "d204008ad9881170e9ddccf4fb1b45d4b7b78ef5098e24ba6d25985304717680"
     },
     "CORNER_REVIEW.ja.md": {
-      "bytes": 5061,
-      "sha256": "fb8f14e1d6709a994432106b7f1592fb2062c974a5dd6af3f454d9c6b08574a6"
+      "bytes": 5348,
+      "sha256": "c0675d29901ba4f200ecd5245b8f540c45219f34461a9355b0180f9860c368bc"
     },
     "D6-first-floor-print-files.zip": {
-      "bytes": 771854,
-      "sha256": "cdad9d7dc53de8e9aa02b333f8be2c582699a8a49780e4373211fa67384e603c"
+      "bytes": 4601152,
+      "sha256": "019c389a471c4836798876af0586700733bcdd8f24186e2b5292722d27aca3c1"
     },
     "FLOOR_REVIEW.ja.md": {
-      "bytes": 5387,
-      "sha256": "e26b819f76ff2c2cfe0e47454825e4100b8888bb277b780190b820eee8e5268b"
+      "bytes": 6052,
+      "sha256": "32763f61de516f6c3eee4d1f28034ae8f55f4bbd1ca08f1871b31712c0c6012e"
     },
     "FloorPLA_0_0.stl": {
       "bytes": 60184,
@@ -68,8 +68,8 @@
       "sha256": "7cc1a365ad0dccdf04d5d3fd28839925ecbd7e0d452500c18fc88c66bb655a96"
     },
     "README.ja.md": {
-      "bytes": 5958,
-      "sha256": "fba9519578ffb920833b1bc9c96cecb04bc8852100effdb87c8776152f8ea77c"
+      "bytes": 6361,
+      "sha256": "18d4b31eac44e28a26b067d3cd305d3f24b34ec73b128fdaf5c87bbea7e36a5a"
     },
     "REFERENCE_DESIGNS.ja.md": {
       "bytes": 4206,
@@ -96,8 +96,8 @@
       "sha256": "d15ba7e25fb07ace1c64d5e9c6ecb2066aac243b0145e661d162f81a81611692"
     },
     "build_docs.py": {
-      "bytes": 22889,
-      "sha256": "f48488c12b1e6e062b71d945e6df99b453a3cf27100b4a790b91035b91da90e5"
+      "bytes": 24742,
+      "sha256": "6c2c5e24fe5c60f0093dd3e743f0224abb08c545a6922478234989a0fa01ca74"
     },
     "cad-screen-assembled.png": {
       "bytes": 212820,
@@ -196,8 +196,8 @@
       "sha256": "10206ef725d1e310fa90259ad735d9ca233501e17fe60fd9961566aa41702a0f"
     },
     "release.py": {
-      "bytes": 4877,
-      "sha256": "614a84e168450926a2a32bf86a008500fd172394403e1db846d5d75483cba42a"
+      "bytes": 5852,
+      "sha256": "ec7f08b9e2cf847862803108e988d3418cc255fdb0a065a10fe1bfb2fb6a90a4"
     },
     "review_corner_joints.py": {
       "bytes": 7421,
@@ -270,6 +270,114 @@
     "viewport-side-layout.png": {
       "bytes": 18849,
       "sha256": "e221fbd9435f1692a925f1b005b516fa53cfa8c2d50bfc0c660f215c757c48f5"
+    },
+    "pla-strength/FloorPLA_0_0.step": {
+      "bytes": 62745,
+      "sha256": "a1642675abbce156817c2fff8c5508cf1b03f3fb51cb19c473c8a482ed11c9de"
+    },
+    "pla-strength/FloorPLA_0_1.step": {
+      "bytes": 62482,
+      "sha256": "30f25ca42b415ae03d3b8687e20b584032227ea00bc3e4032974c2e195937783"
+    },
+    "pla-strength/FloorPLA_1_0.step": {
+      "bytes": 41636,
+      "sha256": "4413547d072af05aaae944f7bd0b4362e42bc911d4a5079ba2e64c8df69fdfd9"
+    },
+    "pla-strength/FloorPLA_1_1.step": {
+      "bytes": 52037,
+      "sha256": "86479611a6474ff153efd51edec0e7752005744018efee7cb00ed4e306344cfb"
+    },
+    "pla-strength/README.ja.md": {
+      "bytes": 9761,
+      "sha256": "669396b5f7b9b75cb2197155e3d6aef193a4192892eccf7da930923eedd425a5"
+    },
+    "pla-strength/SeamBeamPLA.step": {
+      "bytes": 33311,
+      "sha256": "c8ec2b53c5fcca236626cced74c71235b965f07006989a0163f327dce8fbcfc0"
+    },
+    "pla-strength/analyze.py": {
+      "bytes": 16246,
+      "sha256": "4e04d5397e4e813f9d0779419603c7aa6a7ade763d67433526919b267232d011"
+    },
+    "pla-strength/coarse/FloorPLA_0_0-solver.zip": {
+      "bytes": 3978509,
+      "sha256": "43d0539653eea1090f03e16381f037420a7109272e3431b179e548832ad24c14"
+    },
+    "pla-strength/coarse/FloorPLA_0_1-solver.zip": {
+      "bytes": 3966955,
+      "sha256": "0ac1de87a352d25b0473d9edf38815b5e3af85cf0c8381ea69c1e2ec86215e77"
+    },
+    "pla-strength/coarse/FloorPLA_1_0-solver.zip": {
+      "bytes": 3980823,
+      "sha256": "26ebae22d49cf75eff4501ef5ca6d7b753b41ac5242f0f66588f686f021d1c2d"
+    },
+    "pla-strength/coarse/FloorPLA_1_1-solver.zip": {
+      "bytes": 3857937,
+      "sha256": "6609e2485c00f73e680a71ecc2fe0ce12581ac0307bb003d5da0335038216420"
+    },
+    "pla-strength/coarse/SeamBeamPLA-solver.zip": {
+      "bytes": 3379584,
+      "sha256": "9e6abea37c4bc3f08d937698b6cf8d5e5783bddcc89f14977ed10e6baecedfa8"
+    },
+    "pla-strength/coarse/floor-deflection-T0.png": {
+      "bytes": 1532072,
+      "sha256": "218e8788bcf869c8e0a02e8d730c46af9eb03694e5c5549a8638f62f09ea540e"
+    },
+    "pla-strength/coarse/floor-deflection-T10.png": {
+      "bytes": 1500770,
+      "sha256": "696b22c2aabe2278378a97b64d298c3d628172c076d137c4c8fdca18bbbc4bf1"
+    },
+    "pla-strength/coarse/result.json": {
+      "bytes": 38786,
+      "sha256": "81aaf45cf2210f98bfb11e863259ceee306bc31b852bec6fadede797772bf9f4"
+    },
+    "pla-strength/export_geometry.py": {
+      "bytes": 1179,
+      "sha256": "884f3b2c541341ca86b971ba04261a4b87dca42f85648f743d02033009766d38"
+    },
+    "pla-strength/fine/FloorPLA_0_0-solver.zip": {
+      "bytes": 9328720,
+      "sha256": "52d0824e6be9ff73896acc6a54853c68d0a94e4307210389c7b42e2d18d34f76"
+    },
+    "pla-strength/fine/FloorPLA_0_1-solver.zip": {
+      "bytes": 9296604,
+      "sha256": "a61f9009a4c620e6b0d1aae28046715cf431aa5d4fb3deb201360529e664d2e2"
+    },
+    "pla-strength/fine/FloorPLA_1_0-solver.zip": {
+      "bytes": 9273467,
+      "sha256": "64f47bb16c1d562447a8be61618adc1cdfd95a205950cca40f82b33bca8e0962"
+    },
+    "pla-strength/fine/FloorPLA_1_1-solver.zip": {
+      "bytes": 9493835,
+      "sha256": "dccdbec9737e59f4fcd49c115270a277d8bb3e3b651acaa5e54244d0d4d500c1"
+    },
+    "pla-strength/fine/SeamBeamPLA-solver.zip": {
+      "bytes": 6485683,
+      "sha256": "09923ad55a88ecd0a928cd5844364b2f9713cacb43d71d4b4684682d3d7abc86"
+    },
+    "pla-strength/fine/floor-deflection-T0.png": {
+      "bytes": 1930302,
+      "sha256": "649b21d87e9e465561961ca7eaffe82b2af92bf1d2a522a3170f5e86b3d76c87"
+    },
+    "pla-strength/fine/floor-deflection-T10.png": {
+      "bytes": 1893099,
+      "sha256": "e087a010517b02ac6aaa0dc8585a9df85958a3f05a8ac6b74911447f011bbb82"
+    },
+    "pla-strength/fine/result.json": {
+      "bytes": 38863,
+      "sha256": "888249a89e275a8507c49f140ca2482a5382c15869cfdadd1456741c3a646d54"
+    },
+    "pla-strength/geometry.json": {
+      "bytes": 5850,
+      "sha256": "a3448d510f098be9274ce2dd25ad9d486dabe6d727fe7ea9071642cde77501d3"
+    },
+    "pla-strength/review.py": {
+      "bytes": 15367,
+      "sha256": "044e5ade99f37f3b3911309314ef21cc77455ebd8e9ebfcbd28b04764f44d913"
+    },
+    "pla-strength/summary.json": {
+      "bytes": 8230,
+      "sha256": "779d29c210822ec546f62f23f31946c6bd91321e0c576d91d691dc349c8886cf"
     }
   },
   "linked_design_files": {
@@ -302,6 +410,8 @@
   "loaded_use_released": false,
   "battery_adapter_interface_measured": false,
   "mixed_brand_frame_joint_physically_qualified": false,
+  "PLA_actual_solid_elastic_screen_complete": true,
+  "PLA_printed_strength_or_creep_qualified": false,
   "new_metal_quote_needed": false,
   "supplier_profile_source": {
     "url": "https://fa.sus.co.jp/service/cad/SFF-324-STP.lzh",

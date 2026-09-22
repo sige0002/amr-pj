@@ -24,6 +24,7 @@ MuJoCoでの走行GIF（空車・16秒・等速）：直進→停止→左旋回
 
 全車の途中小計は73,633円＋120.90USD＋未計上分、記録済み参考為替では約92,647円。今回の四隅変更は28部品削減、追加0個。PLA材料参考は90円増、三角板の素材仮枠500円を削除し、計上小計は410円減です。従来からの未計上品は残り、完成車購入総額ではありません。
 
+- [PLA床の実形状解析・たわみ画像・締付けの課題](cad/amr07/two-story/pla-strength/README.ja.md)
 - [現行D6：配置・固定・交換・費用・検証範囲](cad/amr07/two-story/README.ja.md)
 - [参照したロボコン機体と設計理由](cad/amr07/two-story/REFERENCE_DESIGNS.ja.md)
 - [組立FCStd](cad/amr07/two-story/AMR01_TwoStorey_D6.FCStd)／[機器外形付きSTEP](cad/amr07/two-story/AMR01_TwoStorey_D6-with-equipment-envelopes.step)

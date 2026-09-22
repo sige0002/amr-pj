@@ -1,0 +1,245 @@
+{
+  "revision": "D6.3",
+  "source_cad_sha256": "04ff9a2cdd8b4236bd79e8970ddd06476e909bdb9ec8a59ff5a76cea9c14a1ab",
+  "parts": {
+    "FloorPLA_0_0": {
+      "file": "FloorPLA_0_0.step",
+      "sha256": "a1642675abbce156817c2fff8c5508cf1b03f3fb51cb19c473c8a482ed11c9de",
+      "volume_mm3": 102322.2597912228,
+      "bounds_mm": [
+        -230.0,
+        -150.0,
+        84.0,
+        -0.19999999999998863,
+        -0.19999999999998863,
+        110.0
+      ],
+      "solid_mass_kg": 0.12687960214111627,
+      "fixings": [
+        {
+          "panel": "FloorPLA_0_0",
+          "bolt": "CradleBolt_0",
+          "xy_mm": [
+            -25,
+            -135
+          ],
+          "support": "outer 400mm rail",
+          "thread": "M6"
+        },
+        {
+          "panel": "FloorPLA_0_0",
+          "bolt": "ElectronicsBolt_0",
+          "xy_mm": [
+            -185,
+            -135
+          ],
+          "support": "outer 400mm rail, corner",
+          "thread": "M6"
+        },
+        {
+          "panel": "FloorPLA_0_0",
+          "bolt": "ElectronicsBolt_2",
+          "xy_mm": [
+            -215,
+            -20
+          ],
+          "support": "300mm end rail",
+          "thread": "M6"
+        },
+        {
+          "panel": "FloorPLA_0_0",
+          "bolt": "FloorSeamBolt_0_0",
+          "xy_mm": [
+            -15,
+            -25
+          ],
+          "support": "seam beam, four M6 rail anchors",
+          "thread": "M4 countersunk"
+        }
+      ]
+    },
+    "FloorPLA_0_1": {
+      "file": "FloorPLA_0_1.step",
+      "sha256": "30f25ca42b415ae03d3b8687e20b584032227ea00bc3e4032974c2e195937783",
+      "volume_mm3": 102322.25979122112,
+      "bounds_mm": [
+        -230.0,
+        0.1999999999999993,
+        84.0,
+        -0.19999999999998863,
+        150.0,
+        110.0
+      ],
+      "solid_mass_kg": 0.12687960214111418,
+      "fixings": [
+        {
+          "panel": "FloorPLA_0_1",
+          "bolt": "CradleBolt_1",
+          "xy_mm": [
+            -25,
+            135
+          ],
+          "support": "outer 400mm rail",
+          "thread": "M6"
+        },
+        {
+          "panel": "FloorPLA_0_1",
+          "bolt": "ElectronicsBolt_1",
+          "xy_mm": [
+            -185,
+            135
+          ],
+          "support": "outer 400mm rail, corner",
+          "thread": "M6"
+        },
+        {
+          "panel": "FloorPLA_0_1",
+          "bolt": "ElectronicsBolt_3",
+          "xy_mm": [
+            -215,
+            20
+          ],
+          "support": "300mm end rail",
+          "thread": "M6"
+        },
+        {
+          "panel": "FloorPLA_0_1",
+          "bolt": "FloorSeamBolt_0_1",
+          "xy_mm": [
+            -15,
+            25
+          ],
+          "support": "seam beam, four M6 rail anchors",
+          "thread": "M4 countersunk"
+        }
+      ]
+    },
+    "FloorPLA_1_0": {
+      "file": "FloorPLA_1_0.step",
+      "sha256": "4413547d072af05aaae944f7bd0b4362e42bc911d4a5079ba2e64c8df69fdfd9",
+      "volume_mm3": 99128.01979122178,
+      "bounds_mm": [
+        0.2,
+        -150.0,
+        83.99999999999999,
+        230.0,
+        -0.19999999999998863,
+        108.0
+      ],
+      "solid_mass_kg": 0.12291874454111501,
+      "fixings": [
+        {
+          "panel": "FloorPLA_1_0",
+          "bolt": "CradleBolt_2",
+          "xy_mm": [
+            25,
+            -135
+          ],
+          "support": "outer 400mm rail",
+          "thread": "M6"
+        },
+        {
+          "panel": "FloorPLA_1_0",
+          "bolt": "FrontDeckBolt_0",
+          "xy_mm": [
+            185,
+            -135
+          ],
+          "support": "outer 400mm rail, corner",
+          "thread": "M6"
+        },
+        {
+          "panel": "FloorPLA_1_0",
+          "bolt": "FrontDeckBolt_2",
+          "xy_mm": [
+            215,
+            -20
+          ],
+          "support": "300mm end rail",
+          "thread": "M6"
+        },
+        {
+          "panel": "FloorPLA_1_0",
+          "bolt": "FloorSeamBolt_1_0",
+          "xy_mm": [
+            15,
+            -25
+          ],
+          "support": "seam beam, four M6 rail anchors",
+          "thread": "M4 countersunk"
+        }
+      ]
+    },
+    "FloorPLA_1_1": {
+      "file": "FloorPLA_1_1.step",
+      "sha256": "86479611a6474ff153efd51edec0e7752005744018efee7cb00ed4e306344cfb",
+      "volume_mm3": 98820.81979122186,
+      "bounds_mm": [
+        0.2,
+        0.19999999999999973,
+        84.0,
+        230.0,
+        150.0,
+        108.0
+      ],
+      "solid_mass_kg": 0.1225378165411151,
+      "fixings": [
+        {
+          "panel": "FloorPLA_1_1",
+          "bolt": "CradleBolt_3",
+          "xy_mm": [
+            25,
+            135
+          ],
+          "support": "outer 400mm rail",
+          "thread": "M6"
+        },
+        {
+          "panel": "FloorPLA_1_1",
+          "bolt": "FrontDeckBolt_1",
+          "xy_mm": [
+            185,
+            135
+          ],
+          "support": "outer 400mm rail, corner",
+          "thread": "M6"
+        },
+        {
+          "panel": "FloorPLA_1_1",
+          "bolt": "FrontDeckBolt_3",
+          "xy_mm": [
+            215,
+            20
+          ],
+          "support": "300mm end rail",
+          "thread": "M6"
+        },
+        {
+          "panel": "FloorPLA_1_1",
+          "bolt": "FloorSeamBolt_1_1",
+          "xy_mm": [
+            15,
+            25
+          ],
+          "support": "seam beam, four M6 rail anchors",
+          "thread": "M4 countersunk"
+        }
+      ]
+    },
+    "SeamBeamPLA": {
+      "file": "SeamBeamPLA.step",
+      "sha256": "c8ec2b53c5fcca236626cced74c71235b965f07006989a0163f327dce8fbcfc0",
+      "volume_mm3": 45701.60086065484,
+      "bounds_mm": [
+        -32.0,
+        -50.0,
+        74.0,
+        32.0,
+        50.0,
+        99.0
+      ],
+      "solid_mass_kg": 0.056669985067212006,
+      "fixings": []
+    }
+  }
+}
