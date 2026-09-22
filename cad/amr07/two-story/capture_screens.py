@@ -41,7 +41,7 @@ def save(name,zoom=.9):
     doc.recompute();view.fitAll();Gui.updateGui();QtWidgets.QApplication.processEvents()
     view.saveImage(str(HERE/('viewport-'+name+'.png')),1600,1100,'White')
     if zoom!=1:view.getCameraNode().height.setValue(view.getCameraNode().height.getValue()*zoom)
-    window.statusBar().showMessage('D6.2 | 4 fixings per floor panel | anchored seam beam | cargo233mm',0)
+    window.statusBar().showMessage('D6.3 | 4 fixings per floor panel | anchored seam beam | cargo233mm',0)
     Gui.updateGui();QtWidgets.QApplication.processEvents()
     assert window.grab().save(str(HERE/('cad-screen-'+name+'.png')))
 
@@ -81,7 +81,7 @@ for end,rear,target in [('Lower',True,(105,135,111)),('Upper',False,(124,135,187
     cam.nearDistance.setValue(1);cam.farDistance.setValue(2000)
     Gui.updateGui();QtWidgets.QApplication.processEvents()
     label='2xHBLFSN6 + 4xM6x12' if end=='Lower' else 'HBLFSN6 + 2xM6x12'
-    window.statusBar().showMessage('D6.2 '+end+' joint | '+label+' | direct metal end bearing',0)
+    window.statusBar().showMessage('D6.3 '+end+' joint | '+label+' | direct metal end bearing',0)
     Gui.updateGui();QtWidgets.QApplication.processEvents()
     assert window.grab().save(str(HERE/('cad-screen-frame-joint-'+end.lower()+'.png')))
 
@@ -90,7 +90,7 @@ normal()
 floor_bolts={f['bolt'] for f in r['floor_fixings']}
 floor_hardware=('CradleBolt_','ElectronicsBolt_','FrontDeckBolt_','LargeWasher_Cradle',
                 'LargeWasher_Electronics','LargeWasher_Front','SlotNut_Cradle_',
-                'SlotNut_Electronics_','SlotNut_FrontDeck_','FloorSeam','SeamBeam')
+                'SlotNut_Electronics_','SlotNut_FrontDeck_','FloorSeam','SeamBeam','Gusset_','GussetBolt_','Washer_Gusset','SlotNut_Gusset_')
 colors=[(.28,.65,.69),(.43,.68,.83),(.81,.70,.39),(.66,.53,.79)]
 for o in features:
     o.ViewObject.Visibility=o.Name.startswith(('Cross300_','Rail300_','Rail400_','Bracket_','FloorPLA_')+floor_hardware)
@@ -99,6 +99,7 @@ for o in features:
     if o.Name in floor_bolts or o.Name.startswith('LargeWasher_'):
         o.ViewObject.ShapeColor=(.95,.32,.06)
     if o.Name=='SeamBeamPLA':o.ViewObject.ShapeColor=(.9,.53,.12)
+    if o.Name.startswith('Gusset_'):o.ViewObject.ShapeColor=(.25,.48,.80)
 view.viewTop();save('floor-fixings-top')
 # The lower view makes the four beam anchors and seam ribs inspectable.
 iso(rear=False,high=-1.2);save('floor-support-under')
@@ -110,5 +111,22 @@ for o in features:
     o.ViewObject.Visibility=inner_rail or o.Name.startswith(('SeamBeam','FloorSeam'))
     if o.Name=='SeamBeamPLA':o.ViewObject.ShapeColor=(.90,.53,.12)
 view.viewBottom();save('seam-beam-anchors',.55)
-normal();iso(high=.55);view.fitAll();doc.recompute();doc.save()
-print('D6.2: twelve actual FreeCAD GUI screenshots saved.')
+normal()
+for o in features:
+    o.ViewObject.Visibility=o.Name in ['Rail400_4','Cross300_2','Bracket_P120','JointA_P120','JointB_P120','SlotNut_JointA_P120','SlotNut_JointB_P120','FloorPLA_1_1','FrontDeckBolt_1','LargeWasher_Front1','SlotNut_FrontDeck_1'] or o.Name.startswith(('Gusset_11','GussetBolt_11','Washer_Gusset11','SlotNut_Gusset_11'))
+    if o.Name=='FloorPLA_1_1':o.ViewObject.Transparency=50
+    if o.Name=='Bracket_P120':o.ViewObject.ShapeColor=(.25,.48,.80);o.ViewObject.DiffuseColor=[(.25,.48,.80)]
+    if o.Name=='FrontDeckBolt_1' or o.Name=='LargeWasher_Front1':o.ViewObject.ShapeColor=(.95,.32,.06)
+    if o.Name=='Gusset_11':o.ViewObject.ShapeColor=(.25,.48,.80)
+z=App.Vector(-1.25,-1,.9);z.normalize();x=App.Vector(0,0,1).cross(z);x.normalize();y=z.cross(x)
+view.setCameraOrientation(App.Rotation(x,y,z,'ZXY').Q);doc.recompute();view.fitAll()
+cam=view.getCameraNode();q=App.Vector(196,119,96)+z*600
+cam.position.setValue(q.x,q.y,q.z);cam.focalDistance.setValue(600);cam.height.setValue(155)
+cam.nearDistance.setValue(1);cam.farDistance.setValue(2000)
+window.statusBar().showMessage('D6.3 | flat plate removed | existing internal HBLFSN6 | independent floor fixing above',0)
+Gui.updateGui();QtWidgets.QApplication.processEvents()
+view.saveImage(str(HERE/'viewport-corner-joint.png'),1600,1100,'White')
+assert window.grab().save(str(HERE/'cad-screen-corner-joint.png'))
+normal();doc.getObject('Bracket_P120').ViewObject.DiffuseColor=[doc.getObject('Bracket_P120').ViewObject.ShapeColor]
+iso(high=.55);view.fitAll();doc.recompute();doc.save()
+print('D6.3: thirteen actual FreeCAD GUI screenshots saved.')

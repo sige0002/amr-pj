@@ -1,6 +1,6 @@
 {
   "parameters": {
-    "revision": "D6.2",
+    "revision": "D6.3",
     "date": "2026-09-22",
     "source_revision": "099686bacaad0f72e8bc4ce15005cd708a5b2f83",
     "architecture": "1F battery/computer/power above base rails; 2F independent aluminum cargo deck",
@@ -56,6 +56,9 @@
     "floor_support": "PLA ribbed seam beam fixed to BOTH inner rails with two M6 per end; four panels with integral underside seam ribs",
     "floor_beam_M6_qty": 4,
     "floor_M4_countersunk_qty": 4,
+    "floor_outer_corner_notches": false,
+    "corner_flat_gusset_qty": 0,
+    "corner_joint": "Four auxiliary flat gussets and their8 fastener sets removed. Eight HBLFSN6 lower-frame joints retained; independent floor corner screws reused from inner rail positions. Frame racking qualification remains open.",
     "deck_LWH_mm": [
       300,
       300,
@@ -127,9 +130,9 @@
     "new_metal_machining": false,
     "loaded_use_released": false
   },
-  "physical_parts": 300,
+  "physical_parts": 272,
   "all_shapes_valid": true,
-  "checked_physical_pairs": 44850,
+  "checked_physical_pairs": 36856,
   "collisions": [],
   "reference_collisions": {},
   "reference_pair_collisions": [],
@@ -708,20 +711,20 @@
       "panel": "FloorPLA_0_0",
       "bolt": "ElectronicsBolt_0",
       "xy_mm": [
-        -175,
-        -65
+        -185,
+        -135
       ],
-      "support": "inner 400mm rail",
+      "support": "outer 400mm rail, corner",
       "thread": "M6"
     },
     {
       "panel": "FloorPLA_0_1",
       "bolt": "ElectronicsBolt_1",
       "xy_mm": [
-        -175,
-        65
+        -185,
+        135
       ],
-      "support": "inner 400mm rail",
+      "support": "outer 400mm rail, corner",
       "thread": "M6"
     },
     {
@@ -748,20 +751,20 @@
       "panel": "FloorPLA_1_0",
       "bolt": "FrontDeckBolt_0",
       "xy_mm": [
-        175,
-        -65
+        185,
+        -135
       ],
-      "support": "inner 400mm rail",
+      "support": "outer 400mm rail, corner",
       "thread": "M6"
     },
     {
       "panel": "FloorPLA_1_1",
       "bolt": "FrontDeckBolt_1",
       "xy_mm": [
-        175,
-        65
+        185,
+        135
       ],
-      "support": "inner 400mm rail",
+      "support": "outer 400mm rail, corner",
       "thread": "M6"
     },
     {
@@ -861,6 +864,60 @@
         84
       ],
       "rail": "inner positive Y"
+    }
+  ],
+  "corner_joints": [
+    {
+      "frame_bracket": "Bracket_NN120",
+      "frame_bolts": [
+        "JointA_NN120",
+        "JointB_NN120"
+      ],
+      "flat_gusset_removed": true,
+      "floor_corner_fixing_xy_mm": [
+        -185,
+        -135
+      ],
+      "plastic_in_frame_clamp": false
+    },
+    {
+      "frame_bracket": "Bracket_N120",
+      "frame_bolts": [
+        "JointA_N120",
+        "JointB_N120"
+      ],
+      "flat_gusset_removed": true,
+      "floor_corner_fixing_xy_mm": [
+        -185,
+        135
+      ],
+      "plastic_in_frame_clamp": false
+    },
+    {
+      "frame_bracket": "Bracket_PN120",
+      "frame_bolts": [
+        "JointA_PN120",
+        "JointB_PN120"
+      ],
+      "flat_gusset_removed": true,
+      "floor_corner_fixing_xy_mm": [
+        185,
+        -135
+      ],
+      "plastic_in_frame_clamp": false
+    },
+    {
+      "frame_bracket": "Bracket_P120",
+      "frame_bolts": [
+        "JointA_P120",
+        "JointB_P120"
+      ],
+      "flat_gusset_removed": true,
+      "floor_corner_fixing_xy_mm": [
+        185,
+        135
+      ],
+      "plastic_in_frame_clamp": false
     }
   ],
   "computer_connector_keepout_hits": [],
@@ -982,7 +1039,35 @@
     "BatteryReservedSpace",
     "BatteryConnectorEnvelope",
     "ElectronicsTrayPLA",
-    "FrontElectronicsTrayPLA"
+    "FrontElectronicsTrayPLA",
+    "Gusset_N1N1",
+    "Washer_GussetN1N10",
+    "GussetBolt_N1N10",
+    "SlotNut_Gusset_N1N10",
+    "Washer_GussetN1N11",
+    "GussetBolt_N1N11",
+    "SlotNut_Gusset_N1N11",
+    "Gusset_N11",
+    "Washer_GussetN110",
+    "GussetBolt_N110",
+    "SlotNut_Gusset_N110",
+    "Washer_GussetN111",
+    "GussetBolt_N111",
+    "SlotNut_Gusset_N111",
+    "Gusset_1N1",
+    "Washer_Gusset1N10",
+    "GussetBolt_1N10",
+    "SlotNut_Gusset_1N10",
+    "Washer_Gusset1N11",
+    "GussetBolt_1N11",
+    "SlotNut_Gusset_1N11",
+    "Gusset_11",
+    "Washer_Gusset110",
+    "GussetBolt_110",
+    "SlotNut_Gusset_110",
+    "Washer_Gusset111",
+    "GussetBolt_111",
+    "SlotNut_Gusset_111"
   ],
   "changed_parts": [
     "CradleBolt_0",
@@ -1083,7 +1168,7 @@
     "BatteryRetentionBelt",
     "BatteryBuckleEnvelope"
   ],
-  "unchanged_physical_parts": 128,
+  "unchanged_physical_parts": 100,
   "unchanged_parts_BRep_equal": true,
   "quoted_plate_unchanged": true,
   "clearances_mm": {
@@ -1096,13 +1181,13 @@
   },
   "mass": {
     "source_D3_kg": 8.246366343915682,
-    "estimated_base_kg": 10.139731965310848,
-    "remaining_to_10kg_kg": -0.13973196531084753,
+    "estimated_base_kg": 10.017347153843144,
+    "remaining_to_10kg_kg": -0.01734715384314356,
     "electrical_total_kg": 2.153,
     "battery_kg": 0.68,
     "adapter_kg": 0.123,
     "new_straps_and_pads_allowance_kg": 0.18,
-    "total_solid_PLA_kg": 0.5538644046857231,
+    "total_solid_PLA_kg": 0.5981591886857234,
     "added_metal_and_hardware_kg": 1.3650948120318869,
     "upper_structure_metal_and_hardware_kg": 1.2926618270515282,
     "floor_added_hardware_kg": 0.07243298498035845,
@@ -1143,6 +1228,258 @@
           192.64370443776036,
           -7.619995404368583e-15,
           100.3903947724033
+        ]
+      },
+      {
+        "name": "remove Gusset_N1N1",
+        "mass_kg": -0.01430288325361952,
+        "center_mm": [
+          -210.1745609901487,
+          -130.1745609901487,
+          100.50000000000001
+        ]
+      },
+      {
+        "name": "remove Washer_GussetN1N10",
+        "mass_kg": -0.0012374155409441907,
+        "center_mm": [
+          -185.0,
+          -135.0,
+          102.80000000000001
+        ]
+      },
+      {
+        "name": "remove GussetBolt_N1N10",
+        "mass_kg": -0.006362667601315407,
+        "center_mm": [
+          -185.0,
+          -135.0,
+          102.83255813953488
+        ]
+      },
+      {
+        "name": "remove SlotNut_Gusset_N1N10",
+        "mass_kg": -0.006083424664393645,
+        "center_mm": [
+          -185.0,
+          -135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "remove Washer_GussetN1N11",
+        "mass_kg": -0.0012374155409441904,
+        "center_mm": [
+          -215.00000000000003,
+          -105.0,
+          102.8
+        ]
+      },
+      {
+        "name": "remove GussetBolt_N1N11",
+        "mass_kg": -0.006362667601315407,
+        "center_mm": [
+          -215.0,
+          -105.00000000000001,
+          102.83255813953488
+        ]
+      },
+      {
+        "name": "remove SlotNut_Gusset_N1N11",
+        "mass_kg": -0.006083424664393649,
+        "center_mm": [
+          -215.0,
+          -105.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "remove Gusset_N11",
+        "mass_kg": -0.014302883253619485,
+        "center_mm": [
+          -210.17456099014876,
+          130.17456099014873,
+          100.50000000000001
+        ]
+      },
+      {
+        "name": "remove Washer_GussetN110",
+        "mass_kg": -0.0012374155409441907,
+        "center_mm": [
+          -185.0,
+          135.0,
+          102.80000000000001
+        ]
+      },
+      {
+        "name": "remove GussetBolt_N110",
+        "mass_kg": -0.006362667601315407,
+        "center_mm": [
+          -185.0,
+          135.0,
+          102.83255813953488
+        ]
+      },
+      {
+        "name": "remove SlotNut_Gusset_N110",
+        "mass_kg": -0.006083424664393646,
+        "center_mm": [
+          -185.0,
+          135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "remove Washer_GussetN111",
+        "mass_kg": -0.0012374155409441904,
+        "center_mm": [
+          -215.00000000000003,
+          105.0,
+          102.8
+        ]
+      },
+      {
+        "name": "remove GussetBolt_N111",
+        "mass_kg": -0.006362667601315407,
+        "center_mm": [
+          -215.0,
+          105.00000000000001,
+          102.83255813953488
+        ]
+      },
+      {
+        "name": "remove SlotNut_Gusset_N111",
+        "mass_kg": -0.006083424664393649,
+        "center_mm": [
+          -215.0,
+          105.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "remove Gusset_1N1",
+        "mass_kg": -0.014302883253619517,
+        "center_mm": [
+          210.17456099014873,
+          -130.17456099014876,
+          100.50000000000001
+        ]
+      },
+      {
+        "name": "remove Washer_Gusset1N10",
+        "mass_kg": -0.0012374155409441909,
+        "center_mm": [
+          185.0,
+          -135.0,
+          102.80000000000001
+        ]
+      },
+      {
+        "name": "remove GussetBolt_1N10",
+        "mass_kg": -0.006362667601315407,
+        "center_mm": [
+          185.0,
+          -135.0,
+          102.83255813953488
+        ]
+      },
+      {
+        "name": "remove SlotNut_Gusset_1N10",
+        "mass_kg": -0.006083424664393645,
+        "center_mm": [
+          185.0,
+          -135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "remove Washer_Gusset1N11",
+        "mass_kg": -0.0012374155409441904,
+        "center_mm": [
+          215.0,
+          -105.0,
+          102.8
+        ]
+      },
+      {
+        "name": "remove GussetBolt_1N11",
+        "mass_kg": -0.006362667601315407,
+        "center_mm": [
+          215.0,
+          -105.00000000000001,
+          102.83255813953488
+        ]
+      },
+      {
+        "name": "remove SlotNut_Gusset_1N11",
+        "mass_kg": -0.006083424664393648,
+        "center_mm": [
+          215.0,
+          -105.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "remove Gusset_11",
+        "mass_kg": -0.014302883253619489,
+        "center_mm": [
+          210.17456099014873,
+          130.17456099014873,
+          100.5
+        ]
+      },
+      {
+        "name": "remove Washer_Gusset110",
+        "mass_kg": -0.0012374155409441909,
+        "center_mm": [
+          185.0,
+          135.0,
+          102.80000000000001
+        ]
+      },
+      {
+        "name": "remove GussetBolt_110",
+        "mass_kg": -0.006362667601315407,
+        "center_mm": [
+          185.0,
+          135.0,
+          102.83255813953488
+        ]
+      },
+      {
+        "name": "remove SlotNut_Gusset_110",
+        "mass_kg": -0.006083424664393646,
+        "center_mm": [
+          185.0,
+          135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "remove Washer_Gusset111",
+        "mass_kg": -0.0012374155409441904,
+        "center_mm": [
+          215.0,
+          105.0,
+          102.8
+        ]
+      },
+      {
+        "name": "remove GussetBolt_111",
+        "mass_kg": -0.006362667601315407,
+        "center_mm": [
+          215.0,
+          105.00000000000001,
+          102.83255813953488
+        ]
+      },
+      {
+        "name": "remove SlotNut_Gusset_111",
+        "mass_kg": -0.006083424664393648,
+        "center_mm": [
+          215.0,
+          105.0,
+          94.83480988292341
         ]
       },
       {
@@ -1966,38 +2303,38 @@
       },
       {
         "name": "add FloorPLA_0_0",
-        "mass_kg": 0.1158059061411161,
+        "mass_kg": 0.12687960214111627,
         "center_mm": [
-          -106.58179137293581,
-          -52.01870243005937,
-          98.81952862915512
+          -114.6834076327667,
+          -57.85210930012748,
+          98.94001230060013
         ]
       },
       {
         "name": "add FloorPLA_0_1",
-        "mass_kg": 0.11580590614111406,
+        "mass_kg": 0.12687960214111418,
         "center_mm": [
-          -106.58179137293577,
-          52.0187024300593,
-          98.819528629155
+          -114.68340763276666,
+          57.85210930012733,
+          98.94001230060003
         ]
       },
       {
         "name": "add FloorPLA_1_0",
-        "mass_kg": 0.111845048541115,
+        "mass_kg": 0.12291874454111501,
         "center_mm": [
-          105.51818704560472,
-          -52.53915558790154,
-          98.56087926650443
+          113.97668442624384,
+          -58.51364715540742,
+          98.70854693735308
         ]
       },
       {
         "name": "add FloorPLA_1_1",
-        "mass_kg": 0.11146412054111499,
+        "mass_kg": 0.1225378165411151,
         "center_mm": [
-          105.74209507837568,
-          52.411133364508615,
-          98.55527758069074
+          114.20665253927656,
+          58.4157668948075,
+          98.70391052185053
         ]
       },
       {
@@ -2965,11 +3302,11 @@
       },
       {
         "name": "new position ElectronicsBolt_0",
-        "mass_kg": 0.005918760559363168,
+        "mass_kg": 0.005918760559363169,
         "center_mm": [
-          -175.0,
-          -65.0,
-          102.99999999999997
+          -184.99999999999997,
+          -135.0,
+          103.0
         ]
       },
       {
@@ -2983,10 +3320,10 @@
       },
       {
         "name": "new position LargeWasher_Electronics0",
-        "mass_kg": 0.002766428685446342,
+        "mass_kg": 0.002766428685446341,
         "center_mm": [
-          -175.00000000000003,
-          -65.0,
+          -185.00000000000003,
+          -135.0,
           102.20000000000002
         ]
       },
@@ -3001,10 +3338,10 @@
       },
       {
         "name": "new position SlotNut_Electronics_0",
-        "mass_kg": 0.006083424664393646,
+        "mass_kg": 0.006083424664393645,
         "center_mm": [
-          -174.99999999999997,
-          -65.0,
+          -185.0,
+          -135.0,
           94.83480988292341
         ]
       },
@@ -3019,11 +3356,11 @@
       },
       {
         "name": "new position ElectronicsBolt_1",
-        "mass_kg": 0.005918760559363168,
+        "mass_kg": 0.005918760559363169,
         "center_mm": [
-          -175.0,
-          65.0,
-          102.99999999999999
+          -184.99999999999997,
+          135.0,
+          103.0
         ]
       },
       {
@@ -3037,10 +3374,10 @@
       },
       {
         "name": "new position LargeWasher_Electronics1",
-        "mass_kg": 0.0027664286854463416,
+        "mass_kg": 0.002766428685446341,
         "center_mm": [
-          -174.99999999999997,
-          65.0,
+          -185.00000000000003,
+          135.0,
           102.20000000000002
         ]
       },
@@ -3055,10 +3392,10 @@
       },
       {
         "name": "new position SlotNut_Electronics_1",
-        "mass_kg": 0.0060834246643936465,
+        "mass_kg": 0.006083424664393646,
         "center_mm": [
-          -175.0,
-          65.0,
+          -185.0,
+          135.0,
           94.83480988292341
         ]
       },
@@ -3181,11 +3518,11 @@
       },
       {
         "name": "new position FrontDeckBolt_0",
-        "mass_kg": 0.005918760559363168,
+        "mass_kg": 0.005918760559363169,
         "center_mm": [
-          175.0,
-          -65.0,
-          102.99999999999997
+          184.99999999999997,
+          -135.0,
+          103.0
         ]
       },
       {
@@ -3199,11 +3536,11 @@
       },
       {
         "name": "new position LargeWasher_Front0",
-        "mass_kg": 0.002766428685446342,
+        "mass_kg": 0.0027664286854463408,
         "center_mm": [
-          175.00000000000003,
-          -65.0,
-          102.20000000000002
+          185.0,
+          -135.0,
+          102.20000000000003
         ]
       },
       {
@@ -3217,10 +3554,10 @@
       },
       {
         "name": "new position SlotNut_FrontDeck_0",
-        "mass_kg": 0.006083424664393646,
+        "mass_kg": 0.006083424664393645,
         "center_mm": [
-          174.99999999999997,
-          -65.0,
+          185.0,
+          -135.0,
           94.83480988292341
         ]
       },
@@ -3235,11 +3572,11 @@
       },
       {
         "name": "new position FrontDeckBolt_1",
-        "mass_kg": 0.005918760559363168,
+        "mass_kg": 0.005918760559363169,
         "center_mm": [
-          175.0,
-          65.0,
-          102.99999999999999
+          184.99999999999997,
+          135.0,
+          103.0
         ]
       },
       {
@@ -3253,11 +3590,11 @@
       },
       {
         "name": "new position LargeWasher_Front1",
-        "mass_kg": 0.0027664286854463416,
+        "mass_kg": 0.0027664286854463408,
         "center_mm": [
-          175.0,
-          65.0,
-          102.20000000000002
+          185.0,
+          135.0,
+          102.20000000000003
         ]
       },
       {
@@ -3271,10 +3608,10 @@
       },
       {
         "name": "new position SlotNut_FrontDeck_1",
-        "mass_kg": 0.0060834246643936465,
+        "mass_kg": 0.006083424664393646,
         "center_mm": [
-          175.0,
-          65.0,
+          185.0,
+          135.0,
           94.83480988292341
         ]
       },
@@ -3522,24 +3859,24 @@
         ]
       }
     ],
-    "mass_change_kg": 1.8933656213951653,
+    "mass_change_kg": 1.7709808099274609,
     "moment_change_kg_mm": [
-      -5.370561906928735,
-      10.015716479999886,
-      539.7252172954916
+      -5.370561906928792,
+      10.015716479999872,
+      527.5464665833068
     ],
     "conditional_base_cg_xyz_ranges_mm": [
       [
-        -8.662381377197763,
-        7.6030709486179875
+        -8.768212182043438,
+        7.695959853268271
       ],
       [
-        -7.1449568102006475,
-        9.120495515615103
+        -7.232248802654541,
+        9.231923232657168
       ],
       [
-        122.35691838529681,
-        142.6887337925665
+        122.63602198760098,
+        143.2162370317406
       ]
     ],
     "basis": "Conditional on historical D3 CGx/y+-10,z85..110mm; equipment envelope centroids and mass budgets, not measured CG. Protection0.4kg split equally between two reserved cases; cable routing moment remains in historical uncertainty."

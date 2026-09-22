@@ -1,14 +1,14 @@
 {
-  "revision": "D6.2",
+  "revision": "D6.3",
   "date": "2026-09-22",
   "subtotal": {
-    "JPY": 74043.0,
+    "JPY": 73633.0,
     "USD": 120.9
   },
-  "full_running_subtotal_JPY_reference": 93056.60313315927,
+  "full_running_subtotal_JPY_reference": 92646.60313315927,
   "FX_reference_JPY_per_USD": 157.26718885987816,
   "FX_date": "2026-09-21",
-  "difference_from_D5_JPY": 4410.0,
+  "difference_from_D5_JPY": 4000.0,
   "added_known_purchased_metal_JPY": 3968,
   "added_purchase": {
     "posts4_JPY": 495,
@@ -35,7 +35,19 @@
     "slotnuts_from_planned_pack": 4,
     "additional_slotnut_pack_JPY": 0,
     "additional_fastener_price_JPY": null,
-    "PLA_material_reference_increase_JPY": 344
+    "PLA_material_reference_increase_JPY": 434
+  },
+  "corner_rework_from_D62": {
+    "removed_gussets": 4,
+    "removed_gusset_fastener_sets": 8,
+    "relocated_existing_floor_fastener_sets": 4,
+    "additional_purchased_parts": 0,
+    "additional_metal_machining": false,
+    "additional_hardware_purchase_JPY": 0,
+    "removed_gusset_material_budget_JPY": 500,
+    "hardware_budget_reduction_JPY": 0,
+    "PLA_material_reference_increase_JPY": 90,
+    "priced_and_budgeted_subtotal_change_JPY": -410.0
   },
   "selected_power_delivered_Tokyo_reference_JPY": 23380,
   "source_D3_plate_and_mount_quotes_unchanged": true,

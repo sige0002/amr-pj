@@ -1,6 +1,6 @@
 {
-  "revision": "D6.2",
-  "native_sha256": "84218f66a76dea4cd72f0051ab48b5192f7502a080d01252a60ac1c85c7e83bb",
+  "revision": "D6.3",
+  "native_sha256": "04ff9a2cdd8b4236bd79e8970ddd06476e909bdb9ec8a59ff5a76cea9c14a1ab",
   "panels": [
     {
       "panel": "FloorPLA_0_0",
@@ -22,12 +22,12 @@
           "panel": "FloorPLA_0_0",
           "bolt": "ElectronicsBolt_0",
           "xy_mm": [
-            -175,
-            -65
+            -185,
+            -135
           ],
-          "support": "inner 400mm rail",
+          "support": "outer 400mm rail, corner",
           "thread": "M6",
-          "actual_head_or_washer_bearing_projected_area_mm2": 220.25706094393564,
+          "actual_head_or_washer_bearing_projected_area_mm2": 220.25706094393556,
           "actual_rail_support_probe_area_mm2": 78.37506915926635
         },
         {
@@ -74,20 +74,20 @@
           ],
           "support": "outer 400mm rail",
           "thread": "M6",
-          "actual_head_or_washer_bearing_projected_area_mm2": 220.25706094257927,
+          "actual_head_or_washer_bearing_projected_area_mm2": 220.2570609426836,
           "actual_rail_support_probe_area_mm2": 78.37506915926645
         },
         {
           "panel": "FloorPLA_0_1",
           "bolt": "ElectronicsBolt_1",
           "xy_mm": [
-            -175,
-            65
+            -185,
+            135
           ],
-          "support": "inner 400mm rail",
+          "support": "outer 400mm rail, corner",
           "thread": "M6",
-          "actual_head_or_washer_bearing_projected_area_mm2": 220.25706094257922,
-          "actual_rail_support_probe_area_mm2": 78.37506915926629
+          "actual_head_or_washer_bearing_projected_area_mm2": 220.25706094268358,
+          "actual_rail_support_probe_area_mm2": 78.37506915926635
         },
         {
           "panel": "FloorPLA_0_1",
@@ -98,7 +98,7 @@
           ],
           "support": "300mm end rail",
           "thread": "M6",
-          "actual_head_or_washer_bearing_projected_area_mm2": 220.25706094257922,
+          "actual_head_or_washer_bearing_projected_area_mm2": 220.25706094268358,
           "actual_rail_support_probe_area_mm2": 78.37506915925677
         },
         {
@@ -140,13 +140,13 @@
           "panel": "FloorPLA_1_0",
           "bolt": "FrontDeckBolt_0",
           "xy_mm": [
-            175,
-            -65
+            185,
+            -135
           ],
-          "support": "inner 400mm rail",
+          "support": "outer 400mm rail, corner",
           "thread": "M6",
-          "actual_head_or_washer_bearing_projected_area_mm2": 220.2570609432053,
-          "actual_rail_support_probe_area_mm2": 78.37506915926626
+          "actual_head_or_washer_bearing_projected_area_mm2": 220.2570609432052,
+          "actual_rail_support_probe_area_mm2": 78.37506915926632
         },
         {
           "panel": "FloorPLA_1_0",
@@ -199,13 +199,13 @@
           "panel": "FloorPLA_1_1",
           "bolt": "FrontDeckBolt_1",
           "xy_mm": [
-            175,
-            65
+            185,
+            135
           ],
-          "support": "inner 400mm rail",
+          "support": "outer 400mm rail, corner",
           "thread": "M6",
-          "actual_head_or_washer_bearing_projected_area_mm2": 220.25706094320526,
-          "actual_rail_support_probe_area_mm2": 78.37506915926622
+          "actual_head_or_washer_bearing_projected_area_mm2": 220.2570609432052,
+          "actual_rail_support_probe_area_mm2": 78.37506915926632
         },
         {
           "panel": "FloorPLA_1_1",
@@ -335,11 +335,11 @@
       "span_mm": 168,
       "center_point_force_N": 50,
       "area_mm2": 244.02000000000032,
-      "I_mm4": 4990.247935383543,
-      "stress_MPa": 5.044105854181755,
+      "I_mm4": 4990.247935382612,
+      "stress_MPa": 5.044105854182696,
       "deflection_mm_by_E_MPa": {
-        "1000": 1.0250971350991462,
-        "2750": 0.37276259458150773
+        "1000": 1.0250971350991465,
+        "2750": 0.37276259458150784
       },
       "model": "simply supported variable-section rib;1mm strip integration includes end25mm taper;40mm floor flange credited"
     },

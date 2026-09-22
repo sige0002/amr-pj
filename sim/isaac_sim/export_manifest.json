@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "design_revision": "D6.2",
+  "design_revision": "D6.3",
   "source_cad": "cad/amr07/two-story/AMR01_TwoStorey_D6.FCStd",
-  "source_cad_sha256": "84218f66a76dea4cd72f0051ab48b5192f7502a080d01252a60ac1c85c7e83bb",
-  "source_git_commit": "feab761c8073f468b3668fac1b18b88a18fa6ba7",
+  "source_cad_sha256": "04ff9a2cdd8b4236bd79e8970ddd06476e909bdb9ec8a59ff5a76cea9c14a1ab",
+  "source_git_commit": "ef44e1c15743f94d3d3fcaa7b7f757f26c136e96",
   "source_git_commit_scope": "Checkout parent when exporting; uncommitted generated revision is identified by the CAD and mass-budget SHA256 values, not by this parent commit alone.",
-  "source_mass_budget_sha256": "8bf8feb755e9cfb77a3f5fa3aeb8fb3980ce0f31fcb7b735c8b0c20db2674a1d",
+  "source_mass_budget_sha256": "a85357c380d9853c7c797149bce2c21e785f668b7a4e751127db9d0771b21c05",
   "units": "meter kilogram second radian",
   "link_origins_cad_mm": {
     "base_link": [
@@ -100,7 +100,7 @@
       "link": "left_wheel_link",
       "triangles": 33284,
       "degenerate_facets_removed": 0,
-      "sha256": "2d7ad4785bdc761be320b63c6c6ae1d099c58b986fd3154506bb04637621378b",
+      "sha256": "86de283c61c8032c5391e1479092a67b6e44f6db4ef743b35a037e87a9e76215",
       "source_objects": [
         "motor_rotor_L",
         "TireCoverL"
@@ -124,7 +124,7 @@
       "link": "left_wheel_link",
       "triangles": 900,
       "degenerate_facets_removed": 0,
-      "sha256": "03b9811efe8667253ddb77d1e1949b6ab8b33904241fbd87803509681a5d4abe",
+      "sha256": "0cf7e5113645056fb95ef84d5c084c81c8c1e5c17b91e8c0af0d87a21e727db6",
       "source_objects": [
         "TireL"
       ],
@@ -147,7 +147,7 @@
       "link": "base_link",
       "triangles": 6748,
       "degenerate_facets_removed": 0,
-      "sha256": "b1e9cffa47715adab806e968c99a554a1dcec76f169ef98d08a62e62221e110b",
+      "sha256": "4bf4f91e81483a46e2b4d28af3f68c0ddf3b29997c178c69a975488d7df4c5f6",
       "source_objects": [
         "motor_stator_L",
         "motor_stator_R"
@@ -169,9 +169,9 @@
       "file": "meshes/base_link_steel.stl",
       "material": "steel",
       "link": "base_link",
-      "triangles": 82076,
+      "triangles": 73692,
       "degenerate_facets_removed": 0,
-      "sha256": "54fcbfb17a0ee8eee1ff6297f373bcd1c2e3778339a347d878556bacd1a0d350",
+      "sha256": "22819632e807bf0bb2699f130300f675f1b1c7067c02bc55b3d6716bba03b034",
       "source_objects": [
         "CasterTop",
         "JointA_NN120",
@@ -190,18 +190,6 @@
         "SlotNut_JointA_N120",
         "JointB_N120",
         "SlotNut_JointB_N120",
-        "Washer_GussetN1N10",
-        "GussetBolt_N1N10",
-        "SlotNut_Gusset_N1N10",
-        "Washer_GussetN1N11",
-        "GussetBolt_N1N11",
-        "SlotNut_Gusset_N1N11",
-        "Washer_GussetN110",
-        "GussetBolt_N110",
-        "SlotNut_Gusset_N110",
-        "Washer_GussetN111",
-        "GussetBolt_N111",
-        "SlotNut_Gusset_N111",
         "JointA_PN120",
         "SlotNut_JointA_PN120",
         "JointB_PN120",
@@ -218,18 +206,6 @@
         "SlotNut_JointA_P120",
         "JointB_P120",
         "SlotNut_JointB_P120",
-        "Washer_Gusset1N10",
-        "GussetBolt_1N10",
-        "SlotNut_Gusset_1N10",
-        "Washer_Gusset1N11",
-        "GussetBolt_1N11",
-        "SlotNut_Gusset_1N11",
-        "Washer_Gusset110",
-        "GussetBolt_110",
-        "SlotNut_Gusset_110",
-        "Washer_Gusset111",
-        "GussetBolt_111",
-        "SlotNut_Gusset_111",
         "MountFrameBolt_52p5L",
         "SlotNut_Mount_52p5L",
         "MountFrameBolt_127p5L",
@@ -432,9 +408,9 @@
       "file": "meshes/base_link_aluminum.stl",
       "material": "aluminum",
       "link": "base_link",
-      "triangles": 24268,
+      "triangles": 23372,
       "degenerate_facets_removed": 0,
-      "sha256": "d05fd973908dbc57add140ffbc75f31679e48ec701a1fdc19ab1d55155568f9e",
+      "sha256": "b6882a29391ba5a9d7c56ed9b5ac4c5e818875bc6e3dac84077515483991e8bc",
       "source_objects": [
         "Rail400_1",
         "Rail400_2",
@@ -446,14 +422,10 @@
         "Bracket_NN50",
         "Bracket_N50",
         "Bracket_N120",
-        "Gusset_N1N1",
-        "Gusset_N11",
         "Bracket_PN120",
         "Bracket_PN50",
         "Bracket_P50",
         "Bracket_P120",
-        "Gusset_1N1",
-        "Gusset_11",
         "AluminumDeckD3",
         "UpperRail3030_0",
         "UpperRail3030_1",
@@ -489,7 +461,7 @@
       "link": "base_link",
       "triangles": 6396,
       "degenerate_facets_removed": 0,
-      "sha256": "903eed458db586a5eca69cb323ea0d03c1140796997798f1f9e39bf09d9824bf",
+      "sha256": "371d39cf08b4784f2f9310d0fb3708b90f64b4c0bea4cc511550db46915afda2",
       "source_objects": [
         "CustomMotorMountL",
         "CustomMotorMountR",
@@ -512,9 +484,9 @@
       "file": "meshes/base_link_pla.stl",
       "material": "pla",
       "link": "base_link",
-      "triangles": 8188,
+      "triangles": 8156,
       "degenerate_facets_removed": 0,
-      "sha256": "e45cdb229e68ba2de3ffae2a848bdfe8fc728e2883fe12a0ea2ba61ac565932d",
+      "sha256": "1958764409fb7113c83dc87bd0a6bcdf3e542a2a3dea64a5fff50931cd8c7e33",
       "source_objects": [
         "PrintedStopXN",
         "PrintedStopXP",
@@ -545,7 +517,7 @@
       "link": "base_link",
       "triangles": 17856,
       "degenerate_facets_removed": 0,
-      "sha256": "9a56ff8ce83765277f9e83c3d086b00375eb9bad9859e8135f25afb79b3adc1c",
+      "sha256": "64d26eb563ffb41291a3f4ed89411b78d59dbed5f3ba95adcac57a6c0125213b",
       "source_objects": [
         "Upright3030_0",
         "Upright3030_1",
@@ -571,7 +543,7 @@
       "link": "base_link",
       "triangles": 36,
       "degenerate_facets_removed": 0,
-      "sha256": "ab4546bfc78bf4f657fbf425a2f5567790362a906226f6a5b1aaa80fcba6c74b",
+      "sha256": "c7add96e9af25e7dc1376dfba35bca8b60cf5e981cab08a525f2857be1fa322c",
       "source_objects": [
         "Reserved_Protection",
         "Reserved_ClampAndPower",
@@ -596,7 +568,7 @@
       "link": "base_link",
       "triangles": 12,
       "degenerate_facets_removed": 0,
-      "sha256": "de1be67849ef0af8376ee7b528ba597da1abb4d05ae8eb94cae38f7b59f5aadc",
+      "sha256": "b1c9835e34f01b330dca080368aa8a1bba5ecd8eb150b6064fa72221dbf67a8d",
       "source_objects": [
         "Reserved_EmergencyStop"
       ],
@@ -619,7 +591,7 @@
       "link": "base_link",
       "triangles": 12,
       "degenerate_facets_removed": 0,
-      "sha256": "99f87a7bffbd68206e57e84e9ea03dedc483918cc628bc5fb9ecd4852fa63968",
+      "sha256": "c8bb17d82f80774c563bf258654f35295033c8adbc6fa6df5485831bc839ac66",
       "source_objects": [
         "Reserved_Computer"
       ],
@@ -642,7 +614,7 @@
       "link": "base_link",
       "triangles": 12,
       "degenerate_facets_removed": 0,
-      "sha256": "d2909bbe166b393d111ed91a60bf01fdb8a28504138ae611edc505f7947cc738",
+      "sha256": "0dcbead03ef660ccd029873387fb72604116a483680cae3f7e55fea75924c30c",
       "source_objects": [
         "BatteryBL1860B"
       ],
@@ -665,7 +637,7 @@
       "link": "base_link",
       "triangles": 72,
       "degenerate_facets_removed": 0,
-      "sha256": "4b67cbd7b3da1222306fe157ff72c66e8ec12e67574b1d88f6013108d55ce624",
+      "sha256": "f3e1642220377d07e7aa783d32891e02d0ec0a23793281bd918b98f6b2db737b",
       "source_objects": [
         "BatteryAdapter03",
         "BatteryBasePad",
@@ -693,7 +665,7 @@
       "link": "base_link",
       "triangles": 248,
       "degenerate_facets_removed": 0,
-      "sha256": "4f90504cbe1cf521f05d3a9bb435cd34de17d72816555a26449c274b744a126c",
+      "sha256": "617fb1c694b1307259d0a59db4a2b81eb10c3587fbb07e372fcad5b1d49c170c",
       "source_objects": [
         "BatteryBeltTopPad",
         "BatteryRetentionBelt",
@@ -720,7 +692,7 @@
       "link": "base_link",
       "triangles": 4374,
       "degenerate_facets_removed": 2,
-      "sha256": "c7246741392df1d622a8b0bf66cf86fa9f6870c71a465d4a84ce0878082694bf",
+      "sha256": "8844a6b0401ecfbd512fd77eaecfb18cde02ecb7fa61e53d49313676a7cbefc9",
       "source_objects": [
         "BatteryModuleHarness",
         "BatteryServiceConnector",
@@ -746,7 +718,7 @@
       "link": "right_wheel_link",
       "triangles": 33284,
       "degenerate_facets_removed": 0,
-      "sha256": "ffa9b3a6351d2f8c15a648eb11d8fc4c62cad2e58d891820b0ea421d36dd9f05",
+      "sha256": "93de4b82e3775d55f38da8c8082f54c806c6184a26940d4edc64e1d4813e02d2",
       "source_objects": [
         "motor_rotor_R",
         "TireCoverR"
@@ -770,7 +742,7 @@
       "link": "right_wheel_link",
       "triangles": 900,
       "degenerate_facets_removed": 0,
-      "sha256": "bdb130bd983993d4d61ee2f0080fbe8a34da8948843eb9df7838ea7b8796d830",
+      "sha256": "79b6b486d595d4a5c873d189515c81abcb070ff3fa9b47c723ea78adfde7343c",
       "source_objects": [
         "TireR"
       ],
@@ -793,7 +765,7 @@
       "link": "caster_swivel_link",
       "triangles": 424,
       "degenerate_facets_removed": 0,
-      "sha256": "7608a697d63126a5dbb98824c5bf96a5c08e98e2377dcc36c6d172426c024dd6",
+      "sha256": "6b54ef91cd01dae5da1cde5f0cf516de2d08c1c76cf21283053e5f93b95d7416",
       "source_objects": [
         "SwivelRace",
         "CasterFork"
@@ -817,7 +789,7 @@
       "link": "caster_wheel_link",
       "triangles": 408,
       "degenerate_facets_removed": 0,
-      "sha256": "f095a07b47f2ad86d951f3b87c6da320fa6793321a9ae0f0c635cf20f5c19aac",
+      "sha256": "9836773392d9caa1e8fde7dbb7c78251194ddf28d0e1e6133aee10a99adea7f3",
       "source_objects": [
         "CasterTire"
       ],
@@ -840,7 +812,7 @@
       "link": "caster_wheel_link",
       "triangles": 408,
       "degenerate_facets_removed": 0,
-      "sha256": "caca56b405f84e0b8f37815b616f44fc18e1c0d4d96f772ad2128056154637f0",
+      "sha256": "57affc0ac3c187f1b129f2b96b071016c0518bc883cac14dea2823fb706a8967",
       "source_objects": [
         "CasterCore"
       ],
@@ -863,7 +835,7 @@
       "link": "base_link",
       "triangles": 256,
       "degenerate_facets_removed": 0,
-      "sha256": "b1c25436b15ae8f34f38dc12ee24b74960e49c0b36c34e3d76688d608de55be3",
+      "sha256": "207f7ce8503ea2c40370043295fede13b90e39e436434b7036a4e4f8e4b4ef57",
       "source_objects": [
         "StrapRouteX",
         "StrapRouteY"
@@ -883,10 +855,10 @@
     }
   ],
   "variants": {
-    "amr_d62.urdf": {
+    "amr_d63.urdf": {
       "payload_kg": 0,
-      "mass_kg": 10.139731965310846,
-      "sha256": "f7d3e71a14eb11a0dd876d8a35500d0fa7ad47721989afb47b0b5e1dc35f3ac6",
+      "mass_kg": 10.017347153843145,
+      "sha256": "9657f5d61b2f7ed3bca23c3b34b48536b1cc1a4e92c50ac6782c6b2c12e3b461",
       "links": {
         "left_wheel_link": {
           "mass_kg": 0.45000000000000007,
@@ -919,32 +891,32 @@
           ]
         },
         "base_link": {
-          "mass_kg": 9.115508573366167,
+          "mass_kg": 8.993123761898467,
           "com_cad_mm": [
-            -3.3207799947446905,
-            -0.8161536158445017,
-            129.9582457591958
+            -3.3659715260015437,
+            -0.8272604135544372,
+            130.37258062129484
           ],
           "com_local_m": [
-            -0.0933207799947447,
-            -0.0008161536158445017,
-            0.0796082457591958
+            -0.09336597152600154,
+            -0.0008272604135544372,
+            0.08002258062129484
           ],
           "inertia_kg_m2": [
             [
-              0.118316850892846,
-              0.001681023710213475,
-              0.005255023019371507
+              0.11708318027460479,
+              0.0016813599196277085,
+              0.005242480855111217
             ],
             [
-              0.001681023710213475,
-              0.1742207394270793,
-              0.00015906736608564627
+              0.0016813599196277085,
+              0.16914591350625596,
+              0.00015598485754013947
             ],
             [
-              0.005255023019371507,
-              0.00015906736608564627,
-              0.22796132930791094
+              0.005242480855111217,
+              0.00015598485754013947,
+              0.22188936657591019
             ]
           ]
         },
@@ -1040,32 +1012,32 @@
         }
       },
       "assembly": {
-        "mass_kg": 10.139731965310848,
+        "mass_kg": 10.017347153843147,
         "com_cad_mm": [
-          3.0910993131364184,
-          -0.733713209369456,
-          121.84214905376618
+          3.128864162537781,
+          -0.742677194686228,
+          122.1149635710839
         ],
         "com_local_m": [
-          -0.08690890068686358,
-          -0.000733713209369456,
-          0.07149214905376619
+          -0.08687113583746221,
+          -0.0007426771946862279,
+          0.07176496357108392
         ],
         "inertia_kg_m2": [
           [
-            0.15265724279960333,
-            0.0016332842830004632,
-            0.0097737309172099
+            0.1514768086472876,
+            0.0016330033255391215,
+            0.009782281720395455
           ],
           [
-            0.0016332842830004632,
-            0.19157614313938381,
-            0.00021944832781276764
+            0.0016330033255391215,
+            0.186554722056802,
+            0.00021741868184788933
           ],
           [
-            0.0097737309172099,
-            0.00021944832781276764,
-            0.2666564218089922
+            0.009782281720395455,
+            0.00021741868184788933,
+            0.26058465933287805
           ]
         ]
       },
@@ -1938,384 +1910,6 @@
             ]
           },
           {
-            "name": "Gusset_N1N1",
-            "basis": "CAD volume times assumed aluminum density",
-            "mass_kg": 0.01430288325361952,
-            "com_cad_mm": [
-              -210.1745609901487,
-              -130.1745609901487,
-              100.50000000000001
-            ],
-            "inertia_kg_m2": [
-              [
-                2.84096277867701e-06,
-                1.4183073975498227e-06,
-                -1.20699405670166e-19
-              ],
-              [
-                1.4183073975498227e-06,
-                2.840962778676849e-06,
-                -4.023313522338866e-20
-              ],
-              [
-                -1.20699405670166e-19,
-                -4.023313522338866e-20,
-                5.660471232473587e-06
-              ]
-            ]
-          },
-          {
-            "name": "Washer_GussetN1N10",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0012374155409441907,
-            "com_cad_mm": [
-              -185.0,
-              -135.0,
-              102.80000000000001
-            ],
-            "inertia_kg_m2": [
-              [
-                1.670304744351194e-08,
-                3.655441105365753e-21,
-                -3.655441105365753e-21
-              ],
-              [
-                3.655441105365753e-21,
-                1.6703047443519252e-08,
-                -3.655441105365753e-21
-              ],
-              [
-                -3.655441105365753e-21,
-                -3.655441105365753e-21,
-                3.287813092289469e-08
-              ]
-            ]
-          },
-          {
-            "name": "GussetBolt_N1N10",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006362667601315407,
-            "com_cad_mm": [
-              -185.0,
-              -135.0,
-              102.83255813953488
-            ],
-            "inertia_kg_m2": [
-              [
-                1.9760143447120764e-07,
-                2.924352884292602e-20,
-                -1.462176442146301e-20
-              ],
-              [
-                2.924352884292602e-20,
-                1.976014344711199e-07,
-                -1.462176442146301e-20
-              ],
-              [
-                -1.462176442146301e-20,
-                -1.462176442146301e-20,
-                5.822580700263194e-08
-              ]
-            ]
-          },
-          {
-            "name": "SlotNut_Gusset_N1N10",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393645,
-            "com_cad_mm": [
-              -185.0,
-              -135.0,
-              94.83480988292341
-            ],
-            "inertia_kg_m2": [
-              [
-                9.891211308794402e-08,
-                3.6255443092159125e-24,
-                -1.998722980774512e-22
-              ],
-              [
-                3.6255443092159125e-24,
-                1.3711623246794414e-07,
-                -2.9878767631193195e-23
-              ],
-              [
-                -1.998722980774512e-22,
-                -2.9878767631193195e-23,
-                2.0212082080241127e-07
-              ]
-            ]
-          },
-          {
-            "name": "Washer_GussetN1N11",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0012374155409441904,
-            "com_cad_mm": [
-              -215.00000000000003,
-              -105.0,
-              102.8
-            ],
-            "inertia_kg_m2": [
-              [
-                1.6703047443519252e-08,
-                3.655441105365753e-21,
-                -3.655441105365753e-21
-              ],
-              [
-                3.655441105365753e-21,
-                1.6703047443519252e-08,
-                1.8277205526828764e-21
-              ],
-              [
-                -3.655441105365753e-21,
-                1.8277205526828764e-21,
-                3.287813092287276e-08
-              ]
-            ]
-          },
-          {
-            "name": "GussetBolt_N1N11",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006362667601315407,
-            "com_cad_mm": [
-              -215.0,
-              -105.00000000000001,
-              102.83255813953488
-            ],
-            "inertia_kg_m2": [
-              [
-                1.976014344711784e-07,
-                2.924352884292602e-20,
-                0.0
-              ],
-              [
-                2.924352884292602e-20,
-                1.976014344711784e-07,
-                0.0
-              ],
-              [
-                0.0,
-                0.0,
-                5.822580700274891e-08
-              ]
-            ]
-          },
-          {
-            "name": "SlotNut_Gusset_N1N11",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393649,
-            "com_cad_mm": [
-              -215.0,
-              -105.0,
-              94.83480988292341
-            ],
-            "inertia_kg_m2": [
-              [
-                1.371162324679442e-07,
-                5.633538080474093e-24,
-                -3.0232002026417694e-22
-              ],
-              [
-                5.633538080474093e-24,
-                9.89121130879442e-08,
-                -1.5698736721087785e-23
-              ],
-              [
-                -3.0232002026417694e-22,
-                -1.5698736721087785e-23,
-                2.0212082080241154e-07
-              ]
-            ]
-          },
-          {
-            "name": "Gusset_N11",
-            "basis": "CAD volume times assumed aluminum density",
-            "mass_kg": 0.014302883253619485,
-            "com_cad_mm": [
-              -210.17456099014876,
-              130.17456099014873,
-              100.50000000000001
-            ],
-            "inertia_kg_m2": [
-              [
-                2.840962778677011e-06,
-                -1.418307397549823e-06,
-                -8.046627044677735e-20
-              ],
-              [
-                -1.418307397549823e-06,
-                2.840962778677011e-06,
-                0.0
-              ],
-              [
-                -8.046627044677735e-20,
-                0.0,
-                5.660471232473588e-06
-              ]
-            ]
-          },
-          {
-            "name": "Washer_GussetN110",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0012374155409441907,
-            "com_cad_mm": [
-              -185.0,
-              135.0,
-              102.80000000000001
-            ],
-            "inertia_kg_m2": [
-              [
-                1.670304744351194e-08,
-                -3.655441105365753e-21,
-                -3.655441105365753e-21
-              ],
-              [
-                -3.655441105365753e-21,
-                1.6703047443519252e-08,
-                3.655441105365753e-21
-              ],
-              [
-                -3.655441105365753e-21,
-                3.655441105365753e-21,
-                3.287813092289469e-08
-              ]
-            ]
-          },
-          {
-            "name": "GussetBolt_N110",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006362667601315407,
-            "com_cad_mm": [
-              -185.0,
-              135.0,
-              102.83255813953488
-            ],
-            "inertia_kg_m2": [
-              [
-                1.9760143447120764e-07,
-                -2.924352884292602e-20,
-                -1.462176442146301e-20
-              ],
-              [
-                -2.924352884292602e-20,
-                1.976014344711199e-07,
-                1.462176442146301e-20
-              ],
-              [
-                -1.462176442146301e-20,
-                1.462176442146301e-20,
-                5.822580700263194e-08
-              ]
-            ]
-          },
-          {
-            "name": "SlotNut_Gusset_N110",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393646,
-            "com_cad_mm": [
-              -185.0,
-              135.0,
-              94.83480988292341
-            ],
-            "inertia_kg_m2": [
-              [
-                9.891211308794404e-08,
-                6.860645385131649e-24,
-                -1.9745583829229995e-22
-              ],
-              [
-                6.860645385131649e-24,
-                1.371162324679442e-07,
-                -5.560760234247145e-23
-              ],
-              [
-                -1.9745583829229995e-22,
-                -5.560760234247145e-23,
-                2.0212082080241127e-07
-              ]
-            ]
-          },
-          {
-            "name": "Washer_GussetN111",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0012374155409441904,
-            "com_cad_mm": [
-              -215.00000000000003,
-              105.0,
-              102.8
-            ],
-            "inertia_kg_m2": [
-              [
-                1.6703047443519252e-08,
-                -3.655441105365753e-21,
-                -3.655441105365753e-21
-              ],
-              [
-                -3.655441105365753e-21,
-                1.6703047443519252e-08,
-                -1.8277205526828764e-21
-              ],
-              [
-                -3.655441105365753e-21,
-                -1.8277205526828764e-21,
-                3.287813092287276e-08
-              ]
-            ]
-          },
-          {
-            "name": "GussetBolt_N111",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006362667601315407,
-            "com_cad_mm": [
-              -215.0,
-              105.00000000000001,
-              102.83255813953488
-            ],
-            "inertia_kg_m2": [
-              [
-                1.976014344711784e-07,
-                -2.924352884292602e-20,
-                0.0
-              ],
-              [
-                -2.924352884292602e-20,
-                1.976014344711784e-07,
-                0.0
-              ],
-              [
-                0.0,
-                0.0,
-                5.822580700274891e-08
-              ]
-            ]
-          },
-          {
-            "name": "SlotNut_Gusset_N111",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393649,
-            "com_cad_mm": [
-              -215.0,
-              105.0,
-              94.83480988292341
-            ],
-            "inertia_kg_m2": [
-              [
-                1.371162324679442e-07,
-                5.633538080474093e-24,
-                -3.0232002026417694e-22
-              ],
-              [
-                5.633538080474093e-24,
-                9.89121130879442e-08,
-                -1.5698736721087785e-23
-              ],
-              [
-                -3.0232002026417694e-22,
-                -1.5698736721087785e-23,
-                2.0212082080241154e-07
-              ]
-            ]
-          },
-          {
             "name": "Bracket_PN120",
             "basis": "HBLFSN6 catalog 15g (retained lower brackets)",
             "mass_kg": 0.015,
@@ -2852,384 +2446,6 @@
                 2.231104190286725e-25,
                 3.085868568513933e-23,
                 1.3711623246794424e-07
-              ]
-            ]
-          },
-          {
-            "name": "Gusset_1N1",
-            "basis": "CAD volume times assumed aluminum density",
-            "mass_kg": 0.014302883253619517,
-            "com_cad_mm": [
-              210.17456099014873,
-              -130.17456099014876,
-              100.50000000000001
-            ],
-            "inertia_kg_m2": [
-              [
-                2.8409627786769295e-06,
-                -1.4183073975501446e-06,
-                4.023313522338867e-20
-              ],
-              [
-                -1.4183073975501446e-06,
-                2.84096277867701e-06,
-                -4.023313522338867e-20
-              ],
-              [
-                4.023313522338867e-20,
-                -4.023313522338867e-20,
-                5.660471232473587e-06
-              ]
-            ]
-          },
-          {
-            "name": "Washer_Gusset1N10",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0012374155409441909,
-            "com_cad_mm": [
-              185.0,
-              -135.0,
-              102.80000000000001
-            ],
-            "inertia_kg_m2": [
-              [
-                1.670304744351194e-08,
-                7.310882210731505e-21,
-                0.0
-              ],
-              [
-                7.310882210731505e-21,
-                1.670304744351194e-08,
-                0.0
-              ],
-              [
-                0.0,
-                0.0,
-                3.287813092288007e-08
-              ]
-            ]
-          },
-          {
-            "name": "GussetBolt_1N10",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006362667601315407,
-            "com_cad_mm": [
-              185.0,
-              -135.0,
-              102.83255813953488
-            ],
-            "inertia_kg_m2": [
-              [
-                1.9760143447120764e-07,
-                0.0,
-                1.462176442146301e-20
-              ],
-              [
-                0.0,
-                1.976014344711784e-07,
-                -1.462176442146301e-20
-              ],
-              [
-                1.462176442146301e-20,
-                -1.462176442146301e-20,
-                5.822580700274891e-08
-              ]
-            ]
-          },
-          {
-            "name": "SlotNut_Gusset_1N10",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393645,
-            "com_cad_mm": [
-              185.0,
-              -135.0,
-              94.83480988292341
-            ],
-            "inertia_kg_m2": [
-              [
-                9.891211308794402e-08,
-                3.6255443092159125e-24,
-                -1.998722980774512e-22
-              ],
-              [
-                3.6255443092159125e-24,
-                1.3711623246794414e-07,
-                -2.9878767631193195e-23
-              ],
-              [
-                -1.998722980774512e-22,
-                -2.9878767631193195e-23,
-                2.0212082080241127e-07
-              ]
-            ]
-          },
-          {
-            "name": "Washer_Gusset1N11",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0012374155409441904,
-            "com_cad_mm": [
-              215.0,
-              -105.0,
-              102.8
-            ],
-            "inertia_kg_m2": [
-              [
-                1.6703047443519252e-08,
-                0.0,
-                -7.310882210731505e-21
-              ],
-              [
-                0.0,
-                1.6703047443519252e-08,
-                1.8277205526828764e-21
-              ],
-              [
-                -7.310882210731505e-21,
-                1.8277205526828764e-21,
-                3.287813092290199e-08
-              ]
-            ]
-          },
-          {
-            "name": "GussetBolt_1N11",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006362667601315407,
-            "com_cad_mm": [
-              215.0,
-              -105.00000000000001,
-              102.83255813953488
-            ],
-            "inertia_kg_m2": [
-              [
-                1.976014344711784e-07,
-                -2.924352884292602e-20,
-                0.0
-              ],
-              [
-                -2.924352884292602e-20,
-                1.976014344711784e-07,
-                0.0
-              ],
-              [
-                0.0,
-                0.0,
-                5.822580700274891e-08
-              ]
-            ]
-          },
-          {
-            "name": "SlotNut_Gusset_1N11",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393648,
-            "com_cad_mm": [
-              215.0,
-              -105.0,
-              94.83480988292341
-            ],
-            "inertia_kg_m2": [
-              [
-                1.3711623246794424e-07,
-                -6.358646942317273e-24,
-                2.9792705102385724e-22
-              ],
-              [
-                -6.358646942317273e-24,
-                9.891211308794426e-08,
-                -1.0540752075485504e-23
-              ],
-              [
-                2.9792705102385724e-22,
-                -1.0540752075485504e-23,
-                2.0212082080241154e-07
-              ]
-            ]
-          },
-          {
-            "name": "Gusset_11",
-            "basis": "CAD volume times assumed aluminum density",
-            "mass_kg": 0.014302883253619489,
-            "com_cad_mm": [
-              210.17456099014873,
-              130.17456099014873,
-              100.5
-            ],
-            "inertia_kg_m2": [
-              [
-                2.840962778677091e-06,
-                1.4183073975499839e-06,
-                4.023313522338867e-20
-              ],
-              [
-                1.4183073975499839e-06,
-                2.8409627786773323e-06,
-                -4.023313522338867e-20
-              ],
-              [
-                4.023313522338867e-20,
-                -4.023313522338867e-20,
-                5.66047123247375e-06
-              ]
-            ]
-          },
-          {
-            "name": "Washer_Gusset110",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0012374155409441909,
-            "com_cad_mm": [
-              185.0,
-              135.0,
-              102.80000000000001
-            ],
-            "inertia_kg_m2": [
-              [
-                1.670304744351194e-08,
-                -7.310882210731505e-21,
-                0.0
-              ],
-              [
-                -7.310882210731505e-21,
-                1.670304744351194e-08,
-                0.0
-              ],
-              [
-                0.0,
-                0.0,
-                3.287813092288007e-08
-              ]
-            ]
-          },
-          {
-            "name": "GussetBolt_110",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006362667601315407,
-            "com_cad_mm": [
-              185.0,
-              135.0,
-              102.83255813953488
-            ],
-            "inertia_kg_m2": [
-              [
-                1.9760143447120764e-07,
-                0.0,
-                1.462176442146301e-20
-              ],
-              [
-                0.0,
-                1.976014344711784e-07,
-                1.462176442146301e-20
-              ],
-              [
-                1.462176442146301e-20,
-                1.462176442146301e-20,
-                5.822580700274891e-08
-              ]
-            ]
-          },
-          {
-            "name": "SlotNut_Gusset_110",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393646,
-            "com_cad_mm": [
-              185.0,
-              135.0,
-              94.83480988292341
-            ],
-            "inertia_kg_m2": [
-              [
-                9.891211308794404e-08,
-                6.860645385131649e-24,
-                -1.9745583829229995e-22
-              ],
-              [
-                6.860645385131649e-24,
-                1.371162324679442e-07,
-                -5.560760234247145e-23
-              ],
-              [
-                -1.9745583829229995e-22,
-                -5.560760234247145e-23,
-                2.0212082080241127e-07
-              ]
-            ]
-          },
-          {
-            "name": "Washer_Gusset111",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0012374155409441904,
-            "com_cad_mm": [
-              215.0,
-              105.0,
-              102.8
-            ],
-            "inertia_kg_m2": [
-              [
-                1.6703047443519252e-08,
-                0.0,
-                -7.310882210731505e-21
-              ],
-              [
-                0.0,
-                1.6703047443519252e-08,
-                -1.8277205526828764e-21
-              ],
-              [
-                -7.310882210731505e-21,
-                -1.8277205526828764e-21,
-                3.287813092290199e-08
-              ]
-            ]
-          },
-          {
-            "name": "GussetBolt_111",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006362667601315407,
-            "com_cad_mm": [
-              215.0,
-              105.00000000000001,
-              102.83255813953488
-            ],
-            "inertia_kg_m2": [
-              [
-                1.976014344711784e-07,
-                2.924352884292602e-20,
-                0.0
-              ],
-              [
-                2.924352884292602e-20,
-                1.976014344711784e-07,
-                0.0
-              ],
-              [
-                0.0,
-                0.0,
-                5.822580700274891e-08
-              ]
-            ]
-          },
-          {
-            "name": "SlotNut_Gusset_111",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393648,
-            "com_cad_mm": [
-              215.0,
-              105.0,
-              94.83480988292341
-            ],
-            "inertia_kg_m2": [
-              [
-                1.3711623246794424e-07,
-                -6.358646942317273e-24,
-                2.9792705102385724e-22
-              ],
-              [
-                -6.358646942317273e-24,
-                9.891211308794426e-08,
-                -1.0540752075485504e-23
-              ],
-              [
-                2.9792705102385724e-22,
-                -1.0540752075485504e-23,
-                2.0212082080241154e-07
               ]
             ]
           },
@@ -4559,162 +3775,162 @@
           {
             "name": "LargeWasher_Electronics0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.002766428685446342,
+            "mass_kg": 0.002766428685446341,
             "com_cad_mm": [
-              -175.00000000000003,
-              -65.0,
+              -185.00000000000003,
+              -135.0,
               102.20000000000002
             ],
             "inertia_kg_m2": [
               [
-                6.414195442929932e-08,
-                7.310882210731505e-21,
+                6.414195442930664e-08,
+                1.462176442146301e-20,
                 -1.462176442146301e-20
               ],
               [
-                7.310882210731505e-21,
+                1.462176442146301e-20,
                 6.414195442929202e-08,
-                3.655441105365753e-21
+                0.0
               ],
               [
                 -1.462176442146301e-20,
-                3.655441105365753e-21,
-                1.2710356595278772e-07
+                0.0,
+                1.2710356595281697e-07
               ]
             ]
           },
           {
             "name": "ElectronicsBolt_0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.005918760559363168,
+            "mass_kg": 0.005918760559363169,
             "com_cad_mm": [
-              -175.0,
-              -65.0,
-              102.99999999999997
+              -184.99999999999997,
+              -135.0,
+              103.0
             ],
             "inertia_kg_m2": [
               [
-                1.4648932384425893e-07,
-                1.462176442146301e-20,
+                1.4648932384421507e-07,
+                0.0,
                 0.0
               ],
               [
-                1.462176442146301e-20,
-                1.4648932384427357e-07,
-                7.310882210731505e-21
+                0.0,
+                1.4648932384424432e-07,
+                -1.462176442146301e-20
               ],
               [
                 0.0,
-                7.310882210731505e-21,
-                5.6228225313938774e-08
+                -1.462176442146301e-20,
+                5.622822531393877e-08
               ]
             ]
           },
           {
             "name": "SlotNut_Electronics_0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393646,
+            "mass_kg": 0.006083424664393645,
             "com_cad_mm": [
-              -174.99999999999997,
-              -65.0,
+              -185.0,
+              -135.0,
               94.83480988292341
             ],
             "inertia_kg_m2": [
               [
-                9.891211308794414e-08,
-                7.251088618431842e-25,
-                -1.9931126341371594e-22
+                9.891211308794402e-08,
+                3.6255443092159125e-24,
+                -1.998722980774512e-22
               ],
               [
-                7.251088618431842e-25,
-                1.371162324679442e-07,
-                3.7210822244069975e-23
+                3.6255443092159125e-24,
+                1.3711623246794414e-07,
+                -2.9878767631193195e-23
               ],
               [
-                -1.9931126341371594e-22,
-                3.7210822244069975e-23,
-                2.0212082080241143e-07
+                -1.998722980774512e-22,
+                -2.9878767631193195e-23,
+                2.0212082080241127e-07
               ]
             ]
           },
           {
             "name": "LargeWasher_Electronics1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0027664286854463416,
+            "mass_kg": 0.002766428685446341,
             "com_cad_mm": [
-              -174.99999999999997,
-              65.0,
+              -185.00000000000003,
+              135.0,
               102.20000000000002
             ],
             "inertia_kg_m2": [
               [
-                6.414195442929932e-08,
-                7.310882210731505e-21,
-                7.310882210731505e-21
+                6.414195442930664e-08,
+                -1.462176442146301e-20,
+                -1.462176442146301e-20
               ],
               [
-                7.310882210731505e-21,
-                6.414195442933588e-08,
-                3.655441105365753e-21
+                -1.462176442146301e-20,
+                6.414195442929202e-08,
+                0.0
               ],
               [
-                7.310882210731505e-21,
-                3.655441105365753e-21,
-                1.2710356595287547e-07
+                -1.462176442146301e-20,
+                0.0,
+                1.2710356595281697e-07
               ]
             ]
           },
           {
             "name": "ElectronicsBolt_1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.005918760559363168,
+            "mass_kg": 0.005918760559363169,
             "com_cad_mm": [
-              -175.0,
-              65.0,
-              102.99999999999999
+              -184.99999999999997,
+              135.0,
+              103.0
             ],
             "inertia_kg_m2": [
               [
-                1.4648932384424432e-07,
-                -1.462176442146301e-20,
-                0.0
-              ],
-              [
-                -1.462176442146301e-20,
                 1.4648932384421507e-07,
+                0.0,
                 0.0
               ],
               [
                 0.0,
+                1.4648932384424432e-07,
+                1.462176442146301e-20
+              ],
+              [
                 0.0,
-                5.6228225313938774e-08
+                1.462176442146301e-20,
+                5.622822531393877e-08
               ]
             ]
           },
           {
             "name": "SlotNut_Electronics_1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0060834246643936465,
+            "mass_kg": 0.006083424664393646,
             "com_cad_mm": [
-              -175.0,
-              65.0,
+              -185.0,
+              135.0,
               94.83480988292341
             ],
             "inertia_kg_m2": [
               [
-                9.891211308794426e-08,
-                -4.239097961544758e-24,
-                -2.0007206107681442e-22
+                9.891211308794404e-08,
+                6.860645385131649e-24,
+                -1.9745583829229995e-22
               ],
               [
-                -4.239097961544758e-24,
+                6.860645385131649e-24,
                 1.371162324679442e-07,
-                4.3543646811358314e-23
+                -5.560760234247145e-23
               ],
               [
-                -2.0007206107681442e-22,
-                4.3543646811358314e-23,
-                2.0212082080241149e-07
+                -1.9745583829229995e-22,
+                -5.560760234247145e-23,
+                2.0212082080241127e-07
               ]
             ]
           },
@@ -4883,107 +4099,107 @@
           {
             "name": "LargeWasher_Front0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.002766428685446342,
+            "mass_kg": 0.0027664286854463408,
             "com_cad_mm": [
-              175.00000000000003,
-              -65.0,
-              102.20000000000002
+              185.0,
+              -135.0,
+              102.20000000000003
             ],
             "inertia_kg_m2": [
               [
-                6.414195442929932e-08,
-                0.0,
-                1.462176442146301e-20
-              ],
-              [
-                0.0,
-                6.414195442927741e-08,
-                3.655441105365753e-21
+                6.414195442930664e-08,
+                1.462176442146301e-20,
+                7.310882210731505e-21
               ],
               [
                 1.462176442146301e-20,
-                3.655441105365753e-21,
-                1.2710356595278772e-07
+                6.414195442930664e-08,
+                -7.310882210731505e-21
+              ],
+              [
+                7.310882210731505e-21,
+                -7.310882210731505e-21,
+                1.2710356595284622e-07
               ]
             ]
           },
           {
             "name": "FrontDeckBolt_0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.005918760559363168,
+            "mass_kg": 0.005918760559363169,
             "com_cad_mm": [
-              175.0,
-              -65.0,
-              102.99999999999997
+              184.99999999999997,
+              -135.0,
+              103.0
             ],
             "inertia_kg_m2": [
               [
-                1.4648932384425893e-07,
+                1.4648932384421507e-07,
                 0.0,
                 -1.462176442146301e-20
               ],
               [
                 0.0,
-                1.4648932384427357e-07,
-                7.310882210731505e-21
+                1.464893238443028e-07,
+                -1.462176442146301e-20
               ],
               [
                 -1.462176442146301e-20,
-                7.310882210731505e-21,
-                5.6228225313909525e-08
+                -1.462176442146301e-20,
+                5.622822531393877e-08
               ]
             ]
           },
           {
             "name": "SlotNut_FrontDeck_0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393646,
+            "mass_kg": 0.006083424664393645,
             "com_cad_mm": [
-              174.99999999999997,
-              -65.0,
+              185.0,
+              -135.0,
               94.83480988292341
             ],
             "inertia_kg_m2": [
               [
-                9.891211308794414e-08,
-                7.251088618431842e-25,
-                -1.9931126341371594e-22
+                9.891211308794402e-08,
+                3.6255443092159125e-24,
+                -1.998722980774512e-22
               ],
               [
-                7.251088618431842e-25,
-                1.371162324679442e-07,
-                3.7210822244069975e-23
+                3.6255443092159125e-24,
+                1.3711623246794414e-07,
+                -2.9878767631193195e-23
               ],
               [
-                -1.9931126341371594e-22,
-                3.7210822244069975e-23,
-                2.0212082080241143e-07
+                -1.998722980774512e-22,
+                -2.9878767631193195e-23,
+                2.0212082080241127e-07
               ]
             ]
           },
           {
             "name": "LargeWasher_Front1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0027664286854463416,
+            "mass_kg": 0.0027664286854463408,
             "com_cad_mm": [
-              175.0,
-              65.0,
-              102.20000000000002
+              185.0,
+              135.0,
+              102.20000000000003
             ],
             "inertia_kg_m2": [
               [
-                6.414195442929932e-08,
-                0.0,
+                6.414195442930664e-08,
+                -1.462176442146301e-20,
                 7.310882210731505e-21
               ],
               [
-                0.0,
+                -1.462176442146301e-20,
                 6.414195442930664e-08,
-                3.655441105365753e-21
+                7.310882210731505e-21
               ],
               [
                 7.310882210731505e-21,
-                3.655441105365753e-21,
+                7.310882210731505e-21,
                 1.2710356595284622e-07
               ]
             ]
@@ -4991,54 +4207,54 @@
           {
             "name": "FrontDeckBolt_1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.005918760559363168,
+            "mass_kg": 0.005918760559363169,
             "com_cad_mm": [
-              175.0,
-              65.0,
-              102.99999999999999
+              184.99999999999997,
+              135.0,
+              103.0
             ],
             "inertia_kg_m2": [
               [
-                1.4648932384424432e-07,
+                1.4648932384421507e-07,
                 0.0,
-                -2.924352884292602e-20
+                -1.462176442146301e-20
               ],
               [
                 0.0,
-                1.4648932384424432e-07,
-                0.0
+                1.464893238443028e-07,
+                1.462176442146301e-20
               ],
               [
-                -2.924352884292602e-20,
-                0.0,
-                5.6228225313938774e-08
+                -1.462176442146301e-20,
+                1.462176442146301e-20,
+                5.622822531393877e-08
               ]
             ]
           },
           {
             "name": "SlotNut_FrontDeck_1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0060834246643936465,
+            "mass_kg": 0.006083424664393646,
             "com_cad_mm": [
-              175.0,
-              65.0,
+              185.0,
+              135.0,
               94.83480988292341
             ],
             "inertia_kg_m2": [
               [
-                9.891211308794426e-08,
-                -4.239097961544758e-24,
-                -2.0007206107681442e-22
+                9.891211308794404e-08,
+                6.860645385131649e-24,
+                -1.9745583829229995e-22
               ],
               [
-                -4.239097961544758e-24,
+                6.860645385131649e-24,
                 1.371162324679442e-07,
-                4.3543646811358314e-23
+                -5.560760234247145e-23
               ],
               [
-                -2.0007206107681442e-22,
-                4.3543646811358314e-23,
-                2.0212082080241149e-07
+                -1.9745583829229995e-22,
+                -5.560760234247145e-23,
+                2.0212082080241127e-07
               ]
             ]
           },
@@ -8933,114 +8149,114 @@
           {
             "name": "FloorPLA_0_0",
             "basis": "CAD volume times assumed PLA density",
-            "mass_kg": 0.1158059061411161,
+            "mass_kg": 0.12687960214111627,
             "com_cad_mm": [
-              -106.58179137293581,
-              -52.01870243005937,
-              98.81952862915512
+              -114.6834076327667,
+              -57.85210930012748,
+              98.94001230060013
             ],
             "inertia_kg_m2": [
               [
-                0.00014796555560661644,
-                5.212899128402479e-05,
-                -1.2249484509736538e-07
+                0.00019684900471169834,
+                -1.0737315557367392e-05,
+                1.1726841189093877e-06
               ],
               [
-                5.212899128402479e-05,
-                0.0004294703328763318,
-                4.252425764411392e-06
+                -1.0737315557367392e-05,
+                0.0005200592883416379,
+                5.184993492170595e-06
               ],
               [
-                -1.2249484509736538e-07,
-                4.252425764411392e-06,
-                0.000574027458370701
+                1.1726841189093877e-06,
+                5.184993492170595e-06,
+                0.0007134507095298582
               ]
             ]
           },
           {
             "name": "FloorPLA_0_1",
             "basis": "CAD volume times assumed PLA density",
-            "mass_kg": 0.11580590614111406,
+            "mass_kg": 0.12687960214111418,
             "com_cad_mm": [
-              -106.58179137293577,
-              52.0187024300593,
-              98.819528629155
+              -114.68340763276667,
+              57.85210930012733,
+              98.94001230060005
             ],
             "inertia_kg_m2": [
               [
-                0.00014796555560661615,
-                -5.212899128402405e-05,
-                -1.2249484509588718e-07
+                0.00019684900471169682,
+                1.073731555736813e-05,
+                1.1726841189096829e-06
               ],
               [
-                -5.212899128402405e-05,
-                0.0004294703328763289,
-                -4.252425764411392e-06
+                1.073731555736813e-05,
+                0.000520059288341635,
+                -5.184993492171483e-06
               ],
               [
-                -1.2249484509588718e-07,
-                -4.252425764411392e-06,
-                0.0005740274583706942
+                1.1726841189096829e-06,
+                -5.184993492171483e-06,
+                0.0007134507095298519
               ]
             ]
           },
           {
             "name": "FloorPLA_1_0",
             "basis": "CAD volume times assumed PLA density",
-            "mass_kg": 0.111845048541115,
+            "mass_kg": 0.12291874454111501,
             "com_cad_mm": [
-              105.51818704560472,
-              -52.53915558790154,
-              98.56087926650443
+              113.97668442624384,
+              -58.51364715540742,
+              98.70854693735308
             ],
             "inertia_kg_m2": [
               [
-                0.00014679413592835484,
-                -5.030477507758168e-05,
-                1.0193879167937564e-06
+                0.0001948479885938718,
+                1.2592236068167524e-05,
+                -5.312875831997299e-07
               ],
               [
-                -5.030477507758168e-05,
-                0.000417900710297244,
-                4.744120282455339e-06
+                1.2592236068167524e-05,
+                0.0005102301512143812,
+                5.83940911234321e-06
               ],
               [
-                1.0193879167937564e-06,
-                4.744120282455339e-06,
-                0.0005617563820171772
+                -5.312875831997299e-07,
+                5.83940911234321e-06,
+                0.0007020749017505904
               ]
             ]
           },
           {
             "name": "FloorPLA_1_1",
             "basis": "CAD volume times assumed PLA density",
-            "mass_kg": 0.11146412054111499,
+            "mass_kg": 0.1225378165411151,
             "com_cad_mm": [
-              105.74209507837568,
-              52.411133364508615,
-              98.55527758069071
+              114.20665253927656,
+              58.4157668948075,
+              98.70391052185052
             ],
             "inertia_kg_m2": [
               [
-                0.00014624841088876054,
-                4.936664297138178e-05,
-                9.783394084060384e-07
+                0.00019446000695449962,
+                -1.3482273138442373e-05,
+                -5.734470711827755e-07
               ],
               [
-                4.936664297138178e-05,
-                0.00041572965892425814,
-                -4.720650283431149e-06
+                -1.3482273138442373e-05,
+                0.000507608921156114,
+                -5.821464965149373e-06
               ],
               [
-                9.783394084060384e-07,
-                -4.720650283431149e-06,
-                0.0005590420251820131
+                -5.734470711827755e-07,
+                -5.821464965149373e-06,
+                0.0006990677557091081
               ]
             ]
           },
           {
             "name": "BatteryBL1860B",
-            "basis": "D6.2 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.68,
             "com_cad_mm": [
               -136.5,
@@ -9067,7 +8283,7 @@
           },
           {
             "name": "BatteryAdapter03",
-            "basis": "D6.2 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.123,
             "com_cad_mm": [
               -136.5,
@@ -9094,7 +8310,7 @@
           },
           {
             "name": "Reserved_Computer",
-            "basis": "D6.2 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.5,
             "com_cad_mm": [
               -2.5969110371381617e-16,
@@ -9121,7 +8337,7 @@
           },
           {
             "name": "Reserved_SupervisorRS485",
-            "basis": "D6.2 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.05,
             "com_cad_mm": [
               40.0,
@@ -9148,7 +8364,7 @@
           },
           {
             "name": "Reserved_Protection",
-            "basis": "D6.2 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.2,
             "com_cad_mm": [
               170.0,
@@ -9175,7 +8391,7 @@
           },
           {
             "name": "Reserved_ClampAndPower",
-            "basis": "D6.2 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.2,
             "com_cad_mm": [
               180.0,
@@ -9202,7 +8418,7 @@
           },
           {
             "name": "wiring_allowance",
-            "basis": "D6.2 wiring allowance; ASSUMED distributed across first floor, not copper-fill CAD density",
+            "basis": "D6.3 wiring allowance; ASSUMED distributed across first floor, not copper-fill CAD density",
             "mass_kg": 0.4,
             "com_cad_mm": [
               2.5397488442045013e-15,
@@ -9229,7 +8445,7 @@
           },
           {
             "name": "battery_belt_pads",
-            "basis": "D6.2 125g battery belt plus 25g pads, simplified distribution",
+            "basis": "D6.3 125g battery belt plus 25g pads, simplified distribution",
             "mass_kg": 0.15,
             "com_cad_mm": [
               -146.0,
@@ -9256,7 +8472,7 @@
           },
           {
             "name": "computer_belts_pads",
-            "basis": "D6.2 computer/supervisor retaining allowance",
+            "basis": "D6.3 computer/supervisor retaining allowance",
             "mass_kg": 0.03,
             "com_cad_mm": [
               -5.814180444272246e-16,
@@ -9310,7 +8526,7 @@
           },
           {
             "name": "inherited_strap_allowance",
-            "basis": "Legacy strap allowance retained in D6.2 ledger; no new additional mass",
+            "basis": "Legacy strap allowance retained in D6.3 ledger; no new additional mass",
             "mass_kg": 0.04,
             "com_cad_mm": [
               -136.5,
@@ -9337,7 +8553,7 @@
           },
           {
             "name": "cargo_belts_pads",
-            "basis": "D6.2 cargo belts/pads allowance stowed on deck in empty variant",
+            "basis": "D6.3 cargo belts/pads allowance stowed on deck in empty variant",
             "mass_kg": 0.28,
             "com_cad_mm": [
               5.6924822328644e-17,
@@ -9560,10 +8776,10 @@
         ]
       }
     },
-    "amr_d62_payload_10kg.urdf": {
+    "amr_d63_payload_10kg.urdf": {
       "payload_kg": 10,
-      "mass_kg": 20.139731965310844,
-      "sha256": "cf0b1c0e1b64f7924d55821961e580dcc859ae799b8f148f9940df0f00b74bf6",
+      "mass_kg": 20.017347153843147,
+      "sha256": "e5798ed9f1d8fa69e0cacabdf26fdd261bcc1a0ff032a452602b56ccffeedcde",
       "links": {
         "left_wheel_link": {
           "mass_kg": 0.45000000000000007,
@@ -9596,32 +8812,32 @@
           ]
         },
         "base_link": {
-          "mass_kg": 9.115508573366167,
+          "mass_kg": 8.993123761898467,
           "com_cad_mm": [
-            -3.3207799947446905,
-            -0.8161536158445017,
-            132.01627684424278
+            -3.3659715260015437,
+            -0.8272604135544372,
+            132.45861885413683
           ],
           "com_local_m": [
-            -0.0933207799947447,
-            -0.0008161536158445017,
-            0.08166627684424278
+            -0.09336597152600154,
+            -0.0008272604135544372,
+            0.08210861885413684
           ],
           "inertia_kg_m2": [
             [
-              0.12473782218213884,
-              0.001681023710213475,
-              0.005192725186670098
+              0.1234880803057791,
+              0.0016813599196277085,
+              0.005179335229283434
             ],
             [
-              0.001681023710213475,
-              0.1805693773830385,
-              0.00014375632425240461
+              0.0016813599196277085,
+              0.17547848020409684,
+              0.00014046545218185816
             ],
             [
-              0.005192725186670098,
-              0.00014375632425240461,
-              0.22863566264124427
+              0.005179335229283434,
+              0.00014046545218185816,
+              0.22256369990924355
             ]
           ]
         },
@@ -9747,32 +8963,32 @@
         }
       },
       "assembly": {
-        "mass_kg": 20.139731965310848,
+        "mass_kg": 20.017347153843147,
         "com_cad_mm": [
-          1.5562728723175427,
-          -0.3694019014368478,
-          217.68942809338796
+          1.5657878275514698,
+          -0.37166040161250635,
+          218.41195784682526
         ],
         "com_local_m": [
-          -0.08844372712768245,
-          -0.0003694019014368478,
-          0.16733942809338798
+          -0.08843421217244853,
+          -0.00037166040161250633,
+          0.16806195784682526
         ],
         "inertia_kg_m2": [
           [
-            0.3944862617441142,
-            0.0016447028626384926,
-            0.012777864373876012
+            0.3916479825600183,
+            0.0016446320746515272,
+            0.012800510565061481
           ],
           [
-            0.0016447028626384926,
-            0.4333782243400813,
-            -0.0004936223879993671
+            0.0016446320746515272,
+            0.4266997937733528,
+            -0.0004989977602962831
           ],
           [
-            0.012777864373876012,
-            -0.0004936223879993671,
-            0.3340482380996055
+            0.012800510565061481,
+            -0.0004989977602962831,
+            0.3279774109441202
           ]
         ]
       },
@@ -10645,384 +9861,6 @@
             ]
           },
           {
-            "name": "Gusset_N1N1",
-            "basis": "CAD volume times assumed aluminum density",
-            "mass_kg": 0.01430288325361952,
-            "com_cad_mm": [
-              -210.1745609901487,
-              -130.1745609901487,
-              100.50000000000001
-            ],
-            "inertia_kg_m2": [
-              [
-                2.84096277867701e-06,
-                1.4183073975498227e-06,
-                -1.20699405670166e-19
-              ],
-              [
-                1.4183073975498227e-06,
-                2.840962778676849e-06,
-                -4.023313522338866e-20
-              ],
-              [
-                -1.20699405670166e-19,
-                -4.023313522338866e-20,
-                5.660471232473587e-06
-              ]
-            ]
-          },
-          {
-            "name": "Washer_GussetN1N10",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0012374155409441907,
-            "com_cad_mm": [
-              -185.0,
-              -135.0,
-              102.80000000000001
-            ],
-            "inertia_kg_m2": [
-              [
-                1.670304744351194e-08,
-                3.655441105365753e-21,
-                -3.655441105365753e-21
-              ],
-              [
-                3.655441105365753e-21,
-                1.6703047443519252e-08,
-                -3.655441105365753e-21
-              ],
-              [
-                -3.655441105365753e-21,
-                -3.655441105365753e-21,
-                3.287813092289469e-08
-              ]
-            ]
-          },
-          {
-            "name": "GussetBolt_N1N10",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006362667601315407,
-            "com_cad_mm": [
-              -185.0,
-              -135.0,
-              102.83255813953488
-            ],
-            "inertia_kg_m2": [
-              [
-                1.9760143447120764e-07,
-                2.924352884292602e-20,
-                -1.462176442146301e-20
-              ],
-              [
-                2.924352884292602e-20,
-                1.976014344711199e-07,
-                -1.462176442146301e-20
-              ],
-              [
-                -1.462176442146301e-20,
-                -1.462176442146301e-20,
-                5.822580700263194e-08
-              ]
-            ]
-          },
-          {
-            "name": "SlotNut_Gusset_N1N10",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393645,
-            "com_cad_mm": [
-              -185.0,
-              -135.0,
-              94.83480988292341
-            ],
-            "inertia_kg_m2": [
-              [
-                9.891211308794402e-08,
-                3.6255443092159125e-24,
-                -1.998722980774512e-22
-              ],
-              [
-                3.6255443092159125e-24,
-                1.3711623246794414e-07,
-                -2.9878767631193195e-23
-              ],
-              [
-                -1.998722980774512e-22,
-                -2.9878767631193195e-23,
-                2.0212082080241127e-07
-              ]
-            ]
-          },
-          {
-            "name": "Washer_GussetN1N11",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0012374155409441904,
-            "com_cad_mm": [
-              -215.00000000000003,
-              -105.0,
-              102.8
-            ],
-            "inertia_kg_m2": [
-              [
-                1.6703047443519252e-08,
-                3.655441105365753e-21,
-                -3.655441105365753e-21
-              ],
-              [
-                3.655441105365753e-21,
-                1.6703047443519252e-08,
-                1.8277205526828764e-21
-              ],
-              [
-                -3.655441105365753e-21,
-                1.8277205526828764e-21,
-                3.287813092287276e-08
-              ]
-            ]
-          },
-          {
-            "name": "GussetBolt_N1N11",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006362667601315407,
-            "com_cad_mm": [
-              -215.0,
-              -105.00000000000001,
-              102.83255813953488
-            ],
-            "inertia_kg_m2": [
-              [
-                1.976014344711784e-07,
-                2.924352884292602e-20,
-                0.0
-              ],
-              [
-                2.924352884292602e-20,
-                1.976014344711784e-07,
-                0.0
-              ],
-              [
-                0.0,
-                0.0,
-                5.822580700274891e-08
-              ]
-            ]
-          },
-          {
-            "name": "SlotNut_Gusset_N1N11",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393649,
-            "com_cad_mm": [
-              -215.0,
-              -105.0,
-              94.83480988292341
-            ],
-            "inertia_kg_m2": [
-              [
-                1.371162324679442e-07,
-                5.633538080474093e-24,
-                -3.0232002026417694e-22
-              ],
-              [
-                5.633538080474093e-24,
-                9.89121130879442e-08,
-                -1.5698736721087785e-23
-              ],
-              [
-                -3.0232002026417694e-22,
-                -1.5698736721087785e-23,
-                2.0212082080241154e-07
-              ]
-            ]
-          },
-          {
-            "name": "Gusset_N11",
-            "basis": "CAD volume times assumed aluminum density",
-            "mass_kg": 0.014302883253619485,
-            "com_cad_mm": [
-              -210.17456099014876,
-              130.17456099014873,
-              100.50000000000001
-            ],
-            "inertia_kg_m2": [
-              [
-                2.840962778677011e-06,
-                -1.418307397549823e-06,
-                -8.046627044677735e-20
-              ],
-              [
-                -1.418307397549823e-06,
-                2.840962778677011e-06,
-                0.0
-              ],
-              [
-                -8.046627044677735e-20,
-                0.0,
-                5.660471232473588e-06
-              ]
-            ]
-          },
-          {
-            "name": "Washer_GussetN110",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0012374155409441907,
-            "com_cad_mm": [
-              -185.0,
-              135.0,
-              102.80000000000001
-            ],
-            "inertia_kg_m2": [
-              [
-                1.670304744351194e-08,
-                -3.655441105365753e-21,
-                -3.655441105365753e-21
-              ],
-              [
-                -3.655441105365753e-21,
-                1.6703047443519252e-08,
-                3.655441105365753e-21
-              ],
-              [
-                -3.655441105365753e-21,
-                3.655441105365753e-21,
-                3.287813092289469e-08
-              ]
-            ]
-          },
-          {
-            "name": "GussetBolt_N110",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006362667601315407,
-            "com_cad_mm": [
-              -185.0,
-              135.0,
-              102.83255813953488
-            ],
-            "inertia_kg_m2": [
-              [
-                1.9760143447120764e-07,
-                -2.924352884292602e-20,
-                -1.462176442146301e-20
-              ],
-              [
-                -2.924352884292602e-20,
-                1.976014344711199e-07,
-                1.462176442146301e-20
-              ],
-              [
-                -1.462176442146301e-20,
-                1.462176442146301e-20,
-                5.822580700263194e-08
-              ]
-            ]
-          },
-          {
-            "name": "SlotNut_Gusset_N110",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393646,
-            "com_cad_mm": [
-              -185.0,
-              135.0,
-              94.83480988292341
-            ],
-            "inertia_kg_m2": [
-              [
-                9.891211308794404e-08,
-                6.860645385131649e-24,
-                -1.9745583829229995e-22
-              ],
-              [
-                6.860645385131649e-24,
-                1.371162324679442e-07,
-                -5.560760234247145e-23
-              ],
-              [
-                -1.9745583829229995e-22,
-                -5.560760234247145e-23,
-                2.0212082080241127e-07
-              ]
-            ]
-          },
-          {
-            "name": "Washer_GussetN111",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0012374155409441904,
-            "com_cad_mm": [
-              -215.00000000000003,
-              105.0,
-              102.8
-            ],
-            "inertia_kg_m2": [
-              [
-                1.6703047443519252e-08,
-                -3.655441105365753e-21,
-                -3.655441105365753e-21
-              ],
-              [
-                -3.655441105365753e-21,
-                1.6703047443519252e-08,
-                -1.8277205526828764e-21
-              ],
-              [
-                -3.655441105365753e-21,
-                -1.8277205526828764e-21,
-                3.287813092287276e-08
-              ]
-            ]
-          },
-          {
-            "name": "GussetBolt_N111",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006362667601315407,
-            "com_cad_mm": [
-              -215.0,
-              105.00000000000001,
-              102.83255813953488
-            ],
-            "inertia_kg_m2": [
-              [
-                1.976014344711784e-07,
-                -2.924352884292602e-20,
-                0.0
-              ],
-              [
-                -2.924352884292602e-20,
-                1.976014344711784e-07,
-                0.0
-              ],
-              [
-                0.0,
-                0.0,
-                5.822580700274891e-08
-              ]
-            ]
-          },
-          {
-            "name": "SlotNut_Gusset_N111",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393649,
-            "com_cad_mm": [
-              -215.0,
-              105.0,
-              94.83480988292341
-            ],
-            "inertia_kg_m2": [
-              [
-                1.371162324679442e-07,
-                5.633538080474093e-24,
-                -3.0232002026417694e-22
-              ],
-              [
-                5.633538080474093e-24,
-                9.89121130879442e-08,
-                -1.5698736721087785e-23
-              ],
-              [
-                -3.0232002026417694e-22,
-                -1.5698736721087785e-23,
-                2.0212082080241154e-07
-              ]
-            ]
-          },
-          {
             "name": "Bracket_PN120",
             "basis": "HBLFSN6 catalog 15g (retained lower brackets)",
             "mass_kg": 0.015,
@@ -11559,384 +10397,6 @@
                 2.231104190286725e-25,
                 3.085868568513933e-23,
                 1.3711623246794424e-07
-              ]
-            ]
-          },
-          {
-            "name": "Gusset_1N1",
-            "basis": "CAD volume times assumed aluminum density",
-            "mass_kg": 0.014302883253619517,
-            "com_cad_mm": [
-              210.17456099014873,
-              -130.17456099014876,
-              100.50000000000001
-            ],
-            "inertia_kg_m2": [
-              [
-                2.8409627786769295e-06,
-                -1.4183073975501446e-06,
-                4.023313522338867e-20
-              ],
-              [
-                -1.4183073975501446e-06,
-                2.84096277867701e-06,
-                -4.023313522338867e-20
-              ],
-              [
-                4.023313522338867e-20,
-                -4.023313522338867e-20,
-                5.660471232473587e-06
-              ]
-            ]
-          },
-          {
-            "name": "Washer_Gusset1N10",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0012374155409441909,
-            "com_cad_mm": [
-              185.0,
-              -135.0,
-              102.80000000000001
-            ],
-            "inertia_kg_m2": [
-              [
-                1.670304744351194e-08,
-                7.310882210731505e-21,
-                0.0
-              ],
-              [
-                7.310882210731505e-21,
-                1.670304744351194e-08,
-                0.0
-              ],
-              [
-                0.0,
-                0.0,
-                3.287813092288007e-08
-              ]
-            ]
-          },
-          {
-            "name": "GussetBolt_1N10",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006362667601315407,
-            "com_cad_mm": [
-              185.0,
-              -135.0,
-              102.83255813953488
-            ],
-            "inertia_kg_m2": [
-              [
-                1.9760143447120764e-07,
-                0.0,
-                1.462176442146301e-20
-              ],
-              [
-                0.0,
-                1.976014344711784e-07,
-                -1.462176442146301e-20
-              ],
-              [
-                1.462176442146301e-20,
-                -1.462176442146301e-20,
-                5.822580700274891e-08
-              ]
-            ]
-          },
-          {
-            "name": "SlotNut_Gusset_1N10",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393645,
-            "com_cad_mm": [
-              185.0,
-              -135.0,
-              94.83480988292341
-            ],
-            "inertia_kg_m2": [
-              [
-                9.891211308794402e-08,
-                3.6255443092159125e-24,
-                -1.998722980774512e-22
-              ],
-              [
-                3.6255443092159125e-24,
-                1.3711623246794414e-07,
-                -2.9878767631193195e-23
-              ],
-              [
-                -1.998722980774512e-22,
-                -2.9878767631193195e-23,
-                2.0212082080241127e-07
-              ]
-            ]
-          },
-          {
-            "name": "Washer_Gusset1N11",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0012374155409441904,
-            "com_cad_mm": [
-              215.0,
-              -105.0,
-              102.8
-            ],
-            "inertia_kg_m2": [
-              [
-                1.6703047443519252e-08,
-                0.0,
-                -7.310882210731505e-21
-              ],
-              [
-                0.0,
-                1.6703047443519252e-08,
-                1.8277205526828764e-21
-              ],
-              [
-                -7.310882210731505e-21,
-                1.8277205526828764e-21,
-                3.287813092290199e-08
-              ]
-            ]
-          },
-          {
-            "name": "GussetBolt_1N11",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006362667601315407,
-            "com_cad_mm": [
-              215.0,
-              -105.00000000000001,
-              102.83255813953488
-            ],
-            "inertia_kg_m2": [
-              [
-                1.976014344711784e-07,
-                -2.924352884292602e-20,
-                0.0
-              ],
-              [
-                -2.924352884292602e-20,
-                1.976014344711784e-07,
-                0.0
-              ],
-              [
-                0.0,
-                0.0,
-                5.822580700274891e-08
-              ]
-            ]
-          },
-          {
-            "name": "SlotNut_Gusset_1N11",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393648,
-            "com_cad_mm": [
-              215.0,
-              -105.0,
-              94.83480988292341
-            ],
-            "inertia_kg_m2": [
-              [
-                1.3711623246794424e-07,
-                -6.358646942317273e-24,
-                2.9792705102385724e-22
-              ],
-              [
-                -6.358646942317273e-24,
-                9.891211308794426e-08,
-                -1.0540752075485504e-23
-              ],
-              [
-                2.9792705102385724e-22,
-                -1.0540752075485504e-23,
-                2.0212082080241154e-07
-              ]
-            ]
-          },
-          {
-            "name": "Gusset_11",
-            "basis": "CAD volume times assumed aluminum density",
-            "mass_kg": 0.014302883253619489,
-            "com_cad_mm": [
-              210.17456099014873,
-              130.17456099014873,
-              100.5
-            ],
-            "inertia_kg_m2": [
-              [
-                2.840962778677091e-06,
-                1.4183073975499839e-06,
-                4.023313522338867e-20
-              ],
-              [
-                1.4183073975499839e-06,
-                2.8409627786773323e-06,
-                -4.023313522338867e-20
-              ],
-              [
-                4.023313522338867e-20,
-                -4.023313522338867e-20,
-                5.66047123247375e-06
-              ]
-            ]
-          },
-          {
-            "name": "Washer_Gusset110",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0012374155409441909,
-            "com_cad_mm": [
-              185.0,
-              135.0,
-              102.80000000000001
-            ],
-            "inertia_kg_m2": [
-              [
-                1.670304744351194e-08,
-                -7.310882210731505e-21,
-                0.0
-              ],
-              [
-                -7.310882210731505e-21,
-                1.670304744351194e-08,
-                0.0
-              ],
-              [
-                0.0,
-                0.0,
-                3.287813092288007e-08
-              ]
-            ]
-          },
-          {
-            "name": "GussetBolt_110",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006362667601315407,
-            "com_cad_mm": [
-              185.0,
-              135.0,
-              102.83255813953488
-            ],
-            "inertia_kg_m2": [
-              [
-                1.9760143447120764e-07,
-                0.0,
-                1.462176442146301e-20
-              ],
-              [
-                0.0,
-                1.976014344711784e-07,
-                1.462176442146301e-20
-              ],
-              [
-                1.462176442146301e-20,
-                1.462176442146301e-20,
-                5.822580700274891e-08
-              ]
-            ]
-          },
-          {
-            "name": "SlotNut_Gusset_110",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393646,
-            "com_cad_mm": [
-              185.0,
-              135.0,
-              94.83480988292341
-            ],
-            "inertia_kg_m2": [
-              [
-                9.891211308794404e-08,
-                6.860645385131649e-24,
-                -1.9745583829229995e-22
-              ],
-              [
-                6.860645385131649e-24,
-                1.371162324679442e-07,
-                -5.560760234247145e-23
-              ],
-              [
-                -1.9745583829229995e-22,
-                -5.560760234247145e-23,
-                2.0212082080241127e-07
-              ]
-            ]
-          },
-          {
-            "name": "Washer_Gusset111",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0012374155409441904,
-            "com_cad_mm": [
-              215.0,
-              105.0,
-              102.8
-            ],
-            "inertia_kg_m2": [
-              [
-                1.6703047443519252e-08,
-                0.0,
-                -7.310882210731505e-21
-              ],
-              [
-                0.0,
-                1.6703047443519252e-08,
-                -1.8277205526828764e-21
-              ],
-              [
-                -7.310882210731505e-21,
-                -1.8277205526828764e-21,
-                3.287813092290199e-08
-              ]
-            ]
-          },
-          {
-            "name": "GussetBolt_111",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006362667601315407,
-            "com_cad_mm": [
-              215.0,
-              105.00000000000001,
-              102.83255813953488
-            ],
-            "inertia_kg_m2": [
-              [
-                1.976014344711784e-07,
-                2.924352884292602e-20,
-                0.0
-              ],
-              [
-                2.924352884292602e-20,
-                1.976014344711784e-07,
-                0.0
-              ],
-              [
-                0.0,
-                0.0,
-                5.822580700274891e-08
-              ]
-            ]
-          },
-          {
-            "name": "SlotNut_Gusset_111",
-            "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393648,
-            "com_cad_mm": [
-              215.0,
-              105.0,
-              94.83480988292341
-            ],
-            "inertia_kg_m2": [
-              [
-                1.3711623246794424e-07,
-                -6.358646942317273e-24,
-                2.9792705102385724e-22
-              ],
-              [
-                -6.358646942317273e-24,
-                9.891211308794426e-08,
-                -1.0540752075485504e-23
-              ],
-              [
-                2.9792705102385724e-22,
-                -1.0540752075485504e-23,
-                2.0212082080241154e-07
               ]
             ]
           },
@@ -13266,162 +11726,162 @@
           {
             "name": "LargeWasher_Electronics0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.002766428685446342,
+            "mass_kg": 0.002766428685446341,
             "com_cad_mm": [
-              -175.00000000000003,
-              -65.0,
+              -185.00000000000003,
+              -135.0,
               102.20000000000002
             ],
             "inertia_kg_m2": [
               [
-                6.414195442929932e-08,
-                7.310882210731505e-21,
+                6.414195442930664e-08,
+                1.462176442146301e-20,
                 -1.462176442146301e-20
               ],
               [
-                7.310882210731505e-21,
+                1.462176442146301e-20,
                 6.414195442929202e-08,
-                3.655441105365753e-21
+                0.0
               ],
               [
                 -1.462176442146301e-20,
-                3.655441105365753e-21,
-                1.2710356595278772e-07
+                0.0,
+                1.2710356595281697e-07
               ]
             ]
           },
           {
             "name": "ElectronicsBolt_0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.005918760559363168,
+            "mass_kg": 0.005918760559363169,
             "com_cad_mm": [
-              -175.0,
-              -65.0,
-              102.99999999999997
+              -184.99999999999997,
+              -135.0,
+              103.0
             ],
             "inertia_kg_m2": [
               [
-                1.4648932384425893e-07,
-                1.462176442146301e-20,
+                1.4648932384421507e-07,
+                0.0,
                 0.0
               ],
               [
-                1.462176442146301e-20,
-                1.4648932384427357e-07,
-                7.310882210731505e-21
+                0.0,
+                1.4648932384424432e-07,
+                -1.462176442146301e-20
               ],
               [
                 0.0,
-                7.310882210731505e-21,
-                5.6228225313938774e-08
+                -1.462176442146301e-20,
+                5.622822531393877e-08
               ]
             ]
           },
           {
             "name": "SlotNut_Electronics_0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393646,
+            "mass_kg": 0.006083424664393645,
             "com_cad_mm": [
-              -174.99999999999997,
-              -65.0,
+              -185.0,
+              -135.0,
               94.83480988292341
             ],
             "inertia_kg_m2": [
               [
-                9.891211308794414e-08,
-                7.251088618431842e-25,
-                -1.9931126341371594e-22
+                9.891211308794402e-08,
+                3.6255443092159125e-24,
+                -1.998722980774512e-22
               ],
               [
-                7.251088618431842e-25,
-                1.371162324679442e-07,
-                3.7210822244069975e-23
+                3.6255443092159125e-24,
+                1.3711623246794414e-07,
+                -2.9878767631193195e-23
               ],
               [
-                -1.9931126341371594e-22,
-                3.7210822244069975e-23,
-                2.0212082080241143e-07
+                -1.998722980774512e-22,
+                -2.9878767631193195e-23,
+                2.0212082080241127e-07
               ]
             ]
           },
           {
             "name": "LargeWasher_Electronics1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0027664286854463416,
+            "mass_kg": 0.002766428685446341,
             "com_cad_mm": [
-              -174.99999999999997,
-              65.0,
+              -185.00000000000003,
+              135.0,
               102.20000000000002
             ],
             "inertia_kg_m2": [
               [
-                6.414195442929932e-08,
-                7.310882210731505e-21,
-                7.310882210731505e-21
+                6.414195442930664e-08,
+                -1.462176442146301e-20,
+                -1.462176442146301e-20
               ],
               [
-                7.310882210731505e-21,
-                6.414195442933588e-08,
-                3.655441105365753e-21
+                -1.462176442146301e-20,
+                6.414195442929202e-08,
+                0.0
               ],
               [
-                7.310882210731505e-21,
-                3.655441105365753e-21,
-                1.2710356595287547e-07
+                -1.462176442146301e-20,
+                0.0,
+                1.2710356595281697e-07
               ]
             ]
           },
           {
             "name": "ElectronicsBolt_1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.005918760559363168,
+            "mass_kg": 0.005918760559363169,
             "com_cad_mm": [
-              -175.0,
-              65.0,
-              102.99999999999999
+              -184.99999999999997,
+              135.0,
+              103.0
             ],
             "inertia_kg_m2": [
               [
-                1.4648932384424432e-07,
-                -1.462176442146301e-20,
-                0.0
-              ],
-              [
-                -1.462176442146301e-20,
                 1.4648932384421507e-07,
+                0.0,
                 0.0
               ],
               [
                 0.0,
+                1.4648932384424432e-07,
+                1.462176442146301e-20
+              ],
+              [
                 0.0,
-                5.6228225313938774e-08
+                1.462176442146301e-20,
+                5.622822531393877e-08
               ]
             ]
           },
           {
             "name": "SlotNut_Electronics_1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0060834246643936465,
+            "mass_kg": 0.006083424664393646,
             "com_cad_mm": [
-              -175.0,
-              65.0,
+              -185.0,
+              135.0,
               94.83480988292341
             ],
             "inertia_kg_m2": [
               [
-                9.891211308794426e-08,
-                -4.239097961544758e-24,
-                -2.0007206107681442e-22
+                9.891211308794404e-08,
+                6.860645385131649e-24,
+                -1.9745583829229995e-22
               ],
               [
-                -4.239097961544758e-24,
+                6.860645385131649e-24,
                 1.371162324679442e-07,
-                4.3543646811358314e-23
+                -5.560760234247145e-23
               ],
               [
-                -2.0007206107681442e-22,
-                4.3543646811358314e-23,
-                2.0212082080241149e-07
+                -1.9745583829229995e-22,
+                -5.560760234247145e-23,
+                2.0212082080241127e-07
               ]
             ]
           },
@@ -13590,107 +12050,107 @@
           {
             "name": "LargeWasher_Front0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.002766428685446342,
+            "mass_kg": 0.0027664286854463408,
             "com_cad_mm": [
-              175.00000000000003,
-              -65.0,
-              102.20000000000002
+              185.0,
+              -135.0,
+              102.20000000000003
             ],
             "inertia_kg_m2": [
               [
-                6.414195442929932e-08,
-                0.0,
-                1.462176442146301e-20
-              ],
-              [
-                0.0,
-                6.414195442927741e-08,
-                3.655441105365753e-21
+                6.414195442930664e-08,
+                1.462176442146301e-20,
+                7.310882210731505e-21
               ],
               [
                 1.462176442146301e-20,
-                3.655441105365753e-21,
-                1.2710356595278772e-07
+                6.414195442930664e-08,
+                -7.310882210731505e-21
+              ],
+              [
+                7.310882210731505e-21,
+                -7.310882210731505e-21,
+                1.2710356595284622e-07
               ]
             ]
           },
           {
             "name": "FrontDeckBolt_0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.005918760559363168,
+            "mass_kg": 0.005918760559363169,
             "com_cad_mm": [
-              175.0,
-              -65.0,
-              102.99999999999997
+              184.99999999999997,
+              -135.0,
+              103.0
             ],
             "inertia_kg_m2": [
               [
-                1.4648932384425893e-07,
+                1.4648932384421507e-07,
                 0.0,
                 -1.462176442146301e-20
               ],
               [
                 0.0,
-                1.4648932384427357e-07,
-                7.310882210731505e-21
+                1.464893238443028e-07,
+                -1.462176442146301e-20
               ],
               [
                 -1.462176442146301e-20,
-                7.310882210731505e-21,
-                5.6228225313909525e-08
+                -1.462176442146301e-20,
+                5.622822531393877e-08
               ]
             ]
           },
           {
             "name": "SlotNut_FrontDeck_0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.006083424664393646,
+            "mass_kg": 0.006083424664393645,
             "com_cad_mm": [
-              174.99999999999997,
-              -65.0,
+              185.0,
+              -135.0,
               94.83480988292341
             ],
             "inertia_kg_m2": [
               [
-                9.891211308794414e-08,
-                7.251088618431842e-25,
-                -1.9931126341371594e-22
+                9.891211308794402e-08,
+                3.6255443092159125e-24,
+                -1.998722980774512e-22
               ],
               [
-                7.251088618431842e-25,
-                1.371162324679442e-07,
-                3.7210822244069975e-23
+                3.6255443092159125e-24,
+                1.3711623246794414e-07,
+                -2.9878767631193195e-23
               ],
               [
-                -1.9931126341371594e-22,
-                3.7210822244069975e-23,
-                2.0212082080241143e-07
+                -1.998722980774512e-22,
+                -2.9878767631193195e-23,
+                2.0212082080241127e-07
               ]
             ]
           },
           {
             "name": "LargeWasher_Front1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0027664286854463416,
+            "mass_kg": 0.0027664286854463408,
             "com_cad_mm": [
-              175.0,
-              65.0,
-              102.20000000000002
+              185.0,
+              135.0,
+              102.20000000000003
             ],
             "inertia_kg_m2": [
               [
-                6.414195442929932e-08,
-                0.0,
+                6.414195442930664e-08,
+                -1.462176442146301e-20,
                 7.310882210731505e-21
               ],
               [
-                0.0,
+                -1.462176442146301e-20,
                 6.414195442930664e-08,
-                3.655441105365753e-21
+                7.310882210731505e-21
               ],
               [
                 7.310882210731505e-21,
-                3.655441105365753e-21,
+                7.310882210731505e-21,
                 1.2710356595284622e-07
               ]
             ]
@@ -13698,54 +12158,54 @@
           {
             "name": "FrontDeckBolt_1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.005918760559363168,
+            "mass_kg": 0.005918760559363169,
             "com_cad_mm": [
-              175.0,
-              65.0,
-              102.99999999999999
+              184.99999999999997,
+              135.0,
+              103.0
             ],
             "inertia_kg_m2": [
               [
-                1.4648932384424432e-07,
+                1.4648932384421507e-07,
                 0.0,
-                -2.924352884292602e-20
+                -1.462176442146301e-20
               ],
               [
                 0.0,
-                1.4648932384424432e-07,
-                0.0
+                1.464893238443028e-07,
+                1.462176442146301e-20
               ],
               [
-                -2.924352884292602e-20,
-                0.0,
-                5.6228225313938774e-08
+                -1.462176442146301e-20,
+                1.462176442146301e-20,
+                5.622822531393877e-08
               ]
             ]
           },
           {
             "name": "SlotNut_FrontDeck_1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0060834246643936465,
+            "mass_kg": 0.006083424664393646,
             "com_cad_mm": [
-              175.0,
-              65.0,
+              185.0,
+              135.0,
               94.83480988292341
             ],
             "inertia_kg_m2": [
               [
-                9.891211308794426e-08,
-                -4.239097961544758e-24,
-                -2.0007206107681442e-22
+                9.891211308794404e-08,
+                6.860645385131649e-24,
+                -1.9745583829229995e-22
               ],
               [
-                -4.239097961544758e-24,
+                6.860645385131649e-24,
                 1.371162324679442e-07,
-                4.3543646811358314e-23
+                -5.560760234247145e-23
               ],
               [
-                -2.0007206107681442e-22,
-                4.3543646811358314e-23,
-                2.0212082080241149e-07
+                -1.9745583829229995e-22,
+                -5.560760234247145e-23,
+                2.0212082080241127e-07
               ]
             ]
           },
@@ -17640,114 +16100,114 @@
           {
             "name": "FloorPLA_0_0",
             "basis": "CAD volume times assumed PLA density",
-            "mass_kg": 0.1158059061411161,
+            "mass_kg": 0.12687960214111627,
             "com_cad_mm": [
-              -106.58179137293581,
-              -52.01870243005937,
-              98.81952862915512
+              -114.6834076327667,
+              -57.85210930012748,
+              98.94001230060013
             ],
             "inertia_kg_m2": [
               [
-                0.00014796555560661644,
-                5.212899128402479e-05,
-                -1.2249484509736538e-07
+                0.00019684900471169834,
+                -1.0737315557367392e-05,
+                1.1726841189093877e-06
               ],
               [
-                5.212899128402479e-05,
-                0.0004294703328763318,
-                4.252425764411392e-06
+                -1.0737315557367392e-05,
+                0.0005200592883416379,
+                5.184993492170595e-06
               ],
               [
-                -1.2249484509736538e-07,
-                4.252425764411392e-06,
-                0.000574027458370701
+                1.1726841189093877e-06,
+                5.184993492170595e-06,
+                0.0007134507095298582
               ]
             ]
           },
           {
             "name": "FloorPLA_0_1",
             "basis": "CAD volume times assumed PLA density",
-            "mass_kg": 0.11580590614111406,
+            "mass_kg": 0.12687960214111418,
             "com_cad_mm": [
-              -106.58179137293577,
-              52.0187024300593,
-              98.819528629155
+              -114.68340763276667,
+              57.85210930012733,
+              98.94001230060005
             ],
             "inertia_kg_m2": [
               [
-                0.00014796555560661615,
-                -5.212899128402405e-05,
-                -1.2249484509588718e-07
+                0.00019684900471169682,
+                1.073731555736813e-05,
+                1.1726841189096829e-06
               ],
               [
-                -5.212899128402405e-05,
-                0.0004294703328763289,
-                -4.252425764411392e-06
+                1.073731555736813e-05,
+                0.000520059288341635,
+                -5.184993492171483e-06
               ],
               [
-                -1.2249484509588718e-07,
-                -4.252425764411392e-06,
-                0.0005740274583706942
+                1.1726841189096829e-06,
+                -5.184993492171483e-06,
+                0.0007134507095298519
               ]
             ]
           },
           {
             "name": "FloorPLA_1_0",
             "basis": "CAD volume times assumed PLA density",
-            "mass_kg": 0.111845048541115,
+            "mass_kg": 0.12291874454111501,
             "com_cad_mm": [
-              105.51818704560472,
-              -52.53915558790154,
-              98.56087926650443
+              113.97668442624384,
+              -58.51364715540742,
+              98.70854693735308
             ],
             "inertia_kg_m2": [
               [
-                0.00014679413592835484,
-                -5.030477507758168e-05,
-                1.0193879167937564e-06
+                0.0001948479885938718,
+                1.2592236068167524e-05,
+                -5.312875831997299e-07
               ],
               [
-                -5.030477507758168e-05,
-                0.000417900710297244,
-                4.744120282455339e-06
+                1.2592236068167524e-05,
+                0.0005102301512143812,
+                5.83940911234321e-06
               ],
               [
-                1.0193879167937564e-06,
-                4.744120282455339e-06,
-                0.0005617563820171772
+                -5.312875831997299e-07,
+                5.83940911234321e-06,
+                0.0007020749017505904
               ]
             ]
           },
           {
             "name": "FloorPLA_1_1",
             "basis": "CAD volume times assumed PLA density",
-            "mass_kg": 0.11146412054111499,
+            "mass_kg": 0.1225378165411151,
             "com_cad_mm": [
-              105.74209507837568,
-              52.411133364508615,
-              98.55527758069071
+              114.20665253927656,
+              58.4157668948075,
+              98.70391052185052
             ],
             "inertia_kg_m2": [
               [
-                0.00014624841088876054,
-                4.936664297138178e-05,
-                9.783394084060384e-07
+                0.00019446000695449962,
+                -1.3482273138442373e-05,
+                -5.734470711827755e-07
               ],
               [
-                4.936664297138178e-05,
-                0.00041572965892425814,
-                -4.720650283431149e-06
+                -1.3482273138442373e-05,
+                0.000507608921156114,
+                -5.821464965149373e-06
               ],
               [
-                9.783394084060384e-07,
-                -4.720650283431149e-06,
-                0.0005590420251820131
+                -5.734470711827755e-07,
+                -5.821464965149373e-06,
+                0.0006990677557091081
               ]
             ]
           },
           {
             "name": "BatteryBL1860B",
-            "basis": "D6.2 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.68,
             "com_cad_mm": [
               -136.5,
@@ -17774,7 +16234,7 @@
           },
           {
             "name": "BatteryAdapter03",
-            "basis": "D6.2 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.123,
             "com_cad_mm": [
               -136.5,
@@ -17801,7 +16261,7 @@
           },
           {
             "name": "Reserved_Computer",
-            "basis": "D6.2 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.5,
             "com_cad_mm": [
               -2.5969110371381617e-16,
@@ -17828,7 +16288,7 @@
           },
           {
             "name": "Reserved_SupervisorRS485",
-            "basis": "D6.2 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.05,
             "com_cad_mm": [
               40.0,
@@ -17855,7 +16315,7 @@
           },
           {
             "name": "Reserved_Protection",
-            "basis": "D6.2 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.2,
             "com_cad_mm": [
               170.0,
@@ -17882,7 +16342,7 @@
           },
           {
             "name": "Reserved_ClampAndPower",
-            "basis": "D6.2 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.2,
             "com_cad_mm": [
               180.0,
@@ -17909,7 +16369,7 @@
           },
           {
             "name": "wiring_allowance",
-            "basis": "D6.2 wiring allowance; ASSUMED distributed across first floor, not copper-fill CAD density",
+            "basis": "D6.3 wiring allowance; ASSUMED distributed across first floor, not copper-fill CAD density",
             "mass_kg": 0.4,
             "com_cad_mm": [
               2.5397488442045013e-15,
@@ -17936,7 +16396,7 @@
           },
           {
             "name": "battery_belt_pads",
-            "basis": "D6.2 125g battery belt plus 25g pads, simplified distribution",
+            "basis": "D6.3 125g battery belt plus 25g pads, simplified distribution",
             "mass_kg": 0.15,
             "com_cad_mm": [
               -146.0,
@@ -17963,7 +16423,7 @@
           },
           {
             "name": "computer_belts_pads",
-            "basis": "D6.2 computer/supervisor retaining allowance",
+            "basis": "D6.3 computer/supervisor retaining allowance",
             "mass_kg": 0.03,
             "com_cad_mm": [
               -5.814180444272246e-16,
@@ -18017,7 +16477,7 @@
           },
           {
             "name": "inherited_strap_allowance",
-            "basis": "Legacy strap allowance retained in D6.2 ledger; no new additional mass",
+            "basis": "Legacy strap allowance retained in D6.3 ledger; no new additional mass",
             "mass_kg": 0.04,
             "com_cad_mm": [
               -136.5,
@@ -18044,7 +16504,7 @@
           },
           {
             "name": "cargo_belts_pads",
-            "basis": "D6.2 loaded restraint allowance at CAD z310mm",
+            "basis": "D6.3 loaded restraint allowance at CAD z310mm",
             "mass_kg": 0.28,
             "com_cad_mm": [
               -8.52763232193744e-16,
@@ -18304,6 +16764,6 @@
   ],
   "source_cad_modified": false,
   "isaac_sim_runtime_tested": false,
-  "mass_note": "Totals reconcile exactly with D6.2 ledger. Component densities, rotor/stator split, caster distribution, unselected electronics and allowances are estimates. CAD-derived tensor is not a measured tensor.",
+  "mass_note": "Totals reconcile exactly with D6.3 ledger. Component densities, rotor/stator split, caster distribution, unselected electronics and allowances are estimates. CAD-derived tensor is not a measured tensor.",
   "collision_note": "Explicit boxes/cylinders for mobility, with deck holes/slots/small hardware omitted. No structural deformation, tire compliance, electrical brake, regenerative power or motor thermal model."
 }

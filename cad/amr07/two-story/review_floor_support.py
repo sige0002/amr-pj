@@ -1,4 +1,4 @@
-"""Independent saved-CAD checks of D6.2 floor fixings and load paths.
+"""Independent saved-CAD checks of D6.3 floor fixings and load paths.
 
 Run in FreeCAD Python. Beam equations are short-term screening, not printed
 material allowables, joint-preload qualification or proof of creep resistance.
@@ -18,7 +18,7 @@ panels=[]
 for ix,iy in product(range(2),repeat=2):
     name=f'FloorPLA_{ix}_{iy}';panel=doc.getObject(name).Shape
     expected=[((-1 if ix==0 else 1)*x,(-1 if iy==0 else 1)*y)
-              for x,y in [(25,135),(175,65),(215,20),(15,25)]]
+              for x,y in [(25,135),(185,135),(215,20),(15,25)]]
     fixings=[f for f in report['floor_fixings'] if f['panel']==name]
     assert len(fixings)==4 and set(tuple(f['xy_mm']) for f in fixings)==set(expected)
     assert sum(f['thread']=='M6' for f in fixings)==3
@@ -136,7 +136,7 @@ screens['panel_rib'].update(stress_MPa=peak_stress,
 for result in screens.values():
     assert result['deflection_mm_by_E_MPa']['1000']<2
 
-out=dict(revision='D6.2',native_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+out=dict(revision='D6.3',native_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
          panels=panels,total_panel_fixings=16,beam_anchors=anchors,
          beam_ends_supported=2,beam_anchors_per_end=2,
          assembly_tool_checks=tool_checks,

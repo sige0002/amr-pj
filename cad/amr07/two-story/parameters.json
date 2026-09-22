@@ -1,5 +1,5 @@
 {
-  "revision": "D6.2",
+  "revision": "D6.3",
   "date": "2026-09-22",
   "source_revision": "099686bacaad0f72e8bc4ce15005cd708a5b2f83",
   "architecture": "1F battery/computer/power above base rails; 2F independent aluminum cargo deck",
@@ -55,6 +55,9 @@
   "floor_support": "PLA ribbed seam beam fixed to BOTH inner rails with two M6 per end; four panels with integral underside seam ribs",
   "floor_beam_M6_qty": 4,
   "floor_M4_countersunk_qty": 4,
+  "floor_outer_corner_notches": false,
+  "corner_flat_gusset_qty": 0,
+  "corner_joint": "Four auxiliary flat gussets and their8 fastener sets removed. Eight HBLFSN6 lower-frame joints retained; independent floor corner screws reused from inner rail positions. Frame racking qualification remains open.",
   "deck_LWH_mm": [
     300,
     300,

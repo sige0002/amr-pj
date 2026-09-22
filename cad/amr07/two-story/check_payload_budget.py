@@ -1,4 +1,4 @@
-"""Separate vehicle mass margin from cargo capacity after D6.2 floor reinforcement.
+"""Separate vehicle mass margin from cargo capacity after D6.3 corner revision.
 
 Uses existing accepted flat-floor requirements and the saved CAD mass ledger.
 No payload increase, operating qualification or low-speed thermal rating is
@@ -25,6 +25,8 @@ before_revision = 'feab761c8073f468b3668fac1b18b88a18fa6ba7'
 before = json.loads(subprocess.check_output([
     'git', '-C', str(HERE), 'show',
     before_revision+':cad/amr07/two-story/validation.json']))
+before62_revision='ef44e1c'
+before62=json.loads(subprocess.check_output(['git','-C',str(HERE),'show',before62_revision+':cad/amr07/two-story/validation.json']))
 mass = v['mass']['estimated_base_kg']
 payload = requirements['mass']['normal_payload_kg']
 limit = requirements['mass']['base_max_kg']
@@ -35,7 +37,8 @@ assert loads['requirements_sha256'] == caster['requirements_sha256'] == hashlib.
 comparisons = []
 for label, base_mass in [('D3', v['mass']['source_D3_kg']),
                          ('D6.1', before['mass']['estimated_base_kg']),
-                         ('D6.2', mass), ('design_upper_bound', limit)]:
+                         ('D6.2', before62['mass']['estimated_base_kg']),
+                         ('D6.3', mass), ('design_upper_bound', limit)]:
     config = deepcopy(requirements)
     config['mass']['base_max_kg'] = base_mass
     sized = torque(config, payload, 0)
@@ -79,6 +82,7 @@ out = dict(
     revision=v['parameters']['revision'], date='2026-09-22',
     requirements_sha256=hashlib.sha256(raw).hexdigest(),
     baseline_D61_commit=before_revision,
+    baseline_D62_commit=before62_revision,
     vehicle_mass_estimate_kg=mass, reviewed_vehicle_mass_upper_bound_kg=limit,
     vehicle_mass_target_kg=10, vehicle_mass_target_is_hard_limit=False,
     remaining_to_reviewed_envelope_kg=limit-mass,
@@ -91,6 +95,7 @@ out = dict(
     mass_components_kg=components,
     net_increase_from_D3_kg=delta_groups,
     floor_reinforcement_increase_from_D61_kg=mass-before['mass']['estimated_base_kg'],
+    corner_rework_increase_from_D62_kg=mass-before62['mass']['estimated_base_kg'],
     same_cargo_torque_comparisons=comparisons,
     torque_comparison_basis=dict(
         rolling_resistance_assumption=requirements['drive']['rolling_resistance_assumption'],
@@ -118,5 +123,5 @@ out = dict(
 (HERE/'payload_budget.json').write_text(json.dumps(out, ensure_ascii=False, indent=2)+'\n')
 print(json.dumps(dict(vehicle_mass_kg=mass,normal_cargo_kg=payload,
                      gross_kg=mass+payload,vehicle_headroom_kg=limit-mass,
-                     torque_each_with_margin_Nm=comparisons[2]['with_margin_Nm_each'],
+                     torque_each_with_margin_Nm=next(c['with_margin_Nm_each'] for c in comparisons if c['revision']==v['parameters']['revision']),
                      load_comparison_at_reviewed_gross=out['motor_load_comparison_at_reviewed_vehicle_mass']),ensure_ascii=False))

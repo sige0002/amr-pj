@@ -1,4 +1,4 @@
-"""D6.2 two-storey AMR. Run with FreeCAD Python; no GUI required.
+"""D6.3 two-storey AMR. Run with FreeCAD Python; no GUI required.
 
 The quoted D3 cargo plate is translated only. All electronics stand ABOVE
 the lower rails. Four precut 100mm SF2 posts and two spare 300mm rails carry
@@ -27,7 +27,7 @@ V=App.Vector
 NAME='AMR01_TwoStorey_D6'
 SOURCE='099686bacaad0f72e8bc4ce15005cd708a5b2f83'
 RHO={'aluminum':2.7e-6,'steel':7.85e-6,'PLA':1.24e-6,'rubber':1.1e-6}
-P=dict(revision='D6.2',date='2026-09-22',source_revision=SOURCE,
+P=dict(revision='D6.3',date='2026-09-22',source_revision=SOURCE,
     architecture='1F battery/computer/power above base rails; 2F independent aluminum cargo deck',
     base_rail_top_z_mm=99,floor_bottom_top_z_mm=[99,101.4],equipment_seat_z_mm=104,
     upright_part='SUS SF2-30・30 BLACK, SF9-322 Amazon pack,100mm',upright_qty=4,
@@ -42,6 +42,8 @@ P=dict(revision='D6.2',date='2026-09-22',source_revision=SOURCE,
     floor_fasteners_per_panel=4,floor_direct_M6_per_panel=3,floor_seam_M4_per_panel=1,
     floor_support='PLA ribbed seam beam fixed to BOTH inner rails with two M6 per end; four panels with integral underside seam ribs',
     floor_beam_M6_qty=4,floor_M4_countersunk_qty=4,
+    floor_outer_corner_notches=False,corner_flat_gusset_qty=0,
+    corner_joint='Four auxiliary flat gussets and their8 fastener sets removed. Eight HBLFSN6 lower-frame joints retained; independent floor corner screws reused from inner rail positions. Frame racking qualification remains open.',
     deck_LWH_mm=[300,300,4],deck_bottom_top_z_mm=[229,233],deck_translation_z_mm=130,
     battery='Makita BL1860B A-60464',charger='Makita DC18RF JPADC18RF',
     adapter='Netkey diy-adapter03',battery_origin_xyz_mm=[-193,-37.5,104],
@@ -87,8 +89,9 @@ def main():
     src=Path(temp.name)/'D3.FCStd'
     src.write_bytes(subprocess.check_output(['git','-C',str(BASE),'show',SOURCE+':cad/amr07/aluminum-direct-deck/AMR01_AluminumDirect_D3.FCStd']))
     old=App.openDocument(str(src));doc=App.newDocument(NAME)
-    doc.Label='AMR D6.2 | 4 fixings per floor panel + supported seam | cargo233mm'
+    doc.Label='AMR D6.3 | full floor corners | HBLFSN6 frame joints | cargo233mm'
     removed=['BatteryCradlePLA','BatteryReservedSpace','BatteryConnectorEnvelope','ElectronicsTrayPLA','FrontElectronicsTrayPLA']
+    removed.extend(o.Name for o in old.Objects if o.Name.startswith(('Gusset_','GussetBolt_','Washer_Gusset','SlotNut_Gusset_')))
     for o in old.Objects:
         if o.TypeId=='PartDesign::Feature' and o.Name not in removed:doc.copyObject(o,False)
     added=[];changed=[];translated=[];printed=[];moving=[];mass_override={};driver_checks=[]
@@ -140,7 +143,18 @@ def main():
                 add('LevelNut_'+key+'_'+side,slotnut_at(surface,n,axis),'steel','HNTT6-6 nominal14x15x6.3 nose7.8x0.8. Nominal supplier slot clearances checked; no mixed-joint certification.')
                 driver_checks.append((name,Part.makeCylinder(2.9,35,seat-V(*n)*6,-V(*n))))
 
-    # Spread the three reused M6 fixings over THREE rails per quadrant.
+    # Retain the existing internal metal brackets as the frame joints.
+    # The auxiliary flat gussets had their holes centered on their diagonal
+    # edges, giving only half-washer bearing. Do not reuse this flawed shape.
+    # The printed floor is not credited as a frame racking brace.
+    corner_joints=[]
+    for sx,sy in product([-1,1],repeat=2):
+        tag=('N' if sx<0 else 'P')+('N' if sy<0 else '')+'120'
+        corner_joints.append(dict(frame_bracket='Bracket_'+tag,
+            frame_bolts=['JointA_'+tag,'JointB_'+tag],flat_gusset_removed=True,
+            floor_corner_fixing_xy_mm=[sx*185,sy*135],plastic_in_frame_clamp=False))
+
+    # Spread three reused M6 fixings across the outer and end rails.
     # A fourth, flush M4 fixing ties each panel to the new anchored seam beam.
     floor_fixings=[]
     for i,(x,y) in enumerate(product([-25,25],[-135,135])):
@@ -149,11 +163,11 @@ def main():
         change('SlotNut_Cradle_'+str(i),slotnut_at((x,y,99),(0,0,-1)))
         floor_fixings.append(dict(panel=f'FloorPLA_{int(x>0)}_{int(y>0)}',bolt='CradleBolt_'+str(i),xy_mm=[x,y],support='outer 400mm rail',thread='M6'))
     for prefix,sgn,washer,nut in [('Electronics',-1,'Electronics','Electronics'),('FrontDeck',1,'Front','FrontDeck')]:
-        for i,(x,y) in enumerate([(sgn*175,-65),(sgn*175,65),(sgn*215,-20),(sgn*215,20)]):
+        for i,(x,y) in enumerate([(sgn*185,-135),(sgn*185,135),(sgn*215,-20),(sgn*215,20)]):
             change(f'{prefix}Bolt_{i}',j.screw((x,y,103),(0,0,-1),6,10))
             change(f'LargeWasher_{washer}{i}',Part.makeCylinder(9,1.6,V(x,y,101.4)).cut(Part.makeCylinder(3.3,1.6,V(x,y,101.4))))
             change(f'SlotNut_{nut}_{i}',slotnut_at((x,y,99),(0,0,-1),(0,1,0) if i>=2 else (1,0,0)))
-            floor_fixings.append(dict(panel=f'FloorPLA_{int(x>0)}_{int(y>0)}',bolt=f'{prefix}Bolt_{i}',xy_mm=[x,y],support='300mm end rail' if i>=2 else 'inner 400mm rail',thread='M6'))
+            floor_fixings.append(dict(panel=f'FloorPLA_{int(x>0)}_{int(y>0)}',bolt=f'{prefix}Bolt_{i}',xy_mm=[x,y],support='300mm end rail' if i>=2 else 'outer 400mm rail, corner',thread='M6'))
 
     # Top flange rests against panel undersides; two full-height end cheeks
     # transfer load through four M6/large-washer joints into the inner rails.
@@ -189,9 +203,7 @@ def main():
     # Openings clear the bottom bracket feet and leave metal directly on metal.
     for x in [-156,54]:
         for y in [-151,118]:holes.append(box(x,y,98,102,33,5))
-    # Existing top corner gussets occupy the outer60x60mm quadrants.
-    for x in [-231,169]:
-        for y in [-151,89]:holes.append(box(x,y,98,62,62,7))
+    # Outer corners are continuous floor; the auxiliary flat gussets are gone.
     # Vertical belt passages are between frame members, not through the rails.
     for x,y,w in [(-197,0,26),(-73,0,26),(-62.25,0,16),(62.25,0,16),(2.75,90,16),(77.25,90,16)]:
         holes.append(box(x-2,y-w/2,98,4,w,15))
@@ -219,7 +231,7 @@ def main():
             taper=[V(sx*x,-160,z) for x,z in [(175,83),(201,83),(201,94.8),(185,94.8),(175,84),(175,83)]]
             rib=rib.cut(Part.Face(Part.makePolygon(taper)).extrude(V(0,320,0))).removeSplitter()
             s=s.fuse(rib).removeSplitter()
-            add(f'FloorPLA_{ix}_{iy}',cut(s,holes),'PLA','1F equipment only; FOUR dispersed fixings:3 reused M6/OD18 washers to three rails +1 flush M4 through anchored seam beam. Integral underside seam rib.230x150mm class; creep/temperature test pending.')
+            add(f'FloorPLA_{ix}_{iy}',cut(s,holes),'PLA','1F equipment only; FOUR dispersed fixings:3 reused M6/OD18 washers to outer/end rails +1 flush M4 through anchored seam beam. Full outer corner, integral underside seam rib.230x150mm class; creep/temperature test pending.')
     add('BatteryBL1860B',box(*P['battery_origin_xyz_mm'],*P['battery_installed_XYZ_mm']),'reference','Selected genuine6Ah108Wh battery, manufacturer113x75x62mm;0.68kg.',True)
     add('BatteryAdapter03',box(*P['adapter_origin_xyz_mm'],*P['adapter_installed_XYZ_mm']),'reference','Selected approximate95x90x30mm123g adapter. Full additive height retained; check actual latch/switch/lead offsets.',True)
     add('BatteryBasePad',box(-193,-37.5,101.4,113,75,2.6),'reference','Soft liner on1F floor; not on electrical contacts.')
@@ -320,7 +332,7 @@ def main():
         continuous_battery_service=service,continuous_computer_service=pc_service,caster_sweep_hits=caster,tire_outward_service=tires,
         grid_fastener_envelopes=grid,grid_free_holes=30,grid_slotnut_holes=6,
         joint_assembly_tool_access=tools,computer_ventilation_keepout_hits=hits(ventilation,physical+refs),
-        floor_fixings=floor_fixings,floor_beam_anchors=beam_anchors,
+        floor_fixings=floor_fixings,floor_beam_anchors=beam_anchors,corner_joints=corner_joints,
         computer_connector_keepout_hits=hits(pc_cables,physical+refs),
         added_parts=added,removed_parts=removed,changed_parts=changed,translated_parts=translated,
         moving_parts=moving,released_before_service=released,

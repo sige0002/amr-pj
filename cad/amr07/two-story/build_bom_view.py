@@ -23,7 +23,7 @@ groups = [
     ('モーター2個', ['D01']),
     ('専用モーター金具2個', ['Q01','S08']),
     ('タイヤ・キャスター', ['D02','C01','P01','S02','S06']),
-    ('フレーム・締結材', ['F01','F02','D6_POSTS','F03','F04','P03','H01','MW','D3_M6','D3_STOP_BOLTS','D3_STOP_NUTS','D3_STOP_WASHERS','D62_FLOOR_SCREWS','D62_BEAM_WASHERS']),
+    ('フレーム・締結材', ['F01','F02','D6_POSTS','F03','F04','H01','MW','D3_M6','D3_STOP_BOLTS','D3_STOP_NUTS','D3_STOP_WASHERS','D62_FLOOR_SCREWS','D62_BEAM_WASHERS']),
     ('アルミ天板', ['DECK_plate','DECK_CNC_SHIP']),
     ('制御・電源保護', ['E02']+[r['ID'] for r in rows if r['ID'].startswith('ELEC_')]),
     ('PLA・ベルト・保護材', ['P04','H02','DECK_cargo_straps','DECK_edge_protection_and_slack_retention','POWER_PADS','POWER_LOW_STRAPS']),
@@ -121,7 +121,7 @@ for c in category_rows:
         if amount is not None and r['通貨']=='USD':price+='（$'+r['明細金額']+'）'
         lines.append(f'| {name} | {qty} | {price} | {evidence(r)} |')
     lines += ['', '</details>', '']
-lines += ['**今回の床支持：各板4点、計16点。支持梁の溝ナット4個は購入予定パック内。追加M6×12ねじ4本・大径座金4枚・M4皿ねじ/座金/ナット各4個の価格は未計上。材料消費差額は費用JSONに記載。前回の支柱根元両側補強も維持。**', '',
+lines += [f'**今回D6.3は四隅の平面補強板4枚と締結材24点を廃止し、床ねじ4組の位置を変更。素材仮枠500円を削除。金具・ねじの追加購入は0個、PLA材料消費参考は前版より{summary["corner_rework_from_D62"]["PLA_material_reference_increase_JPY"]:,.0f}円増。** 各床4点固定と支柱根元両側補強を継続する。前回D6.2で追加したねじ・座金類の未計上状態は継承し、今回0円で調達できるという意味ではない。', '',
     '## これから金額が増える項目', '',
     '主計算機の0.5kgは重量の予約であり、購入費の計上ではない。未計上品は次のとおり。', '',
     '| 未計上品 | 状態 |','|---|---|']
@@ -131,7 +131,7 @@ lines += ['', '## 見直すと効果の大きい費用', '',
     '- 電池・充電器・アダプター：約23,380円。未所有のため充電器も含む。',
     '- 専用モーター金具2個：約12,935円（送料込みの実自動見積）。形状や加工条件を変更する場合は実見積を取り直す。',
     '- タイヤキット2個：9,240円。Taobaoのモーターに同じキットが付くと確認できた場合のみ、別購入を外せる。',
-    '- 溝ナット100個：5,112円、使用78個。20個の接合金具本体1,834円より大きい。安価な互換品へ置換する場合は寸法・締結条件を照合する。', '',
+    '- 溝ナット100個：5,112円、使用70個。20個の接合金具本体1,834円より大きい。安価な互換品へ置換する場合は寸法・締結条件を照合する。', '',
     '[CADと設計の説明](README.ja.md)／[重量と積載](PAYLOAD_REVIEW.ja.md)／[費用集計CSV](BOM-summary.csv)／[全明細CSV](BOM.csv)／[計算値JSON](BOM-costs.json)', '']
 (HERE/'BOM.ja.md').write_text('\n'.join(lines))
 print(json.dumps(dict(total_JPY=float(total),categories=category_rows,price_basis=out['by_price_basis_JPY'],unpriced_count=len(unpriced)),ensure_ascii=False))

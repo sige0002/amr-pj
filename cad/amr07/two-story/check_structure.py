@@ -26,7 +26,7 @@ push_moments=[dict(application_height_mm=z,lever_above_post_base_mm=z-base_plane
                    external_moment_about_base_plane_Nm=push*(z-base_plane_z)/1000)
               for z in [233.,330.]]
 fea=json.loads((D3/'fea/summary.json').read_text())
-out=dict(revision='D6.2',date='2026-09-22',scope='member-level elastic screening, not whole-frame SF2 release',
+out=dict(revision='D6.3',date='2026-09-22',scope='member-level elastic screening, not whole-frame SF2 release',
     upper_vertical_service_force_N=force,static_factor=SF,
     upper_rails=dict(part='NFSL6-3030',support_span_mm=rail_L,I_mm4=rail_I,E_MPa=E,
         force_per_rail_N=rail_F,factored_stress_MPa=stress,factored_center_deflection_mm=deflection,

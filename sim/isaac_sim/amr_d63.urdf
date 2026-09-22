@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<robot name="amr_d62">
-  <!--Generated from D6.2. SI units; +X forward, +Y left, +Z up. Inertias are estimates.-->
+<robot name="amr_d63">
+  <!--Generated from D6.3. SI units; +X forward, +Y left, +Z up. Inertias are estimates.-->
   <material name="aluminum">
     <color rgba="0.72 0.75 0.79 1" />
   </material>
@@ -70,9 +70,9 @@
   </link>
   <link name="base_link">
     <inertial>
-      <origin xyz="-0.0933207799947 -0.000816153615845 0.0796082457592" rpy="0 0 0" />
-      <mass value="9.11550857337" />
-      <inertia ixx="0.118316850893" ixy="0.00168102371021" ixz="0.00525502301937" iyy="0.174220739427" iyz="0.000159067366086" izz="0.227961329308" />
+      <origin xyz="-0.093365971526 -0.000827260413554 0.0800225806213" rpy="0 0 0" />
+      <mass value="8.9931237619" />
+      <inertia ixx="0.117083180275" ixy="0.00168135991963" ixz="0.00524248085511" iyy="0.169145913506" iyz="0.00015598485754" izz="0.221889366576" />
     </inertial>
     <visual name="base_link_motor">
       <geometry>

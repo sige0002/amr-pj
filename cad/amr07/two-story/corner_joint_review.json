@@ -1,0 +1,392 @@
+{
+  "revision": "D6.3",
+  "baseline_D62_commit": "ef44e1c15743f94d3d3fcaa7b7f757f26c136e96",
+  "native_sha256": "04ff9a2cdd8b4236bd79e8970ddd06476e909bdb9ec8a59ff5a76cea9c14a1ab",
+  "corners": [
+    {
+      "panel": "FloorPLA_0_0",
+      "outer_floor_corner_continuous": true,
+      "frame_bracket": "Bracket_NN120",
+      "floor_corner_fixing_xy_mm": [
+        -185,
+        -135
+      ],
+      "plastic_in_structural_clamp": false,
+      "auxiliary_flat_gusset_removed": true
+    },
+    {
+      "panel": "FloorPLA_0_1",
+      "outer_floor_corner_continuous": true,
+      "frame_bracket": "Bracket_N120",
+      "floor_corner_fixing_xy_mm": [
+        -185,
+        135
+      ],
+      "plastic_in_structural_clamp": false,
+      "auxiliary_flat_gusset_removed": true
+    },
+    {
+      "panel": "FloorPLA_1_0",
+      "outer_floor_corner_continuous": true,
+      "frame_bracket": "Bracket_PN120",
+      "floor_corner_fixing_xy_mm": [
+        185,
+        -135
+      ],
+      "plastic_in_structural_clamp": false,
+      "auxiliary_flat_gusset_removed": true
+    },
+    {
+      "panel": "FloorPLA_1_1",
+      "outer_floor_corner_continuous": true,
+      "frame_bracket": "Bracket_P120",
+      "floor_corner_fixing_xy_mm": [
+        185,
+        135
+      ],
+      "plastic_in_structural_clamp": false,
+      "auxiliary_flat_gusset_removed": true
+    }
+  ],
+  "retained_lower_frame_joints": [
+    {
+      "bracket": "Bracket_NN120",
+      "unchanged": true,
+      "metal_contacts": [
+        {
+          "rail": "Cross300_1",
+          "metal_contact_area_mm2": 359.99999999967235
+        },
+        {
+          "rail": "Rail400_1",
+          "metal_contact_area_mm2": 360.00000000017866
+        }
+      ],
+      "bolts": [
+        {
+          "bolt": "JointA_NN120",
+          "nominal_thread_overlap_mm": 6.300000000000011,
+          "head_to_bracket_bearing_area_mm2": 47.367363234457045,
+          "straight_tool_approach_mm": 25,
+          "hits": []
+        },
+        {
+          "bolt": "JointB_NN120",
+          "nominal_thread_overlap_mm": 6.299999999999997,
+          "head_to_bracket_bearing_area_mm2": 47.367363234524326,
+          "straight_tool_approach_mm": 25,
+          "hits": []
+        }
+      ]
+    },
+    {
+      "bracket": "Bracket_NN50",
+      "unchanged": true,
+      "metal_contacts": [
+        {
+          "rail": "Cross300_1",
+          "metal_contact_area_mm2": 359.99999999967235
+        },
+        {
+          "rail": "Rail400_2",
+          "metal_contact_area_mm2": 359.99999999992286
+        }
+      ],
+      "bolts": [
+        {
+          "bolt": "JointA_NN50",
+          "nominal_thread_overlap_mm": 6.300000000000011,
+          "head_to_bracket_bearing_area_mm2": 47.36736323445703,
+          "straight_tool_approach_mm": 25,
+          "hits": []
+        },
+        {
+          "bolt": "JointB_NN50",
+          "nominal_thread_overlap_mm": 6.299999999999997,
+          "head_to_bracket_bearing_area_mm2": 47.367363234490675,
+          "straight_tool_approach_mm": 25,
+          "hits": []
+        }
+      ]
+    },
+    {
+      "bracket": "Bracket_N50",
+      "unchanged": true,
+      "metal_contacts": [
+        {
+          "rail": "Cross300_1",
+          "metal_contact_area_mm2": 359.9999999996724
+        },
+        {
+          "rail": "Rail400_3",
+          "metal_contact_area_mm2": 359.9999999999282
+        }
+      ],
+      "bolts": [
+        {
+          "bolt": "JointA_N50",
+          "nominal_thread_overlap_mm": 6.300000000000011,
+          "head_to_bracket_bearing_area_mm2": 47.36736323445703,
+          "straight_tool_approach_mm": 25,
+          "hits": []
+        },
+        {
+          "bolt": "JointB_N50",
+          "nominal_thread_overlap_mm": 6.299999999999997,
+          "head_to_bracket_bearing_area_mm2": 47.367363234490675,
+          "straight_tool_approach_mm": 25,
+          "hits": []
+        }
+      ]
+    },
+    {
+      "bracket": "Bracket_N120",
+      "unchanged": true,
+      "metal_contacts": [
+        {
+          "rail": "Cross300_1",
+          "metal_contact_area_mm2": 359.9999999996724
+        },
+        {
+          "rail": "Rail400_4",
+          "metal_contact_area_mm2": 360.000000000184
+        }
+      ],
+      "bolts": [
+        {
+          "bolt": "JointA_N120",
+          "nominal_thread_overlap_mm": 6.300000000000011,
+          "head_to_bracket_bearing_area_mm2": 47.367363234457045,
+          "straight_tool_approach_mm": 25,
+          "hits": []
+        },
+        {
+          "bolt": "JointB_N120",
+          "nominal_thread_overlap_mm": 6.299999999999997,
+          "head_to_bracket_bearing_area_mm2": 47.367363234524326,
+          "straight_tool_approach_mm": 25,
+          "hits": []
+        }
+      ]
+    },
+    {
+      "bracket": "Bracket_PN120",
+      "unchanged": true,
+      "metal_contacts": [
+        {
+          "rail": "Cross300_2",
+          "metal_contact_area_mm2": 359.9999999996724
+        },
+        {
+          "rail": "Rail400_1",
+          "metal_contact_area_mm2": 360.000000000184
+        }
+      ],
+      "bolts": [
+        {
+          "bolt": "JointA_PN120",
+          "nominal_thread_overlap_mm": 6.300000000000011,
+          "head_to_bracket_bearing_area_mm2": 47.36736323445705,
+          "straight_tool_approach_mm": 25,
+          "hits": []
+        },
+        {
+          "bolt": "JointB_PN120",
+          "nominal_thread_overlap_mm": 6.299999999999997,
+          "head_to_bracket_bearing_area_mm2": 47.367363234524326,
+          "straight_tool_approach_mm": 25,
+          "hits": []
+        }
+      ]
+    },
+    {
+      "bracket": "Bracket_PN50",
+      "unchanged": true,
+      "metal_contacts": [
+        {
+          "rail": "Cross300_2",
+          "metal_contact_area_mm2": 359.9999999996724
+        },
+        {
+          "rail": "Rail400_2",
+          "metal_contact_area_mm2": 359.9999999999282
+        }
+      ],
+      "bolts": [
+        {
+          "bolt": "JointA_PN50",
+          "nominal_thread_overlap_mm": 6.300000000000011,
+          "head_to_bracket_bearing_area_mm2": 47.36736323445703,
+          "straight_tool_approach_mm": 25,
+          "hits": []
+        },
+        {
+          "bolt": "JointB_PN50",
+          "nominal_thread_overlap_mm": 6.299999999999997,
+          "head_to_bracket_bearing_area_mm2": 47.367363234490675,
+          "straight_tool_approach_mm": 25,
+          "hits": []
+        }
+      ]
+    },
+    {
+      "bracket": "Bracket_P50",
+      "unchanged": true,
+      "metal_contacts": [
+        {
+          "rail": "Cross300_2",
+          "metal_contact_area_mm2": 359.9999999996724
+        },
+        {
+          "rail": "Rail400_3",
+          "metal_contact_area_mm2": 359.99999999997436
+        }
+      ],
+      "bolts": [
+        {
+          "bolt": "JointA_P50",
+          "nominal_thread_overlap_mm": 6.300000000000011,
+          "head_to_bracket_bearing_area_mm2": 47.36736323445703,
+          "straight_tool_approach_mm": 25,
+          "hits": []
+        },
+        {
+          "bolt": "JointB_P50",
+          "nominal_thread_overlap_mm": 6.299999999999997,
+          "head_to_bracket_bearing_area_mm2": 47.367363234490675,
+          "straight_tool_approach_mm": 25,
+          "hits": []
+        }
+      ]
+    },
+    {
+      "bracket": "Bracket_P120",
+      "unchanged": true,
+      "metal_contacts": [
+        {
+          "rail": "Cross300_2",
+          "metal_contact_area_mm2": 359.9999999996724
+        },
+        {
+          "rail": "Rail400_4",
+          "metal_contact_area_mm2": 360.000000000184
+        }
+      ],
+      "bolts": [
+        {
+          "bolt": "JointA_P120",
+          "nominal_thread_overlap_mm": 6.300000000000011,
+          "head_to_bracket_bearing_area_mm2": 47.36736323445705,
+          "straight_tool_approach_mm": 25,
+          "hits": []
+        },
+        {
+          "bolt": "JointB_P120",
+          "nominal_thread_overlap_mm": 6.299999999999997,
+          "head_to_bracket_bearing_area_mm2": 47.367363234524326,
+          "straight_tool_approach_mm": 25,
+          "hits": []
+        }
+      ]
+    }
+  ],
+  "removed_parts": 28,
+  "additional_parts": 0,
+  "removed_metal_mass_kg": 0.16667959546770394,
+  "added_PLA_mass_kg": 0.044294784,
+  "mass_change_from_D62_kg": -0.12238481146770397,
+  "baseline_gusset_defects": [
+    {
+      "gusset": "Gusset_N1N1",
+      "hole": 0,
+      "washer_bearing_area_mm2": 49.26017280831343,
+      "full_washer_annulus_mm2": 98.52034561657591,
+      "bearing_fraction": 0.5000000000002586,
+      "defect": "Hole center lies on triangular diagonal edge; half of washer unsupported."
+    },
+    {
+      "gusset": "Gusset_N1N1",
+      "hole": 1,
+      "washer_bearing_area_mm2": 49.26017280831321,
+      "full_washer_annulus_mm2": 98.52034561657591,
+      "bearing_fraction": 0.5000000000002564,
+      "defect": "Hole center lies on triangular diagonal edge; half of washer unsupported."
+    },
+    {
+      "gusset": "Gusset_N11",
+      "hole": 0,
+      "washer_bearing_area_mm2": 49.26017280831321,
+      "full_washer_annulus_mm2": 98.52034561657591,
+      "bearing_fraction": 0.5000000000002564,
+      "defect": "Hole center lies on triangular diagonal edge; half of washer unsupported."
+    },
+    {
+      "gusset": "Gusset_N11",
+      "hole": 1,
+      "washer_bearing_area_mm2": 49.260172808313264,
+      "full_washer_annulus_mm2": 98.52034561657591,
+      "bearing_fraction": 0.5000000000002569,
+      "defect": "Hole center lies on triangular diagonal edge; half of washer unsupported."
+    },
+    {
+      "gusset": "Gusset_1N1",
+      "hole": 0,
+      "washer_bearing_area_mm2": 49.2601728083132,
+      "full_washer_annulus_mm2": 98.52034561657591,
+      "bearing_fraction": 0.5000000000002562,
+      "defect": "Hole center lies on triangular diagonal edge; half of washer unsupported."
+    },
+    {
+      "gusset": "Gusset_1N1",
+      "hole": 1,
+      "washer_bearing_area_mm2": 49.260172808313165,
+      "full_washer_annulus_mm2": 98.52034561657591,
+      "bearing_fraction": 0.5000000000002559,
+      "defect": "Hole center lies on triangular diagonal edge; half of washer unsupported."
+    },
+    {
+      "gusset": "Gusset_11",
+      "hole": 0,
+      "washer_bearing_area_mm2": 49.26017280831296,
+      "full_washer_annulus_mm2": 98.52034561657591,
+      "bearing_fraction": 0.5000000000002538,
+      "defect": "Hole center lies on triangular diagonal edge; half of washer unsupported."
+    },
+    {
+      "gusset": "Gusset_11",
+      "hole": 1,
+      "washer_bearing_area_mm2": 49.26017280831319,
+      "full_washer_annulus_mm2": 98.52034561657591,
+      "bearing_fraction": 0.5000000000002561,
+      "defect": "Hole center lies on triangular diagonal edge; half of washer unsupported."
+    }
+  ],
+  "selected": "Remove four auxiliary flat plates and eight bolt/washer/nut sets. Keep eight existing HBLFSN6 frame joints. Extend and separately fasten floor corners.",
+  "options": [
+    {
+      "option": "metal plate above PLA",
+      "assessment": "Not selected: shared clamp includes PLA creep in frame preload; compression stops and corrected plate holes required."
+    },
+    {
+      "option": "move existing metal plates below frame",
+      "assessment": "Rejected after bearing review: eight holes centered on diagonal edge give half-washer support. Relocation alone does not fix this."
+    },
+    {
+      "option": "remove flat plates and fasten floor corners",
+      "assessment": "Selected for prototype. Eight independent metal HBLFSN6 joints retain frame. Removes28 pieces and plate fabrication; all-axis stiffness remains unqualified."
+    }
+  ],
+  "catalog_reference": {
+    "url": "https://jp.misumi-ec.com/vona2/detail/110300442340/?HissuCode=HBLFSN6",
+    "checked_date": "2026-09-22",
+    "allowable_N_per_bracket": 1176,
+    "bolts": "2xM6x12",
+    "nuts": "2xHNTT6-6",
+    "scope": "Two-upright/one-crossmember test with two supporting brackets and all holes bolted. Not an allowable moment or all-axis chassis rating."
+  },
+  "assembly": "Assemble eight metal joints with both bolts tightened, then beam, floors and equipment. Floor screws remain independent.",
+  "qualification_scope": "Geometric contact, nominal thread overlap,25mm straight tool approach, unchanged metal joints, continuous corners. PLA carries equipment only; no frame bracing credit.",
+  "whole_frame_strength_qualified": false,
+  "static_payload_15kg_SF2_achieved": false,
+  "remaining": "Check joint seating/preload and chassis racking/twist for planned load cases before loaded use. Add properly designed metal reinforcement if measured stiffness requires it."
+}

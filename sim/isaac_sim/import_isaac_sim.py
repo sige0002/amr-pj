@@ -26,7 +26,7 @@ def import_into_stage(payload=0):
         raise RuntimeError("Open a new stage first")
     if UsdGeom.GetStageUpAxis(stage) != UsdGeom.Tokens.z or not math.isclose(UsdGeom.GetStageMetersPerUnit(stage), 1):
         raise ValueError("Use a Z-up stage with metersPerUnit=1")
-    filename = "amr_d62_payload_10kg.urdf" if payload == 10 else "amr_d62.urdf"
+    filename = "amr_d63_payload_10kg.urdf" if payload == 10 else "amr_d63.urdf"
     if payload not in (0, 10):
         raise ValueError("Available payloads: 0 or 10kg")
     root_name = ET.parse(HERE / filename).getroot().attrib["name"]
@@ -117,7 +117,7 @@ def main():
     parser.add_argument("--seconds", type=float, default=8, help="0 = import/export only")
     parser.add_argument("--speed", type=float, default=.10, help="m/s; initial limit +/-0.15")
     parser.add_argument("--yaw-rate", type=float, default=0, help="rad/s; initial limit +/-0.3")
-    parser.add_argument("--output", type=Path, default=HERE / "output/amr_d62_scene.usda")
+    parser.add_argument("--output", type=Path, default=HERE / "output/amr_d63_scene.usda")
     args = parser.parse_args()
     targets = wheel_speeds(args.speed, args.yaw_rate)
     if not math.isfinite(args.seconds) or args.seconds < 0:
