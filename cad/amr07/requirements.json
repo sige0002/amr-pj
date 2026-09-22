@@ -4,6 +4,36 @@
   "date": "2026-09-21",
   "supersedes_current_requirements_in": "../amr06/requirements.json",
   "status": "design_requirements_accepted_hardware_qualification_pending",
+  "battery_service": {
+    "date": "2026-09-22",
+    "revision": "D4",
+    "CAD": "battery-drawer/AMR01_BatteryDrawer_D4.FCStd",
+    "design_intent_ja": "電池の交換時に荷物・荷物ベルト・アルミ天板を外さない。電池固定と受け皿の抜け止めの両方を設計する。",
+    "battery_product_selected": false,
+    "old_reservation_only_mm": [
+      120,
+      80,
+      65
+    ],
+    "accepted_body_XYZ_mm": [
+      50,
+      112,
+      36
+    ],
+    "battery_body_XYZ_fit_example_mm": [
+      40,
+      104,
+      34.5
+    ],
+    "additional_metal_machining": false,
+    "retention": "two battery straps and padded stops; two guides; two M4 retention screws; existing four M6 frame joints",
+    "ground_clearance_mm": 25,
+    "service_travel_mm": 220,
+    "disconnect_before_withdrawal": true,
+    "prototype_retention_test_force_N": 39.3,
+    "prototype_retention_test_done": false,
+    "loaded_use_released": false
+  },
   "deck_manufacturing_constraints": {
     "date": "2026-09-22",
     "self_cut_and_drill_solid_square_bar_accepted": false,
@@ -16,7 +46,7 @@
     "selected_revision": "D3 direct aluminum",
     "user_clarification_ja": "アルミ板へ戻し、嵩上げを廃止。干渉は修正する。",
     "replacement_ja": "300x300x4mm一枚アルミ板を下段3030上面へ直接固定。上段フレーム・天板下スペーサーなし。電池受け床を7mm下げ最低地上高25mmを維持、電装トレイを前後へ移設。",
-    "replacement_CAD": "aluminum-direct-deck/AMR01_AluminumDirect_D3.FCStd",
+    "replacement_CAD": "battery-drawer/AMR01_BatteryDrawer_D4.FCStd",
     "loaded_use_released": false,
     "scope_note": "This rejection concerns the deck's square-bar fabrication. Previously quoted custom motor mounts remain separately specified."
   },

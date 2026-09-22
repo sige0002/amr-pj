@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-22",
+  "scope": "D4 full running subtotal, unfinished purchase list",
+  "subtotal": {
+    "JPY": 46358.0,
+    "USD": 120.9
+  },
+  "unpriced_rows": [
+    "S04",
+    "S07",
+    "D3_M6",
+    "D3_STOP_BOLTS",
+    "D3_STOP_NUTS",
+    "D3_STOP_WASHERS",
+    "D4_BOLT",
+    "D4_NUT",
+    "D4_WASHER",
+    "D4_LINER",
+    "D4_LACING",
+    "U01",
+    "U02"
+  ],
+  "known_delta_vs_D3_JPY": 146.0,
+  "PLA_solid_g_rounded": 332,
+  "PLA_material_reference_JPY": 664,
+  "new_metal_machining_required": false,
+  "quoted_D3_plate_unchanged": true,
+  "existing_four_M6_mount_sets_reused": true,
+  "H02_two_battery_straps_budget_carried_once_JPY": 500,
+  "battery_candidate": {
+    "part": "VANT5S2200mAh XT60",
+    "selected": false,
+    "ordinary_display_JPY": 9020,
+    "member_display_JPY": 6765,
+    "shipping_verified": false,
+    "stock_verified": false,
+    "source": "https://www.radicon1.com/item/VANT2200-45c-5sG/",
+    "included_in_subtotal": false
+  },
+  "full_running_subtotal_JPY_reference": 65371.60313315927,
+  "complete_purchase_total": false,
+  "note": "候補電池の価格は比較情報。電池・保護・充電器・追加小ねじ・パッド等が未価格のため完成総額ではない。従来の未選定品・輸入費・税・労務等の留保も継承。"
+}

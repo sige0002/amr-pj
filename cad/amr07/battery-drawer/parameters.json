@@ -1,0 +1,48 @@
+{
+  "revision": "D4",
+  "date": "2026-09-22",
+  "status": "mechanical_fit_prototype_battery_not_selected",
+  "source_revision": "099686bacaad0f72e8bc4ce15005cd708a5b2f83",
+  "deck_bottom_top_z_mm": [
+    99,
+    103
+  ],
+  "minimum_ground_mm": 25,
+  "battery_candidate": "VANT 5S 18.5V 2200mAh XT60",
+  "battery_selected": false,
+  "catalog_body_LWT_mm": [
+    104,
+    40,
+    34.5
+  ],
+  "installed_body_XYZ_mm": [
+    40,
+    104,
+    34.5
+  ],
+  "accepted_body_max_XYZ_mm": [
+    50,
+    112,
+    36
+  ],
+  "battery_seat_z_mm": 30,
+  "battery_center_xy_mm": [
+    -30,
+    0
+  ],
+  "battery_mass_allowance_kg": 0.75,
+  "frame_fasteners_reused": 4,
+  "battery_straps": 2,
+  "strap_width_thickness_mm": [
+    15,
+    1.5
+  ],
+  "strap_length_min_mm": 250,
+  "strap_side_overlap_mm": 25,
+  "drawer_retention": "2 M4x16 cap screws + M4 prevailing-torque nuts + washers",
+  "removal_direction": "+Y",
+  "full_removal_travel_mm": 220,
+  "side_clearance_for_motion_mm": 251,
+  "battery_pack_electrical_qualification": false,
+  "loaded_use_released": false
+}

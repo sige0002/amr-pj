@@ -66,7 +66,10 @@
       "mass_budget_kg": 0.75,
       "protection_and_adapter_compatibility_verified": false,
       "runtime_1h_verified": false,
-      "note": "No assumption that a tool battery retains cell protection through a two-terminal adapter. No regenerative charging assumed."
+      "note": "No assumption that a tool battery retains cell protection through a two-terminal adapter. No regenerative charging assumed.",
+      "mechanical_interface": "battery-drawer/parameters.json",
+      "mechanical_fit_candidate": "VANT5S18.5V2200mAh; not selected, see battery-drawer/battery_candidates.json",
+      "service": "Power off, disconnect external main connector, then remove two M4 screws and withdraw tray; battery and balance leads travel with tray; charger and cell protection remain unselected."
     },
     "motor_bus_test_voltages_V": [
       15.5,

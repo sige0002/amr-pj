@@ -1,0 +1,232 @@
+{
+  "parameters": {
+    "revision": "D4",
+    "date": "2026-09-22",
+    "status": "mechanical_fit_prototype_battery_not_selected",
+    "source_revision": "099686bacaad0f72e8bc4ce15005cd708a5b2f83",
+    "deck_bottom_top_z_mm": [
+      99,
+      103
+    ],
+    "minimum_ground_mm": 25,
+    "battery_candidate": "VANT 5S 18.5V 2200mAh XT60",
+    "battery_selected": false,
+    "catalog_body_LWT_mm": [
+      104,
+      40,
+      34.5
+    ],
+    "installed_body_XYZ_mm": [
+      40,
+      104,
+      34.5
+    ],
+    "accepted_body_max_XYZ_mm": [
+      50,
+      112,
+      36
+    ],
+    "battery_seat_z_mm": 30,
+    "battery_center_xy_mm": [
+      -30,
+      0
+    ],
+    "battery_mass_allowance_kg": 0.75,
+    "frame_fasteners_reused": 4,
+    "battery_straps": 2,
+    "strap_width_thickness_mm": [
+      15,
+      1.5
+    ],
+    "strap_length_min_mm": 250,
+    "strap_side_overlap_mm": 25,
+    "drawer_retention": "2 M4x16 cap screws + M4 prevailing-torque nuts + washers",
+    "removal_direction": "+Y",
+    "full_removal_travel_mm": 220,
+    "side_clearance_for_motion_mm": 251,
+    "battery_pack_electrical_qualification": false,
+    "loaded_use_released": false
+  },
+  "all_shapes_valid": true,
+  "physical_parts": 216,
+  "checked_pairs": 23220,
+  "collisions": [],
+  "reference_collisions": {},
+  "battery_reference_pair_collisions": [],
+  "handle_access_proxy_hits": [],
+  "continuous_drawer_service": [
+    {
+      "part": "BatteryDrawerPLA",
+      "travel_mm": 220,
+      "hits": []
+    },
+    {
+      "part": "BatteryCandidate",
+      "travel_mm": 220,
+      "hits": []
+    },
+    {
+      "part": "BatteryPad0",
+      "travel_mm": 220,
+      "hits": []
+    },
+    {
+      "part": "BatteryPad1",
+      "travel_mm": 220,
+      "hits": []
+    },
+    {
+      "part": "BatteryPad2",
+      "travel_mm": 220,
+      "hits": []
+    },
+    {
+      "part": "BatteryPad3",
+      "travel_mm": 220,
+      "hits": []
+    },
+    {
+      "part": "BatteryPad4",
+      "travel_mm": 220,
+      "hits": []
+    },
+    {
+      "part": "BatteryBeltN",
+      "travel_mm": 220,
+      "hits": []
+    },
+    {
+      "part": "BatteryBeltP",
+      "travel_mm": 220,
+      "hits": []
+    },
+    {
+      "part": "BatteryLeadRoute",
+      "travel_mm": 220,
+      "hits": []
+    },
+    {
+      "part": "BatteryServiceConnector",
+      "travel_mm": 220,
+      "hits": []
+    }
+  ],
+  "max_accepted_pack_sweep_hits": [],
+  "service_hex_key_access": [
+    {
+      "part": "DrawerScrewXN",
+      "hits": []
+    },
+    {
+      "part": "DrawerScrewXP",
+      "hits": []
+    }
+  ],
+  "fastener_removal": [
+    {
+      "part": "DrawerScrewXN",
+      "hits": []
+    },
+    {
+      "part": "DrawerScrewXP",
+      "hits": []
+    },
+    {
+      "part": "DrawerWasherXN",
+      "hits": []
+    },
+    {
+      "part": "DrawerWasherXP",
+      "hits": []
+    }
+  ],
+  "caster_sweep_hits": [],
+  "tire_outward_service": [
+    {
+      "side": -1,
+      "hits": []
+    },
+    {
+      "side": 1,
+      "hits": []
+    }
+  ],
+  "unchanged_physical_parts": 207,
+  "unchanged_parts_BRep_equal": true,
+  "deck_BRep_unchanged": true,
+  "removed_parts": [
+    "BatteryCradlePLA",
+    "BatteryReservedSpace",
+    "BatteryConnectorEnvelope"
+  ],
+  "added_parts": [
+    "BatteryGuideXN",
+    "DrawerNutXN",
+    "DrawerWasherXN",
+    "DrawerScrewXN",
+    "BatteryGuideXP",
+    "DrawerNutXP",
+    "DrawerWasherXP",
+    "DrawerScrewXP",
+    "BatteryDrawerPLA",
+    "BatteryCandidate",
+    "BatteryPad0",
+    "BatteryPad1",
+    "BatteryPad2",
+    "BatteryPad3",
+    "BatteryPad4",
+    "BatteryBeltN",
+    "BatteryBeltP",
+    "BatteryLeadRoute",
+    "BatteryServiceConnector"
+  ],
+  "moving_parts": [
+    "BatteryDrawerPLA",
+    "BatteryCandidate",
+    "BatteryPad0",
+    "BatteryPad1",
+    "BatteryPad2",
+    "BatteryPad3",
+    "BatteryPad4",
+    "BatteryBeltN",
+    "BatteryBeltP",
+    "BatteryLeadRoute",
+    "BatteryServiceConnector"
+  ],
+  "released_before_service": [
+    "DrawerScrewXN",
+    "DrawerScrewXP",
+    "DrawerWasherXN",
+    "DrawerWasherXP"
+  ],
+  "clearances_mm": {
+    "ground": 25,
+    "nominal_pack_belt_to_rail": 3,
+    "max_pack_belt_to_rail": 1.5,
+    "tongue_top_running_gap": 2,
+    "drawer_sidewall_to_guide": 1,
+    "pack_front_to_frame_after220mm": 14,
+    "handle_top_to_rail": 2
+  },
+  "mass": {
+    "source_D3_kg": 8.246366343915682,
+    "old_cradle_removed_kg": 0.1317532350310878,
+    "new_prints_and_hardware_kg": 0.21330675731884363,
+    "soft_liner_allowance_kg": 0.01,
+    "battery_allowance_carried_kg": 0.75,
+    "electrical_allowance_carried_kg": 2.1,
+    "no_battery_catalog_mass_credit": true,
+    "estimated_base_kg": 8.337919866203437,
+    "remaining_to_10kg_kg": 1.6620801337965627,
+    "total_solid_PLA_kg": 0.3317133874163161,
+    "actually_weighed": false
+  },
+  "inherited_D3_tests": "Unchanged deck, cargo belts, grid hardware and frame. Original36-hole/tool checks remain applicable; new parts stay below69mm. See saved validation for independent clearance checks.",
+  "limitations": [
+    "Catalog candidate is not a final battery selection: cost, usable runtime, charger and individual-cell protection unresolved",
+    "Guide and tray are PLA prototypes: print orientation, sliding friction, creep, heat and withdrawal restraint require dummy-load testing",
+    "All fits nominal; allow only measured pack body<=50x112x36 with leads/boots inside their separate reservations",
+    "Unplug externally before withdrawal; this is not a live hot-swap connector or an electrical dock",
+    "Vehicle15kg/SF2 qualification remains pending; no claim from battery-retainer CAD alone"
+  ]
+}

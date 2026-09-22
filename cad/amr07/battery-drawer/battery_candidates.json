@@ -1,0 +1,43 @@
+{
+  "observed_date": "2026-09-22",
+  "selected_part": null,
+  "mechanical_fit_basis": "VANT5S2200mAh, lay34.5mm dimension vertically; long axis along service direction Y",
+  "qualification_status": "Mechanical fit candidate; not a complete battery, protection and charging system selection",
+  "candidates": [
+    {
+      "part": "VANT50C5S18.5V2200mAh XT60",
+      "source": "https://www.radicon1.com/item/VANT2200-45c-5sG/",
+      "published_dimensions_mm": [104, 34.5, 40],
+      "published_mass_g": 295,
+      "nominal_voltage_V": 18.5,
+      "capacity_Ah": 2.2,
+      "nominal_energy_Wh_calculated": 40.7,
+      "discharge_connector": "XT60",
+      "balance_connector": "JST-XH",
+      "ordinary_display_JPY_tax_included": 9020,
+      "member_display_JPY_tax_included": 6765,
+      "member_login_required": true,
+      "shipping_and_stock_verified": false,
+      "decision": "Fit example only. High current RC specification is not itself a selection reason. Cost, runtime, cell-level protection, charger and actual lead exit must be settled together."
+    },
+    {
+      "part": "Turnigy2200mAh5S30C",
+      "source": "https://hobbyking.com/en_us/turnigy-2200mah-5s-30c-lipo-pack.html",
+      "published_dimensions_mm": [108, 34, 45],
+      "published_mass_g": 316,
+      "display_USD": 30.03,
+      "availability": "Page explicitly labels Discontinued Product",
+      "decision": "Excluded as a current procurement choice; size does fit after rotation."
+    },
+    {
+      "part": "CNHL G+Plus2200mAh5S30C",
+      "source": "https://chinahobbyline.com/collections/cnhl-voltage-18-5v-5s-lipo-batteries/products/cnhl-g-plus-2200mah-18-5v-5s-30c-lipo-battery-with-xt60-plug",
+      "published_dimensions_mm": [107, 34, 45],
+      "display_USD": 28.99,
+      "availability": "Out of stock in listed depots at observation",
+      "decision": "Not selected: availability, connector description mismatch, and published1..5mm dimension variation need resolution. Maximum thickness variation exceeds D4 acceptance limit."
+    }
+  ],
+  "accepted_body_envelope_XYZ_mm": [50, 112, 36],
+  "note": "This envelope is for the body only. Installed liners, belts, plugs, lead bend space and strain relief have separate CAD envelopes. A65mm-thick pack from the old reservation cannot use this drawer route. No claim of1hour runtime."
+}

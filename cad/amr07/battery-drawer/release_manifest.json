@@ -1,0 +1,103 @@
+{
+  "revision": "D4",
+  "date": "2026-09-22",
+  "source_revision": "099686bacaad0f72e8bc4ce15005cd708a5b2f83",
+  "source_D3_quoted_files_unchanged": {
+    "AMR_GridDeck_C45_D3.step": "c38862f7ac33c2f30bba198fce54ff1bcb22bd75820bd994dd8b4a5e7f5c0d4c",
+    "AMR_GridDeck_C45_D3.pdf": "e1428bb6273c0ab40b53fd2bbdb0904d620a0ff47ee51243ff735e6c8cf034bb"
+  },
+  "files": {
+    "AMR01_BatteryDrawer_D4.FCStd": {
+      "bytes": 1411521,
+      "sha256": "babf986f750b90e31b2f88be8fd279b0b375c59fb84d18921aadeccc0c1c6d4c"
+    },
+    "AMR01_BatteryDrawer_D4.step": {
+      "bytes": 6916182,
+      "sha256": "1d379a995c6bcb0dac574ef741c71f7ae7d40c4beb827d0a7ecadaf32220f913"
+    },
+    "D4-battery-print-files.zip": {
+      "bytes": 43253,
+      "sha256": "be0573e1bc78b366fa955c5a10a2e75af2208f4d3edd35a54cb63be35bd119ba"
+    },
+    "validation.json": {
+      "bytes": 5571,
+      "sha256": "ad583fe260f8557e47a13afd67bd873c121931d3d509d16e94da09925bbc4021"
+    },
+    "saved_artifact_validation.json": {
+      "bytes": 2171,
+      "sha256": "6fca7f5d176e7a9b1e79425dfb482bf670e988370d3a6f891e8208f9d8ba6260"
+    },
+    "BOM.csv": {
+      "bytes": 15598,
+      "sha256": "97ef51a663eae7047b028da001c8e816d0381e6c594342aff6fe7bbf8759e8d2"
+    },
+    "cost_summary.json": {
+      "bytes": 1299,
+      "sha256": "271ad5d72669cc7d3c8727a89a343da804fda0d641c9cc637edde3e14978d65f"
+    },
+    "parameters.json": {
+      "bytes": 1055,
+      "sha256": "15a9ed975bd3dbff9ade18a34946874f8fed391c224197a619d2e4dfcef6c61b"
+    },
+    "print_manifest.json": {
+      "bytes": 458,
+      "sha256": "4f8fab1cd3a1b8f9a9210331fd3da4052b043350fa2724b1621a502f56efd145"
+    },
+    "battery_candidates.json": {
+      "bytes": 2323,
+      "sha256": "7acdba676dcabeb842a48ea5462bb13bd83a51427c6676b02804186d40c21bdd"
+    },
+    "README.ja.md": {
+      "bytes": 8632,
+      "sha256": "9f3d1900a437fc9e866751c376756b2a021de34bdd5806d7f6e59393e9413b24"
+    },
+    "build_d4.py": {
+      "bytes": 17396,
+      "sha256": "6171d3775cb144133956fde6ac2e06afa1a0e0b10de9f5442d1ce95c626ef32c"
+    },
+    "build_bom.py": {
+      "bytes": 4776,
+      "sha256": "7f870e56502d99baf588bfc6434cbd958a8b75e3cc4e3487de838b58e1f9c4b9"
+    },
+    "validate_saved.py": {
+      "bytes": 3991,
+      "sha256": "727243eacce0cf763c5ba5b6ef209b8249afff30ca8659b4880efba8350c188f"
+    },
+    "capture_screens.py": {
+      "bytes": 4021,
+      "sha256": "1bdf6f542b5a47058d789147d2cd7cdb0b94f9896ab171468b273224cbd74064"
+    },
+    "cad-screen-assembled.png": {
+      "bytes": 195982,
+      "sha256": "3e11b2426a9c755dbeb9b0402128c06490fcbe09ee9dbb72f9ff58d46a3edac5"
+    },
+    "cad-screen-battery-exchange.png": {
+      "bytes": 200590,
+      "sha256": "2b1c25af85124ca2729614aec9099e6ae60f660e7dada3af9808e6741333ca68"
+    },
+    "cad-screen-guide-mounting.png": {
+      "bytes": 163661,
+      "sha256": "24755530236649fb3512ce14e30f0487a56d640a4df1d9f24724ec7e9deb4b05"
+    },
+    "cad-screen-pack-retention.png": {
+      "bytes": 185440,
+      "sha256": "5c19ea5d5a10578c6d4fcd9c190a86f46ddfc82055f68b33c7dfef5f54c667a1"
+    },
+    "cad-screen-service-side.png": {
+      "bytes": 160096,
+      "sha256": "fce635742920c47d65ac212fa8076f6af8fbdd78d590e22833b0f916ed35de05"
+    }
+  },
+  "battery_selected": false,
+  "loaded_use_released": false,
+  "new_metal_quote_requested": false,
+  "source_D3_prints_still_used": [
+    "ElectronicsTrayPLA",
+    "FrontElectronicsTrayPLA",
+    "PrintedStopXN",
+    "PrintedStopXP",
+    "PrintedStopYN",
+    "PrintedStopYP"
+  ],
+  "source_D3_print_removed": "BatteryCradlePLA"
+}

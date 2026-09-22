@@ -1,0 +1,91 @@
+{
+  "native_document": "AMR01_BatteryDrawer_D4",
+  "all_shapes_valid": true,
+  "physical_parts": 216,
+  "native_physical_solids": 220,
+  "step_solids": 220,
+  "native_volume_mm3": 2506798.0621094564,
+  "step_volume_mm3": 2506798.16461945,
+  "step_delta_mm3": 0.10250999359413981,
+  "step_relative_tolerance": 1e-06,
+  "step_scope": "physical parts; catalog battery, liners, straps and wire references remain in FCStd only",
+  "quoted_plate_BRep_matches_saved_assembly": true,
+  "quoted_files_SHA256": {
+    "AMR_GridDeck_C45_D3.step": "c38862f7ac33c2f30bba198fce54ff1bcb22bd75820bd994dd8b4a5e7f5c0d4c",
+    "AMR_GridDeck_C45_D3.pdf": "e1428bb6273c0ab40b53fd2bbdb0904d620a0ff47ee51243ff735e6c8cf034bb"
+  },
+  "saved_service_samples_mm": [
+    0,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    110,
+    120,
+    130,
+    140,
+    150,
+    160,
+    170,
+    180,
+    190,
+    200,
+    210,
+    220
+  ],
+  "saved_service_sample_hits": [],
+  "continuous_service_check_passed": true,
+  "unchanged_original_parts_BRep_equal": true,
+  "inherited36grid_examples_new_parts_max_Z_mm": 69.0,
+  "lowest_inherited_grid_tip_Z_mm": 92.8,
+  "meshes": [
+    {
+      "file": "BatteryGuideXN.stl",
+      "closed": true,
+      "size_mm": [
+        44.0,
+        227.0,
+        31.999999999999986
+      ]
+    },
+    {
+      "file": "BatteryGuideXP.stl",
+      "closed": true,
+      "size_mm": [
+        44.0,
+        227.0,
+        31.0
+      ]
+    },
+    {
+      "file": "BatteryDrawerPLA.stl",
+      "closed": true,
+      "size_mm": [
+        84.0,
+        243.0,
+        42.0
+      ]
+    }
+  ],
+  "mass": {
+    "source_D3_kg": 8.246366343915682,
+    "old_cradle_removed_kg": 0.1317532350310878,
+    "new_prints_and_hardware_kg": 0.21330675731884363,
+    "soft_liner_allowance_kg": 0.01,
+    "battery_allowance_carried_kg": 0.75,
+    "electrical_allowance_carried_kg": 2.1,
+    "no_battery_catalog_mass_credit": true,
+    "estimated_base_kg": 8.337919866203437,
+    "remaining_to_10kg_kg": 1.6620801337965627,
+    "total_solid_PLA_kg": 0.3317133874163161,
+    "actually_weighed": false
+  },
+  "battery_selected": false,
+  "load_test_completed": false
+}

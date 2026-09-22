@@ -82,8 +82,8 @@
     },
     {
       "file": "README.ja.md",
-      "bytes": 10142,
-      "sha256": "63674df7c7f2dd0f215cedaab93774cf0af5d55a51011984368cbc7da14f7b7c"
+      "bytes": 10339,
+      "sha256": "3af7ac3ef20f2e0c1b2c647e57b119c46283743d322b1c529e091b9477d24488"
     },
     {
       "file": "analysis_parameters.json",
@@ -291,5 +291,6 @@
       "sha256": "90b1b887aee48c2c2f4dc9edc63ff85b0bc19f19a3a803499044d2e0cb492478"
     }
   ],
-  "saved_artifacts_validation": "saved_artifact_validation.json"
+  "saved_artifacts_validation": "saved_artifact_validation.json",
+  "documentation_superseded_by": "../battery-drawer/README.ja.md; D3 CAD, quote files and their hashes unchanged"
 }

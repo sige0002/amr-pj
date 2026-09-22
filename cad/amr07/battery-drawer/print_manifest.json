@@ -1,0 +1,29 @@
+[
+  {
+    "file": "BatteryGuideXN.stl",
+    "size_mm": [
+      44.0,
+      227.0,
+      32.000000000000014
+    ],
+    "solid_mass_g": 48.976406072607254
+  },
+  {
+    "file": "BatteryGuideXP.stl",
+    "size_mm": [
+      44.0,
+      227.0,
+      31.000000000000004
+    ],
+    "solid_mass_g": 48.75430652917149
+  },
+  {
+    "file": "BatteryDrawerPLA.stl",
+    "size_mm": [
+      84.0,
+      243.0,
+      42.0
+    ],
+    "solid_mass_g": 107.14231452318107
+  }
+]

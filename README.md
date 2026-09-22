@@ -1,48 +1,34 @@
 # amr-pj — 家庭向け小型AMR / 将来MoMa
 
-現行案は **D3：一枚アルミ天板を、元の下段3030へ直接固定する構成**。分割PLA天板から戻し、嵩上げ用フレーム・天板下スペーサーを取り除きました。天板上面は床上103mmです。
+現行案は **D4：低いアルミ天板を維持し、電池を側面から交換する構成**。D3で悪化した電池アクセスを修正し、電池を受け皿に固定するベルト・当て材と、受け皿を車体に固定するガイド・抜け止めねじを追加しました。
 
-M0601C_111二輪、100.7mmタイヤ、TYG-50キャスター、下段460×300mmの骨格を継承。通常積載10kg、構造検証15kg・静的安全率2、電池・電装込み車体10kg以下を設計目標とします。運用範囲は平坦な屋内床、追加機械ブレーキなし。
+**電池そのものは未選定です。** 旧120×80×65mmは寸法予約でした。D4は薄型5Sの公開寸法を使った機械試作で、設置時の本体上限は50×112×36mm。容量・保護・充電器・総費用の選定は残ります。
 
-| D3の変更と確認 | 内容 |
+![天板・荷物例を残して電池を取り出すFreeCAD実画面](cad/amr07/battery-drawer/cad-screen-battery-exchange.png)
+
+| D4の構成 | 内容 |
 |---|---|
-| 天板 | 6061-T6・300×300×4mmの一枚板、継ぎ目なし |
-| 高さ・固定 | 床上103mm。下段へM6と溝ナット6組で直付け。P1より38mm低い |
-| 拡張性 | 50mm格子・φ4.5の36通し穴。24穴は裏ナット、12穴はフレーム溝のM4ナットを使用 |
-| 干渉修正 | 電池受けを7mm下げ、前後トレイ・穴・ベルト経路を修正。地上高25mmを維持 |
-| 検査 | 208部品・21,528ペアで公称干渉なし。36穴、工具、天板・電池・タイヤの取外しも確認 |
-| 車体重量 | 推計8.246kg、10kgまで1.754kg。電池・電装2.10kg枠込み、未実測 |
-| 天板の再見積 | 修正版STEP/PDFで加工28.67＋日本向けUPS9.98＝38.65 USD、参考約6,080円 |
-| 全車の途中小計 | 46,212円＋120.90 USD＋未確定分。既知部分はP1より参考約1,784円減 |
+| 天板 | D3の6061-T6一枚板300×300×4mmを継承。上面103mm、下段3030へ直付け |
+| 電池の固定 | 底のパッド・四辺の当て面・15mm幅ベルト2本。ベルトを受け皿の専用溝へ通す |
+| 受け皿の固定 | 印刷ガイド2個、M4抜け止め2本。フレームへの既存M6固定4組を再使用 |
+| 交換方法 | 電源を切り、外側のコネクタを切離し、M4を2本外して横へ220mm抜く。最後は手で支える |
+| 高さ | 地上高25mmを維持。天板・荷物を降ろさず交換する経路を確認 |
+| CAD確認 | 216物理部品の公称干渉0件。電池・ベルト・受け皿の連続移動、工具、指の空間を確認 |
+| 車体重量 | 推計約8.34kg。未選定の電池・電装2.10kg枠を維持、未実測 |
+| 費用 | 新たな金属加工なし。追加印刷材料はD3比参考約150円。小ねじ・パッド・電池等の未価格品はBOMに明示 |
 
-![D3直付けアルミ天板のFreeCAD画面](cad/amr07/aluminum-direct-deck/cad-screen-isometric.png)
+M0601C_111二輪、100.7mmタイヤ、TYG-50、下段460×300mmの骨格は従来どおり。通常積載10kg、構造検証15kg・静的安全率2、電池・電装込み車体10kg以下を設計目標とします。運用範囲は平坦な屋内床、追加機械ブレーキなし。CADの公称干渉検査は、PLAの保持力・温度・耐久や車体全体の実機耐荷重の保証ではありません。
 
-[側面から見た高さ](cad/amr07/aluminum-direct-deck/cad-screen-low-profile.png) / [格子穴の真上画像](cad/amr07/aluminum-direct-deck/cad-screen-grid-top.png)。画像は組立CADの実画面です。
-
-CAD検査は公称形状による確認で、実機の耐荷重・安全率2を保証するものではありません。自動加工見積は担当者審査前、円表示はECB2026-09-21による参考換算で、税・決済費用などは別です。
-
-- [D3の設計理由・干渉修正・締結・費用](cad/amr07/aluminum-direct-deck/README.ja.md)
-- [現行組立FCStd](cad/amr07/aluminum-direct-deck/AMR01_AluminumDirect_D3.FCStd) / [STEP](cad/amr07/aluminum-direct-deck/AMR01_AluminumDirect_D3.step)
-- [現行BOM CSV](cad/amr07/aluminum-direct-deck/BOM.csv) / [小計と未確定項目](cad/amr07/aluminum-direct-deck/cost_summary.json)
-- [D3加工用STEP](cad/amr07/aluminum-direct-deck/AMR_GridDeck_C45_D3.step) / [図面PDF](cad/amr07/aluminum-direct-deck/AMR_GridDeck_C45_D3.pdf) / [実見積画面](cad/amr07/aluminum-direct-deck/quote-evidence/C45-economic.png)
-- [設計要件](cad/amr07/requirements.json) / [検査・質量内訳](cad/amr07/aluminum-direct-deck/validation.json)
-- [電池受け・トレイ・ストッパの印刷7部品](cad/amr07/aluminum-direct-deck/D3-print-files.zip)
+- [D4の固定具・交換手順・電池候補・残る検証](cad/amr07/battery-drawer/README.ja.md)
+- [電池固定具の接写](cad/amr07/battery-drawer/cad-screen-pack-retention.png) / [ガイドとフレーム締結](cad/amr07/battery-drawer/cad-screen-guide-mounting.png)
+- [現行組立FCStd](cad/amr07/battery-drawer/AMR01_BatteryDrawer_D4.FCStd) / [STEP](cad/amr07/battery-drawer/AMR01_BatteryDrawer_D4.step)
+- [現行BOM CSV](cad/amr07/battery-drawer/BOM.csv) / [小計と未確定項目](cad/amr07/battery-drawer/cost_summary.json)
+- [電池用の交換印刷3部品](cad/amr07/battery-drawer/D4-battery-print-files.zip) / [検査・質量内訳](cad/amr07/battery-drawer/validation.json)
+- [D3から継承する天板・加工図面・実見積](cad/amr07/aluminum-direct-deck/README.ja.md)
+- [設計要件](cad/amr07/requirements.json) / [電源・停止・回生と試験仕様](cad/amr07/ELECTRICAL_AND_VALIDATION.ja.md)
 - [モーター金具の実加工見積](cad/amr07/MACHINING_QUOTE.ja.md) / [キャスター調達](cad/amr07/CASTER_PROCUREMENT.ja.md)
-- [電源・停止・回生と試験仕様](cad/amr07/ELECTRICAL_AND_VALIDATION.ja.md)
-- [旧P1と継ぎ目レビュー](cad/amr07/printed-deck-frame/README.ja.md) / [旧D2の記録](cad/amr07/aluminum-grid-deck/README.ja.md)
 
-D3の再生成は `cad/amr07/aluminum-direct-deck/build_d3.py` をFreeCAD Pythonで実行し、`python3 cad/amr07/aluminum-direct-deck/build_bom.py` でBOMを更新します。以下は共通駆動計算と旧D2の履歴用コマンドです。
-
-## 再計算
-
-```sh
-python3 cad/amr07/calculate_design.py --check-only
-python3 cad/amr07/cargo_deck.py
-python3 cad/amr07/record_cost.py
-python3 cad/amr07/build_bom.py
-```
-
-Excelの更新方法は[BOMのデータと更新](cad/amr07/BOM.ja.md#データと更新)、CAD再生成は[A6 README](cad/amr07/README.ja.md)。見積済み図面/STEPを変更するときは別改訂で見積り直します。
+再生成はFreeCAD Pythonで`cad/amr07/battery-drawer/build_d4.py`、通常のPythonで同フォルダの`build_bom.py`、FreeCAD GUIで`capture_screens.py`。保存後にFreeCAD Pythonで`validate_saved.py`、通常のPythonで`release.py`を実行します。旧D3の見積済み天板STEP/PDFは変更しません。電装設計と未選定品の留保は引き続き上記資料を参照してください。
 
 ## 比較履歴・共通資料
 
