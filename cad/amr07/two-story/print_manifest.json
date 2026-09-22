@@ -1,0 +1,38 @@
+[
+  {
+    "file": "FloorPLA_0_0.stl",
+    "size_mm": [
+      229.8,
+      149.8,
+      11.0
+    ],
+    "solid_mass_g": 86.92014360399077
+  },
+  {
+    "file": "FloorPLA_0_1.stl",
+    "size_mm": [
+      229.8,
+      149.8,
+      11.0
+    ],
+    "solid_mass_g": 86.92014360398872
+  },
+  {
+    "file": "FloorPLA_1_0.stl",
+    "size_mm": [
+      229.8,
+      149.8,
+      9.0
+    ],
+    "solid_mass_g": 82.95928600398973
+  },
+  {
+    "file": "FloorPLA_1_1.stl",
+    "size_mm": [
+      229.8,
+      149.8,
+      9.0
+    ],
+    "solid_mass_g": 82.57835800398968
+  }
+]

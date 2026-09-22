@@ -1,0 +1,55 @@
+{
+  "revision": "D6",
+  "date": "2026-09-22",
+  "scope": "member-level elastic screening, not whole-frame SF2 release",
+  "upper_vertical_service_force_N": 242.79039,
+  "static_factor": 2.0,
+  "upper_rails": {
+    "part": "NFSL6-3030",
+    "support_span_mm": 210.0,
+    "I_mm4": 26800.0,
+    "E_MPa": 69000.0,
+    "force_per_rail_N": 121.395195,
+    "factored_stress_MPa": 7.134232541977611,
+    "factored_center_deflection_mm": 0.025331695257746593,
+    "assumption": "simple support at posts; half total plate load concentrated at rail midpoint; torsion and joint compliance omitted",
+    "source": "https://jp.misumi-ec.com/vona2/detail/110311092329/"
+  },
+  "posts": {
+    "part": "SF2-30・30",
+    "length_mm": 100.0,
+    "catalog_mass_kg_m": 0.84,
+    "I_mm4": 28700.0,
+    "area_from_catalog_mass_mm2": 311.11111111111114,
+    "one_post_factored_compression_MPa": 1.5607953642857142,
+    "ideal_Euler_load_K2_N": 488619.43988693133,
+    "source": "https://fa.sus.co.jp/service/detail?ItemNo=SFF-324"
+  },
+  "joints": {
+    "new_brackets": 8,
+    "arrangement": "one bottom and one top bracket on opposite post faces; post ends bear directly on horizontal rails",
+    "physical_push_test_target_N": 60.0,
+    "physical_push_test_completed": false,
+    "equal_share_bracket_strip_stress_MPa": 22.22222222222222,
+    "assumptions": "four equal paths;20x4.5mm root strip under1500Nmm. No casting strength or joint slip acceptance inferred.",
+    "mixed_manufacturer_interface": "HBLFSN6/HNTT6-6 vs SUS SF2; nominal CAD fit only; actual tabs/seating/bolt bottoming to verify",
+    "clamp_torque_or_preload_qualified": false,
+    "frame_racking_qualified": false
+  },
+  "previous_plate_FEA": {
+    "files": "aluminum-direct-deck/fea",
+    "quoted_step_sha256": "c38862f7ac33c2f30bba198fce54ff1bcb22bd75820bd994dd8b4a5e7f5c0d4c",
+    "justification": "same manufactured plate and six ideal clamped patches at x=-105,0,105;y=+-135. Only rigid translation+130mm. Prior model already omitted all other rail contacts.",
+    "maximum_reference_deflection_mm": 0.1825696,
+    "factored_reference_stress_MPa": 36.35802107644287,
+    "limitations": "New frame joint flexibility is not in old plate model. Local mesh peak stress was not converged; material/preload/contact/impact qualification outstanding."
+  },
+  "required_mock_checks": [
+    "Panel and battery retention force45N, no permanent shift; no vehicle operation during test.",
+    "Complete metal frame: apply60N horizontally in both axes and both directions; check slip, permanent set, and access after load.",
+    "Received post lengths/coplanarity, slotnut engagement, bracket locating tabs and torque to manufacturer instructions.",
+    "Weigh completed vehicle including wires, cases and fasteners; base<=10kg. Verify mass placement against updated requirements."
+  ],
+  "static_factor_2_achieved": false,
+  "loaded_operation_released": false
+}

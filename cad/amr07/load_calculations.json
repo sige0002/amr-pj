@@ -1,5 +1,5 @@
 {
-  "requirements_sha256": "e310922561508517fc8df9da9488e6cd1cde6ad3aeee6de4b2665cd579e1df3f",
+  "requirements_sha256": "bd8f75c928289d666dffa66f5cb8d56c797ea4b1be42d6f3d9d181282b7f8186",
   "load_cases": [
     {
       "id": "normal",
@@ -11,15 +11,15 @@
       "evaluated_pose_vertices": 46080,
       "normal_reaction_extrema": {
         "left": {
-          "min_N": 22.323811278329636,
-          "max_N": 89.52901966399521,
+          "min_N": 20.135954150606732,
+          "max_N": 92.30869265489505,
           "min_case": {
             "base_mass_kg": 6,
             "gross_mass_kg": 16,
             "cg_xyz_mm": [
               -28.125,
-              -22.5,
-              180.625
+              -24.375,
+              266.25
             ],
             "acceleration_xy_m_s2": [
               0.2,
@@ -28,9 +28,9 @@
             "slope_azimuth_deg": 230.8888089274537,
             "caster_angle_deg": 231.00000000000003,
             "all_reactions_N": [
-              22.323811278329636,
-              51.45948224687047,
-              83.12310647479988
+              20.135954150606732,
+              52.45567687386276,
+              84.3147689755305
             ]
           },
           "max_case": {
@@ -38,8 +38,8 @@
             "gross_mass_kg": 20,
             "cg_xyz_mm": [
               27.5,
-              20.0,
-              167.5
+              22.5,
+              245.0
             ],
             "acceleration_xy_m_s2": [
               -0.2,
@@ -48,33 +48,33 @@
             "slope_azimuth_deg": 57.07064395586597,
             "caster_angle_deg": 57.0,
             "all_reactions_N": [
-              89.52901966399521,
-              60.011098402976344,
-              46.592881933028416
+              92.30869265489505,
+              58.47783582767747,
+              45.34647151742745
             ]
           }
         },
         "right": {
-          "min_N": 22.323811278329636,
-          "max_N": 89.52901966399521,
+          "min_N": 20.135954150606736,
+          "max_N": 92.30869265489505,
           "min_case": {
             "base_mass_kg": 6,
             "gross_mass_kg": 16,
             "cg_xyz_mm": [
               -28.125,
-              22.5,
-              180.625
+              24.375,
+              266.25
             ],
             "acceleration_xy_m_s2": [
               0.2,
               -0.18
             ],
-            "slope_azimuth_deg": 129.11119107254626,
+            "slope_azimuth_deg": 129.11119107254623,
             "caster_angle_deg": 129.0,
             "all_reactions_N": [
-              51.45948224687047,
-              22.323811278329636,
-              83.12310647479988
+              52.45567687386276,
+              20.135954150606736,
+              84.3147689755305
             ]
           },
           "max_case": {
@@ -82,8 +82,8 @@
             "gross_mass_kg": 20,
             "cg_xyz_mm": [
               27.5,
-              -20.0,
-              167.5
+              -22.5,
+              245.0
             ],
             "acceleration_xy_m_s2": [
               -0.2,
@@ -92,22 +92,22 @@
             "slope_azimuth_deg": 302.929356044134,
             "caster_angle_deg": 303.0,
             "all_reactions_N": [
-              60.011098402976344,
-              89.52901966399521,
-              46.592881933028416
+              58.47783582767747,
+              92.30869265489505,
+              45.34647151742745
             ]
           }
         },
         "caster": {
-          "min_N": 35.666341796875,
-          "max_N": 105.8733370535714,
+          "min_N": 34.596029296875,
+          "max_N": 107.25726562499997,
           "min_case": {
             "base_mass_kg": 6,
             "gross_mass_kg": 16,
             "cg_xyz_mm": [
               28.125,
-              -22.5,
-              180.625
+              -24.375,
+              266.25
             ],
             "acceleration_xy_m_s2": [
               -0.2,
@@ -116,9 +116,9 @@
             "slope_azimuth_deg": 0.0,
             "caster_angle_deg": 0.0,
             "all_reactions_N": [
-              51.994831393826104,
-              69.24522680929888,
-              35.666341796875
+              52.39359939167711,
+              69.91677131144789,
+              34.596029296875
             ]
           },
           "max_case": {
@@ -126,8 +126,8 @@
             "gross_mass_kg": 20,
             "cg_xyz_mm": [
               -27.5,
-              -20.0,
-              167.5
+              -22.5,
+              245.0
             ],
             "acceleration_xy_m_s2": [
               0.2,
@@ -136,16 +136,16 @@
             "slope_azimuth_deg": 180.0,
             "caster_angle_deg": 180.0,
             "all_reactions_N": [
-              35.61791170244065,
-              54.641751243987926,
-              105.8733370535714
+              34.3204101674427,
+              54.555324207557305,
+              107.25726562499997
             ]
           }
         }
       },
-      "minimum_reaction_N": 22.323811278329636,
-      "maximum_drive_normal_N": 89.52901966399521,
-      "conservative_radial_comparison_N": 90.0729627597324,
+      "minimum_reaction_N": 20.135954150606732,
+      "maximum_drive_normal_N": 92.30869265489505,
+      "conservative_radial_comparison_N": 92.83635062827479,
       "conservative_axial_comparison_N": 3.5999999999999996,
       "equilibrium_max_abs_residual": {
         "force_N": 2.842170943040401e-14,
@@ -166,14 +166,14 @@
       "evaluated_pose_vertices": 46080,
       "normal_reaction_extrema": {
         "left": {
-          "min_N": 31.75568064337547,
-          "max_N": 109.8297910972554,
+          "min_N": 30.912702133346816,
+          "max_N": 111.23475528063648,
           "min_case": {
             "base_mass_kg": 6,
             "gross_mass_kg": 21,
             "cg_xyz_mm": [
               -28.571428571428573,
-              -24.285714285714285,
+              -25.714285714285715,
               0.0
             ],
             "acceleration_xy_m_s2": [
@@ -183,8 +183,8 @@
             "slope_azimuth_deg": 180.0,
             "caster_angle_deg": 231.00000000000003,
             "all_reactions_N": [
-              31.75568064337547,
-              67.98440553784056,
+              30.912702133346816,
+              68.82738404786922,
               106.19956381878397
             ]
           },
@@ -193,7 +193,7 @@
             "gross_mass_kg": 25,
             "cg_xyz_mm": [
               28.0,
-              22.0,
+              24.0,
               0.0
             ],
             "acceleration_xy_m_s2": [
@@ -203,21 +203,21 @@
             "slope_azimuth_deg": 0.0,
             "caster_angle_deg": 57.0,
             "all_reactions_N": [
-              109.8297910972554,
-              74.22090539197879,
+              111.23475528063648,
+              72.8159412085977,
               61.115553510765814
             ]
           }
         },
         "right": {
-          "min_N": 31.75568064337547,
-          "max_N": 109.8297910972554,
+          "min_N": 30.912702133346826,
+          "max_N": 111.23475528063648,
           "min_case": {
             "base_mass_kg": 6,
             "gross_mass_kg": 21,
             "cg_xyz_mm": [
               -28.571428571428573,
-              24.285714285714285,
+              25.714285714285715,
               0.0
             ],
             "acceleration_xy_m_s2": [
@@ -227,8 +227,8 @@
             "slope_azimuth_deg": 180.0,
             "caster_angle_deg": 129.0,
             "all_reactions_N": [
-              67.98440553784056,
-              31.75568064337547,
+              68.8273840478692,
+              30.912702133346826,
               106.19956381878397
             ]
           },
@@ -237,7 +237,7 @@
             "gross_mass_kg": 25,
             "cg_xyz_mm": [
               28.0,
-              -22.0,
+              -24.0,
               0.0
             ],
             "acceleration_xy_m_s2": [
@@ -247,8 +247,8 @@
             "slope_azimuth_deg": 0.0,
             "caster_angle_deg": 303.0,
             "all_reactions_N": [
-              74.22090539197879,
-              109.8297910972554,
+              72.8159412085977,
+              111.23475528063648,
               61.115553510765814
             ]
           }
@@ -261,7 +261,7 @@
             "gross_mass_kg": 21,
             "cg_xyz_mm": [
               28.571428571428573,
-              -24.285714285714285,
+              -25.714285714285715,
               0.0
             ],
             "acceleration_xy_m_s2": [
@@ -271,8 +271,8 @@
             "slope_azimuth_deg": 180.0,
             "caster_angle_deg": 0.0,
             "all_reactions_N": [
-              63.9310291967004,
-              92.59229853767462,
+              63.08805068667175,
+              93.43527704770327,
               49.416322265625
             ]
           },
@@ -281,7 +281,7 @@
             "gross_mass_kg": 25,
             "cg_xyz_mm": [
               -28.0,
-              -22.0,
+              -24.0,
               0.0
             ],
             "acceleration_xy_m_s2": [
@@ -291,20 +291,20 @@
             "slope_azimuth_deg": 0.0,
             "caster_angle_deg": 180.0,
             "all_reactions_N": [
-              42.55347992030802,
-              73.46269195469198,
+              41.14851573692694,
+              74.86765613807306,
               129.150078125
             ]
           }
         }
       },
-      "minimum_reaction_N": 31.75568064337547,
-      "maximum_drive_normal_N": 109.8297910972554,
-      "conservative_radial_comparison_N": 110.07578686337844,
+      "minimum_reaction_N": 30.912702133346816,
+      "maximum_drive_normal_N": 111.23475528063648,
+      "conservative_radial_comparison_N": 111.47765078018213,
       "conservative_axial_comparison_N": 0.0,
       "equilibrium_max_abs_residual": {
         "force_N": 2.842170943040401e-14,
-        "first_moment_Nmm": 6.366462912410498e-12
+        "first_moment_Nmm": 7.275957614183426e-12
       },
       "caster_sampling_note": "0.5 degree samples; slope azimuth extrema exact for this rigid-body model",
       "radial_note": "Independent worst normal and total longitudinal load placed on one drive wheel; not a combined-load qualification",
@@ -336,15 +336,15 @@
       "evaluated_pose_vertices": 46080,
       "normal_reaction_extrema": {
         "left": {
-          "min_N": 12.299259272349461,
-          "max_N": 88.02679765938974,
+          "min_N": 6.700878984506403,
+          "max_N": 94.48665214524623,
           "min_case": {
             "base_mass_kg": 6,
             "gross_mass_kg": 14,
             "cg_xyz_mm": [
               -27.857142857142858,
-              -21.428571428571427,
-              175.0
+              -23.571428571428573,
+              257.14285714285717
             ],
             "acceleration_xy_m_s2": [
               0.2,
@@ -353,9 +353,9 @@
             "slope_azimuth_deg": 230.8888089274537,
             "caster_angle_deg": 231.00000000000003,
             "all_reactions_N": [
-              12.299259272349463,
-              46.489831053825526,
-              77.98156797840484
+              6.700878984506392,
+              48.39124094220334,
+              81.6785383778701
             ]
           },
           "max_case": {
@@ -363,32 +363,32 @@
             "gross_mass_kg": 18,
             "cg_xyz_mm": [
               27.22222222222222,
-              18.88888888888889,
-              161.66666666666666
+              21.666666666666668,
+              235.55555555555554
             ],
             "acceleration_xy_m_s2": [
               -0.2,
               -0.18
             ],
-            "slope_azimuth_deg": 57.07064395586599,
+            "slope_azimuth_deg": 57.070643955866004,
             "caster_angle_deg": 57.0,
             "all_reactions_N": [
-              88.02679765938974,
-              51.21172159578701,
-              36.60946999356874
+              94.48665214524623,
+              48.30593513961823,
+              33.05540196388107
             ]
           }
         },
         "right": {
-          "min_N": 12.299259272349467,
-          "max_N": 88.02679765938974,
+          "min_N": 6.7008789845064065,
+          "max_N": 94.48665214524623,
           "min_case": {
             "base_mass_kg": 6,
             "gross_mass_kg": 14,
             "cg_xyz_mm": [
               -27.857142857142858,
-              21.428571428571427,
-              175.0
+              23.571428571428573,
+              257.14285714285717
             ],
             "acceleration_xy_m_s2": [
               0.2,
@@ -397,9 +397,9 @@
             "slope_azimuth_deg": 129.11119107254626,
             "caster_angle_deg": 129.0,
             "all_reactions_N": [
-              46.489831053825526,
-              12.29925927234946,
-              77.98156797840484
+              48.39124094220334,
+              6.700878984506403,
+              81.67853837787008
             ]
           },
           "max_case": {
@@ -407,32 +407,32 @@
             "gross_mass_kg": 18,
             "cg_xyz_mm": [
               27.22222222222222,
-              -18.88888888888889,
-              161.66666666666666
+              -21.666666666666668,
+              235.55555555555554
             ],
             "acceleration_xy_m_s2": [
               -0.2,
               0.18
             ],
-            "slope_azimuth_deg": 302.92935604413407,
+            "slope_azimuth_deg": 302.929356044134,
             "caster_angle_deg": 303.0,
             "all_reactions_N": [
-              51.211721595787026,
-              88.02679765938976,
-              36.60946999356872
+              48.30593513961823,
+              94.48665214524623,
+              33.05540196388107
             ]
           }
         },
         "caster": {
-          "min_N": 23.106602000179862,
-          "max_N": 105.72538454946825,
+          "min_N": 18.368665498973726,
+          "max_N": 111.98770062062765,
           "min_case": {
             "base_mass_kg": 6,
             "gross_mass_kg": 14,
             "cg_xyz_mm": [
               27.857142857142858,
-              -21.428571428571427,
-              175.0
+              -23.571428571428573,
+              257.14285714285717
             ],
             "acceleration_xy_m_s2": [
               -0.2,
@@ -441,9 +441,9 @@
             "slope_azimuth_deg": 0.0,
             "caster_angle_deg": 0.0,
             "all_reactions_N": [
-              49.69793124442799,
-              63.96612505997197,
-              23.106602000179862
+              51.820251981904285,
+              66.58174082370181,
+              18.368665498973726
             ]
           },
           "max_case": {
@@ -451,8 +451,8 @@
             "gross_mass_kg": 18,
             "cg_xyz_mm": [
               -27.22222222222222,
-              -18.88888888888889,
-              161.66666666666666
+              -21.666666666666668,
+              235.55555555555554
             ],
             "acceleration_xy_m_s2": [
               0.2,
@@ -461,16 +461,16 @@
             "slope_azimuth_deg": 180.0,
             "caster_angle_deg": 180.0,
             "all_reactions_N": [
-              27.044760429139828,
-              43.07784427013743,
-              105.72538454946825
+              23.19994440845391,
+              40.66034421966395,
+              111.98770062062765
             ]
           }
         }
       },
-      "minimum_reaction_N": 12.299259272349461,
-      "maximum_drive_normal_N": 88.02679765938974,
-      "conservative_radial_comparison_N": 91.30866198373528,
+      "minimum_reaction_N": 6.700878984506403,
+      "maximum_drive_normal_N": 94.48665214524623,
+      "conservative_radial_comparison_N": 97.55143300182547,
       "conservative_axial_comparison_N": 18.624705563093794,
       "equilibrium_max_abs_residual": {
         "force_N": 2.842170943040401e-14,

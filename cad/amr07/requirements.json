@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
-  "design": "AMR01_M0601C_A6_review_revision",
-  "date": "2026-09-21",
+  "design": "AMR01_TwoStorey_D6",
+  "date": "2026-09-22",
   "supersedes_current_requirements_in": "../amr06/requirements.json",
   "status": "design_requirements_accepted_hardware_qualification_pending",
   "battery_service": {
     "date": "2026-09-22",
-    "revision": "D5",
-    "CAD": "makita-power/AMR01_MakitaPower_D5.FCStd",
-    "design_intent_ja": "BL1860B6Ahをアダプターごと後端で上へ取り出す。工具不要、天板・荷物は残す。36mm厚制約を撤回。",
+    "revision": "D6",
+    "CAD": "two-story/AMR01_TwoStorey_D6.FCStd",
+    "design_intent_ja": "1階へ電池・計算機・電源を配置し、2階を格子穴アルミ荷台とする。電池は8mm持上げ後に後方220mmへ抜く。荷台と荷物は残す。",
     "battery_product_selected": true,
     "battery_part": "Makita BL1860B A-60464",
     "charger_part": "Makita DC18RF",
@@ -19,28 +19,40 @@
       62
     ],
     "battery_installed_XYZ_mm": [
-      75,
       113,
+      75,
       62
     ],
     "battery_origin_xyz_mm": [
-      -240,
-      -56.5,
-      112
+      -193,
+      -37.5,
+      104
     ],
     "additional_metal_machining": false,
-    "retention": "padded rear tray + one25mm cam-buckle belt; four reused M6 frame mounts",
+    "retention": "1F padded seat and one25mm cam belt through floor slots; panels individually fixed with3 reused M6 each",
     "ground_clearance_mm": 25,
-    "service_translation_xyz_mm": [
-      0,
-      0,
-      140
-    ],
     "disconnect_before_withdrawal": true,
     "prototype_retention_test_force_N": 45,
     "prototype_retention_test_done": false,
     "actual_latched_adapter_envelope_measured": false,
-    "loaded_use_released": false
+    "loaded_use_released": false,
+    "service_waypoints_xyz_mm": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        8
+      ],
+      [
+        -220,
+        0,
+        8
+      ]
+    ]
   },
   "deck_manufacturing_constraints": {
     "date": "2026-09-22",
@@ -51,10 +63,10 @@
       "D2 six support blocks and four cargo stops from the same square stock"
     ],
     "replacement_selected": true,
-    "selected_revision": "D3 direct aluminum",
-    "user_clarification_ja": "アルミ板へ戻し、嵩上げを廃止。干渉は修正する。",
-    "replacement_ja": "D3アルミ板300x300x4、床上103mmをそのまま使用。D5は後端へ電池、旧電池位置へ計算機を移設。上段フレーム・天板下スペーサーなし。",
-    "replacement_CAD": "makita-power/AMR01_MakitaPower_D5.FCStd",
+    "selected_revision": "D6 two-storey with unchanged D3 aluminum plate",
+    "user_clarification_ja": "計算機を下へ吊る案を撤回。1階に電池・計算機、2階に荷台。ロボコン機体等の構成を参考にする。",
+    "replacement_ja": "100mm溝付き支柱4本、300mm上段レール2本、金属端面で支持。荷台上面233mm。棚の4分割PLAは電装専用。",
+    "replacement_CAD": "two-story/AMR01_TwoStorey_D6.FCStd",
     "loaded_use_released": false,
     "scope_note": "This rejection concerns the deck's square-bar fabrication. Previously quoted custom motor mounts remain separately specified."
   },
@@ -91,26 +103,14 @@
       400,
       400,
       300,
-      300
+      300,
+      300,
+      300,
+      100,
+      100,
+      100,
+      100
     ],
-    "D3_direct_deck": {
-      "LWT_mm": [
-        300,
-        300,
-        4
-      ],
-      "bottom_top_z_mm": [
-        99,
-        103
-      ],
-      "upper_frame_count": 0,
-      "under_deck_spacer_count": 0,
-      "frame_fastener_count": 6,
-      "grid_pitch_mm": 50,
-      "grid_count": 36,
-      "grid_y_offset_mm": 10,
-      "battery_cradle_floor_z_mm": 25
-    },
     "drive_axis_x_mm": 90,
     "drive_track_mm": 349,
     "wheel_diameter_mm": 100.7,
@@ -128,7 +128,25 @@
     "minimum_fixed_ground_clearance_mm": 25,
     "motor_mount_spacer_count": 0,
     "tire_axial_stack_confirmed": false,
-    "D5_power_module": {
+    "historical_D3_direct_deck": {
+      "LWT_mm": [
+        300,
+        300,
+        4
+      ],
+      "bottom_top_z_mm": [
+        99,
+        103
+      ],
+      "upper_frame_count": 0,
+      "under_deck_spacer_count": 0,
+      "frame_fastener_count": 6,
+      "grid_pitch_mm": 50,
+      "grid_count": 36,
+      "grid_y_offset_mm": 10,
+      "battery_cradle_floor_z_mm": 25
+    },
+    "historical_D5_power_module": {
       "battery_bottom_top_z_mm": [
         112,
         174
@@ -144,6 +162,53 @@
         80,
         40
       ]
+    },
+    "D6_two_storey": {
+      "floor_bottom_top_z_mm": [
+        99,
+        101.4
+      ],
+      "equipment_seat_z_mm": 104,
+      "upright_length_mm": 100,
+      "upright_qty": 4,
+      "upper_rail_qty": 2,
+      "upper_rail_length_mm": 300,
+      "deck_bottom_top_z_mm": [
+        229,
+        233
+      ],
+      "battery_bottom_top_z_mm": [
+        104,
+        166
+      ],
+      "adapter_top_z_mm": 196,
+      "computer_origin_LWH_mm": [
+        -60,
+        -50,
+        104,
+        120,
+        100,
+        60
+      ],
+      "grid_plain_nut_count": 30,
+      "grid_slotnut_count": 6,
+      "computer_service_waypoints_xyz_mm": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          8
+        ],
+        [
+          0,
+          -230,
+          8
+        ]
+      ]
     }
   },
   "load_placement": {
@@ -156,10 +221,10 @@
       25
     ],
     "base_cg_y_interval_mm": [
-      -10,
-      10
+      -15,
+      15
     ],
-    "base_cg_max_z_mm": 115,
+    "base_cg_max_z_mm": 160,
     "payload_cg_x_interval_mm": [
       -30,
       30
@@ -168,8 +233,8 @@
       -30,
       30
     ],
-    "payload_cg_max_z_mm": 220,
-    "status": "D5 revised acceptance envelope; not measured CG. Conditional mass-moment comparison includes rear battery and lowered computer; measured vehicle must fit these limits.",
+    "payload_cg_max_z_mm": 330,
+    "status": "D6 acceptance envelope, not measured CG. Conditional model gives baseZ123..145mm andXY within+-10mm; additional height/lateral allowance is retained for actual cases, wiring and fasteners. Actual assembly and cargo must satisfy these bounds.",
     "change_control": "Recalculate before operating outside any reviewed mass, CG, support, tire or acceleration limit."
   },
   "drive": {

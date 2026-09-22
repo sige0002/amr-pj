@@ -691,7 +691,7 @@
       "name": "加工工具・作業費・残る自加工品の外注費",
       "needed_quantity": "必要に応じて",
       "specification": "穴加工、切断、面取り、締付・測定工具",
-      "decision_needed": "モーター金具とD2上板は実自動見積あり。支持材・ストッパ・キャスター板・ガセットの工具・工賃は未見積。",
+      "decision_needed": "モーター金具とD3上板は実自動見積あり。D6上段は切断済み溝付きフレームと既製金具で加工なし。既存キャスター板・下段ガセットの工具・工賃は未見積。",
       "phase": "走行台車",
       "cost": null
     },
@@ -700,7 +700,7 @@
       "name": "PLA仮合わせモックの材料消費",
       "needed_quantity": "スライス後",
       "specification": "金具本体・確認片の試作",
-      "decision_needed": "P04の車体用300g枠とは別。印刷時間・材料量未確定",
+      "decision_needed": "D6の中実CADから計上した電装床・ストッパとは別。仮合わせモックの印刷時間・材料量は未確定。",
       "phase": "製作補助",
       "cost": null
     },
@@ -731,5 +731,6 @@
     "購入予定は実発注・在庫確保を意味しない。",
     "調達は個人で購入できる通常小売を優先し、送料込みで比較する。キャスター等の汎用品はホームセンター店舗受取を第一候補、難しい場合は配送先に対するAmazon Prime対象出品を確認する。法人専用の仕様ページだけでは購入先確定としない。"
   ],
-  "current_power_selection": "makita-power/power_selection.json"
+  "current_power_selection": "makita-power/power_selection.json",
+  "current_vehicle_BOM": "two-story/BOM.csv"
 }

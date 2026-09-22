@@ -1,0 +1,117 @@
+{
+  "revision": "D6",
+  "date": "2026-09-22",
+  "source_revision": "099686bacaad0f72e8bc4ce15005cd708a5b2f83",
+  "architecture": "1F battery/computer/power above base rails; 2F independent aluminum cargo deck",
+  "base_rail_top_z_mm": 99,
+  "floor_bottom_top_z_mm": [
+    99,
+    101.4
+  ],
+  "equipment_seat_z_mm": 104,
+  "upright_part": "SUS SF2-30・30 BLACK, SF9-322 Amazon pack,100mm",
+  "upright_qty": 4,
+  "upright_length_mm": 100,
+  "upright_centers_xy_mm": [
+    [
+      -105,
+      -135
+    ],
+    [
+      -105,
+      135
+    ],
+    [
+      105,
+      -135
+    ],
+    [
+      105,
+      135
+    ]
+  ],
+  "upright_bottom_top_z_mm": [
+    99,
+    199
+  ],
+  "upper_rail_part": "MISUMI NFSL6-3030-300",
+  "upper_rail_qty": 2,
+  "upper_rail_bottom_top_z_mm": [
+    199,
+    229
+  ],
+  "upper_rail_purchase": "reuse the two unused pieces of the already budgeted four-pack",
+  "new_HBLFSN6_qty": 8,
+  "new_M6x12_qty": 16,
+  "new_HNTT6_6_qty": 16,
+  "deck_LWH_mm": [
+    300,
+    300,
+    4
+  ],
+  "deck_bottom_top_z_mm": [
+    229,
+    233
+  ],
+  "deck_translation_z_mm": 130,
+  "battery": "Makita BL1860B A-60464",
+  "charger": "Makita DC18RF JPADC18RF",
+  "adapter": "Netkey diy-adapter03",
+  "battery_origin_xyz_mm": [
+    -193,
+    -37.5,
+    104
+  ],
+  "battery_installed_XYZ_mm": [
+    113,
+    75,
+    62
+  ],
+  "adapter_origin_xyz_mm": [
+    -184,
+    -45,
+    166
+  ],
+  "adapter_installed_XYZ_mm": [
+    95,
+    90,
+    30
+  ],
+  "mating_insertion_depth_credited_mm": 0,
+  "battery_geometry": "conservative catalog envelopes, not actual latched-interface CAD",
+  "computer_origin_LWH_mm": [
+    -60,
+    -50,
+    104,
+    120,
+    100,
+    60
+  ],
+  "computer_product_selected": false,
+  "battery_service_waypoints_xyz_mm": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      8
+    ],
+    [
+      -220,
+      0,
+      8
+    ]
+  ],
+  "exchange": "OFF, unplug rear connector, release belt, lift8mm then withdraw rearward220mm; cargo and deck stay",
+  "normal_payload_kg": 10,
+  "structural_payload_kg": 15,
+  "static_factor_target": 2,
+  "payload_cg_max_z_mm": 330,
+  "metal_support_cutting": false,
+  "metal_support_drilling": false,
+  "new_metal_machining": false,
+  "loaded_use_released": false
+}

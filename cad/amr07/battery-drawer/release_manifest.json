@@ -48,8 +48,8 @@
       "sha256": "7acdba676dcabeb842a48ea5462bb13bd83a51427c6676b02804186d40c21bdd"
     },
     "README.ja.md": {
-      "bytes": 8815,
-      "sha256": "3e0d7655005f60dddcc40aadc845387b2a9fe7aa1a51fcea6d6d04da8d1728de"
+      "bytes": 8833,
+      "sha256": "60d9e5aefece77c5dde7a4fe5e58bd676eee3a8e743f1d860601730504c31a0c"
     },
     "build_d4.py": {
       "bytes": 17396,
@@ -99,5 +99,6 @@
     "PrintedStopYN",
     "PrintedStopYP"
   ],
-  "source_D3_print_removed": "BatteryCradlePLA"
+  "source_D3_print_removed": "BatteryCradlePLA",
+  "documentation_superseded_by": "../two-story/README.ja.md"
 }

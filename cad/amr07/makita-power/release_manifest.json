@@ -48,8 +48,8 @@
       "sha256": "8b0fa7677f3ad381f8db8a1d9d35c2587691703f093831eb045f65c6ebf14937"
     },
     "README.ja.md": {
-      "bytes": 13114,
-      "sha256": "0216ec0dd8c775c4a121bca0e1e3f0a438ea124058d0189a1c26d88b6a6b4277"
+      "bytes": 13304,
+      "sha256": "1c498c94bedaef416305d782cacd2dbb691a65affd8030ff0cf6ea5070f5d71c"
     },
     "build_d5.py": {
       "bytes": 18062,
@@ -123,5 +123,7 @@
   "source_D3_prints_replaced": [
     "BatteryCradlePLA",
     "ElectronicsTrayPLA"
-  ]
+  ],
+  "documentation_superseded_by": "../two-story/README.ja.md",
+  "linked_files_note": "Hashes of common files are the D5-release snapshot, not the current D6 common files."
 }

@@ -1,0 +1,207 @@
+{
+  "revision": "D6",
+  "date": "2026-09-22",
+  "source_D3_revision": "099686bacaad0f72e8bc4ce15005cd708a5b2f83",
+  "files": {
+    "AMR01_TwoStorey_D6-with-equipment-envelopes.step": {
+      "bytes": 8411751,
+      "sha256": "5c316ae37fb8792a0a06d787384b2481b8caab13eb0e84603fc92bf5590917fa"
+    },
+    "AMR01_TwoStorey_D6.FCStd": {
+      "bytes": 1684932,
+      "sha256": "0bc02bf9fd16c9e4b0c243867776738e8560af2148fbe597d5def024df59c30e"
+    },
+    "AMR01_TwoStorey_D6.step": {
+      "bytes": 8392227,
+      "sha256": "6c3f16d5cf8abc31a6d6b42426536ca51f2e3f7590f30c54fcbb1acec387eeef"
+    },
+    "BOM.csv": {
+      "bytes": 16832,
+      "sha256": "958c75270b74765b64e51a075940c4c93945960ae9e65aa179d64a54f263f9b2"
+    },
+    "D6-first-floor-print-files.zip": {
+      "bytes": 35058,
+      "sha256": "996a53362de303c59d0619c21eba8661d11a565cfd12891ed618e4114eb03617"
+    },
+    "FloorPLA_0_0.stl": {
+      "bytes": 38684,
+      "sha256": "9afbed4f04df5db688fa6f0b21082a2830ae33a6388165d37daa0e90342d81b3"
+    },
+    "FloorPLA_0_1.stl": {
+      "bytes": 38684,
+      "sha256": "f5a6d0d3cb5d62588a4f1216fe6a238accb6043d0b97c3c6cd19f337a34463d6"
+    },
+    "FloorPLA_1_0.stl": {
+      "bytes": 35484,
+      "sha256": "18140306247869a57c737a6ef42955e3b7485a346bfb717bb3ecb55870dc4935"
+    },
+    "FloorPLA_1_1.stl": {
+      "bytes": 37484,
+      "sha256": "c778a4a5e4648980cd997c4c33a96774aa30e2fa525f89bfe2eaeb6e218dad97"
+    },
+    "README.ja.md": {
+      "bytes": 10168,
+      "sha256": "b1f89ac7a5eea0398cefdde0ef9a26f3bb5f56c84392e3bf6bf81cdd06416328"
+    },
+    "REFERENCE_DESIGNS.ja.md": {
+      "bytes": 4206,
+      "sha256": "c4c44e6f567f54164a14555e56eb5cc643d739970e1e9e5f9e3d8ce7a46910b4"
+    },
+    "SUS-SFF-324-source.step": {
+      "bytes": 438289,
+      "sha256": "525fa7eae28a338abb3c7d804c9d10354aefe3fd6f711b689a532293d94fe2ef"
+    },
+    "build_bom.py": {
+      "bytes": 5170,
+      "sha256": "e9897e5fc0c223951aedebef56f46b8ba346de65b1147ff2378194a3a3d07909"
+    },
+    "build_d6.py": {
+      "bytes": 22829,
+      "sha256": "1b1e8d27b6070127a60adb5efde7d66a88b5d84039860c13f9f1e3bac96aa05e"
+    },
+    "cad-screen-assembled.png": {
+      "bytes": 213518,
+      "sha256": "d3692eb2abf4c30809d647d57382cb0a34ca51992c3fefc2d220639f3af1897d"
+    },
+    "cad-screen-battery-exchange.png": {
+      "bytes": 212353,
+      "sha256": "413e79e7a5726c6ebead754db67cf6d93eff666f35158fcd642f0d5f7ae62b7d"
+    },
+    "cad-screen-computer-exchange.png": {
+      "bytes": 216747,
+      "sha256": "890f0cc1f00d83862d09c9cb587451c94bd6ac9610105176ac55ec2739ed392e"
+    },
+    "cad-screen-first-floor-top.png": {
+      "bytes": 173588,
+      "sha256": "20a6d1245dac8585c526ac125cda9c5ebf9414315f73b3564db47893bdfe10ab"
+    },
+    "cad-screen-first-floor.png": {
+      "bytes": 233162,
+      "sha256": "9457e1da698a2a2113979eb3fb6868317b2b66fb65064dff255ca05bef3a60d6"
+    },
+    "cad-screen-frame-joint-lower.png": {
+      "bytes": 186028,
+      "sha256": "3cd399836071d89594d57535e27ed1dfd3d673970813c95f2dbd77b0147a4bdf"
+    },
+    "cad-screen-frame-joint-upper.png": {
+      "bytes": 187249,
+      "sha256": "d0aa3ccc652b1bd444b60d86c9ee1ee261e5139c665962b754f1ac267710cc61"
+    },
+    "cad-screen-frame-joint.png": {
+      "bytes": 178070,
+      "sha256": "6af88ab781f08f69e1cddf7db89314cac443b06ec49ae87dd21b7e45f8ca6944"
+    },
+    "cad-screen-side-layout.png": {
+      "bytes": 171475,
+      "sha256": "9908e45626e9c44aecd0707e40d0df7393f6a923aa0817b38231228345783135"
+    },
+    "capture_screens.py": {
+      "bytes": 5154,
+      "sha256": "a3b5696191b5862d494e0f616df88932b46a73512ca376dab5eea1f9aedd8e26"
+    },
+    "check_structure.py": {
+      "bytes": 4188,
+      "sha256": "0b435331d82c22a6647a2918990ba149b506d4a5dec5adc88f85a9ed9a9a16e7"
+    },
+    "cost_summary.json": {
+      "bytes": 1110,
+      "sha256": "2e371005a7bb60bc03d48734739a1be5ea55160ed605e36f2f92055639bba0e7"
+    },
+    "parameters.json": {
+      "bytes": 2231,
+      "sha256": "b77ffa269ef39cd6fc304dbe3ad0aaf4a257f3ee5099d1111993ee4a30b6f344"
+    },
+    "print_manifest.json": {
+      "bytes": 561,
+      "sha256": "0196af295d58912fc16e049b6151358f8cfdfbce88d69913f3ae7f04f743fc7a"
+    },
+    "purchase_observations.json": {
+      "bytes": 2326,
+      "sha256": "10206ef725d1e310fa90259ad735d9ca233501e17fe60fd9961566aa41702a0f"
+    },
+    "release.py": {
+      "bytes": 3375,
+      "sha256": "c54ed0259b4d188f795889bb6d7c0ee10070640a634f9a11881c110bea693f4e"
+    },
+    "saved_artifact_validation.json": {
+      "bytes": 4437,
+      "sha256": "d6c3044899eb3a8228f14f3849239146f2e8a16416eebf05182e4c53d8692bb5"
+    },
+    "structure_screening.json": {
+      "bytes": 2905,
+      "sha256": "48686b84c960993d4a0857b253a02a9c7c15b8272e5dcf526b4c028c2a8f60fd"
+    },
+    "validate_saved.py": {
+      "bytes": 4534,
+      "sha256": "9cf132476407588f7ee3603dcbfc1f706ee784701af440bd7c126d79c049aae3"
+    },
+    "validation.json": {
+      "bytes": 52142,
+      "sha256": "36abe94aa4c996c5505901a54de2b633652c97d28895d94b35e581c1f5942305"
+    },
+    "viewport-assembled.png": {
+      "bytes": 61981,
+      "sha256": "849dd0c169fc119fb234d72b1bb32ada083967a81c9169ee067dd00a46534a81"
+    },
+    "viewport-battery-exchange.png": {
+      "bytes": 59342,
+      "sha256": "6df6c1eecab5553c9d0b304f4ce62df601ed29ac77f42e501d8245575e7505a2"
+    },
+    "viewport-computer-exchange.png": {
+      "bytes": 67186,
+      "sha256": "14de8591632edf3315dff2aa5ae5ae1962992aa5687bf4d4521bef027260c47c"
+    },
+    "viewport-first-floor-top.png": {
+      "bytes": 19995,
+      "sha256": "c12159f900ae9ff4cdec1d2ccab2c0fafbaac5d3ebd0e109ff3c728667f19544"
+    },
+    "viewport-first-floor.png": {
+      "bytes": 83748,
+      "sha256": "967c9cb1b7b2594c76c952afa43c016ef8b71ec5cf48b025dce81a3f50e02f3f"
+    },
+    "viewport-frame-joint.png": {
+      "bytes": 23990,
+      "sha256": "ffbedeb84c3465f23bf17ad651328fb70f66fdcd7dd01df5aac2eee13ee6c82a"
+    },
+    "viewport-side-layout.png": {
+      "bytes": 18945,
+      "sha256": "615595fbe012a4830b36fabfbc1ee8611d58689f5b38704e870b99ae49d92405"
+    }
+  },
+  "linked_design_files": {
+    "requirements.json": "bd8f75c928289d666dffa66f5cb8d56c797ea4b1be42d6f3d9d181282b7f8186",
+    "electrical_plan.json": "baba0f38bd681ba1740d385feea39982e9844a2cd3d1df2a3ea333190bdeb818",
+    "load_calculations.json": "cc506e93e09fabd2d5aa33a80d87dfbe1ade34111c42632e3c49b59c01c21594",
+    "caster_load_check.json": "e0581ae435ff9e0f6132eabdf77054b3605d80bf4c3ca04cd19ec0bb7b52d9dd",
+    "hardware_geometry.py": "8de0af5acc2be8ec73cd61c30ea8f8ae9771afa46edc94d7c3c3fbd5411f7e56",
+    "printed-deck-frame/build_p1.py": "b123276da3e51b21744fa8fd39e5d76d7dab8245a4a3b46defc4360cf609957a",
+    "makita-power/power_selection.json": "8b0fa7677f3ad381f8db8a1d9d35c2587691703f093831eb045f65c6ebf14937",
+    "aluminum-direct-deck/validation.json": "f8f57f0730ff111fb69695b49d538807df5bec08fae62c424e5dabf8bd21f75c",
+    "aluminum-direct-deck/fea/summary.json": "df1788ef397e691d8102846286ad1dbd4c230424573725126d6c71eee6b3a8f6"
+  },
+  "quoted_plate_files_unchanged": {
+    "AMR_GridDeck_C45_D3.step": "c38862f7ac33c2f30bba198fce54ff1bcb22bd75820bd994dd8b4a5e7f5c0d4c",
+    "AMR_GridDeck_C45_D3.pdf": "e1428bb6273c0ab40b53fd2bbdb0904d620a0ff47ee51243ff735e6c8cf034bb"
+  },
+  "source_D3_prints_still_used": [
+    "PrintedStopXN.stl",
+    "PrintedStopXP.stl",
+    "PrintedStopYN.stl",
+    "PrintedStopYP.stl"
+  ],
+  "current_print_panels": 4,
+  "actual_GUI_screenshots": 9,
+  "nominal_CAD_checks_passed": true,
+  "current_load_calculations_match_requirements": true,
+  "conditional_CG_model_within_reviewed_bounds": true,
+  "loaded_use_released": false,
+  "battery_adapter_interface_measured": false,
+  "mixed_brand_frame_joint_physically_qualified": false,
+  "new_metal_quote_needed": false,
+  "supplier_profile_source": {
+    "url": "https://fa.sus.co.jp/service/cad/SFF-324-STP.lzh",
+    "archive_sha256": "4aa1e58e04fde3e0a28c5a7d3add0be6f6e1316ad692eb38cfc7f66705ec9961",
+    "file": "SUS-SFF-324-source.step",
+    "note": "Manufacturer SFF-324 profile,500mm. Build takes100mm section. File line endings normalized; original header encoding preserved. Black/silver share nominal section."
+  }
+}

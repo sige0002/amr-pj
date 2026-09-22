@@ -1,16 +1,16 @@
 {
   "part": "TRUSCO TYG-50",
-  "requirements_sha256": "e310922561508517fc8df9da9488e6cd1cde6ad3aeee6de4b2665cd579e1df3f",
+  "requirements_sha256": "bd8f75c928289d666dffa66f5cb8d56c797ea4b1be42d6f3d9d181282b7f8186",
   "method": "Existing rigid three-contact equilibrium and CG/mass/acceleration limits, caster yaw sampled every0.5deg. Trail nominal and tolerance endpoints checked.",
   "cases": [
     {
       "case": "normal",
       "trail_mm": 14.5,
-      "maximum_reaction_N": 105.16907982261638,
-      "minimum_reaction_N": 35.876555992141455,
-      "twice_maximum_reaction_N": 210.33815964523276,
+      "maximum_reaction_N": 106.54380266075385,
+      "minimum_reaction_N": 34.79993516699411,
+      "twice_maximum_reaction_N": 213.0876053215077,
       "catalog_allowable_N": 300,
-      "catalog_to_reaction_ratio": 2.8525494423455595
+      "catalog_to_reaction_ratio": 2.8157433140924213
     },
     {
       "case": "structure",
@@ -24,11 +24,11 @@
     {
       "case": "normal",
       "trail_mm": 16,
-      "maximum_reaction_N": 105.8733370535714,
-      "minimum_reaction_N": 35.666341796875,
-      "twice_maximum_reaction_N": 211.7466741071428,
+      "maximum_reaction_N": 107.25726562499997,
+      "minimum_reaction_N": 34.596029296875,
+      "twice_maximum_reaction_N": 214.51453124999995,
       "catalog_allowable_N": 300,
-      "catalog_to_reaction_ratio": 2.83357461235213
+      "catalog_to_reaction_ratio": 2.79701331422041
     },
     {
       "case": "structure",
@@ -42,11 +42,11 @@
     {
       "case": "normal",
       "trail_mm": 17.5,
-      "maximum_reaction_N": 106.58708988764043,
-      "minimum_reaction_N": 35.45857669902913,
-      "twice_maximum_reaction_N": 213.17417977528086,
+      "maximum_reaction_N": 107.98034831460672,
+      "minimum_reaction_N": 34.394499029126216,
+      "twice_maximum_reaction_N": 215.96069662921343,
       "catalog_allowable_N": 300,
-      "catalog_to_reaction_ratio": 2.8145997823587003
+      "catalog_to_reaction_ratio": 2.778283314348398
     },
     {
       "case": "structure",

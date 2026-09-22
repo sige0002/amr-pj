@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "design": "AMR01_M0601C_A6",
-  "date": "2026-09-21",
+  "design": "AMR01_TwoStorey_D6",
+  "date": "2026-09-22",
   "status": "electrical_architecture_and_acceptance_plan_not_implemented",
   "requirements_file": "requirements.json",
   "document": "ELECTRICAL_AND_VALIDATION.ja.md",
@@ -68,9 +68,9 @@
       "protection_and_adapter_compatibility_verified": false,
       "runtime_1h_verified": false,
       "note": "No assumption that a tool battery retains cell protection through a two-terminal adapter. No regenerative charging assumed.",
-      "mechanical_interface": "makita-power/parameters.json",
+      "mechanical_interface": "two-story/parameters.json",
       "mechanical_fit_candidate": null,
-      "service": "Power off, unplug external main connector, release one belt and lift latched battery+adapter module140mm. Remove adapter on bench, charge with genuineDC18RF. No exchange screws.",
+      "service": "OFF, unplug rear main connector, release battery belt, lift latched module8mm then withdraw rearward220mm. Genuine DC18RF charging off vehicle.",
       "capacity_Ah": 6,
       "energy_Wh": 108,
       "source": "https://www.makita.com.hk/en/products/detail/1028/"
@@ -477,8 +477,8 @@
     {
       "id": "StopAndDistribution",
       "xyz_LWH_mm": [
-        155,
-        -120,
+        135,
+        -110,
         112,
         70,
         70,
@@ -489,9 +489,9 @@
     {
       "id": "ClampAndConversion",
       "xyz_LWH_mm": [
-        175,
-        -45,
-        106,
+        155,
+        -25,
+        112,
         50,
         90,
         35
@@ -515,26 +515,27 @@
     {
       "id": "SupervisorAndRS485",
       "xyz_LWH_mm": [
-        -90,
-        -35,
-        30,
-        30,
+        5,
+        65,
+        104,
         70,
-        45
+        45,
+        30
       ],
       "status": "reservation_not_validated_assembly"
     },
     {
-      "id": "ComputerD5",
+      "id": "ComputerD6",
       "xyz_LWH_mm": [
-        -45,
-        -40,
-        30,
-        70,
-        80,
-        40
+        -60,
+        -50,
+        104,
+        120,
+        100,
+        60
       ],
-      "status": "reservation_not_selected_computer"
+      "status": "reservation_not_selected_computer",
+      "note": "1F above base frame. Lift8mm then remove towardY-negative230mm after unplugging and releasing belt.120x100x60 space; actual computer unselected."
     }
   ],
   "calculations": {
@@ -674,5 +675,6 @@
     "previous_slope_thermal_test_torque_Nm": 0.9161237346465019,
     "status": "Historical calculations and test plans only; not required qualification or permission for the current flat-floor prototype."
   },
-  "selected_power_file": "makita-power/power_selection.json"
+  "selected_power_file": "makita-power/power_selection.json",
+  "current_CAD": "two-story/AMR01_TwoStorey_D6.FCStd"
 }

@@ -1,0 +1,2403 @@
+{
+  "parameters": {
+    "revision": "D6",
+    "date": "2026-09-22",
+    "source_revision": "099686bacaad0f72e8bc4ce15005cd708a5b2f83",
+    "architecture": "1F battery/computer/power above base rails; 2F independent aluminum cargo deck",
+    "base_rail_top_z_mm": 99,
+    "floor_bottom_top_z_mm": [
+      99,
+      101.4
+    ],
+    "equipment_seat_z_mm": 104,
+    "upright_part": "SUS SF2-30・30 BLACK, SF9-322 Amazon pack,100mm",
+    "upright_qty": 4,
+    "upright_length_mm": 100,
+    "upright_centers_xy_mm": [
+      [
+        -105,
+        -135
+      ],
+      [
+        -105,
+        135
+      ],
+      [
+        105,
+        -135
+      ],
+      [
+        105,
+        135
+      ]
+    ],
+    "upright_bottom_top_z_mm": [
+      99,
+      199
+    ],
+    "upper_rail_part": "MISUMI NFSL6-3030-300",
+    "upper_rail_qty": 2,
+    "upper_rail_bottom_top_z_mm": [
+      199,
+      229
+    ],
+    "upper_rail_purchase": "reuse the two unused pieces of the already budgeted four-pack",
+    "new_HBLFSN6_qty": 8,
+    "new_M6x12_qty": 16,
+    "new_HNTT6_6_qty": 16,
+    "deck_LWH_mm": [
+      300,
+      300,
+      4
+    ],
+    "deck_bottom_top_z_mm": [
+      229,
+      233
+    ],
+    "deck_translation_z_mm": 130,
+    "battery": "Makita BL1860B A-60464",
+    "charger": "Makita DC18RF JPADC18RF",
+    "adapter": "Netkey diy-adapter03",
+    "battery_origin_xyz_mm": [
+      -193,
+      -37.5,
+      104
+    ],
+    "battery_installed_XYZ_mm": [
+      113,
+      75,
+      62
+    ],
+    "adapter_origin_xyz_mm": [
+      -184,
+      -45,
+      166
+    ],
+    "adapter_installed_XYZ_mm": [
+      95,
+      90,
+      30
+    ],
+    "mating_insertion_depth_credited_mm": 0,
+    "battery_geometry": "conservative catalog envelopes, not actual latched-interface CAD",
+    "computer_origin_LWH_mm": [
+      -60,
+      -50,
+      104,
+      120,
+      100,
+      60
+    ],
+    "computer_product_selected": false,
+    "battery_service_waypoints_xyz_mm": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        8
+      ],
+      [
+        -220,
+        0,
+        8
+      ]
+    ],
+    "exchange": "OFF, unplug rear connector, release belt, lift8mm then withdraw rearward220mm; cargo and deck stay",
+    "normal_payload_kg": 10,
+    "structural_payload_kg": 15,
+    "static_factor_target": 2,
+    "payload_cg_max_z_mm": 330,
+    "metal_support_cutting": false,
+    "metal_support_drilling": false,
+    "new_metal_machining": false,
+    "loaded_use_released": false
+  },
+  "physical_parts": 255,
+  "all_shapes_valid": true,
+  "checked_physical_pairs": 32385,
+  "collisions": [],
+  "reference_collisions": {},
+  "reference_pair_collisions": [],
+  "continuous_battery_service": [
+    {
+      "part": "BatteryBL1860B",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryBL1860B",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryAdapter03",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryAdapter03",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryBeltTopPad",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryBeltTopPad",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryModuleHarness",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryModuleHarness",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryServiceConnector",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryServiceConnector",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "hits": []
+    }
+  ],
+  "continuous_computer_service": [
+    {
+      "part": "Reserved_Computer",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "Reserved_Computer",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        0,
+        -230,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "ComputerTopPad",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "ComputerTopPad",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        0,
+        -230,
+        8
+      ],
+      "hits": []
+    }
+  ],
+  "caster_sweep_hits": [],
+  "tire_outward_service": [
+    {
+      "side": -1,
+      "hits": []
+    },
+    {
+      "side": 1,
+      "hits": []
+    }
+  ],
+  "grid_fastener_envelopes": [
+    {
+      "x": -125,
+      "y": -115,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": -65,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": -15,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": 35,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": 85,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": 135,
+      "fastener": "HNTT6-4/M4",
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": -115,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": -65,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": -15,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": 35,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": 85,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": 135,
+      "fastener": "HNTT6-4/M4",
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": -115,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": -65,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": -15,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": 35,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": 85,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": 135,
+      "fastener": "HNTT6-4/M4",
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": -115,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": -65,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": -15,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": 35,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": 85,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": 135,
+      "fastener": "HNTT6-4/M4",
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": -115,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": -65,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": -15,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": 35,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": 85,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": 135,
+      "fastener": "HNTT6-4/M4",
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": -115,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": -65,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": -15,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": 35,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": 85,
+      "fastener": "M4 nut/washer",
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": 135,
+      "fastener": "HNTT6-4/M4",
+      "hits": []
+    }
+  ],
+  "grid_free_holes": 30,
+  "grid_slotnut_holes": 6,
+  "joint_assembly_tool_access": [
+    {
+      "bolt": "LevelBolt_0_Lower_Post",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_0_Lower_Rail",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_0_Upper_Post",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_0_Upper_Rail",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_1_Lower_Post",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_1_Lower_Rail",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_1_Upper_Post",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_1_Upper_Rail",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_2_Lower_Post",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_2_Lower_Rail",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_2_Upper_Post",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_2_Upper_Rail",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_3_Lower_Post",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_3_Lower_Rail",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_3_Upper_Post",
+      "hits": []
+    },
+    {
+      "bolt": "LevelBolt_3_Upper_Rail",
+      "hits": []
+    }
+  ],
+  "computer_ventilation_keepout_hits": [],
+  "computer_connector_keepout_hits": [],
+  "added_parts": [
+    "Upright3030_0",
+    "Upright3030_1",
+    "Upright3030_2",
+    "Upright3030_3",
+    "UpperRail3030_0",
+    "UpperRail3030_1",
+    "LevelBracket_0_Lower",
+    "LevelBolt_0_Lower_Post",
+    "LevelNut_0_Lower_Post",
+    "LevelBolt_0_Lower_Rail",
+    "LevelNut_0_Lower_Rail",
+    "LevelBracket_0_Upper",
+    "LevelBolt_0_Upper_Post",
+    "LevelNut_0_Upper_Post",
+    "LevelBolt_0_Upper_Rail",
+    "LevelNut_0_Upper_Rail",
+    "LevelBracket_1_Lower",
+    "LevelBolt_1_Lower_Post",
+    "LevelNut_1_Lower_Post",
+    "LevelBolt_1_Lower_Rail",
+    "LevelNut_1_Lower_Rail",
+    "LevelBracket_1_Upper",
+    "LevelBolt_1_Upper_Post",
+    "LevelNut_1_Upper_Post",
+    "LevelBolt_1_Upper_Rail",
+    "LevelNut_1_Upper_Rail",
+    "LevelBracket_2_Lower",
+    "LevelBolt_2_Lower_Post",
+    "LevelNut_2_Lower_Post",
+    "LevelBolt_2_Lower_Rail",
+    "LevelNut_2_Lower_Rail",
+    "LevelBracket_2_Upper",
+    "LevelBolt_2_Upper_Post",
+    "LevelNut_2_Upper_Post",
+    "LevelBolt_2_Upper_Rail",
+    "LevelNut_2_Upper_Rail",
+    "LevelBracket_3_Lower",
+    "LevelBolt_3_Lower_Post",
+    "LevelNut_3_Lower_Post",
+    "LevelBolt_3_Lower_Rail",
+    "LevelNut_3_Lower_Rail",
+    "LevelBracket_3_Upper",
+    "LevelBolt_3_Upper_Post",
+    "LevelNut_3_Upper_Post",
+    "LevelBolt_3_Upper_Rail",
+    "LevelNut_3_Upper_Rail",
+    "FloorPLA_0_0",
+    "FloorPLA_0_1",
+    "FloorPLA_1_0",
+    "FloorPLA_1_1",
+    "BatteryBL1860B",
+    "BatteryAdapter03",
+    "BatteryBasePad",
+    "BatteryBeltTopPad",
+    "BatteryRetentionBelt",
+    "BatteryBuckleEnvelope",
+    "BatteryModuleHarness",
+    "BatteryServiceConnector",
+    "BatteryVehicleConnector",
+    "BatteryVehicleHarness",
+    "ComputerPad",
+    "SupervisorPad",
+    "ComputerTopPad",
+    "SupervisorTopPad",
+    "ComputerRetentionBelt",
+    "SupervisorRetentionBelt"
+  ],
+  "removed_parts": [
+    "BatteryCradlePLA",
+    "BatteryReservedSpace",
+    "BatteryConnectorEnvelope",
+    "ElectronicsTrayPLA",
+    "FrontElectronicsTrayPLA"
+  ],
+  "changed_parts": [
+    "CradleBolt_0",
+    "LargeWasher_Cradle0",
+    "SlotNut_Cradle_0",
+    "CradleBolt_1",
+    "LargeWasher_Cradle1",
+    "SlotNut_Cradle_1",
+    "CradleBolt_2",
+    "LargeWasher_Cradle2",
+    "SlotNut_Cradle_2",
+    "CradleBolt_3",
+    "LargeWasher_Cradle3",
+    "SlotNut_Cradle_3",
+    "Reserved_Computer",
+    "Reserved_SupervisorRS485",
+    "Reserved_Protection",
+    "Reserved_ClampAndPower"
+  ],
+  "translated_parts": [
+    "AluminumDeckD3",
+    "DeckBolt0",
+    "DeckSlotNut0",
+    "DeckBolt1",
+    "DeckSlotNut1",
+    "DeckBolt2",
+    "DeckSlotNut2",
+    "DeckBolt3",
+    "DeckSlotNut3",
+    "DeckBolt4",
+    "DeckSlotNut4",
+    "DeckBolt5",
+    "DeckSlotNut5",
+    "PrintedStopXN",
+    "PrintedStopXP",
+    "PrintedStopYN",
+    "PrintedStopYP",
+    "StopBolt0",
+    "StopWasher0",
+    "StopNut0",
+    "StopBolt1",
+    "StopWasher1",
+    "StopNut1",
+    "StopBolt2",
+    "StopWasher2",
+    "StopNut2",
+    "StopBolt3",
+    "StopWasher3",
+    "StopNut3",
+    "StopBolt4",
+    "StopWasher4",
+    "StopNut4",
+    "StopBolt5",
+    "StopWasher5",
+    "StopNut5",
+    "StopBolt6",
+    "StopWasher6",
+    "StopNut6",
+    "StopBolt7",
+    "StopWasher7",
+    "StopNut7",
+    "CargoEnvelopeD3",
+    "StrapRouteX",
+    "StrapRouteY"
+  ],
+  "moving_parts": [
+    "BatteryBL1860B",
+    "BatteryAdapter03",
+    "BatteryBeltTopPad",
+    "BatteryModuleHarness",
+    "BatteryServiceConnector"
+  ],
+  "released_before_service": [
+    "BatteryRetentionBelt",
+    "BatteryBuckleEnvelope"
+  ],
+  "unchanged_physical_parts": 152,
+  "unchanged_parts_BRep_equal": true,
+  "quoted_plate_unchanged": true,
+  "clearances_mm": {
+    "first_floor_open_height_at_sides": 97.6,
+    "central_floor_to_deck": 127.6,
+    "battery_lift_to_lowest_cargo_grid_fastener": 16.30000000000001,
+    "computer_to_deck": 62.5,
+    "computer_vent_keepout_height": 15,
+    "battery_rearward_withdrawal": 220
+  },
+  "mass": {
+    "source_D3_kg": 8.246366343915682,
+    "estimated_base_kg": 9.728198669430933,
+    "remaining_to_10kg_kg": 0.2718013305690672,
+    "electrical_total_kg": 2.153,
+    "battery_kg": 0.68,
+    "adapter_kg": 0.123,
+    "new_straps_and_pads_allowance_kg": 0.18,
+    "total_solid_PLA_kg": 0.3816513694700097,
+    "added_metal_and_hardware_kg": 1.1257745513676853,
+    "mass_overrides_kg": {
+      "Upright3030_0": 0.084,
+      "Upright3030_1": 0.084,
+      "Upright3030_2": 0.084,
+      "Upright3030_3": 0.084,
+      "UpperRail3030_0": 0.228,
+      "UpperRail3030_1": 0.228
+    },
+    "actually_weighed": false
+  },
+  "cg_difference": {
+    "ledger": [
+      {
+        "name": "remove BatteryCradlePLA",
+        "mass_kg": -0.1317532350310878,
+        "center_mm": [
+          -29.999999999999993,
+          -4.188476921068823e-15,
+          44.2937340074108
+        ]
+      },
+      {
+        "name": "remove ElectronicsTrayPLA",
+        "mass_kg": -0.04347386101865274,
+        "center_mm": [
+          -192.63583461627675,
+          -2.661882951852305e-15,
+          100.38749804615934
+        ]
+      },
+      {
+        "name": "remove FrontElectronicsTrayPLA",
+        "mass_kg": -0.04109306101865273,
+        "center_mm": [
+          192.64370443776036,
+          -7.619995404368583e-15,
+          100.3903947724033
+        ]
+      },
+      {
+        "name": "add Upright3030_0",
+        "mass_kg": 0.084,
+        "center_mm": [
+          -105.0,
+          -135.0,
+          149.0
+        ]
+      },
+      {
+        "name": "add Upright3030_1",
+        "mass_kg": 0.084,
+        "center_mm": [
+          -105.0,
+          135.0,
+          148.99999999999994
+        ]
+      },
+      {
+        "name": "add Upright3030_2",
+        "mass_kg": 0.084,
+        "center_mm": [
+          105.0,
+          -135.0,
+          149.00000000000003
+        ]
+      },
+      {
+        "name": "add Upright3030_3",
+        "mass_kg": 0.084,
+        "center_mm": [
+          105.0,
+          135.0,
+          149.0
+        ]
+      },
+      {
+        "name": "add UpperRail3030_0",
+        "mass_kg": 0.228,
+        "center_mm": [
+          -2.842170943040401e-14,
+          -135.0,
+          214.0
+        ]
+      },
+      {
+        "name": "add UpperRail3030_1",
+        "mass_kg": 0.228,
+        "center_mm": [
+          -2.842170943040401e-14,
+          135.0,
+          214.0
+        ]
+      },
+      {
+        "name": "add LevelBracket_0_Lower",
+        "mass_kg": 0.016829634389542554,
+        "center_mm": [
+          -80.20596474326626,
+          -135.0,
+          108.86154925551628
+        ]
+      },
+      {
+        "name": "add LevelBolt_0_Lower_Post",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          -86.26744186046514,
+          -135.0,
+          113.99999999999999
+        ]
+      },
+      {
+        "name": "add LevelNut_0_Lower_Post",
+        "mass_kg": 0.006083424664393645,
+        "center_mm": [
+          -94.16519011707659,
+          -135.0,
+          114.0
+        ]
+      },
+      {
+        "name": "add LevelBolt_0_Lower_Rail",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          -72.0,
+          -135.0,
+          102.73255813953487
+        ]
+      },
+      {
+        "name": "add LevelNut_0_Lower_Rail",
+        "mass_kg": 0.006083424664393645,
+        "center_mm": [
+          -72.0,
+          -135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "add LevelBracket_0_Upper",
+        "mass_kg": 0.016829634389542554,
+        "center_mm": [
+          -129.79403525673374,
+          -135.0,
+          189.13845074448372
+        ]
+      },
+      {
+        "name": "add LevelBolt_0_Upper_Post",
+        "mass_kg": 0.006362667601315406,
+        "center_mm": [
+          -123.73255813953489,
+          -135.00000000000003,
+          184.00000000000003
+        ]
+      },
+      {
+        "name": "add LevelNut_0_Upper_Post",
+        "mass_kg": 0.006083424664393646,
+        "center_mm": [
+          -115.83480988292341,
+          -135.0,
+          184.0
+        ]
+      },
+      {
+        "name": "add LevelBolt_0_Upper_Rail",
+        "mass_kg": 0.006362667601315406,
+        "center_mm": [
+          -138.00000000000003,
+          -135.00000000000003,
+          195.26744186046514
+        ]
+      },
+      {
+        "name": "add LevelNut_0_Upper_Rail",
+        "mass_kg": 0.006083424664393647,
+        "center_mm": [
+          -138.0,
+          -135.0,
+          203.16519011707658
+        ]
+      },
+      {
+        "name": "add LevelBracket_1_Lower",
+        "mass_kg": 0.016829634389542554,
+        "center_mm": [
+          -80.20596474326626,
+          135.0,
+          108.86154925551628
+        ]
+      },
+      {
+        "name": "add LevelBolt_1_Lower_Post",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          -86.26744186046514,
+          135.0,
+          113.99999999999999
+        ]
+      },
+      {
+        "name": "add LevelNut_1_Lower_Post",
+        "mass_kg": 0.006083424664393644,
+        "center_mm": [
+          -94.16519011707659,
+          135.0,
+          114.0
+        ]
+      },
+      {
+        "name": "add LevelBolt_1_Lower_Rail",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          -72.0,
+          135.0,
+          102.73255813953487
+        ]
+      },
+      {
+        "name": "add LevelNut_1_Lower_Rail",
+        "mass_kg": 0.006083424664393646,
+        "center_mm": [
+          -72.0,
+          135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "add LevelBracket_1_Upper",
+        "mass_kg": 0.016829634389542554,
+        "center_mm": [
+          -129.79403525673374,
+          135.0,
+          189.13845074448372
+        ]
+      },
+      {
+        "name": "add LevelBolt_1_Upper_Post",
+        "mass_kg": 0.006362667601315406,
+        "center_mm": [
+          -123.73255813953489,
+          135.00000000000003,
+          184.00000000000003
+        ]
+      },
+      {
+        "name": "add LevelNut_1_Upper_Post",
+        "mass_kg": 0.006083424664393646,
+        "center_mm": [
+          -115.83480988292341,
+          135.0,
+          184.0
+        ]
+      },
+      {
+        "name": "add LevelBolt_1_Upper_Rail",
+        "mass_kg": 0.006362667601315406,
+        "center_mm": [
+          -138.00000000000003,
+          135.00000000000003,
+          195.26744186046514
+        ]
+      },
+      {
+        "name": "add LevelNut_1_Upper_Rail",
+        "mass_kg": 0.006083424664393648,
+        "center_mm": [
+          -138.0,
+          135.0,
+          203.1651901170766
+        ]
+      },
+      {
+        "name": "add LevelBracket_2_Lower",
+        "mass_kg": 0.016829634389542554,
+        "center_mm": [
+          80.20596474326626,
+          -135.0,
+          108.86154925551628
+        ]
+      },
+      {
+        "name": "add LevelBolt_2_Lower_Post",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          86.26744186046514,
+          -135.0,
+          114.00000000000001
+        ]
+      },
+      {
+        "name": "add LevelNut_2_Lower_Post",
+        "mass_kg": 0.006083424664393645,
+        "center_mm": [
+          94.16519011707659,
+          -135.0,
+          114.0
+        ]
+      },
+      {
+        "name": "add LevelBolt_2_Lower_Rail",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          72.0,
+          -135.0,
+          102.73255813953487
+        ]
+      },
+      {
+        "name": "add LevelNut_2_Lower_Rail",
+        "mass_kg": 0.006083424664393645,
+        "center_mm": [
+          72.0,
+          -135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "add LevelBracket_2_Upper",
+        "mass_kg": 0.016829634389542554,
+        "center_mm": [
+          129.79403525673374,
+          -135.0,
+          189.13845074448372
+        ]
+      },
+      {
+        "name": "add LevelBolt_2_Upper_Post",
+        "mass_kg": 0.006362667601315406,
+        "center_mm": [
+          123.73255813953489,
+          -135.00000000000003,
+          184.0
+        ]
+      },
+      {
+        "name": "add LevelNut_2_Upper_Post",
+        "mass_kg": 0.006083424664393646,
+        "center_mm": [
+          115.83480988292341,
+          -135.0,
+          184.0
+        ]
+      },
+      {
+        "name": "add LevelBolt_2_Upper_Rail",
+        "mass_kg": 0.006362667601315406,
+        "center_mm": [
+          138.00000000000003,
+          -135.00000000000003,
+          195.26744186046514
+        ]
+      },
+      {
+        "name": "add LevelNut_2_Upper_Rail",
+        "mass_kg": 0.006083424664393647,
+        "center_mm": [
+          138.0,
+          -135.0,
+          203.16519011707658
+        ]
+      },
+      {
+        "name": "add LevelBracket_3_Lower",
+        "mass_kg": 0.016829634389542554,
+        "center_mm": [
+          80.20596474326626,
+          135.0,
+          108.86154925551628
+        ]
+      },
+      {
+        "name": "add LevelBolt_3_Lower_Post",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          86.26744186046514,
+          135.0,
+          114.00000000000001
+        ]
+      },
+      {
+        "name": "add LevelNut_3_Lower_Post",
+        "mass_kg": 0.006083424664393646,
+        "center_mm": [
+          94.16519011707659,
+          135.0,
+          114.0
+        ]
+      },
+      {
+        "name": "add LevelBolt_3_Lower_Rail",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          72.0,
+          135.0,
+          102.73255813953487
+        ]
+      },
+      {
+        "name": "add LevelNut_3_Lower_Rail",
+        "mass_kg": 0.006083424664393646,
+        "center_mm": [
+          72.0,
+          135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "add LevelBracket_3_Upper",
+        "mass_kg": 0.016829634389542554,
+        "center_mm": [
+          129.79403525673374,
+          135.0,
+          189.13845074448372
+        ]
+      },
+      {
+        "name": "add LevelBolt_3_Upper_Post",
+        "mass_kg": 0.006362667601315406,
+        "center_mm": [
+          123.73255813953489,
+          135.00000000000003,
+          184.0
+        ]
+      },
+      {
+        "name": "add LevelNut_3_Upper_Post",
+        "mass_kg": 0.006083424664393646,
+        "center_mm": [
+          115.83480988292341,
+          135.0,
+          184.0
+        ]
+      },
+      {
+        "name": "add LevelBolt_3_Upper_Rail",
+        "mass_kg": 0.006362667601315406,
+        "center_mm": [
+          138.00000000000003,
+          135.00000000000003,
+          195.26744186046514
+        ]
+      },
+      {
+        "name": "add LevelNut_3_Upper_Rail",
+        "mass_kg": 0.006083424664393648,
+        "center_mm": [
+          138.0,
+          135.0,
+          203.1651901170766
+        ]
+      },
+      {
+        "name": "add FloorPLA_0_0",
+        "mass_kg": 0.08692014360399077,
+        "center_mm": [
+          -105.08229200568694,
+          -60.54640411325999,
+          100.55787208246831
+        ]
+      },
+      {
+        "name": "add FloorPLA_0_1",
+        "mass_kg": 0.08692014360398877,
+        "center_mm": [
+          -105.0822920056869,
+          60.54640411325999,
+          100.55787208246818
+        ]
+      },
+      {
+        "name": "add FloorPLA_1_0",
+        "mass_kg": 0.08295928600398973,
+        "center_mm": [
+          103.57675613260999,
+          -61.655226586976205,
+          100.29215957812883
+        ]
+      },
+      {
+        "name": "add FloorPLA_1_1",
+        "mass_kg": 0.08257835800398966,
+        "center_mm": [
+          103.87003111585584,
+          61.52447419485246,
+          100.2925847036052
+        ]
+      },
+      {
+        "name": "old position AluminumDeckD3",
+        "mass_kg": -0.9547830853585014,
+        "center_mm": [
+          -0.23384111023251825,
+          -0.08574781826484722,
+          101.0
+        ]
+      },
+      {
+        "name": "new position AluminumDeckD3",
+        "mass_kg": 0.9547830853585014,
+        "center_mm": [
+          -0.23384111023251825,
+          -0.08574781826484722,
+          231.0
+        ]
+      },
+      {
+        "name": "old position DeckBolt0",
+        "mass_kg": -0.006362667601315408,
+        "center_mm": [
+          -105.00000000000001,
+          -135.0,
+          102.23255813953487
+        ]
+      },
+      {
+        "name": "new position DeckBolt0",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          -105.00000000000001,
+          -135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "old position DeckSlotNut0",
+        "mass_kg": -0.006083424664393645,
+        "center_mm": [
+          -105.0,
+          -135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "new position DeckSlotNut0",
+        "mass_kg": 0.006083424664393648,
+        "center_mm": [
+          -105.0,
+          -135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "old position DeckBolt1",
+        "mass_kg": -0.006362667601315408,
+        "center_mm": [
+          -105.00000000000001,
+          135.0,
+          102.23255813953487
+        ]
+      },
+      {
+        "name": "new position DeckBolt1",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          -105.00000000000001,
+          135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "old position DeckSlotNut1",
+        "mass_kg": -0.006083424664393646,
+        "center_mm": [
+          -104.99999999999999,
+          135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "new position DeckSlotNut1",
+        "mass_kg": 0.006083424664393647,
+        "center_mm": [
+          -105.0,
+          135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "old position DeckBolt2",
+        "mass_kg": -0.006362667601315407,
+        "center_mm": [
+          -1.1396302734615186e-16,
+          -135.0,
+          102.23255813953489
+        ]
+      },
+      {
+        "name": "new position DeckBolt2",
+        "mass_kg": 0.006362667601315407,
+        "center_mm": [
+          -1.1396302734615186e-16,
+          -135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "old position DeckSlotNut2",
+        "mass_kg": -0.006083424664393645,
+        "center_mm": [
+          -1.5973271259357839e-15,
+          -135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "new position DeckSlotNut2",
+        "mass_kg": 0.006083424664393648,
+        "center_mm": [
+          -1.6536419226180935e-15,
+          -135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "old position DeckBolt3",
+        "mass_kg": -0.006362667601315407,
+        "center_mm": [
+          -1.1396302734615186e-16,
+          135.0,
+          102.23255813953489
+        ]
+      },
+      {
+        "name": "new position DeckBolt3",
+        "mass_kg": 0.006362667601315407,
+        "center_mm": [
+          -1.1396302734615186e-16,
+          135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "old position DeckSlotNut3",
+        "mass_kg": -0.006083424664393646,
+        "center_mm": [
+          -1.5345058356292169e-15,
+          135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "new position DeckSlotNut3",
+        "mass_kg": 0.006083424664393648,
+        "center_mm": [
+          -1.6878943335799887e-15,
+          135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "old position DeckBolt4",
+        "mass_kg": -0.006362667601315408,
+        "center_mm": [
+          105.0,
+          -135.0,
+          102.23255813953487
+        ]
+      },
+      {
+        "name": "new position DeckBolt4",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          105.0,
+          -135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "old position DeckSlotNut4",
+        "mass_kg": -0.006083424664393645,
+        "center_mm": [
+          105.0,
+          -135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "new position DeckSlotNut4",
+        "mass_kg": 0.006083424664393648,
+        "center_mm": [
+          105.0,
+          -135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "old position DeckBolt5",
+        "mass_kg": -0.006362667601315408,
+        "center_mm": [
+          105.0,
+          135.0,
+          102.23255813953487
+        ]
+      },
+      {
+        "name": "new position DeckBolt5",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          105.0,
+          135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "old position DeckSlotNut5",
+        "mass_kg": -0.006083424664393646,
+        "center_mm": [
+          104.99999999999999,
+          135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "new position DeckSlotNut5",
+        "mass_kg": 0.006083424664393647,
+        "center_mm": [
+          105.0,
+          135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "old position PrintedStopXN",
+        "mass_kg": -0.010568359563512703,
+        "center_mm": [
+          -109.50000000000003,
+          -25.0,
+          110.5
+        ]
+      },
+      {
+        "name": "new position PrintedStopXN",
+        "mass_kg": 0.010568359563512703,
+        "center_mm": [
+          -109.50000000000003,
+          -25.0,
+          240.5
+        ]
+      },
+      {
+        "name": "old position PrintedStopXP",
+        "mass_kg": -0.010568359563512703,
+        "center_mm": [
+          109.50000000000001,
+          -25.0,
+          110.5
+        ]
+      },
+      {
+        "name": "new position PrintedStopXP",
+        "mass_kg": 0.010568359563512703,
+        "center_mm": [
+          109.50000000000001,
+          -25.0,
+          240.5
+        ]
+      },
+      {
+        "name": "old position PrintedStopYN",
+        "mass_kg": -0.010568359563512703,
+        "center_mm": [
+          -7.011238426916235e-16,
+          -109.50000000000001,
+          110.49999999999999
+        ]
+      },
+      {
+        "name": "new position PrintedStopYN",
+        "mass_kg": 0.010568359563512703,
+        "center_mm": [
+          -7.011238426916235e-16,
+          -109.50000000000001,
+          240.5
+        ]
+      },
+      {
+        "name": "old position PrintedStopYP",
+        "mass_kg": -0.010568359563512703,
+        "center_mm": [
+          -7.011238426916235e-16,
+          109.50000000000001,
+          110.49999999999999
+        ]
+      },
+      {
+        "name": "new position PrintedStopYP",
+        "mass_kg": 0.010568359563512703,
+        "center_mm": [
+          -7.011238426916235e-16,
+          109.50000000000001,
+          240.5
+        ]
+      },
+      {
+        "name": "old position StopBolt0",
+        "mass_kg": -0.0036745638472713013,
+        "center_mm": [
+          -109.49999999999999,
+          -38.99999999999999,
+          110.26845637583894
+        ]
+      },
+      {
+        "name": "new position StopBolt0",
+        "mass_kg": 0.0036745638472713013,
+        "center_mm": [
+          -109.49999999999999,
+          -38.99999999999999,
+          240.26845637583892
+        ]
+      },
+      {
+        "name": "old position StopWasher0",
+        "mass_kg": -0.00030831810213815945,
+        "center_mm": [
+          -109.5,
+          -39.0,
+          98.6
+        ]
+      },
+      {
+        "name": "new position StopWasher0",
+        "mass_kg": 0.00030831810213816124,
+        "center_mm": [
+          -109.49999999999999,
+          -39.0,
+          228.6
+        ]
+      },
+      {
+        "name": "old position StopNut0",
+        "mass_kg": -0.0007179502281196377,
+        "center_mm": [
+          -109.50000000000003,
+          -39.00000000000001,
+          96.6
+        ]
+      },
+      {
+        "name": "new position StopNut0",
+        "mass_kg": 0.0007179502281196369,
+        "center_mm": [
+          -109.50000000000001,
+          -39.0,
+          226.6
+        ]
+      },
+      {
+        "name": "old position StopBolt1",
+        "mass_kg": -0.0036745638472713013,
+        "center_mm": [
+          -109.5,
+          -11.000000000000004,
+          110.26845637583895
+        ]
+      },
+      {
+        "name": "new position StopBolt1",
+        "mass_kg": 0.0036745638472713013,
+        "center_mm": [
+          -109.5,
+          -11.000000000000004,
+          240.26845637583895
+        ]
+      },
+      {
+        "name": "old position StopWasher1",
+        "mass_kg": -0.00030831810213815945,
+        "center_mm": [
+          -109.5,
+          -10.999999999999996,
+          98.6
+        ]
+      },
+      {
+        "name": "new position StopWasher1",
+        "mass_kg": 0.00030831810213816124,
+        "center_mm": [
+          -109.49999999999999,
+          -11.0,
+          228.6
+        ]
+      },
+      {
+        "name": "old position StopNut1",
+        "mass_kg": -0.000717950228119638,
+        "center_mm": [
+          -109.5,
+          -11.000000000000002,
+          96.59999999999997
+        ]
+      },
+      {
+        "name": "new position StopNut1",
+        "mass_kg": 0.0007179502281196369,
+        "center_mm": [
+          -109.50000000000001,
+          -11.000000000000002,
+          226.6
+        ]
+      },
+      {
+        "name": "old position StopBolt2",
+        "mass_kg": -0.0036745638472713013,
+        "center_mm": [
+          109.49999999999999,
+          -38.99999999999999,
+          110.26845637583894
+        ]
+      },
+      {
+        "name": "new position StopBolt2",
+        "mass_kg": 0.0036745638472713013,
+        "center_mm": [
+          109.49999999999999,
+          -38.99999999999999,
+          240.26845637583892
+        ]
+      },
+      {
+        "name": "old position StopWasher2",
+        "mass_kg": -0.00030831810213815945,
+        "center_mm": [
+          109.49999999999997,
+          -39.0,
+          98.6
+        ]
+      },
+      {
+        "name": "new position StopWasher2",
+        "mass_kg": 0.00030831810213816124,
+        "center_mm": [
+          109.50000000000001,
+          -39.0,
+          228.6
+        ]
+      },
+      {
+        "name": "old position StopNut2",
+        "mass_kg": -0.0007179502281196378,
+        "center_mm": [
+          109.49999999999997,
+          -38.999999999999986,
+          96.59999999999997
+        ]
+      },
+      {
+        "name": "new position StopNut2",
+        "mass_kg": 0.0007179502281196368,
+        "center_mm": [
+          109.49999999999999,
+          -39.00000000000001,
+          226.60000000000002
+        ]
+      },
+      {
+        "name": "old position StopBolt3",
+        "mass_kg": -0.0036745638472713013,
+        "center_mm": [
+          109.5,
+          -11.000000000000004,
+          110.26845637583895
+        ]
+      },
+      {
+        "name": "new position StopBolt3",
+        "mass_kg": 0.0036745638472713013,
+        "center_mm": [
+          109.5,
+          -11.000000000000004,
+          240.26845637583895
+        ]
+      },
+      {
+        "name": "old position StopWasher3",
+        "mass_kg": -0.00030831810213815945,
+        "center_mm": [
+          109.49999999999997,
+          -10.999999999999996,
+          98.6
+        ]
+      },
+      {
+        "name": "new position StopWasher3",
+        "mass_kg": 0.00030831810213816124,
+        "center_mm": [
+          109.50000000000001,
+          -11.0,
+          228.6
+        ]
+      },
+      {
+        "name": "old position StopNut3",
+        "mass_kg": -0.000717950228119638,
+        "center_mm": [
+          109.49999999999996,
+          -10.999999999999998,
+          96.59999999999997
+        ]
+      },
+      {
+        "name": "new position StopNut3",
+        "mass_kg": 0.0007179502281196369,
+        "center_mm": [
+          109.49999999999997,
+          -10.999999999999998,
+          226.60000000000002
+        ]
+      },
+      {
+        "name": "old position StopBolt4",
+        "mass_kg": -0.0036745638472712996,
+        "center_mm": [
+          -14.0,
+          -109.50000000000001,
+          110.26845637583894
+        ]
+      },
+      {
+        "name": "new position StopBolt4",
+        "mass_kg": 0.0036745638472712996,
+        "center_mm": [
+          -14.0,
+          -109.50000000000001,
+          240.26845637583892
+        ]
+      },
+      {
+        "name": "old position StopWasher4",
+        "mass_kg": -0.00030831810213815934,
+        "center_mm": [
+          -14.000000000000002,
+          -109.50000000000001,
+          98.60000000000002
+        ]
+      },
+      {
+        "name": "new position StopWasher4",
+        "mass_kg": 0.00030831810213816124,
+        "center_mm": [
+          -13.999999999999996,
+          -109.49999999999999,
+          228.6
+        ]
+      },
+      {
+        "name": "old position StopNut4",
+        "mass_kg": -0.0007179502281196356,
+        "center_mm": [
+          -13.999999999999998,
+          -109.50000000000001,
+          96.60000000000002
+        ]
+      },
+      {
+        "name": "new position StopNut4",
+        "mass_kg": 0.0007179502281196345,
+        "center_mm": [
+          -14.0,
+          -109.50000000000001,
+          226.59999999999997
+        ]
+      },
+      {
+        "name": "old position StopBolt5",
+        "mass_kg": -0.0036745638472712996,
+        "center_mm": [
+          -14.0,
+          109.50000000000001,
+          110.26845637583894
+        ]
+      },
+      {
+        "name": "new position StopBolt5",
+        "mass_kg": 0.0036745638472712996,
+        "center_mm": [
+          -14.0,
+          109.50000000000001,
+          240.26845637583892
+        ]
+      },
+      {
+        "name": "old position StopWasher5",
+        "mass_kg": -0.00030831810213815934,
+        "center_mm": [
+          -14.000000000000002,
+          109.50000000000001,
+          98.60000000000002
+        ]
+      },
+      {
+        "name": "new position StopWasher5",
+        "mass_kg": 0.00030831810213816124,
+        "center_mm": [
+          -13.999999999999996,
+          109.49999999999999,
+          228.6
+        ]
+      },
+      {
+        "name": "old position StopNut5",
+        "mass_kg": -0.0007179502281196356,
+        "center_mm": [
+          -13.999999999999998,
+          109.50000000000001,
+          96.60000000000002
+        ]
+      },
+      {
+        "name": "new position StopNut5",
+        "mass_kg": 0.0007179502281196345,
+        "center_mm": [
+          -14.0,
+          109.50000000000003,
+          226.59999999999997
+        ]
+      },
+      {
+        "name": "old position StopBolt6",
+        "mass_kg": -0.0036745638472712996,
+        "center_mm": [
+          14.0,
+          -109.50000000000001,
+          110.26845637583894
+        ]
+      },
+      {
+        "name": "new position StopBolt6",
+        "mass_kg": 0.0036745638472712996,
+        "center_mm": [
+          14.0,
+          -109.50000000000001,
+          240.26845637583892
+        ]
+      },
+      {
+        "name": "old position StopWasher6",
+        "mass_kg": -0.0003083181021381595,
+        "center_mm": [
+          13.999999999999998,
+          -109.5,
+          98.59999999999998
+        ]
+      },
+      {
+        "name": "new position StopWasher6",
+        "mass_kg": 0.00030831810213816124,
+        "center_mm": [
+          14.000000000000005,
+          -109.50000000000001,
+          228.6
+        ]
+      },
+      {
+        "name": "old position StopNut6",
+        "mass_kg": -0.0007179502281196353,
+        "center_mm": [
+          14.0,
+          -109.50000000000001,
+          96.60000000000001
+        ]
+      },
+      {
+        "name": "new position StopNut6",
+        "mass_kg": 0.0007179502281196343,
+        "center_mm": [
+          13.999999999999998,
+          -109.50000000000003,
+          226.6
+        ]
+      },
+      {
+        "name": "old position StopBolt7",
+        "mass_kg": -0.0036745638472712996,
+        "center_mm": [
+          14.0,
+          109.50000000000001,
+          110.26845637583894
+        ]
+      },
+      {
+        "name": "new position StopBolt7",
+        "mass_kg": 0.0036745638472712996,
+        "center_mm": [
+          14.0,
+          109.50000000000001,
+          240.26845637583892
+        ]
+      },
+      {
+        "name": "old position StopWasher7",
+        "mass_kg": -0.0003083181021381595,
+        "center_mm": [
+          13.999999999999998,
+          109.5,
+          98.59999999999998
+        ]
+      },
+      {
+        "name": "new position StopWasher7",
+        "mass_kg": 0.00030831810213816124,
+        "center_mm": [
+          14.000000000000005,
+          109.50000000000001,
+          228.6
+        ]
+      },
+      {
+        "name": "old position StopNut7",
+        "mass_kg": -0.0007179502281196353,
+        "center_mm": [
+          14.0,
+          109.50000000000001,
+          96.60000000000001
+        ]
+      },
+      {
+        "name": "new position StopNut7",
+        "mass_kg": 0.0007179502281196343,
+        "center_mm": [
+          13.999999999999998,
+          109.50000000000003,
+          226.6
+        ]
+      },
+      {
+        "name": "old position CradleBolt_0",
+        "mass_kg": -0.006362667601315409,
+        "center_mm": [
+          -80.0,
+          -64.99999999999999,
+          64.1674418604651
+        ]
+      },
+      {
+        "name": "new position CradleBolt_0",
+        "mass_kg": 0.006362667601315409,
+        "center_mm": [
+          -24.999999999999996,
+          -135.0,
+          102.23255813953487
+        ]
+      },
+      {
+        "name": "old position LargeWasher_Cradle0",
+        "mass_kg": -0.0027664286854463477,
+        "center_mm": [
+          -79.99999999999997,
+          -65.0,
+          64.19999999999999
+        ]
+      },
+      {
+        "name": "new position LargeWasher_Cradle0",
+        "mass_kg": 0.0027664286854463416,
+        "center_mm": [
+          -25.00000000000001,
+          -135.0,
+          102.20000000000002
+        ]
+      },
+      {
+        "name": "old position SlotNut_Cradle_0",
+        "mass_kg": -0.0060834246643936465,
+        "center_mm": [
+          -80.0,
+          -65.0,
+          73.16519011707659
+        ]
+      },
+      {
+        "name": "new position SlotNut_Cradle_0",
+        "mass_kg": 0.006083424664393645,
+        "center_mm": [
+          -25.0,
+          -135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "old position CradleBolt_1",
+        "mass_kg": -0.006362667601315409,
+        "center_mm": [
+          -80.0,
+          64.99999999999999,
+          64.1674418604651
+        ]
+      },
+      {
+        "name": "new position CradleBolt_1",
+        "mass_kg": 0.006362667601315409,
+        "center_mm": [
+          -24.999999999999996,
+          135.0,
+          102.23255813953487
+        ]
+      },
+      {
+        "name": "old position LargeWasher_Cradle1",
+        "mass_kg": -0.0027664286854463477,
+        "center_mm": [
+          -79.99999999999997,
+          65.0,
+          64.19999999999999
+        ]
+      },
+      {
+        "name": "new position LargeWasher_Cradle1",
+        "mass_kg": 0.0027664286854463416,
+        "center_mm": [
+          -25.00000000000001,
+          135.0,
+          102.20000000000002
+        ]
+      },
+      {
+        "name": "old position SlotNut_Cradle_1",
+        "mass_kg": -0.006083424664393646,
+        "center_mm": [
+          -80.0,
+          65.0,
+          73.16519011707659
+        ]
+      },
+      {
+        "name": "new position SlotNut_Cradle_1",
+        "mass_kg": 0.006083424664393646,
+        "center_mm": [
+          -25.0,
+          135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "old position CradleBolt_2",
+        "mass_kg": -0.006362667601315409,
+        "center_mm": [
+          20.0,
+          -64.99999999999999,
+          64.1674418604651
+        ]
+      },
+      {
+        "name": "new position CradleBolt_2",
+        "mass_kg": 0.006362667601315409,
+        "center_mm": [
+          24.999999999999996,
+          -135.0,
+          102.23255813953487
+        ]
+      },
+      {
+        "name": "old position LargeWasher_Cradle2",
+        "mass_kg": -0.002766428685446347,
+        "center_mm": [
+          20.000000000000004,
+          -65.00000000000003,
+          64.20000000000003
+        ]
+      },
+      {
+        "name": "new position LargeWasher_Cradle2",
+        "mass_kg": 0.0027664286854463416,
+        "center_mm": [
+          25.0,
+          -135.0,
+          102.20000000000002
+        ]
+      },
+      {
+        "name": "old position SlotNut_Cradle_2",
+        "mass_kg": -0.0060834246643936465,
+        "center_mm": [
+          20.0,
+          -65.0,
+          73.16519011707659
+        ]
+      },
+      {
+        "name": "new position SlotNut_Cradle_2",
+        "mass_kg": 0.006083424664393645,
+        "center_mm": [
+          25.0,
+          -135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "old position CradleBolt_3",
+        "mass_kg": -0.006362667601315409,
+        "center_mm": [
+          20.0,
+          64.99999999999999,
+          64.1674418604651
+        ]
+      },
+      {
+        "name": "new position CradleBolt_3",
+        "mass_kg": 0.006362667601315409,
+        "center_mm": [
+          24.999999999999996,
+          135.0,
+          102.23255813953487
+        ]
+      },
+      {
+        "name": "old position LargeWasher_Cradle3",
+        "mass_kg": -0.002766428685446347,
+        "center_mm": [
+          20.000000000000004,
+          65.00000000000003,
+          64.20000000000003
+        ]
+      },
+      {
+        "name": "new position LargeWasher_Cradle3",
+        "mass_kg": 0.0027664286854463416,
+        "center_mm": [
+          25.0,
+          135.0,
+          102.20000000000002
+        ]
+      },
+      {
+        "name": "old position SlotNut_Cradle_3",
+        "mass_kg": -0.006083424664393646,
+        "center_mm": [
+          20.0,
+          65.0,
+          73.16519011707659
+        ]
+      },
+      {
+        "name": "new position SlotNut_Cradle_3",
+        "mass_kg": 0.006083424664393646,
+        "center_mm": [
+          25.0,
+          135.0,
+          94.83480988292341
+        ]
+      },
+      {
+        "name": "remove old battery budget",
+        "mass_kg": -0.75,
+        "center_mm": [
+          -30,
+          0,
+          60.5
+        ]
+      },
+      {
+        "name": "BatteryBL1860B",
+        "mass_kg": 0.68,
+        "center_mm": [
+          -136.5,
+          5.762299424793464e-16,
+          135.0
+        ]
+      },
+      {
+        "name": "BatteryAdapter03",
+        "mass_kg": 0.123,
+        "center_mm": [
+          -136.5,
+          -3.989011849881265e-16,
+          181.0
+        ]
+      },
+      {
+        "name": "battery full125g belt plus25g pads",
+        "mass_kg": 0.15,
+        "center_mm": [
+          -146,
+          0,
+          150
+        ]
+      },
+      {
+        "name": "PC and supervisor belts/pads",
+        "mass_kg": 0.03,
+        "center_mm": [
+          0,
+          10,
+          130
+        ]
+      },
+      {
+        "name": "remove old cargo belts/edge protection",
+        "mass_kg": -0.28,
+        "center_mm": [
+          0,
+          0,
+          180
+        ]
+      },
+      {
+        "name": "raise cargo belts/edge protection",
+        "mass_kg": 0.28,
+        "center_mm": [
+          0,
+          0,
+          310
+        ]
+      },
+      {
+        "name": "old Reserved_Computer",
+        "mass_kg": -0.5,
+        "center_mm": [
+          -190.0,
+          -5.0,
+          126.0
+        ]
+      },
+      {
+        "name": "relocate Reserved_Computer",
+        "mass_kg": 0.5,
+        "center_mm": [
+          -2.5969110371381617e-16,
+          -6.315935428978668e-17,
+          134.0
+        ]
+      },
+      {
+        "name": "old Reserved_SupervisorRS485",
+        "mass_kg": -0.05,
+        "center_mm": [
+          -190.0,
+          62.5,
+          127.0
+        ]
+      },
+      {
+        "name": "relocate Reserved_SupervisorRS485",
+        "mass_kg": 0.05,
+        "center_mm": [
+          40.0,
+          87.5,
+          119.0
+        ]
+      },
+      {
+        "name": "old Reserved_Protection",
+        "mass_kg": -0.2,
+        "center_mm": [
+          189.99999999999997,
+          -85.0,
+          129.50000000000003
+        ]
+      },
+      {
+        "name": "relocate Reserved_Protection",
+        "mass_kg": 0.2,
+        "center_mm": [
+          170.0,
+          -74.99999999999999,
+          129.50000000000003
+        ]
+      },
+      {
+        "name": "old Reserved_ClampAndPower",
+        "mass_kg": -0.2,
+        "center_mm": [
+          200.0,
+          -6.496390726949488e-17,
+          123.5
+        ]
+      },
+      {
+        "name": "relocate Reserved_ClampAndPower",
+        "mass_kg": 0.2,
+        "center_mm": [
+          180.0,
+          20.0,
+          129.5
+        ]
+      }
+    ],
+    "mass_change_kg": 1.4818323255152506,
+    "moment_change_kg_mm": [
+      -5.370561906928735,
+      10.015716479999876,
+      499.5569043170694
+    ],
+    "conditional_base_cg_xyz_ranges_mm": [
+      [
+        -9.028827260907859,
+        7.92470468088598
+      ],
+      [
+        -7.44721087849606,
+        9.50632106329778
+      ],
+      [
+        123.40393986013522,
+        144.5958547873775
+      ]
+    ],
+    "basis": "Conditional on historical D3 CGx/y+-10,z85..110mm; equipment envelope centroids and mass budgets, not measured CG. Protection0.4kg split equally between two reserved cases; cable routing moment remains in historical uncertainty."
+  },
+  "limitations": [
+    "Battery+adapter latched offsets and case/switch/connector details need received-part/dummy check.",
+    "New SUS posts and MISUMI brackets/nuts share nominal slot dimensions; verify bracket tabs, seating and torque on one joint before assembly. No manufacturer cross-brand certification claimed.",
+    "PLA first-floor panel creep/retention/temperature and frame joint slip/racking require physical tests.",
+    "Six plate-support coordinates unchanged; prior shell FEA assumes clamped patches and does not certify new frame/joint stiffness.",
+    "Normal10kg/structure15kg SF2 are targets; electrical protection, actual computer mounting and loaded operation remain unqualified."
+  ]
+}
