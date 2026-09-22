@@ -1,0 +1,56 @@
+{
+  "revision": "D6.4",
+  "checked_date": "2026-09-23",
+  "ordered": false,
+  "items": [
+    {
+      "part": "M4x16 socket head screw",
+      "supplier": "Onokatsu official store",
+      "sku": "133-00-0416",
+      "quantity_per_pack": 60,
+      "pack_JPY_tax_included": 770,
+      "used_qty": 4,
+      "URL": "https://store.onokatsu.co.jp/products/133-00-04",
+      "standard": "JIS B1176, A2-70 equivalent, full thread",
+      "head_nominal_diameter_height_mm": [
+        7,
+        4
+      ],
+      "dimension_reference": "https://www.monotaro.com/p/2901/7818/"
+    },
+    {
+      "part": "M4 large washer",
+      "supplier": "nejiya.jp Yahoo shop",
+      "sku": "4104012104",
+      "quantity_per_pack": 50,
+      "pack_JPY": 288,
+      "used_qty": 8,
+      "URL": "https://store.shopping.yahoo.co.jp/nejiya-jp/4104012104.html",
+      "nominal_size_mm": [
+        4,
+        12,
+        1
+      ],
+      "CAD_nominal_ID_mm": 4.1,
+      "dimension_reference": "https://www.monotaro.com/p/4216/9741/",
+      "receipt_check": "Supplier states factory-specific tolerances; verify M4 clearance, OD and thickness. Reference-ID4.1 is not a guaranteed tolerance for this SKU."
+    }
+  ],
+  "shipping": [
+    {
+      "supplier": "Onokatsu",
+      "JPY": 385,
+      "condition": "order below3300JPY excluding Hokkaido/Okinawa; those destinations900JPY",
+      "URL": "https://store.onokatsu.co.jp/pages/user-guide"
+    },
+    {
+      "supplier": "nejiya.jp",
+      "JPY": 390,
+      "condition": "displayed flat delivery below5500JPY; page says conditions can vary",
+      "URL": "https://store.shopping.yahoo.co.jp/nejiya-jp/4104012104.html"
+    }
+  ],
+  "two_packs_plus_shipping_reference_JPY": 1833,
+  "price_savings_from_old_unpriced_screws_assumed": false,
+  "notes": "Purchase reference for small consumer-accessible standard hardware; not an order or guaranteed checkout quote. Local small packs or existing equivalent stock can avoid full packs, but ownership is not assumed."
+}

@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
   "design": "AMR01_TwoStorey_D6",
-  "date": "2026-09-22",
+  "date": "2026-09-23",
   "supersedes_current_requirements_in": "../amr06/requirements.json",
   "status": "design_requirements_accepted_hardware_qualification_pending",
   "battery_service": {
     "date": "2026-09-22",
-    "revision": "D6.3",
+    "revision": "D6.4",
     "CAD": "two-story/AMR01_TwoStorey_D6.FCStd",
     "design_intent_ja": "1階へ電池・計算機・電源を配置し、2階を格子穴アルミ荷台とする。電池は8mm持上げ後に後方220mmへ抜く。荷台と荷物は残す。",
     "battery_product_selected": true,
@@ -29,7 +29,7 @@
       104
     ],
     "additional_metal_machining": false,
-    "retention": "1F padded seat and25mm belt. Four panels, each3 dispersed M6 to outer/end3030 rails plus1 flush M4 through central PLA beam; beam has2 M6 at each end. Outer corners are continuous; auxiliary flat gussets removed. Existing8 HBLFSN6 joints retain the metal frame independently; no frame bracing credit is assigned to PLA.",
+    "retention": "1F padded seat and25mm belt. Four panels, each3 dispersed M6 to outer/end3030 rails plus1 ordinary M4 cap with OD12 top/bottom washers through central PLA beam; beam has2 M6 at each end. Outer corners are continuous; auxiliary flat gussets removed. Existing8 HBLFSN6 joints retain the metal frame independently; no frame bracing credit is assigned to PLA.",
     "ground_clearance_mm": 25,
     "disconnect_before_withdrawal": true,
     "prototype_retention_test_force_N": 45,
@@ -188,7 +188,7 @@
       "computer_origin_LWH_mm": [
         -60,
         -50,
-        104,
+        108,
         120,
         100,
         60
@@ -221,7 +221,37 @@
         "HNTT6_6_qty": 24,
         "decision_ja": "根元4箇所の両側固定を維持。通常積載10kg。D6.2で車体10kgは目安へ変更。方向別剛性・実物試験は未完了。"
       },
-      "floor_fixing_revision": "D6.3:4 fasteners per panel,16 total; floor screws moved from inner rails to outer corners. Same seam beam/four M6 anchors. Four auxiliary flat gussets removed; existing8 HBLFSN6 frame joints retained independently of PLA. Racking stiffness requires physical review."
+      "floor_fixing_revision": "D6.4: four fixings per panel; central M4 plain holes, standard cap screws and OD12 washers on both faces. PC on four integral10x10x5.6mm hard supports,1mm liners, seat108mm. Outer M6 corner screws and independent metal frame joints retained.",
+      "computer_seat_z_mm": 108,
+      "computer_supports": {
+        "quantity": 4,
+        "integral_PLA_size_mm": [
+          10,
+          10,
+          5.6
+        ],
+        "liner_t_mm": 1,
+        "centers_XY_mm": [
+          [
+            -50,
+            -40
+          ],
+          [
+            -50,
+            40
+          ],
+          [
+            50,
+            -40
+          ],
+          [
+            50,
+            40
+          ]
+        ],
+        "plain_M4_hole_mm": 4.5,
+        "top_and_bottom_washer_OD_mm": 12
+      }
     }
   },
   "load_placement": {
@@ -332,5 +362,5 @@
     "thermal_duration_verified": false,
     "note": "Flat-floor cargo 10 kg is released only after the linked hardware acceptance tests. Slope operation and power-off slope holding are outside this prototype scope, rather than pending mandatory brake procurement."
   },
-  "design_revision": "D6.3"
+  "design_revision": "D6.4"
 }

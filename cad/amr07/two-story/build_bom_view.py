@@ -23,11 +23,11 @@ groups = [
     ('モーター2個', ['D01']),
     ('専用モーター金具2個', ['Q01','S08']),
     ('タイヤ・キャスター', ['D02','C01','P01','S02','S06']),
-    ('フレーム・締結材', ['F01','F02','D6_POSTS','F03','F04','H01','MW','D3_M6','D3_STOP_BOLTS','D3_STOP_NUTS','D3_STOP_WASHERS','D62_FLOOR_SCREWS','D62_BEAM_WASHERS']),
+    ('フレーム・締結材', ['F01','F02','D6_POSTS','F03','F04','H01','MW','D3_M6','D3_STOP_BOLTS','D3_STOP_NUTS','D3_STOP_WASHERS','D62_FLOOR_SCREWS','D62_BEAM_WASHERS','D64_FLOOR_WASHERS']),
     ('アルミ天板', ['DECK_plate','DECK_CNC_SHIP']),
     ('制御・電源保護', ['E02']+[r['ID'] for r in rows if r['ID'].startswith('ELEC_')]),
     ('PLA・ベルト・保護材', ['P04','H02','DECK_cargo_straps','DECK_edge_protection_and_slack_retention','POWER_PADS','POWER_LOW_STRAPS']),
-    ('その他送料', ['S03','D3_STRAP_SHIP','S04','S07']),
+    ('その他送料', ['S03','D3_STRAP_SHIP','S04','S07','D64_FASTENER_SHIP']),
 ]
 by_id = {r['ID']: r for r in rows}
 ids = [i for _, members in groups for i in members]
@@ -69,7 +69,7 @@ states = defaultdict(Decimal)
 for row in rows:
     if yen(row) is not None: states[evidence(row)] += yen(row)
 unpriced = [r for r in rows if yen(r) is None]
-out = dict(revision=summary['revision'], date='2026-09-22',
+out = dict(revision=summary['revision'], date='2026-09-23',
            BOM_sha256=hashlib.sha256(raw).hexdigest(),
            denominator_JPY_reference=float(total),denominator_scope='Existing priced lines, provisional budgets and PLA consumption; excludes all unpriced items.',
            FX_reference_JPY_per_USD=float(rate),FX_date=summary['FX_date'],
@@ -121,7 +121,8 @@ for c in category_rows:
         if amount is not None and r['通貨']=='USD':price+='（$'+r['明細金額']+'）'
         lines.append(f'| {name} | {qty} | {price} | {evidence(r)} |')
     lines += ['', '</details>', '']
-lines += [f'**今回D6.3は四隅の平面補強板4枚と締結材24点を廃止し、床ねじ4組の位置を変更。素材仮枠500円を削除。金具・ねじの追加購入は0個、PLA材料消費参考は前版より{summary["corner_rework_from_D62"]["PLA_material_reference_increase_JPY"]:,.0f}円増。** 各床4点固定と支柱根元両側補強を継続する。前回D6.2で追加したねじ・座金類の未計上状態は継承し、今回0円で調達できるという意味ではない。', '',
+lines += [f'**D6.4では中央4本を通常のM4×16に変更し、上下のOD12座金を計8枚にした。** 新たな物理部品は上側座金4枚、下側4枚は交換。ねじ60本770円・座金50枚288円・2店舗送料参考775円、合計1833円を購入パック全額で計上した。使用する4本＋8枚の按分参考は約97円だが、購入額には使わない。従来の中央ねじ代は未計上だったため、旧ねじ代を差し引いた節約額は作らない。PLA材料消費参考は前版より{summary["plain_hole_rework_from_D63"]["PLA_material_reference_increase_JPY"]:,.0f}円増。', '',
+    '上記送料は北海道・沖縄を除く掲載条件の参考で、まとめ買い・店頭小袋購入では再計上する。[販売ページ確認記録](plain_hole_fastener_observations.json)。各床4点固定と支柱根元両側補強は継続する。追加金属加工は不要。', '',
     '## これから金額が増える項目', '',
     '主計算機の0.5kgは重量の予約であり、購入費の計上ではない。未計上品は次のとおり。', '',
     '| 未計上品 | 状態 |','|---|---|']

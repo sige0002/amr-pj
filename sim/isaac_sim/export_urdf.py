@@ -1,4 +1,4 @@
-"""Export D6.3 from the saved FreeCAD assembly. Run with FreeCAD Python.
+"""Export D6.4 from the saved FreeCAD assembly. Run with FreeCAD Python.
 
 CAD is in mm; URDF and binary STL are in m. No edits to the source CAD.
 The inertia ledger uses catalog/estimated masses, not solid-metal motor mass.
@@ -89,7 +89,7 @@ def aggregate(components, origin):
 def main():
     requirements = json.loads((CAD.parent / "requirements.json").read_text())
     budget = json.loads((CAD / "payload_budget.json").read_text())
-    assert requirements["design_revision"] == budget["revision"] == "D6.3"
+    assert requirements["design_revision"] == budget["revision"] == "D6.4"
     doc = App.openDocument(str(SOURCE))
     objects = {o.Name: o for o in doc.Objects if hasattr(o, "MaterialBasis") and hasattr(o, "Shape")}
     shapes = {n: o.Shape for n, o in objects.items()}
@@ -136,7 +136,7 @@ def main():
                   "TYG-50 catalog assembly 0.165kg; internal mass distribution ASSUMED from proxy geometry")
         visual(link, n, shapes[n], "rubber" if n == "CasterTire" else "steel")
 
-    # CAD-volume material masses, with the same catalog overrides as D6.3.
+    # CAD-volume material masses, with the same catalog overrides as D6.4.
     for n, o in objects.items():
         if o.MaterialBasis in ("reference", "purchased"):
             continue
@@ -145,7 +145,7 @@ def main():
         elif n.startswith(("Cross300_", "UpperRail3030_")): mass, basis = .228, "3030 catalog 0.76kg/m, 300mm"
         elif n.startswith("Upright3030_"): mass, basis = .084, "SUS SF2 catalog 0.84kg/m, 100mm"
         elif n.startswith("Bracket_"): mass, basis = .015, "HBLFSN6 catalog 15g (retained lower brackets)"
-        # Added LevelBracket masses intentionally retain the D6.3 CAD ledger.
+        # Added LevelBracket masses intentionally retain the D6.4 CAD ledger.
         component("base_link", n, shapes[n], mass, basis)
         material = o.MaterialBasis.lower()
         if n.startswith("Upright"): material = "posts"
@@ -155,7 +155,7 @@ def main():
     electrical = {"BatteryBL1860B": .680, "BatteryAdapter03": .123, "Reserved_Computer": .500,
                   "Reserved_SupervisorRS485": .050, "Reserved_Protection": .200, "Reserved_ClampAndPower": .200}
     for n, m in electrical.items():
-        component("base_link", n, shapes[n], m, "D6.3 electrical catalog mass or equipment budget; uniform envelope")
+        component("base_link", n, shapes[n], m, "D6.4 electrical catalog mass or equipment budget; uniform envelope")
     for n, o in objects.items():
         if o.MaterialBasis != "reference" or n in exclusions: continue
         color = "rubber"
@@ -168,17 +168,17 @@ def main():
         visual("base_link", n, shapes[n], color)
 
     component("base_link", "wiring_allowance", box([0, 0, 128], [380, 220, 35]), .400,
-              "D6.3 wiring allowance; ASSUMED distributed across first floor, not copper-fill CAD density")
+              "D6.4 wiring allowance; ASSUMED distributed across first floor, not copper-fill CAD density")
     component("base_link", "battery_belt_pads", box([-146, 0, 150], [120, 30, 85]), .150,
-              "D6.3 125g battery belt plus 25g pads, simplified distribution")
+              "D6.4 125g battery belt plus 25g pads, simplified distribution")
     component("base_link", "computer_belts_pads", box([0, 10, 130], [120, 100, 40]), .030,
-              "D6.3 computer/supervisor retaining allowance")
+              "D6.4 computer/supervisor retaining allowance")
     component("base_link", "inherited_small_hardware", box([90, 0, 60], [80, 280, 20]), .030,
               "Inherited unmodeled retaining/grub screw allowance")
     component("base_link", "inherited_strap_allowance", box([-136.5, 0, 150], [113, 75, 20]), .040,
-              "Legacy strap allowance retained in D6.3 ledger; no new additional mass")
+              "Legacy strap allowance retained in D6.4 ledger; no new additional mass")
     component("base_link", "cargo_belts_pads", box([0, 0, 243], [200, 180, 20]), .280,
-              "D6.3 cargo belts/pads allowance stowed on deck in empty variant")
+              "D6.4 cargo belts/pads allowance stowed on deck in empty variant")
 
     def box_collision(link, name, lo, hi):
         origin = ORIGINS[link]
@@ -236,7 +236,7 @@ def main():
             facets.append(struct.pack("<12fH", *[x/length for x in normal], *a, *b, *c, 0))
         path = HERE / "meshes" / f"{link}_{material}{suffix}.stl"
         with path.open("wb") as out:
-            out.write(b"AMR D6.3 visual; METERS; FreeCAD tessellation".ljust(80, b" "))
+            out.write(b"AMR D6.4 visual; METERS; FreeCAD tessellation".ljust(80, b" "))
             out.write(struct.pack("<I", len(facets)))
             out.writelines(facets)
         entry = dict(file=path.relative_to(HERE).as_posix(), material=material, link=link,
@@ -257,14 +257,14 @@ def main():
     ]
     variants = {}
     for payload in [0, 10]:
-        robot = ET.Element("robot", name="amr_d63" + ("_payload_10kg" if payload else ""))
-        robot.append(ET.Comment("Generated from D6.3. SI units; +X forward, +Y left, +Z up. Inertias are estimates."))
+        robot = ET.Element("robot", name="amr_d64" + ("_payload_10kg" if payload else ""))
+        robot.append(ET.Comment("Generated from D6.4. SI units; +X forward, +Y left, +Z up. Inertias are estimates."))
         for color, rgba in COLORS.items():
             ET.SubElement(ET.SubElement(robot, "material", name=color), "color", rgba=fmt(rgba))
         comp = {k: list(v) for k, v in components.items()}
         if payload:
             comp["base_link"] = [c for c in comp["base_link"] if c["name"] != "cargo_belts_pads"]
-            comp["base_link"].append(dict(name="cargo_belts_pads", basis="D6.3 loaded restraint allowance at CAD z310mm",
+            comp["base_link"].append(dict(name="cargo_belts_pads", basis="D6.4 loaded restraint allowance at CAD z310mm",
                                          **mass_properties(box([0, 0, 310], [230, 220, 160]), .280)))
             comp["payload_link"] = [dict(name="example_cargo_10kg", basis="Example uniform restrained cargo 200x200x160mm",
                                          **mass_properties(box(ORIGINS["payload_link"], [200, 200, 160]), payload))]
@@ -311,7 +311,7 @@ def main():
                                    assembly=aggregate([c for v in comp.values() for c in v], ORIGINS["base_link"]),
                                    components=comp)
 
-    settings = dict(schema_version=1, design_revision="D6.3", target_isaac_sim="5.0 / 5.1",
+    settings = dict(schema_version=1, design_revision="D6.4", target_isaac_sim="5.0 / 5.1",
         wheel_radius_m=.05035, track_m=.349, caster_radius_m=.025, caster_trail_m=.016,
         base_origin_in_cad_mm=ORIGINS["base_link"], spawn_translation_m=[0, 0, .05235],
         max_motor_torque_Nm=.96, rated_motor_speed_rad_s=115*2*math.pi/60,
@@ -322,13 +322,13 @@ def main():
         passive_joints=["caster_swivel_joint", "caster_wheel_joint"],
         contact_note="Friction and velocity servo gain are starting assumptions, not measured tire/controller properties.")
     (HERE / "simulation_config.json").write_text(json.dumps(settings, indent=2)+"\n")
-    manifest = dict(schema_version=1, design_revision="D6.3", source_cad=SOURCE.relative_to(ROOT).as_posix(),
+    manifest = dict(schema_version=1, design_revision="D6.4", source_cad=SOURCE.relative_to(ROOT).as_posix(),
         source_cad_sha256=sha(SOURCE), source_git_commit=subprocess.check_output(["git", "-C", str(ROOT), "rev-parse", "HEAD"], text=True).strip(),
         source_git_commit_scope="Checkout parent when exporting; uncommitted generated revision is identified by the CAD and mass-budget SHA256 values, not by this parent commit alone.",
         source_mass_budget_sha256=sha(CAD / "payload_budget.json"), units="meter kilogram second radian",
         link_origins_cad_mm=ORIGINS, joints=joints, meshes=mesh_manifest, variants=variants,
         excluded_empty_visuals=exclusions, source_cad_modified=False, isaac_sim_runtime_tested=False,
-        mass_note="Totals reconcile exactly with D6.3 ledger. Component densities, rotor/stator split, caster distribution, unselected electronics and allowances are estimates. CAD-derived tensor is not a measured tensor.",
+        mass_note="Totals reconcile exactly with D6.4 ledger. Component densities, rotor/stator split, caster distribution, unselected electronics and allowances are estimates. CAD-derived tensor is not a measured tensor.",
         collision_note="Explicit boxes/cylinders for mobility, with deck holes/slots/small hardware omitted. No structural deformation, tire compliance, electrical brake, regenerative power or motor thermal model.")
     (HERE / "export_manifest.json").write_text(json.dumps(manifest, indent=2)+"\n")
     App.closeDocument(doc.Name)

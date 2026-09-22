@@ -18,7 +18,7 @@
       149.8,
       26.0
     ],
-    "solid_mass_g": 126.8796021411163,
+    "solid_mass_g": 127.60780436907199,
     "orientation_note": "Floor: ribs downward with slicer supports, or stand on central seam edge with brim and local locator-wall supports. Beam: broad top flange toward bed; check17mm belt-channel bridge. STL axes are assembly axes translated to positive coordinates, NOT pre-oriented for printing.",
     "sliced": false,
     "support_and_failed_print_material_included": false
@@ -30,7 +30,7 @@
       149.8,
       26.0
     ],
-    "solid_mass_g": 126.87960214111419,
+    "solid_mass_g": 127.6078043690699,
     "orientation_note": "Floor: ribs downward with slicer supports, or stand on central seam edge with brim and local locator-wall supports. Beam: broad top flange toward bed; check17mm belt-channel bridge. STL axes are assembly axes translated to positive coordinates, NOT pre-oriented for printing.",
     "sliced": false,
     "support_and_failed_print_material_included": false
@@ -42,7 +42,7 @@
       149.8,
       24.00000000000001
     ],
-    "solid_mass_g": 122.91874454111509,
+    "solid_mass_g": 123.64694676907075,
     "orientation_note": "Floor: ribs downward with slicer supports, or stand on central seam edge with brim and local locator-wall supports. Beam: broad top flange toward bed; check17mm belt-channel bridge. STL axes are assembly axes translated to positive coordinates, NOT pre-oriented for printing.",
     "sliced": false,
     "support_and_failed_print_material_included": false
@@ -54,7 +54,7 @@
       149.8,
       24.0
     ],
-    "solid_mass_g": 122.53781654111502,
+    "solid_mass_g": 123.26601876907074,
     "orientation_note": "Floor: ribs downward with slicer supports, or stand on central seam edge with brim and local locator-wall supports. Beam: broad top flange toward bed; check17mm belt-channel bridge. STL axes are assembly axes translated to positive coordinates, NOT pre-oriented for printing.",
     "sliced": false,
     "support_and_failed_print_material_included": false

@@ -1,4 +1,4 @@
-"""D6.3 two-storey AMR. Run with FreeCAD Python; no GUI required.
+"""D6.4 two-storey AMR. Run with FreeCAD Python; no GUI required.
 
 The quoted D3 cargo plate is translated only. All electronics stand ABOVE
 the lower rails. Four precut 100mm SF2 posts and two spare 300mm rails carry
@@ -27,7 +27,7 @@ V=App.Vector
 NAME='AMR01_TwoStorey_D6'
 SOURCE='099686bacaad0f72e8bc4ce15005cd708a5b2f83'
 RHO={'aluminum':2.7e-6,'steel':7.85e-6,'PLA':1.24e-6,'rubber':1.1e-6}
-P=dict(revision='D6.3',date='2026-09-22',source_revision=SOURCE,
+P=dict(revision='D6.4',date='2026-09-23',source_revision=SOURCE,
     architecture='1F battery/computer/power above base rails; 2F independent aluminum cargo deck',
     base_rail_top_z_mm=99,floor_bottom_top_z_mm=[99,101.4],equipment_seat_z_mm=104,
     upright_part='SUS SF2-30・30 BLACK, SF9-322 Amazon pack,100mm',upright_qty=4,
@@ -41,7 +41,10 @@ P=dict(revision='D6.3',date='2026-09-22',source_revision=SOURCE,
     vehicle_mass_target_kg=10,vehicle_mass_target_is_hard_limit=False,
     floor_fasteners_per_panel=4,floor_direct_M6_per_panel=3,floor_seam_M4_per_panel=1,
     floor_support='PLA ribbed seam beam fixed to BOTH inner rails with two M6 per end; four panels with integral underside seam ribs',
-    floor_beam_M6_qty=4,floor_M4_countersunk_qty=4,
+    floor_beam_M6_qty=4,floor_M4_countersunk_qty=0,floor_M4_cap_qty=4,
+    floor_M4_large_washers_qty=8,floor_M4_large_washer_OD_ID_t_mm=[12,4.1,1],
+    floor_M4_plain_hole_diameter_mm=4.5,floor_min_web_at_M4_mm=2.4,
+    computer_support_bosses=dict(qty=4,size_mm=[10,10,5.6],centers_xy_mm=[list(p) for p in product([-50,50],[-40,40])],top_z_mm=107,liner_t_mm=1),
     floor_outer_corner_notches=False,corner_flat_gusset_qty=0,
     corner_joint='Four auxiliary flat gussets and their8 fastener sets removed. Eight HBLFSN6 lower-frame joints retained; independent floor corner screws reused from inner rail positions. Frame racking qualification remains open.',
     deck_LWH_mm=[300,300,4],deck_bottom_top_z_mm=[229,233],deck_translation_z_mm=130,
@@ -50,7 +53,7 @@ P=dict(revision='D6.3',date='2026-09-22',source_revision=SOURCE,
     battery_installed_XYZ_mm=[113,75,62],adapter_origin_xyz_mm=[-184,-45,166],
     adapter_installed_XYZ_mm=[95,90,30],mating_insertion_depth_credited_mm=0,
     battery_geometry='conservative catalog envelopes, not actual latched-interface CAD',
-    computer_origin_LWH_mm=[-60,-50,104,120,100,60],computer_product_selected=False,
+    computer_origin_LWH_mm=[-60,-50,108,120,100,60],computer_product_selected=False,
     battery_service_waypoints_xyz_mm=[[0,0,0],[0,0,8],[-220,0,8]],
     exchange='OFF, unplug rear connector, release belt, lift8mm then withdraw rearward220mm; cargo and deck stay',
     normal_payload_kg=10,structural_payload_kg=15,static_factor_target=2,
@@ -89,7 +92,7 @@ def main():
     src=Path(temp.name)/'D3.FCStd'
     src.write_bytes(subprocess.check_output(['git','-C',str(BASE),'show',SOURCE+':cad/amr07/aluminum-direct-deck/AMR01_AluminumDirect_D3.FCStd']))
     old=App.openDocument(str(src));doc=App.newDocument(NAME)
-    doc.Label='AMR D6.3 | full floor corners | HBLFSN6 frame joints | cargo233mm'
+    doc.Label='AMR D6.4 | plain floor holes + large washers | PC seat108mm | cargo233mm'
     removed=['BatteryCradlePLA','BatteryReservedSpace','BatteryConnectorEnvelope','ElectronicsTrayPLA','FrontElectronicsTrayPLA']
     removed.extend(o.Name for o in old.Objects if o.Name.startswith(('Gusset_','GussetBolt_','Washer_Gusset','SlotNut_Gusset_')))
     for o in old.Objects:
@@ -155,7 +158,7 @@ def main():
             floor_corner_fixing_xy_mm=[sx*185,sy*135],plastic_in_frame_clamp=False))
 
     # Spread three reused M6 fixings across the outer and end rails.
-    # A fourth, flush M4 fixing ties each panel to the new anchored seam beam.
+    # A fourth M4 cap screw with large washers ties each panel to the beam.
     floor_fixings=[]
     for i,(x,y) in enumerate(product([-25,25],[-135,135])):
         change('CradleBolt_'+str(i),j.screw((x,y,103),(0,0,-1),6,12))
@@ -186,20 +189,17 @@ def main():
     for ix,iy in product(range(2),repeat=2):
         x=(-1 if ix==0 else 1)*15;y=(-1 if iy==0 else 1)*25;key=f'{ix}_{iy}'
         beam_holes.append(Part.makeCylinder(2.25,8,V(x,y,93)))
-        shaft=Part.makeCylinder(2,14,V(x,y,85.4))
-        head=Part.makeCone(2,4,2,V(x,y,99.4))
-        add('FloorSeamBolt_'+key,shaft.fuse(head).removeSplitter(),'steel','M4x16 countersunk90deg, nominal headOD8, flush at101.4. Plain through hole and accessible nut; no tapped PLA.')
-        add('FloorSeamWasher_'+key,Part.makeCylinder(4.5,.8,V(x,y,93.2)).cut(Part.makeCylinder(2.2,.8,V(x,y,93.2))),'steel','M4 plain washer OD9/ID4.4/t0.8 under beam flange.')
-        add('FloorSeamNut_'+key,j.hexagon(x,y,90,7,3.2).cut(Part.makeCylinder(2.0,3.2,V(x,y,90))),'steel','M4 nut AF7/h3.2. Thread simplified; accessible from underside.')
-        floor_fixings.append(dict(panel='FloorPLA_'+key,bolt='FloorSeamBolt_'+key,xy_mm=[x,y],support='seam beam, four M6 rail anchors',thread='M4 countersunk'))
+        add('FloorSeamBolt_'+key,j.screw((x,y,102.4),(0,0,-1),4,16),'steel','M4x16 standard socket cap, headOD7/h4, head top106.4. Plain4.5mm hole; no countersink, no tapped PLA.')
+        for prefix,z in [('FloorSeamTopWasher_',101.4),('FloorSeamWasher_',93)]:
+            add(prefix+key,Part.makeCylinder(6,1,V(x,y,z)).cut(Part.makeCylinder(2.05,1,V(x,y,z))),'steel','SUS304 large washer ID4.1/OD12/t1; upper panel and lower beam seats. MonotaRO42169741 nominal dimensions.')
+        add('FloorSeamNut_'+key,j.hexagon(x,y,89.8,7,3.2).cut(Part.makeCylinder(2.0,3.2,V(x,y,89.8))),'steel','M4 nut AF7/h3.2. Nominal thread protrusion3.4mm; accessible from underside.')
+        floor_fixings.append(dict(panel='FloorPLA_'+key,bolt='FloorSeamBolt_'+key,xy_mm=[x,y],support='seam beam, four M6 rail anchors',thread='M4 socket cap',top_washer='FloorSeamTopWasher_'+key))
     add('SeamBeamPLA',cut(beam,beam_holes),'PLA','64x100x25 ribbed beam, BOTH ends anchored with2xM6. Recess clears PC belt. Electronics shelf only; printed strength and creep qualification pending.')
     holes=[]
     for fixing in floor_fixings:
         x,y=fixing['xy_mm']
         if fixing['thread']=='M6':holes.append(Part.makeCylinder(3.3,4,V(x,y,98)))
-        else:
-            holes.append(Part.makeCylinder(2.25,15,V(x,y,88)))
-            holes.append(Part.makeCone(2.25,4,1.75,V(x,y,99.65)))
+        else:holes.append(Part.makeCylinder(2.25,15,V(x,y,88)))
     # Openings clear the bottom bracket feet and leave metal directly on metal.
     for x in [-156,54]:
         for y in [-151,118]:holes.append(box(x,y,98,102,33,5))
@@ -231,7 +231,9 @@ def main():
             taper=[V(sx*x,-160,z) for x,z in [(175,83),(201,83),(201,94.8),(185,94.8),(175,84),(175,83)]]
             rib=rib.cut(Part.Face(Part.makePolygon(taper)).extrude(V(0,320,0))).removeSplitter()
             s=s.fuse(rib).removeSplitter()
-            add(f'FloorPLA_{ix}_{iy}',cut(s,holes),'PLA','1F equipment only; FOUR dispersed fixings:3 reused M6/OD18 washers to outer/end rails +1 flush M4 through anchored seam beam. Full outer corner, integral underside seam rib.230x150mm class; creep/temperature test pending.')
+            px=(-1 if ix==0 else 1)*50;py=(-1 if iy==0 else 1)*40
+            s=s.fuse(box(px-5,py-5,101.4,10,10,5.6)).removeSplitter()
+            add(f'FloorPLA_{ix}_{iy}',cut(s,holes),'PLA','1F equipment only; FOUR dispersed fixings:3 reused M6/OD18 washers +1 ordinary M4 cap with OD12 washers. Full2.4mm panel at plain hole. Integral10x10x5.6 PC support boss. Creep/temperature qualification pending.')
     add('BatteryBL1860B',box(*P['battery_origin_xyz_mm'],*P['battery_installed_XYZ_mm']),'reference','Selected genuine6Ah108Wh battery, manufacturer113x75x62mm;0.68kg.',True)
     add('BatteryAdapter03',box(*P['adapter_origin_xyz_mm'],*P['adapter_installed_XYZ_mm']),'reference','Selected approximate95x90x30mm123g adapter. Full additive height retained; check actual latch/switch/lead offsets.',True)
     add('BatteryBasePad',box(-193,-37.5,101.4,113,75,2.6),'reference','Soft liner on1F floor; not on electrical contacts.')
@@ -249,16 +251,17 @@ def main():
     supervisor=change('Reserved_SupervisorRS485',box(5,65,104,70,45,30))
     change('Reserved_Protection',box(135,-110,112,70,70,35))
     change('Reserved_ClampAndPower',box(155,-25,112,50,90,35))
-    add('ComputerPad',box(-60,-50,101.4,120,100,2.6),'reference','Insulating equipment pad; case product/mount holes remain unselected.')
+    for i,(px,py) in enumerate(product([-50,50],[-40,40])):
+        add('ComputerPad_'+str(i),box(px-5,py-5,107,10,10,1),'reference','1mm liner on integral hard PLA support. PC seat108; hard support limits downward travel to107,0.6mm above screw top. Case product/feet remain unselected.')
     add('SupervisorPad',box(5,65,101.4,70,45,2.6),'reference','Insulating equipment pad; case product/mount holes remain unselected.')
-    add('ComputerTopPad',box(-60,-7.5,164,120,15,1),'reference','Strap pad to position away from actual cooling openings.')
+    add('ComputerTopPad',box(-60,-7.5,168,120,15,1),'reference','Strap pad to position away from actual cooling openings.')
     add('SupervisorTopPad',box(5,82.5,134,70,15,1),'reference','Strap pad over supervision case, received hardware fit pending.')
-    for name,x0,x1,y,top in [('Computer',-63,63,0,166.5),('Supervisor',2,78,90,136.5)]:
+    for name,x0,x1,y,top in [('Computer',-63,63,0,170.5),('Supervisor',2,78,90,136.5)]:
         s=box(x0,y-7.5,97,x1-x0,15,top-97).cut(box(x0+1.5,y-8,98.5,x1-x0-3,16,top-100))
         add(name+'RetentionBelt',s,'reference','15mm strap through1F shelf only; long direction avoids both inner3030rails. Product/creep test pending.')
     # These keep-out volumes are checks, not installed equipment or mass.
-    ventilation=box(-60,-50,167,120,100,15)
-    pc_cables=box(64,-45,112,30,85,45)
+    ventilation=box(-60,-50,171,120,100,15)
+    pc_cables=box(64,-45,116,30,85,45)
 
     doc.recompute()
     physical=[o for o in doc.Objects if hasattr(o,'MaterialBasis') and o.MaterialBasis!='reference']
@@ -339,7 +342,9 @@ def main():
         unchanged_physical_parts=len(invariant_names),unchanged_parts_BRep_equal=invariant,quoted_plate_unchanged=plate_equal,
         clearances_mm=dict(first_floor_open_height_at_sides=97.6,central_floor_to_deck=127.6,
             battery_lift_to_lowest_cargo_grid_fastener=222.8-(198.5+8),
-            computer_to_deck=229-166.5,computer_vent_keepout_height=15,
+            computer_to_deck=229-170.5,computer_vent_keepout_height=15,
+            computer_case_to_floor_screw_head=108-106.4,
+            computer_hard_support_to_floor_screw_head=107-106.4,
             battery_rearward_withdrawal=220),
         mass=dict(source_D3_kg=source_mass,estimated_base_kg=total,remaining_to_10kg_kg=10-total,
             electrical_total_kg=2.153,battery_kg=.68,adapter_kg=.123,new_straps_and_pads_allowance_kg=.18,

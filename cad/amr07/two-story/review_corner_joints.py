@@ -1,4 +1,4 @@
-"""D6.3: floor corners and retained joints; not a joint stiffness rating."""
+"""D6.4: unchanged floor corners and retained joints; not a stiffness rating."""
 from pathlib import Path
 from itertools import product
 import hashlib,json,subprocess,tempfile,math
@@ -74,12 +74,15 @@ v=json.loads((HERE/'validation.json').read_text())
 before=json.loads(subprocess.check_output(['git','-C',str(HERE),'show',BASELINE+':cad/amr07/two-story/validation.json']))
 rho={'steel':7.85e-6,'aluminum':2.7e-6}
 removed_mass=sum(o.Shape.Volume*rho[o.MaterialBasis] for o in deleted)
-delta=v['mass']['estimated_base_kg']-before['mass']['estimated_base_kg']
+before63=json.loads(subprocess.check_output(['git','-C',str(HERE),'show','b38b90b:cad/amr07/two-story/validation.json']))
+delta=before63['mass']['estimated_base_kg']-before['mass']['estimated_base_kg']
 assert abs(delta-(.044294784-removed_mass))<1e-8
-out=dict(revision='D6.3',baseline_D62_commit=subprocess.check_output(['git','-C',str(HERE),'rev-parse',BASELINE],text=True).strip(),
+out=dict(revision='D6.4',baseline_D62_commit=subprocess.check_output(['git','-C',str(HERE),'rev-parse',BASELINE],text=True).strip(),
     native_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),corners=corners,
     retained_lower_frame_joints=joint_results,removed_parts=28,additional_parts=0,
     removed_metal_mass_kg=removed_mass,added_PLA_mass_kg=.044294784,mass_change_from_D62_kg=delta,
+    mass_comparison_scope='D6.2 to D6.3 corner change only; D6.4 adds separate seam hardware and PC supports.',
+    D64_seam_and_PC_change_kg=v['mass']['estimated_base_kg']-before63['mass']['estimated_base_kg'],
     baseline_gusset_defects=old_defects,
     selected='Remove four auxiliary flat plates and eight bolt/washer/nut sets. Keep eight existing HBLFSN6 frame joints. Extend and separately fasten floor corners.',
     options=[dict(option='metal plate above PLA',assessment='Not selected: shared clamp includes PLA creep in frame preload; compression stops and corrected plate holes required.'),

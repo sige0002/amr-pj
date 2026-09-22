@@ -1,6 +1,6 @@
 {
-  "revision": "D6.3",
-  "source_cad_sha256": "04ff9a2cdd8b4236bd79e8970ddd06476e909bdb9ec8a59ff5a76cea9c14a1ab",
+  "revision": "D6.4",
+  "source_cad_sha256": "7f4d639b85c8f04f8b2aeb5f95f8b2777c4544ce5a0cfd27327284fa6b1a92ce",
   "material": {
     "assumed_product": "Bambu PLA Basic; not confirmed by owner",
     "assumed_infill_percent": 100,
@@ -51,68 +51,68 @@
     {
       "contact": "full_pads",
       "belt_tension_each_leg_N": 0,
-      "max_down_mm": 0.177217640449473,
-      "max_tensile_MPa": 1.3865566144352848,
-      "max_compression_MPa": 3.537548312653219,
-      "coarse_to_fine_downward_change_percent": -0.5891417406714949,
-      "coarse_to_fine_peak_tensile_change_percent": -0.17868036586193847,
-      "linear_twice_all_loads_tensile_demand_MPa": 2.7731132288705695,
+      "max_down_mm": 0.19879659562712554,
+      "max_tensile_MPa": 1.454987448375213,
+      "max_compression_MPa": 3.4406602280712777,
+      "coarse_to_fine_downward_change_percent": -0.44689597903120326,
+      "coarse_to_fine_peak_tensile_change_percent": -0.501277123468058,
+      "linear_twice_all_loads_tensile_demand_MPa": 2.909974896750426,
       "tensile_peak_part": "FloorPLA_0_0"
     },
     {
       "contact": "full_pads",
       "belt_tension_each_leg_N": 10,
-      "max_down_mm": 0.3632514150592381,
-      "max_tensile_MPa": 3.0808311940559996,
-      "max_compression_MPa": 4.919538239293065,
-      "coarse_to_fine_downward_change_percent": 1.621053677171469,
-      "coarse_to_fine_peak_tensile_change_percent": 9.318363411207354,
-      "linear_twice_all_loads_tensile_demand_MPa": 6.161662388111999,
-      "tensile_peak_part": "FloorPLA_1_1"
+      "max_down_mm": 0.5036427396373159,
+      "max_tensile_MPa": 4.845176590038593,
+      "max_compression_MPa": 6.364516311311453,
+      "coarse_to_fine_downward_change_percent": 0.8622024142457052,
+      "coarse_to_fine_peak_tensile_change_percent": 12.115635758881439,
+      "linear_twice_all_loads_tensile_demand_MPa": 9.690353180077185,
+      "tensile_peak_part": "FloorPLA_0_1"
     },
     {
       "contact": "full_pads",
       "belt_tension_each_leg_N": 30,
-      "max_down_mm": 0.8876813012674305,
-      "max_tensile_MPa": 12.328640194299147,
-      "max_compression_MPa": 14.583479499511608,
-      "coarse_to_fine_downward_change_percent": 1.7838560608725462,
-      "coarse_to_fine_peak_tensile_change_percent": 32.70822711163437,
-      "linear_twice_all_loads_tensile_demand_MPa": 24.657280388598295,
-      "tensile_peak_part": "FloorPLA_0_0"
+      "max_down_mm": 1.253410958337187,
+      "max_tensile_MPa": 17.670449799475897,
+      "max_compression_MPa": 14.916854684499345,
+      "coarse_to_fine_downward_change_percent": 0.8634812594007002,
+      "coarse_to_fine_peak_tensile_change_percent": 20.128745893054003,
+      "linear_twice_all_loads_tensile_demand_MPa": 35.34089959895179,
+      "tensile_peak_part": "FloorPLA_0_1"
     },
     {
       "contact": "four_10mm_feet",
       "belt_tension_each_leg_N": 0,
-      "max_down_mm": 0.20282083337237147,
-      "max_tensile_MPa": 1.4164261493527586,
-      "max_compression_MPa": 3.611496902190722,
-      "coarse_to_fine_downward_change_percent": -0.08017082375999518,
-      "coarse_to_fine_peak_tensile_change_percent": 7.984239057051878,
-      "linear_twice_all_loads_tensile_demand_MPa": 2.832852298705517,
+      "max_down_mm": 0.20153848779171246,
+      "max_tensile_MPa": 1.438699898307509,
+      "max_compression_MPa": 3.3299640356555065,
+      "coarse_to_fine_downward_change_percent": 0.16311199524212672,
+      "coarse_to_fine_peak_tensile_change_percent": -2.3418240573034987,
+      "linear_twice_all_loads_tensile_demand_MPa": 2.877399796615018,
       "tensile_peak_part": "FloorPLA_0_0"
     },
     {
       "contact": "four_10mm_feet",
       "belt_tension_each_leg_N": 10,
-      "max_down_mm": 0.6259422441031818,
-      "max_tensile_MPa": 6.437834192321183,
-      "max_compression_MPa": 9.115222915790214,
-      "coarse_to_fine_downward_change_percent": -1.7759727467654307,
-      "coarse_to_fine_peak_tensile_change_percent": 18.850879529818698,
-      "linear_twice_all_loads_tensile_demand_MPa": 12.875668384642365,
-      "tensile_peak_part": "FloorPLA_0_0"
+      "max_down_mm": 0.6131904374985104,
+      "max_tensile_MPa": 6.813730235312599,
+      "max_compression_MPa": 7.602063635916231,
+      "coarse_to_fine_downward_change_percent": -1.511831205729841,
+      "coarse_to_fine_peak_tensile_change_percent": 13.307482197614107,
+      "linear_twice_all_loads_tensile_demand_MPa": 13.627460470625198,
+      "tensile_peak_part": "FloorPLA_0_1"
     },
     {
       "contact": "four_10mm_feet",
       "belt_tension_each_leg_N": 30,
-      "max_down_mm": 1.5453966746263905,
-      "max_tensile_MPa": 20.173628813029794,
-      "max_compression_MPa": 20.156993415555775,
-      "coarse_to_fine_downward_change_percent": -1.629140266117568,
-      "coarse_to_fine_peak_tensile_change_percent": 18.910656471719058,
-      "linear_twice_all_loads_tensile_demand_MPa": 40.34725762605959,
-      "tensile_peak_part": "FloorPLA_0_0"
+      "max_down_mm": 1.511688717561084,
+      "max_tensile_MPa": 22.324584285066308,
+      "max_compression_MPa": 17.842178938858293,
+      "coarse_to_fine_downward_change_percent": -1.399328492579488,
+      "coarse_to_fine_peak_tensile_change_percent": 18.317458591626966,
+      "linear_twice_all_loads_tensile_demand_MPa": 44.649168570132616,
+      "tensile_peak_part": "FloorPLA_0_1"
     }
   ],
   "bolt_preload_sensitivity": [
@@ -168,7 +168,7 @@
       ]
     },
     {
-      "seat": "M4_countersunk_projected",
+      "seat": "M4_large_washer",
       "torque_Nm": 0.2,
       "assumed_K_range": [
         0.15,
@@ -178,14 +178,14 @@
         166.66666666666669,
         333.33333333333337
       ],
-      "CAD_projected_area_mm2": 34.235610662260285,
+      "CAD_projected_area_mm2": 97.19302272155626,
       "mean_axial_compression_range_MPa": [
-        4.868225319853638,
-        9.736450639707275
+        1.7148007336302546,
+        3.4296014672605093
       ]
     },
     {
-      "seat": "M4_countersunk_projected",
+      "seat": "M4_large_washer",
       "torque_Nm": 0.5,
       "assumed_K_range": [
         0.15,
@@ -195,14 +195,14 @@
         416.6666666666667,
         833.3333333333334
       ],
-      "CAD_projected_area_mm2": 34.235610662260285,
+      "CAD_projected_area_mm2": 97.19302272155626,
       "mean_axial_compression_range_MPa": [
-        12.170563299634093,
-        24.341126599268186
+        4.287001834075636,
+        8.574003668151272
       ]
     },
     {
-      "seat": "M4_countersunk_projected",
+      "seat": "M4_large_washer",
       "torque_Nm": 1.0,
       "assumed_K_range": [
         0.15,
@@ -212,10 +212,10 @@
         833.3333333333334,
         1666.6666666666667
       ],
-      "CAD_projected_area_mm2": 34.235610662260285,
+      "CAD_projected_area_mm2": 97.19302272155626,
       "mean_axial_compression_range_MPa": [
-        24.341126599268186,
-        48.68225319853637
+        8.574003668151272,
+        17.148007336302545
       ]
     }
   ],
@@ -226,14 +226,54 @@
   "issues": [
     "Local peaks near small seam fixings and belt slots are mesh/boundary dependent; two meshes do not establish convergence.",
     "Patch supports idealize washers. Seam coupling includes four translations but omits interface rotations/moment transfer.",
-    "Countersink leaves nominal0.65mm at its small end; preload/contact/creep need a dedicated joint check.",
+    "Countersink removed; full2.4mm web and OD12 washers. Preload/contact/creep still require joint qualification.",
     "Actual equipment feet, pads, strap tension, filament, print quality and temperature remain unmeasured.",
     "No PLA diaphragm action is credited to the lower3030 frame. Retained8HBLFSN6 joints still need a racking assessment."
   ],
   "preferred_next_design_actions": [
     "Spread foot loads over a stiff pad/backing part and verify its bending and contact; soft foam alone is not a proven spreader.",
     "Route strap reactions into ribs or metal rails and qualify required retention force; do not prescribe10N as a safe strap limit from this sweep.",
-    "Compare a local solid boss/backing washer or compression sleeve with the0.65mm countersink web, preserving PC/belt access.",
+    "Plain holes and larger washers adopted. If measured preload retention/creep is insufficient, evaluate compression sleeves or route clamp load into metal without weakening the floor.",
     "Correlate a printed assembly under known masses and measured strap tension; then test retention at actual temperature and duration."
-  ]
+  ],
+  "D64_change": {
+    "baseline_commit": "b38b90b372581ddf84677df203ba63511863da0e",
+    "old_M4_projected_area_mm2": 34.235610662260285,
+    "new_M4_projected_area_mm2": 97.19302272155626,
+    "projected_bearing_area_ratio": 2.8389452047571404,
+    "same_preload_mean_pressure_reduction_percent": 64.77564983204577,
+    "old_minimum_web_mm": 0.65,
+    "new_minimum_web_mm": 2.4,
+    "old_PC_seat_z_mm": 104,
+    "new_PC_seat_z_mm": 108,
+    "hard_support_top_z_mm": 107,
+    "head_top_z_mm": 106.4,
+    "liner_free_case_head_clearance_mm": 1.6,
+    "fully_compressed_liner_case_head_clearance_mm": 0.6,
+    "geometry_checks": "Four ordinary M4x16 screws, upper/lower OD12x1 washers, full floor web; tool approach and service envelopes checked.",
+    "before_after_same_four_foot_contact": [
+      {
+        "belt_tension_each_leg_N": 0,
+        "old_down_mm": 0.20282083337237147,
+        "new_down_mm": 0.20153848779171246,
+        "old_peak_tensile_MPa": 1.4164261493527586,
+        "new_peak_tensile_MPa": 1.438699898307509
+      },
+      {
+        "belt_tension_each_leg_N": 10,
+        "old_down_mm": 0.6259422441031818,
+        "new_down_mm": 0.6131904374985104,
+        "old_peak_tensile_MPa": 6.437834192321183,
+        "new_peak_tensile_MPa": 6.813730235312599
+      },
+      {
+        "belt_tension_each_leg_N": 30,
+        "old_down_mm": 1.5453966746263905,
+        "new_down_mm": 1.511688717561084,
+        "old_peak_tensile_MPa": 20.173628813029794,
+        "new_peak_tensile_MPa": 22.324584285066308
+      }
+    ],
+    "comparison_scope": "Same loads, E and boundary model; PC contact raised onto actual solid bosses. Previous full-pad PC case is not the same contact condition and is not a like-for-like comparison."
+  }
 }

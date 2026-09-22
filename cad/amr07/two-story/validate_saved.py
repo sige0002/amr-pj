@@ -51,7 +51,7 @@ for entry in json.loads((HERE/'print_manifest.json').read_text()):
     assert all(abs(x-y)<.001 for x,y in zip(size,entry['size_mm']))
     meshes.append(dict(file=entry['file'],closed=True,size_mm=size))
 assert r['unchanged_parts_BRep_equal'] and r['quoted_plate_unchanged']
-assert doc.getObject('Reserved_Computer').Shape.BoundBox.ZMin==104
+assert doc.getObject('Reserved_Computer').Shape.BoundBox.ZMin==108
 assert doc.getObject('BatteryBL1860B').Shape.BoundBox.ZMin==104
 assert len([o for o in physical if o.Name.startswith('LevelBracket_')])==12
 assert len([o for o in physical if o.Name.startswith('LevelBolt_')])==24

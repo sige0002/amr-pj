@@ -1,4 +1,4 @@
-"""Separate vehicle mass margin from cargo capacity after D6.3 corner revision.
+"""Separate vehicle mass margin from cargo capacity after D6.4 plain-hole revision.
 
 Uses existing accepted flat-floor requirements and the saved CAD mass ledger.
 No payload increase, operating qualification or low-speed thermal rating is
@@ -27,6 +27,7 @@ before = json.loads(subprocess.check_output([
     before_revision+':cad/amr07/two-story/validation.json']))
 before62_revision='ef44e1c'
 before62=json.loads(subprocess.check_output(['git','-C',str(HERE),'show',before62_revision+':cad/amr07/two-story/validation.json']))
+before63=json.loads(subprocess.check_output(['git','-C',str(HERE),'show','b38b90b:cad/amr07/two-story/validation.json']))
 mass = v['mass']['estimated_base_kg']
 payload = requirements['mass']['normal_payload_kg']
 limit = requirements['mass']['base_max_kg']
@@ -38,7 +39,7 @@ comparisons = []
 for label, base_mass in [('D3', v['mass']['source_D3_kg']),
                          ('D6.1', before['mass']['estimated_base_kg']),
                          ('D6.2', before62['mass']['estimated_base_kg']),
-                         ('D6.3', mass), ('design_upper_bound', limit)]:
+                         ('D6.3', before63['mass']['estimated_base_kg']), ('D6.4', mass), ('design_upper_bound', limit)]:
     config = deepcopy(requirements)
     config['mass']['base_max_kg'] = base_mass
     sized = torque(config, payload, 0)
@@ -79,7 +80,7 @@ components['retained_lower_structure_drive_and_hardware'] = mass-sum(components.
 assert abs(sum(components.values())-mass) < 1e-9
 
 out = dict(
-    revision=v['parameters']['revision'], date='2026-09-22',
+    revision=v['parameters']['revision'], date='2026-09-23',
     requirements_sha256=hashlib.sha256(raw).hexdigest(),
     baseline_D61_commit=before_revision,
     baseline_D62_commit=before62_revision,
@@ -96,6 +97,8 @@ out = dict(
     net_increase_from_D3_kg=delta_groups,
     floor_reinforcement_increase_from_D61_kg=mass-before['mass']['estimated_base_kg'],
     corner_rework_increase_from_D62_kg=mass-before62['mass']['estimated_base_kg'],
+    plain_hole_rework_increase_from_D63_kg=mass-before63['mass']['estimated_base_kg'],
+    base_CG_shift_from_D63_range_endpoints_mm=[[new-old for new,old in zip(a,b)] for a,b in zip(v['cg_difference']['conditional_base_cg_xyz_ranges_mm'],before63['cg_difference']['conditional_base_cg_xyz_ranges_mm'])],
     same_cargo_torque_comparisons=comparisons,
     torque_comparison_basis=dict(
         rolling_resistance_assumption=requirements['drive']['rolling_resistance_assumption'],
@@ -113,7 +116,7 @@ out = dict(
         c['maximum_reaction_N'] for c in caster['cases'] if c['case']=='normal'),
     caster_catalog_allowable_N=requirements['catalog_comparison_only']['caster_allowable_N'],
     source='https://shop.directdrive.com/pages/m0601c-111-specs',
-    source_checked_date='2026-09-22',
+    source_checked_date='2026-09-23',
     payload_target_reduced=False,
     extra_vehicle_equipment_policy='Battery, computer, cases, sensors and any future arm are vehicle mass.10kg is a soft target; additions require a new measured mass/CG and wheel-load check. Cargo target stays10kg.',
     mass_estimate_limitations=['Vehicle not weighed; computer0.5kg and other electrical items are budgets, not a fully selected/measured assembly.',

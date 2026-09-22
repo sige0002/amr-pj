@@ -1,4 +1,4 @@
-"""Extract unchanged D6.3 print solids for a reproducible solid-element screen."""
+"""Extract current D6.4 print solids for a reproducible solid-element screen."""
 from pathlib import Path
 import hashlib,json
 import FreeCAD as A
@@ -14,7 +14,7 @@ for name in ['FloorPLA_0_0','FloorPLA_0_1','FloorPLA_1_0','FloorPLA_1_1','SeamBe
  out[name]=dict(file=p.name,sha256=hashlib.sha256(p.read_bytes()).hexdigest(),volume_mm3=s.Volume,
   bounds_mm=[b.XMin,b.YMin,b.ZMin,b.XMax,b.YMax,b.ZMax],solid_mass_kg=s.Volume*1.24e-6,
   fixings=[x for x in v['floor_fixings'] if x['panel']==name])
-r=dict(revision='D6.3',source_cad_sha256=hashlib.sha256(SOURCE.read_bytes()).hexdigest(),parts=out)
+r=dict(revision='D6.4',source_cad_sha256=hashlib.sha256(SOURCE.read_bytes()).hexdigest(),parts=out)
 (HERE/'geometry.json').write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({n:[round(p['volume_mm3']),round(p['solid_mass_kg']*1000,2)] for n,p in out.items()}))
 A.closeDocument(d.Name)

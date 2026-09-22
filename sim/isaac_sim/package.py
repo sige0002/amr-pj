@@ -5,10 +5,10 @@ import json
 import zipfile
 
 HERE = Path(__file__).resolve().parent
-FILES = ["README.ja.md", "amr_d63.urdf", "amr_d63_payload_10kg.urdf", "simulation_config.json",
+FILES = ["README.ja.md", "amr_d64.urdf", "amr_d64_payload_10kg.urdf", "simulation_config.json",
          "export_manifest.json", "urdf_validation.json", "mujoco_smoke_validation.json", "urdf_preview_mujoco.png",
          "export_urdf.py", "drive.py", "import_isaac_sim.py", "validate_urdf.py", "smoke_mujoco.py", "package.py",
-         "requirements-validation.txt", "render_motion_gif.py", "amr_d63_motion_mujoco.gif", "motion_gif_manifest.json"]
+         "requirements-validation.txt", "render_motion_gif.py", "amr_d64_motion_mujoco.gif", "motion_gif_manifest.json"]
 
 
 def main():
@@ -16,10 +16,10 @@ def main():
     files = sorted(FILES + [m["file"] for m in manifest["meshes"]])
     lines = [hashlib.sha256((HERE / f).read_bytes()).hexdigest()+"  "+f for f in files]
     (HERE / "SHA256SUMS").write_text("\n".join(lines)+"\n")
-    path = HERE / "amr_d63_isaac5.zip"
+    path = HERE / "amr_d64_isaac5.zip"
     with zipfile.ZipFile(path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for name in files + ["SHA256SUMS"]:
-            info = zipfile.ZipInfo("amr_d63_isaac5/"+name, date_time=(2026, 9, 22, 0, 0, 0))
+            info = zipfile.ZipInfo("amr_d64_isaac5/"+name, date_time=(2026, 9, 23, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o644 << 16
             archive.writestr(info, (HERE / name).read_bytes())

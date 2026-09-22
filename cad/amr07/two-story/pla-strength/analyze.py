@@ -81,12 +81,15 @@ def make_loads(models):
  loads=[[m['gravity'].copy() for m in models] for _ in range(2)]+[[np.zeros(len(m['xyz'])) for m in models] for _ in range(2)]
  for kind in range(2):
   for name,mass,rect in EQUIPMENT:
-   rects=[rect] if kind==0 else feet(rect)
-   for p in rects:pressure(models,loads[kind],p,101.4,-mass*G/len(rects))
+   # The revised PC rests on four integral hard bosses, in BOTH contact cases.
+   rects=feet(rect) if name=='computer' or kind==1 else [rect]
+   z=107 if name=='computer' else 101.4
+   for p in rects:pressure(models,loads[kind],p,z,-mass*G/len(rects))
   pressure(models,loads[kind],None,101.4,-.467*G) # wiring and equipment allowance to total2.4kg
   for name,rect,up in STRAPS:
-   rects=[rect] if kind==0 else feet(rect)
-   for p in rects:pressure(models,loads[2+kind],p,101.4,-2/len(rects))
+   rects=feet(rect) if name=='computer' or kind==1 else [rect]
+   z=107 if name=='computer' else 101.4
+   for p in rects:pressure(models,loads[2+kind],p,z,-2/len(rects))
    for p in up:pressure(models,loads[2+kind],p,99,1)
  assert abs(sum(m for _,m,_ in EQUIPMENT)+.467-2.4)<1e-10
  for n in range(2):assert abs(sum(f.sum() for f in loads[2+n]))<1e-9
@@ -100,7 +103,7 @@ def solve(m,args):
  path=m['d']/'model.inp';npnt=len(m['xyz']);beam=m['name']=='SeamBeamPLA'
  old_input_sha=sha(path) if path.exists() else None
  with path.open('w') as f:
-  f.write('*HEADING\nD6.3 PLA elastic screen, N mm MPa. E1000 sensitivity.\n*NODE,NSET=ALLN\n')
+  f.write('*HEADING\nD6.4 PLA elastic screen, N mm MPa. E1000 sensitivity.\n*NODE,NSET=ALLN\n')
   for i,p in enumerate(m['xyz'],1):f.write(f'{i},'+','.join(f'{x:.10g}' for x in p)+'\n')
   f.write('*ELEMENT,TYPE=C3D10,ELSET=ALLE\n')
   for i,t in enumerate(m['tet'],1):f.write(f'{i},'+','.join(str(int(x)+1) for x in t)+'\n')
@@ -245,13 +248,15 @@ def main():
     total_equipment_mass_kg=2.4,total_printed_mass_kg=sum(geometry['parts'][n]['solid_mass_kg'] for n in NAMES),
     parts=stats,max_down_mm=max(s['max_down_mm'] for s in stats),
     max_tensile_MPa=max(s['peak_tensile_principal_MPa'] for s in stats),max_compression_MPa=max(s['peak_compressive_principal_MPa'] for s in stats)))
-   if kind==1 and tension in [0,10]:plot(models,fields,outdir/f'floor-deflection-T{tension}.png',f'D6.3 PLA: actual solids, coupled seam beam | four-foot contact, belt {tension} N/leg\n2.4 kg equipment + print self-weight; fixing patches only; no creep/preload model')
+   if kind==1 and tension in [0,10]:plot(models,fields,outdir/f'floor-deflection-T{tension}.png',f'D6.4 PLA: plain M4 holes, hard PC supports | four-foot contact, belt {tension} N/leg\n2.4 kg equipment + print self-weight; fixing patches only; no creep/preload model')
  for m in models:
   with zipfile.ZipFile(outdir/(m['name']+'-solver.zip'),'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
    for n in ['model.geo','model.msh','model.inp','mesh.log','solver.log']:z.write(m['d']/n,n)
- report=dict(revision='D6.3',source_cad_sha256=geometry['source_cad_sha256'],geometry_sha256=sha(HERE/'geometry.json'),
+ report=dict(revision='D6.4',source_cad_sha256=geometry['source_cad_sha256'],geometry_sha256=sha(HERE/'geometry.json'),
   solver='CalculiX2.21',mesher='Gmsh4.15.0',element='C3D10 quadratic tetrahedron',E_MPa=E,nu=NU,
   material='Assumed isotropic reduced stiffness. Not a tested print modulus or creep allowable.',
+  PC_contact='Four integral10x10mm bosses at Z107 in both cases; other equipment varies full pads versus four feet. Soft liner stiffness not modeled.',
+  seam_support='Retained radius4.5mm bottom support patch for comparison with D6.3; no stiffness credit for larger upper washers. Washer preload evaluated separately.',
   solver_threads=1,analysis_script_sha256=sha(Path(__file__)),
   maximum_mesh_size_mm=a.size,
   meshes=[dict(part=m['name'],nodes=len(m['xyz']),elements=len(m['tet']),straight_corner_tetra_volume_error=m['volume_error'],support_patch_nodes=[len(x) for x in m['patches']],

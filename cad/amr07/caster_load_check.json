@@ -1,6 +1,6 @@
 {
   "part": "TRUSCO TYG-50",
-  "requirements_sha256": "597ff0baceb6b59960a058a42b5e635481e651b72591de364a3ee8a48089445a",
+  "requirements_sha256": "795d2e84c4fee5c9d4f5b8cf2742b5de384231f1a5d5315534aa9b0c8e9985db",
   "method": "Existing rigid three-contact equilibrium and CG/mass/acceleration limits, caster yaw sampled every0.5deg. Trail nominal and tolerance endpoints checked.",
   "cases": [
     {

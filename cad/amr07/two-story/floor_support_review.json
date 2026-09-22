@@ -1,6 +1,6 @@
 {
-  "revision": "D6.3",
-  "native_sha256": "04ff9a2cdd8b4236bd79e8970ddd06476e909bdb9ec8a59ff5a76cea9c14a1ab",
+  "revision": "D6.4",
+  "native_sha256": "7f4d639b85c8f04f8b2aeb5f95f8b2777c4544ce5a0cfd27327284fa6b1a92ce",
   "panels": [
     {
       "panel": "FloorPLA_0_0",
@@ -50,8 +50,9 @@
             -25
           ],
           "support": "seam beam, four M6 rail anchors",
-          "thread": "M4 countersunk",
-          "actual_head_or_washer_bearing_projected_area_mm2": 34.235610662260285,
+          "thread": "M4 socket cap",
+          "top_washer": "FloorSeamTopWasher_0_0",
+          "actual_head_or_washer_bearing_projected_area_mm2": 97.19302272155626,
           "actual_rail_support_probe_area_mm2": null
         }
       ],
@@ -59,7 +60,7 @@
         200,
         115
       ],
-      "beam_bearing_area_mm2": 1303.7956871918693
+      "beam_bearing_area_mm2": 1303.795687191869
     },
     {
       "panel": "FloorPLA_0_1",
@@ -109,8 +110,9 @@
             25
           ],
           "support": "seam beam, four M6 rail anchors",
-          "thread": "M4 countersunk",
-          "actual_head_or_washer_bearing_projected_area_mm2": 34.235610662260285,
+          "thread": "M4 socket cap",
+          "top_washer": "FloorSeamTopWasher_0_1",
+          "actual_head_or_washer_bearing_projected_area_mm2": 97.19302271971802,
           "actual_rail_support_probe_area_mm2": null
         }
       ],
@@ -168,8 +170,9 @@
             -25
           ],
           "support": "seam beam, four M6 rail anchors",
-          "thread": "M4 countersunk",
-          "actual_head_or_washer_bearing_projected_area_mm2": 34.235610662261706,
+          "thread": "M4 socket cap",
+          "top_washer": "FloorSeamTopWasher_1_0",
+          "actual_head_or_washer_bearing_projected_area_mm2": 97.19302272048395,
           "actual_rail_support_probe_area_mm2": null
         }
       ],
@@ -227,8 +230,9 @@
             25
           ],
           "support": "seam beam, four M6 rail anchors",
-          "thread": "M4 countersunk",
-          "actual_head_or_washer_bearing_projected_area_mm2": 34.235610662261706,
+          "thread": "M4 socket cap",
+          "top_washer": "FloorSeamTopWasher_1_1",
+          "actual_head_or_washer_bearing_projected_area_mm2": 97.19302272048395,
           "actual_rail_support_probe_area_mm2": null
         }
       ],
@@ -311,8 +315,18 @@
       "hits": []
     },
     {
+      "part": "FloorSeamBolt_0_0",
+      "step": "M4 top driver before PC installation",
+      "hits": []
+    },
+    {
       "part": "FloorSeamNut_0_1",
       "step": "M4 socket access from underside",
+      "hits": []
+    },
+    {
+      "part": "FloorSeamBolt_0_1",
+      "step": "M4 top driver before PC installation",
       "hits": []
     },
     {
@@ -321,11 +335,86 @@
       "hits": []
     },
     {
+      "part": "FloorSeamBolt_1_0",
+      "step": "M4 top driver before PC installation",
+      "hits": []
+    },
+    {
       "part": "FloorSeamNut_1_1",
       "step": "M4 socket access from underside",
       "hits": []
+    },
+    {
+      "part": "FloorSeamBolt_1_1",
+      "step": "M4 top driver before PC installation",
+      "hits": []
     }
   ],
+  "computer_supports": [
+    {
+      "xy_mm": [
+        -50,
+        -40
+      ],
+      "solid_size_mm": [
+        10,
+        10,
+        5.6
+      ],
+      "solid_top_z_mm": 107,
+      "liner_t_mm": 1,
+      "case_to_head_mm": 1.5999999999999943,
+      "hard_support_to_head_mm": 0.5999999999999943
+    },
+    {
+      "xy_mm": [
+        -50,
+        40
+      ],
+      "solid_size_mm": [
+        10,
+        10,
+        5.6
+      ],
+      "solid_top_z_mm": 107,
+      "liner_t_mm": 1,
+      "case_to_head_mm": 1.5999999999999943,
+      "hard_support_to_head_mm": 0.5999999999999943
+    },
+    {
+      "xy_mm": [
+        50,
+        -40
+      ],
+      "solid_size_mm": [
+        10,
+        10,
+        5.6
+      ],
+      "solid_top_z_mm": 107,
+      "liner_t_mm": 1,
+      "case_to_head_mm": 1.5999999999999943,
+      "hard_support_to_head_mm": 0.5999999999999943
+    },
+    {
+      "xy_mm": [
+        50,
+        40
+      ],
+      "solid_size_mm": [
+        10,
+        10,
+        5.6
+      ],
+      "solid_top_z_mm": 107,
+      "liner_t_mm": 1,
+      "case_to_head_mm": 1.5999999999999943,
+      "hard_support_to_head_mm": 0.5999999999999943
+    }
+  ],
+  "M4_hole_diameter_mm": 4.5,
+  "M4_minimum_floor_web_mm": 2.4,
+  "M4_countersink_count": 0,
   "beam_to_PC_belt_clearance_mm": 0.5,
   "ribs_to_battery_belt_clearance_mm": 2.3000000000000007,
   "original_unbraced_central_edge_overhang_mm": 49.8,
@@ -338,8 +427,8 @@
       "I_mm4": 4990.247935382612,
       "stress_MPa": 5.044105854182696,
       "deflection_mm_by_E_MPa": {
-        "1000": 1.0250971350991465,
-        "2750": 0.37276259458150784
+        "1000": 1.023856180096955,
+        "2750": 0.37231133821707457
       },
       "model": "simply supported variable-section rib;1mm strip integration includes end25mm taper;40mm floor flange credited"
     },
@@ -360,9 +449,9 @@
   "material_basis": "Manufacturer bending modulus XY2750±160MPa.1000MPa is an assumed reduced-stiffness sensitivity, NOT a measured printed-direction modulus or long-term allowable.",
   "load_basis": "50N on one rib, separately50N on seam beam. About twice the entire2.4kg lower-floor equipment budget; does NOT cover arbitrary cam-belt pretension.",
   "required_prototype_checks": [
-    "Printed dimensions, countersink seating, nut engagement and driver/wrench access.",
+    "Printed dimensions, flat washer seating, nut engagement and driver/wrench access.",
     "With electronics absent, gradually apply50N through a broad pad to each ribbed region and seam beam; inspect residual set and cracked layers.",
-    "Install representative equipment and just-snug belts; dwell at expected equipment temperature and inspect panel sag, countersink damage and bolt relaxation. Set allowable belt tension from test.",
+    "Install representative equipment and measured belt tension; dwell at expected equipment temperature and inspect panel sag, washer indentation and bolt relaxation. Set allowable belt tension from test.",
     "PLA clamp faces: do not apply a normal metal-joint M6 tightening torque. Qualify retention/preload and inspect periodically."
   ],
   "whole_floor_strength_factor_2_qualified": false,

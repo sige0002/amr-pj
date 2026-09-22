@@ -1,6 +1,6 @@
 {
-  "revision": "D6.3",
-  "date": "2026-09-22",
+  "revision": "D6.4",
+  "date": "2026-09-23",
   "source_revision": "099686bacaad0f72e8bc4ce15005cd708a5b2f83",
   "architecture": "1F battery/computer/power above base rails; 2F independent aluminum cargo deck",
   "base_rail_top_z_mm": 99,
@@ -54,7 +54,44 @@
   "floor_seam_M4_per_panel": 1,
   "floor_support": "PLA ribbed seam beam fixed to BOTH inner rails with two M6 per end; four panels with integral underside seam ribs",
   "floor_beam_M6_qty": 4,
-  "floor_M4_countersunk_qty": 4,
+  "floor_M4_countersunk_qty": 0,
+  "floor_M4_cap_qty": 4,
+  "floor_M4_large_washers_qty": 8,
+  "floor_M4_large_washer_OD_ID_t_mm": [
+    12,
+    4.1,
+    1
+  ],
+  "floor_M4_plain_hole_diameter_mm": 4.5,
+  "floor_min_web_at_M4_mm": 2.4,
+  "computer_support_bosses": {
+    "qty": 4,
+    "size_mm": [
+      10,
+      10,
+      5.6
+    ],
+    "centers_xy_mm": [
+      [
+        -50,
+        -40
+      ],
+      [
+        -50,
+        40
+      ],
+      [
+        50,
+        -40
+      ],
+      [
+        50,
+        40
+      ]
+    ],
+    "top_z_mm": 107,
+    "liner_t_mm": 1
+  },
   "floor_outer_corner_notches": false,
   "corner_flat_gusset_qty": 0,
   "corner_joint": "Four auxiliary flat gussets and their8 fastener sets removed. Eight HBLFSN6 lower-frame joints retained; independent floor corner screws reused from inner rail positions. Frame racking qualification remains open.",
@@ -96,7 +133,7 @@
   "computer_origin_LWH_mm": [
     -60,
     -50,
-    104,
+    108,
     120,
     100,
     60

@@ -1,7 +1,7 @@
 {
   "parameters": {
-    "revision": "D6.3",
-    "date": "2026-09-22",
+    "revision": "D6.4",
+    "date": "2026-09-23",
     "source_revision": "099686bacaad0f72e8bc4ce15005cd708a5b2f83",
     "architecture": "1F battery/computer/power above base rails; 2F independent aluminum cargo deck",
     "base_rail_top_z_mm": 99,
@@ -55,7 +55,44 @@
     "floor_seam_M4_per_panel": 1,
     "floor_support": "PLA ribbed seam beam fixed to BOTH inner rails with two M6 per end; four panels with integral underside seam ribs",
     "floor_beam_M6_qty": 4,
-    "floor_M4_countersunk_qty": 4,
+    "floor_M4_countersunk_qty": 0,
+    "floor_M4_cap_qty": 4,
+    "floor_M4_large_washers_qty": 8,
+    "floor_M4_large_washer_OD_ID_t_mm": [
+      12,
+      4.1,
+      1
+    ],
+    "floor_M4_plain_hole_diameter_mm": 4.5,
+    "floor_min_web_at_M4_mm": 2.4,
+    "computer_support_bosses": {
+      "qty": 4,
+      "size_mm": [
+        10,
+        10,
+        5.6
+      ],
+      "centers_xy_mm": [
+        [
+          -50,
+          -40
+        ],
+        [
+          -50,
+          40
+        ],
+        [
+          50,
+          -40
+        ],
+        [
+          50,
+          40
+        ]
+      ],
+      "top_z_mm": 107,
+      "liner_t_mm": 1
+    },
     "floor_outer_corner_notches": false,
     "corner_flat_gusset_qty": 0,
     "corner_joint": "Four auxiliary flat gussets and their8 fastener sets removed. Eight HBLFSN6 lower-frame joints retained; independent floor corner screws reused from inner rail positions. Frame racking qualification remains open.",
@@ -97,7 +134,7 @@
     "computer_origin_LWH_mm": [
       -60,
       -50,
-      104,
+      108,
       120,
       100,
       60
@@ -130,9 +167,9 @@
     "new_metal_machining": false,
     "loaded_use_released": false
   },
-  "physical_parts": 272,
+  "physical_parts": 276,
   "all_shapes_valid": true,
-  "checked_physical_pairs": 36856,
+  "checked_physical_pairs": 37950,
   "collisions": [],
   "reference_collisions": {},
   "reference_pair_collisions": [],
@@ -795,7 +832,8 @@
         -25
       ],
       "support": "seam beam, four M6 rail anchors",
-      "thread": "M4 countersunk"
+      "thread": "M4 socket cap",
+      "top_washer": "FloorSeamTopWasher_0_0"
     },
     {
       "panel": "FloorPLA_0_1",
@@ -805,7 +843,8 @@
         25
       ],
       "support": "seam beam, four M6 rail anchors",
-      "thread": "M4 countersunk"
+      "thread": "M4 socket cap",
+      "top_washer": "FloorSeamTopWasher_0_1"
     },
     {
       "panel": "FloorPLA_1_0",
@@ -815,7 +854,8 @@
         -25
       ],
       "support": "seam beam, four M6 rail anchors",
-      "thread": "M4 countersunk"
+      "thread": "M4 socket cap",
+      "top_washer": "FloorSeamTopWasher_1_0"
     },
     {
       "panel": "FloorPLA_1_1",
@@ -825,7 +865,8 @@
         25
       ],
       "support": "seam beam, four M6 rail anchors",
-      "thread": "M4 countersunk"
+      "thread": "M4 socket cap",
+      "top_washer": "FloorSeamTopWasher_1_1"
     }
   ],
   "floor_beam_anchors": [
@@ -1001,15 +1042,19 @@
     "SeamBeamWasher_3",
     "SeamBeamNut_3",
     "FloorSeamBolt_0_0",
+    "FloorSeamTopWasher_0_0",
     "FloorSeamWasher_0_0",
     "FloorSeamNut_0_0",
     "FloorSeamBolt_0_1",
+    "FloorSeamTopWasher_0_1",
     "FloorSeamWasher_0_1",
     "FloorSeamNut_0_1",
     "FloorSeamBolt_1_0",
+    "FloorSeamTopWasher_1_0",
     "FloorSeamWasher_1_0",
     "FloorSeamNut_1_0",
     "FloorSeamBolt_1_1",
+    "FloorSeamTopWasher_1_1",
     "FloorSeamWasher_1_1",
     "FloorSeamNut_1_1",
     "SeamBeamPLA",
@@ -1027,7 +1072,10 @@
     "BatteryServiceConnector",
     "BatteryVehicleConnector",
     "BatteryVehicleHarness",
-    "ComputerPad",
+    "ComputerPad_0",
+    "ComputerPad_1",
+    "ComputerPad_2",
+    "ComputerPad_3",
     "SupervisorPad",
     "ComputerTopPad",
     "SupervisorTopPad",
@@ -1175,22 +1223,24 @@
     "first_floor_open_height_at_sides": 97.6,
     "central_floor_to_deck": 127.6,
     "battery_lift_to_lowest_cargo_grid_fastener": 16.30000000000001,
-    "computer_to_deck": 62.5,
+    "computer_to_deck": 58.5,
     "computer_vent_keepout_height": 15,
+    "computer_case_to_floor_screw_head": 1.5999999999999943,
+    "computer_hard_support_to_floor_screw_head": 0.5999999999999943,
     "battery_rearward_withdrawal": 220
   },
   "mass": {
     "source_D3_kg": 8.246366343915682,
-    "estimated_base_kg": 10.017347153843144,
-    "remaining_to_10kg_kg": -0.01734715384314356,
+    "estimated_base_kg": 10.029098678072284,
+    "remaining_to_10kg_kg": -0.029098678072283946,
     "electrical_total_kg": 2.153,
     "battery_kg": 0.68,
     "adapter_kg": 0.123,
     "new_straps_and_pads_allowance_kg": 0.18,
-    "total_solid_PLA_kg": 0.5981591886857234,
-    "added_metal_and_hardware_kg": 1.3650948120318869,
+    "total_solid_PLA_kg": 0.6010719975975461,
+    "added_metal_and_hardware_kg": 1.373933527349206,
     "upper_structure_metal_and_hardware_kg": 1.2926618270515282,
-    "floor_added_hardware_kg": 0.07243298498035845,
+    "floor_added_hardware_kg": 0.0812717002976772,
     "mass_overrides_kg": {
       "Upright3030_0": 0.084,
       "Upright3030_1": 0.084,
@@ -2186,20 +2236,29 @@
       },
       {
         "name": "add FloorSeamBolt_0_0",
-        "mass_kg": 0.0018413921740240969,
+        "mass_kg": 0.0027867497633668253,
         "center_mm": [
           -15.000000000000002,
-          -25.000000000000004,
-          94.45357142857145
+          -25.0,
+          98.73628318584072
+        ]
+      },
+      {
+        "name": "add FloorSeamTopWasher_0_0",
+        "mass_kg": 0.0007841741203597932,
+        "center_mm": [
+          -15.000000000000002,
+          -25.0,
+          101.9
         ]
       },
       {
         "name": "add FloorSeamWasher_0_0",
-        "mass_kg": 0.0003040270007326213,
+        "mass_kg": 0.0007841741203597932,
         "center_mm": [
-          -14.999999999999998,
-          -24.999999999999996,
-          93.6
+          -15.0,
+          -25.0,
+          93.50000000000003
         ]
       },
       {
@@ -2208,25 +2267,34 @@
         "center_mm": [
           -15.000000000000005,
           -25.000000000000004,
-          91.60000000000001
+          91.4
         ]
       },
       {
         "name": "add FloorSeamBolt_0_1",
-        "mass_kg": 0.0018413921740240969,
+        "mass_kg": 0.0027867497633668253,
         "center_mm": [
           -15.000000000000002,
-          25.000000000000004,
-          94.45357142857145
+          25.0,
+          98.73628318584072
+        ]
+      },
+      {
+        "name": "add FloorSeamTopWasher_0_1",
+        "mass_kg": 0.0007841741203597932,
+        "center_mm": [
+          -15.000000000000002,
+          25.0,
+          101.9
         ]
       },
       {
         "name": "add FloorSeamWasher_0_1",
-        "mass_kg": 0.0003040270007326213,
+        "mass_kg": 0.0007841741203597932,
         "center_mm": [
-          -14.999999999999998,
-          24.999999999999996,
-          93.6
+          -15.0,
+          25.0,
+          93.50000000000003
         ]
       },
       {
@@ -2234,62 +2302,80 @@
         "mass_kg": 0.0007503061191774875,
         "center_mm": [
           -15.000000000000005,
-          24.999999999999996,
-          91.60000000000001
+          25.000000000000004,
+          91.4
         ]
       },
       {
         "name": "add FloorSeamBolt_1_0",
-        "mass_kg": 0.0018413921740240969,
+        "mass_kg": 0.002786749763366826,
         "center_mm": [
-          14.999999999999998,
-          -25.000000000000004,
-          94.45357142857144
+          15.0,
+          -24.999999999999996,
+          98.73628318584069
+        ]
+      },
+      {
+        "name": "add FloorSeamTopWasher_1_0",
+        "mass_kg": 0.0007841741203597932,
+        "center_mm": [
+          15.0,
+          -25.0,
+          101.9
         ]
       },
       {
         "name": "add FloorSeamWasher_1_0",
-        "mass_kg": 0.00030402700073262117,
+        "mass_kg": 0.0007841741203597932,
         "center_mm": [
-          14.999999999999998,
+          15.0,
           -25.0,
-          93.59999999999998
+          93.50000000000003
         ]
       },
       {
         "name": "add FloorSeamNut_1_0",
-        "mass_kg": 0.0007503061191774877,
+        "mass_kg": 0.0007503061191774876,
         "center_mm": [
           14.999999999999998,
-          -24.99999999999999,
-          91.59999999999997
+          -24.999999999999993,
+          91.39999999999999
         ]
       },
       {
         "name": "add FloorSeamBolt_1_1",
-        "mass_kg": 0.0018413921740240969,
+        "mass_kg": 0.002786749763366826,
         "center_mm": [
-          14.999999999999998,
-          25.000000000000004,
-          94.45357142857144
+          15.0,
+          24.999999999999996,
+          98.73628318584069
+        ]
+      },
+      {
+        "name": "add FloorSeamTopWasher_1_1",
+        "mass_kg": 0.0007841741203597932,
+        "center_mm": [
+          15.0,
+          25.0,
+          101.9
         ]
       },
       {
         "name": "add FloorSeamWasher_1_1",
-        "mass_kg": 0.00030402700073262117,
+        "mass_kg": 0.0007841741203597932,
         "center_mm": [
-          14.999999999999998,
+          15.0,
           25.0,
-          93.59999999999998
+          93.50000000000003
         ]
       },
       {
         "name": "add FloorSeamNut_1_1",
-        "mass_kg": 0.0007503061191774877,
+        "mass_kg": 0.0007503061191774876,
         "center_mm": [
           14.999999999999998,
-          24.99999999999999,
-          91.59999999999997
+          24.999999999999993,
+          91.39999999999999
         ]
       },
       {
@@ -2303,38 +2389,38 @@
       },
       {
         "name": "add FloorPLA_0_0",
-        "mass_kg": 0.12687960214111627,
+        "mass_kg": 0.127607804369072,
         "center_mm": [
-          -114.6834076327667,
-          -57.85210930012748,
-          98.94001230060013
+          -114.30501635985718,
+          -57.74626170520817,
+          98.96914049907379
         ]
       },
       {
         "name": "add FloorPLA_0_1",
-        "mass_kg": 0.12687960214111418,
+        "mass_kg": 0.12760780436906985,
         "center_mm": [
-          -114.68340763276666,
-          57.85210930012733,
-          98.94001230060003
+          -114.3050163598572,
+          57.74626170520809,
+          98.96914049907373
         ]
       },
       {
         "name": "add FloorPLA_1_0",
-        "mass_kg": 0.12291874454111501,
+        "mass_kg": 0.12364694676907072,
         "center_mm": [
-          113.97668442624384,
-          -58.51364715540742,
-          98.70854693735308
+          113.5903340685267,
+          -58.40051284120863,
+          98.73997140150043
         ]
       },
       {
         "name": "add FloorPLA_1_1",
-        "mass_kg": 0.1225378165411151,
+        "mass_kg": 0.12326601876907074,
         "center_mm": [
-          114.20665253927656,
-          58.4157668948075,
-          98.70391052185053
+          113.81774969414666,
+          58.302861196703326,
+          98.73545948670409
         ]
       },
       {
@@ -3801,7 +3887,7 @@
         "center_mm": [
           -2.5969110371381617e-16,
           -6.315935428978668e-17,
-          134.0
+          138.0
         ]
       },
       {
@@ -3859,24 +3945,24 @@
         ]
       }
     ],
-    "mass_change_kg": 1.7709808099274609,
+    "mass_change_kg": 1.7827323341566021,
     "moment_change_kg_mm": [
       -5.370561906928792,
-      10.015716479999872,
-      527.5464665833068
+      10.015716479999883,
+      530.752919399452
     ],
     "conditional_base_cg_xyz_ranges_mm": [
       [
-        -8.768212182043438,
-        7.695959853268271
+        -8.75793809249551,
+        7.686942167673063
       ],
       [
-        -7.232248802654541,
-        9.231923232657168
+        -7.223774467147064,
+        9.22110579302151
       ],
       [
-        122.63602198760098,
-        143.2162370317406
+        122.81203906441486,
+        143.3681393896256
       ]
     ],
     "basis": "Conditional on historical D3 CGx/y+-10,z85..110mm; equipment envelope centroids and mass budgets, not measured CG. Protection0.4kg split equally between two reserved cases; cable routing moment remains in historical uncertainty."

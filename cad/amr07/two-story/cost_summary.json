@@ -1,14 +1,14 @@
 {
-  "revision": "D6.3",
-  "date": "2026-09-22",
+  "revision": "D6.4",
+  "date": "2026-09-23",
   "subtotal": {
-    "JPY": 73633.0,
+    "JPY": 75472.0,
     "USD": 120.9
   },
-  "full_running_subtotal_JPY_reference": 92646.60313315927,
+  "full_running_subtotal_JPY_reference": 94485.60313315927,
   "FX_reference_JPY_per_USD": 157.26718885987816,
   "FX_date": "2026-09-21",
-  "difference_from_D5_JPY": 4000.0,
+  "difference_from_D5_JPY": 5839.0,
   "added_known_purchased_metal_JPY": 3968,
   "added_purchase": {
     "posts4_JPY": 495,
@@ -35,7 +35,8 @@
     "slotnuts_from_planned_pack": 4,
     "additional_slotnut_pack_JPY": 0,
     "additional_fastener_price_JPY": null,
-    "PLA_material_reference_increase_JPY": 434
+    "PLA_material_reference_increase_JPY": 344,
+    "historical_revision": "D6.2; superseded seam screws in D6.4"
   },
   "corner_rework_from_D62": {
     "removed_gussets": 4,
@@ -47,7 +48,23 @@
     "removed_gusset_material_budget_JPY": 500,
     "hardware_budget_reduction_JPY": 0,
     "PLA_material_reference_increase_JPY": 90,
-    "priced_and_budgeted_subtotal_change_JPY": -410.0
+    "priced_and_budgeted_subtotal_change_JPY": -410.0,
+    "historical_revision": "D6.3"
+  },
+  "plain_hole_rework_from_D63": {
+    "added_physical_washers": 4,
+    "replaced_lower_washers": 4,
+    "replaced_M4_screws": 4,
+    "new_machined_parts": 0,
+    "screw_pack_JPY": 770,
+    "washer_pack_JPY": 288,
+    "shipping_reference_JPY": 775,
+    "purchase_reference_JPY": 1833,
+    "used_fastener_material_proration_JPY": 97.41333333333333,
+    "PLA_material_reference_increase_JPY": 6,
+    "priced_subtotal_change_JPY": 1839.0,
+    "old_M4_purchase_price_was_unpriced": true,
+    "old_screw_savings_not_invented": true
   },
   "selected_power_delivered_Tokyo_reference_JPY": 23380,
   "source_D3_plate_and_mount_quotes_unchanged": true,
@@ -61,7 +78,6 @@
     "D3_STOP_WASHERS",
     "POWER_PADS",
     "POWER_LOW_STRAPS",
-    "D62_FLOOR_SCREWS",
     "D62_BEAM_WASHERS",
     "U01",
     "U03",
@@ -84,5 +100,5 @@
     "U20"
   ],
   "complete_purchase_total": false,
-  "note": "継承予算枠込みの車体小計。今回の支持金物は表示価格で3968円追加、上段300mm2本は購入予定パック内。追加M6ねじ・送料差額・電装未選定品・税/決済料などは別。"
+  "note": "継承予算枠込みの途中小計。D6.4で中央M4ねじ・座金の購入パック全額と2店舗送料参考1833円を新たに計上。旧ねじ代は未計上。追加M6ねじ・電装未選定品・他の未確定送料・税/決済料などは別。"
 }

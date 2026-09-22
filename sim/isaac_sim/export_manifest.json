@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "design_revision": "D6.3",
+  "design_revision": "D6.4",
   "source_cad": "cad/amr07/two-story/AMR01_TwoStorey_D6.FCStd",
-  "source_cad_sha256": "04ff9a2cdd8b4236bd79e8970ddd06476e909bdb9ec8a59ff5a76cea9c14a1ab",
-  "source_git_commit": "ef44e1c15743f94d3d3fcaa7b7f757f26c136e96",
+  "source_cad_sha256": "7f4d639b85c8f04f8b2aeb5f95f8b2777c4544ce5a0cfd27327284fa6b1a92ce",
+  "source_git_commit": "b38b90b372581ddf84677df203ba63511863da0e",
   "source_git_commit_scope": "Checkout parent when exporting; uncommitted generated revision is identified by the CAD and mass-budget SHA256 values, not by this parent commit alone.",
-  "source_mass_budget_sha256": "a85357c380d9853c7c797149bce2c21e785f668b7a4e751127db9d0771b21c05",
+  "source_mass_budget_sha256": "32dc139d3155aacc03634e826f7ffc3ec87c8e92ec77453b78447aacf355078b",
   "units": "meter kilogram second radian",
   "link_origins_cad_mm": {
     "base_link": [
@@ -100,7 +100,7 @@
       "link": "left_wheel_link",
       "triangles": 33284,
       "degenerate_facets_removed": 0,
-      "sha256": "86de283c61c8032c5391e1479092a67b6e44f6db4ef743b35a037e87a9e76215",
+      "sha256": "f5b5239d52357c20b22fad745073bb5f8c49905dd460b4cdb51cf593f06a48fe",
       "source_objects": [
         "motor_rotor_L",
         "TireCoverL"
@@ -124,7 +124,7 @@
       "link": "left_wheel_link",
       "triangles": 900,
       "degenerate_facets_removed": 0,
-      "sha256": "0cf7e5113645056fb95ef84d5c084c81c8c1e5c17b91e8c0af0d87a21e727db6",
+      "sha256": "8e68ef6572daec5143430c5490b0a5ac092f83d74d65b2daf4032df5ecf139bc",
       "source_objects": [
         "TireL"
       ],
@@ -147,7 +147,7 @@
       "link": "base_link",
       "triangles": 6748,
       "degenerate_facets_removed": 0,
-      "sha256": "4bf4f91e81483a46e2b4d28af3f68c0ddf3b29997c178c69a975488d7df4c5f6",
+      "sha256": "e1651fc712501d8eae4c0e600b1c364c405d2c08adb1edf5c5dcb659ec4a3266",
       "source_objects": [
         "motor_stator_L",
         "motor_stator_R"
@@ -169,9 +169,9 @@
       "file": "meshes/base_link_steel.stl",
       "material": "steel",
       "link": "base_link",
-      "triangles": 73692,
+      "triangles": 75316,
       "degenerate_facets_removed": 0,
-      "sha256": "22819632e807bf0bb2699f130300f675f1b1c7067c02bc55b3d6716bba03b034",
+      "sha256": "3c912520216da1ce0b56adf624d0e627847d93359f00dc0ab82dfea5f2e3c02e",
       "source_objects": [
         "CasterTop",
         "JointA_NN120",
@@ -379,15 +379,19 @@
         "SeamBeamWasher_3",
         "SeamBeamNut_3",
         "FloorSeamBolt_0_0",
+        "FloorSeamTopWasher_0_0",
         "FloorSeamWasher_0_0",
         "FloorSeamNut_0_0",
         "FloorSeamBolt_0_1",
+        "FloorSeamTopWasher_0_1",
         "FloorSeamWasher_0_1",
         "FloorSeamNut_0_1",
         "FloorSeamBolt_1_0",
+        "FloorSeamTopWasher_1_0",
         "FloorSeamWasher_1_0",
         "FloorSeamNut_1_0",
         "FloorSeamBolt_1_1",
+        "FloorSeamTopWasher_1_1",
         "FloorSeamWasher_1_1",
         "FloorSeamNut_1_1"
       ],
@@ -410,7 +414,7 @@
       "link": "base_link",
       "triangles": 23372,
       "degenerate_facets_removed": 0,
-      "sha256": "b6882a29391ba5a9d7c56ed9b5ac4c5e818875bc6e3dac84077515483991e8bc",
+      "sha256": "78aab9ac265737a12bb318793ebf81757108598467f3b4b7eebe46928c291e96",
       "source_objects": [
         "Rail400_1",
         "Rail400_2",
@@ -461,7 +465,7 @@
       "link": "base_link",
       "triangles": 6396,
       "degenerate_facets_removed": 0,
-      "sha256": "371d39cf08b4784f2f9310d0fb3708b90f64b4c0bea4cc511550db46915afda2",
+      "sha256": "3b72c3b6611eb4cbc6ae93a0a332720b43fbba34ea482982e79e20691528aa4c",
       "source_objects": [
         "CustomMotorMountL",
         "CustomMotorMountR",
@@ -484,9 +488,9 @@
       "file": "meshes/base_link_pla.stl",
       "material": "pla",
       "link": "base_link",
-      "triangles": 8156,
+      "triangles": 7396,
       "degenerate_facets_removed": 0,
-      "sha256": "1958764409fb7113c83dc87bd0a6bcdf3e542a2a3dea64a5fff50931cd8c7e33",
+      "sha256": "4731cbd3f3feb5f2adfdba40c410a02d6ce8950116e9444f01cb1a62f4ea8fc3",
       "source_objects": [
         "PrintedStopXN",
         "PrintedStopXP",
@@ -517,7 +521,7 @@
       "link": "base_link",
       "triangles": 17856,
       "degenerate_facets_removed": 0,
-      "sha256": "64d26eb563ffb41291a3f4ed89411b78d59dbed5f3ba95adcac57a6c0125213b",
+      "sha256": "b1c1dc53b27fbd2bb8af04334fb5e604ac6edd440b1ea529e2b1820fb131c7f5",
       "source_objects": [
         "Upright3030_0",
         "Upright3030_1",
@@ -543,7 +547,7 @@
       "link": "base_link",
       "triangles": 36,
       "degenerate_facets_removed": 0,
-      "sha256": "c7add96e9af25e7dc1376dfba35bca8b60cf5e981cab08a525f2857be1fa322c",
+      "sha256": "48c6493a8c6ce60711492fe4cc1b2689f9ef26d9351ccc3b7ef713d64ad7d4ef",
       "source_objects": [
         "Reserved_Protection",
         "Reserved_ClampAndPower",
@@ -568,7 +572,7 @@
       "link": "base_link",
       "triangles": 12,
       "degenerate_facets_removed": 0,
-      "sha256": "b1c9835e34f01b330dca080368aa8a1bba5ecd8eb150b6064fa72221dbf67a8d",
+      "sha256": "a2f5d2d1860c4b42f9850528d34877a1f9738ad42457f9021737d65acfbb155e",
       "source_objects": [
         "Reserved_EmergencyStop"
       ],
@@ -591,7 +595,7 @@
       "link": "base_link",
       "triangles": 12,
       "degenerate_facets_removed": 0,
-      "sha256": "c8bb17d82f80774c563bf258654f35295033c8adbc6fa6df5485831bc839ac66",
+      "sha256": "33dff51c29a93db5bb3c5a1837bc106e7e78d84769ab79d85dc35118089995df",
       "source_objects": [
         "Reserved_Computer"
       ],
@@ -599,12 +603,12 @@
         [
           -0.15,
           -0.05,
-          0.053649999999999996
+          0.05765
         ],
         [
           -0.03,
           0.05,
-          0.11365
+          0.11765
         ]
       ]
     },
@@ -614,7 +618,7 @@
       "link": "base_link",
       "triangles": 12,
       "degenerate_facets_removed": 0,
-      "sha256": "0dcbead03ef660ccd029873387fb72604116a483680cae3f7e55fea75924c30c",
+      "sha256": "0f0b02159f10fe691884de65c7a5961fe54088fcf99962e10f16286a921ad166",
       "source_objects": [
         "BatteryBL1860B"
       ],
@@ -635,13 +639,16 @@
       "file": "meshes/base_link_rubber.stl",
       "material": "rubber",
       "link": "base_link",
-      "triangles": 72,
+      "triangles": 108,
       "degenerate_facets_removed": 0,
-      "sha256": "f3e1642220377d07e7aa783d32891e02d0ec0a23793281bd918b98f6b2db737b",
+      "sha256": "4ecdeb5532bc66dbf47ddf69528bf70e2a949e802eff71ddb473e602a1f813f0",
       "source_objects": [
         "BatteryAdapter03",
         "BatteryBasePad",
-        "ComputerPad",
+        "ComputerPad_0",
+        "ComputerPad_1",
+        "ComputerPad_2",
+        "ComputerPad_3",
         "SupervisorPad",
         "ComputerTopPad",
         "SupervisorTopPad"
@@ -649,7 +656,7 @@
       "bounds_m": [
         [
           -0.283,
-          -0.05,
+          -0.045,
           0.05105000152587891
         ],
         [
@@ -665,7 +672,7 @@
       "link": "base_link",
       "triangles": 248,
       "degenerate_facets_removed": 0,
-      "sha256": "617fb1c694b1307259d0a59db4a2b81eb10c3587fbb07e372fcad5b1d49c170c",
+      "sha256": "a5742c8796de82269237d494eab465d00135e812818a95dba8c163538bf7aa35",
       "source_objects": [
         "BatteryBeltTopPad",
         "BatteryRetentionBelt",
@@ -692,7 +699,7 @@
       "link": "base_link",
       "triangles": 4374,
       "degenerate_facets_removed": 2,
-      "sha256": "8844a6b0401ecfbd512fd77eaecfb18cde02ecb7fa61e53d49313676a7cbefc9",
+      "sha256": "bcfdcfd1e594fb68a8ab33c90c6383adde29639c2dad87d51e5fc36eaf66a88f",
       "source_objects": [
         "BatteryModuleHarness",
         "BatteryServiceConnector",
@@ -718,7 +725,7 @@
       "link": "right_wheel_link",
       "triangles": 33284,
       "degenerate_facets_removed": 0,
-      "sha256": "93de4b82e3775d55f38da8c8082f54c806c6184a26940d4edc64e1d4813e02d2",
+      "sha256": "f628e5ff8d0b678e3adca28333a90c873597c1ee7ac4171d9b7de99bb7ff7ce9",
       "source_objects": [
         "motor_rotor_R",
         "TireCoverR"
@@ -742,7 +749,7 @@
       "link": "right_wheel_link",
       "triangles": 900,
       "degenerate_facets_removed": 0,
-      "sha256": "79b6b486d595d4a5c873d189515c81abcb070ff3fa9b47c723ea78adfde7343c",
+      "sha256": "3d15ab9ab0ec1d263471d6bbdc730127445119f31507bff00b65cb2d9a119b02",
       "source_objects": [
         "TireR"
       ],
@@ -765,7 +772,7 @@
       "link": "caster_swivel_link",
       "triangles": 424,
       "degenerate_facets_removed": 0,
-      "sha256": "6b54ef91cd01dae5da1cde5f0cf516de2d08c1c76cf21283053e5f93b95d7416",
+      "sha256": "83c6d2fa8cdb29846a2b14f8eb1e024192f2da807bb8365f61d735ae85a3b332",
       "source_objects": [
         "SwivelRace",
         "CasterFork"
@@ -789,7 +796,7 @@
       "link": "caster_wheel_link",
       "triangles": 408,
       "degenerate_facets_removed": 0,
-      "sha256": "9836773392d9caa1e8fde7dbb7c78251194ddf28d0e1e6133aee10a99adea7f3",
+      "sha256": "503e7a123041b9d303bd71eaaf973efb8458e2d62a1e7f8fb4d2725a9d179eaf",
       "source_objects": [
         "CasterTire"
       ],
@@ -812,7 +819,7 @@
       "link": "caster_wheel_link",
       "triangles": 408,
       "degenerate_facets_removed": 0,
-      "sha256": "57affc0ac3c187f1b129f2b96b071016c0518bc883cac14dea2823fb706a8967",
+      "sha256": "e9d993f90b78b4163d81a3c768215bf600166243c614292d5ba495e9db8a152e",
       "source_objects": [
         "CasterCore"
       ],
@@ -835,7 +842,7 @@
       "link": "base_link",
       "triangles": 256,
       "degenerate_facets_removed": 0,
-      "sha256": "207f7ce8503ea2c40370043295fede13b90e39e436434b7036a4e4f8e4b4ef57",
+      "sha256": "4392c160899cbaa67ed131a6e66178eb6ef24ec7dae1b35ecb65b3a7b3a27cdd",
       "source_objects": [
         "StrapRouteX",
         "StrapRouteY"
@@ -855,10 +862,10 @@
     }
   ],
   "variants": {
-    "amr_d63.urdf": {
+    "amr_d64.urdf": {
       "payload_kg": 0,
-      "mass_kg": 10.017347153843145,
-      "sha256": "9657f5d61b2f7ed3bca23c3b34b48536b1cc1a4e92c50ac6782c6b2c12e3b461",
+      "mass_kg": 10.029098678072282,
+      "sha256": "cabfab9ff1005a11d3b2508496437f64a13f38ba6a30c466a96e468ce6f6bfa4",
       "links": {
         "left_wheel_link": {
           "mass_kg": 0.45000000000000007,
@@ -891,32 +898,32 @@
           ]
         },
         "base_link": {
-          "mass_kg": 8.993123761898467,
+          "mass_kg": 9.004875286127604,
           "com_cad_mm": [
-            -3.3659715260015437,
-            -0.8272604135544372,
-            130.37258062129484
+            -3.3615788726126272,
+            -0.8261808238338916,
+            130.55852170575807
           ],
           "com_local_m": [
-            -0.09336597152600154,
-            -0.0008272604135544372,
-            0.08002258062129484
+            -0.09336157887261262,
+            -0.0008261808238338915,
+            0.08020852170575807
           ],
           "inertia_kg_m2": [
             [
-              0.11708318027460479,
-              0.0016813599196277085,
-              0.005242480855111217
+              0.117124651941039,
+              0.0016813272398007208,
+              0.0052368523071964854
             ],
             [
-              0.0016813599196277085,
-              0.16914591350625596,
-              0.00015598485754013947
+              0.0016813272398007208,
+              0.1691864203794701,
+              0.0001546015199688945
             ],
             [
-              0.005242480855111217,
-              0.00015598485754013947,
-              0.22188936657591019
+              0.0052368523071964854,
+              0.0001546015199688945,
+              0.2219087032669464
             ]
           ]
         },
@@ -1012,32 +1019,32 @@
         }
       },
       "assembly": {
-        "mass_kg": 10.017347153843147,
+        "mass_kg": 10.029098678072284,
         "com_cad_mm": [
-          3.128864162537781,
-          -0.742677194686228,
-          122.1149635710839
+          3.1251979384636144,
+          -0.7418069680259919,
+          122.29159119434901
         ],
         "com_local_m": [
-          -0.08687113583746221,
-          -0.0007426771946862279,
-          0.07176496357108392
+          -0.08687480206153639,
+          -0.0007418069680259918,
+          0.07194159119434901
         ],
         "inertia_kg_m2": [
           [
-            0.1514768086472876,
-            0.0016330033255391215,
-            0.009782281720395455
+            0.15154673124241966,
+            0.001633030600982417,
+            0.009787817745598656
           ],
           [
-            0.0016330033255391215,
-            0.186554722056802,
-            0.00021741868184788933
+            0.001633030600982417,
+            0.18662366335821826,
+            0.00021610463321745
           ],
           [
-            0.009782281720395455,
-            0.00021741868184788933,
-            0.26058465933287805
+            0.009787817745598656,
+            0.00021610463321745,
+            0.2606039764082406
           ]
         ]
       },
@@ -7798,54 +7805,81 @@
           {
             "name": "FloorSeamBolt_0_0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0018413921740240973,
+            "mass_kg": 0.0027867497633668253,
             "com_cad_mm": [
-              -15.0,
+              -15.000000000000002,
               -25.0,
-              94.45357142857145
+              98.73628318584072
             ],
             "inertia_kg_m2": [
               [
-                4.859431598534416e-08,
+                1.0900261722930683e-07,
                 0.0,
-                -4.569301381707191e-22
+                0.0
               ],
               [
                 0.0,
-                4.859431598534416e-08,
-                -9.138602763414382e-22
+                1.090026172293105e-07,
+                0.0
               ],
               [
-                -4.569301381707191e-22,
-                -9.138602763414382e-22,
-                5.208509292239726e-09
+                0.0,
+                0.0,
+                1.0558205685323254e-08
+              ]
+            ]
+          },
+          {
+            "name": "FloorSeamTopWasher_0_0",
+            "basis": "CAD volume times assumed steel density",
+            "mass_kg": 0.0007841741203597932,
+            "com_cad_mm": [
+              -15.000000000000002,
+              -25.0,
+              101.9
+            ],
+            "inertia_kg_m2": [
+              [
+                7.946787861804768e-09,
+                5.711626727133989e-23,
+                2.2846506908535955e-22
+              ],
+              [
+                5.711626727133989e-23,
+                7.946787861804768e-09,
+                2.2846506908535955e-22
+              ],
+              [
+                2.2846506908535955e-22,
+                2.2846506908535955e-22,
+                1.5762880036882308e-08
               ]
             ]
           },
           {
             "name": "FloorSeamWasher_0_0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0003040270007326213,
+            "mass_kg": 0.0007841741203597932,
             "com_cad_mm": [
-              -14.999999999999998,
-              -24.999999999999996,
-              93.6
+              -15.0,
+              -25.0,
+              93.50000000000003
             ],
             "inertia_kg_m2": [
               [
-                1.923224135467701e-09,
-                -4.283720045350491e-23,
-                1.1423253454267977e-22
+                7.946787861800199e-09,
+                5.711626727133989e-23,
+                -4.569301381707191e-22
               ],
               [
-                -4.283720045350491e-23,
-                1.923224135468615e-09,
-                1.1423253454267977e-22
+                5.711626727133989e-23,
+                7.946787861800199e-09,
+                -4.569301381707191e-22
               ],
               [
-                1.1423253454267977e-22,
-                1.1423253454267977e-22,
-                3.81401872419081e-09
+                -4.569301381707191e-22,
+                -4.569301381707191e-22,
+                1.576288003688242e-08
               ]
             ]
           },
@@ -7856,22 +7890,22 @@
             "com_cad_mm": [
               -15.000000000000005,
               -25.000000000000004,
-              91.60000000000001
+              91.4
             ],
             "inertia_kg_m2": [
               [
-                3.951864415578176e-09,
+                3.95186441557909e-09,
                 1.1423253454267975e-22,
-                -6.853952072560786e-22
+                -3.426976036280393e-22
               ],
               [
                 1.1423253454267975e-22,
-                3.951864415580004e-09,
-                -4.56930138170719e-22
+                3.95186441557909e-09,
+                0.0
               ],
               [
-                -6.853952072560786e-22,
-                -4.56930138170719e-22,
+                -3.426976036280393e-22,
+                0.0,
                 6.6232063877649875e-09
               ]
             ]
@@ -7879,54 +7913,81 @@
           {
             "name": "FloorSeamBolt_0_1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0018413921740240973,
+            "mass_kg": 0.0027867497633668253,
             "com_cad_mm": [
-              -15.0,
+              -15.000000000000002,
               25.0,
-              94.45357142857145
+              98.73628318584072
             ],
             "inertia_kg_m2": [
               [
-                4.859431598534416e-08,
+                1.0900261722930683e-07,
                 0.0,
-                -4.569301381707191e-22
+                0.0
               ],
               [
                 0.0,
-                4.859431598534416e-08,
-                9.138602763414382e-22
+                1.090026172293105e-07,
+                0.0
               ],
               [
-                -4.569301381707191e-22,
-                9.138602763414382e-22,
-                5.208509292239726e-09
+                0.0,
+                0.0,
+                1.0558205685323254e-08
+              ]
+            ]
+          },
+          {
+            "name": "FloorSeamTopWasher_0_1",
+            "basis": "CAD volume times assumed steel density",
+            "mass_kg": 0.0007841741203597932,
+            "com_cad_mm": [
+              -15.000000000000002,
+              25.0,
+              101.9
+            ],
+            "inertia_kg_m2": [
+              [
+                7.946787861804768e-09,
+                -5.711626727133989e-23,
+                2.2846506908535955e-22
+              ],
+              [
+                -5.711626727133989e-23,
+                7.946787861804768e-09,
+                -2.2846506908535955e-22
+              ],
+              [
+                2.2846506908535955e-22,
+                -2.2846506908535955e-22,
+                1.5762880036882308e-08
               ]
             ]
           },
           {
             "name": "FloorSeamWasher_0_1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0003040270007326213,
+            "mass_kg": 0.0007841741203597932,
             "com_cad_mm": [
-              -14.999999999999998,
-              24.999999999999996,
-              93.6
+              -15.0,
+              25.0,
+              93.50000000000003
             ],
             "inertia_kg_m2": [
               [
-                1.923224135467701e-09,
-                4.283720045350491e-23,
-                1.1423253454267977e-22
+                7.946787861800199e-09,
+                -5.711626727133989e-23,
+                -4.569301381707191e-22
               ],
               [
-                4.283720045350491e-23,
-                1.923224135468615e-09,
-                -1.1423253454267977e-22
+                -5.711626727133989e-23,
+                7.946787861800199e-09,
+                4.569301381707191e-22
               ],
               [
-                1.1423253454267977e-22,
-                -1.1423253454267977e-22,
-                3.81401872419081e-09
+                -4.569301381707191e-22,
+                4.569301381707191e-22,
+                1.576288003688242e-08
               ]
             ]
           },
@@ -7936,104 +7997,131 @@
             "mass_kg": 0.0007503061191774875,
             "com_cad_mm": [
               -15.000000000000005,
-              24.999999999999996,
-              91.60000000000001
+              25.000000000000004,
+              91.4
             ],
             "inertia_kg_m2": [
               [
-                3.951864415578176e-09,
-                -5.711626727133987e-23,
-                -6.853952072560786e-22
+                3.95186441557909e-09,
+                -1.1423253454267975e-22,
+                -3.426976036280393e-22
               ],
               [
-                -5.711626727133987e-23,
-                3.951864415580004e-09,
+                -1.1423253454267975e-22,
+                3.95186441557909e-09,
                 0.0
               ],
               [
-                -6.853952072560786e-22,
+                -3.426976036280393e-22,
                 0.0,
-                6.623206387765215e-09
+                6.6232063877649875e-09
               ]
             ]
           },
           {
             "name": "FloorSeamBolt_1_0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0018413921740240969,
+            "mass_kg": 0.002786749763366826,
             "com_cad_mm": [
-              14.999999999999998,
-              -25.000000000000004,
-              94.45357142857144
+              15.0,
+              -24.999999999999996,
+              98.73628318584069
             ],
             "inertia_kg_m2": [
               [
-                4.8594315985351465e-08,
-                1.1423253454267977e-22,
+                1.0900261722932144e-07,
+                2.2846506908535955e-22,
                 0.0
               ],
               [
-                1.1423253454267977e-22,
-                4.8594315985351465e-08,
+                2.2846506908535955e-22,
+                1.0900261722931779e-07,
                 0.0
               ],
               [
                 0.0,
                 0.0,
-                5.208509292239268e-09
+                1.0558205685322339e-08
+              ]
+            ]
+          },
+          {
+            "name": "FloorSeamTopWasher_1_0",
+            "basis": "CAD volume times assumed steel density",
+            "mass_kg": 0.0007841741203597932,
+            "com_cad_mm": [
+              15.0,
+              -25.0,
+              101.9
+            ],
+            "inertia_kg_m2": [
+              [
+                7.946787861804768e-09,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                7.946787861802942e-09,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.576288003688254e-08
               ]
             ]
           },
           {
             "name": "FloorSeamWasher_1_0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.00030402700073262117,
+            "mass_kg": 0.0007841741203597932,
             "com_cad_mm": [
-              14.999999999999998,
+              15.0,
               -25.0,
-              93.59999999999998
+              93.50000000000003
             ],
             "inertia_kg_m2": [
               [
-                1.923224135468615e-09,
-                -1.4279066817834972e-23,
-                -5.711626727133989e-23
+                7.946787861800199e-09,
+                0.0,
+                2.2846506908535955e-22
               ],
               [
-                -1.4279066817834972e-23,
-                1.9232241354699856e-09,
-                1.1423253454267977e-22
+                0.0,
+                7.946787861799284e-09,
+                -4.569301381707191e-22
               ],
               [
-                -5.711626727133989e-23,
-                1.1423253454267977e-22,
-                3.814018724190753e-09
+                2.2846506908535955e-22,
+                -4.569301381707191e-22,
+                1.576288003688242e-08
               ]
             ]
           },
           {
             "name": "FloorSeamNut_1_0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0007503061191774877,
+            "mass_kg": 0.0007503061191774876,
             "com_cad_mm": [
               14.999999999999998,
-              -24.99999999999999,
-              91.59999999999997
+              -24.999999999999993,
+              91.39999999999999
             ],
             "inertia_kg_m2": [
               [
-                3.951864415584574e-09,
-                1.142325345426798e-22,
-                -4.569301381707192e-22
+                3.951864415581832e-09,
+                1.7134880181401967e-22,
+                -3.4269760362803934e-22
               ],
               [
-                1.142325345426798e-22,
-                3.951864415582747e-09,
-                1.5992554835975169e-21
+                1.7134880181401967e-22,
+                3.951864415581832e-09,
+                9.138602763414382e-22
               ],
               [
-                -4.569301381707192e-22,
-                1.5992554835975169e-21,
+                -3.4269760362803934e-22,
+                9.138602763414382e-22,
                 6.623206387765446e-09
               ]
             ]
@@ -8041,80 +8129,107 @@
           {
             "name": "FloorSeamBolt_1_1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0018413921740240969,
+            "mass_kg": 0.002786749763366826,
             "com_cad_mm": [
-              14.999999999999998,
-              25.000000000000004,
-              94.45357142857144
+              15.0,
+              24.999999999999996,
+              98.73628318584069
             ],
             "inertia_kg_m2": [
               [
-                4.8594315985351465e-08,
-                -1.1423253454267977e-22,
+                1.0900261722932144e-07,
+                -2.2846506908535955e-22,
                 0.0
               ],
               [
-                -1.1423253454267977e-22,
-                4.8594315985351465e-08,
+                -2.2846506908535955e-22,
+                1.0900261722931779e-07,
                 0.0
               ],
               [
                 0.0,
                 0.0,
-                5.208509292239268e-09
+                1.0558205685322339e-08
+              ]
+            ]
+          },
+          {
+            "name": "FloorSeamTopWasher_1_1",
+            "basis": "CAD volume times assumed steel density",
+            "mass_kg": 0.0007841741203597932,
+            "com_cad_mm": [
+              15.0,
+              25.0,
+              101.9
+            ],
+            "inertia_kg_m2": [
+              [
+                7.946787861804768e-09,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                7.946787861802942e-09,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.576288003688254e-08
               ]
             ]
           },
           {
             "name": "FloorSeamWasher_1_1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.00030402700073262117,
+            "mass_kg": 0.0007841741203597932,
             "com_cad_mm": [
-              14.999999999999998,
+              15.0,
               25.0,
-              93.59999999999998
+              93.50000000000003
             ],
             "inertia_kg_m2": [
               [
-                1.923224135468615e-09,
-                1.4279066817834972e-23,
-                -5.711626727133989e-23
+                7.946787861800199e-09,
+                0.0,
+                2.2846506908535955e-22
               ],
               [
-                1.4279066817834972e-23,
-                1.9232241354699856e-09,
-                -1.1423253454267977e-22
+                0.0,
+                7.946787861799284e-09,
+                4.569301381707191e-22
               ],
               [
-                -5.711626727133989e-23,
-                -1.1423253454267977e-22,
-                3.814018724190753e-09
+                2.2846506908535955e-22,
+                4.569301381707191e-22,
+                1.576288003688242e-08
               ]
             ]
           },
           {
             "name": "FloorSeamNut_1_1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0007503061191774877,
+            "mass_kg": 0.0007503061191774876,
             "com_cad_mm": [
               14.999999999999998,
-              24.99999999999999,
-              91.59999999999997
+              24.999999999999993,
+              91.39999999999999
             ],
             "inertia_kg_m2": [
               [
-                3.951864415584574e-09,
-                -1.713488018140197e-22,
-                -4.569301381707192e-22
+                3.951864415580004e-09,
+                -1.7134880181401967e-22,
+                -3.4269760362803934e-22
               ],
               [
-                -1.713488018140197e-22,
-                3.951864415582747e-09,
-                -1.5992554835975169e-21
+                -1.7134880181401967e-22,
+                3.951864415581832e-09,
+                -4.569301381707191e-22
               ],
               [
-                -4.569301381707192e-22,
-                -1.5992554835975169e-21,
+                -3.4269760362803934e-22,
+                -4.569301381707191e-22,
                 6.623206387765446e-09
               ]
             ]
@@ -8149,114 +8264,114 @@
           {
             "name": "FloorPLA_0_0",
             "basis": "CAD volume times assumed PLA density",
-            "mass_kg": 0.12687960214111627,
+            "mass_kg": 0.127607804369072,
             "com_cad_mm": [
-              -114.6834076327667,
-              -57.85210930012748,
-              98.94001230060013
+              -114.30501635985718,
+              -57.74626170520817,
+              98.96914049907379
             ],
             "inertia_kg_m2": [
               [
-                0.00019684900471169834,
-                -1.0737315557367392e-05,
-                1.1726841189093877e-06
+                0.00019713233851535004,
+                -1.1644748681915172e-05,
+                9.314075587903881e-07
               ],
               [
-                -1.0737315557367392e-05,
-                0.0005200592883416379,
-                5.184993492170595e-06
+                -1.1644748681915172e-05,
+                0.0005233092112969172,
+                5.118064145667748e-06
               ],
               [
-                1.1726841189093877e-06,
-                5.184993492170595e-06,
-                0.0007134507095298582
+                9.314075587903881e-07,
+                5.118064145667748e-06,
+                0.0007169418721079966
               ]
             ]
           },
           {
             "name": "FloorPLA_0_1",
             "basis": "CAD volume times assumed PLA density",
-            "mass_kg": 0.12687960214111418,
+            "mass_kg": 0.12760780436906985,
             "com_cad_mm": [
-              -114.68340763276667,
-              57.85210930012733,
-              98.94001230060005
+              -114.3050163598572,
+              57.74626170520809,
+              98.96914049907373
             ],
             "inertia_kg_m2": [
               [
-                0.00019684900471169682,
-                1.073731555736813e-05,
-                1.1726841189096829e-06
+                0.0001971323385153486,
+                1.1644748681915026e-05,
+                9.314075587906837e-07
               ],
               [
-                1.073731555736813e-05,
-                0.000520059288341635,
-                -5.184993492171483e-06
+                1.1644748681915026e-05,
+                0.0005233092112969088,
+                -5.118064145668044e-06
               ],
               [
-                1.1726841189096829e-06,
-                -5.184993492171483e-06,
-                0.0007134507095298519
+                9.314075587906837e-07,
+                -5.118064145668044e-06,
+                0.0007169418721079886
               ]
             ]
           },
           {
             "name": "FloorPLA_1_0",
             "basis": "CAD volume times assumed PLA density",
-            "mass_kg": 0.12291874454111501,
+            "mass_kg": 0.12364694676907072,
             "com_cad_mm": [
-              113.97668442624384,
-              -58.51364715540742,
-              98.70854693735308
+              113.59033406852669,
+              -58.40051284120863,
+              98.73997140150043
             ],
             "inertia_kg_m2": [
               [
-                0.0001948479885938718,
-                1.2592236068167524e-05,
-                -5.312875831997299e-07
+                0.00019515110480551102,
+                1.3521432228779359e-05,
+                -2.816752658862114e-07
               ],
               [
-                1.2592236068167524e-05,
-                0.0005102301512143812,
-                5.83940911234321e-06
+                1.3521432228779359e-05,
+                0.0005134137490650607,
+                5.766829090654254e-06
               ],
               [
-                -5.312875831997299e-07,
-                5.83940911234321e-06,
-                0.0007020749017505904
+                -2.816752658862114e-07,
+                5.766829090654254e-06,
+                0.0007055160298537178
               ]
             ]
           },
           {
             "name": "FloorPLA_1_1",
             "basis": "CAD volume times assumed PLA density",
-            "mass_kg": 0.1225378165411151,
+            "mass_kg": 0.12326601876907074,
             "com_cad_mm": [
-              114.20665253927656,
-              58.4157668948075,
-              98.70391052185052
+              113.81774969414666,
+              58.302861196703326,
+              98.73545948670409
             ],
             "inertia_kg_m2": [
               [
-                0.00019446000695449962,
-                -1.3482273138442373e-05,
-                -5.734470711827755e-07
+                0.00019476043840596934,
+                -1.4409986037144147e-05,
+                -3.227301717773628e-07
               ],
               [
-                -1.3482273138442373e-05,
-                0.000507608921156114,
-                -5.821464965149373e-06
+                -1.4409986037144147e-05,
+                0.0005108143775442316,
+                -5.749200226918644e-06
               ],
               [
-                -5.734470711827755e-07,
-                -5.821464965149373e-06,
-                0.0006990677557091081
+                -3.227301717773628e-07,
+                -5.749200226918644e-06,
+                0.0007025279866788422
               ]
             ]
           },
           {
             "name": "BatteryBL1860B",
-            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.68,
             "com_cad_mm": [
               -136.5,
@@ -8283,7 +8398,7 @@
           },
           {
             "name": "BatteryAdapter03",
-            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.123,
             "com_cad_mm": [
               -136.5,
@@ -8310,12 +8425,12 @@
           },
           {
             "name": "Reserved_Computer",
-            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.5,
             "com_cad_mm": [
               -2.5969110371381617e-16,
               -6.315935428978668e-17,
-              134.0
+              138.0
             ],
             "inertia_kg_m2": [
               [
@@ -8337,7 +8452,7 @@
           },
           {
             "name": "Reserved_SupervisorRS485",
-            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.05,
             "com_cad_mm": [
               40.0,
@@ -8364,7 +8479,7 @@
           },
           {
             "name": "Reserved_Protection",
-            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.2,
             "com_cad_mm": [
               170.0,
@@ -8391,7 +8506,7 @@
           },
           {
             "name": "Reserved_ClampAndPower",
-            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.2,
             "com_cad_mm": [
               180.0,
@@ -8418,7 +8533,7 @@
           },
           {
             "name": "wiring_allowance",
-            "basis": "D6.3 wiring allowance; ASSUMED distributed across first floor, not copper-fill CAD density",
+            "basis": "D6.4 wiring allowance; ASSUMED distributed across first floor, not copper-fill CAD density",
             "mass_kg": 0.4,
             "com_cad_mm": [
               2.5397488442045013e-15,
@@ -8445,7 +8560,7 @@
           },
           {
             "name": "battery_belt_pads",
-            "basis": "D6.3 125g battery belt plus 25g pads, simplified distribution",
+            "basis": "D6.4 125g battery belt plus 25g pads, simplified distribution",
             "mass_kg": 0.15,
             "com_cad_mm": [
               -146.0,
@@ -8472,7 +8587,7 @@
           },
           {
             "name": "computer_belts_pads",
-            "basis": "D6.3 computer/supervisor retaining allowance",
+            "basis": "D6.4 computer/supervisor retaining allowance",
             "mass_kg": 0.03,
             "com_cad_mm": [
               -5.814180444272246e-16,
@@ -8526,7 +8641,7 @@
           },
           {
             "name": "inherited_strap_allowance",
-            "basis": "Legacy strap allowance retained in D6.3 ledger; no new additional mass",
+            "basis": "Legacy strap allowance retained in D6.4 ledger; no new additional mass",
             "mass_kg": 0.04,
             "com_cad_mm": [
               -136.5,
@@ -8553,7 +8668,7 @@
           },
           {
             "name": "cargo_belts_pads",
-            "basis": "D6.3 cargo belts/pads allowance stowed on deck in empty variant",
+            "basis": "D6.4 cargo belts/pads allowance stowed on deck in empty variant",
             "mass_kg": 0.28,
             "com_cad_mm": [
               5.6924822328644e-17,
@@ -8776,10 +8891,10 @@
         ]
       }
     },
-    "amr_d63_payload_10kg.urdf": {
+    "amr_d64_payload_10kg.urdf": {
       "payload_kg": 10,
-      "mass_kg": 20.017347153843147,
-      "sha256": "e5798ed9f1d8fa69e0cacabdf26fdd261bcc1a0ff032a452602b56ccffeedcde",
+      "mass_kg": 20.02909867807228,
+      "sha256": "711189a4e9c3e71140b03b5fb265a724d1c77b6276d4d13628946c1e01ab9211",
       "links": {
         "left_wheel_link": {
           "mass_kg": 0.45000000000000007,
@@ -8812,32 +8927,32 @@
           ]
         },
         "base_link": {
-          "mass_kg": 8.993123761898467,
+          "mass_kg": 9.004875286127604,
           "com_cad_mm": [
-            -3.3659715260015437,
-            -0.8272604135544372,
-            132.45861885413683
+            -3.3615788726126272,
+            -0.8261808238338916,
+            132.6418376211823
           ],
           "com_local_m": [
-            -0.09336597152600154,
-            -0.0008272604135544372,
-            0.08210861885413684
+            -0.09336157887261262,
+            -0.0008261808238338915,
+            0.0822918376211823
           ],
           "inertia_kg_m2": [
             [
-              0.1234880803057791,
-              0.0016813599196277085,
-              0.005179335229283434
+              0.12352262653339882,
+              0.0016813272398007208,
+              0.005173789087546269
             ],
             [
-              0.0016813599196277085,
-              0.17547848020409684,
-              0.00014046545218185816
+              0.0016813272398007208,
+              0.1755120616384968,
+              0.00013910236771377243
             ],
             [
-              0.005179335229283434,
-              0.00014046545218185816,
-              0.22256369990924355
+              0.005173789087546269,
+              0.00013910236771377243,
+              0.22258303660027973
             ]
           ]
         },
@@ -8963,32 +9078,32 @@
         }
       },
       "assembly": {
-        "mass_kg": 20.017347153843147,
+        "mass_kg": 20.029098678072284,
         "com_cad_mm": [
-          1.5657878275514698,
-          -0.37166040161250635,
-          218.41195784682526
+          1.5648691444949376,
+          -0.3714423400669134,
+          218.44390034268383
         ],
         "com_local_m": [
-          -0.08843421217244853,
-          -0.00037166040161250633,
-          0.16806195784682526
+          -0.08843513085550507,
+          -0.0003714423400669134,
+          0.16809390034268384
         ],
         "inertia_kg_m2": [
           [
-            0.3916479825600183,
-            0.0016446320746515272,
-            0.012800510565061481
+            0.39148600189149907,
+            0.0016446389093367844,
+            0.012801511736106263
           ],
           [
-            0.0016446320746515272,
-            0.4266997937733528,
-            -0.0004989977602962831
+            0.0016446389093367844,
+            0.4265367505470473,
+            -0.000499235401454311
           ],
           [
-            0.012800510565061481,
-            -0.0004989977602962831,
-            0.3279774109441202
+            0.012801511736106263,
+            -0.000499235401454311,
+            0.3279966370516448
           ]
         ]
       },
@@ -15749,54 +15864,81 @@
           {
             "name": "FloorSeamBolt_0_0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0018413921740240973,
+            "mass_kg": 0.0027867497633668253,
             "com_cad_mm": [
-              -15.0,
+              -15.000000000000002,
               -25.0,
-              94.45357142857145
+              98.73628318584072
             ],
             "inertia_kg_m2": [
               [
-                4.859431598534416e-08,
+                1.0900261722930683e-07,
                 0.0,
-                -4.569301381707191e-22
+                0.0
               ],
               [
                 0.0,
-                4.859431598534416e-08,
-                -9.138602763414382e-22
+                1.090026172293105e-07,
+                0.0
               ],
               [
-                -4.569301381707191e-22,
-                -9.138602763414382e-22,
-                5.208509292239726e-09
+                0.0,
+                0.0,
+                1.0558205685323254e-08
+              ]
+            ]
+          },
+          {
+            "name": "FloorSeamTopWasher_0_0",
+            "basis": "CAD volume times assumed steel density",
+            "mass_kg": 0.0007841741203597932,
+            "com_cad_mm": [
+              -15.000000000000002,
+              -25.0,
+              101.9
+            ],
+            "inertia_kg_m2": [
+              [
+                7.946787861804768e-09,
+                5.711626727133989e-23,
+                2.2846506908535955e-22
+              ],
+              [
+                5.711626727133989e-23,
+                7.946787861804768e-09,
+                2.2846506908535955e-22
+              ],
+              [
+                2.2846506908535955e-22,
+                2.2846506908535955e-22,
+                1.5762880036882308e-08
               ]
             ]
           },
           {
             "name": "FloorSeamWasher_0_0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0003040270007326213,
+            "mass_kg": 0.0007841741203597932,
             "com_cad_mm": [
-              -14.999999999999998,
-              -24.999999999999996,
-              93.6
+              -15.0,
+              -25.0,
+              93.50000000000003
             ],
             "inertia_kg_m2": [
               [
-                1.923224135467701e-09,
-                -4.283720045350491e-23,
-                1.1423253454267977e-22
+                7.946787861800199e-09,
+                5.711626727133989e-23,
+                -4.569301381707191e-22
               ],
               [
-                -4.283720045350491e-23,
-                1.923224135468615e-09,
-                1.1423253454267977e-22
+                5.711626727133989e-23,
+                7.946787861800199e-09,
+                -4.569301381707191e-22
               ],
               [
-                1.1423253454267977e-22,
-                1.1423253454267977e-22,
-                3.81401872419081e-09
+                -4.569301381707191e-22,
+                -4.569301381707191e-22,
+                1.576288003688242e-08
               ]
             ]
           },
@@ -15807,22 +15949,22 @@
             "com_cad_mm": [
               -15.000000000000005,
               -25.000000000000004,
-              91.60000000000001
+              91.4
             ],
             "inertia_kg_m2": [
               [
-                3.951864415578176e-09,
+                3.95186441557909e-09,
                 1.1423253454267975e-22,
-                -6.853952072560786e-22
+                -3.426976036280393e-22
               ],
               [
                 1.1423253454267975e-22,
-                3.951864415580004e-09,
-                -4.56930138170719e-22
+                3.95186441557909e-09,
+                0.0
               ],
               [
-                -6.853952072560786e-22,
-                -4.56930138170719e-22,
+                -3.426976036280393e-22,
+                0.0,
                 6.6232063877649875e-09
               ]
             ]
@@ -15830,54 +15972,81 @@
           {
             "name": "FloorSeamBolt_0_1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0018413921740240973,
+            "mass_kg": 0.0027867497633668253,
             "com_cad_mm": [
-              -15.0,
+              -15.000000000000002,
               25.0,
-              94.45357142857145
+              98.73628318584072
             ],
             "inertia_kg_m2": [
               [
-                4.859431598534416e-08,
+                1.0900261722930683e-07,
                 0.0,
-                -4.569301381707191e-22
+                0.0
               ],
               [
                 0.0,
-                4.859431598534416e-08,
-                9.138602763414382e-22
+                1.090026172293105e-07,
+                0.0
               ],
               [
-                -4.569301381707191e-22,
-                9.138602763414382e-22,
-                5.208509292239726e-09
+                0.0,
+                0.0,
+                1.0558205685323254e-08
+              ]
+            ]
+          },
+          {
+            "name": "FloorSeamTopWasher_0_1",
+            "basis": "CAD volume times assumed steel density",
+            "mass_kg": 0.0007841741203597932,
+            "com_cad_mm": [
+              -15.000000000000002,
+              25.0,
+              101.9
+            ],
+            "inertia_kg_m2": [
+              [
+                7.946787861804768e-09,
+                -5.711626727133989e-23,
+                2.2846506908535955e-22
+              ],
+              [
+                -5.711626727133989e-23,
+                7.946787861804768e-09,
+                -2.2846506908535955e-22
+              ],
+              [
+                2.2846506908535955e-22,
+                -2.2846506908535955e-22,
+                1.5762880036882308e-08
               ]
             ]
           },
           {
             "name": "FloorSeamWasher_0_1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0003040270007326213,
+            "mass_kg": 0.0007841741203597932,
             "com_cad_mm": [
-              -14.999999999999998,
-              24.999999999999996,
-              93.6
+              -15.0,
+              25.0,
+              93.50000000000003
             ],
             "inertia_kg_m2": [
               [
-                1.923224135467701e-09,
-                4.283720045350491e-23,
-                1.1423253454267977e-22
+                7.946787861800199e-09,
+                -5.711626727133989e-23,
+                -4.569301381707191e-22
               ],
               [
-                4.283720045350491e-23,
-                1.923224135468615e-09,
-                -1.1423253454267977e-22
+                -5.711626727133989e-23,
+                7.946787861800199e-09,
+                4.569301381707191e-22
               ],
               [
-                1.1423253454267977e-22,
-                -1.1423253454267977e-22,
-                3.81401872419081e-09
+                -4.569301381707191e-22,
+                4.569301381707191e-22,
+                1.576288003688242e-08
               ]
             ]
           },
@@ -15887,104 +16056,131 @@
             "mass_kg": 0.0007503061191774875,
             "com_cad_mm": [
               -15.000000000000005,
-              24.999999999999996,
-              91.60000000000001
+              25.000000000000004,
+              91.4
             ],
             "inertia_kg_m2": [
               [
-                3.951864415578176e-09,
-                -5.711626727133987e-23,
-                -6.853952072560786e-22
+                3.95186441557909e-09,
+                -1.1423253454267975e-22,
+                -3.426976036280393e-22
               ],
               [
-                -5.711626727133987e-23,
-                3.951864415580004e-09,
+                -1.1423253454267975e-22,
+                3.95186441557909e-09,
                 0.0
               ],
               [
-                -6.853952072560786e-22,
+                -3.426976036280393e-22,
                 0.0,
-                6.623206387765215e-09
+                6.6232063877649875e-09
               ]
             ]
           },
           {
             "name": "FloorSeamBolt_1_0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0018413921740240969,
+            "mass_kg": 0.002786749763366826,
             "com_cad_mm": [
-              14.999999999999998,
-              -25.000000000000004,
-              94.45357142857144
+              15.0,
+              -24.999999999999996,
+              98.73628318584069
             ],
             "inertia_kg_m2": [
               [
-                4.8594315985351465e-08,
-                1.1423253454267977e-22,
+                1.0900261722932144e-07,
+                2.2846506908535955e-22,
                 0.0
               ],
               [
-                1.1423253454267977e-22,
-                4.8594315985351465e-08,
+                2.2846506908535955e-22,
+                1.0900261722931779e-07,
                 0.0
               ],
               [
                 0.0,
                 0.0,
-                5.208509292239268e-09
+                1.0558205685322339e-08
+              ]
+            ]
+          },
+          {
+            "name": "FloorSeamTopWasher_1_0",
+            "basis": "CAD volume times assumed steel density",
+            "mass_kg": 0.0007841741203597932,
+            "com_cad_mm": [
+              15.0,
+              -25.0,
+              101.9
+            ],
+            "inertia_kg_m2": [
+              [
+                7.946787861804768e-09,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                7.946787861802942e-09,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.576288003688254e-08
               ]
             ]
           },
           {
             "name": "FloorSeamWasher_1_0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.00030402700073262117,
+            "mass_kg": 0.0007841741203597932,
             "com_cad_mm": [
-              14.999999999999998,
+              15.0,
               -25.0,
-              93.59999999999998
+              93.50000000000003
             ],
             "inertia_kg_m2": [
               [
-                1.923224135468615e-09,
-                -1.4279066817834972e-23,
-                -5.711626727133989e-23
+                7.946787861800199e-09,
+                0.0,
+                2.2846506908535955e-22
               ],
               [
-                -1.4279066817834972e-23,
-                1.9232241354699856e-09,
-                1.1423253454267977e-22
+                0.0,
+                7.946787861799284e-09,
+                -4.569301381707191e-22
               ],
               [
-                -5.711626727133989e-23,
-                1.1423253454267977e-22,
-                3.814018724190753e-09
+                2.2846506908535955e-22,
+                -4.569301381707191e-22,
+                1.576288003688242e-08
               ]
             ]
           },
           {
             "name": "FloorSeamNut_1_0",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0007503061191774877,
+            "mass_kg": 0.0007503061191774876,
             "com_cad_mm": [
               14.999999999999998,
-              -24.99999999999999,
-              91.59999999999997
+              -24.999999999999993,
+              91.39999999999999
             ],
             "inertia_kg_m2": [
               [
-                3.951864415584574e-09,
-                1.142325345426798e-22,
-                -4.569301381707192e-22
+                3.951864415581832e-09,
+                1.7134880181401967e-22,
+                -3.4269760362803934e-22
               ],
               [
-                1.142325345426798e-22,
-                3.951864415582747e-09,
-                1.5992554835975169e-21
+                1.7134880181401967e-22,
+                3.951864415581832e-09,
+                9.138602763414382e-22
               ],
               [
-                -4.569301381707192e-22,
-                1.5992554835975169e-21,
+                -3.4269760362803934e-22,
+                9.138602763414382e-22,
                 6.623206387765446e-09
               ]
             ]
@@ -15992,80 +16188,107 @@
           {
             "name": "FloorSeamBolt_1_1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0018413921740240969,
+            "mass_kg": 0.002786749763366826,
             "com_cad_mm": [
-              14.999999999999998,
-              25.000000000000004,
-              94.45357142857144
+              15.0,
+              24.999999999999996,
+              98.73628318584069
             ],
             "inertia_kg_m2": [
               [
-                4.8594315985351465e-08,
-                -1.1423253454267977e-22,
+                1.0900261722932144e-07,
+                -2.2846506908535955e-22,
                 0.0
               ],
               [
-                -1.1423253454267977e-22,
-                4.8594315985351465e-08,
+                -2.2846506908535955e-22,
+                1.0900261722931779e-07,
                 0.0
               ],
               [
                 0.0,
                 0.0,
-                5.208509292239268e-09
+                1.0558205685322339e-08
+              ]
+            ]
+          },
+          {
+            "name": "FloorSeamTopWasher_1_1",
+            "basis": "CAD volume times assumed steel density",
+            "mass_kg": 0.0007841741203597932,
+            "com_cad_mm": [
+              15.0,
+              25.0,
+              101.9
+            ],
+            "inertia_kg_m2": [
+              [
+                7.946787861804768e-09,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                7.946787861802942e-09,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.576288003688254e-08
               ]
             ]
           },
           {
             "name": "FloorSeamWasher_1_1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.00030402700073262117,
+            "mass_kg": 0.0007841741203597932,
             "com_cad_mm": [
-              14.999999999999998,
+              15.0,
               25.0,
-              93.59999999999998
+              93.50000000000003
             ],
             "inertia_kg_m2": [
               [
-                1.923224135468615e-09,
-                1.4279066817834972e-23,
-                -5.711626727133989e-23
+                7.946787861800199e-09,
+                0.0,
+                2.2846506908535955e-22
               ],
               [
-                1.4279066817834972e-23,
-                1.9232241354699856e-09,
-                -1.1423253454267977e-22
+                0.0,
+                7.946787861799284e-09,
+                4.569301381707191e-22
               ],
               [
-                -5.711626727133989e-23,
-                -1.1423253454267977e-22,
-                3.814018724190753e-09
+                2.2846506908535955e-22,
+                4.569301381707191e-22,
+                1.576288003688242e-08
               ]
             ]
           },
           {
             "name": "FloorSeamNut_1_1",
             "basis": "CAD volume times assumed steel density",
-            "mass_kg": 0.0007503061191774877,
+            "mass_kg": 0.0007503061191774876,
             "com_cad_mm": [
               14.999999999999998,
-              24.99999999999999,
-              91.59999999999997
+              24.999999999999993,
+              91.39999999999999
             ],
             "inertia_kg_m2": [
               [
-                3.951864415584574e-09,
-                -1.713488018140197e-22,
-                -4.569301381707192e-22
+                3.951864415580004e-09,
+                -1.7134880181401967e-22,
+                -3.4269760362803934e-22
               ],
               [
-                -1.713488018140197e-22,
-                3.951864415582747e-09,
-                -1.5992554835975169e-21
+                -1.7134880181401967e-22,
+                3.951864415581832e-09,
+                -4.569301381707191e-22
               ],
               [
-                -4.569301381707192e-22,
-                -1.5992554835975169e-21,
+                -3.4269760362803934e-22,
+                -4.569301381707191e-22,
                 6.623206387765446e-09
               ]
             ]
@@ -16100,114 +16323,114 @@
           {
             "name": "FloorPLA_0_0",
             "basis": "CAD volume times assumed PLA density",
-            "mass_kg": 0.12687960214111627,
+            "mass_kg": 0.127607804369072,
             "com_cad_mm": [
-              -114.6834076327667,
-              -57.85210930012748,
-              98.94001230060013
+              -114.30501635985718,
+              -57.74626170520817,
+              98.96914049907379
             ],
             "inertia_kg_m2": [
               [
-                0.00019684900471169834,
-                -1.0737315557367392e-05,
-                1.1726841189093877e-06
+                0.00019713233851535004,
+                -1.1644748681915172e-05,
+                9.314075587903881e-07
               ],
               [
-                -1.0737315557367392e-05,
-                0.0005200592883416379,
-                5.184993492170595e-06
+                -1.1644748681915172e-05,
+                0.0005233092112969172,
+                5.118064145667748e-06
               ],
               [
-                1.1726841189093877e-06,
-                5.184993492170595e-06,
-                0.0007134507095298582
+                9.314075587903881e-07,
+                5.118064145667748e-06,
+                0.0007169418721079966
               ]
             ]
           },
           {
             "name": "FloorPLA_0_1",
             "basis": "CAD volume times assumed PLA density",
-            "mass_kg": 0.12687960214111418,
+            "mass_kg": 0.12760780436906985,
             "com_cad_mm": [
-              -114.68340763276667,
-              57.85210930012733,
-              98.94001230060005
+              -114.3050163598572,
+              57.74626170520809,
+              98.96914049907373
             ],
             "inertia_kg_m2": [
               [
-                0.00019684900471169682,
-                1.073731555736813e-05,
-                1.1726841189096829e-06
+                0.0001971323385153486,
+                1.1644748681915026e-05,
+                9.314075587906837e-07
               ],
               [
-                1.073731555736813e-05,
-                0.000520059288341635,
-                -5.184993492171483e-06
+                1.1644748681915026e-05,
+                0.0005233092112969088,
+                -5.118064145668044e-06
               ],
               [
-                1.1726841189096829e-06,
-                -5.184993492171483e-06,
-                0.0007134507095298519
+                9.314075587906837e-07,
+                -5.118064145668044e-06,
+                0.0007169418721079886
               ]
             ]
           },
           {
             "name": "FloorPLA_1_0",
             "basis": "CAD volume times assumed PLA density",
-            "mass_kg": 0.12291874454111501,
+            "mass_kg": 0.12364694676907072,
             "com_cad_mm": [
-              113.97668442624384,
-              -58.51364715540742,
-              98.70854693735308
+              113.59033406852669,
+              -58.40051284120863,
+              98.73997140150043
             ],
             "inertia_kg_m2": [
               [
-                0.0001948479885938718,
-                1.2592236068167524e-05,
-                -5.312875831997299e-07
+                0.00019515110480551102,
+                1.3521432228779359e-05,
+                -2.816752658862114e-07
               ],
               [
-                1.2592236068167524e-05,
-                0.0005102301512143812,
-                5.83940911234321e-06
+                1.3521432228779359e-05,
+                0.0005134137490650607,
+                5.766829090654254e-06
               ],
               [
-                -5.312875831997299e-07,
-                5.83940911234321e-06,
-                0.0007020749017505904
+                -2.816752658862114e-07,
+                5.766829090654254e-06,
+                0.0007055160298537178
               ]
             ]
           },
           {
             "name": "FloorPLA_1_1",
             "basis": "CAD volume times assumed PLA density",
-            "mass_kg": 0.1225378165411151,
+            "mass_kg": 0.12326601876907074,
             "com_cad_mm": [
-              114.20665253927656,
-              58.4157668948075,
-              98.70391052185052
+              113.81774969414666,
+              58.302861196703326,
+              98.73545948670409
             ],
             "inertia_kg_m2": [
               [
-                0.00019446000695449962,
-                -1.3482273138442373e-05,
-                -5.734470711827755e-07
+                0.00019476043840596934,
+                -1.4409986037144147e-05,
+                -3.227301717773628e-07
               ],
               [
-                -1.3482273138442373e-05,
-                0.000507608921156114,
-                -5.821464965149373e-06
+                -1.4409986037144147e-05,
+                0.0005108143775442316,
+                -5.749200226918644e-06
               ],
               [
-                -5.734470711827755e-07,
-                -5.821464965149373e-06,
-                0.0006990677557091081
+                -3.227301717773628e-07,
+                -5.749200226918644e-06,
+                0.0007025279866788422
               ]
             ]
           },
           {
             "name": "BatteryBL1860B",
-            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.68,
             "com_cad_mm": [
               -136.5,
@@ -16234,7 +16457,7 @@
           },
           {
             "name": "BatteryAdapter03",
-            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.123,
             "com_cad_mm": [
               -136.5,
@@ -16261,12 +16484,12 @@
           },
           {
             "name": "Reserved_Computer",
-            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.5,
             "com_cad_mm": [
               -2.5969110371381617e-16,
               -6.315935428978668e-17,
-              134.0
+              138.0
             ],
             "inertia_kg_m2": [
               [
@@ -16288,7 +16511,7 @@
           },
           {
             "name": "Reserved_SupervisorRS485",
-            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.05,
             "com_cad_mm": [
               40.0,
@@ -16315,7 +16538,7 @@
           },
           {
             "name": "Reserved_Protection",
-            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.2,
             "com_cad_mm": [
               170.0,
@@ -16342,7 +16565,7 @@
           },
           {
             "name": "Reserved_ClampAndPower",
-            "basis": "D6.3 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.2,
             "com_cad_mm": [
               180.0,
@@ -16369,7 +16592,7 @@
           },
           {
             "name": "wiring_allowance",
-            "basis": "D6.3 wiring allowance; ASSUMED distributed across first floor, not copper-fill CAD density",
+            "basis": "D6.4 wiring allowance; ASSUMED distributed across first floor, not copper-fill CAD density",
             "mass_kg": 0.4,
             "com_cad_mm": [
               2.5397488442045013e-15,
@@ -16396,7 +16619,7 @@
           },
           {
             "name": "battery_belt_pads",
-            "basis": "D6.3 125g battery belt plus 25g pads, simplified distribution",
+            "basis": "D6.4 125g battery belt plus 25g pads, simplified distribution",
             "mass_kg": 0.15,
             "com_cad_mm": [
               -146.0,
@@ -16423,7 +16646,7 @@
           },
           {
             "name": "computer_belts_pads",
-            "basis": "D6.3 computer/supervisor retaining allowance",
+            "basis": "D6.4 computer/supervisor retaining allowance",
             "mass_kg": 0.03,
             "com_cad_mm": [
               -5.814180444272246e-16,
@@ -16477,7 +16700,7 @@
           },
           {
             "name": "inherited_strap_allowance",
-            "basis": "Legacy strap allowance retained in D6.3 ledger; no new additional mass",
+            "basis": "Legacy strap allowance retained in D6.4 ledger; no new additional mass",
             "mass_kg": 0.04,
             "com_cad_mm": [
               -136.5,
@@ -16504,7 +16727,7 @@
           },
           {
             "name": "cargo_belts_pads",
-            "basis": "D6.3 loaded restraint allowance at CAD z310mm",
+            "basis": "D6.4 loaded restraint allowance at CAD z310mm",
             "mass_kg": 0.28,
             "com_cad_mm": [
               -8.52763232193744e-16,
@@ -16764,6 +16987,6 @@
   ],
   "source_cad_modified": false,
   "isaac_sim_runtime_tested": false,
-  "mass_note": "Totals reconcile exactly with D6.3 ledger. Component densities, rotor/stator split, caster distribution, unselected electronics and allowances are estimates. CAD-derived tensor is not a measured tensor.",
+  "mass_note": "Totals reconcile exactly with D6.4 ledger. Component densities, rotor/stator split, caster distribution, unselected electronics and allowances are estimates. CAD-derived tensor is not a measured tensor.",
   "collision_note": "Explicit boxes/cylinders for mobility, with deck holes/slots/small hardware omitted. No structural deformation, tire compliance, electrical brake, regenerative power or motor thermal model."
 }

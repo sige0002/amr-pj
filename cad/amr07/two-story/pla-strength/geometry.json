@@ -1,11 +1,11 @@
 {
-  "revision": "D6.3",
-  "source_cad_sha256": "04ff9a2cdd8b4236bd79e8970ddd06476e909bdb9ec8a59ff5a76cea9c14a1ab",
+  "revision": "D6.4",
+  "source_cad_sha256": "7f4d639b85c8f04f8b2aeb5f95f8b2777c4544ce5a0cfd27327284fa6b1a92ce",
   "parts": {
     "FloorPLA_0_0": {
       "file": "FloorPLA_0_0.step",
-      "sha256": "a1642675abbce156817c2fff8c5508cf1b03f3fb51cb19c473c8a482ed11c9de",
-      "volume_mm3": 102322.2597912228,
+      "sha256": "97ac6e01c60c646c3fa6942ded7897561fe6e6adb5c75ca1e8a42a5b1cf15b3e",
+      "volume_mm3": 102909.51965247741,
       "bounds_mm": [
         -230.0,
         -150.0,
@@ -14,7 +14,7 @@
         -0.19999999999998863,
         110.0
       ],
-      "solid_mass_kg": 0.12687960214111627,
+      "solid_mass_kg": 0.127607804369072,
       "fixings": [
         {
           "panel": "FloorPLA_0_0",
@@ -54,14 +54,15 @@
             -25
           ],
           "support": "seam beam, four M6 rail anchors",
-          "thread": "M4 countersunk"
+          "thread": "M4 socket cap",
+          "top_washer": "FloorSeamTopWasher_0_0"
         }
       ]
     },
     "FloorPLA_0_1": {
       "file": "FloorPLA_0_1.step",
-      "sha256": "30f25ca42b415ae03d3b8687e20b584032227ea00bc3e4032974c2e195937783",
-      "volume_mm3": 102322.25979122112,
+      "sha256": "6b59c54e3871742165557978a2cfe9bc66e44a79fd9778d926593d58d41fbe2c",
+      "volume_mm3": 102909.51965247568,
       "bounds_mm": [
         -230.0,
         0.1999999999999993,
@@ -70,7 +71,7 @@
         150.0,
         110.0
       ],
-      "solid_mass_kg": 0.12687960214111418,
+      "solid_mass_kg": 0.12760780436906985,
       "fixings": [
         {
           "panel": "FloorPLA_0_1",
@@ -110,14 +111,15 @@
             25
           ],
           "support": "seam beam, four M6 rail anchors",
-          "thread": "M4 countersunk"
+          "thread": "M4 socket cap",
+          "top_washer": "FloorSeamTopWasher_0_1"
         }
       ]
     },
     "FloorPLA_1_0": {
       "file": "FloorPLA_1_0.step",
-      "sha256": "4413547d072af05aaae944f7bd0b4362e42bc911d4a5079ba2e64c8df69fdfd9",
-      "volume_mm3": 99128.01979122178,
+      "sha256": "231ba69dbca6e33a4e51de6745a387ba3794fa3db30ab340d9fae858a6e4cd3f",
+      "volume_mm3": 99715.27965247638,
       "bounds_mm": [
         0.2,
         -150.0,
@@ -126,7 +128,7 @@
         -0.19999999999998863,
         108.0
       ],
-      "solid_mass_kg": 0.12291874454111501,
+      "solid_mass_kg": 0.12364694676907072,
       "fixings": [
         {
           "panel": "FloorPLA_1_0",
@@ -166,14 +168,15 @@
             -25
           ],
           "support": "seam beam, four M6 rail anchors",
-          "thread": "M4 countersunk"
+          "thread": "M4 socket cap",
+          "top_washer": "FloorSeamTopWasher_1_0"
         }
       ]
     },
     "FloorPLA_1_1": {
       "file": "FloorPLA_1_1.step",
-      "sha256": "86479611a6474ff153efd51edec0e7752005744018efee7cb00ed4e306344cfb",
-      "volume_mm3": 98820.81979122186,
+      "sha256": "76f71d74c1821087c0026364ab47a92ad396c54b5e261ae8fe82e813f9f66b5a",
+      "volume_mm3": 99408.0796524764,
       "bounds_mm": [
         0.2,
         0.19999999999999973,
@@ -182,7 +185,7 @@
         150.0,
         108.0
       ],
-      "solid_mass_kg": 0.1225378165411151,
+      "solid_mass_kg": 0.12326601876907074,
       "fixings": [
         {
           "panel": "FloorPLA_1_1",
@@ -222,13 +225,14 @@
             25
           ],
           "support": "seam beam, four M6 rail anchors",
-          "thread": "M4 countersunk"
+          "thread": "M4 socket cap",
+          "top_washer": "FloorSeamTopWasher_1_1"
         }
       ]
     },
     "SeamBeamPLA": {
       "file": "SeamBeamPLA.step",
-      "sha256": "c8ec2b53c5fcca236626cced74c71235b965f07006989a0163f327dce8fbcfc0",
+      "sha256": "d2308bc9649a47b796cea74e836dffe063308411081b1cf5301d434a2dc47c16",
       "volume_mm3": 45701.60086065484,
       "bounds_mm": [
         -32.0,
