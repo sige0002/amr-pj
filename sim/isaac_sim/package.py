@@ -8,7 +8,7 @@ HERE = Path(__file__).resolve().parent
 FILES = ["README.ja.md", "amr_d61.urdf", "amr_d61_payload_10kg.urdf", "simulation_config.json",
          "export_manifest.json", "urdf_validation.json", "mujoco_smoke_validation.json", "urdf_preview_mujoco.png",
          "export_urdf.py", "drive.py", "import_isaac_sim.py", "validate_urdf.py", "smoke_mujoco.py", "package.py",
-         "requirements-validation.txt"]
+         "requirements-validation.txt", "render_motion_gif.py", "amr_d61_motion_mujoco.gif", "motion_gif_manifest.json"]
 
 
 def main():

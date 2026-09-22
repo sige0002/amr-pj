@@ -14,9 +14,13 @@
 
 **URDFと`meshes/`を同じフォルダー構成のまま置いてください。** ROS、xacro、ROSパッケージの設定は不要です。元の製造用CADは変更していません。
 
-下の画像は、このURDFをMuJoCoへ読み込んだ描画です。Isaac Simの画面ではありません。
+下のGIFは、このURDFをMuJoCoで物理演算して描画した走行です。空車9.895kgで、**直進→停止→左旋回→直進→停止**を16秒・等速で再生します。格子は10cm間隔。車輪の金色の線は回転を見やすくする表示上のマークで、形状・質量・接触判定は変更していません。
 
-![URDFをMuJoCoへ読み込んだ表示](urdf_preview_mujoco.png)
+![AMR D6.1の走行シミュレーション（MuJoCo）](amr_d61_motion_mujoco.gif)
+
+[GIF単体（約3.6MB）](amr_d61_motion_mujoco.gif) ／ [描画条件・時系列・停止確認](motion_gif_manifest.json) ／ [静止画](urdf_preview_mujoco.png)
+
+映像の生成元はMuJoCoです。Isaac Simでの実行映像や実機映像ではありません。
 
 **Isaac Sim 5の画面から取り込む場合**
 
@@ -110,3 +114,10 @@ python3 sim/isaac_sim/package.py
 ```
 
 描画環境がない場合は`--render`を省略できます。検証用の浮遊ベース・床・制御器はMuJoCo実行時にだけ追加し、配布URDFは変更しません。[MuJoCo公式のURDF対応](https://mujoco.readthedocs.io/en/stable/modeling.html)
+
+GIFは同じ検査用Python環境に加え、`ffmpeg`と日本語フォントを使います。下のコマンドで走行・描画・GIF変換を再実行し、240フレームのデコード、16秒の再生時間、転倒・タイヤ以外の床接触がないこと、最後の停止も検査します。フォントの場所が異なる場合は`--font /path/to/font.ttc`を指定します。
+
+```bash
+MUJOCO_GL=egl /tmp/amr-urdf-check/bin/python sim/isaac_sim/render_motion_gif.py
+python3 sim/isaac_sim/package.py
+```
