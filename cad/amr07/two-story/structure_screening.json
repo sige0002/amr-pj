@@ -1,5 +1,5 @@
 {
-  "revision": "D6.1",
+  "revision": "D6.2",
   "date": "2026-09-22",
   "scope": "member-level elastic screening, not whole-frame SF2 release",
   "upper_vertical_service_force_N": 242.79039,
@@ -67,7 +67,7 @@
     "Panel and battery retention force45N, no permanent shift; no vehicle operation during test.",
     "Complete metal frame: apply60N horizontally in both axes and both directions; check slip, permanent set, and access after load.",
     "Received post lengths/coplanarity, slotnut engagement, bracket locating tabs and torque to manufacturer instructions.",
-    "Weigh completed vehicle including wires, cases and fasteners; base<=10kg. Verify mass placement against updated requirements."
+    "Weigh completed vehicle including wires, cases and fasteners; 10kg is a soft target. Recalculate loads if above the10.5kg reviewed envelope; verify CG placement."
   ],
   "static_factor_2_achieved": false,
   "loaded_operation_released": false

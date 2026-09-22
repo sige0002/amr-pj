@@ -1,5 +1,5 @@
 {
-  "requirements_sha256": "537bd536cb57d89b42f0a01bbf476949f5791b9209bed1133e7bde265af93a14",
+  "requirements_sha256": "87c544d37b8940e267a35bfd8a9d8e3c66807c5509451e89d1badf8cb798217a",
   "load_cases": [
     {
       "id": "normal",
@@ -12,7 +12,7 @@
       "normal_reaction_extrema": {
         "left": {
           "min_N": 20.135954150606732,
-          "max_N": 92.30869265489505,
+          "max_N": 94.45059569027548,
           "min_case": {
             "base_mass_kg": 6,
             "gross_mass_kg": 16,
@@ -34,29 +34,29 @@
             ]
           },
           "max_case": {
-            "base_mass_kg": 10,
-            "gross_mass_kg": 20,
+            "base_mass_kg": 10.5,
+            "gross_mass_kg": 20.5,
             "cg_xyz_mm": [
-              27.5,
-              22.5,
-              245.0
+              27.4390243902439,
+              22.317073170731707,
+              242.9268292682927
             ],
             "acceleration_xy_m_s2": [
               -0.2,
               -0.18
             ],
-            "slope_azimuth_deg": 57.07064395586597,
+            "slope_azimuth_deg": 57.070643955866,
             "caster_angle_deg": 57.0,
             "all_reactions_N": [
-              92.30869265489505,
-              58.47783582767747,
-              45.34647151742745
+              94.45059569027548,
+              60.022133498199096,
+              46.563595811525396
             ]
           }
         },
         "right": {
           "min_N": 20.135954150606736,
-          "max_N": 92.30869265489505,
+          "max_N": 94.45059569027548,
           "min_case": {
             "base_mass_kg": 6,
             "gross_mass_kg": 16,
@@ -78,12 +78,12 @@
             ]
           },
           "max_case": {
-            "base_mass_kg": 10,
-            "gross_mass_kg": 20,
+            "base_mass_kg": 10.5,
+            "gross_mass_kg": 20.5,
             "cg_xyz_mm": [
-              27.5,
-              -22.5,
-              245.0
+              27.4390243902439,
+              -22.317073170731707,
+              242.9268292682927
             ],
             "acceleration_xy_m_s2": [
               -0.2,
@@ -92,15 +92,15 @@
             "slope_azimuth_deg": 302.929356044134,
             "caster_angle_deg": 303.0,
             "all_reactions_N": [
-              58.47783582767747,
-              92.30869265489505,
-              45.34647151742745
+              60.022133498199096,
+              94.45059569027548,
+              46.563595811525396
             ]
           }
         },
         "caster": {
           "min_N": 34.596029296875,
-          "max_N": 107.25726562499997,
+          "max_N": 109.84602622767855,
           "min_case": {
             "base_mass_kg": 6,
             "gross_mass_kg": 16,
@@ -122,12 +122,12 @@
             ]
           },
           "max_case": {
-            "base_mass_kg": 10,
-            "gross_mass_kg": 20,
+            "base_mass_kg": 10.5,
+            "gross_mass_kg": 20.5,
             "cg_xyz_mm": [
-              -27.5,
-              -22.5,
-              245.0
+              -27.4390243902439,
+              -22.317073170731707,
+              242.9268292682927
             ],
             "acceleration_xy_m_s2": [
               0.2,
@@ -136,20 +136,20 @@
             "slope_azimuth_deg": 180.0,
             "caster_angle_deg": 180.0,
             "all_reactions_N": [
-              34.3204101674427,
-              54.555324207557305,
-              107.25726562499997
+              35.30820848358192,
+              55.882090288739505,
+              109.84602622767855
             ]
           }
         }
       },
       "minimum_reaction_N": 20.135954150606732,
-      "maximum_drive_normal_N": 92.30869265489505,
-      "conservative_radial_comparison_N": 92.83635062827479,
-      "conservative_axial_comparison_N": 3.5999999999999996,
+      "maximum_drive_normal_N": 94.45059569027548,
+      "conservative_radial_comparison_N": 94.99238919919027,
+      "conservative_axial_comparison_N": 3.69,
       "equilibrium_max_abs_residual": {
         "force_N": 2.842170943040401e-14,
-        "first_moment_Nmm": 5.4569682106375694e-12
+        "first_moment_Nmm": 4.547473508864641e-12
       },
       "caster_sampling_note": "0.5 degree samples; slope azimuth extrema exact for this rigid-body model",
       "radial_note": "Independent worst normal and total longitudinal load placed on one drive wheel; not a combined-load qualification",
@@ -167,7 +167,7 @@
       "normal_reaction_extrema": {
         "left": {
           "min_N": 30.912702133346816,
-          "max_N": 111.23475528063648,
+          "max_N": 113.30570560337077,
           "min_case": {
             "base_mass_kg": 6,
             "gross_mass_kg": 21,
@@ -189,11 +189,11 @@
             ]
           },
           "max_case": {
-            "base_mass_kg": 10,
-            "gross_mass_kg": 25,
+            "base_mass_kg": 10.5,
+            "gross_mass_kg": 25.5,
             "cg_xyz_mm": [
-              28.0,
-              24.0,
+              27.941176470588236,
+              23.823529411764707,
               0.0
             ],
             "acceleration_xy_m_s2": [
@@ -203,15 +203,15 @@
             "slope_azimuth_deg": 0.0,
             "caster_angle_deg": 57.0,
             "all_reactions_N": [
-              111.23475528063648,
-              72.8159412085977,
-              61.115553510765814
+              113.30570560337077,
+              74.36686073160541,
+              62.3970086650238
             ]
           }
         },
         "right": {
           "min_N": 30.912702133346826,
-          "max_N": 111.23475528063648,
+          "max_N": 113.30570560337077,
           "min_case": {
             "base_mass_kg": 6,
             "gross_mass_kg": 21,
@@ -233,11 +233,11 @@
             ]
           },
           "max_case": {
-            "base_mass_kg": 10,
-            "gross_mass_kg": 25,
+            "base_mass_kg": 10.5,
+            "gross_mass_kg": 25.5,
             "cg_xyz_mm": [
-              28.0,
-              -24.0,
+              27.941176470588236,
+              -23.823529411764707,
               0.0
             ],
             "acceleration_xy_m_s2": [
@@ -247,15 +247,15 @@
             "slope_azimuth_deg": 0.0,
             "caster_angle_deg": 303.0,
             "all_reactions_N": [
-              72.8159412085977,
-              111.23475528063648,
-              61.115553510765814
+              74.36686073160541,
+              113.30570560337077,
+              62.3970086650238
             ]
           }
         },
         "caster": {
           "min_N": 49.416322265625,
-          "max_N": 129.150078125,
+          "max_N": 131.66741015624999,
           "min_case": {
             "base_mass_kg": 6,
             "gross_mass_kg": 21,
@@ -277,11 +277,11 @@
             ]
           },
           "max_case": {
-            "base_mass_kg": 10,
-            "gross_mass_kg": 25,
+            "base_mass_kg": 10.5,
+            "gross_mass_kg": 25.5,
             "cg_xyz_mm": [
-              -28.0,
-              -24.0,
+              -27.941176470588236,
+              -23.823529411764707,
               0.0
             ],
             "acceleration_xy_m_s2": [
@@ -291,20 +291,20 @@
             "slope_azimuth_deg": 0.0,
             "caster_angle_deg": 180.0,
             "all_reactions_N": [
-              41.14851573692694,
-              74.86765613807306,
-              129.150078125
+              42.13076759379477,
+              76.27139724995523,
+              131.66741015624999
             ]
           }
         }
       },
       "minimum_reaction_N": 30.912702133346816,
-      "maximum_drive_normal_N": 111.23475528063648,
-      "conservative_radial_comparison_N": 111.47765078018213,
+      "maximum_drive_normal_N": 113.30570560337077,
+      "conservative_radial_comparison_N": 113.553794456127,
       "conservative_axial_comparison_N": 0.0,
       "equilibrium_max_abs_residual": {
         "force_N": 2.842170943040401e-14,
-        "first_moment_Nmm": 7.275957614183426e-12
+        "first_moment_Nmm": 6.366462912410498e-12
       },
       "caster_sampling_note": "0.5 degree samples; slope azimuth extrema exact for this rigid-body model",
       "radial_note": "Independent worst normal and total longitudinal load placed on one drive wheel; not a combined-load qualification",
@@ -315,10 +315,10 @@
   "torque_cases": [
     {
       "payload_kg": 10,
-      "gross_mass_kg": 20,
+      "gross_mass_kg": 20.5,
       "slope_deg": 0,
-      "service_torque_Nm_each": 0.24882944824999997,
-      "with_margin_Nm_each": 0.37324417237499996,
+      "service_torque_Nm_each": 0.25505018445625,
+      "with_margin_Nm_each": 0.38257527668437497,
       "catalog_rated_torque_Nm_each": 0.96,
       "numeric_margin_check": true,
       "operation_approved": false
@@ -337,7 +337,7 @@
       "normal_reaction_extrema": {
         "left": {
           "min_N": 6.700878984506403,
-          "max_N": 94.48665214524623,
+          "max_N": 96.85409701152422,
           "min_case": {
             "base_mass_kg": 6,
             "gross_mass_kg": 14,
@@ -359,12 +359,12 @@
             ]
           },
           "max_case": {
-            "base_mass_kg": 10,
-            "gross_mass_kg": 18,
+            "base_mass_kg": 10.5,
+            "gross_mass_kg": 18.5,
             "cg_xyz_mm": [
-              27.22222222222222,
-              21.666666666666668,
-              235.55555555555554
+              27.16216216216216,
+              21.486486486486488,
+              233.51351351351352
             ],
             "acceleration_xy_m_s2": [
               -0.2,
@@ -373,15 +373,15 @@
             "slope_azimuth_deg": 57.070643955866004,
             "caster_angle_deg": 57.0,
             "all_reactions_N": [
-              94.48665214524623,
-              48.30593513961823,
-              33.05540196388107
+              96.85409701152422,
+              49.760356338948284,
+              34.11820226629371
             ]
           }
         },
         "right": {
           "min_N": 6.7008789845064065,
-          "max_N": 94.48665214524623,
+          "max_N": 96.85409701152422,
           "min_case": {
             "base_mass_kg": 6,
             "gross_mass_kg": 14,
@@ -403,12 +403,12 @@
             ]
           },
           "max_case": {
-            "base_mass_kg": 10,
-            "gross_mass_kg": 18,
+            "base_mass_kg": 10.5,
+            "gross_mass_kg": 18.5,
             "cg_xyz_mm": [
-              27.22222222222222,
-              -21.666666666666668,
-              235.55555555555554
+              27.16216216216216,
+              -21.486486486486488,
+              233.51351351351352
             ],
             "acceleration_xy_m_s2": [
               -0.2,
@@ -417,15 +417,15 @@
             "slope_azimuth_deg": 302.929356044134,
             "caster_angle_deg": 303.0,
             "all_reactions_N": [
-              48.30593513961823,
-              94.48665214524623,
-              33.05540196388107
+              49.760356338948284,
+              96.85409701152422,
+              34.11820226629371
             ]
           }
         },
         "caster": {
           "min_N": 18.368665498973726,
-          "max_N": 111.98770062062765,
+          "max_N": 114.87213410942982,
           "min_case": {
             "base_mass_kg": 6,
             "gross_mass_kg": 14,
@@ -447,12 +447,12 @@
             ]
           },
           "max_case": {
-            "base_mass_kg": 10,
-            "gross_mass_kg": 18,
+            "base_mass_kg": 10.5,
+            "gross_mass_kg": 18.5,
             "cg_xyz_mm": [
-              -27.22222222222222,
-              -21.666666666666668,
-              235.55555555555554
+              -27.16216216216216,
+              -21.486486486486488,
+              233.51351351351352
             ],
             "acceleration_xy_m_s2": [
               0.2,
@@ -461,20 +461,20 @@
             "slope_azimuth_deg": 180.0,
             "caster_angle_deg": 180.0,
             "all_reactions_N": [
-              23.19994440845391,
-              40.66034421966395,
-              111.98770062062765
+              24.03137891247489,
+              41.829142594861494,
+              114.87213410942982
             ]
           }
         }
       },
       "minimum_reaction_N": 6.700878984506403,
-      "maximum_drive_normal_N": 94.48665214524623,
-      "conservative_radial_comparison_N": 97.55143300182547,
-      "conservative_axial_comparison_N": 18.624705563093794,
+      "maximum_drive_normal_N": 96.85409701152422,
+      "conservative_radial_comparison_N": 100.0121111019901,
+      "conservative_axial_comparison_N": 19.142058495401955,
       "equilibrium_max_abs_residual": {
         "force_N": 2.842170943040401e-14,
-        "first_moment_Nmm": 5.4569682106375694e-12
+        "first_moment_Nmm": 6.366462912410498e-12
       },
       "caster_sampling_note": "0.5 degree samples; slope azimuth extrema exact for this rigid-body model",
       "radial_note": "Independent worst normal and total longitudinal load placed on one drive wheel; not a combined-load qualification",
@@ -485,30 +485,30 @@
   "reference_torque_cases": [
     {
       "payload_kg": 8,
-      "gross_mass_kg": 18,
+      "gross_mass_kg": 18.5,
       "slope_deg": 5,
-      "service_torque_Nm_each": 0.6107491564310012,
-      "with_margin_Nm_each": 0.9161237346465019,
+      "service_torque_Nm_each": 0.6277144107763069,
+      "with_margin_Nm_each": 0.9415716161644603,
       "catalog_rated_torque_Nm_each": 0.96,
       "numeric_margin_check": true,
       "operation_approved": false
     },
     {
       "payload_kg": 10,
-      "gross_mass_kg": 20,
+      "gross_mass_kg": 20.5,
       "slope_deg": 5,
-      "service_torque_Nm_each": 0.6786101738122237,
-      "with_margin_Nm_each": 1.0179152607183355,
+      "service_torque_Nm_each": 0.6955754281575293,
+      "with_margin_Nm_each": 1.043363142236294,
       "catalog_rated_torque_Nm_each": 0.96,
       "numeric_margin_check": false,
       "operation_approved": false
     },
     {
       "payload_kg": 15,
-      "gross_mass_kg": 25,
+      "gross_mass_kg": 25.5,
       "slope_deg": 5,
-      "service_torque_Nm_each": 0.8482627172652797,
-      "with_margin_Nm_each": 1.2723940758979195,
+      "service_torque_Nm_each": 0.8652279716105852,
+      "with_margin_Nm_each": 1.2978419574158777,
       "catalog_rated_torque_Nm_each": 0.96,
       "numeric_margin_check": false,
       "operation_approved": false
@@ -520,25 +520,25 @@
     "cases": [
       {
         "service_torque_comparison_Nm": 0.96,
-        "lateral_ratio_sensitivity_NOT_LIMIT": 0.12236594555735139,
+        "lateral_ratio_sensitivity_NOT_LIMIT": 0.11996661329152097,
         "linear_load_multiplier": 1,
         "service_force_xyz_N": [
           19.06653426017875,
           30.0,
-          245.16625
+          250.069575
         ],
         "applied_force_xyz_N": [
           19.06653426017875,
           30.0,
-          245.16625
+          250.069575
         ],
         "frame_joint_moment_xyz_Nmm": [
-          11754.066875,
+          11947.748212499999,
           -1315.5908639523336,
           -753.1281032770605
         ],
         "motor_face_moment_xyz_Nmm": [
-          10459.068125,
+          10638.0394875,
           -960.0,
           -695.9285004965243
         ],
@@ -546,15 +546,15 @@
           {
             "assumed_width_mm": 90,
             "thickness_mm": 5,
-            "sigma_from_Mx_only_MPa": 31.344178333333332,
-            "service_Mx_only_stress_over_assumed_allowable": 0.2612014861111111,
+            "sigma_from_Mx_only_MPa": 31.8606619,
+            "service_Mx_only_stress_over_assumed_allowable": 0.2655055158333333,
             "scope": "gross_Mx_only_not_full_von_Mises_or_local_joint_qualification"
           },
           {
             "assumed_width_mm": 60,
             "thickness_mm": 5,
-            "sigma_from_Mx_only_MPa": 47.0162675,
-            "service_Mx_only_stress_over_assumed_allowable": 0.3918022291666666,
+            "sigma_from_Mx_only_MPa": 47.79099285,
+            "service_Mx_only_stress_over_assumed_allowable": 0.39825827375,
             "scope": "gross_Mx_only_not_full_von_Mises_or_local_joint_qualification"
           }
         ],
@@ -562,7 +562,7 @@
           {
             "contact_arm_mm_assumed": 9.5,
             "model": "assumed_contact_resultant_and_rigid_joint; preload_prying_local_contact_unknown",
-            "contact_compression_N": 1237.2701973684211,
+            "contact_compression_N": 1257.6577065789472,
             "bolts": [
               {
                 "position_relative_mm": [
@@ -573,7 +573,7 @@
                 "reaction_on_mount_N": [
                   -9.533267130089374,
                   -25.04170804369414,
-                  513.593185203575
+                  521.335277308838
                 ],
                 "in_plane_shear_N": 26.794968257478086
               },
@@ -586,12 +586,12 @@
                 "reaction_on_mount_N": [
                   -9.533267130089374,
                   -4.95829195630586,
-                  478.51076216484614
+                  486.2528542701092
                 ],
                 "in_plane_shear_N": 10.745596367703836
               }
             ],
-            "maximum_additional_tension_component_N": 513.593185203575,
+            "maximum_additional_tension_component_N": 521.335277308838,
             "maximum_in_plane_shear_N": 26.794968257478086,
             "contact_and_tension_signs_compatible_with_assumption": true,
             "equilibrium_max_abs_residual": {
@@ -602,7 +602,7 @@
           {
             "contact_arm_mm_assumed": 15,
             "model": "assumed_contact_resultant_and_rigid_joint; preload_prying_local_contact_unknown",
-            "contact_compression_N": 783.6044583333334,
+            "contact_compression_N": 796.5165474999999,
             "bolts": [
               {
                 "position_relative_mm": [
@@ -613,7 +613,7 @@
                 "reaction_on_mount_N": [
                   -9.533267130089374,
                   -25.04170804369414,
-                  286.7603156860311
+                  290.7646977693644
                 ],
                 "in_plane_shear_N": 26.794968257478086
               },
@@ -626,12 +626,12 @@
                 "reaction_on_mount_N": [
                   -9.533267130089374,
                   -4.95829195630586,
-                  251.67789264730223
+                  255.6822747306355
                 ],
                 "in_plane_shear_N": 10.745596367703836
               }
             ],
-            "maximum_additional_tension_component_N": 286.7603156860311,
+            "maximum_additional_tension_component_N": 290.7646977693644,
             "maximum_in_plane_shear_N": 26.794968257478086,
             "contact_and_tension_signs_compatible_with_assumption": true,
             "equilibrium_max_abs_residual": {
@@ -651,10 +651,10 @@
               ],
               "force_on_mount_N": [
                 -35.74975173783516,
-                -907.4621162280698,
-                81.72208333333333
+                -923.1613585526311,
+                83.35652499999999
               ],
-              "in_plane_shear_N": 89.19945994038936
+              "in_plane_shear_N": 90.699255837038
             },
             {
               "position_relative_mm": [
@@ -664,10 +664,10 @@
               ],
               "force_on_mount_N": [
                 27.40814299900696,
-                521.5987564164561,
-                45.25785580556749
+                529.4483775787369,
+                46.89229747223415
               ],
-              "in_plane_shear_N": 52.91011070458607
+              "in_plane_shear_N": 54.3147665453743
             },
             {
               "position_relative_mm": [
@@ -677,23 +677,23 @@
               ],
               "force_on_mount_N": [
                 27.408142999006973,
-                415.86335981161415,
-                118.18631086109917
+                423.7129809738949,
+                119.82075252776582
               ],
-              "in_plane_shear_N": 121.3227529262767
+              "in_plane_shear_N": 122.91549552019109
             }
           ],
-          "maximum_in_plane_shear_N": 121.3227529262767,
-          "maximum_tensile_direction_spring_force_N": 521.5987564164561,
-          "maximum_absolute_normal_spring_force_N": 907.4621162280698,
+          "maximum_in_plane_shear_N": 122.91549552019109,
+          "maximum_tensile_direction_spring_force_N": 529.4483775787369,
+          "maximum_absolute_normal_spring_force_N": 923.1613585526311,
           "equilibrium_max_abs_residual": {
-            "force_N": 4.547473508864641e-13,
-            "moment_Nmm": 1.1368683772161603e-12
+            "force_N": 6.821210263296962e-13,
+            "moment_Nmm": 1.8189894035458565e-12
           }
         },
         "service_catalog_force_comparison": {
           "uses_unfactored_service_vector_only": true,
-          "radial_force_proxy_sqrt_Fx2_Fz2_N": 245.90653278788074,
+          "radial_force_proxy_sqrt_Fx2_Fz2_N": 250.79538486458475,
           "axial_force_proxy_abs_Fy_N": 30.0,
           "radial_proxy_exceeds_published_value": true,
           "axial_proxy_exceeds_published_value": false,
@@ -702,25 +702,25 @@
       },
       {
         "service_torque_comparison_Nm": 0.96,
-        "lateral_ratio_sensitivity_NOT_LIMIT": 0.12236594555735139,
+        "lateral_ratio_sensitivity_NOT_LIMIT": 0.11996661329152097,
         "linear_load_multiplier": 2,
         "service_force_xyz_N": [
           19.06653426017875,
           30.0,
-          245.16625
+          250.069575
         ],
         "applied_force_xyz_N": [
           38.1330685203575,
           60.0,
-          490.3325
+          500.13915
         ],
         "frame_joint_moment_xyz_Nmm": [
-          23508.13375,
+          23895.496424999998,
           -2631.1817279046672,
           -1506.256206554121
         ],
         "motor_face_moment_xyz_Nmm": [
-          20918.13625,
+          21276.078975,
           -1920.0,
           -1391.8570009930486
         ],
@@ -728,15 +728,15 @@
           {
             "assumed_width_mm": 90,
             "thickness_mm": 5,
-            "sigma_from_Mx_only_MPa": 62.688356666666664,
-            "service_Mx_only_stress_over_assumed_allowable": 0.2612014861111111,
+            "sigma_from_Mx_only_MPa": 63.7213238,
+            "service_Mx_only_stress_over_assumed_allowable": 0.2655055158333333,
             "scope": "gross_Mx_only_not_full_von_Mises_or_local_joint_qualification"
           },
           {
             "assumed_width_mm": 60,
             "thickness_mm": 5,
-            "sigma_from_Mx_only_MPa": 94.032535,
-            "service_Mx_only_stress_over_assumed_allowable": 0.3918022291666666,
+            "sigma_from_Mx_only_MPa": 95.5819857,
+            "service_Mx_only_stress_over_assumed_allowable": 0.39825827375,
             "scope": "gross_Mx_only_not_full_von_Mises_or_local_joint_qualification"
           }
         ],
@@ -744,7 +744,7 @@
           {
             "contact_arm_mm_assumed": 9.5,
             "model": "assumed_contact_resultant_and_rigid_joint; preload_prying_local_contact_unknown",
-            "contact_compression_N": 2474.5403947368422,
+            "contact_compression_N": 2515.3154131578945,
             "bolts": [
               {
                 "position_relative_mm": [
@@ -755,7 +755,7 @@
                 "reaction_on_mount_N": [
                   -19.06653426017875,
                   -50.08341608738828,
-                  1027.18637040715
+                  1042.670554617676
                 ],
                 "in_plane_shear_N": 53.58993651495617
               },
@@ -768,12 +768,12 @@
                 "reaction_on_mount_N": [
                   -19.06653426017875,
                   -9.91658391261172,
-                  957.0215243296923
+                  972.5057085402184
                 ],
                 "in_plane_shear_N": 21.491192735407672
               }
             ],
-            "maximum_additional_tension_component_N": 1027.18637040715,
+            "maximum_additional_tension_component_N": 1042.670554617676,
             "maximum_in_plane_shear_N": 53.58993651495617,
             "contact_and_tension_signs_compatible_with_assumption": true,
             "equilibrium_max_abs_residual": {
@@ -784,7 +784,7 @@
           {
             "contact_arm_mm_assumed": 15,
             "model": "assumed_contact_resultant_and_rigid_joint; preload_prying_local_contact_unknown",
-            "contact_compression_N": 1567.2089166666667,
+            "contact_compression_N": 1593.0330949999998,
             "bolts": [
               {
                 "position_relative_mm": [
@@ -795,7 +795,7 @@
                 "reaction_on_mount_N": [
                   -19.06653426017875,
                   -50.08341608738828,
-                  573.5206313720622
+                  581.5293955387287
                 ],
                 "in_plane_shear_N": 53.58993651495617
               },
@@ -808,12 +808,12 @@
                 "reaction_on_mount_N": [
                   -19.06653426017875,
                   -9.91658391261172,
-                  503.35578529460446
+                  511.364549461271
                 ],
                 "in_plane_shear_N": 21.491192735407672
               }
             ],
-            "maximum_additional_tension_component_N": 573.5206313720622,
+            "maximum_additional_tension_component_N": 581.5293955387287,
             "maximum_in_plane_shear_N": 53.58993651495617,
             "contact_and_tension_signs_compatible_with_assumption": true,
             "equilibrium_max_abs_residual": {
@@ -833,10 +833,10 @@
               ],
               "force_on_mount_N": [
                 -71.49950347567032,
-                -1814.9242324561396,
-                163.44416666666666
+                -1846.3227171052622,
+                166.71304999999998
               ],
-              "in_plane_shear_N": 178.39891988077872
+              "in_plane_shear_N": 181.398511674076
             },
             {
               "position_relative_mm": [
@@ -846,10 +846,10 @@
               ],
               "force_on_mount_N": [
                 54.81628599801392,
-                1043.1975128329123,
-                90.51571161113498
+                1058.8967551574738,
+                93.7845949444683
               ],
-              "in_plane_shear_N": 105.82022140917213
+              "in_plane_shear_N": 108.6295330907486
             },
             {
               "position_relative_mm": [
@@ -859,23 +859,23 @@
               ],
               "force_on_mount_N": [
                 54.816285998013946,
-                831.7267196232283,
-                236.37262172219835
+                847.4259619477898,
+                239.64150505553164
               ],
-              "in_plane_shear_N": 242.6455058525534
+              "in_plane_shear_N": 245.83099104038217
             }
           ],
-          "maximum_in_plane_shear_N": 242.6455058525534,
-          "maximum_tensile_direction_spring_force_N": 1043.1975128329123,
-          "maximum_absolute_normal_spring_force_N": 1814.9242324561396,
+          "maximum_in_plane_shear_N": 245.83099104038217,
+          "maximum_tensile_direction_spring_force_N": 1058.8967551574738,
+          "maximum_absolute_normal_spring_force_N": 1846.3227171052622,
           "equilibrium_max_abs_residual": {
-            "force_N": 9.094947017729282e-13,
-            "moment_Nmm": 2.2737367544323206e-12
+            "force_N": 1.3642420526593924e-12,
+            "moment_Nmm": 3.637978807091713e-12
           }
         },
         "service_catalog_force_comparison": {
           "uses_unfactored_service_vector_only": true,
-          "radial_force_proxy_sqrt_Fx2_Fz2_N": 245.90653278788074,
+          "radial_force_proxy_sqrt_Fx2_Fz2_N": 250.79538486458475,
           "axial_force_proxy_abs_Fy_N": 30.0,
           "radial_proxy_exceeds_published_value": true,
           "axial_proxy_exceeds_published_value": false,

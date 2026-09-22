@@ -1,67 +1,71 @@
 {
-  "revision": "D6.1",
+  "revision": "D6.2",
   "date": "2026-09-22",
   "source_D3_revision": "099686bacaad0f72e8bc4ce15005cd708a5b2f83",
   "files": {
     "AMR01_TwoStorey_D6-with-equipment-envelopes.step": {
-      "bytes": 8639562,
-      "sha256": "21f98b6c867ce96c11f7037a569611cf2e587de670a4d4ca1ab1ad0277d1cde6"
+      "bytes": 8891609,
+      "sha256": "74b0e3c6ab3a704d8854e0b91f7dc6da7e29faf399d8161df5c5cf3fe72e0514"
     },
     "AMR01_TwoStorey_D6.FCStd": {
-      "bytes": 1727945,
-      "sha256": "5473c203a8f30b6db7392e81a9c2ddd1a3332164f767a96627d5e8e7149027f7"
+      "bytes": 1775548,
+      "sha256": "84218f66a76dea4cd72f0051ab48b5192f7502a080d01252a60ac1c85c7e83bb"
     },
     "AMR01_TwoStorey_D6.step": {
-      "bytes": 8620033,
-      "sha256": "68290252c622790c3850e4fc0d96a4975b781fb8c1b8b8434760154303e7ad0f"
+      "bytes": 8872080,
+      "sha256": "4ce019d3c0ab9c5e9aca94ea4887f81d40f45ecb1422cb933abe2437eb519623"
     },
     "BOM-costs.json": {
-      "bytes": 7794,
-      "sha256": "6afecf4b3c1320c2be370258bccd61f8155cfe1a245ccf5912b8246ff13a2bdf"
+      "bytes": 8290,
+      "sha256": "ba5cc6e3978a45fa31318ccf68041369bcb2b6cc29021c81ec1c268dfc39a0ba"
     },
     "BOM-summary.csv": {
-      "bytes": 405,
-      "sha256": "d3319356a391ccd684b1011bc082a77192e1e9785e20976b55fe37262eab79da"
+      "bytes": 395,
+      "sha256": "9ec7066139d056ba20037e09f18aca55bee0674ab3fd60186f2dc4f857680905"
     },
     "BOM.csv": {
-      "bytes": 22001,
-      "sha256": "12979a3534985a36cc040e4722f0d4c700f3419e73e3c4250d8b2598de4b305e"
+      "bytes": 23017,
+      "sha256": "bf30c50b95959f6448c40840eff04e6851d340f1a59ab1ec1e62950fab8f9454"
     },
     "BOM.ja.md": {
-      "bytes": 11977,
-      "sha256": "3a98df233d324e15206ef42466a9cbf4d02ba9dfe7af4cf3e3b5050ea8a47134"
+      "bytes": 12518,
+      "sha256": "74d0e6cba49344a8162b4b572053072b4897e7c48f5dbf463e035b40b40ab4ba"
     },
     "D6-first-floor-print-files.zip": {
-      "bytes": 35783,
-      "sha256": "7c17838be3f7e5c5b707ddaf36cd4e1246f8ffd4ab3dca3afad290de2cb40772"
+      "bytes": 579222,
+      "sha256": "4f885f65882208c8253da302458b19067d875dd34819ed10c7a4ba5011336546"
+    },
+    "FLOOR_REVIEW.ja.md": {
+      "bytes": 4660,
+      "sha256": "029d0e3428735ea731b4fab13e41564fac2adebe7f506a1e58761f8e8bb226b4"
     },
     "FloorPLA_0_0.stl": {
-      "bytes": 38684,
-      "sha256": "9afbed4f04df5db688fa6f0b21082a2830ae33a6388165d37daa0e90342d81b3"
+      "bytes": 60584,
+      "sha256": "462439f9ee9dd886e5ca4103872ec0723b8fe1048fbd62c20c882a8d3d8031bc"
     },
     "FloorPLA_0_1.stl": {
-      "bytes": 38684,
-      "sha256": "f5a6d0d3cb5d62588a4f1216fe6a238accb6043d0b97c3c6cd19f337a34463d6"
+      "bytes": 60584,
+      "sha256": "aae4b57a367e2ead20dd0c3afdd1569659db7ebd188c6bc74eeb25e0197a9aa3"
     },
     "FloorPLA_1_0.stl": {
-      "bytes": 35484,
-      "sha256": "18140306247869a57c737a6ef42955e3b7485a346bfb717bb3ecb55870dc4935"
+      "bytes": 57384,
+      "sha256": "1d447624e4eff7402894d2825218d067ca7f9e51af6add83ed5b429188c639bc"
     },
     "FloorPLA_1_1.stl": {
-      "bytes": 37484,
-      "sha256": "c778a4a5e4648980cd997c4c33a96774aa30e2fa525f89bfe2eaeb6e218dad97"
+      "bytes": 59384,
+      "sha256": "c633ab7eca98435fbb6afe73a2efff8d2ed6ea6d46f6f250d8910570a13434d2"
     },
     "JOINT_REVIEW.ja.md": {
       "bytes": 5856,
       "sha256": "8d7b6827756d6c64830b887eb1a1e7b58b7848c0ef4406cb3ca2af46566bc53b"
     },
     "PAYLOAD_REVIEW.ja.md": {
-      "bytes": 4324,
-      "sha256": "ac8c0f2115d6e200be65c331396f4298ec97ce732ed57765cf19a2f57c1a3401"
+      "bytes": 2856,
+      "sha256": "7b761463fd3ee67b8fa253186bc5c83900daf5eec20f5eb1a7412cf353ac67ba"
     },
     "README.ja.md": {
-      "bytes": 11686,
-      "sha256": "93db3059ac28ae465ff0ec214c8f94599279f6f4cc7dd7a533b907188b9d79b5"
+      "bytes": 5435,
+      "sha256": "8ff05042a6d27ce90564c1cb2587563dba583a7af8f9aae5d434a5f62523d2f4"
     },
     "REFERENCE_DESIGNS.ja.md": {
       "bytes": 4206,
@@ -71,148 +75,188 @@
       "bytes": 438289,
       "sha256": "525fa7eae28a338abb3c7d804c9d10354aefe3fd6f711b689a532293d94fe2ef"
     },
+    "SeamBeamPLA.stl": {
+      "bytes": 86284,
+      "sha256": "22c911c5e03481453e4d1d892e9b4deadf5ea37b063eaa758556505c8ab0b727"
+    },
     "build_bom.py": {
-      "bytes": 8179,
-      "sha256": "09cc3351defb3653d6688a8c9fedafb9e4c0594bf88b4c097fa4206b2968fc65"
+      "bytes": 9714,
+      "sha256": "f36fea6939ec2d27399b7cab85ca36dc9d3be00b1455e6ad146c83e737e27777"
     },
     "build_bom_view.py": {
-      "bytes": 9219,
-      "sha256": "ad0a71ebc256944579900036a2f9e6d7090dbe721537790b817566331df7b4e4"
+      "bytes": 9660,
+      "sha256": "6ef73cb0f930011dcbd428de48ff1a55ae98acbe43704f8f487e84bf4955f1b6"
     },
     "build_d6.py": {
-      "bytes": 23112,
-      "sha256": "02aeb592d380d47eec8816ba029ea9deac3139c0db21f2be45316a50592849d8"
+      "bytes": 28742,
+      "sha256": "fa2cb78f811052bce2f8c5f78a241d653af80a0ad75a7d38e50f70769c552ab9"
+    },
+    "build_docs.py": {
+      "bytes": 16219,
+      "sha256": "d142124ec571e104a397525a01df59f7cdcc88f95d24b5239c628361dbec78e3"
     },
     "cad-screen-assembled.png": {
-      "bytes": 214551,
-      "sha256": "0675ebeea0b1154a1337afceb72eec1a18adf4c8cb05a42385e7a527c86f7c1c"
+      "bytes": 214143,
+      "sha256": "e94bc69ba222ae18115827da2970f78594f9e97f028aa91dc77a3996bf746c3d"
     },
     "cad-screen-battery-exchange.png": {
-      "bytes": 213259,
-      "sha256": "b44391201df7e60130747c973c0eba0f4272e992fdabbaf6a73ddb499150ddb1"
+      "bytes": 212468,
+      "sha256": "681e965083bedecf214f0ca065c6cb6ef089d1e796f1d75748bd45224e953181"
     },
     "cad-screen-computer-exchange.png": {
-      "bytes": 217350,
-      "sha256": "8b5c4867b43820f63f46cfaddcf29cd2d57d34a22d1cb968366104f9eaf3c430"
+      "bytes": 211401,
+      "sha256": "0982a18e2dc00213a61774ae20dee5b46d3cd589103b24409c78be1d84e298c1"
     },
     "cad-screen-first-floor-top.png": {
-      "bytes": 172738,
-      "sha256": "5fcbb48df2daa2527f5e28c6b7ba9795f8f619305ef791e5f1e03d1590bd37e8"
+      "bytes": 172325,
+      "sha256": "87bde46492b6ea8dc12a50862565b63182c94ffccb275864d7b6395f78c7dc09"
     },
     "cad-screen-first-floor.png": {
-      "bytes": 234513,
-      "sha256": "03880c90dc7bd3adcecfada9a24a4c02b59338c0eb325900edbab2fd8e3c6619"
+      "bytes": 234785,
+      "sha256": "e9d7b1a2b1118e445592f60619b86f64bfe4b4f1577abce5effd251d3c91dc56"
+    },
+    "cad-screen-floor-fixings-top.png": {
+      "bytes": 166230,
+      "sha256": "c67424d05b96022c9398faad7a3dce5766bbad41612e528e649c0ad8f83ff18f"
+    },
+    "cad-screen-floor-support-under.png": {
+      "bytes": 197473,
+      "sha256": "c780a91e961e742349e95aa7ea1a6cf0ba03d57ea9464b7b676e807bbb337719"
     },
     "cad-screen-frame-joint-lower.png": {
-      "bytes": 168886,
-      "sha256": "03960c851aa726067e187c84601cd5cabf5b2166175a2f5e2eca20ea42da10bd"
+      "bytes": 169010,
+      "sha256": "19e6e8f7d2544aa020cb0de5e0f2c4fea0da8cff57424aff4e045716927bbc7c"
     },
     "cad-screen-frame-joint-upper.png": {
-      "bytes": 186528,
-      "sha256": "a1d1f473401f8d092f7976c220f220aa77757c263ee98f35ec6965ab1a507688"
+      "bytes": 186519,
+      "sha256": "faf690bdf65ad85aba17c245ca47e9d77997bfca876cbaffe4327e6911e0f674"
     },
     "cad-screen-frame-joint.png": {
-      "bytes": 179074,
-      "sha256": "2b8aa916bf709802c38858d5f5beb3582d8bfed1ff854f7e9f0975f4668e59b3"
+      "bytes": 178469,
+      "sha256": "14d6dd6eb935a8b12351b6b928b8415122c38599046ddbe2276d03ea2cec8842"
+    },
+    "cad-screen-seam-beam-anchors.png": {
+      "bytes": 161322,
+      "sha256": "3f60f51d68cdfaad3a91c855bfd6688ff0c832bfde194409794bf9b15ee3db01"
     },
     "cad-screen-side-layout.png": {
-      "bytes": 171297,
-      "sha256": "7adc120ca95851ab8769d3d45605b8bd95883aed723d80a15b410836ab0108c8"
+      "bytes": 170610,
+      "sha256": "1e8a252945057954c53db40938ab525a4bbedaafe71ad5b690bb9feabbdf1d56"
     },
     "capture_screens.py": {
-      "bytes": 5348,
-      "sha256": "8b396ec43cf64377bb3b0e33471947e5687a043e4f7f9aba2f62ce66ddb34d40"
+      "bytes": 6816,
+      "sha256": "1237fee39374ff17641e077ac54194c11d9f922c73653fc4c2424e94870ddb4f"
     },
     "check_payload_budget.py": {
-      "bytes": 6926,
-      "sha256": "2cb4b736bee7a3c59840bf3775f37e39ff6bfbf4e1aa9291b7900d858d38e1fd"
+      "bytes": 7243,
+      "sha256": "ae175bd909c68d9af39d524089d2b1aed258481fb4492dd5239ab4856dfcec59"
     },
     "check_structure.py": {
-      "bytes": 5027,
-      "sha256": "6535505012066f19553650c3b5b1775cee1894f75ac7ea820a058b71638dcca5"
+      "bytes": 5063,
+      "sha256": "9e6d92bf027590cc7f279a589ff5959a10ad7cfe34c9506bafca03115933e545"
     },
     "cost_summary.json": {
-      "bytes": 1605,
-      "sha256": "e8a52539d4d8c9029d78c24e04bd0aaada56ab0fecd3ec7df8f1627477ef100b"
+      "bytes": 2002,
+      "sha256": "aaaf18fff68b890180acb822c6fd7f2538266b907d729fc77eda2b66a32325ba"
+    },
+    "floor_support_review.json": {
+      "bytes": 11276,
+      "sha256": "4794f530003f1e52b54c9a1270a93feda31cc4d25438550535b8f16cd2ce8296"
     },
     "joint_review.json": {
       "bytes": 2846,
       "sha256": "8f71669ad1d0797934cf1f03908b35d246ef22123a13ecc00a551cc7afbd65c1"
     },
     "parameters.json": {
-      "bytes": 2426,
-      "sha256": "0ceaa099f280da3638cb946d8afe0d51780eb466f297ccb65e2254ef6d4ba74e"
+      "bytes": 2799,
+      "sha256": "bc4cf9b3d15ccdf0b0dae39bc45619ec4be122ad077bb5d80ad28ac1f31b869e"
     },
     "payload_budget.json": {
-      "bytes": 8941,
-      "sha256": "1c45261c1d194d1befef30e633f98917e494f646f557d7f8e8e81b5410dbd028"
+      "bytes": 9140,
+      "sha256": "8bf8feb755e9cfb77a3f5fa3aeb8fb3980ce0f31fcb7b735c8b0c20db2674a1d"
     },
     "print_manifest.json": {
-      "bytes": 561,
-      "sha256": "0196af295d58912fc16e049b6151358f8cfdfbce88d69913f3ae7f04f743fc7a"
+      "bytes": 2623,
+      "sha256": "44aa0a102c28fe1a2e3a3f382e75c29c0bad37668f23a8381b71123c59f741a4"
     },
     "purchase_observations.json": {
       "bytes": 2326,
       "sha256": "10206ef725d1e310fa90259ad735d9ca233501e17fe60fd9961566aa41702a0f"
     },
     "release.py": {
-      "bytes": 3896,
-      "sha256": "b19007576b323e75fae5fa45cb8c2761814662feaa4087e90457c484fbf964ad"
+      "bytes": 4383,
+      "sha256": "7176c367b6cc41b784c8b98867cc91e1841c5d1c71f522a35b451905501e2801"
+    },
+    "review_floor_support.py": {
+      "bytes": 9311,
+      "sha256": "71649cd68685a4a979f0fb7bc495ee084e4e415aa8ba9d0f9a30bc71c4a059c5"
     },
     "review_joints.py": {
       "bytes": 6106,
       "sha256": "b06a34e29a9b2afb32e83ec2fae952128d845a1e066b5ab5d46649dc299563d3"
     },
     "saved_artifact_validation.json": {
-      "bytes": 4441,
-      "sha256": "2cd8620b81707b20fa163fd816435161b9064f22ce95afd0d3885f36bd9a9d34"
+      "bytes": 4714,
+      "sha256": "b95516a491e4f2f2315ab038eabc3e45ba40aa555c515191038d80d00f1e23ba"
     },
     "structure_screening.json": {
-      "bytes": 3750,
-      "sha256": "7143ca4826163f94a5c6a1ff744fd9464cba74135d3b7d80e720f65586ae7b79"
+      "bytes": 3786,
+      "sha256": "a10d045add4ca6990b700c828e1063e72e3ec895cf864bae401f39462139da4d"
     },
     "validate_saved.py": {
-      "bytes": 4778,
-      "sha256": "a17688255d16190bfd233dd1b082f67bf68eb4fa2325db843e7a3a826c45bd49"
+      "bytes": 4981,
+      "sha256": "1951f64d27e67b9a1936f5e46b57dbec27a0aeda946bf381cffeb9d76190dc83"
     },
     "validation.json": {
-      "bytes": 58082,
-      "sha256": "16335f8499eaf9f50a9260070ee83fe774ff2016bbd2ba22244875cfdf5a0c1a"
+      "bytes": 78950,
+      "sha256": "3b4d091aa78e4054ffa01f836ac1a6464cb8579ae30ac32c33ca9fb2ed7ddf75"
     },
     "viewport-assembled.png": {
-      "bytes": 63835,
-      "sha256": "2ff38669ccc0c774137065dadf6b195eab192462fdaa291d764d1fd959b1bc64"
+      "bytes": 64405,
+      "sha256": "5f850a6cb5b7611eaf858a07011589f3e4e6c253df20801b7d73e6fc423649aa"
     },
     "viewport-battery-exchange.png": {
-      "bytes": 61055,
-      "sha256": "02af24f7c61c68658cb87e97c9deee26b6b5588deebf9cf5e860be8254238c66"
+      "bytes": 61234,
+      "sha256": "b5952b76b760613e74f80312edd9dcf9d2c377b8f9b25984d1d4965243475ad7"
     },
     "viewport-computer-exchange.png": {
-      "bytes": 68781,
-      "sha256": "120cf557cf21f29f5075f600f5df0506d11fefbd78e6df60418811af0f07e17c"
+      "bytes": 69161,
+      "sha256": "d5b45998a43b420f535a18b4c07fd7be66822fc4951a7f54c8d4f6f15f776837"
     },
     "viewport-first-floor-top.png": {
-      "bytes": 19995,
-      "sha256": "f4f6e4dea681c43e10e5cfff6738e41bbfa5e56e62fa2bb3f165be04326e372e"
+      "bytes": 20150,
+      "sha256": "732d795c9659ba4b0748cc155a206107a095f859aa026d23d0cde097c7f7c753"
     },
     "viewport-first-floor.png": {
-      "bytes": 85569,
-      "sha256": "675c759e61fbe735cfdd298439908e87defeb8b1239edcdeb2fc258073e8cc0c"
+      "bytes": 86395,
+      "sha256": "902f6c19c844ca91e173d538bd9fe0ed3af248cb3518b34bf192bed1a2db1ebc"
+    },
+    "viewport-floor-fixings-top.png": {
+      "bytes": 15448,
+      "sha256": "9db8dfaf0d7bc662d19054db1300dca78f3ca70c940e369c6c9d863198aeaf51"
+    },
+    "viewport-floor-support-under.png": {
+      "bytes": 41257,
+      "sha256": "0fbad263e727e22162a6036f397ab91bccb350164ff56dfb76e3ebb991ade85c"
     },
     "viewport-frame-joint.png": {
       "bytes": 25490,
-      "sha256": "733be1ee6940dbbd0ad8efb44da19ff09fbaff389c5524f5912477f7fe6e128e"
+      "sha256": "480b954acc9c53a19fa6330935d6ff7240a353112b7344b29d7cfe4157faa16c"
+    },
+    "viewport-seam-beam-anchors.png": {
+      "bytes": 11010,
+      "sha256": "7991f1a48bc8de6a7b48dd3f4617be670f3c2ab983a95598b2fca2faa5d591f6"
     },
     "viewport-side-layout.png": {
-      "bytes": 19213,
-      "sha256": "ad49c88f161ef9d1718130917bf3bc7f95e4157fd119e83f1059ac6822d5f328"
+      "bytes": 19179,
+      "sha256": "92762824a530b005e13871c0154287e8be80c9a227a1bbb5ba8fb250a7975191"
     }
   },
   "linked_design_files": {
-    "requirements.json": "537bd536cb57d89b42f0a01bbf476949f5791b9209bed1133e7bde265af93a14",
-    "electrical_plan.json": "baba0f38bd681ba1740d385feea39982e9844a2cd3d1df2a3ea333190bdeb818",
-    "load_calculations.json": "e9a8c1f335b7ec70ffd9af247a2fd02729c858b32dd17ad4a0615e5e5bf2ceab",
-    "caster_load_check.json": "8d28264617b4386869499d9a87155f9273a90617ac8ce55b13dd8d8e9b8e8933",
+    "requirements.json": "87c544d37b8940e267a35bfd8a9d8e3c66807c5509451e89d1badf8cb798217a",
+    "electrical_plan.json": "2edd432d4b3d534b44ff5c805667b9e0007f638c9b6f498022374e01307012ae",
+    "load_calculations.json": "dc37cc13324b6144cfb797a4b68129bd0150db5a83a52a94224f910902af037a",
+    "caster_load_check.json": "66d79383d7d6100ed95c1176b67c6250de5716e5a72444cd574e1bad256f1f26",
     "hardware_geometry.py": "8de0af5acc2be8ec73cd61c30ea8f8ae9771afa46edc94d7c3c3fbd5411f7e56",
     "printed-deck-frame/build_p1.py": "b123276da3e51b21744fa8fd39e5d76d7dab8245a4a3b46defc4360cf609957a",
     "makita-power/power_selection.json": "8b0fa7677f3ad381f8db8a1d9d35c2587691703f093831eb045f65c6ebf14937",
@@ -230,7 +274,8 @@
     "PrintedStopYP.stl"
   ],
   "current_print_panels": 4,
-  "actual_GUI_screenshots": 9,
+  "current_print_support_beams": 1,
+  "actual_GUI_screenshots": 12,
   "nominal_CAD_checks_passed": true,
   "current_load_calculations_match_requirements": true,
   "conditional_CG_model_within_reviewed_bounds": true,

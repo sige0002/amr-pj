@@ -543,10 +543,10 @@
     "load_cases": [
       {
         "id": "normal",
-        "gross_mass_kg": 20,
+        "gross_mass_kg": 20.5,
         "slope_deg": 0,
-        "torque_Nm_per_wheel": 0.24882944824999997,
-        "torque_with_margin_1p5_Nm_per_wheel": 0.37324417237499996,
+        "torque_Nm_per_wheel": 0.25505018445625,
+        "torque_with_margin_1p5_Nm_per_wheel": 0.38257527668437497,
         "status": "calculation_not_hardware_validation"
       }
     ],
@@ -558,7 +558,8 @@
         "inner_rpm": 18.52013528451668,
         "outer_rpm": 38.37736174932872,
         "ideal_stop_m": 0.08625,
-        "translation_energy_gross20kg_J": 0.22499999999999998
+        "reviewed_gross_mass_kg": 20.5,
+        "translation_energy_J": 0.230625
       },
       {
         "id": "later",
@@ -567,9 +568,11 @@
         "inner_rpm": 37.04027056903336,
         "outer_rpm": 76.75472349865744,
         "ideal_stop_m": 0.285,
-        "translation_energy_gross20kg_J": 0.8999999999999999
+        "reviewed_gross_mass_kg": 20.5,
+        "translation_energy_J": 0.9225
       }
-    ]
+    ],
+    "requirements_sha256": "87c544d37b8940e267a35bfd8a9d8e3c66807c5509451e89d1badf8cb798217a"
   },
   "validation": {
     "all_results": "not_run",
@@ -581,7 +584,7 @@
     "inrush_cycles_per_corner": 20,
     "stop_and_comm_fault_cycles_each": 10,
     "thermal_test_torques_Nm": [
-      0.37324417237499996
+      0.38257527668437497
     ],
     "thermal_initial_rpm": [
       18.52013528451668,
@@ -598,7 +601,7 @@
     "initial_wheel_path_after_trip_max_m": 0.16,
     "acceptance_applies_to": "Maximum observed result, not mean; only actual tested load/voltage/ambient/duration are released.",
     "thermal_screening_duration_min": 10,
-    "thermal_matrix_strategy": "Stage from unloaded to the flat-floor case 0.373 Nm. Screen 15.5/18/21 V x 18.52/38.38 rpm for 10 min each and straight-line 28.45 rpm; then run 60 min at the thermally severe point and both initial-speed endpoints at 18 V. Release only the actual tested voltage/ambient/duration; screening is not continuous qualification.",
+    "thermal_matrix_strategy": "Stage from unloaded to the flat-floor case 0.383 Nm. Screen 15.5/18/21 V x 18.52/38.38 rpm for 10 min each and straight-line 28.45 rpm; then run 60 min at the thermally severe point and both initial-speed endpoints at 18 V. Release only the actual tested voltage/ambient/duration; screening is not continuous qualification.",
     "temperature_sensor_note": "70 C is the reported stator-temperature trip, not proof of winding temperature or sensor lag. Also log housing temperature.",
     "mechanical_hold": {
       "required_for_current_prototype": false,

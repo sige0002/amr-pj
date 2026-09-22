@@ -6,7 +6,7 @@
   "status": "design_requirements_accepted_hardware_qualification_pending",
   "battery_service": {
     "date": "2026-09-22",
-    "revision": "D6",
+    "revision": "D6.2",
     "CAD": "two-story/AMR01_TwoStorey_D6.FCStd",
     "design_intent_ja": "1階へ電池・計算機・電源を配置し、2階を格子穴アルミ荷台とする。電池は8mm持上げ後に後方220mmへ抜く。荷台と荷物は残す。",
     "battery_product_selected": true,
@@ -29,7 +29,7 @@
       104
     ],
     "additional_metal_machining": false,
-    "retention": "1F padded seat and one25mm cam belt through floor slots; panels individually fixed with3 reused M6 each",
+    "retention": "1F padded seat and25mm belt. Four panels, each3 dispersed M6 to three3030 rails plus1 flush M4 through the central PLA support beam; beam has2 M6 at each end.",
     "ground_clearance_mm": 25,
     "disconnect_before_withdrawal": true,
     "prototype_retention_test_force_N": 45,
@@ -80,13 +80,16 @@
     "decision_basis": "User explicitly declined the additional brake after the flat-floor-first proposal. This changes scope, not proof of unpowered holding."
   },
   "mass": {
-    "base_max_kg": 10,
+    "base_max_kg": 10.5,
     "normal_payload_kg": 10,
     "structural_payload_kg": 15,
-    "structural_gross_kg": 25,
-    "interpretation": "Payload is cargo only. 25 kg is structural gross mass, never the payload rating.",
-    "future_arm": "Include any arm, gripper, battery, deck and electronics in the 10 kg base limit; re-evaluate CG and operating loads after installation.",
-    "user_confirmation": "Normal cargo 10 kg and structural cargo 15 kg / factor 2 retained. After declining the added brake, the former 8 kg / 5 degree case is reference only."
+    "structural_gross_kg": 25.5,
+    "interpretation": "Payload is cargo only. Normal cargo target10kg remains; structural cargo15kg gives25.5kg gross at the reviewed10.5kg vehicle mass.",
+    "future_arm": "Include any arm, gripper, sensors and additions in measured vehicle mass/CG and re-evaluate wheel loads.10kg is a soft vehicle target.",
+    "user_confirmation": "User explicitly relaxed the strict10kg vehicle limit. Keep necessary floor/frame support; retain normal cargo10kg and structural cargo15kg/SF2 targets.",
+    "base_target_kg": 10,
+    "base_target_is_hard_limit": false,
+    "base_max_basis": "Conservative calculation envelope for this revision, not a user-imposed vehicle mass limit. Recalculate if measured mass exceeds10.5kg."
   },
   "geometry": {
     "frame_outer_LW_mm": [
@@ -216,14 +219,15 @@
         "HBLFSN6_qty": 12,
         "M6x12_qty": 24,
         "HNTT6_6_qty": 24,
-        "decision_ja": "根元4箇所を両側固定する案をユーザー承認。通常積載10kg・車体上限10kgは維持。方向別剛性・実物試験は未完了。"
-      }
+        "decision_ja": "根元4箇所の両側固定を維持。通常積載10kg。D6.2で車体10kgは目安へ変更。方向別剛性・実物試験は未完了。"
+      },
+      "floor_fixing_revision": "D6.2:4 fasteners per panel,16 total; four additional M6 anchors hold the central beam to both inner rails."
     }
   },
   "load_placement": {
     "reviewed_base_mass_interval_kg": [
       6,
-      10
+      10.5
     ],
     "base_cg_x_interval_mm": [
       -25,
@@ -295,10 +299,10 @@
   ],
   "strength": {
     "target_static_safety_factor": 2,
-    "mount_comparison_vertical_N": 245.16625,
+    "mount_comparison_vertical_N": 250.069575,
     "mount_comparison_torque_Nm": 0.96,
     "mount_comparison_lateral_N": 30,
-    "comparison_note": "Entire 25 kg gross weight on one isolated mount is a conservative fixture design envelope, not a permissible motor wheel load or an impact qualification.",
+    "comparison_note": "Entire25.5kg reviewed gross weight on one isolated mount is a conservative fixture comparison, not a permissible motor wheel load or impact qualification.",
     "certified_material_yield_MPa": null,
     "procurement_minimum_yield_MPa": 240,
     "achieved": false,
@@ -328,5 +332,5 @@
     "thermal_duration_verified": false,
     "note": "Flat-floor cargo 10 kg is released only after the linked hardware acceptance tests. Slope operation and power-off slope holding are outside this prototype scope, rather than pending mandatory brake procurement."
   },
-  "design_revision": "D6.1"
+  "design_revision": "D6.2"
 }

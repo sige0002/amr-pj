@@ -1,38 +1,62 @@
 [
   {
+    "file": "SeamBeamPLA.stl",
+    "size_mm": [
+      64.0,
+      100.0,
+      25.0
+    ],
+    "solid_mass_g": 56.66998506721201,
+    "orientation_note": "Floor: ribs downward with slicer supports, or stand on central seam edge with brim and local locator-wall supports. Beam: broad top flange toward bed; check17mm belt-channel bridge. STL axes are assembly axes translated to positive coordinates, NOT pre-oriented for printing.",
+    "sliced": false,
+    "support_and_failed_print_material_included": false
+  },
+  {
     "file": "FloorPLA_0_0.stl",
     "size_mm": [
       229.8,
       149.8,
-      11.0
+      26.0
     ],
-    "solid_mass_g": 86.92014360399077
+    "solid_mass_g": 115.80590614111613,
+    "orientation_note": "Floor: ribs downward with slicer supports, or stand on central seam edge with brim and local locator-wall supports. Beam: broad top flange toward bed; check17mm belt-channel bridge. STL axes are assembly axes translated to positive coordinates, NOT pre-oriented for printing.",
+    "sliced": false,
+    "support_and_failed_print_material_included": false
   },
   {
     "file": "FloorPLA_0_1.stl",
     "size_mm": [
       229.8,
       149.8,
-      11.0
+      26.0
     ],
-    "solid_mass_g": 86.92014360398872
+    "solid_mass_g": 115.80590614111406,
+    "orientation_note": "Floor: ribs downward with slicer supports, or stand on central seam edge with brim and local locator-wall supports. Beam: broad top flange toward bed; check17mm belt-channel bridge. STL axes are assembly axes translated to positive coordinates, NOT pre-oriented for printing.",
+    "sliced": false,
+    "support_and_failed_print_material_included": false
   },
   {
     "file": "FloorPLA_1_0.stl",
     "size_mm": [
       229.8,
       149.8,
-      9.0
+      24.00000000000001
     ],
-    "solid_mass_g": 82.95928600398973
+    "solid_mass_g": 111.84504854111503,
+    "orientation_note": "Floor: ribs downward with slicer supports, or stand on central seam edge with brim and local locator-wall supports. Beam: broad top flange toward bed; check17mm belt-channel bridge. STL axes are assembly axes translated to positive coordinates, NOT pre-oriented for printing.",
+    "sliced": false,
+    "support_and_failed_print_material_included": false
   },
   {
     "file": "FloorPLA_1_1.stl",
     "size_mm": [
       229.8,
       149.8,
-      9.0
+      24.0
     ],
-    "solid_mass_g": 82.57835800398968
+    "solid_mass_g": 111.46412054111507,
+    "orientation_note": "Floor: ribs downward with slicer supports, or stand on central seam edge with brim and local locator-wall supports. Beam: broad top flange toward bed; check17mm belt-channel bridge. STL axes are assembly axes translated to positive coordinates, NOT pre-oriented for printing.",
+    "sliced": false,
+    "support_and_failed_print_material_included": false
   }
 ]

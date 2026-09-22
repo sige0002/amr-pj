@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<robot name="amr_d61">
-  <!--Generated from D6.1. SI units; +X forward, +Y left, +Z up. Inertias are estimates.-->
+<robot name="amr_d62">
+  <!--Generated from D6.2. SI units; +X forward, +Y left, +Z up. Inertias are estimates.-->
   <material name="aluminum">
     <color rgba="0.72 0.75 0.79 1" />
   </material>
@@ -70,9 +70,9 @@
   </link>
   <link name="base_link">
     <inertial>
-      <origin xyz="-0.0934123624767 -0.000838661994572 0.0806849806437" rpy="0 0 0" />
-      <mass value="8.87086255317" />
-      <inertia ixx="0.117847647681" ixy="0.00168170505231" ixz="0.00522242960998" iyy="0.171327454633" iyz="0.000151056829714" izz="0.225382851105" />
+      <origin xyz="-0.0933207799947 -0.000816153615845 0.0796082457592" rpy="0 0 0" />
+      <mass value="9.11550857337" />
+      <inertia ixx="0.118316850893" ixy="0.00168102371021" ixz="0.00525502301937" iyy="0.174220739427" iyz="0.000159067366086" izz="0.227961329308" />
     </inertial>
     <visual name="base_link_motor">
       <geometry>
@@ -308,10 +308,58 @@
         <box size="0.3 0.03 0.03" />
       </geometry>
     </collision>
+    <collision name="base_link_seam_beam_0">
+      <origin xyz="-0.09 0 0.0449" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.1 0.0025" />
+      </geometry>
+    </collision>
+    <collision name="base_link_seam_beam_1">
+      <origin xyz="-0.09 -0.02925 0.0474" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.0415 0.0025" />
+      </geometry>
+    </collision>
+    <collision name="base_link_seam_beam_2">
+      <origin xyz="-0.09 0.02925 0.0474" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.0415 0.0025" />
+      </geometry>
+    </collision>
+    <collision name="base_link_seam_beam_3">
+      <origin xyz="-0.1204 0 0.03615" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0032 0.1 0.015" />
+      </geometry>
+    </collision>
+    <collision name="base_link_seam_beam_4">
+      <origin xyz="-0.0596 0 0.03615" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0032 0.1 0.015" />
+      </geometry>
+    </collision>
+    <collision name="base_link_seam_beam_5">
+      <origin xyz="-0.09 -0.0484 0.03365" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.0032 0.02" />
+      </geometry>
+    </collision>
+    <collision name="base_link_seam_beam_6">
+      <origin xyz="-0.09 0.0484 0.03365" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.0032 0.02" />
+      </geometry>
+    </collision>
     <collision name="base_link_FloorPLA_0_0">
       <origin xyz="-0.2051 -0.0751 0.04985" rpy="0 0 0" />
       <geometry>
         <box size="0.2298 0.1498 0.0024" />
+      </geometry>
+    </collision>
+    <collision name="base_link_FloorPLA_0_0_rib">
+      <origin xyz="-0.206 -0.0235 0.04115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.168 0.0174 0.015" />
       </geometry>
     </collision>
     <collision name="base_link_FloorPLA_0_1">
@@ -320,16 +368,34 @@
         <box size="0.2298 0.1498 0.0024" />
       </geometry>
     </collision>
+    <collision name="base_link_FloorPLA_0_1_rib">
+      <origin xyz="-0.206 0.0235 0.04115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.168 0.0174 0.015" />
+      </geometry>
+    </collision>
     <collision name="base_link_FloorPLA_1_0">
       <origin xyz="0.0251 -0.0751 0.04985" rpy="0 0 0" />
       <geometry>
         <box size="0.2298 0.1498 0.0024" />
       </geometry>
     </collision>
+    <collision name="base_link_FloorPLA_1_0_rib">
+      <origin xyz="0.026 -0.0235 0.04115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.168 0.0174 0.015" />
+      </geometry>
+    </collision>
     <collision name="base_link_FloorPLA_1_1">
       <origin xyz="0.0251 0.0751 0.04985" rpy="0 0 0" />
       <geometry>
         <box size="0.2298 0.1498 0.0024" />
+      </geometry>
+    </collision>
+    <collision name="base_link_FloorPLA_1_1_rib">
+      <origin xyz="0.026 0.0235 0.04115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.168 0.0174 0.015" />
       </geometry>
     </collision>
     <collision name="base_link_BatteryBL1860B">

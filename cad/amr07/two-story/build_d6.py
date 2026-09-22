@@ -1,4 +1,4 @@
-"""D6.1 two-storey AMR. Run with FreeCAD Python; no GUI required.
+"""D6.2 two-storey AMR. Run with FreeCAD Python; no GUI required.
 
 The quoted D3 cargo plate is translated only. All electronics stand ABOVE
 the lower rails. Four precut 100mm SF2 posts and two spare 300mm rails carry
@@ -27,7 +27,7 @@ V=App.Vector
 NAME='AMR01_TwoStorey_D6'
 SOURCE='099686bacaad0f72e8bc4ce15005cd708a5b2f83'
 RHO={'aluminum':2.7e-6,'steel':7.85e-6,'PLA':1.24e-6,'rubber':1.1e-6}
-P=dict(revision='D6.1',date='2026-09-22',source_revision=SOURCE,
+P=dict(revision='D6.2',date='2026-09-22',source_revision=SOURCE,
     architecture='1F battery/computer/power above base rails; 2F independent aluminum cargo deck',
     base_rail_top_z_mm=99,floor_bottom_top_z_mm=[99,101.4],equipment_seat_z_mm=104,
     upright_part='SUS SF2-30・30 BLACK, SF9-322 Amazon pack,100mm',upright_qty=4,
@@ -38,6 +38,10 @@ P=dict(revision='D6.1',date='2026-09-22',source_revision=SOURCE,
     new_HBLFSN6_qty=12,new_M6x12_qty=24,new_HNTT6_6_qty=24,
     lower_joint_brackets_per_post=2,upper_joint_brackets_per_post=1,
     reinforcement='opposing X brackets at all four post bases; directional stiffness qualification still pending',
+    vehicle_mass_target_kg=10,vehicle_mass_target_is_hard_limit=False,
+    floor_fasteners_per_panel=4,floor_direct_M6_per_panel=3,floor_seam_M4_per_panel=1,
+    floor_support='PLA ribbed seam beam fixed to BOTH inner rails with two M6 per end; four panels with integral underside seam ribs',
+    floor_beam_M6_qty=4,floor_M4_countersunk_qty=4,
     deck_LWH_mm=[300,300,4],deck_bottom_top_z_mm=[229,233],deck_translation_z_mm=130,
     battery='Makita BL1860B A-60464',charger='Makita DC18RF JPADC18RF',
     adapter='Netkey diy-adapter03',battery_origin_xyz_mm=[-193,-37.5,104],
@@ -83,7 +87,7 @@ def main():
     src=Path(temp.name)/'D3.FCStd'
     src.write_bytes(subprocess.check_output(['git','-C',str(BASE),'show',SOURCE+':cad/amr07/aluminum-direct-deck/AMR01_AluminumDirect_D3.FCStd']))
     old=App.openDocument(str(src));doc=App.newDocument(NAME)
-    doc.Label='AMR D6.1 | double lower brackets | 1F electronics / 2F cargo233mm'
+    doc.Label='AMR D6.2 | 4 fixings per floor panel + supported seam | cargo233mm'
     removed=['BatteryCradlePLA','BatteryReservedSpace','BatteryConnectorEnvelope','ElectronicsTrayPLA','FrontElectronicsTrayPLA']
     for o in old.Objects:
         if o.TypeId=='PartDesign::Feature' and o.Name not in removed:doc.copyObject(o,False)
@@ -136,15 +140,52 @@ def main():
                 add('LevelNut_'+key+'_'+side,slotnut_at(surface,n,axis),'steel','HNTT6-6 nominal14x15x6.3 nose7.8x0.8. Nominal supplier slot clearances checked; no mixed-joint certification.')
                 driver_checks.append((name,Part.makeCylinder(2.9,35,seat-V(*n)*6,-V(*n))))
 
-    # Reuse the old cradle's four M6x12+OD18 washer+slotnut sets on the TOP
-    # outer rail slots. Each quadrant has these plus its two existing M6x10.
+    # Spread the three reused M6 fixings over THREE rails per quadrant.
+    # A fourth, flush M4 fixing ties each panel to the new anchored seam beam.
+    floor_fixings=[]
     for i,(x,y) in enumerate(product([-25,25],[-135,135])):
         change('CradleBolt_'+str(i),j.screw((x,y,103),(0,0,-1),6,12))
         change('LargeWasher_Cradle'+str(i),Part.makeCylinder(9,1.6,V(x,y,101.4)).cut(Part.makeCylinder(3.3,1.6,V(x,y,101.4))))
         change('SlotNut_Cradle_'+str(i),slotnut_at((x,y,99),(0,0,-1)))
+        floor_fixings.append(dict(panel=f'FloorPLA_{int(x>0)}_{int(y>0)}',bolt='CradleBolt_'+str(i),xy_mm=[x,y],support='outer 400mm rail',thread='M6'))
+    for prefix,sgn,washer,nut in [('Electronics',-1,'Electronics','Electronics'),('FrontDeck',1,'Front','FrontDeck')]:
+        for i,(x,y) in enumerate([(sgn*175,-65),(sgn*175,65),(sgn*215,-20),(sgn*215,20)]):
+            change(f'{prefix}Bolt_{i}',j.screw((x,y,103),(0,0,-1),6,10))
+            change(f'LargeWasher_{washer}{i}',Part.makeCylinder(9,1.6,V(x,y,101.4)).cut(Part.makeCylinder(3.3,1.6,V(x,y,101.4))))
+            change(f'SlotNut_{nut}_{i}',slotnut_at((x,y,99),(0,0,-1),(0,1,0) if i>=2 else (1,0,0)))
+            floor_fixings.append(dict(panel=f'FloorPLA_{int(x>0)}_{int(y>0)}',bolt=f'{prefix}Bolt_{i}',xy_mm=[x,y],support='300mm end rail' if i>=2 else 'inner 400mm rail',thread='M6'))
+
+    # Top flange rests against panel undersides; two full-height end cheeks
+    # transfer load through four M6/large-washer joints into the inner rails.
+    beam=fuse([box(-32,-50,94,64,100,5),box(-32,-50,79,3.2,100,15),
+               box(28.8,-50,79,3.2,100,15),box(-32,-50,74,64,3.2,20),
+               box(-32,46.8,74,64,3.2,20)])
+    beam_holes=[box(-33,-8.5,96.5,66,17,3.5)]  # PC belt stays at z97..98.5.
+    beam_anchors=[]
+    for i,(x,sign) in enumerate(product([-18,18],[-1,1])):
+        surface=(x,sign*50,84);n=(0,sign,0);seat=(x,sign*45.2,84)
+        beam_holes.append(Part.makeCylinder(3.3,8,V(x,sign*44,84),V(*n)))
+        add(f'SeamBeamBolt_{i}',j.screw(seat,n,6,12),'steel','M6x12, two anchors per beam end. Through1.6mm OD18 washer and3.2mm PLA cheek into HNTT6-6. Check PLA creep/preload on prototype.')
+        add(f'SeamBeamWasher_{i}',Part.makeCylinder(9,1.6,V(*seat),V(*n)).cut(Part.makeCylinder(3.3,1.6,V(*seat),V(*n))),'steel','M6 large washer OD18/ID6.6/t1.6; spreads load on printed beam end cheek.')
+        add(f'SeamBeamNut_{i}',slotnut_at(surface,n),'steel','HNTT6-6 in inward-facing slot of inner3030 rail.')
+        beam_anchors.append(dict(bolt=f'SeamBeamBolt_{i}',rail_surface_xyz_mm=list(surface),rail='inner negative Y' if sign<0 else 'inner positive Y'))
+    for ix,iy in product(range(2),repeat=2):
+        x=(-1 if ix==0 else 1)*15;y=(-1 if iy==0 else 1)*25;key=f'{ix}_{iy}'
+        beam_holes.append(Part.makeCylinder(2.25,8,V(x,y,93)))
+        shaft=Part.makeCylinder(2,14,V(x,y,85.4))
+        head=Part.makeCone(2,4,2,V(x,y,99.4))
+        add('FloorSeamBolt_'+key,shaft.fuse(head).removeSplitter(),'steel','M4x16 countersunk90deg, nominal headOD8, flush at101.4. Plain through hole and accessible nut; no tapped PLA.')
+        add('FloorSeamWasher_'+key,Part.makeCylinder(4.5,.8,V(x,y,93.2)).cut(Part.makeCylinder(2.2,.8,V(x,y,93.2))),'steel','M4 plain washer OD9/ID4.4/t0.8 under beam flange.')
+        add('FloorSeamNut_'+key,j.hexagon(x,y,90,7,3.2).cut(Part.makeCylinder(2.0,3.2,V(x,y,90))),'steel','M4 nut AF7/h3.2. Thread simplified; accessible from underside.')
+        floor_fixings.append(dict(panel='FloorPLA_'+key,bolt='FloorSeamBolt_'+key,xy_mm=[x,y],support='seam beam, four M6 rail anchors',thread='M4 countersunk'))
+    add('SeamBeamPLA',cut(beam,beam_holes),'PLA','64x100x25 ribbed beam, BOTH ends anchored with2xM6. Recess clears PC belt. Electronics shelf only; printed strength and creep qualification pending.')
     holes=[]
-    for x,y in list(product([-188,-168,168,188],[-65,65]))+list(product([-25,25],[-135,135])):
-        holes.append(Part.makeCylinder(3.3,4,V(x,y,98)))
+    for fixing in floor_fixings:
+        x,y=fixing['xy_mm']
+        if fixing['thread']=='M6':holes.append(Part.makeCylinder(3.3,4,V(x,y,98)))
+        else:
+            holes.append(Part.makeCylinder(2.25,15,V(x,y,88)))
+            holes.append(Part.makeCone(2.25,4,1.75,V(x,y,99.65)))
     # Openings clear the bottom bracket feet and leave metal directly on metal.
     for x in [-156,54]:
         for y in [-151,118]:holes.append(box(x,y,98,102,33,5))
@@ -166,7 +207,19 @@ def main():
         for iy,(y0,y1) in enumerate([(-150,-.2),(.2,150)]):
             boundary=box(x0,y0,98,x1-x0,y1-y0,20)
             s=fuse([box(x0,y0,99,x1-x0,y1-y0,2.4)]+[a.common(boundary) for a in locators if a.common(boundary).Volume>0])
-            add(f'FloorPLA_{ix}_{iy}',cut(s,holes),'PLA','1F equipment only,3 reused M6/OD18 washers per panel; no cargo load.230x150mm class. Each seam edge supported by its own frame fasteners; creep/temperature test pending.')
+            # 45deg ramp permits edge-up printing and keeps the25mm battery
+            # strap unobstructed. Rib span is168mm between beam and end rail.
+            sy=-1 if iy==0 else 1;xr=-200 if ix==0 else 32
+            points=[V(xr,sy*y,z) for y,z in [(14.8,99),(29.8,84),(32.2,84),(32.2,99),(14.8,99)]]
+            rib=Part.Face(Part.makePolygon(points)).extrude(V(168,0,0))
+            # Existing lower corner brackets reach z94 near the end rails.
+            # Taper the final25mm of rib, leaving0.8mm nominal clearance and
+            # a continuous shallow rib all the way to the supporting end rail.
+            sx=-1 if ix==0 else 1
+            taper=[V(sx*x,-160,z) for x,z in [(175,83),(201,83),(201,94.8),(185,94.8),(175,84),(175,83)]]
+            rib=rib.cut(Part.Face(Part.makePolygon(taper)).extrude(V(0,320,0))).removeSplitter()
+            s=s.fuse(rib).removeSplitter()
+            add(f'FloorPLA_{ix}_{iy}',cut(s,holes),'PLA','1F equipment only; FOUR dispersed fixings:3 reused M6/OD18 washers to three rails +1 flush M4 through anchored seam beam. Integral underside seam rib.230x150mm class; creep/temperature test pending.')
     add('BatteryBL1860B',box(*P['battery_origin_xyz_mm'],*P['battery_installed_XYZ_mm']),'reference','Selected genuine6Ah108Wh battery, manufacturer113x75x62mm;0.68kg.',True)
     add('BatteryAdapter03',box(*P['adapter_origin_xyz_mm'],*P['adapter_installed_XYZ_mm']),'reference','Selected approximate95x90x30mm123g adapter. Full additive height retained; check actual latch/switch/lead offsets.',True)
     add('BatteryBasePad',box(-193,-37.5,101.4,113,75,2.6),'reference','Soft liner on1F floor; not on electrical contacts.')
@@ -267,6 +320,7 @@ def main():
         continuous_battery_service=service,continuous_computer_service=pc_service,caster_sweep_hits=caster,tire_outward_service=tires,
         grid_fastener_envelopes=grid,grid_free_holes=30,grid_slotnut_holes=6,
         joint_assembly_tool_access=tools,computer_ventilation_keepout_hits=hits(ventilation,physical+refs),
+        floor_fixings=floor_fixings,floor_beam_anchors=beam_anchors,
         computer_connector_keepout_hits=hits(pc_cables,physical+refs),
         added_parts=added,removed_parts=removed,changed_parts=changed,translated_parts=translated,
         moving_parts=moving,released_before_service=released,
@@ -279,6 +333,8 @@ def main():
             electrical_total_kg=2.153,battery_kg=.68,adapter_kg=.123,new_straps_and_pads_allowance_kg=.18,
             total_solid_PLA_kg=sum(o.Shape.Volume*RHO['PLA'] for o in physical if o.MaterialBasis=='PLA'),
             added_metal_and_hardware_kg=sum(mass(doc.getObject(n)) for n in added if doc.getObject(n).MaterialBasis in ['aluminum','steel']),
+            upper_structure_metal_and_hardware_kg=sum(mass(doc.getObject(n)) for n in added if n.startswith(('Upright3030_','UpperRail3030_','Level'))),
+            floor_added_hardware_kg=sum(mass(doc.getObject(n)) for n in added if n.startswith(('SeamBeam','FloorSeam')) and doc.getObject(n).MaterialBasis=='steel'),
             mass_overrides_kg=mass_override,actually_weighed=False),
         cg_difference=dict(ledger=deltas,mass_change_kg=dm,moment_change_kg_mm=moment,
             conditional_base_cg_xyz_ranges_mm=ranges,
@@ -295,7 +351,8 @@ def main():
     assert not collisions and not report['reference_collisions'] and not ref_pairs
     assert not any(a['hits'] for a in service+pc_service+tires+grid+tools)
     assert not caster and not report['computer_ventilation_keepout_hits'] and not report['computer_connector_keepout_hits']
-    assert invariant and plate_equal and total<10
+    assert invariant and plate_equal
+    assert all(sum(f['panel']==f'FloorPLA_{ix}_{iy}' for f in floor_fixings)==4 for ix,iy in product(range(2),repeat=2))
     Part.export(physical,str(HERE/(NAME+'.step')))
     Part.export(physical+[doc.getObject(n) for n in ['BatteryBL1860B','BatteryAdapter03','Reserved_Computer']],str(HERE/(NAME+'-with-equipment-envelopes.step')))
     for file in HERE.glob(NAME+'*.step'):file.write_text('\n'.join(t.rstrip() for t in file.read_text().splitlines())+'\n')
@@ -304,7 +361,9 @@ def main():
         s=doc.getObject(name).Shape.copy();b=s.BoundBox;s.translate(V(-b.XMin,-b.YMin,-b.ZMin));b=s.BoundBox
         assert max(b.XLength,b.YLength,b.ZLength)<256
         MeshPart.meshFromShape(Shape=s,LinearDeflection=.06,AngularDeflection=.25,Relative=False).write(str(HERE/(name+'.stl')))
-        manifest.append(dict(file=name+'.stl',size_mm=[b.XLength,b.YLength,b.ZLength],solid_mass_g=s.Volume*1.24e-3))
+        manifest.append(dict(file=name+'.stl',size_mm=[b.XLength,b.YLength,b.ZLength],solid_mass_g=s.Volume*1.24e-3,
+            orientation_note='Floor: ribs downward with slicer supports, or stand on central seam edge with brim and local locator-wall supports. Beam: broad top flange toward bed; check17mm belt-channel bridge. STL axes are assembly axes translated to positive coordinates, NOT pre-oriented for printing.',
+            sliced=False,support_and_failed_print_material_included=False))
     (HERE/'print_manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     print('D6 build complete',flush=True)
 

@@ -1,21 +1,21 @@
 {
-  "revision": "D6.1",
+  "revision": "D6.2",
   "date": "2026-09-22",
   "subtotal": {
-    "JPY": 73699.0,
+    "JPY": 74043.0,
     "USD": 120.9
   },
-  "full_running_subtotal_JPY_reference": 92712.60313315927,
+  "full_running_subtotal_JPY_reference": 93056.60313315927,
   "FX_reference_JPY_per_USD": 157.26718885987816,
   "FX_date": "2026-09-21",
-  "difference_from_D5_JPY": 4066.0,
+  "difference_from_D5_JPY": 4410.0,
   "added_known_purchased_metal_JPY": 3968,
   "added_purchase": {
     "posts4_JPY": 495,
     "brackets_extra10pack_JPY": 917,
     "nuts_extra50pack_JPY": 2556,
     "upper300mm_rails_JPY": 0,
-    "extra_M6x12_qty": 24,
+    "extra_M6x12_qty": 28,
     "extra_M6x12_JPY": null
   },
   "reinforcement_from_D6": {
@@ -25,6 +25,17 @@
     "additional_bracket_and_nut_pack_cost_JPY": 0,
     "additional_screws_JPY": null,
     "basis": "Use4 brackets and8 nuts from purchase-planned D6 packs; no ownership assumed."
+  },
+  "floor_reinforcement_from_D61": {
+    "added_M6x12": 4,
+    "added_M6_large_washers": 4,
+    "added_M4_countersunk": 4,
+    "added_M4_plain_washers": 4,
+    "added_M4_nuts": 4,
+    "slotnuts_from_planned_pack": 4,
+    "additional_slotnut_pack_JPY": 0,
+    "additional_fastener_price_JPY": null,
+    "PLA_material_reference_increase_JPY": 344
   },
   "selected_power_delivered_Tokyo_reference_JPY": 23380,
   "source_D3_plate_and_mount_quotes_unchanged": true,
@@ -38,6 +49,8 @@
     "D3_STOP_WASHERS",
     "POWER_PADS",
     "POWER_LOW_STRAPS",
+    "D62_FLOOR_SCREWS",
+    "D62_BEAM_WASHERS",
     "U01",
     "U03",
     "U04",

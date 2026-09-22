@@ -1,8 +1,8 @@
 {
-  "revision": "D6.1",
+  "revision": "D6.2",
   "date": "2026-09-22",
-  "BOM_sha256": "12979a3534985a36cc040e4722f0d4c700f3419e73e3c4250d8b2598de4b305e",
-  "denominator_JPY_reference": 92712.60313315927,
+  "BOM_sha256": "bf30c50b95959f6448c40840eff04e6851d340f1a59ab1ec1e62950fab8f9454",
+  "denominator_JPY_reference": 93056.60313315927,
   "denominator_scope": "Existing priced lines, provisional budgets and PLA consumption; excludes all unpriced items.",
   "FX_reference_JPY_per_USD": 157.26718885987816,
   "FX_date": "2026-09-21",
@@ -10,7 +10,7 @@
     {
       "category": "電池・充電器・アダプター",
       "JPY_reference": 23380.0,
-      "percent_of_priced_subtotal": 25.217714970660758,
+      "percent_of_priced_subtotal": 25.124493279154418,
       "source_ids": [
         "POWER_KIT",
         "POWER_KIT_SHIP",
@@ -22,7 +22,7 @@
     {
       "category": "モーター2個",
       "JPY_reference": 14000.0,
-      "percent_of_priced_subtotal": 15.100428126144166,
+      "percent_of_priced_subtotal": 15.04460675398468,
       "source_ids": [
         "D01"
       ],
@@ -31,7 +31,7 @@
     {
       "category": "フレーム・締結材",
       "JPY_reference": 13979.0,
-      "percent_of_priced_subtotal": 15.07777748395495,
+      "percent_of_priced_subtotal": 15.022039843853705,
       "source_ids": [
         "F01",
         "F02",
@@ -44,19 +44,23 @@
         "D3_M6",
         "D3_STOP_BOLTS",
         "D3_STOP_NUTS",
-        "D3_STOP_WASHERS"
+        "D3_STOP_WASHERS",
+        "D62_FLOOR_SCREWS",
+        "D62_BEAM_WASHERS"
       ],
       "unpriced_ids": [
         "D3_M6",
         "D3_STOP_BOLTS",
         "D3_STOP_NUTS",
-        "D3_STOP_WASHERS"
+        "D3_STOP_WASHERS",
+        "D62_FLOOR_SCREWS",
+        "D62_BEAM_WASHERS"
       ]
     },
     {
       "category": "専用モーター金具2個",
       "JPY_reference": 12935.226283724978,
-      "percent_of_priced_subtotal": 13.951961056628567,
+      "percent_of_priced_subtotal": 13.900385193746356,
       "source_ids": [
         "Q01",
         "S08"
@@ -66,7 +70,7 @@
     {
       "category": "タイヤ・キャスター",
       "JPY_reference": 10413.0,
-      "percent_of_priced_subtotal": 11.231482719824228,
+      "percent_of_priced_subtotal": 11.189963580660178,
       "source_ids": [
         "D02",
         "C01",
@@ -79,7 +83,7 @@
     {
       "category": "制御・電源保護",
       "JPY_reference": 8084.0,
-      "percent_of_priced_subtotal": 8.719418640839246,
+      "percent_of_priced_subtotal": 8.687185785658011,
       "source_ids": [
         "E02",
         "ELEC_S1",
@@ -101,7 +105,7 @@
     {
       "category": "アルミ天板",
       "JPY_reference": 6078.376849434291,
-      "percent_of_priced_subtotal": 6.556149481321509,
+      "percent_of_priced_subtotal": 6.53191352873309,
       "source_ids": [
         "DECK_plate",
         "DECK_CNC_SHIP"
@@ -110,8 +114,8 @@
     },
     {
       "category": "PLA・ベルト・保護材",
-      "JPY_reference": 2243.0,
-      "percent_of_priced_subtotal": 2.4193043062100976,
+      "JPY_reference": 2587.0,
+      "percent_of_priced_subtotal": 2.780028405182741,
       "source_ids": [
         "P04",
         "H02",
@@ -128,7 +132,7 @@
     {
       "category": "その他送料",
       "JPY_reference": 1600.0,
-      "percent_of_priced_subtotal": 1.725763214416476,
+      "percent_of_priced_subtotal": 1.7193836290268207,
       "source_ids": [
         "S03",
         "D3_STRAP_SHIP",
@@ -145,7 +149,7 @@
     "価格記録": 53435.0,
     "仮予算": 19500.0,
     "自動見積": 19013.60313315927,
-    "材料消費": 764.0
+    "材料消費": 1108.0
   },
   "unpriced_rows": [
     {
@@ -174,13 +178,13 @@
     },
     {
       "id": "D3_STOP_NUTS",
-      "name": "ストッパ用ナット",
+      "name": "ストッパ・床継ぎ目用ナット",
       "status": "寸法選定済・実機検証前",
       "cost": null
     },
     {
       "id": "D3_STOP_WASHERS",
-      "name": "ストッパ用座金",
+      "name": "ストッパ・床継ぎ目用座金",
       "status": "寸法選定済・実機検証前",
       "cost": null
     },
@@ -194,6 +198,18 @@
       "id": "POWER_LOW_STRAPS",
       "name": "1階計算機・監視回路の保持ベルト",
       "status": "型式選定・現物／電気検証前",
+      "cost": null
+    },
+    {
+      "id": "D62_FLOOR_SCREWS",
+      "name": "床継ぎ目の皿小ねじ",
+      "status": "寸法選定済・購入パック未確定",
+      "cost": null
+    },
+    {
+      "id": "D62_BEAM_WASHERS",
+      "name": "継ぎ目支持梁端の大径平座金",
+      "status": "寸法選定済・購入パック未確定",
       "cost": null
     },
     {

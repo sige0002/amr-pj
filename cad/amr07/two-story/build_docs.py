@@ -1,0 +1,169 @@
+"""Keep current design summaries tied to the verified CAD/load/cost ledgers."""
+from pathlib import Path
+import json
+
+HERE=Path(__file__).resolve().parent
+ROOT=HERE.parents[2]
+def read(name):return json.loads((HERE/name).read_text())
+v=read('validation.json');p=read('payload_budget.json');c=read('cost_summary.json')
+f=read('floor_support_review.json');prints=read('print_manifest.json')
+mass=p['vehicle_mass_estimate_kg'];delta=p['floor_reinforcement_increase_from_D61_kg']
+grams=sum(x['solid_mass_g'] for x in prints)
+filament_delta=c['floor_reinforcement_from_D61']['PLA_material_reference_increase_JPY']
+comp=p['mass_components_kg'];rad=p['motor_load_comparison_at_reviewed_vehicle_mass']
+def components():
+    names={'retained_lower_structure_drive_and_hardware':'下段骨格・足回り・既存締結材',
+        'aluminum_cargo_plate':'アルミ荷台','upper_rails_posts_joints':'上段レール・支柱・金具・締結材',
+        'new_floor_hardware':'今回追加した床・支持梁の金属締結材','all_PLA':'PLA床・支持梁・荷物ストッパ',
+        'battery_adapter_and_other_electrical':'電池・アダプター・その他電装',
+        'cargo_belts_and_edge_pads':'荷物ベルト・端部保護','equipment_belts_and_pads':'電装保持ベルト・パッド'}
+    return '\n'.join(f'| {names[k]} | {m:.3f} |' for k,m in comp.items())
+
+payload=f'''# D6.2：車体重量と積載
+
+**車体は推計{mass:.3f}kg、前版D6.1から約{delta*1000:.0f}g増。通常積載の設計目標10kgを維持する。** ユーザーの指示により、車体10kgは厳密な上限から目安へ変更した。必要な支持を省いて10kgへ合わせない。
+
+今回の比較計算は車体10.5kgまでを対象とし、通常荷物10kgなら総重量20.5kg、構造比較の荷物15kgなら25.5kg。10.5kgは新しいユーザー指定上限ではなく、現行計算の範囲。実測が超えた場合や機器を追加する場合は、重量・重心・輪荷重を再計算する。構造比較15kg/SF2は走行積載の認定値ではない。
+
+| 内訳 | kg |
+|---|---:|
+{components()}
+| **車体合計** | **{mass:.3f}** |
+| 通常荷物10kgを加えた推計 | {mass+10:.3f} |
+
+電池0.680kg、アダプター0.123kgを含む。主計算機0.5kgなどは未選定機器の予算で、実測重量ではない。ケース、配線、将来のアーム等は車体側へ加算する。
+
+## 駆動力と輪荷重
+
+平坦な床、加減速度0.2m/s²、転がり抵抗係数0.03、タイヤ直径100.7mm、左右均等駆動を仮定する。
+
+| 車体の比較条件（全て荷物10kg追加） | 車体kg | 必要トルク/輪 | 選定余裕1.5倍込み |
+|---|---:|---:|---:|
+'''
+for t in p['same_cargo_torque_comparisons']:
+    payload+=f"| {t['revision']} | {t['base_mass_kg']:.3f} | {t['service_torque_Nm_each']:.3f}N·m | {t['with_margin_Nm_each']:.3f}N·m |\n"
+payload+=f'''
+[M0601C_111メーカー仕様](https://shop.directdrive.com/pages/m0601c-111-specs)の定格0.96N·mとの数値比較を通る。低速連続運転の発熱、向きを変えるキャスターの抵抗、タイヤのこじり、実際の停止性能は別途確認する。
+
+車体10.5kgまでの通常条件で、モーターの保守的ラジアル荷重比較は{rad['radial_N']:.2f}N／表示120N、軸方向{rad['axial_N']:.2f}N／表示60N。キャスターはトレール公差を含み通常条件で最大{p['caster_normal_maximum_with_trail_tolerance_N']:.2f}N／表示300N。複合荷重や衝撃までの認定ではない。
+
+車体重心X±25・Y±15・床上160mm以下、荷物重心X/Y±30・床上330mm以下を継続する。使用範囲は平坦な屋内床。追加機械ブレーキは採用しない。実機の荷重・温度・保持・停止試験は未実施。
+
+[質量台帳・計算結果](payload_budget.json)／[再計算スクリプト](check_payload_budget.py)／[全荷重計算](../load_calculations.json)／[費用とBOM](BOM.ja.md)
+'''
+(HERE/'PAYLOAD_REVIEW.ja.md').write_text(payload)
+
+floor=f'''# D6.2：1階PLA床の固定見直し
+
+旧D6.1は各板3点、内側2本の間隔20mm、中央継ぎ目の張り出し約50mmだった。**各板4点・計16点へ変更し、固定位置をX方向200mm、Y方向115mmに分散した。**
+
+![各板4点の固定を見せたFreeCAD実画面](cad-screen-floor-fixings-top.png)
+
+| 板 | 外側400mmレール・M6 | 内側400mmレール・M6 | 端300mmレール・M6 | 中央支持梁・M4皿 |
+|---|---|---|---|---|
+'''
+for xsgn,ysgn,label in [(-1,1,'後左'),(-1,-1,'後右'),(1,1,'前左'),(1,-1,'前右')]:
+    floor+='| '+label+' | '+' | '.join(f'({xsgn*x}, {ysgn*y})' for x,y in [(25,135),(175,65),(215,20),(15,25)])+' |\n'
+floor+=f'''
+座標はmm、車体中心を原点、X前方・Y左方。**3点は3030へ直接固定し、4点目は両端を3030へ固定した支持梁を介して留める。** 隣の板だけを相手にしたねじ留めではない。
+
+![裏リブと中央支持梁・FreeCAD実画面](cad-screen-floor-support-under.png)
+
+支持梁はPLA製64×100×25mm。両端の各2本、合計4本のM6×12・OD18大径座金・溝ナットで内側3030の側面溝へ固定する。床から梁へはM4×16皿ねじ・平座金・六角ナットで貫通締結する。PLAへの直接タップは使わない。皿頭を床面とそろえ、PC下面を押し上げない。
+
+![支持梁の両端固定・FreeCAD実画面](cad-screen-seam-beam-anchors.png)
+
+各板の継ぎ目沿いに高さ15mmの裏リブを追加した。継ぎ目端からリブ開始まで14.6mm。リブは中央支持梁から端レールまで続き、既存金具の手前25mmで浅くして0.8mmの公称隙間を残す。中央梁のベルト溝は幅17mm・深さ2.5mm。PCベルトとの最小隙間{f['beam_to_PC_belt_clearance_mm']:.1f}mm、電池ベルトと裏リブの隙間{f['ribs_to_battery_belt_clearance_mm']:.1f}mmをCADで確認した。
+
+## 組立と印刷
+
+1. 内側3030へ梁の溝ナットを入れ、支持梁のM6を先に固定する。
+2. 4枚の床を載せ、各板のM6を3本、中央のM4皿ねじを1本取り付ける。M4ナットは下面から工具を入れる。
+3. 機器・パッド・ベルトを取り付ける。梁のM6を再調整する場合は床とM4を先に外す。
+
+PLAを挟む部分へ金属同士と同じM6締付トルクを使わない。締付けと緩みの保持は現物で確認する。CADでは上記工程の梁ねじ用ドライバー4経路とM4ナット用ソケット4経路も検査した。
+
+印刷対象は床4枚＋梁1個。最大229.8×149.8×26mmでP1Sの256mm範囲に収まる。5部品の中実CAD体積換算は約{grams:.0f}g。荷物ストッパ4個はD3のSTLを継承する。STLは配置座標から原点移動したデータで、印刷姿勢は未設定。床はリブを下にしてサポートを使うか、中央継ぎ目を下に立ててブリムと位置決め壁の局所サポートを検討する。梁は広い上面をベッド側とし、ベルト溝のブリッジを確認する。実スライス・サポート量・印刷試験は未完了。
+
+## 確認した範囲
+
+保存CADから16固定点、座金・皿頭の座面、3030への支持面、梁と各板の当たり、両端2本ずつの固定、工具経路、ベルト隙間を独立検査した。車体全体の体積干渉と、電池・PC交換の連続包絡も合格した。
+
+リブ単独・梁単独へそれぞれ50Nを中央集中させた短時間の単純梁比較を行った。リブは床幅40mmだけを有効幅とし、端のテーパーを1mm刻みの断面積分に含めた。弾性率1000MPaと仮定したたわみは、リブ{f['short_term_elastic_screens']['panel_rib']['deflection_mm_by_E_MPa']['1000']:.2f}mm、梁{f['short_term_elastic_screens']['seam_beam']['deflection_mm_by_E_MPa']['1000']:.2f}mm。1000MPaは感度確認用の仮定で、許容値ではない。[メーカー資料](https://store.bblcdn.com/s1/default/58b85d0f3db94878854a28fdb8a0006e/Bambu_PLA_Basic_Technical_Data_Sheet.pdf)のXY曲げ弾性率2750±160MPaも比較値として記録した。
+
+このPLA床は電装用で、荷物15kgを支える上段の金属構造とは別。印刷方向、長期クリープ、機器温度、ベルトの締めすぎ、ねじの緩みを含む強度は未検証。50Nの分散載荷試験と、実機相当重量・温度での保持試験を実施してから使用範囲を決める。
+
+重量増は約{delta*1000:.0f}g。PLA材料消費の参考増額は{filament_delta:,}円（2円/gの既存基準）。追加ねじ・座金の購入額は未計上。溝ナット4個は購入予定100個の内数で、追加パックは不要。新しい金属切断・穴加工・CNC見積は発生しない。
+
+[全検査値](floor_support_review.json)／[検査スクリプト](review_floor_support.py)／[印刷ZIP](D6-first-floor-print-files.zip)／[全車BOM](BOM.ja.md)
+'''
+(HERE/'FLOOR_REVIEW.ja.md').write_text(floor)
+
+readme=f'''# D6.2：1階PLA床を各4点固定、中央継ぎ目を補強
+
+**各床を4点・計16点で分散固定し、中央支持梁を両端各2本のM6で3030へ固定した。** 車体推計{mass:.3f}kg、前版から約{delta*1000:.0f}g増。車体10kgは目安とし、通常積載目標10kgを継続する。
+
+[床の見直し・座標・組立順](FLOOR_REVIEW.ja.md)／[重量・積載の計算](PAYLOAD_REVIEW.ja.md)／[読みやすいBOM](BOM.ja.md)
+
+![床の16固定点・FreeCAD実画面](cad-screen-floor-fixings-top.png)
+
+![組立・FreeCAD実画面](cad-screen-assembled.png)
+
+電池・計算機・電源は基礎3030上の1階、格子穴アルミ荷台は2階。[参照したロボコン機体と設計理由](REFERENCE_DESIGNS.ja.md)。青い箱は未選定機器の予約外形。電池とアダプターもカタログ寸法の包絡であり、ラッチまで再現したCADではない。
+
+| 項目 | 現行構成 |
+|---|---|
+| 1階床 | PLA4分割、基本厚2.4mm・裏リブ15mm、床上面101.4mm |
+| 床固定 | 各板3本のM6を異なる3030へ、1本のM4皿を中央支持梁へ |
+| 中央支持梁 | PLA64×100×25mm、両端を各2本のM6で内側3030へ固定 |
+| 電池 | BL1860B113×75×62mm、アダプター95×90×30mm、座面104mm |
+| PC | 120×100×60mm・0.5kgの予約、上15mm通風・横30mmコネクタ空間 |
+| 荷台 | 6061-T6・300×300×4mm、上面233mm、φ4.5格子穴36個・50mmピッチ |
+| 上段支持 | 切断済100mm3030支柱4本＋300mm上段レール2本。下端金具各2個・上端各1個 |
+| 電池交換 | 電源OFF・配線とベルト解除→8mm持上げ→後方220mm、荷台を残す |
+| PC交換 | 配線・ベルト解除→8mm持上げ→側方230mm |
+
+![リブ・支持梁を下面から確認](cad-screen-floor-support-under.png)
+
+上下段の鉛直荷重はアルミ部材の端面で受ける。上段支柱用金具12個・M6×12ねじ24本・溝ナット24個というD6.1の根元両側補強は継続する。SUS支柱とMISUMI金具の公称寸法はCADで照合済みだが、混用の現物座面・ねじ底付き・締付け・横揺れは未検証。[上下締結画面](cad-screen-frame-joint.png)／[下端](cad-screen-frame-joint-lower.png)／[上端](cad-screen-frame-joint-upper.png)／[前回の接合部レビュー](JOINT_REVIEW.ja.md)
+
+## 配置・交換・検査
+
+![電池交換](cad-screen-battery-exchange.png)
+
+![PC交換](cad-screen-computer-exchange.png)
+
+{v['physical_parts']}物理部品・{v['checked_physical_pairs']:,}組の体積干渉、予約機器、連続交換包絡、キャスター旋回、タイヤの外向き抜出し、36格子穴、支柱金具の工具経路を検査した。保存FCStd・STEPの体積と形状を再照合し、印刷5部品の閉じたSTLを確認した。床固定の座面と工具経路も別スクリプトで検査する。電池交換上端と荷台裏締結部の余裕は16.3mm。
+
+通常荷物10kg、構造比較荷物15kg/SF2は設計目標で、実機認定ではない。今回の比較範囲は車体10.5kgまで。車体CGはX±25・Y±15・Z160mm以下、荷物CGはX/Y±30・Z330mm以下。追加機械ブレーキなし、平坦な屋内床を対象とする。
+
+上段レールの2倍荷重比較は応力7.13MPa・たわみ0.0253mm、支柱1本へ集中する圧縮比較は1.56MPa。天板は同じ加工形状・6固定点なので従来の板単体解析を限定的に参照する。接合部の柔軟性、PLAの長期保持、実機温度・停止性能は含まない。[部材計算と限界](structure_screening.json)
+
+## 費用・データ
+
+全車の途中小計は**{c['subtotal']['JPY']:,.0f}円＋{c['subtotal']['USD']:.2f}USD＋未計上分**、記録済み参考為替では約{c['full_running_subtotal_JPY_reference']:,.0f}円。今回のPLA材料消費参考は前版より{filament_delta:,}円増。追加M6ねじ4本・大径座金4枚・M4皿ねじ/平座金/ナット各4個の購入価格は未計上。溝ナットは78/100個使用し、追加パック不要。PLA単価2円/gは材料消費基準で、実スライス・サポート・失敗分・工賃は含まない。
+
+荷台の製造STEP/PDFは既存D3と同一。JLCCNCの天板38.65USD、モーター金具82.25USDという実サイト見積記録を、同じ加工品として継承する（送料込み、未発注・担当者審査前）。今回の床支持で追加金属加工は不要。
+
+- [FreeCAD](AMR01_TwoStorey_D6.FCStd)／[構造STEP](AMR01_TwoStorey_D6.step)／[電池・PC外形付きSTEP](AMR01_TwoStorey_D6-with-equipment-envelopes.step)
+- [床4枚＋支持梁1個の印刷ZIP](D6-first-floor-print-files.zip)／[寸法・材料体積・印刷注意](print_manifest.json)
+- [BOM・費用割合](BOM.ja.md)／[全明細CSV](BOM.csv)／[費用JSON](cost_summary.json)
+- [CAD検査](validation.json)／[保存物再検査](saved_artifact_validation.json)／[床支持検査](floor_support_review.json)
+- [設計要件](../requirements.json)／[電源選定](../makita-power/power_selection.json)／[成果物ハッシュ](release_manifest.json)
+- [D6.2 URDF・Isaac Sim5向け手順とMuJoCo走行GIF](../../../sim/isaac_sim/README.ja.md)
+
+実物の印刷・組立・通電・積載走行は未実施。3DプリントはP1S寸法内だが、スライサー設定と実物確認が必要。荷物ストッパはD3の[XN](../aluminum-direct-deck/PrintedStopXN.stl)・[XP](../aluminum-direct-deck/PrintedStopXP.stl)・[YN](../aluminum-direct-deck/PrintedStopYN.stl)・[YP](../aluminum-direct-deck/PrintedStopYP.stl)を継承する。
+'''
+(HERE/'README.ja.md').write_text(readme)
+
+root=ROOT/'README.md';s=root.read_text()
+start=s.index('車体は**');end=s.index('\n構造比較',start)
+s=s[:start]+f'車体は**推計{mass:.3f}kg**。D6.2では各PLA床を4点で分散固定し、継ぎ目を両端支持の梁と裏リブで補強しました。車体10kgは目安とし、必要な支持を優先します。**通常荷物10kgの設計目標は維持**し、車体10.5kgまでの範囲で足回りを再計算しています。[床固定の見直し](cad/amr07/two-story/FLOOR_REVIEW.ja.md)／[重量と積載](cad/amr07/two-story/PAYLOAD_REVIEW.ja.md)\n'+s[end:]
+start=s.index('D5からの小計増は') if 'D5からの小計増は' in s else s.index('全車の途中小計は')
+end=s.index('\n- [現行',start)
+s=s[:start]+f'全車の途中小計は{c["subtotal"]["JPY"]:,.0f}円＋{c["subtotal"]["USD"]:.2f}USD＋未計上分、記録済み参考為替では約{c["full_running_subtotal_JPY_reference"]:,.0f}円。今回の床補強はPLA材料参考{filament_delta:,}円増と追加ねじ類です。ねじ類の購入額は未計上で、完成車購入総額ではありません。\n'+s[end:]
+s=s.replace('電装床4枚の印刷ZIP','電装床4枚＋支持梁の印刷ZIP')
+if 'cad-screen-floor-fixings-top.png' not in s:
+    s=s.replace('![FreeCAD実画面：D6.2組立]', '![FreeCAD実画面：各床4点・計16点の固定](cad/amr07/two-story/cad-screen-floor-fixings-top.png)\n\n![FreeCAD実画面：D6.2組立]')
+root.write_text(s)
+print('D6.2 design, floor review, payload review and root summaries regenerated.')

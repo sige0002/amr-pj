@@ -12,11 +12,11 @@ for row in rows:
         '備考':'下段2本＋上段2本。購入予定4本セットを全て使用し、D5から追加購入なし。価格1467円は同日P1/D5の観測を継承。'})
     if row['ID']=='F03':row.update({'使用数':'20','購入予定数':'20','購入口数':'2','余剰数':'0','明細金額':'1834','CAD形状数':'20',
         '備考':'基礎8個＋支柱下端8個＋上端4個。D6.1の根元両側固定は購入予定パックの余り4個で対応。917円/パックは同日P1/D5の観測を継承。SUS支柱との混用は公称断面適合、現物の突起・座面確認が必要。'})
-    if row['ID']=='F04':row.update({'使用数':'74','購入予定数':'100','購入口数':'2','余剰数':'26','明細金額':'5112','CAD形状数':'74',
+    if row['ID']=='F04':row.update({'使用数':'78','購入予定数':'100','購入口数':'2','余剰数':'22','明細金額':'5112','CAD形状数':'78',
         '価格根拠':'2026-09-22 商品ページ2556円/50個を再確認',
-        '備考':'既存50個＋新規支柱金具24個。D6購入予定100個の内数、26個余り。SUS支柱側12個も公称同寸法のHNTT6-6、混用受入確認前。'})
-    if row['ID']=='D3_M6':row.update({'使用数':'46','備考':'下段ブラケット16＋上段支柱金具24＋天板6。旧電池受けから移す別枠4本はH01に含み重複計上しない。D5から追加24本、D6から追加8本の購入価格未確定。'})
-    if row['ID']=='P04':row.update({'分類':'D6 PLA','部品名':'1階の分割電装床4枚・荷物ストッパ4個','仕様・型番':'D6全PLA、中実CAD換算',
+        '備考':'既存50個＋支柱金具24個＋D6.2継ぎ目支持梁4個。購入予定100個の内数、22個余り。SUS支柱側12個も公称同寸法のHNTT6-6、混用受入確認前。'})
+    if row['ID']=='D3_M6':row.update({'使用数':'50','備考':'下段ブラケット16＋上段支柱金具24＋天板6＋D6.2支持梁4。旧電池受けから移す別枠4本はH01に含み重複計上しない。D5から追加28本、D6.1から追加4本の購入価格未確定。'})
+    if row['ID']=='P04':row.update({'分類':'D6 PLA','部品名':'1階のリブ付き床4枚・継ぎ目支持梁1個・荷物ストッパ4個','仕様・型番':'D6.2全PLA、中実CAD換算',
         '使用数':str(grams),'明細金額':str(grams*2),'備考':'2円/gの材料消費参考。D5の電池受け・床下電装受け・前トレイを全て廃止。実スライス、失敗、電力、工賃別。荷台構造は金属。'})
     if row['ID']=='POWER_LOW_STRAPS':row.update({'分類':'D6 1階電装','部品名':'1階計算機・監視回路の保持ベルト','単位':'本','購入予定数':'','購入単位':'商品未選定','購入口数':'','余剰数':'','備考':'幅15mm各1本、棚の長手方向に掛ける。受け棚は既存M6で固定。ケース選定後に通気口を避けて調整。'})
     if row['ID']=='POWER_PADS':row.update({'仕様・型番':'1階電池・電装下面2.6mm、上面1mm等の軟質当て材','備考':'保持具の現物合わせ、温度適合確認前。価格未確定。'})
@@ -32,6 +32,21 @@ row={k:'' for k in fields};row.update({'ID':'D6_POSTS','分類':'D6 上段支持
     '購入先':'Amazon掲載','URL':post['url'],'CAD形状数':'4',
     '備考':'ブラック100mm4本を選択。メーカー単位質量0.84kg/m。切断・端面タップ・追加穴加工なし。通常5～6日以内発送の表示、送料・Prime配送は未確認。'})
 rows.append(row)
+for row in rows:
+    if row['ID'] in ['D3_STOP_NUTS','D3_STOP_WASHERS']:
+        row['使用数']='12'
+        row['部品名']=row['部品名'].replace('ストッパ用','ストッパ・床継ぎ目用')
+        row['備考']='荷物ストッパ8個＋床継ぎ目4個。共通購入へ集約し二重計上しない。'
+        if row['ID']=='D3_STOP_WASHERS':row['仕様・型番']='M4 ID4.3～4.4 OD9 t0.8（規格の現物寸法確認）'
+for part_id,name,spec in [
+    ('D62_FLOOR_SCREWS','床継ぎ目の皿小ねじ','M4x16、90度皿、頭径8mm、公称寸法'),
+    ('D62_BEAM_WASHERS','継ぎ目支持梁端の大径平座金','M6 ID6.6 OD18 t1.6')]:
+    row={k:'' for k in fields}
+    row.update({'ID':part_id,'分類':'D6.2 1階床支持','部品名':name,'仕様・型番':spec,
+        '使用数':'4','単位':'個','通貨':'JPY','価格根拠':'購入単価未確定',
+        '選定状況':'寸法選定済・購入パック未確定','CAD形状数':'4',
+        '備考':'汎用金属締結材。PLAへのタップではなく貫通締結。追加加工見積は不要。コーナン等の小袋を優先し、価格は未計上。'})
+    rows.append(row)
 # Keep the currently unpriced scope visible in the same BOM. The historical
 # battery/charger rows are superseded; only independent battery protection is
 # still unselected. Blank amounts remain unknown, never zero-price purchases.
@@ -46,10 +61,10 @@ for item in unselected:
         decision_needed='本体・記憶媒体・冷却の選定と購入価格を確定。重量枠があることは代金計上済みを意味しない。')
     if item['id']=='U06':item['decision_needed']='アダプター付属スイッチと重複計上せず、主遮断・着脱コネクタの必要部品を確定。'
     if item['id']=='U13':item['decision_needed']='現行の1階配線経路から線長・端子数を確定。購入品付属線との重複を避ける。'
-    if item['id']=='U15':item.update(specification='D6.1の1階機器・ケース・通風・取付の具体化',
+    if item['id']=='U15':item.update(specification='D6.2の1階機器・ケース・通風・取付の具体化',
         decision_needed='PLA床とベルトの既計上分を除き、ケース・実機器の固定部・スタンドオフを選定。')
     if item['id']=='U17':item['decision_needed']='見積済みモーター金具・アルミ天板を除く。キャスター板・基礎ガセットの加工工具、工賃などは未見積。切断済み支柱に追加加工は不要。'
-    if item['id']=='U18':item['decision_needed']='現行P04の車体用PLA382gとは別のモック材料・失敗分。スライス未完。'
+    if item['id']=='U18':item['decision_needed']=f'現行P04の車体用PLA{grams}gとは別のモック材料・失敗分。スライス未完。'
     row={k:'' for k in fields}
     row.update({'ID':item['id'],'分類':'未選定・未計上','部品名':item['name'],
         '仕様・型番':item['specification'],'通貨':'JPY','価格根拠':'未見積',
@@ -66,10 +81,11 @@ out=dict(revision=v['parameters']['revision'],date='2026-09-22',subtotal=totals,
     difference_from_D5_JPY=totals['JPY']-prior['subtotal']['JPY'],
     added_known_purchased_metal_JPY=495+917+2556,
     added_purchase=dict(posts4_JPY=495,brackets_extra10pack_JPY=917,nuts_extra50pack_JPY=2556,
-                       upper300mm_rails_JPY=0,extra_M6x12_qty=24,extra_M6x12_JPY=None),
+                       upper300mm_rails_JPY=0,extra_M6x12_qty=28,extra_M6x12_JPY=None),
     reinforcement_from_D6=dict(added_brackets=4,added_M6x12=8,added_HNTT6_6=8,
         additional_bracket_and_nut_pack_cost_JPY=0,additional_screws_JPY=None,
         basis='Use4 brackets and8 nuts from purchase-planned D6 packs; no ownership assumed.'),
+    floor_reinforcement_from_D61=dict(added_M6x12=4,added_M6_large_washers=4,added_M4_countersunk=4,added_M4_plain_washers=4,added_M4_nuts=4,slotnuts_from_planned_pack=4,additional_slotnut_pack_JPY=0,additional_fastener_price_JPY=None,PLA_material_reference_increase_JPY=grams*2-764),
     selected_power_delivered_Tokyo_reference_JPY=23380,
     source_D3_plate_and_mount_quotes_unchanged=True,new_metal_quote_needed=False,
     unpriced_rows=[r['ID'] for r in rows if not r['明細金額']],

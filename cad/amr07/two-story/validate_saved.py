@@ -56,6 +56,9 @@ assert doc.getObject('BatteryBL1860B').Shape.BoundBox.ZMin==104
 assert len([o for o in physical if o.Name.startswith('LevelBracket_')])==12
 assert len([o for o in physical if o.Name.startswith('LevelBolt_')])==24
 assert len([o for o in physical if o.Name.startswith('LevelNut_')])==24
+assert len([o for o in physical if o.Name.startswith('FloorSeamBolt_')])==4
+assert len([o for o in physical if o.Name.startswith('SeamBeamBolt_')])==4
+assert doc.getObject('SeamBeamPLA').Shape.isValid()
 out=dict(revision=r['parameters']['revision'],native_document=NAME,physical_parts=len(physical),
     native_solids=sum(len(o.Shape.Solids) for o in physical),STEP_solids=len(step.Solids),
     native_volume_mm3=native_volume,STEP_delta_mm3=step.Volume-native_volume,

@@ -1,20 +1,24 @@
 {
-  "revision": "D6.1",
+  "revision": "D6.2",
   "date": "2026-09-22",
-  "requirements_sha256": "537bd536cb57d89b42f0a01bbf476949f5791b9209bed1133e7bde265af93a14",
-  "baseline_D6_commit": "36a04d66ae328ab08f1ddd29812729b2b37c602b",
-  "vehicle_mass_estimate_kg": 9.895085945114776,
-  "vehicle_mass_limit_kg": 10,
-  "vehicle_mass_headroom_kg": 0.10491405488522432,
+  "requirements_sha256": "87c544d37b8940e267a35bfd8a9d8e3c66807c5509451e89d1badf8cb798217a",
+  "baseline_D61_commit": "feab761c8073f468b3668fac1b18b88a18fa6ba7",
+  "vehicle_mass_estimate_kg": 10.139731965310848,
+  "reviewed_vehicle_mass_upper_bound_kg": 10.5,
+  "vehicle_mass_target_kg": 10,
+  "vehicle_mass_target_is_hard_limit": false,
+  "remaining_to_reviewed_envelope_kg": 0.36026803468915247,
+  "mass_above_soft_10kg_target_kg": 0.13973196531084753,
   "normal_cargo_design_target_kg": 10,
-  "normal_gross_at_estimate_kg": 19.895085945114776,
-  "normal_gross_reviewed_upper_bound_kg": 20,
+  "normal_gross_at_estimate_kg": 20.139731965310848,
+  "normal_gross_reviewed_upper_bound_kg": 20.5,
   "structural_cargo_comparison_kg": 15,
-  "structural_scope": "15kg cargo/25kg gross is a static structural comparison, not an operating cargo rating.",
+  "structural_scope": "15kg cargo/25.5kg gross is a static structural comparison, not an operating cargo rating.",
   "mass_components_kg": {
     "aluminum_cargo_plate": 0.9547830853585014,
     "upper_rails_posts_joints": 1.2926618270515282,
-    "all_PLA": 0.3816513694700097,
+    "new_floor_hardware": 0.07243298498035845,
+    "all_PLA": 0.5538644046857231,
     "battery_adapter_and_other_electrical": 2.153,
     "cargo_belts_and_edge_pads": 0.28,
     "equipment_belts_and_pads": 0.18,
@@ -24,9 +28,9 @@
     "upper_rails_posts_joints": 1.2926618270515282,
     "battery_and_adapter": 0.05300000000000005,
     "equipment_belts_and_pads": 0.18,
-    "floor_cradles_and_other_geometry_net": 0.12305777414756564
+    "floor_cradles_and_other_geometry_net": 0.3677037943436373
   },
-  "reinforcement_increase_from_D6_kg": 0.16688727568384287,
+  "floor_reinforcement_increase_from_D61_kg": 0.24464602019607185,
   "same_cargo_torque_comparisons": [
     {
       "revision": "D3",
@@ -36,18 +40,6 @@
       "slope_deg": 0,
       "service_torque_Nm_each": 0.22701166349619545,
       "with_margin_Nm_each": 0.3405174952442932,
-      "catalog_rated_torque_Nm_each": 0.96,
-      "numeric_margin_check": true,
-      "operation_approved": false
-    },
-    {
-      "revision": "D6",
-      "base_mass_kg": 9.728198669430933,
-      "payload_kg": 10,
-      "gross_mass_kg": 19.72819866943093,
-      "slope_deg": 0,
-      "service_torque_Nm_each": 0.24544783949404414,
-      "with_margin_Nm_each": 0.3681717592410662,
       "catalog_rated_torque_Nm_each": 0.96,
       "numeric_margin_check": true,
       "operation_approved": false
@@ -65,13 +57,25 @@
       "operation_approved": false
     },
     {
-      "revision": "design_upper_bound",
-      "base_mass_kg": 10,
+      "revision": "D6.2",
+      "base_mass_kg": 10.139731965310848,
       "payload_kg": 10,
-      "gross_mass_kg": 20,
+      "gross_mass_kg": 20.139731965310848,
       "slope_deg": 0,
-      "service_torque_Nm_each": 0.24882944824999997,
-      "with_margin_Nm_each": 0.37324417237499996,
+      "service_torque_Nm_each": 0.25056791964155933,
+      "with_margin_Nm_each": 0.375851879462339,
+      "catalog_rated_torque_Nm_each": 0.96,
+      "numeric_margin_check": true,
+      "operation_approved": false
+    },
+    {
+      "revision": "design_upper_bound",
+      "base_mass_kg": 10.5,
+      "payload_kg": 10,
+      "gross_mass_kg": 20.5,
+      "slope_deg": 0,
+      "service_torque_Nm_each": 0.25505018445625,
+      "with_margin_Nm_each": 0.38257527668437497,
       "catalog_rated_torque_Nm_each": 0.96,
       "numeric_margin_check": true,
       "operation_approved": false
@@ -94,15 +98,15 @@
     "evaluated_pose_vertices": 46080,
     "normal_reaction_extrema": {
       "left": {
-        "min_N": 26.748328329690725,
-        "max_N": 91.85926118966961,
+        "min_N": 27.16364420455327,
+        "max_N": 92.90727729617302,
         "min_case": {
-          "base_mass_kg": 9.895085945114776,
-          "gross_mass_kg": 19.895085945114776,
+          "base_mass_kg": 10.139731965310848,
+          "gross_mass_kg": 20.139731965310848,
           "cg_xyz_mm": [
-            -27.51318341312707,
-            -22.539550239381217,
-            245.44823604632043
+            -27.482654689055504,
+            -22.44796406716651,
+            244.41025942788713
           ],
           "acceleration_xy_m_s2": [
             0.2,
@@ -111,42 +115,42 @@
           "slope_azimuth_deg": 230.8888089274537,
           "caster_angle_deg": 231.00000000000003,
           "all_reactions_N": [
-            26.748328329690725,
-            64.39434519001104,
-            103.96147106395804
+            27.16364420455327,
+            65.14419968132202,
+            105.19545859174033
           ]
         },
         "max_case": {
-          "base_mass_kg": 9.895085945114776,
-          "gross_mass_kg": 19.895085945114776,
+          "base_mass_kg": 10.139731965310848,
+          "gross_mass_kg": 20.139731965310848,
           "cg_xyz_mm": [
-            27.51318341312707,
-            22.539550239381217,
-            245.44823604632043
+            27.482654689055504,
+            22.44796406716651,
+            244.41025942788713
           ],
           "acceleration_xy_m_s2": [
             -0.2,
             -0.18
           ],
-          "slope_azimuth_deg": 57.07064395586599,
+          "slope_azimuth_deg": 57.070643955865954,
           "caster_angle_deg": 57.0,
           "all_reactions_N": [
-            91.85926118966961,
-            58.153798766549016,
-            45.09108462744119
+            92.90727729617302,
+            58.909411324731366,
+            45.686613856711226
           ]
         }
       },
       "right": {
-        "min_N": 26.74832832969072,
-        "max_N": 91.85926118966961,
+        "min_N": 27.163644204553265,
+        "max_N": 92.90727729617302,
         "min_case": {
-          "base_mass_kg": 9.895085945114776,
-          "gross_mass_kg": 19.895085945114776,
+          "base_mass_kg": 10.139731965310848,
+          "gross_mass_kg": 20.139731965310848,
           "cg_xyz_mm": [
-            -27.51318341312707,
-            22.539550239381217,
-            245.44823604632043
+            -27.482654689055504,
+            22.44796406716651,
+            244.41025942788713
           ],
           "acceleration_xy_m_s2": [
             0.2,
@@ -155,18 +159,18 @@
           "slope_azimuth_deg": 129.11119107254626,
           "caster_angle_deg": 129.0,
           "all_reactions_N": [
-            64.39434519001104,
-            26.74832832969072,
-            103.96147106395804
+            65.14419968132202,
+            27.163644204553265,
+            105.19545859174033
           ]
         },
         "max_case": {
-          "base_mass_kg": 9.895085945114776,
-          "gross_mass_kg": 19.895085945114776,
+          "base_mass_kg": 10.139731965310848,
+          "gross_mass_kg": 20.139731965310848,
           "cg_xyz_mm": [
-            27.51318341312707,
-            -22.539550239381217,
-            245.44823604632043
+            27.482654689055504,
+            -22.44796406716651,
+            244.41025942788713
           ],
           "acceleration_xy_m_s2": [
             -0.2,
@@ -175,22 +179,22 @@
           "slope_azimuth_deg": 302.929356044134,
           "caster_angle_deg": 303.0,
           "all_reactions_N": [
-            58.153798766549016,
-            91.85926118966961,
-            45.09108462744119
+            58.909411324731366,
+            92.90727729617302,
+            45.686613856711226
           ]
         }
       },
       "caster": {
-        "min_N": 43.807789639430524,
-        "max_N": 106.71407088109173,
+        "min_N": 44.38637007091823,
+        "max_N": 107.98073083846315,
         "min_case": {
-          "base_mass_kg": 9.895085945114776,
-          "gross_mass_kg": 19.895085945114776,
+          "base_mass_kg": 10.139731965310848,
+          "gross_mass_kg": 20.139731965310848,
           "cg_xyz_mm": [
-            27.51318341312707,
-            -22.539550239381217,
-            245.44823604632043
+            27.482654689055504,
+            -22.44796406716651,
+            244.41025942788713
           ],
           "acceleration_xy_m_s2": [
             -0.2,
@@ -199,18 +203,18 @@
           "slope_azimuth_deg": 0.0,
           "caster_angle_deg": 0.0,
           "all_reactions_N": [
-            65.56628293476338,
-            85.7300720094659,
-            43.807789639430524
+            66.39364455130492,
+            86.72328785539248,
+            44.38637007091823
           ]
         },
         "max_case": {
-          "base_mass_kg": 9.895085945114776,
-          "gross_mass_kg": 19.895085945114776,
+          "base_mass_kg": 10.139731965310848,
+          "gross_mass_kg": 20.139731965310848,
           "cg_xyz_mm": [
-            -27.51318341312707,
-            -22.539550239381217,
-            245.44823604632043
+            -27.482654689055504,
+            -22.44796406716651,
+            244.41025942788713
           ],
           "acceleration_xy_m_s2": [
             0.2,
@@ -219,17 +223,17 @@
           "slope_azimuth_deg": 180.0,
           "caster_angle_deg": 180.0,
           "all_reactions_N": [
-            34.11314231393277,
-            54.276931388635305,
-            106.71407088109173
+            34.596464167532446,
+            54.92610747162003,
+            107.98073083846315
           ]
         }
       }
     },
-    "minimum_reaction_N": 26.74832832969072,
-    "maximum_drive_normal_N": 91.85926118966961,
-    "conservative_radial_comparison_N": 92.38395354881555,
-    "conservative_axial_comparison_N": 3.5811154701206593,
+    "minimum_reaction_N": 27.163644204553265,
+    "maximum_drive_normal_N": 92.90727729617302,
+    "conservative_radial_comparison_N": 93.43888531368475,
+    "conservative_axial_comparison_N": 3.6251517537559526,
     "equilibrium_max_abs_residual": {
       "force_N": 2.842170943040401e-14,
       "first_moment_Nmm": 5.4569682106375694e-12
@@ -238,21 +242,21 @@
     "radial_note": "Independent worst normal and total longitudinal load placed on one drive wheel; not a combined-load qualification",
     "operation_approved": false
   },
-  "motor_load_comparison_at_10kg_vehicle": {
-    "radial_N": 92.83635062827479,
+  "motor_load_comparison_at_reviewed_vehicle_mass": {
+    "radial_N": 94.99238919919027,
     "catalog_radial_N": 120,
-    "axial_N": 3.5999999999999996,
+    "axial_N": 3.69,
     "catalog_axial_N": 60
   },
-  "caster_normal_maximum_with_trail_tolerance_N": 107.98034831460672,
+  "caster_normal_maximum_with_trail_tolerance_N": 110.58656123595505,
   "caster_catalog_allowable_N": 300,
   "source": "https://shop.directdrive.com/pages/m0601c-111-specs",
   "source_checked_date": "2026-09-22",
   "payload_target_reduced": false,
-  "extra_vehicle_equipment_policy": "Battery, computer, cases, sensors and any future arm belong to the10kg vehicle budget. Cargo10kg does not provide a second allowance for an arm while still carrying10kg of goods.",
+  "extra_vehicle_equipment_policy": "Battery, computer, cases, sensors and any future arm are vehicle mass.10kg is a soft target; additions require a new measured mass/CG and wheel-load check. Cargo target stays10kg.",
   "mass_estimate_limitations": [
     "Vehicle not weighed; computer0.5kg and other electrical items are budgets, not a fully selected/measured assembly.",
-    "About105g headroom is arithmetic, not a sufficient demonstrated uncertainty reserve. Additions require substitutions/lightening and a new mass/CG check.",
+    "The10.5kg calculation envelope is a review assumption, not a new strict user weight limit or a measured uncertainty bound.",
     "Accepted reinforcement is retained. Do not remove required joints merely to meet the mass number."
   ],
   "assembly_strength_and_operation_qualified": false

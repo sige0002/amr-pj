@@ -1,12 +1,12 @@
 {
-  "revision": "D6.1",
+  "revision": "D6.2",
   "native_document": "AMR01_TwoStorey_D6",
-  "physical_parts": 275,
-  "native_solids": 279,
-  "STEP_solids": 279,
-  "native_volume_mm3": 3013708.143699175,
-  "STEP_delta_mm3": 0.10471026273444295,
-  "with_equipment_STEP_solids": 282,
+  "physical_parts": 300,
+  "native_solids": 304,
+  "STEP_solids": 304,
+  "native_volume_mm3": 3161816.7555564772,
+  "STEP_delta_mm3": 0.10469636647030711,
+  "with_equipment_STEP_solids": 307,
   "equipment_STEP_scope": "two selected power catalog envelopes and one unselected computer reservation",
   "quoted_files_SHA256": {
     "AMR_GridDeck_C45_D3.step": "c38862f7ac33c2f30bba198fce54ff1bcb22bd75820bd994dd8b4a5e7f5c0d4c",
@@ -205,12 +205,21 @@
   "continuous_conservative_service_envelopes_passed": true,
   "meshes": [
     {
+      "file": "SeamBeamPLA.stl",
+      "closed": true,
+      "size_mm": [
+        64.0,
+        100.0,
+        25.0
+      ]
+    },
+    {
       "file": "FloorPLA_0_0.stl",
       "closed": true,
       "size_mm": [
         229.8000030517578,
         149.8000030517578,
-        11.0
+        26.0
       ]
     },
     {
@@ -219,7 +228,7 @@
       "size_mm": [
         229.8000030517578,
         149.8000030517578,
-        11.0
+        26.0
       ]
     },
     {
@@ -228,7 +237,7 @@
       "size_mm": [
         229.8000030517578,
         149.8000030517578,
-        9.0
+        23.999999999999986
       ]
     },
     {
@@ -237,20 +246,22 @@
       "size_mm": [
         229.8000030517578,
         149.8000030517578,
-        9.0
+        24.0
       ]
     }
   ],
   "mass": {
     "source_D3_kg": 8.246366343915682,
-    "estimated_base_kg": 9.895085945114776,
-    "remaining_to_10kg_kg": 0.10491405488522432,
+    "estimated_base_kg": 10.139731965310848,
+    "remaining_to_10kg_kg": -0.13973196531084753,
     "electrical_total_kg": 2.153,
     "battery_kg": 0.68,
     "adapter_kg": 0.123,
     "new_straps_and_pads_allowance_kg": 0.18,
-    "total_solid_PLA_kg": 0.3816513694700097,
-    "added_metal_and_hardware_kg": 1.2926618270515282,
+    "total_solid_PLA_kg": 0.5538644046857231,
+    "added_metal_and_hardware_kg": 1.3650948120318869,
+    "upper_structure_metal_and_hardware_kg": 1.2926618270515282,
+    "floor_added_hardware_kg": 0.07243298498035845,
     "mass_overrides_kg": {
       "Upright3030_0": 0.084,
       "Upright3030_1": 0.084,

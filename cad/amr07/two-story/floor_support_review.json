@@ -1,0 +1,371 @@
+{
+  "revision": "D6.2",
+  "native_sha256": "84218f66a76dea4cd72f0051ab48b5192f7502a080d01252a60ac1c85c7e83bb",
+  "panels": [
+    {
+      "panel": "FloorPLA_0_0",
+      "fixing_count": 4,
+      "fixings": [
+        {
+          "panel": "FloorPLA_0_0",
+          "bolt": "CradleBolt_0",
+          "xy_mm": [
+            -25,
+            -135
+          ],
+          "support": "outer 400mm rail",
+          "thread": "M6",
+          "actual_head_or_washer_bearing_projected_area_mm2": 220.25706094393564,
+          "actual_rail_support_probe_area_mm2": 78.37506915926643
+        },
+        {
+          "panel": "FloorPLA_0_0",
+          "bolt": "ElectronicsBolt_0",
+          "xy_mm": [
+            -175,
+            -65
+          ],
+          "support": "inner 400mm rail",
+          "thread": "M6",
+          "actual_head_or_washer_bearing_projected_area_mm2": 220.25706094393564,
+          "actual_rail_support_probe_area_mm2": 78.37506915926635
+        },
+        {
+          "panel": "FloorPLA_0_0",
+          "bolt": "ElectronicsBolt_2",
+          "xy_mm": [
+            -215,
+            -20
+          ],
+          "support": "300mm end rail",
+          "thread": "M6",
+          "actual_head_or_washer_bearing_projected_area_mm2": 220.25706094393564,
+          "actual_rail_support_probe_area_mm2": 78.37506915925677
+        },
+        {
+          "panel": "FloorPLA_0_0",
+          "bolt": "FloorSeamBolt_0_0",
+          "xy_mm": [
+            -15,
+            -25
+          ],
+          "support": "seam beam, four M6 rail anchors",
+          "thread": "M4 countersunk",
+          "actual_head_or_washer_bearing_projected_area_mm2": 34.235610662260285,
+          "actual_rail_support_probe_area_mm2": null
+        }
+      ],
+      "fixing_spread_XY_mm": [
+        200,
+        115
+      ],
+      "beam_bearing_area_mm2": 1303.7956871918693
+    },
+    {
+      "panel": "FloorPLA_0_1",
+      "fixing_count": 4,
+      "fixings": [
+        {
+          "panel": "FloorPLA_0_1",
+          "bolt": "CradleBolt_1",
+          "xy_mm": [
+            -25,
+            135
+          ],
+          "support": "outer 400mm rail",
+          "thread": "M6",
+          "actual_head_or_washer_bearing_projected_area_mm2": 220.25706094257927,
+          "actual_rail_support_probe_area_mm2": 78.37506915926645
+        },
+        {
+          "panel": "FloorPLA_0_1",
+          "bolt": "ElectronicsBolt_1",
+          "xy_mm": [
+            -175,
+            65
+          ],
+          "support": "inner 400mm rail",
+          "thread": "M6",
+          "actual_head_or_washer_bearing_projected_area_mm2": 220.25706094257922,
+          "actual_rail_support_probe_area_mm2": 78.37506915926629
+        },
+        {
+          "panel": "FloorPLA_0_1",
+          "bolt": "ElectronicsBolt_3",
+          "xy_mm": [
+            -215,
+            20
+          ],
+          "support": "300mm end rail",
+          "thread": "M6",
+          "actual_head_or_washer_bearing_projected_area_mm2": 220.25706094257922,
+          "actual_rail_support_probe_area_mm2": 78.37506915925677
+        },
+        {
+          "panel": "FloorPLA_0_1",
+          "bolt": "FloorSeamBolt_0_1",
+          "xy_mm": [
+            -15,
+            25
+          ],
+          "support": "seam beam, four M6 rail anchors",
+          "thread": "M4 countersunk",
+          "actual_head_or_washer_bearing_projected_area_mm2": 34.235610662260285,
+          "actual_rail_support_probe_area_mm2": null
+        }
+      ],
+      "fixing_spread_XY_mm": [
+        200,
+        115
+      ],
+      "beam_bearing_area_mm2": 1303.795687191869
+    },
+    {
+      "panel": "FloorPLA_1_0",
+      "fixing_count": 4,
+      "fixings": [
+        {
+          "panel": "FloorPLA_1_0",
+          "bolt": "CradleBolt_2",
+          "xy_mm": [
+            25,
+            -135
+          ],
+          "support": "outer 400mm rail",
+          "thread": "M6",
+          "actual_head_or_washer_bearing_projected_area_mm2": 220.25706094320526,
+          "actual_rail_support_probe_area_mm2": 78.37506915926643
+        },
+        {
+          "panel": "FloorPLA_1_0",
+          "bolt": "FrontDeckBolt_0",
+          "xy_mm": [
+            175,
+            -65
+          ],
+          "support": "inner 400mm rail",
+          "thread": "M6",
+          "actual_head_or_washer_bearing_projected_area_mm2": 220.2570609432053,
+          "actual_rail_support_probe_area_mm2": 78.37506915926626
+        },
+        {
+          "panel": "FloorPLA_1_0",
+          "bolt": "FrontDeckBolt_2",
+          "xy_mm": [
+            215,
+            -20
+          ],
+          "support": "300mm end rail",
+          "thread": "M6",
+          "actual_head_or_washer_bearing_projected_area_mm2": 220.2570609432053,
+          "actual_rail_support_probe_area_mm2": 78.37506915925677
+        },
+        {
+          "panel": "FloorPLA_1_0",
+          "bolt": "FloorSeamBolt_1_0",
+          "xy_mm": [
+            15,
+            -25
+          ],
+          "support": "seam beam, four M6 rail anchors",
+          "thread": "M4 countersunk",
+          "actual_head_or_washer_bearing_projected_area_mm2": 34.235610662261706,
+          "actual_rail_support_probe_area_mm2": null
+        }
+      ],
+      "fixing_spread_XY_mm": [
+        200,
+        115
+      ],
+      "beam_bearing_area_mm2": 1303.7956871918684
+    },
+    {
+      "panel": "FloorPLA_1_1",
+      "fixing_count": 4,
+      "fixings": [
+        {
+          "panel": "FloorPLA_1_1",
+          "bolt": "CradleBolt_3",
+          "xy_mm": [
+            25,
+            135
+          ],
+          "support": "outer 400mm rail",
+          "thread": "M6",
+          "actual_head_or_washer_bearing_projected_area_mm2": 220.25706094320526,
+          "actual_rail_support_probe_area_mm2": 78.37506915926645
+        },
+        {
+          "panel": "FloorPLA_1_1",
+          "bolt": "FrontDeckBolt_1",
+          "xy_mm": [
+            175,
+            65
+          ],
+          "support": "inner 400mm rail",
+          "thread": "M6",
+          "actual_head_or_washer_bearing_projected_area_mm2": 220.25706094320526,
+          "actual_rail_support_probe_area_mm2": 78.37506915926622
+        },
+        {
+          "panel": "FloorPLA_1_1",
+          "bolt": "FrontDeckBolt_3",
+          "xy_mm": [
+            215,
+            20
+          ],
+          "support": "300mm end rail",
+          "thread": "M6",
+          "actual_head_or_washer_bearing_projected_area_mm2": 220.2570609432053,
+          "actual_rail_support_probe_area_mm2": 78.37506915925677
+        },
+        {
+          "panel": "FloorPLA_1_1",
+          "bolt": "FloorSeamBolt_1_1",
+          "xy_mm": [
+            15,
+            25
+          ],
+          "support": "seam beam, four M6 rail anchors",
+          "thread": "M4 countersunk",
+          "actual_head_or_washer_bearing_projected_area_mm2": 34.235610662261706,
+          "actual_rail_support_probe_area_mm2": null
+        }
+      ],
+      "fixing_spread_XY_mm": [
+        200,
+        115
+      ],
+      "beam_bearing_area_mm2": 1303.7956871918686
+    }
+  ],
+  "total_panel_fixings": 16,
+  "beam_anchors": [
+    {
+      "bolt": "SeamBeamBolt_0",
+      "rail_surface_xyz_mm": [
+        -18,
+        -50,
+        84
+      ],
+      "rail": "inner negative Y",
+      "actual_washer_bearing_area_mm2": 220.25706094327356
+    },
+    {
+      "bolt": "SeamBeamBolt_2",
+      "rail_surface_xyz_mm": [
+        18,
+        -50,
+        84
+      ],
+      "rail": "inner negative Y",
+      "actual_washer_bearing_area_mm2": 220.25706094327356
+    },
+    {
+      "bolt": "SeamBeamBolt_1",
+      "rail_surface_xyz_mm": [
+        -18,
+        50,
+        84
+      ],
+      "rail": "inner positive Y",
+      "actual_washer_bearing_area_mm2": 220.25706094327356
+    },
+    {
+      "bolt": "SeamBeamBolt_3",
+      "rail_surface_xyz_mm": [
+        18,
+        50,
+        84
+      ],
+      "rail": "inner positive Y",
+      "actual_washer_bearing_area_mm2": 220.25706094327356
+    }
+  ],
+  "beam_ends_supported": 2,
+  "beam_anchors_per_end": 2,
+  "assembly_tool_checks": [
+    {
+      "part": "SeamBeamBolt_0",
+      "step": "before panels and M4 screws",
+      "hits": []
+    },
+    {
+      "part": "SeamBeamBolt_1",
+      "step": "before panels and M4 screws",
+      "hits": []
+    },
+    {
+      "part": "SeamBeamBolt_2",
+      "step": "before panels and M4 screws",
+      "hits": []
+    },
+    {
+      "part": "SeamBeamBolt_3",
+      "step": "before panels and M4 screws",
+      "hits": []
+    },
+    {
+      "part": "FloorSeamNut_0_0",
+      "step": "M4 socket access from underside",
+      "hits": []
+    },
+    {
+      "part": "FloorSeamNut_0_1",
+      "step": "M4 socket access from underside",
+      "hits": []
+    },
+    {
+      "part": "FloorSeamNut_1_0",
+      "step": "M4 socket access from underside",
+      "hits": []
+    },
+    {
+      "part": "FloorSeamNut_1_1",
+      "step": "M4 socket access from underside",
+      "hits": []
+    }
+  ],
+  "beam_to_PC_belt_clearance_mm": 0.5,
+  "ribs_to_battery_belt_clearance_mm": 2.3000000000000007,
+  "original_unbraced_central_edge_overhang_mm": 49.8,
+  "new_edge_to_rib_mm": 14.6,
+  "short_term_elastic_screens": {
+    "panel_rib": {
+      "span_mm": 168,
+      "center_point_force_N": 50,
+      "area_mm2": 244.02000000000032,
+      "I_mm4": 4990.247935383543,
+      "stress_MPa": 5.044105854181755,
+      "deflection_mm_by_E_MPa": {
+        "1000": 1.0250971350991462,
+        "2750": 0.37276259458150773
+      },
+      "model": "simply supported variable-section rib;1mm strip integration includes end25mm taper;40mm floor flange credited"
+    },
+    "seam_beam": {
+      "span_mm": 100,
+      "center_point_force_N": 50,
+      "area_mm2": 255.99999999999991,
+      "I_mm4": 6477.083333332247,
+      "stress_MPa": 2.5028144097784892,
+      "deflection_mm_by_E_MPa": {
+        "1000": 0.16082341588938046,
+        "2750": 0.0584812421415929
+      },
+      "model": "simply supported beam; one centered point force; joint compliance and creep omitted"
+    }
+  },
+  "material_source": "https://store.bblcdn.com/s1/default/58b85d0f3db94878854a28fdb8a0006e/Bambu_PLA_Basic_Technical_Data_Sheet.pdf",
+  "material_basis": "Manufacturer bending modulus XY2750±160MPa.1000MPa is an assumed reduced-stiffness sensitivity, NOT a measured printed-direction modulus or long-term allowable.",
+  "load_basis": "50N on one rib, separately50N on seam beam. About twice the entire2.4kg lower-floor equipment budget; does NOT cover arbitrary cam-belt pretension.",
+  "required_prototype_checks": [
+    "Printed dimensions, countersink seating, nut engagement and driver/wrench access.",
+    "With electronics absent, gradually apply50N through a broad pad to each ribbed region and seam beam; inspect residual set and cracked layers.",
+    "Install representative equipment and just-snug belts; dwell at expected equipment temperature and inspect panel sag, countersink damage and bolt relaxation. Set allowable belt tension from test.",
+    "PLA clamp faces: do not apply a normal metal-joint M6 tightening torque. Qualify retention/preload and inspect periodically."
+  ],
+  "whole_floor_strength_factor_2_qualified": false,
+  "creep_qualified": false,
+  "scope": "Electronics shelf only. Upper cargo15kg/SF2 target belongs to separate metal structure; not a rating for these printed parts."
+}

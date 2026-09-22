@@ -1,5 +1,5 @@
 {
-  "revision": "D6.1",
+  "revision": "D6.2",
   "date": "2026-09-22",
   "source_revision": "099686bacaad0f72e8bc4ce15005cd708a5b2f83",
   "architecture": "1F battery/computer/power above base rails; 2F independent aluminum cargo deck",
@@ -47,6 +47,14 @@
   "lower_joint_brackets_per_post": 2,
   "upper_joint_brackets_per_post": 1,
   "reinforcement": "opposing X brackets at all four post bases; directional stiffness qualification still pending",
+  "vehicle_mass_target_kg": 10,
+  "vehicle_mass_target_is_hard_limit": false,
+  "floor_fasteners_per_panel": 4,
+  "floor_direct_M6_per_panel": 3,
+  "floor_seam_M4_per_panel": 1,
+  "floor_support": "PLA ribbed seam beam fixed to BOTH inner rails with two M6 per end; four panels with integral underside seam ribs",
+  "floor_beam_M6_qty": 4,
+  "floor_M4_countersunk_qty": 4,
   "deck_LWH_mm": [
     300,
     300,

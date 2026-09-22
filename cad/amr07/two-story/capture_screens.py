@@ -41,7 +41,7 @@ def save(name,zoom=.9):
     doc.recompute();view.fitAll();Gui.updateGui();QtWidgets.QApplication.processEvents()
     view.saveImage(str(HERE/('viewport-'+name+'.png')),1600,1100,'White')
     if zoom!=1:view.getCameraNode().height.setValue(view.getCameraNode().height.getValue()*zoom)
-    window.statusBar().showMessage('D6.1 | double brackets at four post bases | 1F: electronics | 2F: cargo233mm',0)
+    window.statusBar().showMessage('D6.2 | 4 fixings per floor panel | anchored seam beam | cargo233mm',0)
     Gui.updateGui();QtWidgets.QApplication.processEvents()
     assert window.grab().save(str(HERE/('cad-screen-'+name+'.png')))
 
@@ -81,8 +81,34 @@ for end,rear,target in [('Lower',True,(105,135,111)),('Upper',False,(124,135,187
     cam.nearDistance.setValue(1);cam.farDistance.setValue(2000)
     Gui.updateGui();QtWidgets.QApplication.processEvents()
     label='2xHBLFSN6 + 4xM6x12' if end=='Lower' else 'HBLFSN6 + 2xM6x12'
-    window.statusBar().showMessage('D6.1 '+end+' joint | '+label+' | direct metal end bearing',0)
+    window.statusBar().showMessage('D6.2 '+end+' joint | '+label+' | direct metal end bearing',0)
     Gui.updateGui();QtWidgets.QApplication.processEvents()
     assert window.grab().save(str(HERE/('cad-screen-frame-joint-'+end.lower()+'.png')))
+
+# Hide the upper storey/electronics so ALL16 shelf fixings are visible.
+normal()
+floor_bolts={f['bolt'] for f in r['floor_fixings']}
+floor_hardware=('CradleBolt_','ElectronicsBolt_','FrontDeckBolt_','LargeWasher_Cradle',
+                'LargeWasher_Electronics','LargeWasher_Front','SlotNut_Cradle_',
+                'SlotNut_Electronics_','SlotNut_FrontDeck_','FloorSeam','SeamBeam')
+colors=[(.28,.65,.69),(.43,.68,.83),(.81,.70,.39),(.66,.53,.79)]
+for o in features:
+    o.ViewObject.Visibility=o.Name.startswith(('Cross300_','Rail300_','Rail400_','Bracket_','FloorPLA_')+floor_hardware)
+    if o.Name.startswith('FloorPLA_'):
+        ix,iy=map(int,o.Name.split('_')[1:]);o.ViewObject.ShapeColor=colors[2*ix+iy]
+    if o.Name in floor_bolts or o.Name.startswith('LargeWasher_'):
+        o.ViewObject.ShapeColor=(.95,.32,.06)
+    if o.Name=='SeamBeamPLA':o.ViewObject.ShapeColor=(.9,.53,.12)
+view.viewTop();save('floor-fixings-top')
+# The lower view makes the four beam anchors and seam ribs inspectable.
+iso(rear=False,high=-1.2);save('floor-support-under')
+# Isolate the beam with both supporting inner rails and four flush M4 sets.
+normal()
+for o in features:
+    b=o.Shape.BoundBox
+    inner_rail=o.Name.startswith('Rail400_') and abs(abs((b.YMin+b.YMax)/2)-65)<.01
+    o.ViewObject.Visibility=inner_rail or o.Name.startswith(('SeamBeam','FloorSeam'))
+    if o.Name=='SeamBeamPLA':o.ViewObject.ShapeColor=(.90,.53,.12)
+view.viewBottom();save('seam-beam-anchors',.55)
 normal();iso(high=.55);view.fitAll();doc.recompute();doc.save()
-print('D6: nine actual FreeCAD GUI screenshots saved.')
+print('D6.2: twelve actual FreeCAD GUI screenshots saved.')
