@@ -1,42 +1,38 @@
-# AMR-01：D6.7 開閉天板・後方操作部
+# AMR-01：D6.8 フレーム直付けヒンジ・床支持の操作箱
 
-**格子穴のアルミ天板をトルクヒンジで横へ0〜90°開き、閉じたら蝶ボルト2本で固定する構成にしました。** 非常停止・手動ARM・主電源は後方へ配置。1階に電池・計算機、2階に荷物を置きます。
+**HG-TP20トルクヒンジを3030へ直接固定し、天板側は金属L金具で接続しました。開き止めはありません。** 非常停止箱・主電源箱はPLA床へ載せ、各4本のM4で上から固定します。
 
-**BOM：[Markdown概要](cad/amr07/hinged-deck/BOM.ja.md) ／ [全明細Markdown](cad/amr07/hinged-deck/BOM-details.ja.md) ／ [CSV](cad/amr07/hinged-deck/BOM.csv)** — 費用割合、購入パック、使用数、購入先を同じCSVから生成しています。
+**BOM：[費用割合・購入リスト](cad/amr07/direct-hinge/BOM.ja.md) ／ [全明細Markdown](cad/amr07/direct-hinge/BOM-details.ja.md) ／ [CSV](cad/amr07/direct-hinge/BOM.csv)**
 
-![FreeCAD実画面：天板を90°開いた状態](cad/amr07/hinged-deck/cad-screen-open-90.png)
+![FreeCAD実画面：全体](cad/amr07/direct-hinge/cad-screen-closed.png)
 
-![FreeCAD実画面による開閉GIF](cad/amr07/hinged-deck/cad-opening.gif)
-
-このGIFはCADの配置アニメーションです。動力学・強度・実機試験ではありません。
+![FreeCAD実画面：フレームへ直接固定するヒンジ](cad/amr07/direct-hinge/cad-screen-hinge-detail.png)
 
 | 項目 | 現行構成 |
 |---|---|
-| 天板 | 6061-T6、300×300×4mm、上面233mm。見積済み加工形状を維持 |
-| 開閉 | スガツネHG-TS15×2。溝固定用PLAアダプター、90°開き止め。空の天板のみ開く |
-| 閉鎖固定 | M6×15蝶ボルト2本＋金属座金。工具なしで外すねじ式。荷重は既存アルミレールで受ける |
-| 拡張用の穴 | 50mmピッチ36穴。ヒンジ取付が4穴を使用、2穴を覆い、30穴を残す |
-| 後方操作部 | IDEC XA1E-BV302R、amon3212 ARM、amon3214主電源。各ケースを4点固定 |
-| 電池交換 | 天板を閉じたまま、8mm持上げ後に後方220mm抜出し |
-| 計算機 | 1階の120×100×60mm・0.5kg予約。機種は未選定、取付面110mm |
-| 車体重量 | 推計10.927kg。10kgは目安。通常荷物10kgの設計目標を維持 |
-| 開閉天板の追加費用 | D6.6から4,188円増。ヒンジ、蝶ボルトと追加購入パック、PLA材料参考を含む |
-| 車体の途中小計 | 83,868円＋120.90 USD、記録済み参考為替で約102,882円＋未計上分 |
+| 荷台 | アルミ300×300×4mm、上面233mm。36格子穴＋ヒンジ用穴4個。取付空間検査で格子34か所が空く |
+| 開閉 | HG-TP20×2、固定葉は3030外側溝に金属接触で直付け。左右共通の50×50×22mm・壁4mmのL金具 |
+| 保持 | 空の天板1.201kg、最大モーメント1.621N·m。初期下限保持3.0N·m、比1.85。0〜90°を検査、開き止めなし |
+| 閉鎖 | M6蝶ボルト2本。下向き積載荷重は上段アルミレールへ流す |
+| 操作部 | 後方のPLA箱を床の一体座へ各4本のM4で固定。蓋裏リブで押下力を分散 |
+| 組立 | 金具は左右共通・通し穴のみ。天板とヒンジを机上で組み、最後にフレーム溝へ固定 |
+| 重量・積載 | 車体推計10.615kg。通常荷物10kg、静的構造比較15kg。実機試験前 |
+| 加工見積 | 新天板1枚＋L金具2個＋日本送料102.13 USD、参考約16,062円。担当者審査前の実自動見積 |
+| 費用 | 途中小計85,203円＋184.38 USD、記録済み参考為替で約114,200円＋未計上分 |
 
-空の天板一式約1.302kgに対し、最大重力モーメント1.923N·m、ヒンジ2個の初期下限2.4N·mを比較しています。荷物・固定ベルト・ロックを外して開閉します。PLA取付部の強度、クリープ、経年の保持力は実機検証前のため、印刷データは試作版です。
+![FreeCAD実画面の開閉GIF](cad/amr07/direct-hinge/cad-opening.gif)
 
-CADの0〜90°の開閉、荷物・配線予約、電池と計算機の交換、操作する手・工具の経路を検査しました。保存FCStd・STEP・18個のSTLも再検査済み。通常荷物10kg＋車体11.5kgまでの比較計算で、必要トルクは余裕込み0.401N·m/輪。平坦な屋内床、追加機械ブレーキなし。実機の積載走行・電源保護・停止試験は未実施です。
+空天板での保持、開閉、電池・計算機の取り出し、工具と操作する手の経路をCADで検査。開閉の近接部は1°刻みの検査で、実品公差を含む連続運動や実強度の認定ではありません。14個の試作STL、保存CADとSTEPも照合済み。GIFはCAD配置のアニメーションで、物理シミュレーションではありません。
 
-Picoは手持ちを流用。Amazonを優先しつつ送料込みで比較し、他店が安い品は残しました。Primeの個別適用は会員カートで未確認です。PC・専用基板・配線などは未計上、モーター価格も仮予算を含むため、小計を完成車の確定額とは扱いません。
+金属L金具2個の加工表示は63.38 USD（参考約9,968円）。費用増を含めてBOMに反映し、旧D6.7との差は約11,318円増です。PC・専用基板・配線などは未計上、モーター価格は仮予算を含むため完成車の確定額ではありません。Primeの最終配送条件は未確認です。
 
-- [設計理由・保持トルク・操作手順・追加費用](cad/amr07/hinged-deck/README.ja.md)
-- [重量・輪荷重・天板とPLAの計算範囲](cad/amr07/hinged-deck/PAYLOAD_REVIEW.ja.md)
-- [FCStd](cad/amr07/hinged-deck/AMR01_HingedDeck_D67.FCStd)／[機器外形付きSTEP](cad/amr07/hinged-deck/AMR01_HingedDeck_D67.step)／[試作STL一式ZIP](cad/amr07/hinged-deck/D67-print-prototypes.zip)
-- [設計要件](cad/amr07/hinged-deck/requirements.json)／[干渉検査](cad/amr07/hinged-deck/validation.json)／[保存物再検査](cad/amr07/hinged-deck/saved_artifact_validation.json)
-- [後方操作部・取付と配線経路](cad/amr07/control-layout/README.ja.md)
-- [Amazonと送料込み比較・価格証拠](cad/amr07/control-layout/PROCUREMENT.ja.md)／[既製モジュールと専用基板の製造比較](cad/amr07/control-layout/ELECTRONICS_OPTIONS.ja.md)
-- [制御・電源保護・停止試験](cad/amr07/ELECTRICAL_AND_VALIDATION.ja.md)
-- [同じ天板の実加工見積](cad/amr07/aluminum-direct-deck/README.ja.md)／[モーター金具の実見積](cad/amr07/MACHINING_QUOTE.ja.md)
+- [設計理由・ヒンジ保持計算・組立順序・CAD画像](cad/amr07/direct-hinge/README.ja.md)
+- [重量・輪荷重・L金具とPLA箱の比較計算](cad/amr07/direct-hinge/PAYLOAD_REVIEW.ja.md)
+- [実加工見積・投入STEP・証拠画面](cad/amr07/direct-hinge/MACHINING_QUOTE.ja.md)
+- [FCStd](cad/amr07/direct-hinge/AMR01_DirectHinge_D68.FCStd) ／ [機器外形付きSTEP](cad/amr07/direct-hinge/AMR01_DirectHinge_D68.step) ／ [試作STL14個ZIP](cad/amr07/direct-hinge/D68-print-prototypes.zip)
+- [要件](cad/amr07/direct-hinge/requirements.json) ／ [干渉検査](cad/amr07/direct-hinge/validation.json) ／ [保存物検査](cad/amr07/direct-hinge/saved_artifact_validation.json)
+- [制御・電源保護・停止試験](cad/amr07/ELECTRICAL_AND_VALIDATION.ja.md) ／ [製造・既製モジュール比較](cad/amr07/control-layout/ELECTRONICS_OPTIONS.ja.md)
+- [旧D6.7：不採用の樹脂ヒンジ支持を含む履歴](cad/amr07/hinged-deck/README.ja.md)
 
 ## 継承した機械構成とシミュレーション
 

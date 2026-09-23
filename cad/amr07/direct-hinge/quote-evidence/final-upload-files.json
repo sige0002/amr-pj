@@ -1,0 +1,18 @@
+[
+  {
+    "file": "quote-input/AMR_LidAngle_D68C.step",
+    "sha256": "b4b467c1241a4a0eb4f270e089accf9ca11f9a31a81cd5eae1309d6e43b7a40a"
+  },
+  {
+    "file": "quote-input/AMR_LidAngle_D68C.pdf",
+    "sha256": "0530c0a885ae96215787bf127e1143c4e3798fee7b6cfb15b9428b6bdd4e99ad"
+  },
+  {
+    "file": "quote-input/AMR_GridDeck_D68C.step",
+    "sha256": "f00304de17c088257c92abcfd596f50c49d6a75395b6023d93de5facbf8d38f8"
+  },
+  {
+    "file": "quote-input/AMR_GridDeck_D68C.pdf",
+    "sha256": "4fc7555686cd1dbd826641a3c7149fb91300cab6b78208a8d6220e8499f0dc66"
+  }
+]

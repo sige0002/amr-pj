@@ -1,0 +1,1862 @@
+{
+  "parameters": {
+    "revision": "D6.8",
+    "date": "2026-09-23",
+    "hinge": "Sugatsune HG-TP20",
+    "hinge_qty": 2,
+    "hinge_centers_x_mm": [
+      -105,
+      105
+    ],
+    "hinge_axis_yz_mm": [
+      156,
+      230
+    ],
+    "opening_deg": [
+      0,
+      90
+    ],
+    "hinge_nominal_each_Nm": 2,
+    "hinge_initial_tolerance_fraction": 0.25,
+    "plate_size_mm": [
+      300,
+      300,
+      4
+    ],
+    "plate_z_mm": [
+      229,
+      233
+    ],
+    "new_plate_holes_xy_mm": [
+      [
+        -120,
+        109
+      ],
+      [
+        -90,
+        109
+      ],
+      [
+        90,
+        109
+      ],
+      [
+        120,
+        109
+      ]
+    ],
+    "frame_mount": "Fixed metal hinge leaves on outer Y150 face; two M4 slot screws per hinge; no plastic or adapter under hinge.",
+    "lid_mount": "Two identical simple CNC aluminum angles; no opening stops. Review range0..90deg, held by torque hinges. No frame drilling; four D4.5 lid holes.",
+    "battery_harness_points": [
+      [
+        -160,
+        45,
+        181
+      ],
+      [
+        -160,
+        95,
+        181
+      ],
+      [
+        -178,
+        95,
+        181
+      ],
+      [
+        -178,
+        100,
+        181
+      ],
+      [
+        -195,
+        100,
+        181
+      ],
+      [
+        -195,
+        100,
+        172
+      ],
+      [
+        -195,
+        82,
+        172
+      ]
+    ],
+    "operator_side": "rear -X",
+    "estop": {
+      "part": "IDEC XA1E-BV302R",
+      "panel_center_mm": [
+        -197,
+        -103,
+        160.4
+      ]
+    },
+    "arm": {
+      "part": "amon 3212",
+      "panel_center_mm": [
+        -201,
+        -69,
+        160.4
+      ]
+    },
+    "main_power": {
+      "part": "amon 3214",
+      "panel_center_mm": [
+        -201,
+        64,
+        156.4
+      ]
+    },
+    "unload_before_open": true,
+    "production_release": false
+  },
+  "new_objects": [
+    "LidAngle_0",
+    "HingeFrameBolt_0_0",
+    "HingeFrameWasher_0_0",
+    "HingeFrameNut_0_0",
+    "HingeLidBolt_0_0",
+    "HingeLidTopWasher_0_0",
+    "HingeLidNut_0_0",
+    "AngleDeckBolt_0_0",
+    "AngleDeckWasher_0_0",
+    "AngleDeckNut_0_0",
+    "HingeFrameBolt_0_1",
+    "HingeFrameWasher_0_1",
+    "HingeFrameNut_0_1",
+    "HingeLidBolt_0_1",
+    "HingeLidTopWasher_0_1",
+    "HingeLidNut_0_1",
+    "AngleDeckBolt_0_1",
+    "AngleDeckWasher_0_1",
+    "AngleDeckNut_0_1",
+    "HGTP20_Fixed_0",
+    "HGTP20_Moving_0",
+    "LidAngle_1",
+    "HingeFrameBolt_1_0",
+    "HingeFrameWasher_1_0",
+    "HingeFrameNut_1_0",
+    "HingeLidBolt_1_0",
+    "HingeLidTopWasher_1_0",
+    "HingeLidNut_1_0",
+    "AngleDeckBolt_1_0",
+    "AngleDeckWasher_1_0",
+    "AngleDeckNut_1_0",
+    "HingeFrameBolt_1_1",
+    "HingeFrameWasher_1_1",
+    "HingeFrameNut_1_1",
+    "HingeLidBolt_1_1",
+    "HingeLidTopWasher_1_1",
+    "HingeLidNut_1_1",
+    "AngleDeckBolt_1_1",
+    "AngleDeckWasher_1_1",
+    "AngleDeckNut_1_1",
+    "HGTP20_Fixed_1",
+    "HGTP20_Moving_1",
+    "HatchLockWasher_0_0",
+    "HatchLockWasher_0_1",
+    "HatchLockWasher_0_2",
+    "HatchLockWingBolt_0",
+    "HatchLockWasher_1_0",
+    "HatchLockWasher_1_1",
+    "HatchLockWasher_1_2",
+    "HatchLockWingBolt_1",
+    "RearStopFloorNut_0",
+    "RearStopFloorBolt_0",
+    "RearStopFloorWasher_0",
+    "RearStopFloorNut_1",
+    "RearStopFloorBolt_1",
+    "RearStopFloorWasher_1",
+    "RearStopFloorNut_2",
+    "RearStopFloorBolt_2",
+    "RearStopFloorWasher_2",
+    "RearStopFloorNut_3",
+    "RearStopFloorBolt_3",
+    "RearStopFloorWasher_3",
+    "RearStopLidBolt_0",
+    "RearStopLidWasher_0",
+    "RearStopLidNut_0",
+    "RearStopLidBolt_1",
+    "RearStopLidWasher_1",
+    "RearStopLidNut_1",
+    "RearStopLidBolt_2",
+    "RearStopLidWasher_2",
+    "RearStopLidNut_2",
+    "RearStopLidBolt_3",
+    "RearStopLidWasher_3",
+    "RearStopLidNut_3",
+    "RearStopCasePLA",
+    "RearStopLidPLA",
+    "RearPowerFloorNut_0",
+    "RearPowerFloorBolt_0",
+    "RearPowerFloorWasher_0",
+    "RearPowerFloorNut_1",
+    "RearPowerFloorBolt_1",
+    "RearPowerFloorWasher_1",
+    "RearPowerFloorNut_2",
+    "RearPowerFloorBolt_2",
+    "RearPowerFloorWasher_2",
+    "RearPowerFloorNut_3",
+    "RearPowerFloorBolt_3",
+    "RearPowerFloorWasher_3",
+    "RearPowerLidBolt_0",
+    "RearPowerLidWasher_0",
+    "RearPowerLidNut_0",
+    "RearPowerLidBolt_1",
+    "RearPowerLidWasher_1",
+    "RearPowerLidNut_1",
+    "RearPowerLidBolt_2",
+    "RearPowerLidWasher_2",
+    "RearPowerLidNut_2",
+    "RearPowerLidBolt_3",
+    "RearPowerLidWasher_3",
+    "RearPowerLidNut_3",
+    "RearPowerCasePLA",
+    "RearPowerLidPLA",
+    "EStop_XA1E_BV302R",
+    "ARM_3212",
+    "MainPower_3214",
+    "RearStopSignalRoute",
+    "MainPowerInputRoute",
+    "MainPowerOutputRoute"
+  ],
+  "changed_objects": [
+    "AluminumDeckD3",
+    "FloorPLA_0_0",
+    "FloorPLA_0_1",
+    "BatteryModuleHarness"
+  ],
+  "removed_objects": [
+    "Reserved_EmergencyStop",
+    "BatteryVehicleHarness",
+    "DeckBolt0",
+    "DeckBolt1",
+    "DeckBolt2",
+    "DeckBolt3",
+    "DeckBolt4",
+    "DeckBolt5",
+    "DeckSlotNut1",
+    "DeckSlotNut2",
+    "DeckSlotNut3",
+    "DeckSlotNut5"
+  ],
+  "moving_parts": [
+    "LidAngle_0",
+    "HingeLidBolt_0_0",
+    "HingeLidTopWasher_0_0",
+    "HingeLidNut_0_0",
+    "AngleDeckBolt_0_0",
+    "AngleDeckWasher_0_0",
+    "AngleDeckNut_0_0",
+    "HingeLidBolt_0_1",
+    "HingeLidTopWasher_0_1",
+    "HingeLidNut_0_1",
+    "AngleDeckBolt_0_1",
+    "AngleDeckWasher_0_1",
+    "AngleDeckNut_0_1",
+    "HGTP20_Moving_0",
+    "LidAngle_1",
+    "HingeLidBolt_1_0",
+    "HingeLidTopWasher_1_0",
+    "HingeLidNut_1_0",
+    "AngleDeckBolt_1_0",
+    "AngleDeckWasher_1_0",
+    "AngleDeckNut_1_0",
+    "HingeLidBolt_1_1",
+    "HingeLidTopWasher_1_1",
+    "HingeLidNut_1_1",
+    "AngleDeckBolt_1_1",
+    "AngleDeckWasher_1_1",
+    "AngleDeckNut_1_1",
+    "HGTP20_Moving_1",
+    "AluminumDeckD3",
+    "PrintedStopXN",
+    "PrintedStopXP",
+    "PrintedStopYN",
+    "PrintedStopYP",
+    "StopBolt0",
+    "StopWasher0",
+    "StopNut0",
+    "StopBolt1",
+    "StopWasher1",
+    "StopNut1",
+    "StopBolt2",
+    "StopWasher2",
+    "StopNut2",
+    "StopBolt3",
+    "StopWasher3",
+    "StopNut3",
+    "StopBolt4",
+    "StopWasher4",
+    "StopNut4",
+    "StopBolt5",
+    "StopWasher5",
+    "StopNut5",
+    "StopBolt6",
+    "StopWasher6",
+    "StopNut6",
+    "StopBolt7",
+    "StopWasher7",
+    "StopNut7"
+  ],
+  "released_before_open": [
+    "HatchLockWasher_0_0",
+    "HatchLockWasher_0_1",
+    "HatchLockWasher_0_2",
+    "HatchLockWingBolt_0",
+    "HatchLockWasher_1_0",
+    "HatchLockWasher_1_1",
+    "HatchLockWasher_1_2",
+    "HatchLockWingBolt_1",
+    "StrapRouteX",
+    "StrapRouteY",
+    "CargoEnvelopeD3"
+  ],
+  "frame_mounts": [
+    {
+      "bolt": "HingeFrameBolt_0_0",
+      "xyz": [
+        -120,
+        150,
+        214
+      ],
+      "slot_projection_mm": 7,
+      "nominal_thread_overlap_mm": 5.8,
+      "slot_floor_clearance_mm": 2
+    },
+    {
+      "bolt": "HingeFrameBolt_0_1",
+      "xyz": [
+        -90,
+        150,
+        214
+      ],
+      "slot_projection_mm": 7,
+      "nominal_thread_overlap_mm": 5.8,
+      "slot_floor_clearance_mm": 2
+    },
+    {
+      "bolt": "HingeFrameBolt_1_0",
+      "xyz": [
+        90,
+        150,
+        214
+      ],
+      "slot_projection_mm": 7,
+      "nominal_thread_overlap_mm": 5.8,
+      "slot_floor_clearance_mm": 2
+    },
+    {
+      "bolt": "HingeFrameBolt_1_1",
+      "xyz": [
+        120,
+        150,
+        214
+      ],
+      "slot_projection_mm": 7,
+      "nominal_thread_overlap_mm": 5.8,
+      "slot_floor_clearance_mm": 2
+    }
+  ],
+  "case_mounts": [
+    {
+      "case": "RearStop",
+      "panel": "FloorPLA_0_0",
+      "bolt": "RearStopFloorBolt_0",
+      "xy_mm": [
+        -220,
+        -107
+      ],
+      "thread_engagement_mm": 3.2,
+      "tip_z_mm": 101.4,
+      "roof_above_pocket_mm": 3.5
+    },
+    {
+      "case": "RearStop",
+      "panel": "FloorPLA_0_0",
+      "bolt": "RearStopFloorBolt_1",
+      "xy_mm": [
+        -172,
+        -107
+      ],
+      "thread_engagement_mm": 3.2,
+      "tip_z_mm": 101.4,
+      "roof_above_pocket_mm": 3.5
+    },
+    {
+      "case": "RearStop",
+      "panel": "FloorPLA_0_0",
+      "bolt": "RearStopFloorBolt_2",
+      "xy_mm": [
+        -220,
+        -63
+      ],
+      "thread_engagement_mm": 3.2,
+      "tip_z_mm": 101.4,
+      "roof_above_pocket_mm": 3.5
+    },
+    {
+      "case": "RearStop",
+      "panel": "FloorPLA_0_0",
+      "bolt": "RearStopFloorBolt_3",
+      "xy_mm": [
+        -172,
+        -63
+      ],
+      "thread_engagement_mm": 3.2,
+      "tip_z_mm": 101.4,
+      "roof_above_pocket_mm": 3.5
+    },
+    {
+      "case": "RearPower",
+      "panel": "FloorPLA_0_1",
+      "bolt": "RearPowerFloorBolt_0",
+      "xy_mm": [
+        -220,
+        58
+      ],
+      "thread_engagement_mm": 3.2,
+      "tip_z_mm": 101.4,
+      "roof_above_pocket_mm": 3.5
+    },
+    {
+      "case": "RearPower",
+      "panel": "FloorPLA_0_1",
+      "bolt": "RearPowerFloorBolt_1",
+      "xy_mm": [
+        -172,
+        58
+      ],
+      "thread_engagement_mm": 3.2,
+      "tip_z_mm": 101.4,
+      "roof_above_pocket_mm": 3.5
+    },
+    {
+      "case": "RearPower",
+      "panel": "FloorPLA_0_1",
+      "bolt": "RearPowerFloorBolt_2",
+      "xy_mm": [
+        -220,
+        70
+      ],
+      "thread_engagement_mm": 3.2,
+      "tip_z_mm": 101.4,
+      "roof_above_pocket_mm": 3.5
+    },
+    {
+      "case": "RearPower",
+      "panel": "FloorPLA_0_1",
+      "bolt": "RearPowerFloorBolt_3",
+      "xy_mm": [
+        -172,
+        70
+      ],
+      "thread_engagement_mm": 3.2,
+      "tip_z_mm": 101.4,
+      "roof_above_pocket_mm": 3.5
+    }
+  ],
+  "physical_parts": 369,
+  "retained_shapes_BRep_equal": true,
+  "torque": {
+    "empty_lid_mass_kg": 1.2007047863144433,
+    "closed_moment_Nm": 1.620744412289105,
+    "vertical_CG_component_Nm": -0.027590522369600284,
+    "maximum_gravity_moment_Nm": 1.620744412289105,
+    "maximum_angle_deg": 0.0,
+    "pair_nominal_Nm": 4,
+    "pair_initial_min_Nm": 3,
+    "pair_initial_max_Nm": 5,
+    "minimum_initial_hold_ratio": 1.8510012912911196,
+    "tangential_open_force_max_N": 21.636419648003614
+  },
+  "mass": {
+    "estimated_base_kg": 10.615076958402836,
+    "source_kg": 10.067687656632284,
+    "total_solid_PLA_kg": 0.887496598898364,
+    "ledger": [
+      {
+        "name": "LidAngle_0",
+        "mass_kg": 0.03629367491813202,
+        "center_mm": [
+          -105.0,
+          131.23954754046343,
+          237.86103134136226
+        ]
+      },
+      {
+        "name": "HingeFrameBolt_0_0",
+        "mass_kg": 0.0021948737074305095,
+        "center_mm": [
+          -120.0,
+          151.85393258426967,
+          214.0
+        ]
+      },
+      {
+        "name": "HingeFrameWasher_0_0",
+        "mass_kg": 0.000762965228355408,
+        "center_mm": [
+          -120.00000000000003,
+          152.5,
+          213.99999999999997
+        ]
+      },
+      {
+        "name": "HingeFrameNut_0_0",
+        "mass_kg": 0.0046998450878849365,
+        "center_mm": [
+          -120.0,
+          145.26653020328175,
+          214.0
+        ]
+      },
+      {
+        "name": "HingeLidBolt_0_0",
+        "mass_kg": 0.0027867497633668266,
+        "center_mm": [
+          -120.0,
+          149.33628318584073,
+          246.0
+        ]
+      },
+      {
+        "name": "HingeLidTopWasher_0_0",
+        "mass_kg": 0.000762965228355408,
+        "center_mm": [
+          -120.00000000000003,
+          152.5,
+          245.99999999999994
+        ]
+      },
+      {
+        "name": "HingeLidNut_0_0",
+        "mass_kg": 0.0007179502281196348,
+        "center_mm": [
+          -120.0,
+          144.4,
+          245.99999999999997
+        ]
+      },
+      {
+        "name": "AngleDeckBolt_0_0",
+        "mass_kg": 0.002786749763366825,
+        "center_mm": [
+          -120.00000000000001,
+          109.00000000000001,
+          233.3362831858407
+        ]
+      },
+      {
+        "name": "AngleDeckWasher_0_0",
+        "mass_kg": 0.0007629652283554084,
+        "center_mm": [
+          -119.99999999999997,
+          108.99999999999999,
+          228.49999999999994
+        ]
+      },
+      {
+        "name": "AngleDeckNut_0_0",
+        "mass_kg": 0.0007179502281196347,
+        "center_mm": [
+          -120.0,
+          109.00000000000001,
+          226.40000000000003
+        ]
+      },
+      {
+        "name": "HingeFrameBolt_0_1",
+        "mass_kg": 0.0021948737074305095,
+        "center_mm": [
+          -90.00000000000001,
+          151.85393258426967,
+          214.0
+        ]
+      },
+      {
+        "name": "HingeFrameWasher_0_1",
+        "mass_kg": 0.000762965228355408,
+        "center_mm": [
+          -90.0,
+          152.5,
+          213.99999999999997
+        ]
+      },
+      {
+        "name": "HingeFrameNut_0_1",
+        "mass_kg": 0.0046998450878849365,
+        "center_mm": [
+          -90.0,
+          145.26653020328175,
+          214.0
+        ]
+      },
+      {
+        "name": "HingeLidBolt_0_1",
+        "mass_kg": 0.0027867497633668266,
+        "center_mm": [
+          -90.00000000000001,
+          149.33628318584073,
+          246.0
+        ]
+      },
+      {
+        "name": "HingeLidTopWasher_0_1",
+        "mass_kg": 0.000762965228355408,
+        "center_mm": [
+          -90.0,
+          152.5,
+          245.99999999999994
+        ]
+      },
+      {
+        "name": "HingeLidNut_0_1",
+        "mass_kg": 0.0007179502281196346,
+        "center_mm": [
+          -90.0,
+          144.4,
+          246.00000000000003
+        ]
+      },
+      {
+        "name": "AngleDeckBolt_0_1",
+        "mass_kg": 0.002786749763366825,
+        "center_mm": [
+          -90.0,
+          109.00000000000001,
+          233.3362831858407
+        ]
+      },
+      {
+        "name": "AngleDeckWasher_0_1",
+        "mass_kg": 0.0007629652283554084,
+        "center_mm": [
+          -90.00000000000001,
+          108.99999999999999,
+          228.49999999999994
+        ]
+      },
+      {
+        "name": "AngleDeckNut_0_1",
+        "mass_kg": 0.0007179502281196347,
+        "center_mm": [
+          -90.0,
+          109.00000000000001,
+          226.40000000000003
+        ]
+      },
+      {
+        "name": "HGTP20_Fixed_0",
+        "mass_kg": 0.03,
+        "center_mm": [
+          -104.99999999999993,
+          153.0645379028633,
+          221.2071155417495
+        ]
+      },
+      {
+        "name": "HGTP20_Moving_0",
+        "mass_kg": 0.03,
+        "center_mm": [
+          -105.00000000000003,
+          154.39153318766296,
+          234.50987535351504
+        ]
+      },
+      {
+        "name": "LidAngle_1",
+        "mass_kg": 0.03629367491813202,
+        "center_mm": [
+          105.0,
+          131.23954754046343,
+          237.86103134136226
+        ]
+      },
+      {
+        "name": "HingeFrameBolt_1_0",
+        "mass_kg": 0.0021948737074305095,
+        "center_mm": [
+          90.00000000000001,
+          151.85393258426967,
+          214.0
+        ]
+      },
+      {
+        "name": "HingeFrameWasher_1_0",
+        "mass_kg": 0.000762965228355408,
+        "center_mm": [
+          90.0,
+          152.5,
+          213.99999999999997
+        ]
+      },
+      {
+        "name": "HingeFrameNut_1_0",
+        "mass_kg": 0.0046998450878849365,
+        "center_mm": [
+          90.0,
+          145.26653020328175,
+          214.0
+        ]
+      },
+      {
+        "name": "HingeLidBolt_1_0",
+        "mass_kg": 0.0027867497633668266,
+        "center_mm": [
+          90.00000000000001,
+          149.33628318584073,
+          246.0
+        ]
+      },
+      {
+        "name": "HingeLidTopWasher_1_0",
+        "mass_kg": 0.000762965228355408,
+        "center_mm": [
+          90.0,
+          152.5,
+          245.99999999999994
+        ]
+      },
+      {
+        "name": "HingeLidNut_1_0",
+        "mass_kg": 0.0007179502281196346,
+        "center_mm": [
+          90.0,
+          144.4,
+          246.00000000000003
+        ]
+      },
+      {
+        "name": "AngleDeckBolt_1_0",
+        "mass_kg": 0.002786749763366825,
+        "center_mm": [
+          90.00000000000001,
+          109.00000000000001,
+          233.3362831858407
+        ]
+      },
+      {
+        "name": "AngleDeckWasher_1_0",
+        "mass_kg": 0.0007629652283554084,
+        "center_mm": [
+          90.0,
+          108.99999999999999,
+          228.49999999999994
+        ]
+      },
+      {
+        "name": "AngleDeckNut_1_0",
+        "mass_kg": 0.0007179502281196348,
+        "center_mm": [
+          90.0,
+          109.0,
+          226.39999999999998
+        ]
+      },
+      {
+        "name": "HingeFrameBolt_1_1",
+        "mass_kg": 0.0021948737074305095,
+        "center_mm": [
+          120.0,
+          151.85393258426967,
+          214.0
+        ]
+      },
+      {
+        "name": "HingeFrameWasher_1_1",
+        "mass_kg": 0.000762965228355408,
+        "center_mm": [
+          120.00000000000003,
+          152.5,
+          213.99999999999997
+        ]
+      },
+      {
+        "name": "HingeFrameNut_1_1",
+        "mass_kg": 0.0046998450878849365,
+        "center_mm": [
+          120.0,
+          145.26653020328175,
+          214.0
+        ]
+      },
+      {
+        "name": "HingeLidBolt_1_1",
+        "mass_kg": 0.0027867497633668266,
+        "center_mm": [
+          120.0,
+          149.33628318584073,
+          246.0
+        ]
+      },
+      {
+        "name": "HingeLidTopWasher_1_1",
+        "mass_kg": 0.000762965228355408,
+        "center_mm": [
+          120.00000000000003,
+          152.5,
+          245.99999999999994
+        ]
+      },
+      {
+        "name": "HingeLidNut_1_1",
+        "mass_kg": 0.0007179502281196348,
+        "center_mm": [
+          120.0,
+          144.4,
+          245.99999999999997
+        ]
+      },
+      {
+        "name": "AngleDeckBolt_1_1",
+        "mass_kg": 0.002786749763366825,
+        "center_mm": [
+          120.00000000000001,
+          109.00000000000001,
+          233.3362831858407
+        ]
+      },
+      {
+        "name": "AngleDeckWasher_1_1",
+        "mass_kg": 0.0007629652283554084,
+        "center_mm": [
+          119.99999999999999,
+          108.99999999999999,
+          228.49999999999994
+        ]
+      },
+      {
+        "name": "AngleDeckNut_1_1",
+        "mass_kg": 0.0007179502281196347,
+        "center_mm": [
+          120.0,
+          109.00000000000001,
+          226.40000000000003
+        ]
+      },
+      {
+        "name": "HGTP20_Fixed_1",
+        "mass_kg": 0.03,
+        "center_mm": [
+          105.00000000000007,
+          153.0645379028633,
+          221.20711554174943
+        ]
+      },
+      {
+        "name": "HGTP20_Moving_1",
+        "mass_kg": 0.03,
+        "center_mm": [
+          104.99999999999999,
+          154.39153318766296,
+          234.50987535351504
+        ]
+      },
+      {
+        "name": "HatchLockWasher_0_0",
+        "mass_kg": 0.0017370945704172631,
+        "center_mm": [
+          -104.99999999999997,
+          -135.0,
+          233.5
+        ]
+      },
+      {
+        "name": "HatchLockWasher_0_1",
+        "mass_kg": 0.0017370945704172631,
+        "center_mm": [
+          -104.99999999999997,
+          -135.0,
+          234.50000000000006
+        ]
+      },
+      {
+        "name": "HatchLockWasher_0_2",
+        "mass_kg": 0.0017370945704172631,
+        "center_mm": [
+          -104.99999999999997,
+          -135.0,
+          235.5
+        ]
+      },
+      {
+        "name": "HatchLockWingBolt_0",
+        "mass_kg": 0.013342915489442773,
+        "center_mm": [
+          -105.00000000000003,
+          -135.00000000000003,
+          239.23142629034143
+        ]
+      },
+      {
+        "name": "HatchLockWasher_1_0",
+        "mass_kg": 0.0017370945704172631,
+        "center_mm": [
+          105.0,
+          -135.0,
+          233.5
+        ]
+      },
+      {
+        "name": "HatchLockWasher_1_1",
+        "mass_kg": 0.0017370945704172631,
+        "center_mm": [
+          105.0,
+          -135.0,
+          234.50000000000006
+        ]
+      },
+      {
+        "name": "HatchLockWasher_1_2",
+        "mass_kg": 0.0017370945704172631,
+        "center_mm": [
+          105.0,
+          -135.0,
+          235.5
+        ]
+      },
+      {
+        "name": "HatchLockWingBolt_1",
+        "mass_kg": 0.013342915489442773,
+        "center_mm": [
+          105.00000000000003,
+          -135.00000000000003,
+          239.23142629034143
+        ]
+      },
+      {
+        "name": "RearStopFloorNut_0",
+        "mass_kg": 0.0007179502281196364,
+        "center_mm": [
+          -220.0,
+          -107.0,
+          104.2
+        ]
+      },
+      {
+        "name": "RearStopFloorBolt_0",
+        "mass_kg": 0.002786749763366827,
+        "center_mm": [
+          -219.99999999999997,
+          -106.99999999999999,
+          113.7362831858407
+        ]
+      },
+      {
+        "name": "RearStopFloorWasher_0",
+        "mass_kg": 0.000762965228355408,
+        "center_mm": [
+          -220.0,
+          -107.0,
+          116.9
+        ]
+      },
+      {
+        "name": "RearStopFloorNut_1",
+        "mass_kg": 0.0007179502281196363,
+        "center_mm": [
+          -172.0,
+          -107.0,
+          104.19999999999999
+        ]
+      },
+      {
+        "name": "RearStopFloorBolt_1",
+        "mass_kg": 0.002786749763366827,
+        "center_mm": [
+          -172.0,
+          -106.99999999999999,
+          113.7362831858407
+        ]
+      },
+      {
+        "name": "RearStopFloorWasher_1",
+        "mass_kg": 0.000762965228355408,
+        "center_mm": [
+          -172.00000000000003,
+          -107.0,
+          116.9
+        ]
+      },
+      {
+        "name": "RearStopFloorNut_2",
+        "mass_kg": 0.0007179502281196362,
+        "center_mm": [
+          -220.0,
+          -63.0,
+          104.19999999999999
+        ]
+      },
+      {
+        "name": "RearStopFloorBolt_2",
+        "mass_kg": 0.002786749763366827,
+        "center_mm": [
+          -220.00000000000003,
+          -63.0,
+          113.7362831858407
+        ]
+      },
+      {
+        "name": "RearStopFloorWasher_2",
+        "mass_kg": 0.0007629652283554081,
+        "center_mm": [
+          -219.99999999999997,
+          -63.0,
+          116.9
+        ]
+      },
+      {
+        "name": "RearStopFloorNut_3",
+        "mass_kg": 0.000717950228119636,
+        "center_mm": [
+          -172.0,
+          -63.0,
+          104.19999999999999
+        ]
+      },
+      {
+        "name": "RearStopFloorBolt_3",
+        "mass_kg": 0.002786749763366827,
+        "center_mm": [
+          -172.0,
+          -63.0,
+          113.7362831858407
+        ]
+      },
+      {
+        "name": "RearStopFloorWasher_3",
+        "mass_kg": 0.0007629652283554081,
+        "center_mm": [
+          -172.0,
+          -63.0,
+          116.9
+        ]
+      },
+      {
+        "name": "RearStopLidBolt_0",
+        "mass_kg": 0.0027867497633668266,
+        "center_mm": [
+          -223.0,
+          -117.0,
+          157.7362831858407
+        ]
+      },
+      {
+        "name": "RearStopLidWasher_0",
+        "mass_kg": 0.0007629652283554081,
+        "center_mm": [
+          -222.99999999999997,
+          -117.0,
+          160.9
+        ]
+      },
+      {
+        "name": "RearStopLidNut_0",
+        "mass_kg": 0.0007179502281196353,
+        "center_mm": [
+          -222.99999999999997,
+          -117.0,
+          149.8
+        ]
+      },
+      {
+        "name": "RearStopLidBolt_1",
+        "mass_kg": 0.0027867497633668266,
+        "center_mm": [
+          -169.00000000000003,
+          -117.0,
+          157.7362831858407
+        ]
+      },
+      {
+        "name": "RearStopLidWasher_1",
+        "mass_kg": 0.0007629652283554081,
+        "center_mm": [
+          -169.0,
+          -117.0,
+          160.9
+        ]
+      },
+      {
+        "name": "RearStopLidNut_1",
+        "mass_kg": 0.0007179502281196351,
+        "center_mm": [
+          -169.0,
+          -117.0,
+          149.8
+        ]
+      },
+      {
+        "name": "RearStopLidBolt_2",
+        "mass_kg": 0.002786749763366827,
+        "center_mm": [
+          -223.0,
+          -53.000000000000014,
+          157.73628318584073
+        ]
+      },
+      {
+        "name": "RearStopLidWasher_2",
+        "mass_kg": 0.0007629652283554083,
+        "center_mm": [
+          -222.99999999999997,
+          -53.0,
+          160.89999999999998
+        ]
+      },
+      {
+        "name": "RearStopLidNut_2",
+        "mass_kg": 0.0007179502281196352,
+        "center_mm": [
+          -223.00000000000003,
+          -53.0,
+          149.8
+        ]
+      },
+      {
+        "name": "RearStopLidBolt_3",
+        "mass_kg": 0.002786749763366827,
+        "center_mm": [
+          -169.00000000000003,
+          -53.000000000000014,
+          157.73628318584073
+        ]
+      },
+      {
+        "name": "RearStopLidWasher_3",
+        "mass_kg": 0.0007629652283554083,
+        "center_mm": [
+          -169.0,
+          -53.0,
+          160.89999999999998
+        ]
+      },
+      {
+        "name": "RearStopLidNut_3",
+        "mass_kg": 0.0007179502281196351,
+        "center_mm": [
+          -169.0,
+          -53.0,
+          149.8
+        ]
+      },
+      {
+        "name": "RearStopCasePLA",
+        "mass_kg": 0.07979939420728084,
+        "center_mm": [
+          -196.0814493395272,
+          -84.99752863438647,
+          124.42898030888601
+        ]
+      },
+      {
+        "name": "RearStopLidPLA",
+        "mass_kg": 0.02826492389794509,
+        "center_mm": [
+          -196.28666654124785,
+          -86.41186601016598,
+          156.3166295888483
+        ]
+      },
+      {
+        "name": "RearPowerFloorNut_0",
+        "mass_kg": 0.0007179502281196364,
+        "center_mm": [
+          -220.0,
+          58.00000000000001,
+          104.2
+        ]
+      },
+      {
+        "name": "RearPowerFloorBolt_0",
+        "mass_kg": 0.0027867497633668275,
+        "center_mm": [
+          -220.00000000000003,
+          58.00000000000001,
+          113.73628318584072
+        ]
+      },
+      {
+        "name": "RearPowerFloorWasher_0",
+        "mass_kg": 0.0007629652283554081,
+        "center_mm": [
+          -219.99999999999997,
+          58.00000000000001,
+          116.9
+        ]
+      },
+      {
+        "name": "RearPowerFloorNut_1",
+        "mass_kg": 0.0007179502281196363,
+        "center_mm": [
+          -172.0,
+          58.0,
+          104.19999999999999
+        ]
+      },
+      {
+        "name": "RearPowerFloorBolt_1",
+        "mass_kg": 0.0027867497633668275,
+        "center_mm": [
+          -172.0,
+          58.00000000000001,
+          113.73628318584072
+        ]
+      },
+      {
+        "name": "RearPowerFloorWasher_1",
+        "mass_kg": 0.0007629652283554081,
+        "center_mm": [
+          -172.0,
+          58.00000000000001,
+          116.9
+        ]
+      },
+      {
+        "name": "RearPowerFloorNut_2",
+        "mass_kg": 0.0007179502281196364,
+        "center_mm": [
+          -220.0,
+          70.0,
+          104.2
+        ]
+      },
+      {
+        "name": "RearPowerFloorBolt_2",
+        "mass_kg": 0.002786749763366827,
+        "center_mm": [
+          -219.99999999999997,
+          70.0,
+          113.7362831858407
+        ]
+      },
+      {
+        "name": "RearPowerFloorWasher_2",
+        "mass_kg": 0.000762965228355408,
+        "center_mm": [
+          -220.0,
+          70.00000000000001,
+          116.9
+        ]
+      },
+      {
+        "name": "RearPowerFloorNut_3",
+        "mass_kg": 0.0007179502281196363,
+        "center_mm": [
+          -172.0,
+          70.0,
+          104.19999999999999
+        ]
+      },
+      {
+        "name": "RearPowerFloorBolt_3",
+        "mass_kg": 0.002786749763366827,
+        "center_mm": [
+          -172.0,
+          70.0,
+          113.7362831858407
+        ]
+      },
+      {
+        "name": "RearPowerFloorWasher_3",
+        "mass_kg": 0.000762965228355408,
+        "center_mm": [
+          -172.00000000000003,
+          70.00000000000001,
+          116.9
+        ]
+      },
+      {
+        "name": "RearPowerLidBolt_0",
+        "mass_kg": 0.002786749763366827,
+        "center_mm": [
+          -223.0,
+          48.00000000000001,
+          153.73628318584073
+        ]
+      },
+      {
+        "name": "RearPowerLidWasher_0",
+        "mass_kg": 0.0007629652283554083,
+        "center_mm": [
+          -222.99999999999997,
+          47.999999999999986,
+          156.9
+        ]
+      },
+      {
+        "name": "RearPowerLidNut_0",
+        "mass_kg": 0.0007179502281196352,
+        "center_mm": [
+          -223.00000000000003,
+          48.0,
+          145.8
+        ]
+      },
+      {
+        "name": "RearPowerLidBolt_1",
+        "mass_kg": 0.002786749763366827,
+        "center_mm": [
+          -169.00000000000003,
+          48.00000000000001,
+          153.73628318584073
+        ]
+      },
+      {
+        "name": "RearPowerLidWasher_1",
+        "mass_kg": 0.0007629652283554083,
+        "center_mm": [
+          -169.0,
+          47.999999999999986,
+          156.9
+        ]
+      },
+      {
+        "name": "RearPowerLidNut_1",
+        "mass_kg": 0.0007179502281196351,
+        "center_mm": [
+          -169.0,
+          48.0,
+          145.8
+        ]
+      },
+      {
+        "name": "RearPowerLidBolt_2",
+        "mass_kg": 0.0027867497633668266,
+        "center_mm": [
+          -223.0,
+          79.99999999999999,
+          153.73628318584073
+        ]
+      },
+      {
+        "name": "RearPowerLidWasher_2",
+        "mass_kg": 0.0007629652283554081,
+        "center_mm": [
+          -222.99999999999997,
+          79.99999999999999,
+          156.9
+        ]
+      },
+      {
+        "name": "RearPowerLidNut_2",
+        "mass_kg": 0.0007179502281196353,
+        "center_mm": [
+          -222.99999999999997,
+          80.0,
+          145.8
+        ]
+      },
+      {
+        "name": "RearPowerLidBolt_3",
+        "mass_kg": 0.0027867497633668266,
+        "center_mm": [
+          -169.00000000000003,
+          79.99999999999999,
+          153.73628318584073
+        ]
+      },
+      {
+        "name": "RearPowerLidWasher_3",
+        "mass_kg": 0.0007629652283554081,
+        "center_mm": [
+          -169.0,
+          79.99999999999999,
+          156.9
+        ]
+      },
+      {
+        "name": "RearPowerLidNut_3",
+        "mass_kg": 0.0007179502281196351,
+        "center_mm": [
+          -169.0,
+          80.0,
+          145.8
+        ]
+      },
+      {
+        "name": "RearPowerCasePLA",
+        "mass_kg": 0.05052956797203108,
+        "center_mm": [
+          -196.25377679449977,
+          63.94873375803103,
+          124.85271031158412
+        ]
+      },
+      {
+        "name": "RearPowerLidPLA",
+        "mass_kg": 0.01477392080038399,
+        "center_mm": [
+          -196.16706769369108,
+          64.00000000000003,
+          152.54319841222554
+        ]
+      },
+      {
+        "name": "remove DeckBolt0",
+        "mass_kg": -0.006362667601315408,
+        "center_mm": [
+          -105.00000000000001,
+          -135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "remove DeckBolt1",
+        "mass_kg": -0.006362667601315408,
+        "center_mm": [
+          -105.00000000000001,
+          135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "remove DeckBolt2",
+        "mass_kg": -0.006362667601315407,
+        "center_mm": [
+          -1.1396302734615186e-16,
+          -135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "remove DeckBolt3",
+        "mass_kg": -0.006362667601315407,
+        "center_mm": [
+          -1.1396302734615186e-16,
+          135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "remove DeckBolt4",
+        "mass_kg": -0.006362667601315408,
+        "center_mm": [
+          105.0,
+          -135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "remove DeckBolt5",
+        "mass_kg": -0.006362667601315408,
+        "center_mm": [
+          105.0,
+          135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "remove DeckSlotNut1",
+        "mass_kg": -0.006083424664393647,
+        "center_mm": [
+          -105.0,
+          135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "remove DeckSlotNut2",
+        "mass_kg": -0.006083424664393648,
+        "center_mm": [
+          -1.6536419226180935e-15,
+          -135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "remove DeckSlotNut3",
+        "mass_kg": -0.006083424664393648,
+        "center_mm": [
+          -1.6878943335799887e-15,
+          135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "remove DeckSlotNut5",
+        "mass_kg": -0.006083424664393647,
+        "center_mm": [
+          105.0,
+          135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "old AluminumDeckD3",
+        "mass_kg": -0.9547830853585014,
+        "center_mm": [
+          -0.23384111023251825,
+          -0.08574781826484722,
+          231.0
+        ]
+      },
+      {
+        "name": "new AluminumDeckD3",
+        "mass_kg": 0.9540960190451614,
+        "center_mm": [
+          -0.23400950455165787,
+          -0.16430295432594483,
+          231.00000000000006
+        ]
+      },
+      {
+        "name": "old FloorPLA_0_0",
+        "mass_kg": -0.127607804369072,
+        "center_mm": [
+          -114.30501635985718,
+          -57.74626170520817,
+          98.96914049907379
+        ]
+      },
+      {
+        "name": "new FloorPLA_0_0",
+        "mass_kg": 0.17531723230066026,
+        "center_mm": [
+          -136.53683512178847,
+          -65.16287583936169,
+          100.73075123446351
+        ]
+      },
+      {
+        "name": "old FloorPLA_0_1",
+        "mass_kg": -0.12760780436906985,
+        "center_mm": [
+          -114.3050163598572,
+          57.74626170520809,
+          98.96914049907373
+        ]
+      },
+      {
+        "name": "new FloorPLA_0_1",
+        "mass_kg": 0.1543661923006584,
+        "center_mm": [
+          -128.46631704187448,
+          58.83030707045716,
+          100.09702686646096
+        ]
+      },
+      {
+        "name": "old BatteryModuleHarness",
+        "mass_kg": -0.0,
+        "center_mm": [
+          -175.6282828063915,
+          68.69892829811496,
+          180.0734127755207
+        ]
+      },
+      {
+        "name": "new BatteryModuleHarness",
+        "mass_kg": 0.0,
+        "center_mm": [
+          -173.99708888227104,
+          84.81289579705482,
+          179.2700487213989
+        ]
+      }
+    ],
+    "actually_weighed": false
+  },
+  "closed_collisions": [],
+  "reference_collisions": {},
+  "reference_pairs": [],
+  "battery_service": [
+    {
+      "part": "BatteryBL1860B",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "continuous_piecewise_bbox": true,
+      "hits": []
+    },
+    {
+      "part": "BatteryBL1860B",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "continuous_piecewise_bbox": true,
+      "hits": []
+    },
+    {
+      "part": "BatteryAdapter03",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "continuous_piecewise_bbox": true,
+      "hits": []
+    },
+    {
+      "part": "BatteryAdapter03",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "continuous_piecewise_bbox": true,
+      "hits": []
+    },
+    {
+      "part": "BatteryBeltTopPad",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "continuous_piecewise_bbox": true,
+      "hits": []
+    },
+    {
+      "part": "BatteryBeltTopPad",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "continuous_piecewise_bbox": true,
+      "hits": []
+    },
+    {
+      "part": "BatteryModuleHarness",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "continuous_piecewise_bbox": true,
+      "hits": []
+    },
+    {
+      "part": "BatteryModuleHarness",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "continuous_piecewise_bbox": true,
+      "hits": []
+    },
+    {
+      "part": "BatteryServiceConnector",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "continuous_piecewise_bbox": true,
+      "hits": []
+    },
+    {
+      "part": "BatteryServiceConnector",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "continuous_piecewise_bbox": true,
+      "hits": []
+    }
+  ],
+  "computer_service": [
+    {
+      "part": "Reserved_Computer",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "Reserved_Computer",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        0,
+        -230,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "ComputerTopPad",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "ComputerTopPad",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        0,
+        -230,
+        8
+      ],
+      "hits": []
+    }
+  ],
+  "assembly_tools": [
+    {
+      "bolt": "HingeFrameBolt_0_0",
+      "stage": "closed or open, outside frame",
+      "hits": []
+    },
+    {
+      "bolt": "HingeFrameBolt_0_1",
+      "stage": "closed or open, outside frame",
+      "hits": []
+    },
+    {
+      "bolt": "HingeFrameBolt_1_0",
+      "stage": "closed or open, outside frame",
+      "hits": []
+    },
+    {
+      "bolt": "HingeFrameBolt_1_1",
+      "stage": "closed or open, outside frame",
+      "hits": []
+    },
+    {
+      "bolt": "RearStopFloorBolt_0",
+      "stage": "install cases before battery; remove case lid with switches",
+      "hits": []
+    },
+    {
+      "bolt": "RearStopFloorBolt_1",
+      "stage": "install cases before battery; remove case lid with switches",
+      "hits": []
+    },
+    {
+      "bolt": "RearStopFloorBolt_2",
+      "stage": "install cases before battery; remove case lid with switches",
+      "hits": []
+    },
+    {
+      "bolt": "RearStopFloorBolt_3",
+      "stage": "install cases before battery; remove case lid with switches",
+      "hits": []
+    },
+    {
+      "bolt": "RearPowerFloorBolt_0",
+      "stage": "install cases before battery; remove case lid with switches",
+      "hits": []
+    },
+    {
+      "bolt": "RearPowerFloorBolt_1",
+      "stage": "install cases before battery; remove case lid with switches",
+      "hits": []
+    },
+    {
+      "bolt": "RearPowerFloorBolt_2",
+      "stage": "install cases before battery; remove case lid with switches",
+      "hits": []
+    },
+    {
+      "bolt": "RearPowerFloorBolt_3",
+      "stage": "install cases before battery; remove case lid with switches",
+      "hits": []
+    }
+  ],
+  "operator_approach": [
+    {
+      "control": "estop",
+      "hits": []
+    },
+    {
+      "control": "arm",
+      "hits": []
+    },
+    {
+      "control": "main_power",
+      "hits": []
+    }
+  ],
+  "motion_sample_step_deg": 1,
+  "motion_hits": [],
+  "continuous_boxes_cleared": 956,
+  "motion_candidate_pairs": 176,
+  "opening_stops_present": false,
+  "motion_range_deg": [
+    0,
+    90
+  ],
+  "passed": true
+}

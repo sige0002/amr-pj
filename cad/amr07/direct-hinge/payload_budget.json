@@ -1,0 +1,450 @@
+{
+  "revision": "D6.8",
+  "requirements_sha256": "9bfd9a1c9579691c50ccd99efa05abee253657f75075a34a7fca48afff624372",
+  "vehicle_mass_estimate_kg": 10.615076958402836,
+  "reviewed_vehicle_mass_upper_bound_kg": 11.5,
+  "normal_payload_kg": 10,
+  "structural_comparison_payload_kg": 15,
+  "torque": {
+    "payload_kg": 10,
+    "gross_mass_kg": 21.5,
+    "slope_deg": 0,
+    "service_torque_Nm_each": 0.26749165686875,
+    "with_margin_Nm_each": 0.401237485303125,
+    "catalog_rated_torque_Nm_each": 0.96,
+    "numeric_margin_check": true,
+    "operation_approved": false
+  },
+  "load_cases": [
+    {
+      "id": "normal",
+      "payload_kg": 10,
+      "slope_deg": 0,
+      "acceleration_m_s2": 0.2,
+      "lateral_acceleration_m_s2": 0.18,
+      "purpose": "normal flat-floor operating design",
+      "evaluated_pose_vertices": 46080,
+      "normal_reaction_extrema": {
+        "left": {
+          "min_N": 19.292975640578078,
+          "max_N": 100.3501105719246,
+          "min_case": {
+            "base_mass_kg": 6,
+            "gross_mass_kg": 16,
+            "cg_xyz_mm": [
+              -28.125,
+              -26.25,
+              266.25
+            ],
+            "acceleration_xy_m_s2": [
+              0.2,
+              0.18
+            ],
+            "slope_azimuth_deg": 230.8888089274537,
+            "caster_angle_deg": 231.00000000000003,
+            "all_reactions_N": [
+              19.292975640578078,
+              53.298655383891415,
+              84.3147689755305
+            ]
+          },
+          "max_case": {
+            "base_mass_kg": 11.5,
+            "gross_mass_kg": 21.5,
+            "cg_xyz_mm": [
+              27.325581395348838,
+              24.651162790697676,
+              239.06976744186048
+            ],
+            "acceleration_xy_m_s2": [
+              -0.2,
+              -0.18
+            ],
+            "slope_azimuth_deg": 57.070643955865975,
+            "caster_angle_deg": 57.0,
+            "all_reactions_N": [
+              100.3501105719246,
+              61.495020028354105,
+              48.997844399721295
+            ]
+          }
+        },
+        "right": {
+          "min_N": 19.292975640578078,
+          "max_N": 100.3501105719246,
+          "min_case": {
+            "base_mass_kg": 6,
+            "gross_mass_kg": 16,
+            "cg_xyz_mm": [
+              -28.125,
+              26.25,
+              266.25
+            ],
+            "acceleration_xy_m_s2": [
+              0.2,
+              -0.18
+            ],
+            "slope_azimuth_deg": 129.11119107254626,
+            "caster_angle_deg": 129.0,
+            "all_reactions_N": [
+              53.298655383891415,
+              19.292975640578078,
+              84.3147689755305
+            ]
+          },
+          "max_case": {
+            "base_mass_kg": 11.5,
+            "gross_mass_kg": 21.5,
+            "cg_xyz_mm": [
+              27.325581395348838,
+              -24.651162790697676,
+              239.06976744186048
+            ],
+            "acceleration_xy_m_s2": [
+              -0.2,
+              0.18
+            ],
+            "slope_azimuth_deg": 302.929356044134,
+            "caster_angle_deg": 303.0,
+            "all_reactions_N": [
+              61.495020028354105,
+              100.3501105719246,
+              48.997844399721295
+            ]
+          }
+        },
+        "caster": {
+          "min_N": 34.596029296875,
+          "max_N": 115.02354743303572,
+          "min_case": {
+            "base_mass_kg": 6,
+            "gross_mass_kg": 16,
+            "cg_xyz_mm": [
+              28.125,
+              -26.25,
+              266.25
+            ],
+            "acceleration_xy_m_s2": [
+              -0.2,
+              -0.18
+            ],
+            "slope_azimuth_deg": 0.0,
+            "caster_angle_deg": 0.0,
+            "all_reactions_N": [
+              51.550620881648456,
+              70.75974982147653,
+              34.596029296875
+            ]
+          },
+          "max_case": {
+            "base_mass_kg": 11.5,
+            "gross_mass_kg": 21.5,
+            "cg_xyz_mm": [
+              -27.325581395348838,
+              -24.651162790697676,
+              239.06976744186048
+            ],
+            "acceleration_xy_m_s2": [
+              0.2,
+              -0.18
+            ],
+            "slope_azimuth_deg": 180.0,
+            "caster_angle_deg": 180.0,
+            "all_reactions_N": [
+              35.66809630497211,
+              60.15133126199217,
+              115.02354743303572
+            ]
+          }
+        }
+      },
+      "minimum_reaction_N": 19.292975640578078,
+      "maximum_drive_normal_N": 100.3501105719246,
+      "conservative_radial_comparison_N": 100.9110571911902,
+      "conservative_axial_comparison_N": 3.8699999999999997,
+      "equilibrium_max_abs_residual": {
+        "force_N": 2.842170943040401e-14,
+        "first_moment_Nmm": 5.4569682106375694e-12
+      },
+      "caster_sampling_note": "0.5 degree samples; slope azimuth extrema exact for this rigid-body model",
+      "radial_note": "Independent worst normal and total longitudinal load placed on one drive wheel; not a combined-load qualification",
+      "operation_approved": false
+    },
+    {
+      "id": "structure",
+      "payload_kg": 15,
+      "slope_deg": 0,
+      "acceleration_m_s2": 0,
+      "lateral_acceleration_m_s2": 0,
+      "purpose": "static structural verification, not a 15 kg operating rating",
+      "evaluated_pose_vertices": 46080,
+      "normal_reaction_extrema": {
+        "left": {
+          "min_N": 30.069723623318165,
+          "max_N": 119.06331505972761,
+          "min_case": {
+            "base_mass_kg": 6,
+            "gross_mass_kg": 21,
+            "cg_xyz_mm": [
+              -28.571428571428573,
+              -27.142857142857142,
+              0.0
+            ],
+            "acceleration_xy_m_s2": [
+              0,
+              0
+            ],
+            "slope_azimuth_deg": 180.0,
+            "caster_angle_deg": 231.00000000000003,
+            "all_reactions_N": [
+              30.069723623318165,
+              69.67036255789786,
+              106.19956381878397
+            ]
+          },
+          "max_case": {
+            "base_mass_kg": 11.5,
+            "gross_mass_kg": 26.5,
+            "cg_xyz_mm": [
+              27.830188679245282,
+              25.660377358490567,
+              0.0
+            ],
+            "acceleration_xy_m_s2": [
+              0,
+              0
+            ],
+            "slope_azimuth_deg": 0.0,
+            "caster_angle_deg": 57.0,
+            "all_reactions_N": [
+              119.06331505972761,
+              75.85299096673256,
+              64.9599189735398
+            ]
+          }
+        },
+        "right": {
+          "min_N": 30.06972362331817,
+          "max_N": 119.06331505972761,
+          "min_case": {
+            "base_mass_kg": 6,
+            "gross_mass_kg": 21,
+            "cg_xyz_mm": [
+              -28.571428571428573,
+              27.142857142857142,
+              0.0
+            ],
+            "acceleration_xy_m_s2": [
+              0,
+              0
+            ],
+            "slope_azimuth_deg": 180.0,
+            "caster_angle_deg": 129.0,
+            "all_reactions_N": [
+              69.67036255789786,
+              30.06972362331817,
+              106.19956381878397
+            ]
+          },
+          "max_case": {
+            "base_mass_kg": 11.5,
+            "gross_mass_kg": 26.5,
+            "cg_xyz_mm": [
+              27.830188679245282,
+              -25.660377358490567,
+              0.0
+            ],
+            "acceleration_xy_m_s2": [
+              0,
+              0
+            ],
+            "slope_azimuth_deg": 0.0,
+            "caster_angle_deg": 303.0,
+            "all_reactions_N": [
+              75.85299096673256,
+              119.06331505972761,
+              64.9599189735398
+            ]
+          }
+        },
+        "caster": {
+          "min_N": 49.416322265625,
+          "max_N": 136.70207421874997,
+          "min_case": {
+            "base_mass_kg": 6,
+            "gross_mass_kg": 21,
+            "cg_xyz_mm": [
+              28.571428571428573,
+              -27.142857142857142,
+              0.0
+            ],
+            "acceleration_xy_m_s2": [
+              0,
+              0
+            ],
+            "slope_azimuth_deg": 180.0,
+            "caster_angle_deg": 0.0,
+            "all_reactions_N": [
+              62.24507217664309,
+              94.27825555773192,
+              49.416322265625
+            ]
+          },
+          "max_case": {
+            "base_mass_kg": 11.5,
+            "gross_mass_kg": 26.5,
+            "cg_xyz_mm": [
+              -27.830188679245282,
+              -25.660377358490567,
+              0.0
+            ],
+            "acceleration_xy_m_s2": [
+              0,
+              0
+            ],
+            "slope_azimuth_deg": 0.0,
+            "caster_angle_deg": 180.0,
+            "all_reactions_N": [
+              42.479562496642195,
+              80.69458828460782,
+              136.70207421874997
+            ]
+          }
+        }
+      },
+      "minimum_reaction_N": 30.069723623318165,
+      "maximum_drive_normal_N": 119.06331505972761,
+      "conservative_radial_comparison_N": 119.3182931494588,
+      "conservative_axial_comparison_N": 0.0,
+      "equilibrium_max_abs_residual": {
+        "force_N": 2.842170943040401e-14,
+        "first_moment_Nmm": 7.275957614183426e-12
+      },
+      "caster_sampling_note": "0.5 degree samples; slope azimuth extrema exact for this rigid-body model",
+      "radial_note": "Independent worst normal and total longitudinal load placed on one drive wheel; not a combined-load qualification",
+      "operation_approved": false
+    }
+  ],
+  "caster_trail_sensitivity": [
+    {
+      "case": "normal",
+      "trail_mm": 14.5,
+      "max_N": 114.25842405764968,
+      "twice_max_N": 228.51684811529935
+    },
+    {
+      "case": "structure",
+      "trail_mm": 14.5,
+      "max_N": 135.79274778270508,
+      "twice_max_N": 271.58549556541016
+    },
+    {
+      "case": "normal",
+      "trail_mm": 16,
+      "max_N": 115.02354743303572,
+      "twice_max_N": 230.04709486607143
+    },
+    {
+      "case": "structure",
+      "trail_mm": 16,
+      "max_N": 136.70207421874997,
+      "twice_max_N": 273.40414843749994
+    },
+    {
+      "case": "normal",
+      "trail_mm": 17.5,
+      "max_N": 115.79898707865169,
+      "twice_max_N": 231.59797415730338
+    },
+    {
+      "case": "structure",
+      "trail_mm": 17.5,
+      "max_N": 137.62366123595504,
+      "twice_max_N": 275.2473224719101
+    }
+  ],
+  "closed_conditional_CG_xyz_ranges_mm": [
+    [
+      -14.114198117678114,
+      1.4228844229960793
+    ],
+    [
+      -4.7455515926955085,
+      10.791530947978686
+    ],
+    [
+      125.33170958623236,
+      144.7530627620751
+    ]
+  ],
+  "plate_simply_supported_sensitivity": {
+    "load_N": 294.1995,
+    "effective_width_assumption_mm": 150,
+    "span_mm": 240,
+    "thickness_mm": 4,
+    "E_assumption_MPa": 69000,
+    "bending_stress_MPa": 44.129925,
+    "central_deflection_mm": 1.5349539130434782,
+    "reference_yield_MPa": 240,
+    "local_hole_and_slot_stress_qualified": false
+  },
+  "metal_lid_angle_screen": {
+    "initial_hinge_torque_each_Nm": 2.5,
+    "load_factor": 2,
+    "vertical_force_each_factored_N": 40,
+    "lever_mm": 37,
+    "effective_width_mm": 36,
+    "wall_mm": 4,
+    "local_stress_factor_assumed": 1.5,
+    "factored_moment_Nmm": 6480.0,
+    "section_modulus_mm3": 96.0,
+    "bending_stress_factored_MPa": 67.5,
+    "with_assumed_local_factor_MPa": 101.25,
+    "reference_yield_MPa": 240,
+    "qualified_by_FEA_or_test": false
+  },
+  "frame_hinge_fixing_screen": {
+    "factored_torque_Nmm": 5000,
+    "bolt_pair_qty": 2,
+    "contact_lever_assumed_mm": 9,
+    "M4_tensile_area_mm2": 8.78,
+    "thread_engagement_nominal_mm": 5.8,
+    "slot_floor_clearance_nominal_mm": 2,
+    "receiving_fit_verified": false,
+    "tension_each_N": 277.77777777777777,
+    "combined_stress_MPa": 31.88262464388709,
+    "wing_bearing_screen_MPa": 4.340277777777778,
+    "slot_lip_strength_and_pullout_qualified": false
+  },
+  "printed_control_case_screen": {
+    "normal_press_design_N": 120,
+    "load_factor": 2,
+    "required_coupon_strength_MPa": 25,
+    "E_assumed_MPa": 2500,
+    "rib_effective_total_width_mm": 8,
+    "rib_depth_including_lid_mm": 15,
+    "rib_span_mm": 71,
+    "rib_stress_factored_MPa": 14.2,
+    "normal_rib_deflection_mm": 0.15907155555555555,
+    "case_pad_compression_factored_MPa": 5.0,
+    "floor_landing_stress_factored_MPa": 12.315088757396449,
+    "normal_landing_deflection_mm": 0.21614559626763769,
+    "material_strength_is_measured": false,
+    "creep_qualified": false,
+    "proof_test_done": false
+  },
+  "empty_lid": {
+    "empty_lid_mass_kg": 1.2007047863144433,
+    "closed_moment_Nm": 1.620744412289105,
+    "vertical_CG_component_Nm": -0.027590522369600284,
+    "maximum_gravity_moment_Nm": 1.620744412289105,
+    "maximum_angle_deg": 0.0,
+    "pair_nominal_Nm": 4,
+    "pair_initial_min_Nm": 3,
+    "pair_initial_max_Nm": 5,
+    "minimum_initial_hold_ratio": 1.8510012912911196,
+    "tangential_open_force_max_N": 21.636419648003614
+  },
+  "source_motor_spec": "https://shop.directdrive.com/pages/m0601c-111-specs",
+  "operation_released": false
+}

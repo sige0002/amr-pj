@@ -1,0 +1,35 @@
+{
+  "method": "Upload matching-basename PDF using main model upload; read linked model metadata from the rendered card",
+  "verified": true,
+  "parts": [
+    {
+      "fileName3D": "AMR_GridDeck_D68C.step",
+      "fileName2D": "AMR_GridDeck_D68C.pdf",
+      "files": [
+        {
+          "fileName": "AMR_GridDeck_D68C.step",
+          "fileMd5": "vGPGDQ2B6P0pv1W94FZ5UA=="
+        },
+        {
+          "fileName": "AMR_GridDeck_D68C.pdf",
+          "fileMd5": "Dd6nytNGHILzkBpUlK1rwQ=="
+        }
+      ]
+    },
+    {
+      "fileName3D": "AMR_LidAngle_D68C.step",
+      "fileName2D": "AMR_LidAngle_D68C.pdf",
+      "files": [
+        {
+          "fileName": "AMR_LidAngle_D68C.step",
+          "fileMd5": "DZwU9RYtJ71laPlxjDcdLg=="
+        },
+        {
+          "fileName": "AMR_LidAngle_D68C.pdf",
+          "fileMd5": "t+Pdv+NnhBC7mXVgkgcmRg=="
+        }
+      ]
+    }
+  ],
+  "uploaded_file_MD5_matches_local": true
+}

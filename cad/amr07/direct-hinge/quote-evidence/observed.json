@@ -1,0 +1,58 @@
+{
+  "date": "2026-09-23",
+  "vendor": "JLCCNC",
+  "url": "https://jlccnc.com/jp/cnc-machining-quote",
+  "stage": "Automatic website quotation, before manual drawing review",
+  "currency": "USD",
+  "plate_lot_USD": 28.67,
+  "plate_qty": 1,
+  "angle_lot_USD": 63.38,
+  "angle_qty": 2,
+  "parts_sum_USD": 92.05,
+  "shipping_USD": 10.08,
+  "sum_USD": 102.13,
+  "material": "Aluminum6061-T6, catalog yield>=240MPa",
+  "finish": "None/as machined",
+  "threading": false,
+  "assembly": false,
+  "tolerance": "±0.10mm at drawing specified features; others ISO2768-m",
+  "manufacturing_option": "Economical",
+  "manufacturing_days": 10,
+  "shipping_method": "UPS Worldwide Express Saver",
+  "shipping_days": "2-4 business days",
+  "country": "Japan",
+  "destination_basis": "Country only; postcode not validated",
+  "shipping_weight_kg": 1.54,
+  "discount_applied": false,
+  "import_tax_and_payment_fees_included": false,
+  "order_placed": false,
+  "formal_quote_number": null,
+  "files": [
+    {
+      "file": "quote-input/AMR_LidAngle_D68C.step",
+      "sha256": "b4b467c1241a4a0eb4f270e089accf9ca11f9a31a81cd5eae1309d6e43b7a40a"
+    },
+    {
+      "file": "quote-input/AMR_LidAngle_D68C.pdf",
+      "sha256": "0530c0a885ae96215787bf127e1143c4e3798fee7b6cfb15b9428b6bdd4e99ad"
+    },
+    {
+      "file": "quote-input/AMR_GridDeck_D68C.step",
+      "sha256": "f00304de17c088257c92abcfd596f50c49d6a75395b6023d93de5facbf8d38f8"
+    },
+    {
+      "file": "quote-input/AMR_GridDeck_D68C.pdf",
+      "sha256": "4fc7555686cd1dbd826641a3c7149fb91300cab6b78208a8d6220e8499f0dc66"
+    }
+  ],
+  "drawing_attachments_verified": true,
+  "evidence": [
+    "final-quote.png",
+    "shipping-Japan.png",
+    "AMR_LidAngle_D68C-settings.png",
+    "AMR_GridDeck_D68C-settings.png",
+    "drawing-association-check.json",
+    "final-site-state.json"
+  ],
+  "drawing_attachment_method": "Main model upload with matching basename; resulting card links STEP andPDF in fileModelInfo"
+}

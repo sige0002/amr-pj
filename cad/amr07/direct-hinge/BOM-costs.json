@@ -1,0 +1,125 @@
+{
+  "revision": "D6.8",
+  "BOM_sha256": "e56564b5f4c824af167d61adb5320efa94713e6ffd390716cbc7db19d56eb4c7",
+  "denominator_JPY_reference": 114199.92428198433,
+  "categories": [
+    {
+      "category": "電池・充電器・アダプター",
+      "JPY_reference": 23380.0,
+      "source_ids": [
+        "POWER_KIT",
+        "POWER_KIT_SHIP",
+        "POWER_ADAPTER",
+        "POWER_ADAPTER_SHIP"
+      ],
+      "percent_of_priced_subtotal": 20.472868215104697
+    },
+    {
+      "category": "天板・ヒンジ・ロック",
+      "JPY_reference": 20773.697998259355,
+      "source_ids": [
+        "DECK_plate",
+        "DECK_CNC_SHIP",
+        "HATCH_HINGES",
+        "HATCH_LOCKS",
+        "HATCH_METAL_ANGLES",
+        "HATCH_FRAME_M4_NUT",
+        "HATCH_FRAME_M4_BOLT"
+      ],
+      "percent_of_priced_subtotal": 18.190640780955857
+    },
+    {
+      "category": "フレーム・締結材・共通送料",
+      "JPY_reference": 20000.0,
+      "source_ids": [
+        "F01",
+        "F02",
+        "H01",
+        "MW",
+        "S03",
+        "S04",
+        "S07",
+        "F03",
+        "F04",
+        "D3_M6",
+        "D3_STOP_BOLTS",
+        "D3_STOP_NUTS",
+        "D3_STOP_WASHERS",
+        "D3_STRAP_SHIP",
+        "D6_POSTS",
+        "D62_FLOOR_SCREWS",
+        "D62_BEAM_WASHERS",
+        "D64_FLOOR_WASHERS",
+        "D64_FASTENER_SHIP"
+      ],
+      "percent_of_priced_subtotal": 17.513146462878268
+    },
+    {
+      "category": "モーター",
+      "JPY_reference": 14000.0,
+      "source_ids": [
+        "D01"
+      ],
+      "percent_of_priced_subtotal": 12.259202524014787
+    },
+    {
+      "category": "モーター専用金具",
+      "JPY_reference": 12935.226283724978,
+      "source_ids": [
+        "Q01",
+        "S08"
+      ],
+      "percent_of_priced_subtotal": 11.326825621867405
+    },
+    {
+      "category": "タイヤ・キャスター",
+      "JPY_reference": 10413.0,
+      "source_ids": [
+        "D02",
+        "C01",
+        "P01",
+        "S02",
+        "S06"
+      ],
+      "percent_of_priced_subtotal": 9.11821970589757
+    },
+    {
+      "category": "制御・電源",
+      "JPY_reference": 9443.0,
+      "source_ids": [
+        "E02",
+        "ELEC_S1",
+        "ELEC_K1_K2",
+        "ELEC_U1",
+        "ELEC_U2",
+        "ELEC_U3",
+        "ELEC_PS1",
+        "ELEC_U4",
+        "ELEC_RDUMP",
+        "ELEC_U5",
+        "ELEC_U6",
+        "ELEC_QCLAMP",
+        "ELEC_PS2",
+        "ELEC_D0",
+        "ELEC_ARM",
+        "ELEC_MAIN",
+        "ELEC_CASE_WASHER"
+      ],
+      "percent_of_priced_subtotal": 8.268832102447975
+    },
+    {
+      "category": "PLA・ベルト",
+      "JPY_reference": 3255.0,
+      "source_ids": [
+        "P04",
+        "H02",
+        "DECK_cargo_straps",
+        "DECK_edge_protection_and_slack_retention",
+        "POWER_PADS",
+        "POWER_LOW_STRAPS"
+      ],
+      "percent_of_priced_subtotal": 2.850264586833438
+    }
+  ],
+  "complete_purchase_total": false
+}

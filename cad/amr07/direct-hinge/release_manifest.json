@@ -1,0 +1,329 @@
+{
+  "revision": "D6.8",
+  "date": "2026-09-23",
+  "files": {
+    "AMR01_DirectHinge_D68-structure.step": {
+      "bytes": 9703243,
+      "sha256": "5e81d862eb5a3c60a1db115699f4224591fa09bda31b74bb66b3ad2b268a6c1c"
+    },
+    "AMR01_DirectHinge_D68.FCStd": {
+      "bytes": 1955305,
+      "sha256": "1f5e727fdc878121e95d0011455152ecff6c780f6d5115b8264334074d5cf68c"
+    },
+    "AMR01_DirectHinge_D68.step": {
+      "bytes": 9748007,
+      "sha256": "33df363fbe12f1c8e3bad5af8f2f1f5dce8f36d83587b73bcaf34158f228c9eb"
+    },
+    "AMR_GridDeck_D68.FCStd": {
+      "bytes": 14232,
+      "sha256": "07c3e7455a63c3ce6f3167b6e0294ed52313df9100f71915f159c186d0c20f7c"
+    },
+    "AMR_GridDeck_D68.pdf": {
+      "bytes": 6675,
+      "sha256": "4fc7555686cd1dbd826641a3c7149fb91300cab6b78208a8d6220e8499f0dc66"
+    },
+    "AMR_GridDeck_D68.step": {
+      "bytes": 114138,
+      "sha256": "f00304de17c088257c92abcfd596f50c49d6a75395b6023d93de5facbf8d38f8"
+    },
+    "AMR_LidAngle_D68.FCStd": {
+      "bytes": 4682,
+      "sha256": "69f08ec7154e8d62341f23b2e49120e45754ee8784f981e0753cf2fca5ca27cd"
+    },
+    "AMR_LidAngle_D68.pdf": {
+      "bytes": 2921,
+      "sha256": "0530c0a885ae96215787bf127e1143c4e3798fee7b6cfb15b9428b6bdd4e99ad"
+    },
+    "AMR_LidAngle_D68.step": {
+      "bytes": 16481,
+      "sha256": "b4b467c1241a4a0eb4f270e089accf9ca11f9a31a81cd5eae1309d6e43b7a40a"
+    },
+    "BOM-costs.json": {
+      "bytes": 2945,
+      "sha256": "108b2bb5489c6e5f87c4c540482e1dfc0ad1bde50886545f59f7f5a3c911beb3"
+    },
+    "BOM-details.ja.md": {
+      "bytes": 57128,
+      "sha256": "c3ac2ad771030272fef5429e8bf6a6fb211b365f55888dd59239670f38e096c7"
+    },
+    "BOM-summary.csv": {
+      "bytes": 360,
+      "sha256": "e0bb0cbe2373a871a73b113ad1087d7d909306defe33714a8056e54f04c89183"
+    },
+    "BOM.csv": {
+      "bytes": 28820,
+      "sha256": "e56564b5f4c824af167d61adb5320efa94713e6ffd390716cbc7db19d56eb4c7"
+    },
+    "BOM.ja.md": {
+      "bytes": 9974,
+      "sha256": "92d9dff0eddcb102da5eb2485daaa66353196cdd7965770d4bdd79655c975040"
+    },
+    "D68-print-prototypes.zip": {
+      "bytes": 229809,
+      "sha256": "1e2aa0f516ec45046606c2defcf0856159b9fc18ab9dc554b812bc8de86af567"
+    },
+    "FloorPLA_0_0.stl": {
+      "bytes": 138684,
+      "sha256": "6d8f8ba530c34cd903494adb0f7c3527ead20faf64847360f8f96ec6418fc226"
+    },
+    "FloorPLA_0_1.stl": {
+      "bytes": 138784,
+      "sha256": "18351c25ffb71331c06bd421054e0ca449c95d5ddc2cf29895f992dc1af1c0f5"
+    },
+    "MACHINING_QUOTE.ja.md": {
+      "bytes": 4030,
+      "sha256": "11a00f7f686fbf6ba2cfbd2acec7625fd19fca25f042731d49de4116d3c533ce"
+    },
+    "PAYLOAD_REVIEW.ja.md": {
+      "bytes": 6336,
+      "sha256": "3ab36f58b7372656b6ac75d52fff7383a5b1fd06fe6734cc9d46e5162eff5620"
+    },
+    "README.ja.md": {
+      "bytes": 8246,
+      "sha256": "fc744e4252ae70851e99d07a0636e0e753b11081731b81cf509917fccb3d0e5e"
+    },
+    "RearPowerCasePLA.stl": {
+      "bytes": 159284,
+      "sha256": "69df6059c4cd94a394781acf1121d681c08f5c41d0b12e1b3384dedf8991f095"
+    },
+    "RearPowerLidPLA.stl": {
+      "bytes": 54284,
+      "sha256": "c9aa5ff39901d2dce938f09df046a4c1cbe874f7a2e3b8223d0117ba074b1eb4"
+    },
+    "RearStopCasePLA.stl": {
+      "bytes": 148684,
+      "sha256": "b5c237a6c6eb8ddb0db0e2196743b46330ca57bcff890a512b5cd98e4e355fcd"
+    },
+    "RearStopLidPLA.stl": {
+      "bytes": 83884,
+      "sha256": "8328dfc51e086c3aef05320f2676cd996cc26d8f857e7b7866de56f0c1076f59"
+    },
+    "assembly_access.json": {
+      "bytes": 2108,
+      "sha256": "6daf876a7b72a1e9a1c62083b4a0d6d3c23488b4822b8e6990000e36ca099743"
+    },
+    "build_bom.py": {
+      "bytes": 6586,
+      "sha256": "2704b77388d58d160f887b29e71fdd01d9239c8da1156483da246f6887d6e460"
+    },
+    "build_bom_view.py": {
+      "bytes": 4729,
+      "sha256": "441dda9856040ed62c5e47c2662f6d5642228a9180950a3fb22698341162fe5a"
+    },
+    "build_d68.py": {
+      "bytes": 15533,
+      "sha256": "ebbdbebb54e4a80f430b0b3b4e7d6ec4885f8482957579849d4ab94b1dd7dd90"
+    },
+    "cad-opening.gif": {
+      "bytes": 1296264,
+      "sha256": "411602aa9dbd67e023403cf1eb4ca07139372a15b81d97e2dc0588e6af579de2"
+    },
+    "cad-screen-battery-service.png": {
+      "bytes": 133265,
+      "sha256": "aa93c97deff1a722fb7cdbfd36a8559dfd2ddffd751eba39e95592a78662b04d"
+    },
+    "cad-screen-case-assembly.png": {
+      "bytes": 176693,
+      "sha256": "6e49fe50e4560e152b930ca3d7fda03f21d35e79ee3e03aa92ad062d817c5c28"
+    },
+    "cad-screen-closed.png": {
+      "bytes": 143441,
+      "sha256": "ec83b9c08a77385f6fb6c053882b2b49af94ad2a7e368cc853c914c17e09a4ea"
+    },
+    "cad-screen-hinge-detail.png": {
+      "bytes": 128944,
+      "sha256": "e79bd384bbebe418e522f9617f849e8f1fd0e112a411f813c76a86b2b23ce097"
+    },
+    "cad-screen-hinge-open-detail.png": {
+      "bytes": 125941,
+      "sha256": "9c6166fdeed63bdf9a9f17eb25c3b87a0f480341082f4d405caa511cdaaf2aca"
+    },
+    "cad-screen-open-45.png": {
+      "bytes": 142302,
+      "sha256": "b6d66bd9bb019feddfa05eb27301ba4b74c24c3538476e4cff957384dc2469e1"
+    },
+    "cad-screen-open-90.png": {
+      "bytes": 139282,
+      "sha256": "ff56b25a2afc703cedcb41424f056316c4c9862f80e405db10044c87ad783277"
+    },
+    "cad-screen-rear-controls.png": {
+      "bytes": 163354,
+      "sha256": "756dd11d1500bb04ace274689c4cb7039a44371e9b95a967da47cae249bce151"
+    },
+    "capture_screens.py": {
+      "bytes": 5884,
+      "sha256": "d62f89c6186caee74e32fc42f4d04a476a4f6d917eb78864ec1578ef6be55c15"
+    },
+    "check_assembly.py": {
+      "bytes": 1807,
+      "sha256": "077c9535ff745e22dc3606763bcee0e1eb7b7c0e3173e1fea88baae63bd40e3d"
+    },
+    "check_design.py": {
+      "bytes": 6109,
+      "sha256": "f77980b755ea6f0ab1cd3b78a0028dae28ee7e7881adc9f81d3d65d7a0655ded"
+    },
+    "cost_summary.json": {
+      "bytes": 3090,
+      "sha256": "6ffdf6f5dfd4724554742a00abffa417075891a8ef7bfd3a5b48c5f737a77857"
+    },
+    "export_and_check.py": {
+      "bytes": 4011,
+      "sha256": "140447309cd74f7fc43f7142281090df8f18a1f8764ef063d9d5d3491fdffbbb"
+    },
+    "geometry.json": {
+      "bytes": 34378,
+      "sha256": "9de21a9be71a440c24ce615ef62955473ffb4b3004d0bb41b919a5217776eac0"
+    },
+    "make_drawings.py": {
+      "bytes": 4296,
+      "sha256": "ffa9d5c7c6b66aebcad6da582f40cfbc4e832e7b91a23cffa1caf6965e25a022"
+    },
+    "parameters.json": {
+      "bytes": 1638,
+      "sha256": "c2d0d7d243386a0de38947cb67def91e39e85fad205f03b31038685b998f6d96"
+    },
+    "payload_budget.json": {
+      "bytes": 13272,
+      "sha256": "6fbf87281e98d6d49303f8ebe727ded891eddd1e0db9f4ea7133e5a7de1314db"
+    },
+    "print_manifest.json": {
+      "bytes": 4268,
+      "sha256": "f2fd1642c681c4e6ea65f66dbfd4027017e090bba02344f26707d89656b76d63"
+    },
+    "quote-evidence/AMR_GridDeck_D68C-drawing-linked.png": {
+      "bytes": 144497,
+      "sha256": "c2d4c37017987e9593938b8d5b5ac50f23185dbec89bc7d2669a3455839e8e36"
+    },
+    "quote-evidence/AMR_GridDeck_D68C-quantity-drawing.png": {
+      "bytes": 125335,
+      "sha256": "1620a6dd720fc38c6eaca084c38d8d1bf6b50adc2ea2b6ba62be899d9b02a962"
+    },
+    "quote-evidence/AMR_GridDeck_D68C-saved.png": {
+      "bytes": 136387,
+      "sha256": "a81cedb935b74235e2dce4c31adc63068b8c36f3d0d4775c5e1be6fef5c8ebd6"
+    },
+    "quote-evidence/AMR_GridDeck_D68C-settings.png": {
+      "bytes": 125290,
+      "sha256": "f0824a2be1b8e10f4f38fdc10824fb5452cf0f73ceb63dd19ec4623301342d29"
+    },
+    "quote-evidence/AMR_LidAngle_D68C-drawing-linked.png": {
+      "bytes": 135650,
+      "sha256": "7356824a4929ad206b475d68c7b338f9d8a1fc53944b885057b275ea7f44db96"
+    },
+    "quote-evidence/AMR_LidAngle_D68C-quantity-drawing.png": {
+      "bytes": 125334,
+      "sha256": "11030a8e5e06a1b35de6a033cb5e5b62cbdfa169f2be2cbaf475ccb08942749f"
+    },
+    "quote-evidence/AMR_LidAngle_D68C-saved.png": {
+      "bytes": 137561,
+      "sha256": "3e6d075e50f25fbea3b0abc357c3c815ed6c463827011975c18e083ac08bfe52"
+    },
+    "quote-evidence/AMR_LidAngle_D68C-settings.png": {
+      "bytes": 125332,
+      "sha256": "98c79f0f668bf271e311f5e23c8a272a75aded61491d02c5ceedbc42f59e4c10"
+    },
+    "quote-evidence/destination-Japan.png": {
+      "bytes": 134582,
+      "sha256": "77169c37a307120e5954849f81761a7866d91460a2d34d25168678bfaf9a905d"
+    },
+    "quote-evidence/drawing-association-check.json": {
+      "bytes": 924,
+      "sha256": "10889aa86de5919daf6102a89fe0d2dbbc3b38ad76bffc36d312ac23172727bd"
+    },
+    "quote-evidence/final-quote.png": {
+      "bytes": 403446,
+      "sha256": "38591b527af2156999699f192fc619f1dd64e9915b2bf7303a757b1a4a3be61f"
+    },
+    "quote-evidence/final-site-state.json": {
+      "bytes": 1278,
+      "sha256": "77072509b1167a8eb67cac017d49c8f4c97cd06d981bf21cbb172dc3a75c80fe"
+    },
+    "quote-evidence/final-upload-files.json": {
+      "bytes": 561,
+      "sha256": "8c26af1738a6226da2b53cc1c23dd471a0d865dcd46f6f5bd63c0aa6747d0689"
+    },
+    "quote-evidence/observed.json": {
+      "bytes": 1956,
+      "sha256": "eb08a6f04589c2906f20e6cacec40f68f7c290eb1e3bc86d4582282a0673444b"
+    },
+    "quote-evidence/shipping-Japan.png": {
+      "bytes": 121345,
+      "sha256": "75348e16f5a3018a372410166badd68302800bfd37a96de4f68ca00a94c2fed7"
+    },
+    "quote-input/AMR_GridDeck_D68C.pdf": {
+      "bytes": 6675,
+      "sha256": "4fc7555686cd1dbd826641a3c7149fb91300cab6b78208a8d6220e8499f0dc66"
+    },
+    "quote-input/AMR_GridDeck_D68C.step": {
+      "bytes": 114138,
+      "sha256": "f00304de17c088257c92abcfd596f50c49d6a75395b6023d93de5facbf8d38f8"
+    },
+    "quote-input/AMR_LidAngle_D68C.pdf": {
+      "bytes": 2921,
+      "sha256": "0530c0a885ae96215787bf127e1143c4e3798fee7b6cfb15b9428b6bdd4e99ad"
+    },
+    "quote-input/AMR_LidAngle_D68C.step": {
+      "bytes": 16481,
+      "sha256": "b4b467c1241a4a0eb4f270e089accf9ca11f9a31a81cd5eae1309d6e43b7a40a"
+    },
+    "release.py": {
+      "bytes": 4968,
+      "sha256": "f04d47ade26c25ab143dc0c48cca2f98010c1810c17cec1ef81c1e82e5b6b6cb"
+    },
+    "requirements.json": {
+      "bytes": 13727,
+      "sha256": "9bfd9a1c9579691c50ccd99efa05abee253657f75075a34a7fca48afff624372"
+    },
+    "research/3030-M4-nut-price.png": {
+      "bytes": 78376,
+      "sha256": "27e24a376133189294fb3ce3ffb529480e6e91c3b94cfaac152c2ef39044adf0"
+    },
+    "research/HGTP20-price.png": {
+      "bytes": 67366,
+      "sha256": "d67ba369b99926128859eee67eb8911f2b1eb0e5bd981006add11349efd7dce9"
+    },
+    "research/M4x10-price.png": {
+      "bytes": 97002,
+      "sha256": "e7945969885da6b0c1ee4133d0da966c6f451c9fba4bbfebf7032582342e110a"
+    },
+    "research/purchase-observations.json": {
+      "bytes": 1100,
+      "sha256": "065d54229319aee7cc46b74b57e6804a15624ffee1f52176f814d20bbbeeaaab"
+    },
+    "saved_artifact_validation.json": {
+      "bytes": 9240,
+      "sha256": "36e549833c455520a2d2f1ab58b80c6b98bcd382c4cfc6e79b8ff3de788bb355"
+    },
+    "sync_electrical.py": {
+      "bytes": 4251,
+      "sha256": "65ff5b7134526b309331b75a76336a3cfec47c1f11f7b9f29e5f2e1f9c65ca43"
+    },
+    "validate.py": {
+      "bytes": 5089,
+      "sha256": "bd16642e95f658c6f3761ffb2d89008c68fae03f09d69e7f80d43bb674614fbe"
+    },
+    "validation.json": {
+      "bytes": 39573,
+      "sha256": "3893cce0b8366bfefccdcbc9327a252206a6592140abaf35c60fc886c598234a"
+    }
+  },
+  "physical_parts": 369,
+  "PLA_print_parts": 14,
+  "FreeCAD_GUI_screenshots": 8,
+  "opening_stops": false,
+  "shared_electrical_plan_sha256": "7c4b8213a4b84ace130c65acd2b490dc7d14cadf5a5f4baeed923ef297dd1578",
+  "scope": "Prototype design review, actual site automatic quote, saved nominal geometry verification. Not hardware or production release.",
+  "checks": [
+    "Saved native and STEP solids/volumes",
+    "Actual quoted STEP against assembly geometry",
+    "14 closed STL meshes and256mm printer envelope",
+    "Changed-part static interference",
+    "0..90 opening: continuous bbox culling plus1deg close-pair samples",
+    "Battery/PC continuous straight service envelopes",
+    "Control access and selected assembly tool approaches",
+    "BOM purchase packs and currency sums"
+  ],
+  "production_released": false,
+  "physical_strength_and_holding_tests_complete": false,
+  "electrical_protection_implemented": false
+}

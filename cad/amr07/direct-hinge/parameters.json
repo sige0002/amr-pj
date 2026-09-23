@@ -1,0 +1,113 @@
+{
+  "revision": "D6.8",
+  "date": "2026-09-23",
+  "hinge": "Sugatsune HG-TP20",
+  "hinge_qty": 2,
+  "hinge_centers_x_mm": [
+    -105,
+    105
+  ],
+  "hinge_axis_yz_mm": [
+    156,
+    230
+  ],
+  "opening_deg": [
+    0,
+    90
+  ],
+  "hinge_nominal_each_Nm": 2,
+  "hinge_initial_tolerance_fraction": 0.25,
+  "plate_size_mm": [
+    300,
+    300,
+    4
+  ],
+  "plate_z_mm": [
+    229,
+    233
+  ],
+  "new_plate_holes_xy_mm": [
+    [
+      -120,
+      109
+    ],
+    [
+      -90,
+      109
+    ],
+    [
+      90,
+      109
+    ],
+    [
+      120,
+      109
+    ]
+  ],
+  "frame_mount": "Fixed metal hinge leaves on outer Y150 face; two M4 slot screws per hinge; no plastic or adapter under hinge.",
+  "lid_mount": "Two identical simple CNC aluminum angles; no opening stops. Review range0..90deg, held by torque hinges. No frame drilling; four D4.5 lid holes.",
+  "battery_harness_points": [
+    [
+      -160,
+      45,
+      181
+    ],
+    [
+      -160,
+      95,
+      181
+    ],
+    [
+      -178,
+      95,
+      181
+    ],
+    [
+      -178,
+      100,
+      181
+    ],
+    [
+      -195,
+      100,
+      181
+    ],
+    [
+      -195,
+      100,
+      172
+    ],
+    [
+      -195,
+      82,
+      172
+    ]
+  ],
+  "operator_side": "rear -X",
+  "estop": {
+    "part": "IDEC XA1E-BV302R",
+    "panel_center_mm": [
+      -197,
+      -103,
+      160.4
+    ]
+  },
+  "arm": {
+    "part": "amon 3212",
+    "panel_center_mm": [
+      -201,
+      -69,
+      160.4
+    ]
+  },
+  "main_power": {
+    "part": "amon 3214",
+    "panel_center_mm": [
+      -201,
+      64,
+      156.4
+    ]
+  },
+  "unload_before_open": true,
+  "production_release": false
+}

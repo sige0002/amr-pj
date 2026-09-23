@@ -1,0 +1,443 @@
+{
+  "revision": "D6.8",
+  "native_sha256": "1f5e727fdc878121e95d0011455152ecff6c780f6d5115b8264334074d5cf68c",
+  "source_native_sha256": "7a9798e5f8c0f5045029e37143bbb3b625a548ea4855cb096cd126c6e4862bf8",
+  "physical_parts": 369,
+  "retained_BRep_equal": true,
+  "exports": [
+    {
+      "file": "AMR01_DirectHinge_D68-structure.step",
+      "sha256": "5e81d862eb5a3c60a1db115699f4224591fa09bda31b74bb66b3ad2b268a6c1c",
+      "valid": true,
+      "solids": 373,
+      "volume_delta_mm3": 0.1053023636341095
+    },
+    {
+      "file": "AMR01_DirectHinge_D68.step",
+      "sha256": "33df363fbe12f1c8e3bad5af8f2f1f5dce8f36d83587b73bcaf34158f228c9eb",
+      "valid": true,
+      "solids": 379,
+      "volume_delta_mm3": 0.1053186422213912
+    }
+  ],
+  "quote_geometry": [
+    {
+      "file": "quote-input/AMR_GridDeck_D68C.step",
+      "sha256": "f00304de17c088257c92abcfd596f50c49d6a75395b6023d93de5facbf8d38f8",
+      "matches_native_part": "AluminumDeckD3",
+      "volume_mm3": 353368.89594265237,
+      "size_mm": [
+        300.0,
+        300.0,
+        4.0
+      ]
+    },
+    {
+      "file": "quote-input/AMR_LidAngle_D68C.step",
+      "sha256": "b4b467c1241a4a0eb4f270e089accf9ca11f9a31a81cd5eae1309d6e43b7a40a",
+      "matches_native_part": "LidAngle_1",
+      "volume_mm3": 13442.101821530377,
+      "size_mm": [
+        50.0,
+        50.0,
+        22.0
+      ]
+    }
+  ],
+  "meshes": [
+    {
+      "file": "aluminum-direct-deck/PrintedStopXN.stl",
+      "sha256": "cd006a55c410dbbd67363afc5b3f99bf272233af9b20dae8da64726743e6f495",
+      "part": "PrintedStopXN",
+      "closed": true,
+      "size_mm": [
+        15.0,
+        40.0,
+        15.0
+      ],
+      "solid_CAD_volume_mm3": 8522.87061573605
+    },
+    {
+      "file": "aluminum-direct-deck/PrintedStopXP.stl",
+      "sha256": "cd006a55c410dbbd67363afc5b3f99bf272233af9b20dae8da64726743e6f495",
+      "part": "PrintedStopXP",
+      "closed": true,
+      "size_mm": [
+        15.0,
+        40.0,
+        15.0
+      ],
+      "solid_CAD_volume_mm3": 8522.87061573605
+    },
+    {
+      "file": "aluminum-direct-deck/PrintedStopYN.stl",
+      "sha256": "8c2ca453a009985d83a387c09cb786c5e47f347a5d06eb929e81e357e26fba7d",
+      "part": "PrintedStopYN",
+      "closed": true,
+      "size_mm": [
+        40.0,
+        15.0,
+        15.0
+      ],
+      "solid_CAD_volume_mm3": 8522.87061573605
+    },
+    {
+      "file": "aluminum-direct-deck/PrintedStopYP.stl",
+      "sha256": "8c2ca453a009985d83a387c09cb786c5e47f347a5d06eb929e81e357e26fba7d",
+      "part": "PrintedStopYP",
+      "closed": true,
+      "size_mm": [
+        40.0,
+        15.0,
+        15.0
+      ],
+      "solid_CAD_volume_mm3": 8522.87061573605
+    },
+    {
+      "file": "two-story/SeamBeamPLA.stl",
+      "sha256": "22c911c5e03481453e4d1d892e9b4deadf5ea37b063eaa758556505c8ab0b727",
+      "part": "SeamBeamPLA",
+      "closed": true,
+      "size_mm": [
+        64.0,
+        100.0,
+        25.0
+      ],
+      "solid_CAD_volume_mm3": 45701.60086065484
+    },
+    {
+      "file": "direct-hinge/FloorPLA_0_0.stl",
+      "sha256": "6d8f8ba530c34cd903494adb0f7c3527ead20faf64847360f8f96ec6418fc226",
+      "part": "FloorPLA_0_0",
+      "closed": true,
+      "size_mm": [
+        229.8000030517578,
+        149.8000030517578,
+        26.0
+      ],
+      "solid_CAD_volume_mm3": 141384.864758597
+    },
+    {
+      "file": "direct-hinge/FloorPLA_0_1.stl",
+      "sha256": "18351c25ffb71331c06bd421054e0ca449c95d5ddc2cf29895f992dc1af1c0f5",
+      "part": "FloorPLA_0_1",
+      "closed": true,
+      "size_mm": [
+        229.8000030517578,
+        149.8000030517578,
+        26.0
+      ],
+      "solid_CAD_volume_mm3": 124488.86475859549
+    },
+    {
+      "file": "two-story/FloorPLA_1_0.stl",
+      "sha256": "116dec555820a7520c4a421e30c8877ee79d20778fc724c4155d6fc39724f890",
+      "part": "FloorPLA_1_0",
+      "closed": true,
+      "size_mm": [
+        229.8000030517578,
+        149.8000030517578,
+        23.999999999999986
+      ],
+      "solid_CAD_volume_mm3": 99715.27965247638
+    },
+    {
+      "file": "two-story/FloorPLA_1_1.stl",
+      "sha256": "6f7484d4e113f9337d3b883dff5a046f8012fa8938d5a340f32703716339f256",
+      "part": "FloorPLA_1_1",
+      "closed": true,
+      "size_mm": [
+        229.8000030517578,
+        149.8000030517578,
+        24.0
+      ],
+      "solid_CAD_volume_mm3": 99408.0796524764
+    },
+    {
+      "file": "two-story/ComputerBarrierPLA.stl",
+      "sha256": "53d66ff079424127cbd8e6a2e8b4c87b1529409e18ba229edfc0db25470db12a",
+      "part": "ComputerBarrierPLA",
+      "closed": true,
+      "size_mm": [
+        123.4000015258789,
+        103.4000015258789,
+        12.399999618530273
+      ],
+      "solid_CAD_volume_mm3": 31120.144000000022
+    },
+    {
+      "file": "direct-hinge/RearStopCasePLA.stl",
+      "sha256": "b5c237a6c6eb8ddb0db0e2196743b46330ca57bcff890a512b5cd98e4e355fcd",
+      "part": "RearStopCasePLA",
+      "closed": true,
+      "size_mm": [
+        66.0,
+        76.0,
+        48.0
+      ],
+      "solid_CAD_volume_mm3": 64354.350167161974
+    },
+    {
+      "file": "direct-hinge/RearStopLidPLA.stl",
+      "sha256": "8328dfc51e086c3aef05320f2676cd996cc26d8f857e7b7866de56f0c1076f59",
+      "part": "RearStopLidPLA",
+      "closed": true,
+      "size_mm": [
+        66.0,
+        76.0,
+        15.0
+      ],
+      "solid_CAD_volume_mm3": 22794.29346608475
+    },
+    {
+      "file": "direct-hinge/RearPowerCasePLA.stl",
+      "sha256": "69df6059c4cd94a394781acf1121d681c08f5c41d0b12e1b3384dedf8991f095",
+      "part": "RearPowerCasePLA",
+      "closed": true,
+      "size_mm": [
+        66.0,
+        44.0,
+        44.0
+      ],
+      "solid_CAD_volume_mm3": 40749.65159034765
+    },
+    {
+      "file": "direct-hinge/RearPowerLidPLA.stl",
+      "sha256": "c9aa5ff39901d2dce938f09df046a4c1cbe874f7a2e3b8223d0117ba074b1eb4",
+      "part": "RearPowerLidPLA",
+      "closed": true,
+      "size_mm": [
+        66.0,
+        44.0,
+        15.0
+      ],
+      "solid_CAD_volume_mm3": 11914.452258374185
+    }
+  ],
+  "grid_fastener_envelopes": [
+    {
+      "x": -125,
+      "y": -115,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": -65,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": -15,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": 35,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": 85,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": -125,
+      "y": 135,
+      "clear": false,
+      "hits": [
+        "LidAngle_0"
+      ]
+    },
+    {
+      "x": -75,
+      "y": -115,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": -65,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": -15,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": 35,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": 85,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": -75,
+      "y": 135,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": -115,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": -65,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": -15,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": 35,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": 85,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": -25,
+      "y": 135,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": -115,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": -65,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": -15,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": 35,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": 85,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": 25,
+      "y": 135,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": -115,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": -65,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": -15,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": 35,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": 85,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": 75,
+      "y": 135,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": -115,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": -65,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": -15,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": 35,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": 85,
+      "clear": true,
+      "hits": []
+    },
+    {
+      "x": 125,
+      "y": 135,
+      "clear": false,
+      "hits": [
+        "LidAngle_1"
+      ]
+    }
+  ],
+  "grid_clear_count": 34,
+  "validation_sha256": "3893cce0b8366bfefccdcbc9327a252206a6592140abaf35c60fc886c598234a",
+  "opening_stops": false,
+  "operation_released": false
+}

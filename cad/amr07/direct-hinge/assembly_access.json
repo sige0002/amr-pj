@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "HingeLidBolt_0_0",
+      "stage": "hinge to L angle on bench; screwdriver outside",
+      "hits": []
+    },
+    {
+      "name": "HingeLidNut_0_0",
+      "stage": "hold nut inside with7mm wrench",
+      "hits": []
+    },
+    {
+      "name": "AngleDeckBolt_0_0",
+      "stage": "angle to plate on bench; socket from top",
+      "hits": []
+    },
+    {
+      "name": "AngleDeckNut_0_0",
+      "stage": "plate on bench; nut socket from underside",
+      "hits": []
+    },
+    {
+      "name": "HingeLidBolt_0_1",
+      "stage": "hinge to L angle on bench; screwdriver outside",
+      "hits": []
+    },
+    {
+      "name": "HingeLidNut_0_1",
+      "stage": "hold nut inside with7mm wrench",
+      "hits": []
+    },
+    {
+      "name": "AngleDeckBolt_0_1",
+      "stage": "angle to plate on bench; socket from top",
+      "hits": []
+    },
+    {
+      "name": "AngleDeckNut_0_1",
+      "stage": "plate on bench; nut socket from underside",
+      "hits": []
+    },
+    {
+      "name": "HingeLidBolt_1_0",
+      "stage": "hinge to L angle on bench; screwdriver outside",
+      "hits": []
+    },
+    {
+      "name": "HingeLidNut_1_0",
+      "stage": "hold nut inside with7mm wrench",
+      "hits": []
+    },
+    {
+      "name": "AngleDeckBolt_1_0",
+      "stage": "angle to plate on bench; socket from top",
+      "hits": []
+    },
+    {
+      "name": "AngleDeckNut_1_0",
+      "stage": "plate on bench; nut socket from underside",
+      "hits": []
+    },
+    {
+      "name": "HingeLidBolt_1_1",
+      "stage": "hinge to L angle on bench; screwdriver outside",
+      "hits": []
+    },
+    {
+      "name": "HingeLidNut_1_1",
+      "stage": "hold nut inside with7mm wrench",
+      "hits": []
+    },
+    {
+      "name": "AngleDeckBolt_1_1",
+      "stage": "angle to plate on bench; socket from top",
+      "hits": []
+    },
+    {
+      "name": "AngleDeckNut_1_1",
+      "stage": "plate on bench; nut socket from underside",
+      "hits": []
+    }
+  ],
+  "scope": "Nominal tool approach envelopes; full human hand movements and actual tool geometry not qualified."
+}
