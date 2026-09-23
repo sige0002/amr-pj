@@ -23,6 +23,7 @@ def normal():
         o.ViewObject.Transparency=0;o.ViewObject.DisplayMode='Flat Lines';o.ViewObject.LineColor=(.14,.16,.18)
         o.ViewObject.ShapeColor={'aluminum':(.73,.77,.80),'steel':(.43,.47,.51),'PLA':(.23,.55,.59)}.get(o.MaterialBasis,(.20,.22,.24))
         if o.Name.startswith('Upright'):o.ViewObject.ShapeColor=(.20,.23,.26)
+        if o.Name=='ComputerBarrierPLA':o.ViewObject.ShapeColor=(.93,.85,.61)
         if o.Name=='BatteryBL1860B':o.ViewObject.ShapeColor=(.13,.17,.19)
         if o.Name=='BatteryAdapter03':o.ViewObject.ShapeColor=(.06,.56,.61)
         if 'Pad' in o.Name:o.ViewObject.ShapeColor=(.45,.47,.49)
@@ -41,7 +42,7 @@ def save(name,zoom=.9):
     doc.recompute();view.fitAll();Gui.updateGui();QtWidgets.QApplication.processEvents()
     view.saveImage(str(HERE/('viewport-'+name+'.png')),1600,1100,'White')
     if zoom!=1:view.getCameraNode().height.setValue(view.getCameraNode().height.getValue()*zoom)
-    window.statusBar().showMessage('D6.4 | 4 fixings per floor panel | anchored seam beam | cargo233mm',0)
+    window.statusBar().showMessage('D6.5 | 4 fixings per floor panel | anchored seam beam | cargo233mm',0)
     Gui.updateGui();QtWidgets.QApplication.processEvents()
     assert window.grab().save(str(HERE/('cad-screen-'+name+'.png')))
 
@@ -81,7 +82,7 @@ for end,rear,target in [('Lower',True,(105,135,111)),('Upper',False,(124,135,187
     cam.nearDistance.setValue(1);cam.farDistance.setValue(2000)
     Gui.updateGui();QtWidgets.QApplication.processEvents()
     label='2xHBLFSN6 + 4xM6x12' if end=='Lower' else 'HBLFSN6 + 2xM6x12'
-    window.statusBar().showMessage('D6.4 '+end+' joint | '+label+' | direct metal end bearing',0)
+    window.statusBar().showMessage('D6.5 '+end+' joint | '+label+' | direct metal end bearing',0)
     Gui.updateGui();QtWidgets.QApplication.processEvents()
     assert window.grab().save(str(HERE/('cad-screen-frame-joint-'+end.lower()+'.png')))
 
@@ -123,13 +124,13 @@ view.setCameraOrientation(App.Rotation(x,y,z,'ZXY').Q);doc.recompute();view.fitA
 cam=view.getCameraNode();q=App.Vector(196,119,96)+z*600
 cam.position.setValue(q.x,q.y,q.z);cam.focalDistance.setValue(600);cam.height.setValue(155)
 cam.nearDistance.setValue(1);cam.farDistance.setValue(2000)
-window.statusBar().showMessage('D6.4 | flat plate removed | existing internal HBLFSN6 | independent floor fixing above',0)
+window.statusBar().showMessage('D6.5 | flat plate removed | existing internal HBLFSN6 | independent floor fixing above',0)
 Gui.updateGui();QtWidgets.QApplication.processEvents()
 view.saveImage(str(HERE/'viewport-corner-joint.png'),1600,1100,'White')
 assert window.grab().save(str(HERE/'cad-screen-corner-joint.png'))
 normal()
 for o in features:
-    o.ViewObject.Visibility=o.Name.startswith(('FloorPLA_','FloorSeam','SeamBeam','ComputerPad_'))
+    o.ViewObject.Visibility=o.Name.startswith(('FloorPLA_','FloorSeam','SeamBeam'))
     if o.Name.startswith('FloorPLA_'):o.ViewObject.ShapeColor=(.23,.55,.59)
     if o.Name.startswith(('FloorSeamBolt','FloorSeamTopWasher')):o.ViewObject.ShapeColor=(.96,.38,.06)
     if o.Name.startswith('ComputerPad_'):o.ViewObject.ShapeColor=(.18,.22,.25)
@@ -137,10 +138,28 @@ iso(rear=False,high=1.25);doc.recompute();view.fitAll()
 z=App.Vector(1.25,1,1.25);z.normalize();cam=view.getCameraNode();q=App.Vector(0,0,101)+z*600
 cam.position.setValue(q.x,q.y,q.z);cam.focalDistance.setValue(600);cam.height.setValue(170)
 cam.nearDistance.setValue(1);cam.farDistance.setValue(2000)
-window.statusBar().showMessage('D6.4 | 4x M4 socket screws + OD12 washers | full2.4mm web | 4 integral PC supports +1mm liners',0)
+window.statusBar().showMessage('D6.5 | SERVICE VIEW: barrier and case removed | M4 metal fixings below continuous barrier',0)
 Gui.updateGui();QtWidgets.QApplication.processEvents()
 view.saveImage(str(HERE/'viewport-floor-seam-joint.png'),1600,1100,'White')
 assert window.grab().save(str(HERE/'cad-screen-floor-seam-joint.png'))
+# Show the installed solid barrier, then lift it for an actual CAD assembly view.
+for exploded in [False,True]:
+    normal()
+    for o in features:
+        o.ViewObject.Visibility=o.Name.startswith(('FloorPLA_','FloorSeam','SeamBeam','ComputerPad_')) or o.Name=='ComputerBarrierPLA'
+        if o.Name=='ComputerBarrierPLA':o.ViewObject.ShapeColor=(.93,.85,.61)
+        if o.Name.startswith(('FloorSeamBolt','FloorSeamTopWasher')):o.ViewObject.ShapeColor=(.96,.38,.06)
+        if exploded and (o.Name=='ComputerBarrierPLA' or o.Name.startswith('ComputerPad_')):
+            p=App.Placement(original[o.Name]);p.Base+=App.Vector(0,0,30);o.Placement=p
+    iso(rear=False,high=1.25);doc.recompute();view.fitAll()
+    z=App.Vector(1.25,1,1.25);z.normalize();cam=view.getCameraNode();q=App.Vector(0,0,115 if exploded else 106)+z*600
+    cam.position.setValue(q.x,q.y,q.z);cam.focalDistance.setValue(600);cam.height.setValue(215 if exploded else 175)
+    cam.nearDistance.setValue(1);cam.farDistance.setValue(2000)
+    name='pc-isolation-exploded' if exploded else 'pc-isolation'
+    window.statusBar().showMessage('D6.5 | '+('Barrier lifted30mm for display; remove case first' if exploded else 'Continuous2mm PLA barrier covers screws AND washers; case-specific PCB mount still to select'),0)
+    Gui.updateGui();QtWidgets.QApplication.processEvents()
+    view.saveImage(str(HERE/('viewport-'+name+'.png')),1600,1100,'White')
+    assert window.grab().save(str(HERE/('cad-screen-'+name+'.png')))
 normal();doc.getObject('Bracket_P120').ViewObject.DiffuseColor=[doc.getObject('Bracket_P120').ViewObject.ShapeColor]
 iso(high=.55);view.fitAll();doc.recompute();doc.save()
-print('D6.4: fourteen actual FreeCAD GUI screenshots saved.')
+print('D6.5: sixteen actual FreeCAD GUI screenshots saved.')

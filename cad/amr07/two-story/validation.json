@@ -1,6 +1,6 @@
 {
   "parameters": {
-    "revision": "D6.4",
+    "revision": "D6.5",
     "date": "2026-09-23",
     "source_revision": "099686bacaad0f72e8bc4ce15005cd708a5b2f83",
     "architecture": "1F battery/computer/power above base rails; 2F independent aluminum cargo deck",
@@ -93,6 +93,27 @@
       "top_z_mm": 107,
       "liner_t_mm": 1
     },
+    "computer_barrier": {
+      "part": "ComputerBarrierPLA",
+      "outer_LWH_mm": [
+        123.4,
+        103.4,
+        12.4
+      ],
+      "bottom_z_mm": 101.6,
+      "continuous_base_bottom_top_z_mm": [
+        107,
+        109
+      ],
+      "wall_t_mm": 1.2,
+      "inner_LW_mm": [
+        121,
+        101
+      ],
+      "top_z_mm": 114,
+      "mounting": "Four existing hard supports below four case pads; retained by locator pocket and installed computer belt. Remove computer before lifting barrier.",
+      "electrical_scope": "Nonconductive unfilled PLA contact barrier, no exposed floor screws or through holes on component side. Not certified electrical insulation. Bare PCB requires a product-specific insulating enclosure or mounting-hole standoffs; never strap a bare board onto the pads."
+    },
     "floor_outer_corner_notches": false,
     "corner_flat_gusset_qty": 0,
     "corner_joint": "Four auxiliary flat gussets and their8 fastener sets removed. Eight HBLFSN6 lower-frame joints retained; independent floor corner screws reused from inner rail positions. Frame racking qualification remains open.",
@@ -134,7 +155,7 @@
     "computer_origin_LWH_mm": [
       -60,
       -50,
-      108,
+      110,
       120,
       100,
       60
@@ -167,9 +188,9 @@
     "new_metal_machining": false,
     "loaded_use_released": false
   },
-  "physical_parts": 276,
+  "physical_parts": 277,
   "all_shapes_valid": true,
-  "checked_physical_pairs": 37950,
+  "checked_physical_pairs": 38226,
   "collisions": [],
   "reference_collisions": {},
   "reference_pair_collisions": [],
@@ -371,6 +392,36 @@
         8
       ],
       "hits": []
+    }
+  ],
+  "continuous_barrier_service": [
+    {
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        12
+      ],
+      "hits": [],
+      "precondition": "Computer/top pad/belt removed; four underside case pads travel with barrier."
+    },
+    {
+      "from_mm": [
+        0,
+        0,
+        12
+      ],
+      "to_mm": [
+        0,
+        -230,
+        12
+      ],
+      "hits": [],
+      "precondition": "Computer/top pad/belt removed; four underside case pads travel with barrier."
     }
   ],
   "caster_sweep_hits": [],
@@ -1062,6 +1113,7 @@
     "FloorPLA_0_1",
     "FloorPLA_1_0",
     "FloorPLA_1_1",
+    "ComputerBarrierPLA",
     "BatteryBL1860B",
     "BatteryAdapter03",
     "BatteryBasePad",
@@ -1223,21 +1275,23 @@
     "first_floor_open_height_at_sides": 97.6,
     "central_floor_to_deck": 127.6,
     "battery_lift_to_lowest_cargo_grid_fastener": 16.30000000000001,
-    "computer_to_deck": 58.5,
+    "computer_to_deck": 56.5,
     "computer_vent_keepout_height": 15,
-    "computer_case_to_floor_screw_head": 1.5999999999999943,
+    "computer_case_to_floor_screw_head": 3.5999999999999943,
     "computer_hard_support_to_floor_screw_head": 0.5999999999999943,
+    "barrier_bottom_to_floor_screw_head": 0.5999999999999943,
+    "barrier_solid_thickness": 2,
     "battery_rearward_withdrawal": 220
   },
   "mass": {
     "source_D3_kg": 8.246366343915682,
-    "estimated_base_kg": 10.029098678072284,
-    "remaining_to_10kg_kg": -0.029098678072283946,
+    "estimated_base_kg": 10.067687656632284,
+    "remaining_to_10kg_kg": -0.06768765663228393,
     "electrical_total_kg": 2.153,
     "battery_kg": 0.68,
     "adapter_kg": 0.123,
     "new_straps_and_pads_allowance_kg": 0.18,
-    "total_solid_PLA_kg": 0.6010719975975461,
+    "total_solid_PLA_kg": 0.6396609761575461,
     "added_metal_and_hardware_kg": 1.373933527349206,
     "upper_structure_metal_and_hardware_kg": 1.2926618270515282,
     "floor_added_hardware_kg": 0.0812717002976772,
@@ -2421,6 +2475,15 @@
           113.81774969414666,
           58.302861196703326,
           98.73545948670409
+        ]
+      },
+      {
+        "name": "add ComputerBarrierPLA",
+        "mass_kg": 0.03858897856000003,
+        "center_mm": [
+          -5.0565688981676006e-17,
+          1.3921390259676396e-14,
+          107.95708153535533
         ]
       },
       {
@@ -3887,7 +3950,7 @@
         "center_mm": [
           -2.5969110371381617e-16,
           -6.315935428978668e-17,
-          138.0
+          140.0
         ]
       },
       {
@@ -3945,24 +4008,24 @@
         ]
       }
     ],
-    "mass_change_kg": 1.7827323341566021,
+    "mass_change_kg": 1.8213213127166021,
     "moment_change_kg_mm": [
       -5.370561906928792,
       10.015716479999883,
-      530.752919399452
+      535.9188729042199
     ],
     "conditional_base_cg_xyz_ranges_mm": [
       [
-        -8.75793809249551,
-        7.686942167673063
+        -8.724369323101032,
+        7.657478475848568
       ],
       [
-        -7.223774467147064,
-        9.22110579302151
+        -7.196086075577687,
+        9.185761723371913
       ],
       [
-        122.81203906441486,
-        143.3681393896256
+        122.85442837732926,
+        143.33173812601626
       ]
     ],
     "basis": "Conditional on historical D3 CGx/y+-10,z85..110mm; equipment envelope centroids and mass budgets, not measured CG. Protection0.4kg split equally between two reserved cases; cable routing moment remains in historical uncertainty."

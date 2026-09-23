@@ -1,7 +1,7 @@
 {
-  "revision": "D6.4",
+  "revision": "D6.5",
   "baseline_D62_commit": "ef44e1c15743f94d3d3fcaa7b7f757f26c136e96",
-  "native_sha256": "7f4d639b85c8f04f8b2aeb5f95f8b2777c4544ce5a0cfd27327284fa6b1a92ce",
+  "native_sha256": "7a9798e5f8c0f5045029e37143bbb3b625a548ea4855cb096cd126c6e4862bf8",
   "corners": [
     {
       "panel": "FloorPLA_0_0",
@@ -296,7 +296,8 @@
   "added_PLA_mass_kg": 0.044294784,
   "mass_change_from_D62_kg": -0.12238481146770397,
   "mass_comparison_scope": "D6.2 to D6.3 corner change only; D6.4 adds separate seam hardware and PC supports.",
-  "D64_seam_and_PC_change_kg": 0.011751524229140387,
+  "D64_seam_and_PC_change_kg": 0.01175152422914,
+  "D65_barrier_mass_kg": 0.03858897856000003,
   "baseline_gusset_defects": [
     {
       "gusset": "Gusset_N1N1",

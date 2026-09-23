@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "design_revision": "D6.4",
+  "design_revision": "D6.5",
   "source_cad": "cad/amr07/two-story/AMR01_TwoStorey_D6.FCStd",
-  "source_cad_sha256": "7f4d639b85c8f04f8b2aeb5f95f8b2777c4544ce5a0cfd27327284fa6b1a92ce",
-  "source_git_commit": "b38b90b372581ddf84677df203ba63511863da0e",
+  "source_cad_sha256": "7a9798e5f8c0f5045029e37143bbb3b625a548ea4855cb096cd126c6e4862bf8",
+  "source_git_commit": "c0b236db11846b06c95ed06e7cc03919c3524e16",
   "source_git_commit_scope": "Checkout parent when exporting; uncommitted generated revision is identified by the CAD and mass-budget SHA256 values, not by this parent commit alone.",
-  "source_mass_budget_sha256": "32dc139d3155aacc03634e826f7ffc3ec87c8e92ec77453b78447aacf355078b",
+  "source_mass_budget_sha256": "989b8b0eed5bf2b2acfb955a2f632d3c565a054092441d0778edeb984aa68a16",
   "units": "meter kilogram second radian",
   "link_origins_cad_mm": {
     "base_link": [
@@ -100,7 +100,7 @@
       "link": "left_wheel_link",
       "triangles": 33284,
       "degenerate_facets_removed": 0,
-      "sha256": "f5b5239d52357c20b22fad745073bb5f8c49905dd460b4cdb51cf593f06a48fe",
+      "sha256": "e24771fe924c635892d3d55868fda92c40b9e517144913b9ced9a7fddbc8b806",
       "source_objects": [
         "motor_rotor_L",
         "TireCoverL"
@@ -124,7 +124,7 @@
       "link": "left_wheel_link",
       "triangles": 900,
       "degenerate_facets_removed": 0,
-      "sha256": "8e68ef6572daec5143430c5490b0a5ac092f83d74d65b2daf4032df5ecf139bc",
+      "sha256": "d1308523350b39822735e99f2c9a399c4282d14f4b95dd18bd6c4f4459526172",
       "source_objects": [
         "TireL"
       ],
@@ -147,7 +147,7 @@
       "link": "base_link",
       "triangles": 6748,
       "degenerate_facets_removed": 0,
-      "sha256": "e1651fc712501d8eae4c0e600b1c364c405d2c08adb1edf5c5dcb659ec4a3266",
+      "sha256": "13a1852aac9e56aa1524fb930ac76a367b3e25f83a880df48f8b36a55ed6d629",
       "source_objects": [
         "motor_stator_L",
         "motor_stator_R"
@@ -171,7 +171,7 @@
       "link": "base_link",
       "triangles": 75316,
       "degenerate_facets_removed": 0,
-      "sha256": "3c912520216da1ce0b56adf624d0e627847d93359f00dc0ab82dfea5f2e3c02e",
+      "sha256": "1c62261e986eea145e9382326f7a725b2b3bc1a6f953924602ae8ee25cd9dcc1",
       "source_objects": [
         "CasterTop",
         "JointA_NN120",
@@ -414,7 +414,7 @@
       "link": "base_link",
       "triangles": 23372,
       "degenerate_facets_removed": 0,
-      "sha256": "78aab9ac265737a12bb318793ebf81757108598467f3b4b7eebe46928c291e96",
+      "sha256": "5cd77635e8c6b628b5197f91e6eb507d9472598a457d067bb8b416888d063c2f",
       "source_objects": [
         "Rail400_1",
         "Rail400_2",
@@ -465,7 +465,7 @@
       "link": "base_link",
       "triangles": 6396,
       "degenerate_facets_removed": 0,
-      "sha256": "3b72c3b6611eb4cbc6ae93a0a332720b43fbba34ea482982e79e20691528aa4c",
+      "sha256": "af85a08b5cc4a40c56b6b623fde33efd4424a69a2206979d25145e3cdc1c824b",
       "source_objects": [
         "CustomMotorMountL",
         "CustomMotorMountR",
@@ -488,9 +488,9 @@
       "file": "meshes/base_link_pla.stl",
       "material": "pla",
       "link": "base_link",
-      "triangles": 7396,
+      "triangles": 7440,
       "degenerate_facets_removed": 0,
-      "sha256": "4731cbd3f3feb5f2adfdba40c410a02d6ce8950116e9444f01cb1a62f4ea8fc3",
+      "sha256": "a7bf1b149236b03185f90f6c5c4b0902ff1e96c3a1bf04da6b9d75c65a413d02",
       "source_objects": [
         "PrintedStopXN",
         "PrintedStopXP",
@@ -500,7 +500,8 @@
         "FloorPLA_0_0",
         "FloorPLA_0_1",
         "FloorPLA_1_0",
-        "FloorPLA_1_1"
+        "FloorPLA_1_1",
+        "ComputerBarrierPLA"
       ],
       "bounds_m": [
         [
@@ -521,7 +522,7 @@
       "link": "base_link",
       "triangles": 17856,
       "degenerate_facets_removed": 0,
-      "sha256": "b1c1dc53b27fbd2bb8af04334fb5e604ac6edd440b1ea529e2b1820fb131c7f5",
+      "sha256": "b3596ec7b63fdd687ae1541f74727eff0f17e02db0afae2db6fb4ade29561c3c",
       "source_objects": [
         "Upright3030_0",
         "Upright3030_1",
@@ -547,7 +548,7 @@
       "link": "base_link",
       "triangles": 36,
       "degenerate_facets_removed": 0,
-      "sha256": "48c6493a8c6ce60711492fe4cc1b2689f9ef26d9351ccc3b7ef713d64ad7d4ef",
+      "sha256": "f46287300c9fb856b6bde09c8ac41b61ef17c505f86b5a2f1100af2f9c98fed7",
       "source_objects": [
         "Reserved_Protection",
         "Reserved_ClampAndPower",
@@ -572,7 +573,7 @@
       "link": "base_link",
       "triangles": 12,
       "degenerate_facets_removed": 0,
-      "sha256": "a2f5d2d1860c4b42f9850528d34877a1f9738ad42457f9021737d65acfbb155e",
+      "sha256": "c89bce6cc692633ea0a455d9e76fb5c740a08575d5a7c28c6b160591fa8eafb9",
       "source_objects": [
         "Reserved_EmergencyStop"
       ],
@@ -595,7 +596,7 @@
       "link": "base_link",
       "triangles": 12,
       "degenerate_facets_removed": 0,
-      "sha256": "33dff51c29a93db5bb3c5a1837bc106e7e78d84769ab79d85dc35118089995df",
+      "sha256": "c63fa00654970d8e6e0079b9b82f2d1027175c75816f044ed1b08da0bc15d0b5",
       "source_objects": [
         "Reserved_Computer"
       ],
@@ -603,12 +604,12 @@
         [
           -0.15,
           -0.05,
-          0.05765
+          0.05965
         ],
         [
           -0.03,
           0.05,
-          0.11765
+          0.11965
         ]
       ]
     },
@@ -618,7 +619,7 @@
       "link": "base_link",
       "triangles": 12,
       "degenerate_facets_removed": 0,
-      "sha256": "0f0b02159f10fe691884de65c7a5961fe54088fcf99962e10f16286a921ad166",
+      "sha256": "5ee845a6ac087acc735be16ce67fd5aba8559a7f961c2b0c1f2b2d24a15954b5",
       "source_objects": [
         "BatteryBL1860B"
       ],
@@ -641,7 +642,7 @@
       "link": "base_link",
       "triangles": 108,
       "degenerate_facets_removed": 0,
-      "sha256": "4ecdeb5532bc66dbf47ddf69528bf70e2a949e802eff71ddb473e602a1f813f0",
+      "sha256": "680c46afd6b03901907c9c659015ceb518fe9e6e5f3413880fd90686fa4cb7fe",
       "source_objects": [
         "BatteryAdapter03",
         "BatteryBasePad",
@@ -672,7 +673,7 @@
       "link": "base_link",
       "triangles": 248,
       "degenerate_facets_removed": 0,
-      "sha256": "a5742c8796de82269237d494eab465d00135e812818a95dba8c163538bf7aa35",
+      "sha256": "014d1d936546c18d4d071a640dd59ec805dc1d5489f3af1245a60c5ecdf1dbf8",
       "source_objects": [
         "BatteryBeltTopPad",
         "BatteryRetentionBelt",
@@ -699,7 +700,7 @@
       "link": "base_link",
       "triangles": 4374,
       "degenerate_facets_removed": 2,
-      "sha256": "bcfdcfd1e594fb68a8ab33c90c6383adde29639c2dad87d51e5fc36eaf66a88f",
+      "sha256": "b413832f977cd0aa7d115ce3ae654871d75bdf84aa2ba02f79de095c959ef5cf",
       "source_objects": [
         "BatteryModuleHarness",
         "BatteryServiceConnector",
@@ -725,7 +726,7 @@
       "link": "right_wheel_link",
       "triangles": 33284,
       "degenerate_facets_removed": 0,
-      "sha256": "f628e5ff8d0b678e3adca28333a90c873597c1ee7ac4171d9b7de99bb7ff7ce9",
+      "sha256": "944464cdebafdb807bf973fe07a07eb7836ab97e98917bfcc322ec0f19cddc3e",
       "source_objects": [
         "motor_rotor_R",
         "TireCoverR"
@@ -749,7 +750,7 @@
       "link": "right_wheel_link",
       "triangles": 900,
       "degenerate_facets_removed": 0,
-      "sha256": "3d15ab9ab0ec1d263471d6bbdc730127445119f31507bff00b65cb2d9a119b02",
+      "sha256": "5b0bea13a64aacdb1143e7b4d1d31b05a2661c4689f9d1d298063942981a0aa4",
       "source_objects": [
         "TireR"
       ],
@@ -772,7 +773,7 @@
       "link": "caster_swivel_link",
       "triangles": 424,
       "degenerate_facets_removed": 0,
-      "sha256": "83c6d2fa8cdb29846a2b14f8eb1e024192f2da807bb8365f61d735ae85a3b332",
+      "sha256": "558c3d125a0215348bf04c3a4b9fea78d737df2a1776fab2977e99f82d482061",
       "source_objects": [
         "SwivelRace",
         "CasterFork"
@@ -796,7 +797,7 @@
       "link": "caster_wheel_link",
       "triangles": 408,
       "degenerate_facets_removed": 0,
-      "sha256": "503e7a123041b9d303bd71eaaf973efb8458e2d62a1e7f8fb4d2725a9d179eaf",
+      "sha256": "348ab12627be7569e9445f0a561ac6f503262fd7f12d02280fdfaf86ba203a20",
       "source_objects": [
         "CasterTire"
       ],
@@ -819,7 +820,7 @@
       "link": "caster_wheel_link",
       "triangles": 408,
       "degenerate_facets_removed": 0,
-      "sha256": "e9d993f90b78b4163d81a3c768215bf600166243c614292d5ba495e9db8a152e",
+      "sha256": "1f3f76c914d5c936ccd3b20abd5b5feb7c52c3df0eb74f0decbac6966646ea68",
       "source_objects": [
         "CasterCore"
       ],
@@ -842,7 +843,7 @@
       "link": "base_link",
       "triangles": 256,
       "degenerate_facets_removed": 0,
-      "sha256": "4392c160899cbaa67ed131a6e66178eb6ef24ec7dae1b35ecb65b3a7b3a27cdd",
+      "sha256": "bef8b7e11debbb25452c61ad47125284d227655fa9c29e911d7fc08525203dff",
       "source_objects": [
         "StrapRouteX",
         "StrapRouteY"
@@ -862,10 +863,10 @@
     }
   ],
   "variants": {
-    "amr_d64.urdf": {
+    "amr_d65.urdf": {
       "payload_kg": 0,
-      "mass_kg": 10.029098678072282,
-      "sha256": "cabfab9ff1005a11d3b2508496437f64a13f38ba6a30c466a96e468ce6f6bfa4",
+      "mass_kg": 10.067687656632282,
+      "sha256": "0c26e09328302b37b66f7f781e8456c62af607f2659a7d1884c1547f7cdb1f63",
       "links": {
         "left_wheel_link": {
           "mass_kg": 0.45000000000000007,
@@ -898,32 +899,32 @@
           ]
         },
         "base_link": {
-          "mass_kg": 9.004875286127604,
+          "mass_kg": 9.043464264687604,
           "com_cad_mm": [
-            -3.3615788726126272,
-            -0.8261808238338916,
-            130.55852170575807
+            -3.3472348235572755,
+            -0.82265546306898,
+            130.57265716381906
           ],
           "com_local_m": [
-            -0.09336157887261262,
-            -0.0008261808238338915,
-            0.08020852170575807
+            -0.09334723482355728,
+            -0.00082265546306898,
+            0.08022265716381906
           ],
           "inertia_kg_m2": [
             [
-              0.117124651941039,
-              0.0016813272398007208,
-              0.0052368523071964854
+              0.11720221214100099,
+              0.0016812205250203909,
+              0.00523642441842073
             ],
             [
-              0.0016813272398007208,
-              0.1691864203794701,
-              0.0001546015199688945
+              0.0016812205250203909,
+              0.16928023600493702,
+              0.00015449635703366346
             ],
             [
-              0.0052368523071964854,
-              0.0001546015199688945,
-              0.2219087032669464
+              0.00523642441842073,
+              0.00015449635703366346,
+              0.22200665941815245
             ]
           ]
         },
@@ -1019,32 +1020,32 @@
         }
       },
       "assembly": {
-        "mass_kg": 10.029098678072284,
+        "mass_kg": 10.067687656632284,
         "com_cad_mm": [
-          3.1251979384636144,
-          -0.7418069680259919,
-          122.29159119434901
+          3.1132192001121437,
+          -0.738963656417496,
+          122.33597535974441
         ],
         "com_local_m": [
-          -0.08687480206153639,
-          -0.0007418069680259918,
-          0.07194159119434901
+          -0.08688678079988786,
+          -0.0007389636564174959,
+          0.0719859753597444
         ],
         "inertia_kg_m2": [
           [
-            0.15154673124241966,
-            0.001633030600982417,
-            0.009787817745598656
+            0.15162901917713748,
+            0.001633119718666464,
+            0.00978920887487793
           ],
           [
-            0.001633030600982417,
-            0.18662366335821826,
-            0.00021610463321745
+            0.001633119718666464,
+            0.1867221530383216,
+            0.00021577443032691593
           ],
           [
-            0.009787817745598656,
-            0.00021610463321745,
-            0.2606039764082406
+            0.00978920887487793,
+            0.00021577443032691593,
+            0.26070186873090606
           ]
         ]
       },
@@ -8370,8 +8371,35 @@
             ]
           },
           {
+            "name": "ComputerBarrierPLA",
+            "basis": "CAD volume times assumed PLA density",
+            "mass_kg": 0.03858897856000003,
+            "com_cad_mm": [
+              -5.0565688981676006e-17,
+              1.3921390259676396e-14,
+              107.95708153535533
+            ],
+            "inertia_kg_m2": [
+              [
+                4.094060414396076e-05,
+                -9.40807250935254e-22,
+                -2.1065430923422189e-22
+              ],
+              [
+                -9.40807250935254e-22,
+                5.678805416764013e-05,
+                -2.3251526835675025e-20
+              ],
+              [
+                -2.1065430923422189e-22,
+                -2.3251526835675025e-20,
+                9.749572078733241e-05
+              ]
+            ]
+          },
+          {
             "name": "BatteryBL1860B",
-            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.5 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.68,
             "com_cad_mm": [
               -136.5,
@@ -8398,7 +8426,7 @@
           },
           {
             "name": "BatteryAdapter03",
-            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.5 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.123,
             "com_cad_mm": [
               -136.5,
@@ -8425,34 +8453,34 @@
           },
           {
             "name": "Reserved_Computer",
-            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.5 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.5,
             "com_cad_mm": [
               -2.5969110371381617e-16,
               -6.315935428978668e-17,
-              138.0
+              140.0
             ],
             "inertia_kg_m2": [
               [
                 0.0005666666666666666,
                 -3.9853344427540765e-22,
-                -6.303965067312036e-22
+                -6.303965067312081e-22
               ],
               [
                 -3.9853344427540765e-22,
                 0.00075,
-                5.7443098093960255e-37
+                0.0
               ],
               [
-                -6.303965067312036e-22,
-                5.7443098093960255e-37,
+                -6.303965067312081e-22,
+                0.0,
                 0.0010166666666666666
               ]
             ]
           },
           {
             "name": "Reserved_SupervisorRS485",
-            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.5 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.05,
             "com_cad_mm": [
               40.0,
@@ -8479,7 +8507,7 @@
           },
           {
             "name": "Reserved_Protection",
-            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.5 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.2,
             "com_cad_mm": [
               170.0,
@@ -8506,7 +8534,7 @@
           },
           {
             "name": "Reserved_ClampAndPower",
-            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.5 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.2,
             "com_cad_mm": [
               180.0,
@@ -8533,7 +8561,7 @@
           },
           {
             "name": "wiring_allowance",
-            "basis": "D6.4 wiring allowance; ASSUMED distributed across first floor, not copper-fill CAD density",
+            "basis": "D6.5 wiring allowance; ASSUMED distributed across first floor, not copper-fill CAD density",
             "mass_kg": 0.4,
             "com_cad_mm": [
               2.5397488442045013e-15,
@@ -8560,7 +8588,7 @@
           },
           {
             "name": "battery_belt_pads",
-            "basis": "D6.4 125g battery belt plus 25g pads, simplified distribution",
+            "basis": "D6.5 125g battery belt plus 25g pads, simplified distribution",
             "mass_kg": 0.15,
             "com_cad_mm": [
               -146.0,
@@ -8587,7 +8615,7 @@
           },
           {
             "name": "computer_belts_pads",
-            "basis": "D6.4 computer/supervisor retaining allowance",
+            "basis": "D6.5 computer/supervisor retaining allowance",
             "mass_kg": 0.03,
             "com_cad_mm": [
               -5.814180444272246e-16,
@@ -8641,7 +8669,7 @@
           },
           {
             "name": "inherited_strap_allowance",
-            "basis": "Legacy strap allowance retained in D6.4 ledger; no new additional mass",
+            "basis": "Legacy strap allowance retained in D6.5 ledger; no new additional mass",
             "mass_kg": 0.04,
             "com_cad_mm": [
               -136.5,
@@ -8668,7 +8696,7 @@
           },
           {
             "name": "cargo_belts_pads",
-            "basis": "D6.4 cargo belts/pads allowance stowed on deck in empty variant",
+            "basis": "D6.5 cargo belts/pads allowance stowed on deck in empty variant",
             "mass_kg": 0.28,
             "com_cad_mm": [
               5.6924822328644e-17,
@@ -8891,10 +8919,10 @@
         ]
       }
     },
-    "amr_d64_payload_10kg.urdf": {
+    "amr_d65_payload_10kg.urdf": {
       "payload_kg": 10,
-      "mass_kg": 20.02909867807228,
-      "sha256": "711189a4e9c3e71140b03b5fb265a724d1c77b6276d4d13628946c1e01ab9211",
+      "mass_kg": 20.06768765663228,
+      "sha256": "97fc48bff837ffbc2b3ce2d294ba1b1c9ababef8bb27b94a501c6fcd5001ad0b",
       "links": {
         "left_wheel_link": {
           "mass_kg": 0.45000000000000007,
@@ -8927,32 +8955,32 @@
           ]
         },
         "base_link": {
-          "mass_kg": 9.004875286127604,
+          "mass_kg": 9.043464264687604,
           "com_cad_mm": [
-            -3.3615788726126272,
-            -0.8261808238338916,
-            132.6418376211823
+            -3.3472348235572755,
+            -0.82265546306898,
+            132.64708345123782
           ],
           "com_local_m": [
-            -0.09336157887261262,
-            -0.0008261808238338915,
-            0.0822918376211823
+            -0.09334723482355728,
+            -0.00082265546306898,
+            0.08229708345123782
           ],
           "inertia_kg_m2": [
             [
-              0.12352262653339882,
-              0.0016813272398007208,
-              0.005173789087546269
+              0.12359982314039565,
+              0.0016812205250203909,
+              0.005173630293130797
             ],
             [
-              0.0016813272398007208,
-              0.1755120616384968,
-              0.00013910236771377243
+              0.0016812205250203909,
+              0.1756055136709986,
+              0.00013906334054648905
             ],
             [
-              0.005173789087546269,
-              0.00013910236771377243,
-              0.22258303660027973
+              0.005173630293130797,
+              0.00013906334054648905,
+              0.22268099275148578
             ]
           ]
         },
@@ -9078,32 +9106,32 @@
         }
       },
       "assembly": {
-        "mass_kg": 20.029098678072284,
+        "mass_kg": 20.067687656632284,
         "com_cad_mm": [
-          1.5648691444949376,
-          -0.3714423400669134,
-          218.44390034268383
+          1.561859993520527,
+          -0.3707280783770579,
+          218.28127206492906
         ],
         "com_local_m": [
-          -0.08843513085550507,
-          -0.0003714423400669134,
-          0.16809390034268384
+          -0.08843814000647947,
+          -0.0003707280783770579,
+          0.16793127206492905
         ],
         "inertia_kg_m2": [
           [
-            0.39148600189149907,
-            0.0016446389093367844,
-            0.012801511736106263
+            0.3918385979302742,
+            0.0016446612963827145,
+            0.012796414491248628
           ],
           [
-            0.0016446389093367844,
-            0.4265367505470473,
-            -0.000499235401454311
+            0.0016446612963827145,
+            0.42690528303755876,
+            -0.0004980255031286421
           ],
           [
-            0.012801511736106263,
-            -0.000499235401454311,
-            0.3279966370516448
+            0.012796414491248628,
+            -0.0004980255031286421,
+            0.3280942324018667
           ]
         ]
       },
@@ -16429,8 +16457,35 @@
             ]
           },
           {
+            "name": "ComputerBarrierPLA",
+            "basis": "CAD volume times assumed PLA density",
+            "mass_kg": 0.03858897856000003,
+            "com_cad_mm": [
+              -5.0565688981676006e-17,
+              1.3921390259676396e-14,
+              107.95708153535533
+            ],
+            "inertia_kg_m2": [
+              [
+                4.094060414396076e-05,
+                -9.40807250935254e-22,
+                -2.1065430923422189e-22
+              ],
+              [
+                -9.40807250935254e-22,
+                5.678805416764013e-05,
+                -2.3251526835675025e-20
+              ],
+              [
+                -2.1065430923422189e-22,
+                -2.3251526835675025e-20,
+                9.749572078733241e-05
+              ]
+            ]
+          },
+          {
             "name": "BatteryBL1860B",
-            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.5 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.68,
             "com_cad_mm": [
               -136.5,
@@ -16457,7 +16512,7 @@
           },
           {
             "name": "BatteryAdapter03",
-            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.5 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.123,
             "com_cad_mm": [
               -136.5,
@@ -16484,34 +16539,34 @@
           },
           {
             "name": "Reserved_Computer",
-            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.5 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.5,
             "com_cad_mm": [
               -2.5969110371381617e-16,
               -6.315935428978668e-17,
-              138.0
+              140.0
             ],
             "inertia_kg_m2": [
               [
                 0.0005666666666666666,
                 -3.9853344427540765e-22,
-                -6.303965067312036e-22
+                -6.303965067312081e-22
               ],
               [
                 -3.9853344427540765e-22,
                 0.00075,
-                5.7443098093960255e-37
+                0.0
               ],
               [
-                -6.303965067312036e-22,
-                5.7443098093960255e-37,
+                -6.303965067312081e-22,
+                0.0,
                 0.0010166666666666666
               ]
             ]
           },
           {
             "name": "Reserved_SupervisorRS485",
-            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.5 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.05,
             "com_cad_mm": [
               40.0,
@@ -16538,7 +16593,7 @@
           },
           {
             "name": "Reserved_Protection",
-            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.5 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.2,
             "com_cad_mm": [
               170.0,
@@ -16565,7 +16620,7 @@
           },
           {
             "name": "Reserved_ClampAndPower",
-            "basis": "D6.4 electrical catalog mass or equipment budget; uniform envelope",
+            "basis": "D6.5 electrical catalog mass or equipment budget; uniform envelope",
             "mass_kg": 0.2,
             "com_cad_mm": [
               180.0,
@@ -16592,7 +16647,7 @@
           },
           {
             "name": "wiring_allowance",
-            "basis": "D6.4 wiring allowance; ASSUMED distributed across first floor, not copper-fill CAD density",
+            "basis": "D6.5 wiring allowance; ASSUMED distributed across first floor, not copper-fill CAD density",
             "mass_kg": 0.4,
             "com_cad_mm": [
               2.5397488442045013e-15,
@@ -16619,7 +16674,7 @@
           },
           {
             "name": "battery_belt_pads",
-            "basis": "D6.4 125g battery belt plus 25g pads, simplified distribution",
+            "basis": "D6.5 125g battery belt plus 25g pads, simplified distribution",
             "mass_kg": 0.15,
             "com_cad_mm": [
               -146.0,
@@ -16646,7 +16701,7 @@
           },
           {
             "name": "computer_belts_pads",
-            "basis": "D6.4 computer/supervisor retaining allowance",
+            "basis": "D6.5 computer/supervisor retaining allowance",
             "mass_kg": 0.03,
             "com_cad_mm": [
               -5.814180444272246e-16,
@@ -16700,7 +16755,7 @@
           },
           {
             "name": "inherited_strap_allowance",
-            "basis": "Legacy strap allowance retained in D6.4 ledger; no new additional mass",
+            "basis": "Legacy strap allowance retained in D6.5 ledger; no new additional mass",
             "mass_kg": 0.04,
             "com_cad_mm": [
               -136.5,
@@ -16727,7 +16782,7 @@
           },
           {
             "name": "cargo_belts_pads",
-            "basis": "D6.4 loaded restraint allowance at CAD z310mm",
+            "basis": "D6.5 loaded restraint allowance at CAD z310mm",
             "mass_kg": 0.28,
             "com_cad_mm": [
               -8.52763232193744e-16,
@@ -16987,6 +17042,6 @@
   ],
   "source_cad_modified": false,
   "isaac_sim_runtime_tested": false,
-  "mass_note": "Totals reconcile exactly with D6.4 ledger. Component densities, rotor/stator split, caster distribution, unselected electronics and allowances are estimates. CAD-derived tensor is not a measured tensor.",
+  "mass_note": "Totals reconcile exactly with D6.5 ledger. Component densities, rotor/stator split, caster distribution, unselected electronics and allowances are estimates. CAD-derived tensor is not a measured tensor.",
   "collision_note": "Explicit boxes/cylinders for mobility, with deck holes/slots/small hardware omitted. No structural deformation, tire compliance, electrical brake, regenerative power or motor thermal model."
 }

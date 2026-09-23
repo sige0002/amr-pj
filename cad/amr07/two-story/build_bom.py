@@ -18,10 +18,10 @@ for row in rows:
     if row['ID']=='D3_M6':row.update({'使用数':'50','備考':'下段ブラケット16＋上段支柱金具24＋天板6＋D6.2支持梁4。旧電池受けから移す別枠4本はH01に含み重複計上しない。D5から追加28本、D6.1から追加4本の購入価格未確定。'})
     if row['ID']=='H01':row.update({'仕様・型番':'詳細は締結部品表、基礎部50点','CAD形状数':'50',
         '備考':'従来66点から三角板用M6ねじ8本・座金8枚を削除。溝ナット8個の削除はF04。2300円の一式仮枠は購入パック未確定のため据置き、16点の削減を架空の節約額へ換算しない。モーターねじFC-2512候補を含む。'})
-    if row['ID']=='P04':row.update({'分類':'D6 PLA','部品名':'四隅まで覆うリブ付き床4枚・継ぎ目支持梁1個・荷物ストッパ4個','仕様・型番':'D6.4全PLA、中実CAD換算、PC受け一体',
+    if row['ID']=='P04':row.update({'分類':'D6 PLA','部品名':'四隅まで覆うリブ付き床4枚・継ぎ目支持梁1個・PC金属接触防止カバー1個・荷物ストッパ4個','仕様・型番':'D6.5全PLA、中実CAD換算、PCカバー追加',
         '使用数':str(grams),'明細金額':str(grams*2),'備考':'2円/gの材料消費参考。D5の電池受け・床下電装受け・前トレイを全て廃止。実スライス、失敗、電力、工賃別。荷台構造は金属。'})
     if row['ID']=='POWER_LOW_STRAPS':row.update({'分類':'D6 1階電装','部品名':'1階計算機・監視回路の保持ベルト','単位':'本','購入予定数':'','購入単位':'商品未選定','購入口数':'','余剰数':'','備考':'幅15mm各1本、棚の長手方向に掛ける。受け棚は既存M6で固定。ケース選定後に通気口を避けて調整。'})
-    if row['ID']=='POWER_PADS':row.update({'仕様・型番':'電池・他電装下面2.6mm、PC受け10×10×1mmを4枚、上面1mm等の軟質当て材','備考':'PCの硬い受け5.6mmは床に一体印刷。パッドは現物合わせ、温度適合確認前。価格未確定。'})
+    if row['ID']=='POWER_PADS':row.update({'仕様・型番':'電池・他電装下面2.6mm、PCカバー上10×10×1mmを4枚、上面1mm等の軟質当て材','備考':'PCの硬い受け5.6mmは床に一体印刷、その上へ2mm連続板カバーを追加。パッドは現物合わせ、温度適合確認前。価格未確定。'})
     if row['ID']=='DECK_plate':
         row.update({'単位':'枚','購入予定数':'1','購入単位':'1枚×1','購入口数':'1','余剰数':'0','購入先':'JLCCNC'})
         row['備考']+=' D6では組付け位置のみ130mm上へ変更。加工STEP/PDFはD3と同一。'
@@ -89,8 +89,8 @@ for item in unselected:
         decision_needed='本体・記憶媒体・冷却の選定と購入価格を確定。重量枠があることは代金計上済みを意味しない。')
     if item['id']=='U06':item['decision_needed']='アダプター付属スイッチと重複計上せず、主遮断・着脱コネクタの必要部品を確定。'
     if item['id']=='U13':item['decision_needed']='現行の1階配線経路から線長・端子数を確定。購入品付属線との重複を避ける。'
-    if item['id']=='U15':item.update(specification='D6.4の1階機器・ケース・通風・取付の具体化',
-        decision_needed='PLA床とベルトの既計上分を除き、ケース・実機器の固定部・スタンドオフを選定。')
+    if item['id']=='U15':item.update(specification='D6.5の計算機ケース／基板専用樹脂スペーサー・通風・取付の具体化',
+        decision_needed='PLA床・カバー・ベルトの既計上分を除き、機種選定後にケースまたは基板取付穴対応の絶縁スペーサーを選定。裸基板の直置き・ベルト直掛け不可。')
     if item['id']=='U17':item['decision_needed']='見積済みモーター金具・アルミ天板を除く。キャスター板の加工工具、工賃などは未見積。基礎の平面三角板はD6.3で廃止、加工も不要。切断済み支柱に追加加工は不要。'
     if item['id']=='U18':item['decision_needed']=f'現行P04の車体用PLA{grams}gとは別のモック材料・失敗分。スライス未完。'
     row={k:'' for k in fields}
@@ -105,6 +105,7 @@ totals={c:round(sum(float(r['明細金額']) for r in rows if r['通貨']==c and
 prior=json.loads((D5/'cost_summary.json').read_text());rate=prior['FX_reference_JPY_per_USD']
 before62=json.loads(subprocess.check_output(['git','-C',str(HERE),'show','ef44e1c:cad/amr07/two-story/cost_summary.json']))
 before63=json.loads(subprocess.check_output(['git','-C',str(HERE),'show','b38b90b:cad/amr07/two-story/cost_summary.json']))
+before64=json.loads(subprocess.check_output(['git','-C',str(HERE),'show','c0b236d:cad/amr07/two-story/cost_summary.json']))
 out=dict(revision=v['parameters']['revision'],date='2026-09-23',subtotal=totals,
     full_running_subtotal_JPY_reference=totals['JPY']+totals['USD']*rate,
     FX_reference_JPY_per_USD=rate,FX_date=prior['FX_date'],
@@ -121,12 +122,12 @@ out=dict(revision=v['parameters']['revision'],date='2026-09-23',subtotal=totals,
         removed_gusset_material_budget_JPY=500,hardware_budget_reduction_JPY=0,
         PLA_material_reference_increase_JPY=before63['corner_rework_from_D62']['PLA_material_reference_increase_JPY'],
         priced_and_budgeted_subtotal_change_JPY=before63['subtotal']['JPY']-before62['subtotal']['JPY'],historical_revision='D6.3'),
-    plain_hole_rework_from_D63=dict(added_physical_washers=4,replaced_lower_washers=4,replaced_M4_screws=4,
-        new_machined_parts=0,screw_pack_JPY=770,washer_pack_JPY=288,shipping_reference_JPY=775,
-        purchase_reference_JPY=1833,used_fastener_material_proration_JPY=770*4/60+288*8/50,
-        PLA_material_reference_increase_JPY=grams*2-1198,
-        priced_subtotal_change_JPY=totals['JPY']-before63['subtotal']['JPY'],
-        old_M4_purchase_price_was_unpriced=True,old_screw_savings_not_invented=True),
+    plain_hole_rework_from_D63=before64['plain_hole_rework_from_D63'],
+    barrier_change_from_D64=dict(added_printed_parts=1,added_metal_parts=0,added_machining=False,
+        barrier_mass_kg=next(e['mass_kg'] for e in v['cg_difference']['ledger'] if e['name']=='add ComputerBarrierPLA'),
+        PLA_material_reference_increase_JPY=grams*2-1204,
+        priced_subtotal_change_JPY=totals['JPY']-before64['subtotal']['JPY'],
+        PCB_specific_mount_price=None,scope='Nonconductive PLA contact barrier only; actual case/PCB mounting and printing support/failure/electricity cost remain unpriced.'),
     selected_power_delivered_Tokyo_reference_JPY=23380,
     source_D3_plate_and_mount_quotes_unchanged=True,new_metal_quote_needed=False,
     unpriced_rows=[r['ID'] for r in rows if not r['明細金額']],

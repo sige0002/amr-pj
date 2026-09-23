@@ -71,8 +71,8 @@ def main():
         parser.error("ffmpeg is required")
     font = ImageFont.truetype(str(args.font), 19)
     small = ImageFont.truetype(str(args.font), 15)
-    urdf = HERE / "amr_d64.urdf"
-    output = HERE / "amr_d64_motion_mujoco.gif"
+    urdf = HERE / "amr_d65.urdf"
+    output = HERE / "amr_d65_motion_mujoco.gif"
     model, data = make_model(urdf, visuals=True)
     model.vis.global_.offwidth, model.vis.global_.offheight = WIDTH, HEIGHT
     model.geom_group[model.geom("test_floor").id] = 2
@@ -122,7 +122,7 @@ def main():
                 image = Image.fromarray(renderer.render())
                 draw = ImageDraw.Draw(image)
                 draw.rectangle((0, 0, WIDTH, 64), fill=(22, 31, 43))
-                draw.text((18, 7), "AMR D6.4 走行シミュレーション / MuJoCo", font=font, fill=(242, 246, 250))
+                draw.text((18, 7), "AMR D6.5 走行シミュレーション / MuJoCo", font=font, fill=(242, 246, 250))
                 draw.text((18, 36), f"空車 {model.body_mass.sum():.3f} kg    格子 10 cm    実時間再生    {t:04.1f} / {DURATION} s", font=small, fill=(181, 199, 216))
                 draw.rectangle((0, HEIGHT-44, WIDTH, HEIGHT), fill=(22, 31, 43))
                 speed = float(np.linalg.norm(data.qvel[:2]))

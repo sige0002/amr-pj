@@ -7,6 +7,8 @@ def read(p):return json.loads(p.read_text())
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 coarse=read(HERE/'coarse/result.json');fine=read(HERE/'fine/result.json')
 geometry=read(HERE/'geometry.json');fixings=read(HERE.parent/'floor_support_review.json')
+barrier=read(HERE.parent/'computer_barrier_review.json')
+assert barrier['native_sha256']==geometry['source_cad_sha256']
 assert coarse['source_cad_sha256']==fine['source_cad_sha256']==geometry['source_cad_sha256']==sha(HERE.parent/'AMR01_TwoStorey_D6.FCStd')
 assert coarse['force_balance_passed'] and fine['force_balance_passed']
 assert fine['E_MPa']==coarse['E_MPa']==1000
@@ -44,7 +46,7 @@ material=dict(assumed_product='Bambu PLA Basic; not confirmed by owner',assumed_
         seam_beam_orientation='broad flange toward bed, check belt-channel bridging',
         sliced=False,printed=False,annealing_required_by_this_review=False,
         note='proposal only; different settings/orientation/infill require re-evaluation. No claim that this reproduces TDS specimens.'))
-summary=dict(revision='D6.4',source_cad_sha256=geometry['source_cad_sha256'],material=material,
+summary=dict(revision='D6.5',source_cad_sha256=geometry['source_cad_sha256'],material=material,
     mesh_comparison=comparisons,bolt_preload_sensitivity=preloads,
     preload_formula_source='https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf',
     material_strength_factor_2_demonstrated=False,creep_qualified=False,whole_frame_qualified=False,
@@ -59,7 +61,7 @@ summary=dict(revision='D6.4',source_cad_sha256=geometry['source_cad_sha256'],mat
         'Route strap reactions into ribs or metal rails and qualify required retention force; do not prescribe10N as a safe strap limit from this sweep.',
         'Plain holes and larger washers adopted. If measured preload retention/creep is insufficient, evaluate compression sleeves or route clamp load into metal without weakening the floor.',
         'Correlate a printed assembly under known masses and measured strap tension; then test retention at actual temperature and duration.'])
-old=json.loads(subprocess.check_output(['git','-C',str(HERE),'show','b38b90b:cad/amr07/two-story/pla-strength/fine/result.json']))
+old=json.loads(subprocess.check_output(['git','-C',str(HERE),'show','c0b236d:cad/amr07/two-story/pla-strength/fine/result.json']))
 old_fix=json.loads(subprocess.check_output(['git','-C',str(HERE),'show','b38b90b:cad/amr07/two-story/floor_support_review.json']))
 old_area=old_fix['panels'][0]['fixings'][3]['actual_head_or_washer_bearing_projected_area_mm2']
 before_after=[]
@@ -68,7 +70,7 @@ for a,b in zip(old['cases'],fine['cases']):
     before_after.append(dict(belt_tension_each_leg_N=b['belt_tension_each_leg_N'],
         old_down_mm=a['max_down_mm'],new_down_mm=b['max_down_mm'],
         old_peak_tensile_MPa=a['max_tensile_MPa'],new_peak_tensile_MPa=b['max_tensile_MPa']))
-summary['D64_change']=dict(baseline_commit='b38b90b372581ddf84677df203ba63511863da0e',
+summary['washer_change_history_D64']=dict(baseline_commit='b38b90b372581ddf84677df203ba63511863da0e',
     old_M4_projected_area_mm2=old_area,new_M4_projected_area_mm2=areas['M4_large_washer'],
     projected_bearing_area_ratio=areas['M4_large_washer']/old_area,
     same_preload_mean_pressure_reduction_percent=100*(1-old_area/areas['M4_large_washer']),
@@ -76,21 +78,26 @@ summary['D64_change']=dict(baseline_commit='b38b90b372581ddf84677df203ba63511863
     hard_support_top_z_mm=107,head_top_z_mm=106.4,liner_free_case_head_clearance_mm=1.6,
     fully_compressed_liner_case_head_clearance_mm=.6,
     geometry_checks='Four ordinary M4x16 screws, upper/lower OD12x1 washers, full floor web; tool approach and service envelopes checked.',
+    scope='Historical D6.3 to D6.4 washer/web change; retained without further modification in D6.5.')
+summary['D65_change']=dict(baseline_commit='c0b236db11846b06c95ed06e7cc03919c3524e16',
+    barrier_mass_kg=barrier['mass_kg'],continuous_barrier_mm=2,old_PC_seat_z_mm=108,new_PC_seat_z_mm=110,
     before_after_same_four_foot_contact=before_after,
-    comparison_scope='Same loads, E and boundary model; PC contact raised onto actual solid bosses. Previous full-pad PC case is not the same contact condition and is not a like-for-like comparison.')
+    bare_PCB_mounting_complete=False,dielectric_strength_verified=False,
+    scope='Same five floor/beam solids, support locations and contact model. Add barrier mass to PC loads at aligned floor bosses; no barrier spanning stiffness or load-spreading credit. Local compression screen is separate.',
+    local_compression_review='../computer_barrier_review.json')
 (HERE/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n')
 
-lines=['# D6.4 PLA床：皿穴廃止後の実形状解析',
+lines=['# D6.5 PLA床：金属接触防止カバーの追加荷重を反映',
 '',
-'**中央4か所の皿穴を廃止し、M4×16通常キャップねじ＋上下OD12座金へ変更した。穴周囲の薄肉0.65mmをなくし、床の基本厚2.4mmを残す。** PCは床と一体の硬い受け4か所と1mmパッドで支持し、座面を104→108mmへ変更。床4枚と支持梁を再解析した。短時間の線形弾性比較であり、印刷物の安全率2・長期耐久の認定ではない。',
+'**中央のねじ・座金を厚さ2mmの連続したPLAカバーで覆い、約39gの追加荷重を床4枚と支持梁の解析へ反映した。** カバーの4か所の荷重位置は、床と一体の硬い受けの真上。カバーの曲げ剛性による荷重分散は計上しない。ケース座面は108→110mm。裸基板の固定方法は機種未選定のため未確定である。短時間の線形弾性比較であり、印刷物の安全率2・長期耐久・電気絶縁の認定ではない。',
 '',
-'![通常ねじ・座金とPC受けのFreeCAD画面](../cad-screen-floor-seam-joint.png)',
+'![中央金属を覆うPLAカバーのFreeCAD画面](../cad-screen-pc-isolation.png)',
 '',
 '## 荷重と材料条件',
 '',
-f'1階電装2.4kg（電池・アダプター等0.953kg、PC等0.525kg、通信0.055kg、保護0.2kg、電源0.2kg、配線等0.467kg）に、床4枚＋支持梁の中実換算自重{sum(p["solid_mass_kg"] for p in geometry["parts"].values()):.3f}kgを加えた。上段の荷物10kg／構造比較15kgは金属支柱と3030で受けるため、この床荷重に混ぜていない。',
+f'1階電装2.4kg（電池・アダプター等0.953kg、PC等0.525kg、通信0.055kg、保護0.2kg、電源0.2kg、配線等0.467kg）に、カバー{barrier["mass_kg"]*1000:.1f}gと床4枚＋支持梁の中実換算自重{sum(p["solid_mass_kg"] for p in geometry["parts"].values()):.3f}kgを加えた。上段の荷物10kg／構造比較15kgは金属支柱と3030で受けるため、この床荷重に混ぜていない。',
 '',
-'PCは両条件とも実CADの10×10mm受け4か所（上面Z107mm）に荷重を与えた。他の機器が面で接する場合と、10×10mmの脚4個で接する場合を比較した。電池・PC・通信機器の3本の閉じたベルトをモデル化し、各脚の張力を0・10・30Nとした。1本のベルトは機器へ2Tを下向き、床裏へ各Tを上向きに加えるため、全体への追加鉛直力はゼロだが、局所的な曲げが増す。張力は実測値ではなく感度確認用で、0Nは重力だけの比較条件である。',
+'PCは両条件とも実CADの10×10mm受け4か所（上面Z107mm）に、PCとカバーの全重量およびベルト反力を与えた。カバー上のパッドと床の受けのXY位置が一致することをCADで確認した。カバー自体の曲げ・接触は5部品の有限要素モデルに含めず、[別紙の局部圧縮比較](../COMPUTER_BARRIER.ja.md)に分けた。他の機器が面で接する場合と、10×10mmの脚4個で接する場合を比較した。電池・PC・通信機器の3本の閉じたベルトをモデル化し、各脚の張力を0・10・30Nとした。1本のベルトは機器へ2Tを下向き、床裏へ各Tを上向きに加えるため、全体への追加鉛直力はゼロだが、局所的な曲げが増す。張力は実測値ではなく感度確認用で、0Nは重力だけの比較条件である。',
 '',
 '銘柄未回答のためPLA Basic相当・100%充填を仮定。弾性率E=1000MPa、ポアソン比0.35の均質等方体とした。E=1000MPaは低剛性側を比較するための仮定で、あらゆる印刷方向の下限保証ではない。内部空隙を含む実印刷形状はモデル化していない。',
 '',
@@ -105,12 +112,12 @@ f'1階電装2.4kg（電池・アダプター等0.953kg、PC等0.525kg、通信0.
 for c in comparisons:
     label='他機器は面・PCは4脚' if c['contact']=='full_pads' else '全機器10mm角の脚4個'
     lines.append(f"| {label} | {c['belt_tension_each_leg_N']}N | {c['max_down_mm']:.3f}mm | {c['max_tensile_MPa']:.2f}MPa | {c['linear_twice_all_loads_tensile_demand_MPa']:.2f}MPa |")
-lines += ['', '### 旧D6.3との比較', '',
-'機器が全て4脚の条件で比較する。PCは接触XY位置を維持し、Z方向だけ実際の硬い受け上へ移した。旧版のPC面支持ケースと新しい4脚支持は条件が異なるため、同条件の改善率として扱わない。', '',
+lines += ['', '### 前版D6.4との比較', '',
+'機器が全て4脚の条件で比較する。床4枚と支持梁の形状、受けの位置、弾性率と境界条件を維持し、カバー約39gの荷重だけを追加した。各版の実形状からメッシュを生成しており、要素分割による数値差も含む。', '',
 '| ベルト1脚 | 旧→新 最大たわみ | 旧→新 引張ピーク |', '|---|---:|---:|']
 for d in before_after:
     lines.append(f"| {d['belt_tension_each_leg_N']}N | {d['old_down_mm']:.3f}→{d['new_down_mm']:.3f}mm | {d['old_peak_tensile_MPa']:.2f}→{d['new_peak_tensile_MPa']:.2f}MPa |")
-lines += ['', '全体のたわみが大きく減る改造ではなく、皿穴の局部薄肉と締付け座面を改善する変更。局所ピークにはメッシュ差があり、わずかな増減をそのまま強度改善率とは解釈しない。']
+lines += ['', 'D6.5の変更目的は露出金属への接触防止で、床の補強ではない。局所ピークにはメッシュ差があり、わずかな増減をそのまま強度改善率とは解釈しない。']
 lines += ['',
 '「2倍」は重力・ベルト張力をともに2倍にした線形計算上の要求値で、材料がそれを満たすと確認した値ではない。実機衝撃や締付け軸力は別。全PLAのEを一様に変える場合、たわみは1000/E倍となるが、異方性や部品ごとに異なる剛性はこの倍率では扱えない。',
 '',
@@ -136,7 +143,7 @@ lines += ['',
 '',
 '## ねじの締付けは別に計算する',
 '',
-f'CADからM6座金の投影座面約{areas["M6_washer"]:.2f}mm²、M4大径座金の床接触面約{areas["M4_large_washer"]:.2f}mm²を取得した。旧皿頭の{old_area:.2f}mm²から約{areas["M4_large_washer"]/old_area:.2f}倍となり、同じ軸力の平均圧縮は約{100*(1-old_area/areas["M4_large_washer"]):.0f}%低下する。肉厚は0.65→2.4mm。これは耐荷重が同じ倍率で増えたという意味ではない。',
+f'CADからM6座金の投影座面約{areas["M6_washer"]:.2f}mm²、M4大径座金の床接触面約{areas["M4_large_washer"]:.2f}mm²を取得した。D6.3の旧皿頭の{old_area:.2f}mm²からD6.4で約{areas["M4_large_washer"]/old_area:.2f}倍となり、同じ軸力の平均圧縮は約{100*(1-old_area/areas["M4_large_washer"]):.0f}%低下する。肉厚は0.65→2.4mm。これは耐荷重が同じ倍率で増えたという意味ではない。',
 '',
 '[NASA Fastener Design Manual](https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf)の簡易式T=KFdを使い、K=0.15〜0.30を仮定した感度比較を行った。このK範囲はPLA締結の実測範囲ではなく、トルクの推奨値でもない。投影平均圧縮p=F/Aは、座金の曲げ・不均一接触・裏面の支持圧分布を含まない。',
 '',
@@ -150,7 +157,7 @@ lines += ['',
 '',
 '## 設計判断と残る確認',
 '',
-'D6.4では皿穴の薄肉をなくし、上下の大径座金を採用した。PC受けは床と一体の硬いPLAで作り、ねじ頭との隙間を軟質パッドの厚みだけに頼らない。残る課題はベルト反力と必要保持力、印刷方向、締付け軸力と長期変形。必要なら圧縮カラー・金属への直接締結を次に比較する。柔らかいスポンジを敷くだけで面支持になるとは仮定せず、「ベルト10N以下なら安全」という限界もこの計算からは設定しない。',
+'D6.4で採用した通常ねじと上下の大径座金を維持し、D6.5ではその上を連続カバーで覆った。カバーは接触防止用で、耐電圧・耐熱・印刷欠陥に対する認定はない。PC受けは床と一体の硬いPLAで作り、ケースパッドとカバーを挟んで荷重位置をそろえる。裸基板をこのパッドへ直置きしたり、ベルトで直接押さえたりしない。残る課題はベルト反力と必要保持力、印刷方向、締付け軸力と長期変形。必要なら圧縮カラー・金属への直接締結を次に比較する。柔らかいスポンジを敷くだけで面支持になるとは仮定せず、「ベルト10N以下なら安全」という限界もこの計算からは設定しない。',
 '',
 '暫定印刷案は0.4mmノズル、0.2mm積層、壁6周、上下6層、100%充填。床は水平・裏リブ下向き＋サポート、中央梁は広いフランジをベッド側として溝のブリッジを確認する。実スライス・サポート量・造形・熱処理は未実施。この条件でもTDSの再現は保証されない。20%などの充填率へ変更した場合は中実モデルの結果を流用しない。',
 '',
@@ -160,7 +167,7 @@ lines += ['',
 '',
 '## 再現・成果物',
 '',
-'[総合JSON](summary.json)／[粗メッシュ](coarse/result.json)／[細メッシュ](fine/result.json)／[解析スクリプト](analyze.py)。STEP5点は保存済みD6.4 FCStdから直接抽出し、[geometry.json](geometry.json)のSHA256で紐付けた。CAD・STL・BOMも同じ改訂へ更新。中実換算質量はBOMへ反映したが、サポート材等の印刷費は実スライスまで未確定。',
+'[総合JSON](summary.json)／[粗メッシュ](coarse/result.json)／[細メッシュ](fine/result.json)／[解析スクリプト](analyze.py)。STEP5点は保存済みD6.5 FCStdから直接抽出し、[geometry.json](geometry.json)のSHA256で紐付けた。CAD・STL・BOMも同じ改訂へ更新。中実換算質量はBOMへ反映したが、サポート材等の印刷費は実スライスまで未確定。',
 '',
 '各メッシュの部品別solver.zipは入力INP・メッシュMSH・GEO・実行ログを収録。大容量の生DATはリポジトリへ重複保存せず、SHA256を結果JSONに記録した。INPをCalculiXで実行すれば再計算できる。使用した2.21配布バイナリでは2スレッド時に荷重つり合いの不一致を検出したため、その結果は採用せず、全ケースを1スレッドで計算し直した。RF出力は反力＋節点荷重なので、拘束節点のCLOADを差し引いて反力を評価している。',
 '',

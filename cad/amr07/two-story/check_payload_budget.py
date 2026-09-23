@@ -1,4 +1,4 @@
-"""Separate vehicle mass margin from cargo capacity after D6.4 plain-hole revision.
+"""Separate vehicle mass margin from cargo capacity after D6.5 computer barrier revision.
 
 Uses existing accepted flat-floor requirements and the saved CAD mass ledger.
 No payload increase, operating qualification or low-speed thermal rating is
@@ -28,6 +28,7 @@ before = json.loads(subprocess.check_output([
 before62_revision='ef44e1c'
 before62=json.loads(subprocess.check_output(['git','-C',str(HERE),'show',before62_revision+':cad/amr07/two-story/validation.json']))
 before63=json.loads(subprocess.check_output(['git','-C',str(HERE),'show','b38b90b:cad/amr07/two-story/validation.json']))
+before64=json.loads(subprocess.check_output(['git','-C',str(HERE),'show','c0b236d:cad/amr07/two-story/validation.json']))
 mass = v['mass']['estimated_base_kg']
 payload = requirements['mass']['normal_payload_kg']
 limit = requirements['mass']['base_max_kg']
@@ -39,7 +40,7 @@ comparisons = []
 for label, base_mass in [('D3', v['mass']['source_D3_kg']),
                          ('D6.1', before['mass']['estimated_base_kg']),
                          ('D6.2', before62['mass']['estimated_base_kg']),
-                         ('D6.3', before63['mass']['estimated_base_kg']), ('D6.4', mass), ('design_upper_bound', limit)]:
+                         ('D6.3', before63['mass']['estimated_base_kg']), ('D6.4', before64['mass']['estimated_base_kg']), ('D6.5', mass), ('design_upper_bound', limit)]:
     config = deepcopy(requirements)
     config['mass']['base_max_kg'] = base_mass
     sized = torque(config, payload, 0)
@@ -97,7 +98,8 @@ out = dict(
     net_increase_from_D3_kg=delta_groups,
     floor_reinforcement_increase_from_D61_kg=mass-before['mass']['estimated_base_kg'],
     corner_rework_increase_from_D62_kg=mass-before62['mass']['estimated_base_kg'],
-    plain_hole_rework_increase_from_D63_kg=mass-before63['mass']['estimated_base_kg'],
+    barrier_increase_from_D64_kg=mass-before64['mass']['estimated_base_kg'],
+    plain_hole_rework_increase_from_D63_kg=before64['mass']['estimated_base_kg']-before63['mass']['estimated_base_kg'],
     base_CG_shift_from_D63_range_endpoints_mm=[[new-old for new,old in zip(a,b)] for a,b in zip(v['cg_difference']['conditional_base_cg_xyz_ranges_mm'],before63['cg_difference']['conditional_base_cg_xyz_ranges_mm'])],
     same_cargo_torque_comparisons=comparisons,
     torque_comparison_basis=dict(

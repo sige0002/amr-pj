@@ -1,10 +1,10 @@
 {
-  "revision": "D6.4",
-  "source_cad_sha256": "7f4d639b85c8f04f8b2aeb5f95f8b2777c4544ce5a0cfd27327284fa6b1a92ce",
+  "revision": "D6.5",
+  "source_cad_sha256": "7a9798e5f8c0f5045029e37143bbb3b625a548ea4855cb096cd126c6e4862bf8",
   "parts": {
     "FloorPLA_0_0": {
       "file": "FloorPLA_0_0.step",
-      "sha256": "97ac6e01c60c646c3fa6942ded7897561fe6e6adb5c75ca1e8a42a5b1cf15b3e",
+      "sha256": "eedbcbfd65a7202688997526b10a7290287486c68a3d82d2f56bb944ad48fd99",
       "volume_mm3": 102909.51965247741,
       "bounds_mm": [
         -230.0,
@@ -61,7 +61,7 @@
     },
     "FloorPLA_0_1": {
       "file": "FloorPLA_0_1.step",
-      "sha256": "6b59c54e3871742165557978a2cfe9bc66e44a79fd9778d926593d58d41fbe2c",
+      "sha256": "8aef0327c01ed69a2e17e83f4cb26f6b25f6b1ed18d883956a913348437e3027",
       "volume_mm3": 102909.51965247568,
       "bounds_mm": [
         -230.0,
@@ -118,7 +118,7 @@
     },
     "FloorPLA_1_0": {
       "file": "FloorPLA_1_0.step",
-      "sha256": "231ba69dbca6e33a4e51de6745a387ba3794fa3db30ab340d9fae858a6e4cd3f",
+      "sha256": "7f528779029c0e4759ca72ba71eba81a5ec94eadcb879000892c489c5040093a",
       "volume_mm3": 99715.27965247638,
       "bounds_mm": [
         0.2,
@@ -175,7 +175,7 @@
     },
     "FloorPLA_1_1": {
       "file": "FloorPLA_1_1.step",
-      "sha256": "76f71d74c1821087c0026364ab47a92ad396c54b5e261ae8fe82e813f9f66b5a",
+      "sha256": "a6770d597bd00936d0390d1896fae1f45d7d76a46e21e41700066622523d2564",
       "volume_mm3": 99408.0796524764,
       "bounds_mm": [
         0.2,
@@ -232,7 +232,7 @@
     },
     "SeamBeamPLA": {
       "file": "SeamBeamPLA.step",
-      "sha256": "d2308bc9649a47b796cea74e836dffe063308411081b1cf5301d434a2dc47c16",
+      "sha256": "d44b8e48c3b996426a22877895c258f798ab46a0eaa7cc160f40ff491aa5f29f",
       "volume_mm3": 45701.60086065484,
       "bounds_mm": [
         -32.0,
@@ -245,5 +245,10 @@
       "solid_mass_kg": 0.056669985067212006,
       "fixings": []
     }
+  },
+  "computer_barrier": {
+    "volume_mm3": 31120.144000000022,
+    "solid_mass_kg": 0.03858897856000003,
+    "model": "Mass added at PC support patches; this cover is not included in the five-solid floor FEA. No spanning stiffness credit. Separate CAD/compression review."
   }
 }

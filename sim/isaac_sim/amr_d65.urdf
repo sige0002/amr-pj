@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<robot name="amr_d64_payload_10kg">
-  <!--Generated from D6.4. SI units; +X forward, +Y left, +Z up. Inertias are estimates.-->
+<robot name="amr_d65">
+  <!--Generated from D6.5. SI units; +X forward, +Y left, +Z up. Inertias are estimates.-->
   <material name="aluminum">
     <color rgba="0.72 0.75 0.79 1" />
   </material>
@@ -70,9 +70,9 @@
   </link>
   <link name="base_link">
     <inertial>
-      <origin xyz="-0.0933615788726 -0.000826180823834 0.0822918376212" rpy="0 0 0" />
-      <mass value="9.00487528613" />
-      <inertia ixx="0.123522626533" ixy="0.0016813272398" ixz="0.00517378908755" iyy="0.175512061638" iyz="0.000139102367714" izz="0.2225830366" />
+      <origin xyz="-0.0933472348236 -0.000822655463069 0.0802226571638" rpy="0 0 0" />
+      <mass value="9.04346426469" />
+      <inertia ixx="0.117202212141" ixy="0.00168122052502" ixz="0.00523642441842" iyy="0.169280236005" iyz="0.000154496357034" izz="0.222006659418" />
     </inertial>
     <visual name="base_link_motor">
       <geometry>
@@ -151,12 +151,6 @@
         <mesh filename="meshes/base_link_wires.stl" scale="1 1 1" />
       </geometry>
       <material name="wires" />
-    </visual>
-    <visual name="base_link_belts_loaded">
-      <geometry>
-        <mesh filename="meshes/base_link_belts_loaded.stl" scale="1 1 1" />
-      </geometry>
-      <material name="belts" />
     </visual>
     <collision name="base_link_Rail400_1">
       <origin xyz="-0.09 -0.135 0.03365" rpy="0 0 0" />
@@ -243,7 +237,7 @@
       </geometry>
     </collision>
     <collision name="base_link_Reserved_Computer">
-      <origin xyz="-0.09 0 0.08765" rpy="0 0 0" />
+      <origin xyz="-0.09 0 0.08965" rpy="0 0 0" />
       <geometry>
         <box size="0.12 0.1 0.06" />
       </geometry>
@@ -404,6 +398,12 @@
         <box size="0.168 0.0174 0.015" />
       </geometry>
     </collision>
+    <collision name="base_link_ComputerBarrierPLA">
+      <origin xyz="-0.09 0 0.05745" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1234 0.1034 0.0124" />
+      </geometry>
+    </collision>
     <collision name="base_link_BatteryBL1860B">
       <origin xyz="-0.2265 0 0.08465" rpy="0 0 0" />
       <geometry>
@@ -510,25 +510,6 @@
       </geometry>
     </collision>
   </link>
-  <link name="payload_link">
-    <inertial>
-      <origin xyz="-5.30457172566e-19 -7.01068832617e-19 5.68434188608e-17" rpy="0 0 0" />
-      <mass value="10" />
-      <inertia ixx="0.0546666666667" ixy="-5.62054261308e-20" ixz="1.6452128394e-18" iyy="0.0546666666667" iyz="1.71989237667e-18" izz="0.0666666666667" />
-    </inertial>
-    <visual name="example_cargo">
-      <geometry>
-        <box size="0.2 0.2 0.16" />
-      </geometry>
-      <material name="payload" />
-    </visual>
-    <collision name="payload_link_cargo_box">
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <box size="0.2 0.2 0.16" />
-      </geometry>
-    </collision>
-  </link>
   <joint name="left_wheel_joint" type="continuous">
     <parent link="base_link" />
     <child link="left_wheel_link" />
@@ -560,10 +541,5 @@
     <axis xyz="0 1 0" />
     <limit effort="0" velocity="30" />
     <dynamics damping="0" friction="0" />
-  </joint>
-  <joint name="payload_fixed_joint" type="fixed">
-    <parent link="base_link" />
-    <child link="payload_link" />
-    <origin xyz="-0.09 0 0.26265" rpy="0 0 0" />
   </joint>
 </robot>

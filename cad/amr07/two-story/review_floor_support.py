@@ -1,4 +1,4 @@
-"""Independent saved-CAD checks of D6.4 floor fixings and load paths.
+"""Independent saved-CAD checks of D6.5 floor fixings and load paths.
 
 Run in FreeCAD Python. Beam equations are short-term screening, not printed
 material allowables, joint-preload qualification or proof of creep resistance.
@@ -94,9 +94,9 @@ for ix,iy in product(range(2),repeat=2):
     assert not found,(name,found)
     tool_checks.append(dict(part=name,step='M4 socket access from underside',hits=found))
     driver=Part.makeCylinder(1.7,35,V(x,y,106.4))
-    found=hits(driver,[o for o in physical if o.Name!=f'FloorSeamBolt_{ix}_{iy}'])
-    assert not found,(name,'M4 driver before PC installation',found)
-    tool_checks.append(dict(part=f'FloorSeamBolt_{ix}_{iy}',step='M4 top driver before PC installation',hits=found))
+    found=hits(driver,[o for o in physical if o.Name not in [f'FloorSeamBolt_{ix}_{iy}','ComputerBarrierPLA']])
+    assert not found,(name,'M4 driver with PC and barrier removed',found)
+    tool_checks.append(dict(part=f'FloorSeamBolt_{ix}_{iy}',step='M4 top driver with PC and barrier removed',hits=found))
 
 pc=doc.getObject('Reserved_Computer').Shape.BoundBox
 pc_supports=[]
@@ -106,9 +106,9 @@ for ix,iy in product(range(2),repeat=2):
     expected=Part.makeBox(10,10,5.6,V(x-5,y-5,101.4))
     assert expected.cut(panel).Volume<1e-6
     head_top=doc.getObject(f'FloorSeamBolt_{ix}_{iy}').Shape.BoundBox.ZMax
-    assert pc.ZMin-head_top>=1.59 and 107-head_top>=.59
+    assert pc.ZMin-head_top>=3.59 and 107-head_top>=.59
     pc_supports.append(dict(xy_mm=[x,y],solid_size_mm=[10,10,5.6],solid_top_z_mm=107,
-                           liner_t_mm=1,case_to_head_mm=pc.ZMin-head_top,hard_support_to_head_mm=107-head_top))
+                           liner_t_mm=1,barrier_t_mm=2,barrier_top_z_mm=109,case_to_head_mm=pc.ZMin-head_top,hard_support_to_head_mm=107-head_top))
 
 def distance(a,b):return a.distToShape(b)[0]
 pc_belt=doc.getObject('ComputerRetentionBelt').Shape
@@ -160,7 +160,7 @@ screens['panel_rib'].update(stress_MPa=peak_stress,
 for result in screens.values():
     assert result['deflection_mm_by_E_MPa']['1000']<2
 
-out=dict(revision='D6.4',native_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+out=dict(revision='D6.5',native_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
          panels=panels,total_panel_fixings=16,beam_anchors=anchors,
          beam_ends_supported=2,beam_anchors_per_end=2,
          assembly_tool_checks=tool_checks,computer_supports=pc_supports,

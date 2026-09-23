@@ -1,12 +1,12 @@
 {
-  "revision": "D6.4",
+  "revision": "D6.5",
   "native_document": "AMR01_TwoStorey_D6",
-  "physical_parts": 276,
-  "native_solids": 280,
-  "STEP_solids": 280,
-  "native_volume_mm3": 3165878.9132166132,
-  "STEP_delta_mm3": 0.10469246516004205,
-  "with_equipment_STEP_solids": 283,
+  "physical_parts": 277,
+  "native_solids": 281,
+  "STEP_solids": 281,
+  "native_volume_mm3": 3196999.057216613,
+  "STEP_delta_mm3": 0.1046947599388659,
+  "with_equipment_STEP_solids": 284,
   "equipment_STEP_scope": "two selected power catalog envelopes and one unselected computer reservation",
   "quoted_files_SHA256": {
     "AMR_GridDeck_C45_D3.step": "c38862f7ac33c2f30bba198fce54ff1bcb22bd75820bd994dd8b4a5e7f5c0d4c",
@@ -248,17 +248,26 @@
         149.8000030517578,
         24.0
       ]
+    },
+    {
+      "file": "ComputerBarrierPLA.stl",
+      "closed": true,
+      "size_mm": [
+        123.4000015258789,
+        103.4000015258789,
+        12.399999618530273
+      ]
     }
   ],
   "mass": {
     "source_D3_kg": 8.246366343915682,
-    "estimated_base_kg": 10.029098678072284,
-    "remaining_to_10kg_kg": -0.029098678072283946,
+    "estimated_base_kg": 10.067687656632284,
+    "remaining_to_10kg_kg": -0.06768765663228393,
     "electrical_total_kg": 2.153,
     "battery_kg": 0.68,
     "adapter_kg": 0.123,
     "new_straps_and_pads_allowance_kg": 0.18,
-    "total_solid_PLA_kg": 0.6010719975975461,
+    "total_solid_PLA_kg": 0.6396609761575461,
     "added_metal_and_hardware_kg": 1.373933527349206,
     "upper_structure_metal_and_hardware_kg": 1.2926618270515282,
     "floor_added_hardware_kg": 0.0812717002976772,

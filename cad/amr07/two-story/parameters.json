@@ -1,5 +1,5 @@
 {
-  "revision": "D6.4",
+  "revision": "D6.5",
   "date": "2026-09-23",
   "source_revision": "099686bacaad0f72e8bc4ce15005cd708a5b2f83",
   "architecture": "1F battery/computer/power above base rails; 2F independent aluminum cargo deck",
@@ -92,6 +92,27 @@
     "top_z_mm": 107,
     "liner_t_mm": 1
   },
+  "computer_barrier": {
+    "part": "ComputerBarrierPLA",
+    "outer_LWH_mm": [
+      123.4,
+      103.4,
+      12.4
+    ],
+    "bottom_z_mm": 101.6,
+    "continuous_base_bottom_top_z_mm": [
+      107,
+      109
+    ],
+    "wall_t_mm": 1.2,
+    "inner_LW_mm": [
+      121,
+      101
+    ],
+    "top_z_mm": 114,
+    "mounting": "Four existing hard supports below four case pads; retained by locator pocket and installed computer belt. Remove computer before lifting barrier.",
+    "electrical_scope": "Nonconductive unfilled PLA contact barrier, no exposed floor screws or through holes on component side. Not certified electrical insulation. Bare PCB requires a product-specific insulating enclosure or mounting-hole standoffs; never strap a bare board onto the pads."
+  },
   "floor_outer_corner_notches": false,
   "corner_flat_gusset_qty": 0,
   "corner_joint": "Four auxiliary flat gussets and their8 fastener sets removed. Eight HBLFSN6 lower-frame joints retained; independent floor corner screws reused from inner rail positions. Frame racking qualification remains open.",
@@ -133,7 +154,7 @@
   "computer_origin_LWH_mm": [
     -60,
     -50,
-    108,
+    110,
     120,
     100,
     60

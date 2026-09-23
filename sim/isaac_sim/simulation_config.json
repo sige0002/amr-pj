@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "design_revision": "D6.4",
+  "design_revision": "D6.5",
   "target_isaac_sim": "5.0 / 5.1",
   "wheel_radius_m": 0.05035,
   "track_m": 0.349,

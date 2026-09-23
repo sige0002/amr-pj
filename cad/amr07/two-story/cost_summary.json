@@ -1,14 +1,14 @@
 {
-  "revision": "D6.4",
+  "revision": "D6.5",
   "date": "2026-09-23",
   "subtotal": {
-    "JPY": 75472.0,
+    "JPY": 75548.0,
     "USD": 120.9
   },
-  "full_running_subtotal_JPY_reference": 94485.60313315927,
+  "full_running_subtotal_JPY_reference": 94561.60313315927,
   "FX_reference_JPY_per_USD": 157.26718885987816,
   "FX_date": "2026-09-21",
-  "difference_from_D5_JPY": 5839.0,
+  "difference_from_D5_JPY": 5915.0,
   "added_known_purchased_metal_JPY": 3968,
   "added_purchase": {
     "posts4_JPY": 495,
@@ -65,6 +65,16 @@
     "priced_subtotal_change_JPY": 1839.0,
     "old_M4_purchase_price_was_unpriced": true,
     "old_screw_savings_not_invented": true
+  },
+  "barrier_change_from_D64": {
+    "added_printed_parts": 1,
+    "added_metal_parts": 0,
+    "added_machining": false,
+    "barrier_mass_kg": 0.03858897856000003,
+    "PLA_material_reference_increase_JPY": 76,
+    "priced_subtotal_change_JPY": 76.0,
+    "PCB_specific_mount_price": null,
+    "scope": "Nonconductive PLA contact barrier only; actual case/PCB mounting and printing support/failure/electricity cost remain unpriced."
   },
   "selected_power_delivered_Tokyo_reference_JPY": 23380,
   "source_D3_plate_and_mount_quotes_unchanged": true,

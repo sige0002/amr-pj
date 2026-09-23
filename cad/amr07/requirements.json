@@ -6,7 +6,7 @@
   "status": "design_requirements_accepted_hardware_qualification_pending",
   "battery_service": {
     "date": "2026-09-22",
-    "revision": "D6.4",
+    "revision": "D6.5",
     "CAD": "two-story/AMR01_TwoStorey_D6.FCStd",
     "design_intent_ja": "1階へ電池・計算機・電源を配置し、2階を格子穴アルミ荷台とする。電池は8mm持上げ後に後方220mmへ抜く。荷台と荷物は残す。",
     "battery_product_selected": true,
@@ -188,7 +188,7 @@
       "computer_origin_LWH_mm": [
         -60,
         -50,
-        108,
+        110,
         120,
         100,
         60
@@ -221,8 +221,8 @@
         "HNTT6_6_qty": 24,
         "decision_ja": "根元4箇所の両側固定を維持。通常積載10kg。D6.2で車体10kgは目安へ変更。方向別剛性・実物試験は未完了。"
       },
-      "floor_fixing_revision": "D6.4: four fixings per panel; central M4 plain holes, standard cap screws and OD12 washers on both faces. PC on four integral10x10x5.6mm hard supports,1mm liners, seat108mm. Outer M6 corner screws and independent metal frame joints retained.",
-      "computer_seat_z_mm": 108,
+      "floor_fixing_revision": "D6.4: four fixings per panel; central M4 plain holes, standard cap screws and OD12 washers on both faces. PC on four integral10x10x5.6mm hard supports,1mm liners, seat108mm. Outer M6 corner screws and independent metal frame joints retained. D6.5: continuous removable PLA barrier over all four seam screws/washers, no component-side through holes; PC case seat110mm.",
+      "computer_seat_z_mm": 110,
       "computer_supports": {
         "quantity": 4,
         "integral_PLA_size_mm": [
@@ -251,6 +251,25 @@
         ],
         "plain_M4_hole_mm": 4.5,
         "top_and_bottom_washer_OD_mm": 12
+      },
+      "computer_barrier": {
+        "material": "nonconductive unfilled PLA",
+        "part": "ComputerBarrierPLA",
+        "outer_mm": [
+          123.4,
+          103.4,
+          12.4
+        ],
+        "continuous_floor_mm": 2,
+        "floor_z_mm": [
+          107,
+          109
+        ],
+        "through_holes": 0,
+        "printed": false,
+        "dielectric_strength_qualified": false,
+        "retention": "captured inside floor locators and under installed case/retaining belt",
+        "bare_PCB_mounting": "Product-specific insulating enclosure or mounting-hole standoffs required. Board underside clearance, mounting screws, cooling and mass remain to select; no bare board strapped to case pads."
       }
     }
   },
@@ -362,5 +381,5 @@
     "thermal_duration_verified": false,
     "note": "Flat-floor cargo 10 kg is released only after the linked hardware acceptance tests. Slope operation and power-off slope holding are outside this prototype scope, rather than pending mandatory brake procurement."
   },
-  "design_revision": "D6.4"
+  "design_revision": "D6.5"
 }

@@ -1,6 +1,6 @@
 {
-  "revision": "D6.4",
-  "native_sha256": "7f4d639b85c8f04f8b2aeb5f95f8b2777c4544ce5a0cfd27327284fa6b1a92ce",
+  "revision": "D6.5",
+  "native_sha256": "7a9798e5f8c0f5045029e37143bbb3b625a548ea4855cb096cd126c6e4862bf8",
   "panels": [
     {
       "panel": "FloorPLA_0_0",
@@ -316,7 +316,7 @@
     },
     {
       "part": "FloorSeamBolt_0_0",
-      "step": "M4 top driver before PC installation",
+      "step": "M4 top driver with PC and barrier removed",
       "hits": []
     },
     {
@@ -326,7 +326,7 @@
     },
     {
       "part": "FloorSeamBolt_0_1",
-      "step": "M4 top driver before PC installation",
+      "step": "M4 top driver with PC and barrier removed",
       "hits": []
     },
     {
@@ -336,7 +336,7 @@
     },
     {
       "part": "FloorSeamBolt_1_0",
-      "step": "M4 top driver before PC installation",
+      "step": "M4 top driver with PC and barrier removed",
       "hits": []
     },
     {
@@ -346,7 +346,7 @@
     },
     {
       "part": "FloorSeamBolt_1_1",
-      "step": "M4 top driver before PC installation",
+      "step": "M4 top driver with PC and barrier removed",
       "hits": []
     }
   ],
@@ -363,7 +363,9 @@
       ],
       "solid_top_z_mm": 107,
       "liner_t_mm": 1,
-      "case_to_head_mm": 1.5999999999999943,
+      "barrier_t_mm": 2,
+      "barrier_top_z_mm": 109,
+      "case_to_head_mm": 3.5999999999999943,
       "hard_support_to_head_mm": 0.5999999999999943
     },
     {
@@ -378,7 +380,9 @@
       ],
       "solid_top_z_mm": 107,
       "liner_t_mm": 1,
-      "case_to_head_mm": 1.5999999999999943,
+      "barrier_t_mm": 2,
+      "barrier_top_z_mm": 109,
+      "case_to_head_mm": 3.5999999999999943,
       "hard_support_to_head_mm": 0.5999999999999943
     },
     {
@@ -393,7 +397,9 @@
       ],
       "solid_top_z_mm": 107,
       "liner_t_mm": 1,
-      "case_to_head_mm": 1.5999999999999943,
+      "barrier_t_mm": 2,
+      "barrier_top_z_mm": 109,
+      "case_to_head_mm": 3.5999999999999943,
       "hard_support_to_head_mm": 0.5999999999999943
     },
     {
@@ -408,7 +414,9 @@
       ],
       "solid_top_z_mm": 107,
       "liner_t_mm": 1,
-      "case_to_head_mm": 1.5999999999999943,
+      "barrier_t_mm": 2,
+      "barrier_top_z_mm": 109,
+      "case_to_head_mm": 3.5999999999999943,
       "hard_support_to_head_mm": 0.5999999999999943
     }
   ],

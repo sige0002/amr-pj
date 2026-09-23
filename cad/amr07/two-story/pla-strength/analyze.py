@@ -77,14 +77,14 @@ def pressure(models,loads,rect,z,force):
 def feet(rect):
  x0,y0,x1,y1=rect
  return [(x-5,y-5,x+5,y+5) for x in [x0+10,x1-10] for y in [y0+10,y1-10]]
-def make_loads(models):
+def make_loads(models,barrier_mass):
  loads=[[m['gravity'].copy() for m in models] for _ in range(2)]+[[np.zeros(len(m['xyz'])) for m in models] for _ in range(2)]
  for kind in range(2):
   for name,mass,rect in EQUIPMENT:
    # The revised PC rests on four integral hard bosses, in BOTH contact cases.
    rects=feet(rect) if name=='computer' or kind==1 else [rect]
    z=107 if name=='computer' else 101.4
-   for p in rects:pressure(models,loads[kind],p,z,-mass*G/len(rects))
+   for p in rects:pressure(models,loads[kind],p,z,-(mass+(barrier_mass if name=='computer' else 0))*G/len(rects))
   pressure(models,loads[kind],None,101.4,-.467*G) # wiring and equipment allowance to total2.4kg
   for name,rect,up in STRAPS:
    rects=feet(rect) if name=='computer' or kind==1 else [rect]
@@ -103,7 +103,7 @@ def solve(m,args):
  path=m['d']/'model.inp';npnt=len(m['xyz']);beam=m['name']=='SeamBeamPLA'
  old_input_sha=sha(path) if path.exists() else None
  with path.open('w') as f:
-  f.write('*HEADING\nD6.4 PLA elastic screen, N mm MPa. E1000 sensitivity.\n*NODE,NSET=ALLN\n')
+  f.write('*HEADING\nD6.5 PLA elastic screen, N mm MPa. E1000 sensitivity.\n*NODE,NSET=ALLN\n')
   for i,p in enumerate(m['xyz'],1):f.write(f'{i},'+','.join(f'{x:.10g}' for x in p)+'\n')
   f.write('*ELEMENT,TYPE=C3D10,ELSET=ALLE\n')
   for i,t in enumerate(m['tet'],1):f.write(f'{i},'+','.join(str(int(x)+1) for x in t)+'\n')
@@ -236,7 +236,8 @@ def main():
  geometry=json.loads((HERE/'geometry.json').read_text())
  assert geometry['source_cad_sha256']==sha(HERE.parent/'AMR01_TwoStorey_D6.FCStd')
  with ThreadPoolExecutor(max_workers=2) as pool:models=list(pool.map(lambda n:mesh(n,a,geometry['parts']),NAMES))
- make_loads(models[:4]);beam_loads(models[4])
+ barrier_mass=geometry['computer_barrier']['solid_mass_kg']
+ make_loads(models[:4],barrier_mass);beam_loads(models[4])
  with ThreadPoolExecutor(max_workers=2) as pool:models=list(pool.map(lambda m:solve(m,a),models))
  bases,coupling=couple(models[:4],models[4]);outdir=HERE/a.name;outdir.mkdir(exist_ok=True)
  cases=[]
@@ -245,24 +246,24 @@ def main():
    fields=[combine([x,y],[1,tension]) for x,y in zip(bases[kind],bases[kind+2])]
    stats=[metrics(m,f) for m,f in zip(models,fields)]
    cases.append(dict(equipment_contact='full_pads' if kind==0 else 'four_10mm_feet',belt_tension_each_leg_N=tension,
-    total_equipment_mass_kg=2.4,total_printed_mass_kg=sum(geometry['parts'][n]['solid_mass_kg'] for n in NAMES),
+    total_equipment_mass_kg=2.4,additional_barrier_mass_kg=barrier_mass,total_printed_mass_kg=sum(geometry['parts'][n]['solid_mass_kg'] for n in NAMES),
     parts=stats,max_down_mm=max(s['max_down_mm'] for s in stats),
     max_tensile_MPa=max(s['peak_tensile_principal_MPa'] for s in stats),max_compression_MPa=max(s['peak_compressive_principal_MPa'] for s in stats)))
-   if kind==1 and tension in [0,10]:plot(models,fields,outdir/f'floor-deflection-T{tension}.png',f'D6.4 PLA: plain M4 holes, hard PC supports | four-foot contact, belt {tension} N/leg\n2.4 kg equipment + print self-weight; fixing patches only; no creep/preload model')
+   if kind==1 and tension in [0,10]:plot(models,fields,outdir/f'floor-deflection-T{tension}.png',f'D6.5 PLA: plain M4 holes, hard PC supports | four-foot contact, belt {tension} N/leg\n2.4 kg equipment + barrier + floor self-weight; fixing patches only; no creep/preload model')
  for m in models:
   with zipfile.ZipFile(outdir/(m['name']+'-solver.zip'),'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
    for n in ['model.geo','model.msh','model.inp','mesh.log','solver.log']:z.write(m['d']/n,n)
- report=dict(revision='D6.4',source_cad_sha256=geometry['source_cad_sha256'],geometry_sha256=sha(HERE/'geometry.json'),
+ report=dict(revision='D6.5',source_cad_sha256=geometry['source_cad_sha256'],geometry_sha256=sha(HERE/'geometry.json'),
   solver='CalculiX2.21',mesher='Gmsh4.15.0',element='C3D10 quadratic tetrahedron',E_MPa=E,nu=NU,
   material='Assumed isotropic reduced stiffness. Not a tested print modulus or creep allowable.',
-  PC_contact='Four integral10x10mm bosses at Z107 in both cases; other equipment varies full pads versus four feet. Soft liner stiffness not modeled.',
+  PC_contact='PC load plus full barrier mass through four aligned10x10mm pads into the unchanged floor bosses at Z107; cover has no load-spreading or stiffness credit. Other equipment varies full pads versus four feet. Soft liner stiffness not modeled.',
   seam_support='Retained radius4.5mm bottom support patch for comparison with D6.3; no stiffness credit for larger upper washers. Washer preload evaluated separately.',
   solver_threads=1,analysis_script_sha256=sha(Path(__file__)),
   maximum_mesh_size_mm=a.size,
   meshes=[dict(part=m['name'],nodes=len(m['xyz']),elements=len(m['tet']),straight_corner_tetra_volume_error=m['volume_error'],support_patch_nodes=[len(x) for x in m['patches']],
    force_balance_residuals_N=m['force_residuals'],moment_balance_residuals_Nmm=m['moment_residuals'],input_sha256=sha(m['d']/'model.inp'),output_dat_sha256=sha(m['d']/'model.dat')) for m in models],
   coupling=coupling,cases=cases,force_balance_passed=True,physical_strength_qualified=False,
-  omitted=['rail bearing away from fixing patches','bolt preload and friction/slip','polymer creep and temperature','orthotropic shear constants','impact/fatigue','real equipment foot and belt contact','local contact against metal screw/washer','beam/floor rotational compliance at the small seam fixing patches; translation-only coupling'])
+  omitted=['barrier flexure/contact; aligned direct compression evaluated separately','rail bearing away from fixing patches','bolt preload and friction/slip','polymer creep and temperature','orthotropic shear constants','impact/fatigue','real equipment foot and belt contact','local contact against metal screw/washer','beam/floor rotational compliance at the small seam fixing patches; translation-only coupling'])
  (outdir/'result.json').write_text(json.dumps(report,indent=2)+'\n')
  print(json.dumps(dict(name=a.name,cases=[{k:c[k] for k in ['equipment_contact','belt_tension_each_leg_N','max_down_mm','max_tensile_MPa','max_compression_MPa']} for c in cases])),flush=True)
 if __name__=='__main__':main()

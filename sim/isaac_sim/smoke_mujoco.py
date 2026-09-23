@@ -118,8 +118,8 @@ def main():
     parser.add_argument("--render", action="store_true")
     args = parser.parse_args()
     result = {name: {"straight": run_case(HERE/name, .10, 0), "turn_left": run_case(HERE/name, 0, .30)}
-              for name in ("amr_d64.urdf", "amr_d64_payload_10kg.urdf")}
-    if args.render: preview(HERE / "amr_d64.urdf")
+              for name in ("amr_d65.urdf", "amr_d65_payload_10kg.urdf")}
+    if args.render: preview(HERE / "amr_d65.urdf")
     report = dict(status="passed", simulator="MuJoCo "+mujoco.__version__, isaac_sim_runtime_tested=False,
                   urdf_models=result, added_test_fixtures="floating base, flat floor, no self collision, torque-limited SI velocity servo",
                   scope="CPU smoke check only: contact, mass/inertia loading, straight/turn/stop. Friction is assumed; no rolling-resistance, controller latency, tire deformation or power model.")

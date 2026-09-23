@@ -58,5 +58,17 @@
     "orientation_note": "Floor: ribs downward with slicer supports, or stand on central seam edge with brim and local locator-wall supports. Beam: broad top flange toward bed; check17mm belt-channel bridge. STL axes are assembly axes translated to positive coordinates, NOT pre-oriented for printing.",
     "sliced": false,
     "support_and_failed_print_material_included": false
+  },
+  {
+    "file": "ComputerBarrierPLA.stl",
+    "size_mm": [
+      123.4,
+      103.4,
+      12.400000000000006
+    ],
+    "solid_mass_g": 38.588978560000044,
+    "orientation_note": "Barrier: continuous2mm floor and1.2mm walls,100% infill, nonconductive unfilled filament; choose support/orientation in slicer; no holes or cracks allowed. Not a rated insulating enclosure.",
+    "sliced": false,
+    "support_and_failed_print_material_included": false
   }
 ]

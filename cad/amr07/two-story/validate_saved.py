@@ -13,7 +13,7 @@ physical=[o for o in doc.Objects if hasattr(o,'MaterialBasis') and o.MaterialBas
 refs=[o for o in doc.Objects if hasattr(o,'MaterialBasis') and o.MaterialBasis=='reference']
 assert all(o.Shape.isValid() for o in physical+refs)
 assert not r['collisions'] and not r['reference_collisions'] and not r['reference_pair_collisions']
-for key in ['continuous_battery_service','continuous_computer_service','grid_fastener_envelopes','joint_assembly_tool_access','tire_outward_service']:
+for key in ['continuous_battery_service','continuous_computer_service','continuous_barrier_service','grid_fastener_envelopes','joint_assembly_tool_access','tire_outward_service']:
     assert not any(a['hits'] for a in r[key]),key
 assert not r['computer_ventilation_keepout_hits'] and not r['computer_connector_keepout_hits']
 q=json.loads((D3/'quote-evidence/D3-observed.json').read_text());quoted={}
@@ -51,7 +51,7 @@ for entry in json.loads((HERE/'print_manifest.json').read_text()):
     assert all(abs(x-y)<.001 for x,y in zip(size,entry['size_mm']))
     meshes.append(dict(file=entry['file'],closed=True,size_mm=size))
 assert r['unchanged_parts_BRep_equal'] and r['quoted_plate_unchanged']
-assert doc.getObject('Reserved_Computer').Shape.BoundBox.ZMin==108
+assert doc.getObject('Reserved_Computer').Shape.BoundBox.ZMin==110
 assert doc.getObject('BatteryBL1860B').Shape.BoundBox.ZMin==104
 assert len([o for o in physical if o.Name.startswith('LevelBracket_')])==12
 assert len([o for o in physical if o.Name.startswith('LevelBolt_')])==24

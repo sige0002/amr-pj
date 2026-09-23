@@ -1,0 +1,151 @@
+{
+  "revision": "D6.5",
+  "native_sha256": "7a9798e5f8c0f5045029e37143bbb3b625a548ea4855cb096cd126c6e4862bf8",
+  "part": "ComputerBarrierPLA",
+  "mass_kg": 0.03858897856000003,
+  "outer_mm": [
+    123.4,
+    103.4,
+    12.4
+  ],
+  "continuous_floor_mm": 2,
+  "wall_mm": 1.2,
+  "protected_footprint_mm": [
+    121,
+    101
+  ],
+  "through_holes": 0,
+  "covered_hardware": [
+    {
+      "name": "FloorSeamBolt_0_0",
+      "nominal_gap_below_barrier_mm": 0.5999999999999943
+    },
+    {
+      "name": "FloorSeamTopWasher_0_0",
+      "nominal_gap_below_barrier_mm": 4.599999999999994
+    },
+    {
+      "name": "FloorSeamBolt_0_1",
+      "nominal_gap_below_barrier_mm": 0.5999999999999943
+    },
+    {
+      "name": "FloorSeamTopWasher_0_1",
+      "nominal_gap_below_barrier_mm": 4.599999999999994
+    },
+    {
+      "name": "FloorSeamBolt_1_0",
+      "nominal_gap_below_barrier_mm": 0.5999999999999943
+    },
+    {
+      "name": "FloorSeamTopWasher_1_0",
+      "nominal_gap_below_barrier_mm": 4.599999999999994
+    },
+    {
+      "name": "FloorSeamBolt_1_1",
+      "nominal_gap_below_barrier_mm": 0.5999999999999943
+    },
+    {
+      "name": "FloorSeamTopWasher_1_1",
+      "nominal_gap_below_barrier_mm": 4.599999999999994
+    }
+  ],
+  "metal_intrusions_above_barrier": [],
+  "supports": [
+    {
+      "xy_mm": [
+        -50,
+        -40
+      ],
+      "area_mm2": 100,
+      "load_path": "case pad ->2mm solid barrier -> aligned hard floor boss"
+    },
+    {
+      "xy_mm": [
+        -50,
+        40
+      ],
+      "area_mm2": 100,
+      "load_path": "case pad ->2mm solid barrier -> aligned hard floor boss"
+    },
+    {
+      "xy_mm": [
+        50,
+        -40
+      ],
+      "area_mm2": 100,
+      "load_path": "case pad ->2mm solid barrier -> aligned hard floor boss"
+    },
+    {
+      "xy_mm": [
+        50,
+        40
+      ],
+      "area_mm2": 100,
+      "load_path": "case pad ->2mm solid barrier -> aligned hard floor boss"
+    }
+  ],
+  "local_compression_screen": [
+    {
+      "belt_tension_each_leg_N": 0,
+      "total_force_N": 5.526919856595423,
+      "mean_compression_MPa": 0.013817299641488558,
+      "twice_load_mean_compression_MPa": 0.027634599282977117,
+      "through_thickness_shortening_mm_at_E1000": 2.7634599282977118e-05
+    },
+    {
+      "belt_tension_each_leg_N": 10,
+      "total_force_N": 25.526919856595423,
+      "mean_compression_MPa": 0.06381729964148856,
+      "twice_load_mean_compression_MPa": 0.12763459928297713,
+      "through_thickness_shortening_mm_at_E1000": 0.00012763459928297712
+    },
+    {
+      "belt_tension_each_leg_N": 30,
+      "total_force_N": 65.52691985659543,
+      "mean_compression_MPa": 0.16381729964148856,
+      "twice_load_mean_compression_MPa": 0.3276345992829771,
+      "through_thickness_shortening_mm_at_E1000": 0.0003276345992829771
+    }
+  ],
+  "material": "Nonconductive unfilled PLA; actual filament and finished print not qualified for insulation.",
+  "retention": "Existing floor locator pocket bounds lateral motion with nominal0.3mm per-side clearance. Installed cased computer and its strap hold barrier down; remove case/belt before barrier service.",
+  "service_checks": [
+    {
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        12
+      ],
+      "hits": [],
+      "precondition": "Computer/top pad/belt removed; four underside case pads travel with barrier."
+    },
+    {
+      "from_mm": [
+        0,
+        0,
+        12
+      ],
+      "to_mm": [
+        0,
+        -230,
+        12
+      ],
+      "hits": [],
+      "precondition": "Computer/top pad/belt removed; four underside case pads travel with barrier."
+    }
+  ],
+  "bare_PCB_mounting_complete": false,
+  "case_product_selected": false,
+  "dielectric_strength_verified": false,
+  "limitations": [
+    "Contact separation is not an electrical insulation certification.",
+    "No bare PCB or component-side surface is placed directly on case pads or under the case strap. Select insulating enclosure or mounting-hole standoffs after board selection.",
+    "Bottom cooling, actual component protrusions, mounting screws, filament conductivity, print holes/cracks, temperature and abrasion require product-specific checks.",
+    "Compression-only local screen assumes case forces enter the four marked pads. No arbitrary point-load or cover spanning capacity is certified. Nominal0.6mm screw clearance does not include deflection/tolerance."
+  ]
+}

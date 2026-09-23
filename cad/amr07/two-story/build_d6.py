@@ -1,4 +1,4 @@
-"""D6.4 two-storey AMR. Run with FreeCAD Python; no GUI required.
+"""D6.5 two-storey AMR. Run with FreeCAD Python; no GUI required.
 
 The quoted D3 cargo plate is translated only. All electronics stand ABOVE
 the lower rails. Four precut 100mm SF2 posts and two spare 300mm rails carry
@@ -27,7 +27,7 @@ V=App.Vector
 NAME='AMR01_TwoStorey_D6'
 SOURCE='099686bacaad0f72e8bc4ce15005cd708a5b2f83'
 RHO={'aluminum':2.7e-6,'steel':7.85e-6,'PLA':1.24e-6,'rubber':1.1e-6}
-P=dict(revision='D6.4',date='2026-09-23',source_revision=SOURCE,
+P=dict(revision='D6.5',date='2026-09-23',source_revision=SOURCE,
     architecture='1F battery/computer/power above base rails; 2F independent aluminum cargo deck',
     base_rail_top_z_mm=99,floor_bottom_top_z_mm=[99,101.4],equipment_seat_z_mm=104,
     upright_part='SUS SF2-30・30 BLACK, SF9-322 Amazon pack,100mm',upright_qty=4,
@@ -45,6 +45,10 @@ P=dict(revision='D6.4',date='2026-09-23',source_revision=SOURCE,
     floor_M4_large_washers_qty=8,floor_M4_large_washer_OD_ID_t_mm=[12,4.1,1],
     floor_M4_plain_hole_diameter_mm=4.5,floor_min_web_at_M4_mm=2.4,
     computer_support_bosses=dict(qty=4,size_mm=[10,10,5.6],centers_xy_mm=[list(p) for p in product([-50,50],[-40,40])],top_z_mm=107,liner_t_mm=1),
+    computer_barrier=dict(part='ComputerBarrierPLA',outer_LWH_mm=[123.4,103.4,12.4],bottom_z_mm=101.6,
+        continuous_base_bottom_top_z_mm=[107,109],wall_t_mm=1.2,inner_LW_mm=[121,101],top_z_mm=114,
+        mounting='Four existing hard supports below four case pads; retained by locator pocket and installed computer belt. Remove computer before lifting barrier.',
+        electrical_scope='Nonconductive unfilled PLA contact barrier, no exposed floor screws or through holes on component side. Not certified electrical insulation. Bare PCB requires a product-specific insulating enclosure or mounting-hole standoffs; never strap a bare board onto the pads.'),
     floor_outer_corner_notches=False,corner_flat_gusset_qty=0,
     corner_joint='Four auxiliary flat gussets and their8 fastener sets removed. Eight HBLFSN6 lower-frame joints retained; independent floor corner screws reused from inner rail positions. Frame racking qualification remains open.',
     deck_LWH_mm=[300,300,4],deck_bottom_top_z_mm=[229,233],deck_translation_z_mm=130,
@@ -53,7 +57,7 @@ P=dict(revision='D6.4',date='2026-09-23',source_revision=SOURCE,
     battery_installed_XYZ_mm=[113,75,62],adapter_origin_xyz_mm=[-184,-45,166],
     adapter_installed_XYZ_mm=[95,90,30],mating_insertion_depth_credited_mm=0,
     battery_geometry='conservative catalog envelopes, not actual latched-interface CAD',
-    computer_origin_LWH_mm=[-60,-50,108,120,100,60],computer_product_selected=False,
+    computer_origin_LWH_mm=[-60,-50,110,120,100,60],computer_product_selected=False,
     battery_service_waypoints_xyz_mm=[[0,0,0],[0,0,8],[-220,0,8]],
     exchange='OFF, unplug rear connector, release belt, lift8mm then withdraw rearward220mm; cargo and deck stay',
     normal_payload_kg=10,structural_payload_kg=15,static_factor_target=2,
@@ -92,7 +96,7 @@ def main():
     src=Path(temp.name)/'D3.FCStd'
     src.write_bytes(subprocess.check_output(['git','-C',str(BASE),'show',SOURCE+':cad/amr07/aluminum-direct-deck/AMR01_AluminumDirect_D3.FCStd']))
     old=App.openDocument(str(src));doc=App.newDocument(NAME)
-    doc.Label='AMR D6.4 | plain floor holes + large washers | PC seat108mm | cargo233mm'
+    doc.Label='AMR D6.5 | continuous PC barrier over metal fixings | PC seat110mm'
     removed=['BatteryCradlePLA','BatteryReservedSpace','BatteryConnectorEnvelope','ElectronicsTrayPLA','FrontElectronicsTrayPLA']
     removed.extend(o.Name for o in old.Objects if o.Name.startswith(('Gusset_','GussetBolt_','Washer_Gusset','SlotNut_Gusset_')))
     for o in old.Objects:
@@ -234,6 +238,14 @@ def main():
             px=(-1 if ix==0 else 1)*50;py=(-1 if iy==0 else 1)*40
             s=s.fuse(box(px-5,py-5,101.4,10,10,5.6)).removeSplitter()
             add(f'FloorPLA_{ix}_{iy}',cut(s,holes),'PLA','1F equipment only; FOUR dispersed fixings:3 reused M6/OD18 washers +1 ordinary M4 cap with OD12 washers. Full2.4mm panel at plain hole. Integral10x10x5.6 PC support boss. Creep/temperature qualification pending.')
+    # One removable barrier covers BOTH screw heads and washers. No metallic
+    # fastener penetrates its component-side floor. Case load acts directly
+    # over the four existing hard supports; no spanning load-spreader credit.
+    barrier_boxes=[box(-61.7,-51.7,107,123.4,103.4,2)]
+    barrier_boxes += [box(x,-51.7,101.6,1.2,103.4,12.4) for x in [-61.7,60.5]]
+    barrier_boxes += [box(-60.5,y,101.6,121,1.2,12.4) for y in [-51.7,50.5]]
+    add('ComputerBarrierPLA',fuse(barrier_boxes),'PLA',
+        'Continuous2mm barrier, no through holes.1.2mm walls; retained below strapped CASED computer. Not a bare-PCB mount or certified electrical insulation. Nonconductive unfilled filament only; case cooling/temperature and product-specific PCB supports remain to qualify.')
     add('BatteryBL1860B',box(*P['battery_origin_xyz_mm'],*P['battery_installed_XYZ_mm']),'reference','Selected genuine6Ah108Wh battery, manufacturer113x75x62mm;0.68kg.',True)
     add('BatteryAdapter03',box(*P['adapter_origin_xyz_mm'],*P['adapter_installed_XYZ_mm']),'reference','Selected approximate95x90x30mm123g adapter. Full additive height retained; check actual latch/switch/lead offsets.',True)
     add('BatteryBasePad',box(-193,-37.5,101.4,113,75,2.6),'reference','Soft liner on1F floor; not on electrical contacts.')
@@ -247,21 +259,21 @@ def main():
     add('BatteryVehicleConnector',box(-211,107,165,24,20,14),'reference','Disconnected vehicle half parked outside extraction route.')
     add('BatteryVehicleHarness',pipe([[-199,127,172],[-199,132,172],[-215,132,150],[-215,114,114],[220,114,114],[220,-75,126],[205,-75,126]]),'reference','Main power follows1F perimeter; clamps and strain relief to select. No conductor count/current rating inferred from geometry.')
     computer=change('Reserved_Computer',box(*P['computer_origin_LWH_mm']))
-    computer.Label='1F COMPUTER RESERVATION120x100x60 | above base |0.5kg budget'
+    computer.Label='CASED COMPUTER RESERVATION120x100x60 | barrier below |0.5kg budget'
     supervisor=change('Reserved_SupervisorRS485',box(5,65,104,70,45,30))
     change('Reserved_Protection',box(135,-110,112,70,70,35))
     change('Reserved_ClampAndPower',box(155,-25,112,50,90,35))
     for i,(px,py) in enumerate(product([-50,50],[-40,40])):
-        add('ComputerPad_'+str(i),box(px-5,py-5,107,10,10,1),'reference','1mm liner on integral hard PLA support. PC seat108; hard support limits downward travel to107,0.6mm above screw top. Case product/feet remain unselected.')
+        add('ComputerPad_'+str(i),box(px-5,py-5,109,10,10,1),'reference','1mm CASE pad above continuous2mm barrier, aligned with hard floor support below. PC seat110. No direct bare-board mounting; case or board-specific spacers required.')
     add('SupervisorPad',box(5,65,101.4,70,45,2.6),'reference','Insulating equipment pad; case product/mount holes remain unselected.')
-    add('ComputerTopPad',box(-60,-7.5,168,120,15,1),'reference','Strap pad to position away from actual cooling openings.')
+    add('ComputerTopPad',box(-60,-7.5,170,120,15,1),'reference','Strap pad for case, not bare PCB; position away from actual cooling openings.')
     add('SupervisorTopPad',box(5,82.5,134,70,15,1),'reference','Strap pad over supervision case, received hardware fit pending.')
-    for name,x0,x1,y,top in [('Computer',-63,63,0,170.5),('Supervisor',2,78,90,136.5)]:
+    for name,x0,x1,y,top in [('Computer',-64,64,0,172.5),('Supervisor',2,78,90,136.5)]:
         s=box(x0,y-7.5,97,x1-x0,15,top-97).cut(box(x0+1.5,y-8,98.5,x1-x0-3,16,top-100))
         add(name+'RetentionBelt',s,'reference','15mm strap through1F shelf only; long direction avoids both inner3030rails. Product/creep test pending.')
     # These keep-out volumes are checks, not installed equipment or mass.
-    ventilation=box(-60,-50,171,120,100,15)
-    pc_cables=box(64,-45,116,30,85,45)
+    ventilation=box(-60,-50,173,120,100,15)
+    pc_cables=box(65,-45,118,30,85,45)
 
     doc.recompute()
     physical=[o for o in doc.Objects if hasattr(o,'MaterialBasis') and o.MaterialBasis!='reference']
@@ -284,6 +296,16 @@ def main():
         fixed_pc=[o for o in physical+refs if o.Name not in ['Reserved_Computer','ComputerTopPad','ComputerRetentionBelt']]
         for a,b in [([0,0,0],[0,0,8]),([0,0,8],[0,-230,8])]:
             pc_service.append(dict(part=n,from_mm=a,to_mm=b,hits=hits(swept_bbox(doc.getObject(n).Shape,a,b),fixed_pc)))
+    barrier_service=[]
+    barrier_removed=['Reserved_Computer','ComputerTopPad','ComputerRetentionBelt','ComputerBarrierPLA']+[f'ComputerPad_{i}' for i in range(4)]
+    fixed_barrier=[o for o in physical+refs if o.Name not in barrier_removed]
+    for a,b in [([0,0,0],[0,0,12]),([0,0,12],[0,-230,12])]:
+        # Exact sweep of the five axis-aligned boxes; an overall bbox would
+        # incorrectly fill the intentional cavity surrounding the screws.
+        sweep=fuse([swept_bbox(s,a,b) for s in barrier_boxes]+[
+            swept_bbox(doc.getObject(f'ComputerPad_{i}').Shape,a,b) for i in range(4)])
+        barrier_service.append(dict(from_mm=a,to_mm=b,hits=hits(sweep,fixed_barrier),
+            precondition='Computer/top pad/belt removed; four underside case pads travel with barrier.'))
     caster=hits(Part.makeCylinder(43,65,V(-150,0,0)),[doc.getObject(n) for n in added])
     tires=[dict(side=s,hits=hits(Part.makeCylinder(50.35,123,V(90,s*153,50.35),V(0,s,0)),[doc.getObject(n) for n in added])) for s in [-1,1]]
     # All36 holes remain usable. Only theY=135row now backs onto a rail.
@@ -332,7 +354,7 @@ def main():
     report=dict(parameters=P,physical_parts=len(physical),all_shapes_valid=all(o.Shape.isValid() for o in physical+refs),
         checked_physical_pairs=len(physical)*(len(physical)-1)//2,collisions=collisions,
         reference_collisions={k:v for k,v in ref_hits.items() if v},reference_pair_collisions=ref_pairs,
-        continuous_battery_service=service,continuous_computer_service=pc_service,caster_sweep_hits=caster,tire_outward_service=tires,
+        continuous_battery_service=service,continuous_computer_service=pc_service,continuous_barrier_service=barrier_service,caster_sweep_hits=caster,tire_outward_service=tires,
         grid_fastener_envelopes=grid,grid_free_holes=30,grid_slotnut_holes=6,
         joint_assembly_tool_access=tools,computer_ventilation_keepout_hits=hits(ventilation,physical+refs),
         floor_fixings=floor_fixings,floor_beam_anchors=beam_anchors,corner_joints=corner_joints,
@@ -342,9 +364,10 @@ def main():
         unchanged_physical_parts=len(invariant_names),unchanged_parts_BRep_equal=invariant,quoted_plate_unchanged=plate_equal,
         clearances_mm=dict(first_floor_open_height_at_sides=97.6,central_floor_to_deck=127.6,
             battery_lift_to_lowest_cargo_grid_fastener=222.8-(198.5+8),
-            computer_to_deck=229-170.5,computer_vent_keepout_height=15,
-            computer_case_to_floor_screw_head=108-106.4,
+            computer_to_deck=229-172.5,computer_vent_keepout_height=15,
+            computer_case_to_floor_screw_head=110-106.4,
             computer_hard_support_to_floor_screw_head=107-106.4,
+            barrier_bottom_to_floor_screw_head=107-106.4,barrier_solid_thickness=2,
             battery_rearward_withdrawal=220),
         mass=dict(source_D3_kg=source_mass,estimated_base_kg=total,remaining_to_10kg_kg=10-total,
             electrical_total_kg=2.153,battery_kg=.68,adapter_kg=.123,new_straps_and_pads_allowance_kg=.18,
@@ -366,7 +389,7 @@ def main():
     doc.saveAs(str(HERE/(NAME+'.FCStd')))
     print(json.dumps({k:report[k] for k in ['collisions','reference_collisions','reference_pair_collisions','continuous_battery_service','joint_assembly_tool_access','computer_ventilation_keepout_hits','computer_connector_keepout_hits','mass']},ensure_ascii=False),flush=True)
     assert not collisions and not report['reference_collisions'] and not ref_pairs
-    assert not any(a['hits'] for a in service+pc_service+tires+grid+tools)
+    assert not any(a['hits'] for a in service+pc_service+barrier_service+tires+grid+tools)
     assert not caster and not report['computer_ventilation_keepout_hits'] and not report['computer_connector_keepout_hits']
     assert invariant and plate_equal
     assert all(sum(f['panel']==f'FloorPLA_{ix}_{iy}' for f in floor_fixings)==4 for ix,iy in product(range(2),repeat=2))
@@ -379,7 +402,7 @@ def main():
         assert max(b.XLength,b.YLength,b.ZLength)<256
         MeshPart.meshFromShape(Shape=s,LinearDeflection=.06,AngularDeflection=.25,Relative=False).write(str(HERE/(name+'.stl')))
         manifest.append(dict(file=name+'.stl',size_mm=[b.XLength,b.YLength,b.ZLength],solid_mass_g=s.Volume*1.24e-3,
-            orientation_note='Floor: ribs downward with slicer supports, or stand on central seam edge with brim and local locator-wall supports. Beam: broad top flange toward bed; check17mm belt-channel bridge. STL axes are assembly axes translated to positive coordinates, NOT pre-oriented for printing.',
+            orientation_note=('Barrier: continuous2mm floor and1.2mm walls,100% infill, nonconductive unfilled filament; choose support/orientation in slicer; no holes or cracks allowed. Not a rated insulating enclosure.' if name=='ComputerBarrierPLA' else 'Floor: ribs downward with slicer supports, or stand on central seam edge with brim and local locator-wall supports. Beam: broad top flange toward bed; check17mm belt-channel bridge. STL axes are assembly axes translated to positive coordinates, NOT pre-oriented for printing.'),
             sliced=False,support_and_failed_print_material_included=False))
     (HERE/'print_manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     print('D6 build complete',flush=True)
