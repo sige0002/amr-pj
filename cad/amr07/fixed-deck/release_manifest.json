@@ -15,28 +15,28 @@
       "sha256": "85272fab15e63fbfa5f030ec5fd41d814a22ccac61723c614edcf063386c7d9b"
     },
     "BOM-costs.json": {
-      "bytes": 2589,
-      "sha256": "877a875727def9c4be9c6af55d0cd3bb033c0d84f8939fcb3345846d3af40630"
+      "bytes": 2530,
+      "sha256": "acfa30fcaf105b507441c8ef9f96e002df2bf6215f485e6eba1b8211c5f03644"
     },
     "BOM-details.ja.md": {
-      "bytes": 44485,
-      "sha256": "46aed1bc2c74224c17846366844104b395b17321316dd76dcfdaf7d79a232813"
+      "bytes": 35775,
+      "sha256": "93122a85b078bb9261059b7b26a2c2b0c6f8048c98cf6439b0f4eac9491bb249"
     },
     "BOM-summary.csv": {
-      "bytes": 411,
-      "sha256": "2a5b5a5725106cf3475b92b0f930d12b7fb3eeea12012ee973c80da9ff578991"
+      "bytes": 409,
+      "sha256": "800a079ace85ca4bc0997768ffc9894769ceaed68e5081efd6eaf8f23e7e2463"
     },
     "BOM.csv": {
-      "bytes": 23251,
-      "sha256": "f5a774c2225e221a246d9aafa43f53041839c9de660027f721cc22dba5c88ffc"
+      "bytes": 18276,
+      "sha256": "728288f31335eb52c5735838c57bc36540a006c31a942e9f9a3c1ee9ad9af45a"
     },
     "BOM.ja.md": {
-      "bytes": 9609,
-      "sha256": "545187af0b11daea80586e4710a56820eb9cac32d50040d9a3a6116872fde442"
+      "bytes": 8654,
+      "sha256": "b9142f59fe7d2b583408c5000d98d59cb85b56413b90157585ffeb62edeb9359"
     },
     "D69-print-prototypes.zip": {
-      "bytes": 228282,
-      "sha256": "acf395480d450f627a95d51256ce6efee1ce95a5bae02f9ecbe3d4ed36d68077"
+      "bytes": 228277,
+      "sha256": "a43d610d8616f98e77d1715736965043ce7cd3261dbb444d7fa10d3a71a77705"
     },
     "MACHINING_QUOTE.ja.md": {
       "bytes": 2889,
@@ -47,16 +47,16 @@
       "sha256": "c78181d5d2e11ab1cf41e882ad40355aa43780f5df21c5ac1bdf0d25bd3eb4f1"
     },
     "README.ja.md": {
-      "bytes": 7272,
-      "sha256": "7216faf464dee6c2ccf69e5449d347868ce6f8e31919643d170ac3fdf36c237a"
+      "bytes": 7246,
+      "sha256": "9e41d1af00e50e64dc46c1d57071b6b4e6cef55ec88a0aa5c2713ce5301a4fc8"
     },
     "build_bom.py": {
-      "bytes": 11348,
-      "sha256": "2c50d754afeb65737155d78fd6cbe8bb519ce9a39ac3c00234220a1903724f86"
+      "bytes": 16201,
+      "sha256": "65884a7ae60f51743bfea07c1ef5c7831c7a809c0312b751da415237ea4bc37d"
     },
     "build_bom_view.py": {
-      "bytes": 5729,
-      "sha256": "0a415551783affac81ee2cdecbef6c5ae0f8e628942d8246d232dee21bd16aed"
+      "bytes": 6137,
+      "sha256": "1dcbe85db46443f5c6c7d355435251fb5d66cb4fd0c91d61d6180b59c6d68250"
     },
     "build_d69.py": {
       "bytes": 6225,
@@ -91,8 +91,8 @@
       "sha256": "323b95983d707e88e0779d3f8ead241ed754dbcd3a10463b512e8f88f124a5e0"
     },
     "cost_summary.json": {
-      "bytes": 2533,
-      "sha256": "c3156b9c15c19113a2df9c679ab05d835be7efc384cbb68c191219d6b3122a97"
+      "bytes": 2713,
+      "sha256": "6b9e0564d3522ca486a952765efb1fe7dd4d448d0b743c21b773a94db8e4ade7"
     },
     "export_and_check.py": {
       "bytes": 4571,
@@ -115,8 +115,8 @@
       "sha256": "f2fd1642c681c4e6ea65f66dbfd4027017e090bba02344f26707d89656b76d63"
     },
     "release.py": {
-      "bytes": 7719,
-      "sha256": "25162e37f1766c152434687b6057e0ae7d51afdff30d452f5c12be35751354ee"
+      "bytes": 8400,
+      "sha256": "7c7986c0bbbc52c282328cb34ccd2d40f60c96be03c77f3e37991a1386003d7d"
     },
     "requirements.json": {
       "bytes": 13782,
@@ -127,8 +127,8 @@
       "sha256": "1b3a28f610c375438a8bbfbfb93d4028ce5e73c80c9b806a5d0ba82ff0d1b09a"
     },
     "sync_electrical.py": {
-      "bytes": 7117,
-      "sha256": "a253d666ba80891e4dd7c4277eaf1488970dbd306588b0a668e133d36788d478"
+      "bytes": 5288,
+      "sha256": "536583cc9f9277b691546d79b7b90b9a50c0fc4c8439139e0c13c40be4cf86b9"
     },
     "validate.py": {
       "bytes": 5179,
@@ -142,16 +142,24 @@
   "physical_parts": 329,
   "PLA_print_parts": 14,
   "FreeCAD_GUI_screenshots": 5,
-  "checked_local_links": 147,
-  "shared_electrical_plan_sha256": "4eebd14d01f28200b41c46c465c9a9265c753d378e5a516cb54ebd29889d34c9",
+  "checked_local_links": 151,
+  "shared_electrical_plan_sha256": "2be9b590e0782179794677986b24a7f0b4c7bac41c528c2d92445bf421306f50",
   "electrical_buildability_files": {
     "electrical-buildability/README.ja.md": {
-      "bytes": 6813,
-      "sha256": "3a617dbe831d0ff6f1dcfed09c66c94b5ac03b2e2b7b0c6306e8705dc2881ece"
+      "bytes": 4335,
+      "sha256": "99b653d6c76456ad0580208c883bc4161a4e156242a6c18d959b0604644a502a"
+    },
+    "electrical-buildability/deferred-parts.csv": {
+      "bytes": 4176,
+      "sha256": "7dd1e40719907190342633d75d0fdc45f54deb1933bf9215e7f4a04c7d4fab8c"
+    },
+    "electrical-buildability/deferred-parts.ja.md": {
+      "bytes": 2801,
+      "sha256": "2aeee5cdcd8d61ed828394812f8b40b0790fb3d3a62f814c8c2a3aaa17355e5a"
     },
     "electrical-buildability/requirements.json": {
-      "bytes": 2616,
-      "sha256": "aed8e4a2856bb2a51c17544890e21978f755150a4e807b4742b71bb884a9c8cf"
+      "bytes": 4933,
+      "sha256": "a912fc3545e44858ea3b68c9f4bea15c8024dd5a636fcb7cca26019a9982b4dc"
     },
     "electrical-buildability/withdrawn-parts.csv": {
       "bytes": 4350,
@@ -162,7 +170,7 @@
       "sha256": "8eb437f3f7895de99760cec7efb63612fa61b17be9b24a5eadc3334b46fe51ba"
     }
   },
-  "scope": "Fixed-deck mechanical prototype review; E1 corrects electrical fabrication assumptions. Replacement electrical design and wiring are incomplete. Existing actual machining quote reused for equivalent geometry. Not production release.",
+  "scope": "Fixed-deck mechanical prototype review; E2 limits electronics to initial manual drive and physical motor-power E-stop. Conditional/later electronics are outside the purchase BOM. Parts and wiring remain incomplete; CAD geometry unchanged. Existing actual machining quote reused for equivalent geometry. Not production release.",
   "checks": [
     "Changed-part static and reserved-envelope collision check",
     "Continuous battery/computer service envelopes with deck installed",
@@ -173,7 +181,8 @@
     "Historical quoted plate STEP/PDF hashes and native shape equivalence",
     "14 closed STL meshes and256mm printer envelope",
     "BOM purchase packs, currencies and linked current requirements",
-    "Withdrawn custom-circuit and solder-terminal candidates excluded from purchase BOM; replacement costs unpriced"
+    "Withdrawn custom-circuit and solder-terminal candidates excluded from purchase BOM; replacement costs unpriced",
+    "E2 conditional/later parts excluded from baseline BOM; scope and costs agree"
   ],
   "production_released": false,
   "physical_strength_tests_complete": false,

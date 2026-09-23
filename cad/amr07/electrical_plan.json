@@ -2,22 +2,14 @@
   "schema_version": "1.0",
   "design": "AMR01_FixedDeck_D69",
   "date": "2026-09-23",
-  "status": "custom_PCB_recommendation_withdrawn_assembled_replacement_not_designed",
+  "status": "minimum_manual_drive_scope_selected_components_and_wiring_pending",
   "requirements_file": "fixed-deck/requirements.json",
   "document": "ELECTRICAL_AND_VALIDATION.ja.md",
   "operation_release": {
-    "flat_floor": false,
-    "slope": false,
-    "later_speed": false,
-    "mechanical_power_off_hold_designed": false,
-    "electrical_schematic_complete": false,
-    "pcb_built": false,
-    "supervisor_firmware_built": false,
-    "industrial_functional_safety_certification_claimed": false,
-    "mechanical_power_off_hold_required": false,
-    "slope_in_current_scope": false,
     "wiring_diagram_complete": false,
-    "replacement_electrical_BOM_complete": false
+    "replacement_electrical_BOM_complete": false,
+    "electrical_CAD_validated": false,
+    "motion_test_complete": false
   },
   "motor_published": {
     "part": "M0601C_111",
@@ -62,320 +54,54 @@
     "battery_adapter": 0.123
   },
   "power": {
-    "battery": {
-      "nominal_class_V": 18,
-      "maximum_charged_voltage_V": 21,
-      "part": "Makita BL1860B A-60464",
-      "mass_budget_kg": 0.68,
-      "protection_and_adapter_compatibility_verified": false,
-      "runtime_1h_verified": false,
-      "note": "No assumption that a tool battery retains cell protection through a two-terminal adapter. No regenerative charging assumed.",
-      "mechanical_interface": "two-story/parameters.json",
-      "mechanical_fit_candidate": null,
-      "service": "OFF, unplug rear main connector, release battery belt, lift latched module8mm then withdraw rearward220mm. Genuine DC18RF charging off vehicle.",
-      "capacity_Ah": 6,
-      "energy_Wh": 108,
-      "source": "https://www.makita.com.hk/en/products/detail/1028/"
-    },
-    "motor_bus_test_voltages_V": [
-      15.5,
-      18,
-      21
-    ],
-    "motor_bus_continuous_minimum_verified": false,
-    "conservative_absolute_operating_ceiling_V": 24,
-    "transient_acceptance_max_V": 23.5,
+    "baseline": "Battery -> source fuse -> DC-rated emergency disconnect -> both motors. Return wiring must be specified. Direct switching first if ratings fit; otherwise one suitable relay with assembled/socket terminals. Relay is not automatically mandatory.",
     "positive_path": [
       "battery",
-      "adapter_manual_switch_if_present",
-      "F0_near_source",
-      "rear_main_connector",
-      "main_switch_amon3214",
-      "independent_latching_UV_temperature_disconnect",
-      "Fdrv",
-      "D0",
-      "K1_NO",
-      "K2_NO",
-      "MOTOR_BUS",
-      "FL_or_FR",
-      "motor"
+      "source_fuse",
+      "DC_rated_estop_disconnect",
+      "left_and_right_motor_power_inputs"
     ],
-    "unswitched_branches": [
-      "Fctl_to_PS1_supervisor_and_coils_after_all_load_cutoff",
-      "Fpc_to_computer_converter_after_all_load_cutoff"
-    ],
-    "motor_bus_local_parallel_branches": [
-      "self_powered_clamp_RDUMP",
-      "Cbus",
-      "bleed_resistor"
-    ],
-    "fuse_starting_values_A": {
-      "F0": 10,
-      "Fdrv": 7.5,
-      "FL": 3,
-      "FR": 3,
-      "Fctl": 1,
-      "Fpc": null
-    },
-    "fuse_part_and_time_current_coordination_complete": false,
-    "extension_copper_wire_starting_area_mm2": 0.75,
-    "negative_return": "Dedicated copper, not 3030. Thin signal ground must not become a load return.",
-    "Cbus_candidate_uF": 470,
-    "Cbus_min_rating_V": 35,
-    "bleed_candidate_ohm": 1000,
-    "bleed_candidate_W": 1,
-    "inrush_qualification_pending": true,
-    "manual_isolation_required_for_service": true,
-    "charger": {
-      "part": "Makita DC18RF JPADC18RF",
-      "new_purchase": true,
-      "charge_location": "off_vehicle",
-      "full_charge_min_catalog": 40
-    },
-    "adapter": {
-      "part": "Netkey diy-adapter03",
-      "new_purchase": true,
-      "mass_kg": 0.123,
-      "dimensions_LWH_mm": [
-        95,
-        90,
-        30
-      ],
-      "source": "https://store.shopping.yahoo.co.jp/netkey-store/diy-adapter03.html",
-      "low_voltage_cell_temperature_protection_credited": false,
-      "supplied_fuse_A": 30,
-      "actual_continuous_rating_verified": false
-    },
-    "undervoltage_design": {
-      "warning_V": 17.5,
-      "controlled_stop_V": 17.0,
-      "independent_hardware_all_load_cutoff_V": 16.5,
-      "minimum_rearm_voltage_V": 18.0,
-      "restart_requires_new_manual_ARM": true,
-      "setpoints_status": "initial design settings; bench calibration/load sag tests pending",
-      "all_loads_includes": [
-        "motor",
-        "computer",
-        "supervisor"
-      ],
-      "cell_temperature_policy": "Individual-cell and pack-temperature protection through this adapter is not established. Total-voltage cutoff alone cannot establish cell safety. Resolve interface/protection and qualify before operating.",
-      "circuit_implemented": false,
-      "protection_components_selected": false
-    },
-    "note_D5": "The battery/charger/adapter are selected. This does not complete the protection circuit or validate motor supply transients. Charging and regenerative current into the battery are not permitted through the two-wire adapter.",
-    "main_manual_switch": {
-      "part": "amon3214",
-      "DC24V_catalog_A": 10,
-      "inrush_and_transient_qualification_complete": false,
-      "source": "https://www.amon.jp/products2/detail.php?product_code=3214"
-    },
-    "implementation_status": "withdrawn_legacy_custom_circuit_proposal"
+    "return_and_signal_ground_wiring": "pending terminal-numbered diagram",
+    "additional_relay": "conditional_one_only_if_direct_switching_is_unsuitable",
+    "battery_protection": "check_existing_battery_adapter_protection_before_adding_hardware",
+    "part_selection_complete": false
   },
   "restart_and_watchdog": {
-    "controller": "owned Raspberry Pi Pico family; variant/headers pending",
-    "rs485_sole_master": true,
-    "previous_USB_RS485B": "Not paralleled as a second bus master; may be kept as a disconnected service tool.",
-    "heartbeat_period_ms": 20,
-    "heartbeat_generation": "One software GPIO transition after a complete supervisor main-loop iteration; no autonomous PWM heartbeat.",
-    "external_watchdog_part": "CD74HC123E",
-    "watchdog_supply_V": 5,
-    "watchdog_R_ohm": 330000,
-    "watchdog_C_F": 1e-06,
-    "watchdog_nominal_ms": 148.5,
-    "watchdog_acceptance_ms": [
-      120,
-      180
-    ],
-    "fault_to_relay_open_acceptance_max_ms": 200,
-    "logic_levels": "Level translation between Pico 3.3 V and external 5 V logic; no direct 5 V GPIO connection.",
-    "arm_latch_part": "TC74HC74AP",
-    "arm_latch_clock": "Debounced fresh physical ARM rising edge",
-    "arm_latch_D": "READY",
-    "asynchronous_latch_clear_OR": [
-      "EStop_open",
-      "external_watchdog_not_OK",
-      "power_on_reset",
-      "supervisor_trip"
-    ],
-    "holding_ARM_must_not_restart_after_fault": true,
-    "estop_NC_contact_1": "Series with K1 coil power",
-    "estop_NC_contact_2": "Series with K2 coil power",
-    "power_relay_contact_topology": "Two NO contacts in series on positive motor feed",
-    "default_power_up_state": "DISARMED",
-    "rearm_requires": [
-      "EStop_closed",
-      "external_watchdog_OK",
-      "bus_voltage_in_range",
-      "host_zero_command_500ms",
-      "ARM_released_then_new_press",
-      "stationary_confirmed",
-      "both_open_low_energy_weld_test_passed"
-    ],
-    "arm_power_up_motor_handshake_timeout_ms": 200,
-    "stationary_weld_self_test": "With both power contacts OFF, wait 3 s; inject at most about 0.5 mA from control 5 V through blocking diode and 10 kohm into relay midpoint. Motor bus has 1 kohm bleed. Require midpoint 3 to 5.5 V and bus below 1 V. No power-contact closure to diagnose a possible welded contact.",
-    "bus_bleed_wait_before_stationary_self_test_s": 3,
-    "software_automatic_rearm": false,
-    "single_fault_coverage": "Two contact paths and selected fault injections, not all component/common-cause failures or a certified safety controller.",
-    "state_sequence": [
-      "DISARMED",
-      "stationary_both_open_low_energy_SELFTEST",
-      "fresh_ARM_edge",
-      "both_relays_on_zero_mode_handshake",
-      "RUN_ZERO",
-      "fresh_motion_command_RUN"
-    ],
-    "weld_test": {
-      "source_V": 5,
-      "series_blocking_diode": true,
-      "series_R_ohm": 10000,
-      "midpoint_measurement_divider_ohm": [
-        100000,
-        10000
-      ],
-      "motor_bus_bleed_ohm": 1000,
-      "expected_healthy_midpoint_approx_V": 4.3,
-      "expected_K2_weld_midpoint_approx_V": 0.43,
-      "expected_K1_weld_midpoint": "battery voltage",
-      "healthy_midpoint_acceptance_V": [
-        3,
-        5.5
-      ],
-      "healthy_motor_bus_max_V": 1,
-      "component_tolerance_and_fault_test_done": false
-    },
-    "implementation_status": "withdrawn_legacy_custom_circuit_proposal"
+    "dedicated_ARM_button_required": false,
+    "external_watchdog_required": false,
+    "dual_relays_and_weld_diagnostics_required": false,
+    "software_behavior": "Verify start at zero, normal stop, communication loss and power restoration using actual motor/protocol. Do not claim an independent restart/stop guarantee.",
+    "verified": false
   },
   "control": {
-    "rs485_baud": 115200,
-    "format": "8N1",
-    "command_rate_per_motor_Hz": 50,
-    "temperature_poll_per_motor_Hz": 10,
-    "command_stale_ms": 100,
-    "motor_feedback_stale_ms": 100,
-    "host_loss_with_healthy_motor_bus": "Local 0.2 m/s2 stop ramp; open relays after confirmed stop; latch fault.",
-    "host_loss_stop_deadline_initial_s": 1,
-    "host_loss_stop_deadline_later_s": 1.8,
-    "motor_bus_fault_or_supervisor_hang_or_estop": "Open relay power path; validate coast distance. No assumed internal motor watchdog.",
-    "service_accel_decel_max_m_s2": 0.2,
-    "brake_byte_use": "Only after lifted-wheel validation; do not assume zero-speed or unpowered holding.",
-    "temperature_warn_C": 60,
-    "temperature_trip_C": 70,
-    "temperature_rearm_below_C": 50,
-    "current_measurement_note": "External branch current is measured by test equipment. Onboard current trip uses motor-reported current with validated protocol scale; reported current is not assumed equal to DC bus current. Neither proves low-speed torque from the rated-speed torque constant.",
-    "bus_software_overvoltage_trip_V": 22.8,
-    "software_voltage_sampling_min_Hz": 100,
-    "future_RPM_cap": 90,
-    "later_speed_release": false,
-    "acceleration_note": "Integer rpm command quantization and driver acceleration must be measured. A commanded ramp is not a verified mechanical acceleration bound.",
-    "reported_motor_current_trip_A": 2,
-    "reported_motor_current_trip_duration_s": 0.2,
-    "motor_branch_current_60s_RMS_provisional_max_A_test_equipment": 1.25,
-    "implementation_status": "withdrawn_legacy_custom_circuit_proposal"
+    "baseline": "External operation computer -> one assembled USB-RS485 converter -> two M0601C_111 motors. No second bus master. Operation host availability/interface is not yet confirmed.",
+    "bus_masters": 1,
+    "motor": "M0601C_111_with_integrated_driver",
+    "onboard_computer_required_for_first_test": false,
+    "Pico_required_for_first_test": false,
+    "USB_RS485_part_selected": false,
+    "operating_host_interface_confirmed": false,
+    "protocol_and_software_validation_complete": false
   },
   "regeneration": {
-    "architecture": "D0 blocks charging current to battery; downstream motor-bus powered comparator switches external resistor independently of supervisor.",
-    "parts": [
-      "LM393GN",
-      "TL431A",
-      "LM78L12",
-      "2SK2232",
-      "ARCOL HS50 22R J"
-    ],
-    "turn_on_target_V": 22,
-    "turn_on_tolerance_after_calibration_V": 0.2,
-    "turn_off_target_approx_V": 21.8,
-    "divider_start_Rtop_ohm": 78000,
-    "divider_start_Rbottom_ohm": 10000,
-    "positive_feedback_start_ohm": 4700000,
-    "output_pullup_to_12V_ohm": 4700,
-    "gate_series_ohm": 100,
-    "gate_pulldown_ohm": 100000,
-    "nominal_resistor_ohm": 22,
-    "catalog_resistor_W_with_specified_heatsink": 50,
-    "nominal_ON_current_at22V_A": 1,
-    "nominal_ON_power_at22V_W": 22,
-    "resistor_source_max_envelope_mm": [
-      72.5,
-      28,
-      14.8
-    ],
-    "resistor_body_length_mm": 49.1,
-    "self_powered_clamp_verified": false,
-    "threshold_and_loop_stability_verified": false,
-    "test_continuous_absorption_W": 5,
-    "test_duration_min": 60,
-    "test_pulse_current_A": 0.9,
-    "test_pulse_duration_s": 0.5,
-    "test_pulse_energy_approx_J": 9.9,
-    "test_pulse_count": 10,
-    "resistor_surface_acceptance_max_C": 60,
-    "wire_connector_temperature_rise_max_K": 20,
-    "small_Pololu_shunt_board_selected": false,
-    "small_Pololu_reason": "No replacement in this scope update. Compare short-pulse limits and actual repeated-stop waveforms before any separate redesign.",
-    "failure_open_resistor_or_clamp_behaviour_verified": false,
-    "requirements": [
-      "Metal heatsinking with verified temperature",
-      "terminal insulation and touch guard",
-      "keep away from battery and PLA",
-      "retain clamp connection on motor side when relays open",
-      "do not count generic TVS as continuous energy absorber"
-    ],
-    "continuous_test_required_for_current_scope": false,
-    "continuous_test_note": "5 W / 60 min retained as optional reference for continuous absorption; current flat-floor acceptance requires the pulse test and measured repetitive vehicle stops.",
-    "implementation_status": "withdrawn_legacy_custom_circuit_proposal"
+    "additional_hardware_selected": false,
+    "disposition": "Check motor/source compatibility and bus voltage during deceleration and cutoff; add only a demonstrated necessary countermeasure.",
+    "compatibility_verified": false
   },
-  "candidate_parts": [
-    {
-      "id": "U1",
-      "part_number": "Raspberry Pi Pico, user-owned; variant and headers unconfirmed",
-      "used_quantity": 1,
-      "purchased_quantity": 0,
-      "purchase_price_jpy_incl_tax": 0,
-      "source": null,
-      "note": "User owns Pico, but variant and headers are unconfirmed. Do not require user soldering. This is not a complete controller.",
-      "status": "user_owned_variant_unconfirmed"
-    },
-    {
-      "id": "S_ARM",
-      "part_number": "amon3212",
-      "used_quantity": 1,
-      "purchased_quantity": 1,
-      "purchase_price_jpy_incl_tax": 835,
-      "source": "https://www.amazon.co.jp/dp/B075SQ41JN",
-      "note": "Momentary NO; new press needed after fault recovery.",
-      "status": "mechanical_candidate_wiring_not_designed"
-    },
-    {
-      "id": "S_MAIN",
-      "part_number": "amon3214",
-      "used_quantity": 1,
-      "purchased_quantity": 1,
-      "purchase_price_jpy_incl_tax": 621,
-      "source": "https://www.amazon.co.jp/dp/B075SW22KP",
-      "note": "Manual all-load switch; DC24V10A catalog, actual motor/DC-DC inrush unqualified.",
-      "status": "mechanical_candidate_wiring_not_designed"
-    }
-  ],
+  "candidate_parts": [],
   "cost": {
-    "priced_purchase_subtotal_jpy_incl_tax": 1456,
+    "priced_purchase_subtotal_jpy_incl_tax": 0,
     "shipping_included": false,
     "completed_electrical_system_total_jpy": null,
     "purchased": false,
     "old_BOM_delta_determined": true,
     "unpriced": [
-      "assembled communications and controller",
-      "assembled drive cutoff and manual rearm",
-      "independent control/communication fault response",
-      "battery protection and all-load disconnect",
-      "assembled regeneration protection",
-      "no-solder E-stop replacement",
-      "assembled DC/DC and fuses",
-      "preterminated harnesses and connectors",
-      "required harness assembly and inspection",
-      "voltage/current/temperature monitoring",
-      "heatsink fixing and guarding",
-      "shipping",
-      "main computer and its converter"
+      "assembled USB-RS485 interface",
+      "latching DC-rated E-stop disconnect",
+      "source fuse and holder",
+      "power/signal connectors and suitable cables",
+      "necessary mounting and terminal insulation",
+      "shipping"
     ],
     "excluded_by_design": [
       {
@@ -386,9 +112,18 @@
       }
     ],
     "old_USB_RS485B_and_shipping_removed_JPY": 5060,
-    "scope": "Remaining ARM/main-switch candidate prices only; owned Pico0 and USB lead500 JPY give1956 JPY in the current BOM. Replacement E-stop, assembled modules and harnesses are unpriced. Withdrawal is not a saving.",
+    "scope": "No baseline electrical models newly selected. USB cable retains a 500 JPY provisional allowance in the BOM. ARM/main switch prices are deferred, not a finished-system saving.",
     "withdrawn_electrical_reference_JPY": 6519,
-    "withdrawal_is_cost_saving": false
+    "withdrawal_is_cost_saving": false,
+    "deferred_electrical_reference_JPY": 1456,
+    "conditional_or_later": [
+      "User-owned Pico and UART-RS485 if a later local controller is needed; not in addition to the USB-RS485 bus master",
+      "Onboard computer and its DC/DC when untethered operation is required",
+      "One relay and its coil supply if direct E-stop DC switching is unsuitable",
+      "Additional battery protection only after assessing the battery/adapter protection already present",
+      "Regeneration absorption only if motor/power-source compatibility requires it; no custom clamp circuit selected",
+      "Cable assembly service only if available cables cannot meet the wiring specification"
+    ]
   },
   "cad_reservations": [
     {
@@ -479,40 +214,20 @@
     "requirements_sha256": "6603b2fecfff3f74b622b22038a66c8c52e09374c7cfde5134e45bd9e778ab26"
   },
   "validation": {
-    "all_results": "not_run",
-    "initial_test_environment": "Level smooth indoor floor in contained area; lift wheels for electrical faults first; unloaded -> 5 kg cargo -> 10 kg cargo.",
-    "initial_ambient_test_range_C": [
-      15,
-      35
+    "scope": "Initial manual drive on the existing flat-floor operating envelope",
+    "compatibility_checks": [
+      "E-stop/contact DC voltage, breaking current and motor-input inrush; AC or thermal ratings alone are insufficient",
+      "Source fuse and wire/connector current capability; do not inherit the old five-fuse layout without justification",
+      "Battery/adapter protection and motor bus voltage during braking and power interruption",
+      "Motor behavior after power restoration and communication loss; verify with selected protocol/software, without assuming an independent hardware guarantee"
     ],
-    "inrush_cycles_per_corner": 20,
-    "stop_and_comm_fault_cycles_each": 10,
-    "thermal_test_torques_Nm": [
-      0.401237485303125
+    "behavior_checks": [
+      "wheels raised: directions, speed command and normal stop",
+      "physical E-stop removes both motor supplies",
+      "power restoration and communication loss behavior",
+      "low-speed manual drive and stop on flat floor"
     ],
-    "thermal_initial_rpm": [
-      18.52013528451668,
-      28.4487485169227,
-      38.37736174932872
-    ],
-    "thermal_duration_min": 60,
-    "thermal_last15min_rise_max_C": 2,
-    "thermal_max_C": 70,
-    "speed_tracking_error_max_percent": 10,
-    "flat_stop_acceptance_initial_max_m": 0.1,
-    "flat_stop_acceptance_later_max_m": 0.3,
-    "initial_yaw_change_after_stop_max_deg": 10,
-    "initial_wheel_path_after_trip_max_m": 0.16,
-    "acceptance_applies_to": "Maximum observed result, not mean; only actual tested load/voltage/ambient/duration are released.",
-    "thermal_screening_duration_min": 10,
-    "thermal_matrix_strategy": "Stage from unloaded to the flat-floor case 0.401 Nm. Screen 15.5/18/21 V x 18.52/38.38 rpm for 10 min each and straight-line 28.45 rpm; then run 60 min at the thermally severe point and both initial-speed endpoints at 18 V. Release only the actual tested voltage/ambient/duration; screening is not continuous qualification.",
-    "temperature_sensor_note": "70 C is the reported stator-temperature trip, not proof of winding temperature or sensor lag. Also log housing temperature.",
-    "mechanical_hold": {
-      "required_for_current_prototype": false,
-      "status": "out_of_scope_after_user_declined_added_brake",
-      "qualification_claimed": false
-    },
-    "reviewed_gross_mass_kg": 21.5
+    "hardware_tests_complete": false
   },
   "sources": {
     "motor_current": "https://shop.directdrive.com/pages/m0601c-111-specs",
@@ -740,11 +455,356 @@
         "note": "One used; mandatory purchase pack contains 10; reverse current block",
         "status": "candidate_not_purchased"
       }
+    ],
+    "pre_E2_power": {
+      "battery": {
+        "nominal_class_V": 18,
+        "maximum_charged_voltage_V": 21,
+        "part": "Makita BL1860B A-60464",
+        "mass_budget_kg": 0.68,
+        "protection_and_adapter_compatibility_verified": false,
+        "runtime_1h_verified": false,
+        "note": "No assumption that a tool battery retains cell protection through a two-terminal adapter. No regenerative charging assumed.",
+        "mechanical_interface": "two-story/parameters.json",
+        "mechanical_fit_candidate": null,
+        "service": "OFF, unplug rear main connector, release battery belt, lift latched module8mm then withdraw rearward220mm. Genuine DC18RF charging off vehicle.",
+        "capacity_Ah": 6,
+        "energy_Wh": 108,
+        "source": "https://www.makita.com.hk/en/products/detail/1028/"
+      },
+      "motor_bus_test_voltages_V": [
+        15.5,
+        18,
+        21
+      ],
+      "motor_bus_continuous_minimum_verified": false,
+      "conservative_absolute_operating_ceiling_V": 24,
+      "transient_acceptance_max_V": 23.5,
+      "positive_path": [
+        "battery",
+        "adapter_manual_switch_if_present",
+        "F0_near_source",
+        "rear_main_connector",
+        "main_switch_amon3214",
+        "independent_latching_UV_temperature_disconnect",
+        "Fdrv",
+        "D0",
+        "K1_NO",
+        "K2_NO",
+        "MOTOR_BUS",
+        "FL_or_FR",
+        "motor"
+      ],
+      "unswitched_branches": [
+        "Fctl_to_PS1_supervisor_and_coils_after_all_load_cutoff",
+        "Fpc_to_computer_converter_after_all_load_cutoff"
+      ],
+      "motor_bus_local_parallel_branches": [
+        "self_powered_clamp_RDUMP",
+        "Cbus",
+        "bleed_resistor"
+      ],
+      "fuse_starting_values_A": {
+        "F0": 10,
+        "Fdrv": 7.5,
+        "FL": 3,
+        "FR": 3,
+        "Fctl": 1,
+        "Fpc": null
+      },
+      "fuse_part_and_time_current_coordination_complete": false,
+      "extension_copper_wire_starting_area_mm2": 0.75,
+      "negative_return": "Dedicated copper, not 3030. Thin signal ground must not become a load return.",
+      "Cbus_candidate_uF": 470,
+      "Cbus_min_rating_V": 35,
+      "bleed_candidate_ohm": 1000,
+      "bleed_candidate_W": 1,
+      "inrush_qualification_pending": true,
+      "manual_isolation_required_for_service": true,
+      "charger": {
+        "part": "Makita DC18RF JPADC18RF",
+        "new_purchase": true,
+        "charge_location": "off_vehicle",
+        "full_charge_min_catalog": 40
+      },
+      "adapter": {
+        "part": "Netkey diy-adapter03",
+        "new_purchase": true,
+        "mass_kg": 0.123,
+        "dimensions_LWH_mm": [
+          95,
+          90,
+          30
+        ],
+        "source": "https://store.shopping.yahoo.co.jp/netkey-store/diy-adapter03.html",
+        "low_voltage_cell_temperature_protection_credited": false,
+        "supplied_fuse_A": 30,
+        "actual_continuous_rating_verified": false
+      },
+      "undervoltage_design": {
+        "warning_V": 17.5,
+        "controlled_stop_V": 17.0,
+        "independent_hardware_all_load_cutoff_V": 16.5,
+        "minimum_rearm_voltage_V": 18.0,
+        "restart_requires_new_manual_ARM": true,
+        "setpoints_status": "initial design settings; bench calibration/load sag tests pending",
+        "all_loads_includes": [
+          "motor",
+          "computer",
+          "supervisor"
+        ],
+        "cell_temperature_policy": "Individual-cell and pack-temperature protection through this adapter is not established. Total-voltage cutoff alone cannot establish cell safety. Resolve interface/protection and qualify before operating.",
+        "circuit_implemented": false,
+        "protection_components_selected": false
+      },
+      "note_D5": "The battery/charger/adapter are selected. This does not complete the protection circuit or validate motor supply transients. Charging and regenerative current into the battery are not permitted through the two-wire adapter.",
+      "main_manual_switch": {
+        "part": "amon3214",
+        "DC24V_catalog_A": 10,
+        "inrush_and_transient_qualification_complete": false,
+        "source": "https://www.amon.jp/products2/detail.php?product_code=3214"
+      },
+      "implementation_status": "withdrawn_legacy_custom_circuit_proposal"
+    },
+    "pre_E2_restart_and_watchdog": {
+      "controller": "owned Raspberry Pi Pico family; variant/headers pending",
+      "rs485_sole_master": true,
+      "previous_USB_RS485B": "Not paralleled as a second bus master; may be kept as a disconnected service tool.",
+      "heartbeat_period_ms": 20,
+      "heartbeat_generation": "One software GPIO transition after a complete supervisor main-loop iteration; no autonomous PWM heartbeat.",
+      "external_watchdog_part": "CD74HC123E",
+      "watchdog_supply_V": 5,
+      "watchdog_R_ohm": 330000,
+      "watchdog_C_F": 1e-06,
+      "watchdog_nominal_ms": 148.5,
+      "watchdog_acceptance_ms": [
+        120,
+        180
+      ],
+      "fault_to_relay_open_acceptance_max_ms": 200,
+      "logic_levels": "Level translation between Pico 3.3 V and external 5 V logic; no direct 5 V GPIO connection.",
+      "arm_latch_part": "TC74HC74AP",
+      "arm_latch_clock": "Debounced fresh physical ARM rising edge",
+      "arm_latch_D": "READY",
+      "asynchronous_latch_clear_OR": [
+        "EStop_open",
+        "external_watchdog_not_OK",
+        "power_on_reset",
+        "supervisor_trip"
+      ],
+      "holding_ARM_must_not_restart_after_fault": true,
+      "estop_NC_contact_1": "Series with K1 coil power",
+      "estop_NC_contact_2": "Series with K2 coil power",
+      "power_relay_contact_topology": "Two NO contacts in series on positive motor feed",
+      "default_power_up_state": "DISARMED",
+      "rearm_requires": [
+        "EStop_closed",
+        "external_watchdog_OK",
+        "bus_voltage_in_range",
+        "host_zero_command_500ms",
+        "ARM_released_then_new_press",
+        "stationary_confirmed",
+        "both_open_low_energy_weld_test_passed"
+      ],
+      "arm_power_up_motor_handshake_timeout_ms": 200,
+      "stationary_weld_self_test": "With both power contacts OFF, wait 3 s; inject at most about 0.5 mA from control 5 V through blocking diode and 10 kohm into relay midpoint. Motor bus has 1 kohm bleed. Require midpoint 3 to 5.5 V and bus below 1 V. No power-contact closure to diagnose a possible welded contact.",
+      "bus_bleed_wait_before_stationary_self_test_s": 3,
+      "software_automatic_rearm": false,
+      "single_fault_coverage": "Two contact paths and selected fault injections, not all component/common-cause failures or a certified safety controller.",
+      "state_sequence": [
+        "DISARMED",
+        "stationary_both_open_low_energy_SELFTEST",
+        "fresh_ARM_edge",
+        "both_relays_on_zero_mode_handshake",
+        "RUN_ZERO",
+        "fresh_motion_command_RUN"
+      ],
+      "weld_test": {
+        "source_V": 5,
+        "series_blocking_diode": true,
+        "series_R_ohm": 10000,
+        "midpoint_measurement_divider_ohm": [
+          100000,
+          10000
+        ],
+        "motor_bus_bleed_ohm": 1000,
+        "expected_healthy_midpoint_approx_V": 4.3,
+        "expected_K2_weld_midpoint_approx_V": 0.43,
+        "expected_K1_weld_midpoint": "battery voltage",
+        "healthy_midpoint_acceptance_V": [
+          3,
+          5.5
+        ],
+        "healthy_motor_bus_max_V": 1,
+        "component_tolerance_and_fault_test_done": false
+      },
+      "implementation_status": "withdrawn_legacy_custom_circuit_proposal"
+    },
+    "pre_E2_control": {
+      "rs485_baud": 115200,
+      "format": "8N1",
+      "command_rate_per_motor_Hz": 50,
+      "temperature_poll_per_motor_Hz": 10,
+      "command_stale_ms": 100,
+      "motor_feedback_stale_ms": 100,
+      "host_loss_with_healthy_motor_bus": "Local 0.2 m/s2 stop ramp; open relays after confirmed stop; latch fault.",
+      "host_loss_stop_deadline_initial_s": 1,
+      "host_loss_stop_deadline_later_s": 1.8,
+      "motor_bus_fault_or_supervisor_hang_or_estop": "Open relay power path; validate coast distance. No assumed internal motor watchdog.",
+      "service_accel_decel_max_m_s2": 0.2,
+      "brake_byte_use": "Only after lifted-wheel validation; do not assume zero-speed or unpowered holding.",
+      "temperature_warn_C": 60,
+      "temperature_trip_C": 70,
+      "temperature_rearm_below_C": 50,
+      "current_measurement_note": "External branch current is measured by test equipment. Onboard current trip uses motor-reported current with validated protocol scale; reported current is not assumed equal to DC bus current. Neither proves low-speed torque from the rated-speed torque constant.",
+      "bus_software_overvoltage_trip_V": 22.8,
+      "software_voltage_sampling_min_Hz": 100,
+      "future_RPM_cap": 90,
+      "later_speed_release": false,
+      "acceleration_note": "Integer rpm command quantization and driver acceleration must be measured. A commanded ramp is not a verified mechanical acceleration bound.",
+      "reported_motor_current_trip_A": 2,
+      "reported_motor_current_trip_duration_s": 0.2,
+      "motor_branch_current_60s_RMS_provisional_max_A_test_equipment": 1.25,
+      "implementation_status": "withdrawn_legacy_custom_circuit_proposal"
+    },
+    "pre_E2_regeneration": {
+      "architecture": "D0 blocks charging current to battery; downstream motor-bus powered comparator switches external resistor independently of supervisor.",
+      "parts": [
+        "LM393GN",
+        "TL431A",
+        "LM78L12",
+        "2SK2232",
+        "ARCOL HS50 22R J"
+      ],
+      "turn_on_target_V": 22,
+      "turn_on_tolerance_after_calibration_V": 0.2,
+      "turn_off_target_approx_V": 21.8,
+      "divider_start_Rtop_ohm": 78000,
+      "divider_start_Rbottom_ohm": 10000,
+      "positive_feedback_start_ohm": 4700000,
+      "output_pullup_to_12V_ohm": 4700,
+      "gate_series_ohm": 100,
+      "gate_pulldown_ohm": 100000,
+      "nominal_resistor_ohm": 22,
+      "catalog_resistor_W_with_specified_heatsink": 50,
+      "nominal_ON_current_at22V_A": 1,
+      "nominal_ON_power_at22V_W": 22,
+      "resistor_source_max_envelope_mm": [
+        72.5,
+        28,
+        14.8
+      ],
+      "resistor_body_length_mm": 49.1,
+      "self_powered_clamp_verified": false,
+      "threshold_and_loop_stability_verified": false,
+      "test_continuous_absorption_W": 5,
+      "test_duration_min": 60,
+      "test_pulse_current_A": 0.9,
+      "test_pulse_duration_s": 0.5,
+      "test_pulse_energy_approx_J": 9.9,
+      "test_pulse_count": 10,
+      "resistor_surface_acceptance_max_C": 60,
+      "wire_connector_temperature_rise_max_K": 20,
+      "small_Pololu_shunt_board_selected": false,
+      "small_Pololu_reason": "No replacement in this scope update. Compare short-pulse limits and actual repeated-stop waveforms before any separate redesign.",
+      "failure_open_resistor_or_clamp_behaviour_verified": false,
+      "requirements": [
+        "Metal heatsinking with verified temperature",
+        "terminal insulation and touch guard",
+        "keep away from battery and PLA",
+        "retain clamp connection on motor side when relays open",
+        "do not count generic TVS as continuous energy absorber"
+      ],
+      "continuous_test_required_for_current_scope": false,
+      "continuous_test_note": "5 W / 60 min retained as optional reference for continuous absorption; current flat-floor acceptance requires the pulse test and measured repetitive vehicle stops.",
+      "implementation_status": "withdrawn_legacy_custom_circuit_proposal"
+    },
+    "pre_E2_validation": {
+      "all_results": "not_run",
+      "initial_test_environment": "Level smooth indoor floor in contained area; lift wheels for electrical faults first; unloaded -> 5 kg cargo -> 10 kg cargo.",
+      "initial_ambient_test_range_C": [
+        15,
+        35
+      ],
+      "inrush_cycles_per_corner": 20,
+      "stop_and_comm_fault_cycles_each": 10,
+      "thermal_test_torques_Nm": [
+        0.401237485303125
+      ],
+      "thermal_initial_rpm": [
+        18.52013528451668,
+        28.4487485169227,
+        38.37736174932872
+      ],
+      "thermal_duration_min": 60,
+      "thermal_last15min_rise_max_C": 2,
+      "thermal_max_C": 70,
+      "speed_tracking_error_max_percent": 10,
+      "flat_stop_acceptance_initial_max_m": 0.1,
+      "flat_stop_acceptance_later_max_m": 0.3,
+      "initial_yaw_change_after_stop_max_deg": 10,
+      "initial_wheel_path_after_trip_max_m": 0.16,
+      "acceptance_applies_to": "Maximum observed result, not mean; only actual tested load/voltage/ambient/duration are released.",
+      "thermal_screening_duration_min": 10,
+      "thermal_matrix_strategy": "Stage from unloaded to the flat-floor case 0.401 Nm. Screen 15.5/18/21 V x 18.52/38.38 rpm for 10 min each and straight-line 28.45 rpm; then run 60 min at the thermally severe point and both initial-speed endpoints at 18 V. Release only the actual tested voltage/ambient/duration; screening is not continuous qualification.",
+      "temperature_sensor_note": "70 C is the reported stator-temperature trip, not proof of winding temperature or sensor lag. Also log housing temperature.",
+      "mechanical_hold": {
+        "required_for_current_prototype": false,
+        "status": "out_of_scope_after_user_declined_added_brake",
+        "qualification_claimed": false
+      },
+      "reviewed_gross_mass_kg": 21.5
+    },
+    "pre_E2_operation_release": {
+      "flat_floor": false,
+      "slope": false,
+      "later_speed": false,
+      "mechanical_power_off_hold_designed": false,
+      "electrical_schematic_complete": false,
+      "pcb_built": false,
+      "supervisor_firmware_built": false,
+      "industrial_functional_safety_certification_claimed": false,
+      "mechanical_power_off_hold_required": false,
+      "slope_in_current_scope": false,
+      "wiring_diagram_complete": false,
+      "replacement_electrical_BOM_complete": false
+    },
+    "E2_deferred_candidates": [
+      {
+        "id": "U1",
+        "part_number": "Raspberry Pi Pico, user-owned; variant and headers unconfirmed",
+        "used_quantity": 1,
+        "purchased_quantity": 0,
+        "purchase_price_jpy_incl_tax": 0,
+        "source": null,
+        "note": "User owns Pico, but variant and headers are unconfirmed. Do not require user soldering. This is not a complete controller.",
+        "status": "user_owned_variant_unconfirmed"
+      },
+      {
+        "id": "S_ARM",
+        "part_number": "amon3212",
+        "used_quantity": 1,
+        "purchased_quantity": 1,
+        "purchase_price_jpy_incl_tax": 835,
+        "source": "https://www.amazon.co.jp/dp/B075SQ41JN",
+        "note": "Momentary NO; new press needed after fault recovery.",
+        "status": "mechanical_candidate_wiring_not_designed"
+      },
+      {
+        "id": "S_MAIN",
+        "part_number": "amon3214",
+        "used_quantity": 1,
+        "purchased_quantity": 1,
+        "purchase_price_jpy_incl_tax": 621,
+        "source": "https://www.amazon.co.jp/dp/B075SW22KP",
+        "note": "Manual all-load switch; DC24V10A catalog, actual motor/DC-DC inrush unqualified.",
+        "status": "mechanical_candidate_wiring_not_designed"
+      }
     ]
   },
   "selected_power_file": "makita-power/power_selection.json",
   "current_CAD": "fixed-deck/AMR01_FixedDeck_D69.FCStd",
-  "current_layout_revision": "D6.9",
+  "current_layout_revision": "D6.9_geometry_E2_electrical_scope_pending_layout",
   "current_controls_layout": {
     "estop": {
       "part": "IDEC XA1E-BV302R",
@@ -755,7 +815,7 @@
       ],
       "purchase_JPY": null,
       "historical_candidate_JPY": 3153,
-      "procurement_status": "withdrawn_solder_terminal_model",
+      "procurement_status": "replacement_DC_rated_no_solder_part_pending",
       "CAD_geometry_is_obsolete_placement_reference": true
     },
     "arm": {
@@ -765,7 +825,9 @@
         -69,
         160.4
       ],
-      "purchase_JPY": 835
+      "purchase_JPY": null,
+      "CAD_geometry_is_obsolete_placement_reference": true,
+      "procurement_status": "not_required_for_first_build"
     },
     "main_power": {
       "part": "amon 3214",
@@ -774,21 +836,21 @@
         64,
         156.4
       ],
-      "purchase_JPY": 621
+      "purchase_JPY": null,
+      "CAD_geometry_is_obsolete_placement_reference": true,
+      "procurement_status": "not_required_for_first_build"
     },
     "pico_purchase_JPY": 0,
-    "price_scope": "Mechanical placement candidates only; current BOM explicitly leaves replacement electrical hardware and wiring unpriced.",
+    "price_scope": "Old control geometry only; initial build does not require ARM or the separate main rocker.",
     "power_order": "Battery→sourceF0→rearconnector→main3214→independentUVLO→branches",
     "unreleased": [
-      "assembled_electrical_replacement_selection",
-      "terminal_numbered_wiring_diagram",
-      "PC_product_and_DCDC",
-      "preterminated_harnesses",
-      "actual_module_CAD_layout",
-      "electrical_qualification"
+      "minimum_part_selection",
+      "terminal_numbered_wiring",
+      "actual_module_and_control_CAD_layout",
+      "motion_and_stop_verification"
     ]
   },
   "manufacturing_requirements_file": "electrical-buildability/requirements.json",
-  "manufacturing_requirements_sha256": "aed8e4a2856bb2a51c17544890e21978f755150a4e807b4742b71bb884a9c8cf",
-  "implementation_disposition": "power/restart_and_watchdog/control/regeneration retain the withdrawn implementation proposal for comparison; none is a complete or released wiring design. Required functions are in manufacturing_requirements_file."
+  "manufacturing_requirements_sha256": "a912fc3545e44858ea3b68c9f4bea15c8024dd5a636fcb7cca26019a9982b4dc",
+  "implementation_disposition": "E2 minimum manual-drive scope. Previous custom circuits, multi-relay monitoring and thresholds are archived in reference_only; they are not baseline requirements."
 }

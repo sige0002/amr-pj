@@ -55,7 +55,13 @@ assert {r['ID'] for r in withdrawn} == set(buildability['withdrawn_BOM_ids'])
 assert not set(buildability['withdrawn_BOM_ids']).intersection(by)
 assert sum(float(r['明細金額']) for r in withdrawn) == read('cost_summary.json')['withdrawn_electrical_reference_JPY']
 assert not read('cost_summary.json')['electrical_withdrawal_is_cost_saving']
-assert all(not by[id]['明細金額'] for id in ['U01', 'U08', 'U09', 'U10', 'U11', 'U12', 'U13', 'U21', 'U22', 'U23'])
+deferred = list(csv.DictReader((buildability_dir / 'deferred-parts.csv').open(encoding='utf-8-sig')))
+assert {r['ID'] for r in deferred} == set(buildability['deferred_BOM_ids'])
+assert not set(buildability['deferred_BOM_ids']).intersection(by)
+assert sum(float(r['明細金額']) for r in deferred if r['明細金額']) == read('cost_summary.json')['deferred_electrical_reference_JPY']
+assert all(not by[id]['明細金額'] for id in ['U06', 'U07', 'U08', 'U13', 'U22'])
+assert electrical['status'] == buildability['status']
+assert electrical['control']['baseline'] == buildability['baseline_communication']
 for id, use, buy in [('D3_M6', 50, 70), ('F04', 70, 100), ('D62_FLOOR_SCREWS', 20, 60),
                      ('D3_STOP_NUTS', 28, 40), ('D64_FLOOR_WASHERS', 24, 40)]:
     assert int(by[id]['使用数']) == use and int(by[id]['購入予定数']) == buy and int(by[id]['余剰数']) == buy-use, id
@@ -97,7 +103,7 @@ out = dict(revision='D6.9', date='2026-09-23', files=files, physical_parts=329,
            shared_electrical_plan_sha256=digest(BASE / 'electrical_plan.json'),
            electrical_buildability_files={str(p.relative_to(BASE)): dict(bytes=p.stat().st_size, sha256=digest(p))
                                          for p in sorted(buildability_dir.iterdir()) if p.is_file()},
-           scope='Fixed-deck mechanical prototype review; E1 corrects electrical fabrication assumptions. Replacement electrical design and wiring are incomplete. Existing actual machining quote reused for equivalent geometry. Not production release.',
+           scope='Fixed-deck mechanical prototype review; E2 limits electronics to initial manual drive and physical motor-power E-stop. Conditional/later electronics are outside the purchase BOM. Parts and wiring remain incomplete; CAD geometry unchanged. Existing actual machining quote reused for equivalent geometry. Not production release.',
            checks=['Changed-part static and reserved-envelope collision check',
                    'Continuous battery/computer service envelopes with deck installed',
                    'Six-bolt top tool access and vertical deck removal',
@@ -107,7 +113,8 @@ out = dict(revision='D6.9', date='2026-09-23', files=files, physical_parts=329,
                    'Historical quoted plate STEP/PDF hashes and native shape equivalence',
                    '14 closed STL meshes and256mm printer envelope',
                    'BOM purchase packs, currencies and linked current requirements',
-                   'Withdrawn custom-circuit and solder-terminal candidates excluded from purchase BOM; replacement costs unpriced'],
+                   'Withdrawn custom-circuit and solder-terminal candidates excluded from purchase BOM; replacement costs unpriced',
+                   'E2 conditional/later parts excluded from baseline BOM; scope and costs agree'],
            production_released=False, physical_strength_tests_complete=False,
            electrical_wiring_design_complete=False, electrical_replacement_CAD_validated=False)
 (HERE / 'release_manifest.json').write_text(json.dumps(out, ensure_ascii=False, indent=2)+'\n')

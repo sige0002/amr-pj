@@ -65,7 +65,7 @@ by['DECK_CNC_SHIP'].update(部品名='アルミ天板1枚の日本宛送料',
                           備考='天板1枚の日本・国単位表示。住所別未検証。モーター金具は別配送。税・決済費用別、今回の送料再取得なし。')
 replacements = {
     'U01': ('完成済みの電池保護・全負荷低電圧遮断', 'BL1860Bとの保護適合・復帰条件を確認する', '2線アダプターだけでセル・温度保護が成立するとは扱わない。完成済みユニットと配線を選定する。'),
-    'U08': ('制御・通信の完成済みモジュール', '手持ちPico流用も含め、はんだ付け不要の構成を選定', '裸ICの購入と専用PCBの手製作を前提にしない。端子台・対応コネクタ・取付を含む。'),
+    'U08': ('完成済みUSB–RS485変換器', '操作用PCから左右M0601C_111へ接続する1台', '最初は外部PC接続。Picoと別のUART変換器を重複追加しない。速度・信号基準・端子・終端を確認して選定。'),
     'U09': ('駆動遮断・コイル保護の完成済みユニット', '非常停止による独立遮断、実DC負荷・突入へ適合', '基板実装用リレーと未設計ドライバの組合せを撤回。完成済み品の端子・保護・定格を確認する。'),
     'U10': ('手動再許可・独立監視の完成済みユニット', '故障・復電後の自動再始動防止と通信／制御停止監視', '旧ラッチIC・外部WD ICの個別実装は撤回。必要動作を完成品構成として確認する。'),
     'U11': ('回生吸収・逆流保護の完成済みユニット', 'M0601C_111・電池・遮断構成に適合', '旧比較器・MOSFET・抵抗等の未設計回路を撤回。電圧・吸収エネルギー・発熱を確認する。'),
@@ -77,7 +77,7 @@ for id, (name, spec, note) in replacements.items():
                   選定状況='完成品構成へ再選定・未計上')
 for id, name, spec, note in [
     ('U21', '制御系の完成済みDC/DC・給電ケーブル', '搭載モジュール決定後に入出力・端子を確定', '旧M78AR05-1の基板実装前提を撤回。給電の二重計上・USB逆送を避ける。'),
-    ('U22', '非常停止スイッチ（配線加工不要品）', '2NC、ねじ／適合コネクタ端子または配線加工済み品', 'XA1E-BV302Rの未加工品購入を撤回。現行CADの同型スイッチは配置参考のみ。取付穴・奥行き・箱を再確認する。'),
+    ('U22', '非常停止スイッチ（配線加工不要品）', '押下保持式、実負荷を切れるDC接点、ねじ／適合コネクタ端子', '直接遮断を優先し、定格が合わなければリレー1個を追加。2NCや安全コントローラーは必須にしない。型番未選定、旧CADは配置参考。'),
     ('U23', '必要なハーネス製作・組立検査費', '既製配線で成立しない部分のみ、実見積で比較', '未見積・未発注。PCB製造一般料金を完成配線ユニットの価格に使わない。U13の材料費と重複しない。'),
 ]:
     row = {field: '' for field in fields}
@@ -88,6 +88,55 @@ by['ELEC_U1']['備考'] += ' 製作設備なしの条件により、未実装ヘ
 by['ELEC_ARM']['選定状況'] = '型式・配置は候補、接続先・配線設計は未完'
 by['ELEC_MAIN']['選定状況'] = '型式・配置は候補、加工済み端子配線・負荷適合は未確認'
 by['U15']['備考'] += ' 完成済みモジュールの寸法・配線確定後にCADを再配置する。'
+by['E02'].update(部品名='通信変換器用USBデータケーブル',
+                 URL='',
+                 **{'仕様・型番': 'USB–RS485変換器と操作用PCの端子確定後に選ぶ'},
+                 選定状況='500円は既存仮予算、型番未選定', 価格根拠='旧USB線の仮予算を保持、今回の価格取得なし',
+                 備考='変換器に付属すれば重複購入しない。Pico用micro-Bには固定しない。')
+by['U06'].update(部品名='電源着脱・分岐コネクタ', **{'仕様・型番': '電池アダプターと左右モーターの電源配線用'},
+                 備考='付属端子・配線を確認して不足分だけ計上。別の主電源スイッチは初回必須から外す。ヒューズはU07、ケーブルはU13。')
+by['U07'].update(**{'仕様・型番': '電源直近のヒューズとホルダー。DC定格・容量・必要数を配線から決定'},
+                 備考='旧5回路の構成・数値を引き継がない。線径、分岐、負荷電流・突入と付属ヒューズを確認して必要分だけ選定。')
+by['U15'].update(**{'仕様・型番': '最小の通信変換器・非常停止部品の固定と端子絶縁'},
+                 備考='既計上PLA床・操作ケースを活用。機種確定後に取付穴を更新。汎用の大きな電装箱を先に追加しない。')
+
+# E2: conditional additions and later features are not mandatory unpriced items.
+deferral = {
+    'ELEC_U1': ('後工程', '手持ち品として保持。初回USB–RS485接続には不要。ローカル制御が必要になった時に使用。'),
+    'ELEC_ARM': ('初回不採用', '専用ARM回路と追加ボタンを設けない。'),
+    'ELEC_MAIN': ('初回不採用', '非常停止用遮断と着脱コネクタに加えた別の主スイッチを必須にしない。'),
+    'U01': ('条件付き', '電池・アダプターの既存保護を確認し、不足があれば追加。未確認のまま不要とは断定しない。'),
+    'U03': ('後工程', '初回は操作用PCを外部接続。車載PCは単独走行が必要になった時に選定。'),
+    'U04': ('後工程', '車載PCの採用時のみ。初回の通信はUSB給電を基本とする。'),
+    'U09': ('条件付き', '非常停止ボタンのDC接点で直接切れない場合のみリレー1個とソケット／完成品を選定。'),
+    'U10': ('初回不採用', '専用再許可回路・独立監視ユニットは初回必須にしない。'),
+    'U11': ('条件付き', '減速・遮断時の電源適合性を確認し、必要な場合だけ対策する。旧自作クランプを採用しない。'),
+    'U12': ('後工程', '車載の追加監視センサー一式を先に購入しない。'),
+    'U14': ('条件付き', '回生抵抗など発熱部品を実際に採用する場合のみ。端子絶縁はU15に含む。'),
+    'U19': ('後工程', '最初は手動走行。自律移動に着手する際に選定。'),
+    'U21': ('条件付き', 'USB給電で不足する機器やリレーコイルを採用する場合のみ。'),
+    'U23': ('条件付き', '既製配線で接続できない部分が判明した場合のみ加工費を調べる。'),
+}
+assert set(deferral) == set(policy['deferred_BOM_ids'])
+deferred = []
+for row in rows:
+    if row['ID'] not in deferral:
+        continue
+    stage, reason = deferral[row['ID']]
+    deferred.append(dict(row, 選定状況=stage, 備考=reason))
+with (buildability / 'deferred-parts.csv').open('w', encoding='utf-8-sig', newline='') as f:
+    writer = csv.DictWriter(f, fields, lineterminator='\n')
+    writer.writeheader(); writer.writerows(deferred)
+deferred_JPY = sum(float(r['明細金額']) for r in deferred if r['明細金額'])
+lines = ['# E2：初回購入の必須から外した部品', '',
+         'この表は購入指示ではない。条件付き項目は必要性を確認してから追加する。旧価格は履歴で、今の見積ではない。', '',
+         '[最小構成](README.ja.md) ／ [現行BOM](../fixed-deck/BOM.ja.md) ／ [CSV](deferred-parts.csv)', '',
+         '| ID | 部品 | 段階 | 理由 |', '|---|---|---|---|']
+for r in deferred:
+    lines.append(f'| {r["ID"]} | {r["部品名"]} | {r["選定状況"]} | {r["備考"]} |')
+lines += ['', f'このうち旧計上価格は計{deferred_JPY:,.0f}円。代替部品の未計上分があるため完成車の節約額ではない。', '']
+(buildability / 'deferred-parts.ja.md').write_text('\n'.join(lines))
+rows = [r for r in rows if r['ID'] not in deferral]
 with (HERE / 'BOM.csv').open('w', encoding='utf-8-sig', newline='') as f:
     writer = csv.DictWriter(f, fields, lineterminator='\n')
     writer.writeheader(); writer.writerows(rows)
@@ -107,14 +156,15 @@ summary = dict(revision='D6.9', date='2026-09-23', subtotal=subtotal,
                FX_basis='Recorded 2026-09-21 reference, not current settlement rate',
                full_running_subtotal_JPY_reference=total,
                difference_from_D68_JPY_reference=total-old['full_running_subtotal_JPY_reference'],
-               mechanical_difference_from_D68_JPY_reference=total+withdrawn_JPY-old['full_running_subtotal_JPY_reference'],
+               mechanical_difference_from_D68_JPY_reference=total+withdrawn_JPY+deferred_JPY-old['full_running_subtotal_JPY_reference'],
                withdrawn_electrical_reference_JPY=withdrawn_JPY,
+               deferred_electrical_reference_JPY=deferred_JPY, electrical_scope_revision=policy['revision'],
                electrical_withdrawal_is_cost_saving=False,
-               removed_purchase_ids=removed_ids+withdrawn_ids, machining_quote=quote,
+               removed_purchase_ids=removed_ids+withdrawn_ids+list(deferral), machining_quote=quote,
                electrical_buildability_requirements='../electrical-buildability/requirements.json',
                electrical_buildability_sha256=hashlib.sha256((buildability / 'requirements.json').read_bytes()).hexdigest(),
                unpriced_rows=[r['ID'] for r in rows if not r['明細金額']], complete_purchase_total=False,
-               note='途中小計。完成済み電装・代替非常停止・ハーネス・PC・税等未計上。旧電装部品の除外は節約ではない。モーター価格は仮予算。Prime最終カート未確認。購入パック全額、余剰を按分しない。')
+               note='最小手動走行構成の途中小計。通信・非常停止・配線等未計上。追加監視・車載PC等は必須から除外。部品除外は完成車の節約額ではない。モーター・USB線は仮予算。Prime最終カート未確認。購入パック全額、余剰を按分しない。')
 (HERE / 'cost_summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2)+'\n')
 print(json.dumps(dict(subtotal=subtotal, total_JPY_reference=total,
                       difference_from_D68=summary['difference_from_D68_JPY_reference'])))

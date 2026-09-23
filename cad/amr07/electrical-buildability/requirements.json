@@ -1,9 +1,9 @@
 {
-  "revision": "E1",
+  "revision": "E2",
   "date": "2026-09-23",
-  "status": "manufacturing_constraint_corrected_replacement_design_incomplete",
-  "user_constraint": "回路を作る設備がない。完成回路図も提供されていない。",
-  "default_implementation": "purchased_assembled_modules_and_preterminated_harnesses",
+  "status": "minimum_manual_drive_scope_selected_components_and_wiring_pending",
+  "user_constraint": "動くのに必要な最小限の構成から広げる。既製品は非常停止周りを指す。回路製作設備なし。",
+  "default_implementation": "external_host_USB_RS485_and_motor_power_emergency_disconnect",
   "user_PCB_fabrication_required": false,
   "user_soldering_required": false,
   "user_connector_crimping_assumed_available": false,
@@ -13,33 +13,87 @@
   "replacement_electrical_BOM_complete": false,
   "cost_saving_claimed": false,
   "withdrawn_BOM_ids": [
-    "ELEC_S1", "ELEC_K1_K2", "ELEC_U2", "ELEC_U3", "ELEC_PS1",
-    "ELEC_U4", "ELEC_RDUMP", "ELEC_U5", "ELEC_U6", "ELEC_QCLAMP",
-    "ELEC_PS2", "ELEC_D0"
+    "ELEC_S1",
+    "ELEC_K1_K2",
+    "ELEC_U2",
+    "ELEC_U3",
+    "ELEC_PS1",
+    "ELEC_U4",
+    "ELEC_RDUMP",
+    "ELEC_U5",
+    "ELEC_U6",
+    "ELEC_QCLAMP",
+    "ELEC_PS2",
+    "ELEC_D0"
   ],
   "functions_to_preserve": [
-    "manual_main_disconnect",
-    "hardware_motor_power_disconnect_on_estop",
-    "deliberate_manual_rearm_after_fault_or_power_recovery",
-    "control_and_communication_timeout_response",
-    "battery_protection_and_all_load_undervoltage_disconnect",
-    "motor_bus_regeneration_and_transient_protection"
+    "manual_drive_and_normal_stop_over_RS485",
+    "hardware_motor_power_disconnect_on_latching_estop",
+    "source_fusing_and_suitable_wiring",
+    "power_and_motor_operation_within_component_ratings"
   ],
   "required_design_deliverables": [
-    "exact_module_models_and_mating_connector_part_numbers",
-    "terminal_numbered_wiring_diagram_including_all_returns_and_fuses",
-    "harness_pinout_wire_size_length_and_pretermination_source",
-    "operating_voltage_current_inrush_and_thermal_compatibility",
-    "purchase_pack_shipping_and_required_assembly_costs",
-    "CAD_with_actual_module_dimensions_and_cable_tool_access",
-    "assembled_unit_inspection_and_fault_test_procedure"
+    "exact_minimum_part_models_and_current_costs",
+    "terminal_numbered_wiring_including_returns_fuse_and_estop",
+    "assembly_with_ready_made_modules_and_suitable_cables",
+    "actual_part_CAD_and_basic_motion_stop_checks"
   ],
-  "CAD_scope": "D6.9 mechanical layout is retained; electrical boxes and volumes do not establish a buildable circuit. XA1E-BV302R geometry is retained only as an obsolete placement reference pending replacement.",
-  "retained_choices": ["M0601C_111", "Makita_BL1860B", "fixed_aluminum_deck", "rear_floor_supported_controls", "no_additional_mechanical_brake"],
+  "CAD_scope": "D6.9 mechanical geometry is unchanged. Old E-stop, ARM/main controls and controller/protection volumes are references, not a selected minimum electrical implementation. No mass reduction claimed.",
+  "retained_choices": [
+    "M0601C_111",
+    "Makita_BL1860B",
+    "fixed_aluminum_deck",
+    "rear_floor_supported_controls",
+    "no_additional_mechanical_brake"
+  ],
   "notes": [
-    "No circuit fabrication equipment is the user's stated condition. Avoiding user soldering and assuming no crimp tools is a conservative design response, not an inventory claim.",
-    "Do not declare assembled modules incompatible with the budget, unavailable, or sufficient for all functions without evidence.",
-    "Custom fabrication, if ultimately necessary, needs a completed design and a real quote including assembly and inspection; it is not the default solution.",
-    "The user is not being asked to design a circuit, create manufacturing data, or debug an unfinished board."
+    "Add a component only for an identified need; record its purpose and added cost. Ownership of Pico does not require adding it to a USB-RS485 control chain.",
+    "No custom PCB, user soldering, industrial safety relay or comprehensive robot power controller is required by default.",
+    "Conditional compatibility checks are not automatic purchase requirements. Do not claim battery or regeneration compatibility without evidence.",
+    "No additional mechanical brake. Removing motor power removes drive torque and may allow coasting; stationary holding on slopes is outside the existing flat-floor scope.",
+    "This revision narrows scope and procurement; it does not complete part selection, wiring, software or electrical CAD validation."
+  ],
+  "baseline_goal": "手動指令で前後進・旋回・通常停止を行い、非常停止で左右モーターの給電を物理的に切る。",
+  "deferred_BOM_ids": [
+    "ELEC_U1",
+    "ELEC_ARM",
+    "ELEC_MAIN",
+    "U01",
+    "U03",
+    "U04",
+    "U09",
+    "U10",
+    "U11",
+    "U12",
+    "U14",
+    "U19",
+    "U21",
+    "U23"
+  ],
+  "baseline_communication": "External operation computer -> one assembled USB-RS485 converter -> two M0601C_111 motors. No second bus master. Operation host availability/interface is not yet confirmed.",
+  "baseline_power": "Battery -> source fuse -> DC-rated emergency disconnect -> both motors. Return wiring must be specified. Direct switching first if ratings fit; otherwise one suitable relay with assembled/socket terminals. Relay is not automatically mandatory.",
+  "optional_or_conditional": [
+    "User-owned Pico and UART-RS485 if a later local controller is needed; not in addition to the USB-RS485 bus master",
+    "Onboard computer and its DC/DC when untethered operation is required",
+    "One relay and its coil supply if direct E-stop DC switching is unsuitable",
+    "Additional battery protection only after assessing the battery/adapter protection already present",
+    "Regeneration absorption only if motor/power-source compatibility requires it; no custom clamp circuit selected",
+    "Cable assembly service only if available cables cannot meet the wiring specification"
+  ],
+  "not_required_for_first_build": [
+    "dual_series_relays",
+    "contact_weld_diagnostic_circuit",
+    "external_watchdog_circuit",
+    "dedicated_hardware_ARM_latch_and_button",
+    "additional_voltage_current_temperature_sensor_boards",
+    "industrial_safety_controller",
+    "autonomous_navigation_sensors",
+    "separate_main_rocker_if_disconnect_is_already_provided"
+  ],
+  "electrical_compatibility_checks": [
+    "E-stop/contact DC voltage, breaking current and motor-input inrush; AC or thermal ratings alone are insufficient",
+    "Source fuse and wire/connector current capability; do not inherit the old five-fuse layout without justification",
+    "Battery/adapter protection and motor bus voltage during braking and power interruption",
+    "Motor behavior after power restoration and communication loss; verify with selected protocol/software, without assuming an independent hardware guarantee"
   ]
 }
