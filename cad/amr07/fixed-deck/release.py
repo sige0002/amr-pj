@@ -59,9 +59,13 @@ deferred = list(csv.DictReader((buildability_dir / 'deferred-parts.csv').open(en
 assert {r['ID'] for r in deferred} == set(buildability['deferred_BOM_ids'])
 assert not set(buildability['deferred_BOM_ids']).intersection(by)
 assert sum(float(r['明細金額']) for r in deferred if r['明細金額']) == read('cost_summary.json')['deferred_electrical_reference_JPY']
-assert all(not by[id]['明細金額'] for id in ['U06', 'U07', 'U08', 'U13', 'U22'])
+assert all(not by[id]['明細金額'] for id in ['U03', 'U04', 'U06', 'U07', 'U08', 'U13', 'U22'])
 assert electrical['status'] == buildability['status']
 assert electrical['control']['baseline'] == buildability['baseline_communication']
+assert electrical['control']['computer']['platform'] == 'Linux mini PC'
+assert electrical['control']['computer']['model'] is None
+assert electrical['control']['onboard_computer_required_for_first_test']
+assert not electrical['power']['estop_cuts_computer_supply']
 for id, use, buy in [('D3_M6', 50, 70), ('F04', 70, 100), ('D62_FLOOR_SCREWS', 20, 60),
                      ('D3_STOP_NUTS', 28, 40), ('D64_FLOOR_WASHERS', 24, 40)]:
     assert int(by[id]['使用数']) == use and int(by[id]['購入予定数']) == buy and int(by[id]['余剰数']) == buy-use, id

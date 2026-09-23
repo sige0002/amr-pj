@@ -13,7 +13,7 @@
   "mechanical_difference_from_D68_JPY_reference": -15663.321148825067,
   "withdrawn_electrical_reference_JPY": 6519.0,
   "deferred_electrical_reference_JPY": 1456.0,
-  "electrical_scope_revision": "E2",
+  "electrical_scope_revision": "E2.1",
   "electrical_withdrawal_is_cost_saving": false,
   "removed_purchase_ids": [
     "HATCH_HINGES",
@@ -38,8 +38,6 @@
     "ELEC_ARM",
     "ELEC_MAIN",
     "U01",
-    "U03",
-    "U04",
     "U09",
     "U10",
     "U11",
@@ -66,7 +64,7 @@
     "order_placed": false
   },
   "electrical_buildability_requirements": "../electrical-buildability/requirements.json",
-  "electrical_buildability_sha256": "a912fc3545e44858ea3b68c9f4bea15c8024dd5a636fcb7cca26019a9982b4dc",
+  "electrical_buildability_sha256": "b6825014531bc8371b02838e3b0880808f0c065413e5a230582ec8dde80b46a8",
   "unpriced_rows": [
     "S04",
     "S07",
@@ -75,6 +73,8 @@
     "POWER_PADS",
     "POWER_LOW_STRAPS",
     "D62_BEAM_WASHERS",
+    "U03",
+    "U04",
     "U06",
     "U07",
     "U08",
@@ -87,5 +87,5 @@
     "U22"
   ],
   "complete_purchase_total": false,
-  "note": "最小手動走行構成の途中小計。通信・非常停止・配線等未計上。追加監視・車載PC等は必須から除外。部品除外は完成車の節約額ではない。モーター・USB線は仮予算。Prime最終カート未確認。購入パック全額、余剰を按分しない。"
+  "note": "車載Linux計算機を含む最小手動走行構成の途中小計。Linux計算機・電源・通信・非常停止・配線等未計上。追加監視等は必須から除外。部品除外は完成車の節約額ではない。モーター・USB線は仮予算。Prime最終カート未確認。購入パック全額、余剰を按分しない。"
 }

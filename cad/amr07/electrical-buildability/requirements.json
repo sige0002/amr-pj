@@ -1,9 +1,9 @@
 {
-  "revision": "E2",
+  "revision": "E2.1",
   "date": "2026-09-23",
   "status": "minimum_manual_drive_scope_selected_components_and_wiring_pending",
-  "user_constraint": "動くのに必要な最小限の構成から広げる。既製品は非常停止周りを指す。回路製作設備なし。",
-  "default_implementation": "external_host_USB_RS485_and_motor_power_emergency_disconnect",
+  "user_constraint": "動くのに必要な最小限の構成から広げる。既製品は非常停止周りを指す。回路製作設備なし。計算機は車載LinuxミニPC。Raspberry Pi 5に限定しない。非常停止はDC定格が合うスイッチでの直接遮断を第一候補とする。",
+  "default_implementation": "onboard_Linux_computer_USB_RS485_and_direct_motor_power_emergency_disconnect",
   "user_PCB_fabrication_required": false,
   "user_soldering_required": false,
   "user_connector_crimping_assumed_available": false,
@@ -38,7 +38,7 @@
     "assembly_with_ready_made_modules_and_suitable_cables",
     "actual_part_CAD_and_basic_motion_stop_checks"
   ],
-  "CAD_scope": "D6.9 mechanical geometry is unchanged. Old E-stop, ARM/main controls and controller/protection volumes are references, not a selected minimum electrical implementation. No mass reduction claimed.",
+  "CAD_scope": "D6.9 mechanical geometry is unchanged. Existing first-floor computer volume remains a reservation for the selected Linux mini PC. Old E-stop, ARM/main controls and electronics volumes are references, not a complete electrical implementation. No mass reduction claimed.",
   "retained_choices": [
     "M0601C_111",
     "Makita_BL1860B",
@@ -59,8 +59,6 @@
     "ELEC_ARM",
     "ELEC_MAIN",
     "U01",
-    "U03",
-    "U04",
     "U09",
     "U10",
     "U11",
@@ -70,11 +68,10 @@
     "U21",
     "U23"
   ],
-  "baseline_communication": "External operation computer -> one assembled USB-RS485 converter -> two M0601C_111 motors. No second bus master. Operation host availability/interface is not yet confirmed.",
-  "baseline_power": "Battery -> source fuse -> DC-rated emergency disconnect -> both motors. Return wiring must be specified. Direct switching first if ratings fit; otherwise one suitable relay with assembled/socket terminals. Relay is not automatically mandatory.",
+  "baseline_communication": "Onboard Linux mini PC (Raspberry Pi 5 is one option, not fixed) -> one assembled USB-RS485 converter -> two M0601C_111 motors. No second bus master. Computer model and interface are not selected.",
+  "baseline_power": "Battery -> source fuse -> branches: (1) suitable latching DC-rated emergency switch directly interrupts both motor supplies; (2) compatible computer power connection/converter -> Linux computer -> USB-RS485. E-stop leaves computer power available. Use a relay only if suitable direct switching cannot be achieved; part ratings and wiring are pending.",
   "optional_or_conditional": [
     "User-owned Pico and UART-RS485 if a later local controller is needed; not in addition to the USB-RS485 bus master",
-    "Onboard computer and its DC/DC when untethered operation is required",
     "One relay and its coil supply if direct E-stop DC switching is unsuitable",
     "Additional battery protection only after assessing the battery/adapter protection already present",
     "Regeneration absorption only if motor/power-source compatibility requires it; no custom clamp circuit selected",
@@ -95,5 +92,36 @@
     "Source fuse and wire/connector current capability; do not inherit the old five-fuse layout without justification",
     "Battery/adapter protection and motor bus voltage during braking and power interruption",
     "Motor behavior after power restoration and communication loss; verify with selected protocol/software, without assuming an independent hardware guarantee"
-  ]
+  ],
+  "baseline_computer": {
+    "platform": "Linux mini PC",
+    "example_not_selected": "Raspberry Pi 5",
+    "model": null,
+    "onboard": true,
+    "required_for_first_build": true,
+    "ownership_confirmed": false,
+    "power_interface_selected": false,
+    "power_requirement": "Match the selected computer input range to battery voltage over charge/discharge. Add an assembled DC/DC only if needed; no universal 5 V supply or Pi-specific RAM/USB requirement is imposed."
+  },
+  "stopping_behavior": {
+    "normal_stop": "Powered velocity control: reduce commanded speed toward zero. Tune and verify response on actual motors.",
+    "built_in_electrical_brake": {
+      "supported_by_manual": true,
+      "mode": "velocity",
+      "command_hex": "0x64",
+      "byte_zero_based": 7,
+      "value_hex": "0xFF",
+      "requires_power_and_communication": true,
+      "hardware_test_complete": false,
+      "braking_torque_and_stop_distance_specified": false
+    },
+    "direct_power_cut": "Removes the drive supply. Do not credit commanded electrical braking or standstill holding after supply removal; stopping distance remains unmeasured.",
+    "brake_then_disconnect": "Not implemented by a simple direct power switch. Requires a separate controlled sequence if later requested; not added to the baseline.",
+    "source": "https://d2air1d4eqhwg2.cloudfront.net/media/files/a48110eb-432c-4083-a159-9e0f35913b23.pdf",
+    "source_pages": [
+      5,
+      9,
+      10
+    ]
+  }
 }

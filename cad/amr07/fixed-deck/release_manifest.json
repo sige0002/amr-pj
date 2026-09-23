@@ -16,27 +16,27 @@
     },
     "BOM-costs.json": {
       "bytes": 2530,
-      "sha256": "acfa30fcaf105b507441c8ef9f96e002df2bf6215f485e6eba1b8211c5f03644"
+      "sha256": "71ba56b21301e844dffe6db6712f8ff331bbf5b55c63902a19a6af7b71c474aa"
     },
     "BOM-details.ja.md": {
-      "bytes": 35775,
-      "sha256": "93122a85b078bb9261059b7b26a2c2b0c6f8048c98cf6439b0f4eac9491bb249"
+      "bytes": 37003,
+      "sha256": "c86b22cbbca05754b3c51f19cda61b29edcfba9a9d5a02cddd874ef3508a00f7"
     },
     "BOM-summary.csv": {
       "bytes": 409,
       "sha256": "800a079ace85ca4bc0997768ffc9894769ceaed68e5081efd6eaf8f23e7e2463"
     },
     "BOM.csv": {
-      "bytes": 18276,
-      "sha256": "728288f31335eb52c5735838c57bc36540a006c31a942e9f9a3c1ee9ad9af45a"
+      "bytes": 19059,
+      "sha256": "df3cae44c73dbd0aa68fb872d9b4624a07cba7b5cc99771e27c822a3ead15bd4"
     },
     "BOM.ja.md": {
-      "bytes": 8654,
-      "sha256": "b9142f59fe7d2b583408c5000d98d59cb85b56413b90157585ffeb62edeb9359"
+      "bytes": 8907,
+      "sha256": "55058d88e19593e37eb9de96a3832ebe261a48eab46e0621f89d86170c358b3c"
     },
     "D69-print-prototypes.zip": {
-      "bytes": 228277,
-      "sha256": "a43d610d8616f98e77d1715736965043ce7cd3261dbb444d7fa10d3a71a77705"
+      "bytes": 228302,
+      "sha256": "baf95d2ffb8e149795acbd6fae04f9a0a27d06599104f1cb6f04cb5d4fbaad35"
     },
     "MACHINING_QUOTE.ja.md": {
       "bytes": 2889,
@@ -47,16 +47,16 @@
       "sha256": "c78181d5d2e11ab1cf41e882ad40355aa43780f5df21c5ac1bdf0d25bd3eb4f1"
     },
     "README.ja.md": {
-      "bytes": 7246,
-      "sha256": "9e41d1af00e50e64dc46c1d57071b6b4e6cef55ec88a0aa5c2713ce5301a4fc8"
+      "bytes": 7309,
+      "sha256": "910b6dcb40f7f8e3de2862d3bcd53b29f1b69ae9d68c9bdc7bbe2e12b62ee2f1"
     },
     "build_bom.py": {
-      "bytes": 16201,
-      "sha256": "65884a7ae60f51743bfea07c1ef5c7831c7a809c0312b751da415237ea4bc37d"
+      "bytes": 16983,
+      "sha256": "b3d02bdda64538bd61390b53e85174519d799faa3db636886cc36347a0b2ee74"
     },
     "build_bom_view.py": {
-      "bytes": 6137,
-      "sha256": "1dcbe85db46443f5c6c7d355435251fb5d66cb4fd0c91d61d6180b59c6d68250"
+      "bytes": 6195,
+      "sha256": "f1e2fbaac9431c85d54307467b67d2f2cc9ea58fc6b1a2bd80a7d60adb7f3574"
     },
     "build_d69.py": {
       "bytes": 6225,
@@ -91,8 +91,8 @@
       "sha256": "323b95983d707e88e0779d3f8ead241ed754dbcd3a10463b512e8f88f124a5e0"
     },
     "cost_summary.json": {
-      "bytes": 2713,
-      "sha256": "6b9e0564d3522ca486a952765efb1fe7dd4d448d0b743c21b773a94db8e4ade7"
+      "bytes": 2759,
+      "sha256": "810779c7fcb3e4e84c6e8d905c61321bc19dc70ef89d0fa461e3db97fbf9d286"
     },
     "export_and_check.py": {
       "bytes": 4571,
@@ -115,8 +115,8 @@
       "sha256": "f2fd1642c681c4e6ea65f66dbfd4027017e090bba02344f26707d89656b76d63"
     },
     "release.py": {
-      "bytes": 8400,
-      "sha256": "7c7986c0bbbc52c282328cb34ccd2d40f60c96be03c77f3e37991a1386003d7d"
+      "bytes": 8678,
+      "sha256": "ce70aa36be7094e6eb369c6626bbad4d6023dd5873dff1a334b2d9e04bd74fe7"
     },
     "requirements.json": {
       "bytes": 13782,
@@ -127,8 +127,8 @@
       "sha256": "1b3a28f610c375438a8bbfbfb93d4028ce5e73c80c9b806a5d0ba82ff0d1b09a"
     },
     "sync_electrical.py": {
-      "bytes": 5288,
-      "sha256": "536583cc9f9277b691546d79b7b90b9a50c0fc4c8439139e0c13c40be4cf86b9"
+      "bytes": 5724,
+      "sha256": "0165e432908ff5a0b461e18a834b66e115f27ecf3bdc0420bfa1609742b28bda"
     },
     "validate.py": {
       "bytes": 5179,
@@ -143,23 +143,23 @@
   "PLA_print_parts": 14,
   "FreeCAD_GUI_screenshots": 5,
   "checked_local_links": 151,
-  "shared_electrical_plan_sha256": "2be9b590e0782179794677986b24a7f0b4c7bac41c528c2d92445bf421306f50",
+  "shared_electrical_plan_sha256": "efd09e92819beeee71eb9343a88a291279f0f7845aa880dd71bd05efb5d50d32",
   "electrical_buildability_files": {
     "electrical-buildability/README.ja.md": {
-      "bytes": 4335,
-      "sha256": "99b653d6c76456ad0580208c883bc4161a4e156242a6c18d959b0604644a502a"
+      "bytes": 6630,
+      "sha256": "118a70fcf1f6631d08f1abc8a902e04ae5d2ed7c5509facbf127b68b3b07e107"
     },
     "electrical-buildability/deferred-parts.csv": {
-      "bytes": 4176,
-      "sha256": "7dd1e40719907190342633d75d0fdc45f54deb1933bf9215e7f4a04c7d4fab8c"
+      "bytes": 3713,
+      "sha256": "56ee242f903d47658d95b69a5a589de3bf041f8ae8d011c83c6af8acacfdcf84"
     },
     "electrical-buildability/deferred-parts.ja.md": {
-      "bytes": 2801,
-      "sha256": "2aeee5cdcd8d61ed828394812f8b40b0790fb3d3a62f814c8c2a3aaa17355e5a"
+      "bytes": 2513,
+      "sha256": "9f56b44c7bcb80274dad831965d1de1f8b3bbde5cf21e7bb463ea6d2aa7f58cd"
     },
     "electrical-buildability/requirements.json": {
-      "bytes": 4933,
-      "sha256": "a912fc3545e44858ea3b68c9f4bea15c8024dd5a636fcb7cca26019a9982b4dc"
+      "bytes": 6691,
+      "sha256": "b6825014531bc8371b02838e3b0880808f0c065413e5a230582ec8dde80b46a8"
     },
     "electrical-buildability/withdrawn-parts.csv": {
       "bytes": 4350,

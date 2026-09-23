@@ -9,13 +9,13 @@ used={x for _,ids in groups for x in ids};groups.append(('フレーム・締結�
 cat=[dict(category=name,JPY_reference=sum(yen(by[x]) or 0 for x in ids),source_ids=ids) for name,ids in groups];cat.sort(key=lambda x:x['JPY_reference'],reverse=True)
 assert abs(sum(x['JPY_reference'] for x in cat)-total)<1e-6
 for x in cat:x['percent_of_priced_subtotal']=100*x['JPY_reference']/total
-lines=['# D6.9 BOM（最小手動走行構成E2）','',
+lines=['# D6.9 BOM（最小手動走行構成E2.1）','',
        '**まず手動で走る・止める・非常停止で給電を切る構成。通信・非常停止部品の型番と配線は未確定です。** [最小構成](../electrical-buildability/README.ja.md)。','',
        f'**途中小計 {total:,.0f}円相当＋未計上分**。原通貨：{c["subtotal"]["JPY"]:,.0f}円＋{c["subtotal"]["USD"]:.2f} USD。','',
        '[全明細Markdown](BOM-details.ja.md) ／ [CSV](BOM.csv) ／ [加工見積の証拠](MACHINING_QUOTE.ja.md)','',
        f'旧専用回路部品とはんだ端子の非常停止、計{c["withdrawn_electrical_reference_JPY"]:,.0f}円を[価格履歴](../electrical-buildability/withdrawn-parts.ja.md)へ移しました。代替完成品・ハーネス等は未計上なので、この減額は節約ではありません。割合も完成車の費用割合ではありません。','',
-       f'E2ではARM・別の主スイッチ計{c["deferred_electrical_reference_JPY"]:,.0f}円と、追加監視・車載PC等を初回必須から外しました。[条件付き・後工程の部品](../electrical-buildability/deferred-parts.ja.md)は下の必須未計上品へ混ぜていません。','',
-       f'円換算は記録済みの2026-09-21参考値1 USD＝{rate:.4f}円。現在の決済額ではありません。購入パック全額を計上し、余りを按分していません。USB–RS485変換器・非常停止・配線などは未計上、モーター14,000円とUSB線500円は仮予算、PLAは材料消費の参考です。初回は操作用PCを外部接続する案で、操作環境は未確認です。','',
+       f'E2ではARM・別の主スイッチ計{c["deferred_electrical_reference_JPY"]:,.0f}円と、追加監視等を初回必須から外しました。[条件付き・後工程の部品](../electrical-buildability/deferred-parts.ja.md)は下の必須未計上品へ混ぜていません。','',
+       f'円換算は記録済みの2026-09-21参考値1 USD＝{rate:.4f}円。現在の決済額ではありません。購入パック全額を計上し、余りを按分していません。車載LinuxミニPC・給電部材・USB–RS485変換器・非常停止・配線などは未計上、モーター14,000円とUSB線500円は仮予算、PLAは材料消費の参考です。計算機は初回から車載するLinuxミニPCを想定し、Raspberry Pi 5には固定していません。','',
        f'機械部分はヒンジ案D6.8から約{-c["mechanical_difference_from_D68_JPY_reference"]:,.0f}円減。ヒンジ・専用L金具・蝶ボルト等の購入を削除。M6固定6点は既計上パックの余りを使い、新規パック購入なし。天板は同一形状のD3実自動見積を再使用し、今回の価格再取得はしていません。','',
        '| 部位 | 円換算参考 | 計上済み分の割合 |','|---|---:|---:|']
 for x in cat:lines.append(f'| {x["category"]} | {x["JPY_reference"]:,.0f}円 | {x["percent_of_priced_subtotal"]:.1f}% |')
@@ -31,7 +31,7 @@ for r in rows:
  if not r['明細金額']:lines.append(f'| {r["部品名"]} | {r["選定状況"]} |')
 lines+=['','[設計と組立手順](README.ja.md) ／ [重量・強度の比較計算](PAYLOAD_REVIEW.ja.md)','']
 (HERE/'BOM.ja.md').write_text('\n'.join(lines))
-lines=['# D6.9 BOM 全明細（最小手動走行構成E2）','',
+lines=['# D6.9 BOM 全明細（最小手動走行構成E2.1）','',
        '**初回の最小構成を対象とし、部品型番と配線は選定中です。** [最小構成と対象外の部品](../electrical-buildability/README.ja.md)。','',
        '[概要・費用割合](BOM.ja.md) ／ [CSV](BOM.csv)','']
 for r in rows:

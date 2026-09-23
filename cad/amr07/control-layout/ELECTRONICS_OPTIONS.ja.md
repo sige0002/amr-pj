@@ -1,6 +1,6 @@
 # 手持ちPicoを使う制御・電源保護の旧比較
 
-**E2では、この機能一式を完成品で揃える前提も撤回した。** 初回は操作用PCからUSB–RS485で手動走行し、非常停止でモーター電源を切る。[現在の最小構成](../electrical-buildability/README.ja.md)を参照。以下は旧比較の履歴。
+**E2では、この機能一式を完成品で揃える前提も撤回した。** 現行E2.1では車載LinuxミニPCからUSB–RS485で手動走行し、非常停止でモーター電源を切る。[現在の最小構成](../electrical-buildability/README.ja.md)を参照。以下は旧比較の履歴。
 
 <details>
 <summary>旧比較の記録を開く</summary>

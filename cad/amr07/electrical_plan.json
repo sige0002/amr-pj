@@ -54,13 +54,21 @@
     "battery_adapter": 0.123
   },
   "power": {
-    "baseline": "Battery -> source fuse -> DC-rated emergency disconnect -> both motors. Return wiring must be specified. Direct switching first if ratings fit; otherwise one suitable relay with assembled/socket terminals. Relay is not automatically mandatory.",
+    "baseline": "Battery -> source fuse -> branches: (1) suitable latching DC-rated emergency switch directly interrupts both motor supplies; (2) compatible computer power connection/converter -> Linux computer -> USB-RS485. E-stop leaves computer power available. Use a relay only if suitable direct switching cannot be achieved; part ratings and wiring are pending.",
     "positive_path": [
       "battery",
       "source_fuse",
       "DC_rated_estop_disconnect",
       "left_and_right_motor_power_inputs"
     ],
+    "computer_branch": [
+      "source_fuse_output",
+      "appropriate_branch_protection_TBD",
+      "compatible_computer_supply_converter_if_needed",
+      "Linux_mini_PC",
+      "USB_RS485"
+    ],
+    "estop_cuts_computer_supply": false,
     "return_and_signal_ground_wiring": "pending terminal-numbered diagram",
     "additional_relay": "conditional_one_only_if_direct_switching_is_unsuitable",
     "battery_protection": "check_existing_battery_adapter_protection_before_adding_hardware",
@@ -74,11 +82,21 @@
     "verified": false
   },
   "control": {
-    "baseline": "External operation computer -> one assembled USB-RS485 converter -> two M0601C_111 motors. No second bus master. Operation host availability/interface is not yet confirmed.",
+    "baseline": "Onboard Linux mini PC (Raspberry Pi 5 is one option, not fixed) -> one assembled USB-RS485 converter -> two M0601C_111 motors. No second bus master. Computer model and interface are not selected.",
     "bus_masters": 1,
     "motor": "M0601C_111_with_integrated_driver",
-    "onboard_computer_required_for_first_test": false,
+    "onboard_computer_required_for_first_test": true,
     "Pico_required_for_first_test": false,
+    "computer": {
+      "platform": "Linux mini PC",
+      "example_not_selected": "Raspberry Pi 5",
+      "model": null,
+      "onboard": true,
+      "required_for_first_build": true,
+      "ownership_confirmed": false,
+      "power_interface_selected": false,
+      "power_requirement": "Match the selected computer input range to battery voltage over charge/discharge. Add an assembled DC/DC only if needed; no universal 5 V supply or Pi-specific RAM/USB requirement is imposed."
+    },
     "USB_RS485_part_selected": false,
     "operating_host_interface_confirmed": false,
     "protocol_and_software_validation_complete": false
@@ -96,6 +114,8 @@
     "purchased": false,
     "old_BOM_delta_determined": true,
     "unpriced": [
+      "Linux mini PC, storage and necessary cooling",
+      "compatible computer supply connection/converter if needed",
       "assembled USB-RS485 interface",
       "latching DC-rated E-stop disconnect",
       "source fuse and holder",
@@ -118,7 +138,6 @@
     "deferred_electrical_reference_JPY": 1456,
     "conditional_or_later": [
       "User-owned Pico and UART-RS485 if a later local controller is needed; not in addition to the USB-RS485 bus master",
-      "Onboard computer and its DC/DC when untethered operation is required",
       "One relay and its coil supply if direct E-stop DC switching is unsuitable",
       "Additional battery protection only after assessing the battery/adapter protection already present",
       "Regeneration absorption only if motor/power-source compatibility requires it; no custom clamp circuit selected",
@@ -851,6 +870,27 @@
     ]
   },
   "manufacturing_requirements_file": "electrical-buildability/requirements.json",
-  "manufacturing_requirements_sha256": "a912fc3545e44858ea3b68c9f4bea15c8024dd5a636fcb7cca26019a9982b4dc",
-  "implementation_disposition": "E2 minimum manual-drive scope. Previous custom circuits, multi-relay monitoring and thresholds are archived in reference_only; they are not baseline requirements."
+  "manufacturing_requirements_sha256": "b6825014531bc8371b02838e3b0880808f0c065413e5a230582ec8dde80b46a8",
+  "implementation_disposition": "E2 minimum manual-drive scope. Previous custom circuits, multi-relay monitoring and thresholds are archived in reference_only; they are not baseline requirements.",
+  "stopping_behavior": {
+    "normal_stop": "Powered velocity control: reduce commanded speed toward zero. Tune and verify response on actual motors.",
+    "built_in_electrical_brake": {
+      "supported_by_manual": true,
+      "mode": "velocity",
+      "command_hex": "0x64",
+      "byte_zero_based": 7,
+      "value_hex": "0xFF",
+      "requires_power_and_communication": true,
+      "hardware_test_complete": false,
+      "braking_torque_and_stop_distance_specified": false
+    },
+    "direct_power_cut": "Removes the drive supply. Do not credit commanded electrical braking or standstill holding after supply removal; stopping distance remains unmeasured.",
+    "brake_then_disconnect": "Not implemented by a simple direct power switch. Requires a separate controlled sequence if later requested; not added to the baseline.",
+    "source": "https://d2air1d4eqhwg2.cloudfront.net/media/files/a48110eb-432c-4083-a159-9e0f35913b23.pdf",
+    "source_pages": [
+      5,
+      9,
+      10
+    ]
+  }
 }
