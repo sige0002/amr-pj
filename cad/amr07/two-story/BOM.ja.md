@@ -1,5 +1,7 @@
 # D6.5 BOM：費用の内訳と購入リスト
 
+**[全明細をMarkdownで読む](BOM-details.ja.md) ／ [CSVを開く・保存する](BOM.csv)**
+
 **途中小計 約94,562円 ＋ 未計上分**。通常積載目標10kg、車体推計10.068kg（10kgは目安）の現行構成。
 
 **主計算機・その電源・配線／基板／ケース・追加ねじなどは未計上。LiDARやカメラ等の将来センサーも含まない。** 完成車の総額ではない。
@@ -36,123 +38,105 @@
 
 ## 購入リスト
 
-部位を開くと内訳を表示。「使用／購入」は使用数と買う数で、購入予定数が未確定の項目は未定と表示する。購入先は品名のリンク。詳しい仕様・送料条件・根拠は[詳細CSV](BOM.csv)に残す。
+「使用／購入」は使用数と買う数で、購入予定数が未確定の項目は未定と表示する。品名から購入先、各品目の「仕様・備考」から型番・購入単位・価格根拠などの[全明細Markdown](BOM-details.ja.md)を開ける。同じ内容の[CSV](BOM.csv)も用意している。
 
-<details><summary>電池・充電器・アダプター — 23,380円</summary>
-
-| 品目 | 使用／購入 | 金額 | 根拠 |
-|---|---|---:|---|
-| [BL1860B電池＋DC18RF充電器](https://store.shopping.yahoo.co.jp/takahashihonsha/0088381464031-0088381523394-s.html) | 1式／1式 | 19,800円 | 価格記録 |
-| [電池・充電器セット送料](https://store.shopping.yahoo.co.jp/takahashihonsha/0088381464031-0088381523394-s.html) | 送料1式 | 600円 | 価格記録 |
-| [電池アダプター diy-adapter03](https://store.shopping.yahoo.co.jp/netkey-store/diy-adapter03.html) | 1式／1式 | 2,180円 | 価格記録 |
-| [アダプター送料](https://store.shopping.yahoo.co.jp/netkey-store/diy-adapter03.html) | 送料1式 | 800円 | 価格記録 |
-
-</details>
-
-<details><summary>フレーム・締結材 — 14,537円</summary>
+### 電池・充電器・アダプター — 23,380円
 
 | 品目 | 使用／購入 | 金額 | 根拠 |
 |---|---|---:|---|
-| [3030フレーム 400mm](https://www.amazon.co.jp/dp/B0DKF2CCW3) | 4本／4本 | 1,952円 | 価格記録 |
-| [3030フレーム 300mm](https://www.amazon.co.jp/dp/B0DKDZ8G9G) | 4本／4本 | 1,467円 | 価格記録 |
-| [3030支柱 100mm](https://www.amazon.co.jp/dp/B0CB5N6ZJJ) | 4本／4本 | 495円 | 価格記録 |
-| [接合金具 HBLFSN6](https://www.amazon.co.jp/dp/B0DKF1FCD6) | 20個／20個 | 1,834円 | 価格記録 |
-| [溝ナット HNTT6-6](https://www.amazon.co.jp/dp/B0DK9C99YH) | 70個／100個 | 5,112円 | 価格記録 |
-| 基礎部の追加ねじ・ナット・座金 | 1式／未定 | 2,300円 | 仮予算 |
-| [モーター座面用小径平座金](https://wilco.jp/products/F/FW-EB.html) | 6枚／10枚 | 319円 | 価格記録 |
-| ブラケット・天板固定ボルト | 50個／未定 | 未計上 | 未計上 |
-| 印刷ストッパ固定ねじ | 8個／未定 | 未計上 | 未計上 |
-| ストッパ・床継ぎ目用ナット | 12個／未定 | 未計上 | 未計上 |
-| ストッパ用座金 | 8枚／未定 | 未計上 | 未計上 |
-| [床継ぎ目の通常六角穴付きねじ](https://store.onokatsu.co.jp/products/133-00-04) | 4個／60個 | 770円 | 価格記録 |
-| 継ぎ目支持梁端の大径平座金 | 4個／未定 | 未計上 | 未計上 |
-| [床継ぎ目の上下大径平座金](https://store.shopping.yahoo.co.jp/nejiya-jp/4104012104.html) | 8枚／50枚 | 288円 | 価格記録 |
+| [BL1860B電池＋DC18RF充電器](https://store.shopping.yahoo.co.jp/takahashihonsha/0088381464031-0088381523394-s.html)<br>[POWER_KIT・仕様・備考](BOM-details.ja.md#item-power_kit) | 1式／1式 | 19,800円 | 価格記録 |
+| [電池・充電器セット送料](https://store.shopping.yahoo.co.jp/takahashihonsha/0088381464031-0088381523394-s.html)<br>[POWER_KIT_SHIP・仕様・備考](BOM-details.ja.md#item-power_kit_ship) | 送料1式 | 600円 | 価格記録 |
+| [電池アダプター diy-adapter03](https://store.shopping.yahoo.co.jp/netkey-store/diy-adapter03.html)<br>[POWER_ADAPTER・仕様・備考](BOM-details.ja.md#item-power_adapter) | 1式／1式 | 2,180円 | 価格記録 |
+| [アダプター送料](https://store.shopping.yahoo.co.jp/netkey-store/diy-adapter03.html)<br>[POWER_ADAPTER_SHIP・仕様・備考](BOM-details.ja.md#item-power_adapter_ship) | 送料1式 | 800円 | 価格記録 |
 
-</details>
-
-<details><summary>モーター2個 — 14,000円</summary>
+### フレーム・締結材 — 14,537円
 
 | 品目 | 使用／購入 | 金額 | 根拠 |
 |---|---|---:|---|
-| M0601C_111 モーター | 2個／2個 | 14,000円 | 仮予算 |
+| [3030フレーム 400mm](https://www.amazon.co.jp/dp/B0DKF2CCW3)<br>[F01・仕様・備考](BOM-details.ja.md#item-f01) | 4本／4本 | 1,952円 | 価格記録 |
+| [3030フレーム 300mm](https://www.amazon.co.jp/dp/B0DKDZ8G9G)<br>[F02・仕様・備考](BOM-details.ja.md#item-f02) | 4本／4本 | 1,467円 | 価格記録 |
+| [3030支柱 100mm](https://www.amazon.co.jp/dp/B0CB5N6ZJJ)<br>[D6_POSTS・仕様・備考](BOM-details.ja.md#item-d6_posts) | 4本／4本 | 495円 | 価格記録 |
+| [接合金具 HBLFSN6](https://www.amazon.co.jp/dp/B0DKF1FCD6)<br>[F03・仕様・備考](BOM-details.ja.md#item-f03) | 20個／20個 | 1,834円 | 価格記録 |
+| [溝ナット HNTT6-6](https://www.amazon.co.jp/dp/B0DK9C99YH)<br>[F04・仕様・備考](BOM-details.ja.md#item-f04) | 70個／100個 | 5,112円 | 価格記録 |
+| 基礎部の追加ねじ・ナット・座金<br>[H01・仕様・備考](BOM-details.ja.md#item-h01) | 1式／未定 | 2,300円 | 仮予算 |
+| [モーター座面用小径平座金](https://wilco.jp/products/F/FW-EB.html)<br>[MW・仕様・備考](BOM-details.ja.md#item-mw) | 6枚／10枚 | 319円 | 価格記録 |
+| ブラケット・天板固定ボルト<br>[D3_M6・仕様・備考](BOM-details.ja.md#item-d3_m6) | 50個／未定 | 未計上 | 未計上 |
+| 印刷ストッパ固定ねじ<br>[D3_STOP_BOLTS・仕様・備考](BOM-details.ja.md#item-d3_stop_bolts) | 8個／未定 | 未計上 | 未計上 |
+| ストッパ・床継ぎ目用ナット<br>[D3_STOP_NUTS・仕様・備考](BOM-details.ja.md#item-d3_stop_nuts) | 12個／未定 | 未計上 | 未計上 |
+| ストッパ用座金<br>[D3_STOP_WASHERS・仕様・備考](BOM-details.ja.md#item-d3_stop_washers) | 8枚／未定 | 未計上 | 未計上 |
+| [床継ぎ目の通常六角穴付きねじ](https://store.onokatsu.co.jp/products/133-00-04)<br>[D62_FLOOR_SCREWS・仕様・備考](BOM-details.ja.md#item-d62_floor_screws) | 4個／60個 | 770円 | 価格記録 |
+| 継ぎ目支持梁端の大径平座金<br>[D62_BEAM_WASHERS・仕様・備考](BOM-details.ja.md#item-d62_beam_washers) | 4個／未定 | 未計上 | 未計上 |
+| [床継ぎ目の上下大径平座金](https://store.shopping.yahoo.co.jp/nejiya-jp/4104012104.html)<br>[D64_FLOOR_WASHERS・仕様・備考](BOM-details.ja.md#item-d64_floor_washers) | 8枚／50枚 | 288円 | 価格記録 |
 
-</details>
-
-<details><summary>専用モーター金具2個 — 12,935円</summary>
-
-| 品目 | 使用／購入 | 金額 | 根拠 |
-|---|---|---:|---|
-| [専用モーター金具 A6-R1](https://jlccnc.com/jp/cnc-machining-quote) | 2個／2個 | 11,798円（$75.02） | 自動見積 |
-| [CNC日本宛送料](https://jlccnc.com/jp/cnc-machining-quote) | 送料1式 | 1,137円（$7.23） | 自動見積 |
-
-</details>
-
-<details><summary>タイヤ・キャスター — 10,413円</summary>
-
-| 品目 | 使用／購入 | 金額 | 根拠 |
-|---|---|---:|---|
-| [タイヤキット DDT-M0601C-TIRE](https://www.switch-science.com/products/9203) | 2キット／2キット | 9,240円 | 価格記録 |
-| [キャスター TYG-50](https://www.amazon.co.jp/dp/B0795CNFLR) | 1個／1個 | 273円 | 価格記録 |
-| キャスター取付板の素材 | 1枚／未定 | 900円 | 仮予算 |
-| [キャスター送料](https://www.aboutamazon.jp/news/guide/answer-to-7-questions-about-shopping-at-amazon) | 送料1式 | 0円 | 価格記録 |
-| [タイヤ国内通常送料](https://www.switch-science.com/policies/shipping-policy) | 送料1式 | 0円 | 価格記録 |
-
-</details>
-
-<details><summary>制御・電源保護 — 8,084円</summary>
+### モーター2個 — 14,000円
 
 | 品目 | 使用／購入 | 金額 | 根拠 |
 |---|---|---:|---|
-| Pico接続用USBデータケーブル | 1本／未定 | 500円 | 仮予算 |
-| [非常停止スイッチ](https://www.monotaro.com/p/6051/3817/) | 1個／1個 | 3,298円 | 価格記録 |
-| [駆動電源遮断リレー](https://jp.rs-online.com/web/p/power-relays/0369466) | 2個／2個 | 770円 | 価格記録 |
-| [モーター制御・監視マイコン](https://akizukidenshi.com/catalog/g/g118085/) | 1個／1個 | 920円 | 価格記録 |
-| [外部ウォッチドッグIC](https://eleshop.jp/shop/g/gT11488/) | 1個／1個 | 140円 | 価格記録 |
-| [手動再始動ラッチIC](https://eleshop.jp/shop/g/gT11476/) | 1個／1個 | 33円 | 価格記録 |
-| [監視回路用DC/DC](https://akizukidenshi.com/catalog/g/g113536/) | 1個／1個 | 850円 | 価格記録 |
-| [RS485トランシーバIC](https://akizukidenshi.com/catalog/g/g116211/) | 1個／1個 | 70円 | 価格記録 |
-| [回生吸収抵抗](https://www.monotaro.com/g/02255191/) | 1個／1個 | 1,033円 | 価格記録 |
-| [クランプ比較器](https://akizukidenshi.com/catalog/g/g116987/) | 1個／1個 | 30円 | 価格記録 |
-| [クランプ基準電圧IC](https://akizukidenshi.com/catalog/g/g112018/) | 1個／1個 | 20円 | 価格記録 |
-| [クランプMOSFET](https://akizukidenshi.com/catalog/g/g102414/) | 1個／1個 | 100円 | 価格記録 |
-| [クランプ制御用レギュレータ](https://akizukidenshi.com/catalog/g/g113464/) | 1個／1個 | 20円 | 価格記録 |
-| [電池への逆流防止ダイオード](https://akizukidenshi.com/catalog/g/g116378/) | 1個／10個 | 300円 | 価格記録 |
+| M0601C_111 モーター<br>[D01・仕様・備考](BOM-details.ja.md#item-d01) | 2個／2個 | 14,000円 | 仮予算 |
 
-</details>
-
-<details><summary>アルミ天板 — 6,078円</summary>
+### 専用モーター金具2個 — 12,935円
 
 | 品目 | 使用／購入 | 金額 | 根拠 |
 |---|---|---:|---|
-| [格子穴天板 300×300×4mm](https://jlccnc.com/jp/cnc-machining-quote) | 1枚／1枚 | 4,509円（$28.67） | 自動見積 |
-| [D3天板 日本宛UPS表示送料](https://jlccnc.com/jp/cnc-machining-quote) | 送料1式 | 1,570円（$9.98） | 自動見積 |
+| [専用モーター金具 A6-R1](https://jlccnc.com/jp/cnc-machining-quote)<br>[Q01・仕様・備考](BOM-details.ja.md#item-q01) | 2個／2個 | 11,798円（$75.02） | 自動見積 |
+| [CNC日本宛送料](https://jlccnc.com/jp/cnc-machining-quote)<br>[S08・仕様・備考](BOM-details.ja.md#item-s08) | 送料1式 | 1,137円（$7.23） | 自動見積 |
 
-</details>
-
-<details><summary>PLA・ベルト・保護材 — 2,759円</summary>
+### タイヤ・キャスター — 10,413円
 
 | 品目 | 使用／購入 | 金額 | 根拠 |
 |---|---|---:|---|
-| 四隅まで覆うリブ付き床4枚・継ぎ目支持梁1個・PC金属接触防止カバー1個・荷物ストッパ4個 | 消費640g | 1,280円 | 材料消費 |
-| [電池モジュール保持ベルト](https://store.shopping.yahoo.co.jp/hcbrico/4977292226752.html) | 1本／1本 | 393円 | 価格記録 |
-| [荷物固定ベルト](https://store.shopping.yahoo.co.jp/hcbrico/4977292226752.html) | 2本／2本 | 786円 | 価格記録 |
-| ベルト接触部の保護材・余長固定 | 1式／未定 | 300円 | 仮予算 |
-| 電池・電装の軟質当て材 | 1式／1式 | 未計上 | 未計上 |
-| 1階計算機・監視回路の保持ベルト | 2本／未定 | 未計上 | 未計上 |
+| [タイヤキット DDT-M0601C-TIRE](https://www.switch-science.com/products/9203)<br>[D02・仕様・備考](BOM-details.ja.md#item-d02) | 2キット／2キット | 9,240円 | 価格記録 |
+| [キャスター TYG-50](https://www.amazon.co.jp/dp/B0795CNFLR)<br>[C01・仕様・備考](BOM-details.ja.md#item-c01) | 1個／1個 | 273円 | 価格記録 |
+| キャスター取付板の素材<br>[P01・仕様・備考](BOM-details.ja.md#item-p01) | 1枚／未定 | 900円 | 仮予算 |
+| [キャスター送料](https://www.aboutamazon.jp/news/guide/answer-to-7-questions-about-shopping-at-amazon)<br>[S02・仕様・備考](BOM-details.ja.md#item-s02) | 送料1式 | 0円 | 価格記録 |
+| [タイヤ国内通常送料](https://www.switch-science.com/policies/shipping-policy)<br>[S06・仕様・備考](BOM-details.ja.md#item-s06) | 送料1式 | 0円 | 価格記録 |
 
-</details>
-
-<details><summary>その他送料 — 2,375円</summary>
+### 制御・電源保護 — 8,084円
 
 | 品目 | 使用／購入 | 金額 | 根拠 |
 |---|---|---:|---|
-| フレーム・残存素材の追加送料枠 | 送料1式 | 1,000円 | 仮予算 |
-| 荷物固定ベルト送料参考 | 送料1式 | 600円 | 価格記録 |
-| 純正接合部・溝ナットの送料枠 | 送料1式 | 未計上 | 未計上 |
-| Taobao送料・輸入諸費 | 送料1式 | 未計上 | 未計上 |
-| [中央ねじ・座金の別店舗送料](https://store.onokatsu.co.jp/pages/user-guide) | 送料1式 | 775円 | 価格記録 |
+| Pico接続用USBデータケーブル<br>[E02・仕様・備考](BOM-details.ja.md#item-e02) | 1本／未定 | 500円 | 仮予算 |
+| [非常停止スイッチ](https://www.monotaro.com/p/6051/3817/)<br>[ELEC_S1・仕様・備考](BOM-details.ja.md#item-elec_s1) | 1個／1個 | 3,298円 | 価格記録 |
+| [駆動電源遮断リレー](https://jp.rs-online.com/web/p/power-relays/0369466)<br>[ELEC_K1_K2・仕様・備考](BOM-details.ja.md#item-elec_k1_k2) | 2個／2個 | 770円 | 価格記録 |
+| [モーター制御・監視マイコン](https://akizukidenshi.com/catalog/g/g118085/)<br>[ELEC_U1・仕様・備考](BOM-details.ja.md#item-elec_u1) | 1個／1個 | 920円 | 価格記録 |
+| [外部ウォッチドッグIC](https://eleshop.jp/shop/g/gT11488/)<br>[ELEC_U2・仕様・備考](BOM-details.ja.md#item-elec_u2) | 1個／1個 | 140円 | 価格記録 |
+| [手動再始動ラッチIC](https://eleshop.jp/shop/g/gT11476/)<br>[ELEC_U3・仕様・備考](BOM-details.ja.md#item-elec_u3) | 1個／1個 | 33円 | 価格記録 |
+| [監視回路用DC/DC](https://akizukidenshi.com/catalog/g/g113536/)<br>[ELEC_PS1・仕様・備考](BOM-details.ja.md#item-elec_ps1) | 1個／1個 | 850円 | 価格記録 |
+| [RS485トランシーバIC](https://akizukidenshi.com/catalog/g/g116211/)<br>[ELEC_U4・仕様・備考](BOM-details.ja.md#item-elec_u4) | 1個／1個 | 70円 | 価格記録 |
+| [回生吸収抵抗](https://www.monotaro.com/g/02255191/)<br>[ELEC_RDUMP・仕様・備考](BOM-details.ja.md#item-elec_rdump) | 1個／1個 | 1,033円 | 価格記録 |
+| [クランプ比較器](https://akizukidenshi.com/catalog/g/g116987/)<br>[ELEC_U5・仕様・備考](BOM-details.ja.md#item-elec_u5) | 1個／1個 | 30円 | 価格記録 |
+| [クランプ基準電圧IC](https://akizukidenshi.com/catalog/g/g112018/)<br>[ELEC_U6・仕様・備考](BOM-details.ja.md#item-elec_u6) | 1個／1個 | 20円 | 価格記録 |
+| [クランプMOSFET](https://akizukidenshi.com/catalog/g/g102414/)<br>[ELEC_QCLAMP・仕様・備考](BOM-details.ja.md#item-elec_qclamp) | 1個／1個 | 100円 | 価格記録 |
+| [クランプ制御用レギュレータ](https://akizukidenshi.com/catalog/g/g113464/)<br>[ELEC_PS2・仕様・備考](BOM-details.ja.md#item-elec_ps2) | 1個／1個 | 20円 | 価格記録 |
+| [電池への逆流防止ダイオード](https://akizukidenshi.com/catalog/g/g116378/)<br>[ELEC_D0・仕様・備考](BOM-details.ja.md#item-elec_d0) | 1個／10個 | 300円 | 価格記録 |
 
-</details>
+### アルミ天板 — 6,078円
+
+| 品目 | 使用／購入 | 金額 | 根拠 |
+|---|---|---:|---|
+| [格子穴天板 300×300×4mm](https://jlccnc.com/jp/cnc-machining-quote)<br>[DECK_plate・仕様・備考](BOM-details.ja.md#item-deck_plate) | 1枚／1枚 | 4,509円（$28.67） | 自動見積 |
+| [D3天板 日本宛UPS表示送料](https://jlccnc.com/jp/cnc-machining-quote)<br>[DECK_CNC_SHIP・仕様・備考](BOM-details.ja.md#item-deck_cnc_ship) | 送料1式 | 1,570円（$9.98） | 自動見積 |
+
+### PLA・ベルト・保護材 — 2,759円
+
+| 品目 | 使用／購入 | 金額 | 根拠 |
+|---|---|---:|---|
+| 四隅まで覆うリブ付き床4枚・継ぎ目支持梁1個・PC金属接触防止カバー1個・荷物ストッパ4個<br>[P04・仕様・備考](BOM-details.ja.md#item-p04) | 消費640g | 1,280円 | 材料消費 |
+| [電池モジュール保持ベルト](https://store.shopping.yahoo.co.jp/hcbrico/4977292226752.html)<br>[H02・仕様・備考](BOM-details.ja.md#item-h02) | 1本／1本 | 393円 | 価格記録 |
+| [荷物固定ベルト](https://store.shopping.yahoo.co.jp/hcbrico/4977292226752.html)<br>[DECK_cargo_straps・仕様・備考](BOM-details.ja.md#item-deck_cargo_straps) | 2本／2本 | 786円 | 価格記録 |
+| ベルト接触部の保護材・余長固定<br>[DECK_edge_protection_and_slack_retention・仕様・備考](BOM-details.ja.md#item-deck_edge_protection_and_slack_retention) | 1式／未定 | 300円 | 仮予算 |
+| 電池・電装の軟質当て材<br>[POWER_PADS・仕様・備考](BOM-details.ja.md#item-power_pads) | 1式／1式 | 未計上 | 未計上 |
+| 1階計算機・監視回路の保持ベルト<br>[POWER_LOW_STRAPS・仕様・備考](BOM-details.ja.md#item-power_low_straps) | 2本／未定 | 未計上 | 未計上 |
+
+### その他送料 — 2,375円
+
+| 品目 | 使用／購入 | 金額 | 根拠 |
+|---|---|---:|---|
+| フレーム・残存素材の追加送料枠<br>[S03・仕様・備考](BOM-details.ja.md#item-s03) | 送料1式 | 1,000円 | 仮予算 |
+| 荷物固定ベルト送料参考<br>[D3_STRAP_SHIP・仕様・備考](BOM-details.ja.md#item-d3_strap_ship) | 送料1式 | 600円 | 価格記録 |
+| 純正接合部・溝ナットの送料枠<br>[S04・仕様・備考](BOM-details.ja.md#item-s04) | 送料1式 | 未計上 | 未計上 |
+| Taobao送料・輸入諸費<br>[S07・仕様・備考](BOM-details.ja.md#item-s07) | 送料1式 | 未計上 | 未計上 |
+| [中央ねじ・座金の別店舗送料](https://store.onokatsu.co.jp/pages/user-guide)<br>[D64_FASTENER_SHIP・仕様・備考](BOM-details.ja.md#item-d64_fastener_ship) | 送料1式 | 775円 | 価格記録 |
 
 **今回D6.5は、金属接触を防ぐPLAカバー1個を追加。追加金属部品・加工なし、PLA材料消費参考は76円増。** 機種別の基板ケース／絶縁スペーサーは未選定・未計上。[カバーと取付条件](COMPUTER_BARRIER.ja.md)。
 
@@ -166,34 +150,34 @@
 
 | 未計上品 | 状態 |
 |---|---|
-| 純正接合部・溝ナットの送料枠 | 送料未確定 |
-| Taobao送料・輸入諸費 | 未見積 |
-| ブラケット・天板固定ボルト | 寸法選定済・実機検証前 |
-| 印刷ストッパ固定ねじ | 寸法選定済・実機検証前 |
-| ストッパ・床継ぎ目用ナット | 寸法選定済・実機検証前 |
-| ストッパ用座金 | 寸法選定済・実機検証前 |
-| 電池・電装の軟質当て材 | 型式選定・現物／電気検証前 |
-| 1階計算機・監視回路の保持ベルト | 型式選定・現物／電気検証前 |
-| 継ぎ目支持梁端の大径平座金 | 寸法選定済・購入パック未確定 |
-| 独立した電池低電圧保護回路 | 走行台車／未選定 |
-| 上位計算機・記憶媒体・冷却 | 走行台車／未選定 |
-| 上位計算機用DC/DC | 走行台車／未選定 |
-| ARM押ボタン | 走行台車／未選定 |
-| 主電源スイッチ・主コネクタ | 走行台車／未選定 |
-| ヒューズ・ホルダー | 走行台車／未選定 |
-| 制御・分配基板とコネクタ | 走行台車／未選定 |
-| リレーコイル駆動・保護部品 | 走行台車／未選定 |
-| レベル変換・デバウンス・電源投入リセット | 走行台車／未選定 |
-| 抵抗・コンデンサ・終端抵抗 | 走行台車／未選定 |
-| 電圧・電流計測部品 | 走行台車／未選定 |
-| 電源線・信号線・圧着端子・結束材 | 走行台車／未選定 |
-| 放熱固定具・ガード・絶縁材 | 走行台車／未選定 |
-| 電装固定板・ケース・スタンドオフ | 走行台車／未選定 |
-| 未確定送料・税・決済換算 | 走行台車／未選定 |
-| 加工工具・作業費・残る自加工品の外注費 | 走行台車／未選定 |
-| PLA仮合わせモックの材料消費 | 製作補助／未選定 |
-| 自律移動用LiDAR・IMU・カメラ等 | 将来自律移動／未選定 |
-| 荷物容器・敷板 | 積載物／未選定 |
+| [純正接合部・溝ナットの送料枠](BOM-details.ja.md#item-s04) | 送料未確定 |
+| [Taobao送料・輸入諸費](BOM-details.ja.md#item-s07) | 未見積 |
+| [ブラケット・天板固定ボルト](BOM-details.ja.md#item-d3_m6) | 寸法選定済・実機検証前 |
+| [印刷ストッパ固定ねじ](BOM-details.ja.md#item-d3_stop_bolts) | 寸法選定済・実機検証前 |
+| [ストッパ・床継ぎ目用ナット](BOM-details.ja.md#item-d3_stop_nuts) | 寸法選定済・実機検証前 |
+| [ストッパ用座金](BOM-details.ja.md#item-d3_stop_washers) | 寸法選定済・実機検証前 |
+| [電池・電装の軟質当て材](BOM-details.ja.md#item-power_pads) | 型式選定・現物／電気検証前 |
+| [1階計算機・監視回路の保持ベルト](BOM-details.ja.md#item-power_low_straps) | 型式選定・現物／電気検証前 |
+| [継ぎ目支持梁端の大径平座金](BOM-details.ja.md#item-d62_beam_washers) | 寸法選定済・購入パック未確定 |
+| [独立した電池低電圧保護回路](BOM-details.ja.md#item-u01) | 走行台車／未選定 |
+| [上位計算機・記憶媒体・冷却](BOM-details.ja.md#item-u03) | 走行台車／未選定 |
+| [上位計算機用DC/DC](BOM-details.ja.md#item-u04) | 走行台車／未選定 |
+| [ARM押ボタン](BOM-details.ja.md#item-u05) | 走行台車／未選定 |
+| [主電源スイッチ・主コネクタ](BOM-details.ja.md#item-u06) | 走行台車／未選定 |
+| [ヒューズ・ホルダー](BOM-details.ja.md#item-u07) | 走行台車／未選定 |
+| [制御・分配基板とコネクタ](BOM-details.ja.md#item-u08) | 走行台車／未選定 |
+| [リレーコイル駆動・保護部品](BOM-details.ja.md#item-u09) | 走行台車／未選定 |
+| [レベル変換・デバウンス・電源投入リセット](BOM-details.ja.md#item-u10) | 走行台車／未選定 |
+| [抵抗・コンデンサ・終端抵抗](BOM-details.ja.md#item-u11) | 走行台車／未選定 |
+| [電圧・電流計測部品](BOM-details.ja.md#item-u12) | 走行台車／未選定 |
+| [電源線・信号線・圧着端子・結束材](BOM-details.ja.md#item-u13) | 走行台車／未選定 |
+| [放熱固定具・ガード・絶縁材](BOM-details.ja.md#item-u14) | 走行台車／未選定 |
+| [電装固定板・ケース・スタンドオフ](BOM-details.ja.md#item-u15) | 走行台車／未選定 |
+| [未確定送料・税・決済換算](BOM-details.ja.md#item-u16) | 走行台車／未選定 |
+| [加工工具・作業費・残る自加工品の外注費](BOM-details.ja.md#item-u17) | 走行台車／未選定 |
+| [PLA仮合わせモックの材料消費](BOM-details.ja.md#item-u18) | 製作補助／未選定 |
+| [自律移動用LiDAR・IMU・カメラ等](BOM-details.ja.md#item-u19) | 将来自律移動／未選定 |
+| [荷物容器・敷板](BOM-details.ja.md#item-u20) | 積載物／未選定 |
 
 ## 見直すと効果の大きい費用
 
@@ -202,4 +186,4 @@
 - タイヤキット2個：9,240円。Taobaoのモーターに同じキットが付くと確認できた場合のみ、別購入を外せる。
 - 溝ナット100個：5,112円、使用70個。20個の接合金具本体1,834円より大きい。安価な互換品へ置換する場合は寸法・締結条件を照合する。
 
-[CADと設計の説明](README.ja.md)／[重量と積載](PAYLOAD_REVIEW.ja.md)／[費用集計CSV](BOM-summary.csv)／[全明細CSV](BOM.csv)／[計算値JSON](BOM-costs.json)
+[CADと設計の説明](README.ja.md)／[重量と積載](PAYLOAD_REVIEW.ja.md)／[全明細Markdown](BOM-details.ja.md)／[全明細CSV](BOM.csv)／[費用集計CSV](BOM-summary.csv)／[計算値JSON](BOM-costs.json)

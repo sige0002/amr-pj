@@ -8,11 +8,16 @@ from decimal import Decimal
 from pathlib import Path
 import csv
 import hashlib
+import html
+import io
 import json
+from urllib.parse import quote
 
 HERE = Path(__file__).resolve().parent
 raw = (HERE/'BOM.csv').read_bytes()
-rows = list(csv.DictReader(raw.decode('utf-8-sig').splitlines()))
+reader = csv.DictReader(io.StringIO(raw.decode('utf-8-sig')))
+rows = list(reader)
+fields = reader.fieldnames
 summary = json.loads((HERE/'cost_summary.json').read_text())
 rate = Decimal(str(summary['FX_reference_JPY_per_USD']))
 validation=json.loads((HERE/'validation.json').read_text())
@@ -83,6 +88,7 @@ with (HERE/'BOM-summary.csv').open('w',encoding='utf-8-sig',newline='') as f:
     for c in category_rows:w.writerow([c['category'],round(c['JPY_reference'],2),round(c['percent_of_priced_subtotal'],2)])
 
 lines = [f'# {revision} BOM：費用の内訳と購入リスト', '',
+    '**[全明細をMarkdownで読む](BOM-details.ja.md) ／ [CSVを開く・保存する](BOM.csv)**', '',
     f'**途中小計 約{jpy(total)} ＋ 未計上分**。通常積載目標10kg、車体推計{vehicle_mass:.3f}kg（10kgは目安）の現行構成。', '',
     '**主計算機・その電源・配線／基板／ケース・追加ねじなどは未計上。LiDARやカメラ等の将来センサーも含まない。** 完成車の総額ではない。', '',
     '## どこに費用がかかるか', '',
@@ -97,7 +103,7 @@ for label in ['価格記録','自動見積','仮予算','材料消費']:
     lines.append(f'| {label} | {jpy(states[label])} |')
 lines += ['', f'価格記録は既存の販売ページ確認・引継価格。自動見積はJLCCNCの実サイト記録で、未発注・担当者審査前。**モーター14,000円は仮予算**。PLA{by_id["P04"]["明細金額"]}円は材料消費参考で、新規スプールの購入額ではない。', '',
     '## 購入リスト', '',
-    '部位を開くと内訳を表示。「使用／購入」は使用数と買う数で、購入予定数が未確定の項目は未定と表示する。購入先は品名のリンク。詳しい仕様・送料条件・根拠は[詳細CSV](BOM.csv)に残す。', '']
+    '「使用／購入」は使用数と買う数で、購入予定数が未確定の項目は未定と表示する。品名から購入先、各品目の「仕様・備考」から型番・購入単位・価格根拠などの[全明細Markdown](BOM-details.ja.md)を開ける。同じ内容の[CSV](BOM.csv)も用意している。', '']
 short_names = {'D01':'M0601C_111 モーター','Q01':'専用モーター金具 A6-R1',
                'DECK_plate':'格子穴天板 300×300×4mm','F01':'3030フレーム 400mm',
                'F02':'3030フレーム 300mm','F03':'接合金具 HBLFSN6',
@@ -105,11 +111,12 @@ short_names = {'D01':'M0601C_111 モーター','Q01':'専用モーター金具 A
                'D02':'タイヤキット DDT-M0601C-TIRE','C01':'キャスター TYG-50',
                'POWER_KIT':'BL1860B電池＋DC18RF充電器','POWER_ADAPTER':'電池アダプター diy-adapter03'}
 for c in category_rows:
-    lines += [f"<details><summary>{c['category']} — {jpy(c['JPY_reference'])}</summary>", '',
+    lines += [f"### {c['category']} — {jpy(c['JPY_reference'])}", '',
               '| 品目 | 使用／購入 | 金額 | 根拠 |','|---|---|---:|---|']
     for i in c['source_ids']:
         r=by_id[i];name=short_names.get(i,r['部品名'])
         if r['URL']:name=f'[{name}]({r["URL"]})'
+        name+=f'<br>[{i}・仕様・備考](BOM-details.ja.md#item-{i.lower()})'
         if r['分類']=='送料' or '送料' in r['部品名']:qty='送料1式'
         elif i=='P04':qty='消費'+r['使用数']+'g'
         else:
@@ -120,7 +127,7 @@ for c in category_rows:
         price='未計上' if amount is None else jpy(amount)
         if amount is not None and r['通貨']=='USD':price+='（$'+r['明細金額']+'）'
         lines.append(f'| {name} | {qty} | {price} | {evidence(r)} |')
-    lines += ['', '</details>', '']
+    lines += ['']
 lines += [f'**今回D6.5は、金属接触を防ぐPLAカバー1個を追加。追加金属部品・加工なし、PLA材料消費参考は{summary["barrier_change_from_D64"]["PLA_material_reference_increase_JPY"]:,.0f}円増。** 機種別の基板ケース／絶縁スペーサーは未選定・未計上。[カバーと取付条件](COMPUTER_BARRIER.ja.md)。', '',
     f'**前回D6.4では中央4本を通常のM4×16に変更し、上下のOD12座金を計8枚にした。** 新たな物理部品は上側座金4枚、下側4枚は交換。ねじ60本770円・座金50枚288円・2店舗送料参考775円、合計1833円を購入パック全額で計上した。使用する4本＋8枚の按分参考は約97円だが、購入額には使わない。従来の中央ねじ代は未計上だったため、旧ねじ代を差し引いた節約額は作らない。PLA材料消費参考は前版より{summary["plain_hole_rework_from_D63"]["PLA_material_reference_increase_JPY"]:,.0f}円増。', '',
     '上記送料は北海道・沖縄を除く掲載条件の参考で、まとめ買い・店頭小袋購入では再計上する。[販売ページ確認記録](plain_hole_fastener_observations.json)。各床4点固定と支柱根元両側補強は継続する。追加金属加工は不要。', '',
@@ -128,12 +135,56 @@ lines += [f'**今回D6.5は、金属接触を防ぐPLAカバー1個を追加。�
     '主計算機の0.5kgは重量の予約であり、購入費の計上ではない。未計上品は次のとおり。', '',
     '| 未計上品 | 状態 |','|---|---|']
 for r in unpriced:
-    lines.append(f"| {r['部品名']} | {r['選定状況']} |")
+    lines.append(f"| [{r['部品名']}](BOM-details.ja.md#item-{r['ID'].lower()}) | {r['選定状況']} |")
 lines += ['', '## 見直すと効果の大きい費用', '',
     '- 電池・充電器・アダプター：約23,380円。未所有のため充電器も含む。',
     '- 専用モーター金具2個：約12,935円（送料込みの実自動見積）。形状や加工条件を変更する場合は実見積を取り直す。',
     '- タイヤキット2個：9,240円。Taobaoのモーターに同じキットが付くと確認できた場合のみ、別購入を外せる。',
     '- 溝ナット100個：5,112円、使用70個。20個の接合金具本体1,834円より大きい。安価な互換品へ置換する場合は寸法・締結条件を照合する。', '',
-    '[CADと設計の説明](README.ja.md)／[重量と積載](PAYLOAD_REVIEW.ja.md)／[費用集計CSV](BOM-summary.csv)／[全明細CSV](BOM.csv)／[計算値JSON](BOM-costs.json)', '']
+    '[CADと設計の説明](README.ja.md)／[重量と積載](PAYLOAD_REVIEW.ja.md)／[全明細Markdown](BOM-details.ja.md)／[全明細CSV](BOM.csv)／[費用集計CSV](BOM-summary.csv)／[計算値JSON](BOM-costs.json)', '']
 (HERE/'BOM.ja.md').write_text('\n'.join(lines))
+
+
+def md_cell(value):
+    """Keep CSV text readable inside a narrow GFM table, including multiline cells."""
+    value = html.escape(value, quote=False)
+    for char in ['\\', '`', '*', '_', '[', ']']:
+        value = value.replace(char, '\\'+char)
+    return value.replace('|', '&#124;').replace('\r\n', '\n').replace('\r', '\n').replace('\n', '<br>')
+
+
+# All original CSV fields are retained in two-column tables. The overview may
+# abbreviate a name, but the full view never substitutes that abbreviation.
+detail_groups = [(c['category'], c['source_ids']) for c in category_rows]
+detail_groups.append(('未選定・未計上品', [r['ID'] for r in rows if r['ID'].startswith('U')]))
+detail_ids = [i for _, members in detail_groups for i in members]
+assert len(detail_ids) == len(rows) and set(detail_ids) == set(by_id)
+details = [f'# {revision} BOM：全明細', '',
+    '**[費用概要・購入リスト](BOM.ja.md) ／ [同じ内容のCSV](BOM.csv)**', '',
+    f'CSVの全{len(rows)}明細・{len(fields)}項目を掲載。スマートフォンでも読めるよう、1品目ごとの「項目／内容」の表にしている。', '',
+    '「—」はCSVの空欄。未確定・未計上を0円や0個と扱わない。数量の単位と価格の通貨はそれぞれの行を参照。価格は記録済みの値で、確認条件は「価格根拠」「選定状況」「備考」に記載している。', '',
+    '## 部位から探す', '']
+for n, (name, _) in enumerate(detail_groups, 1):
+    details.append(f'- [{name}](#category-{n})')
+for n, (name, members) in enumerate(detail_groups, 1):
+    details += ['', f'<a id="category-{n}"></a>', '', f'## {name}', '']
+    for i in members:
+        row = by_id[i]
+        details += [f'<a id="item-{i.lower()}"></a>', '',
+                    f'### {md_cell(i)} — {md_cell(row["部品名"])}', '',
+                    '| 項目 | 内容 |', '|---|---|']
+        for field in fields:
+            value = row[field]
+            if field == 'URL' and value:
+                target = quote(value, safe=':/?&=%#@+-._~')
+                cell = f'[購入先・根拠ページ]({target})'
+            else:
+                cell = md_cell(value) if value else '—'
+            details.append(f'| {md_cell(field)} | {cell} |')
+        details += ['', '[費用概要へ戻る](BOM.ja.md) ／ [部位一覧へ戻る](#部位から探す)', '']
+details += ['## データの更新', '',
+    '`build_bom_view.py`がCSVから概要と全明細のMarkdownを生成する。価格・数量を更新したときも、同じCSVから両方を再生成する。', '',
+    '```sh', 'python3 cad/amr07/two-story/build_bom_view.py', '```', '',
+    f'生成元CSVのSHA-256: `{hashlib.sha256(raw).hexdigest()}`', '']
+(HERE/'BOM-details.ja.md').write_text('\n'.join(details))
 print(json.dumps(dict(total_JPY=float(total),categories=category_rows,price_basis=out['by_price_basis_JPY'],unpriced_count=len(unpriced)),ensure_ascii=False))

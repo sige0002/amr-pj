@@ -19,6 +19,10 @@
       "bytes": 8119,
       "sha256": "546c603680ab6ae3a41b72bef3ddd219b2c715daae72c4d7d4a4fb299a51cf6f"
     },
+    "BOM-details.ja.md": {
+      "bytes": 65432,
+      "sha256": "30a0f7885797ff8669b67b43766a294c08b09896290fef78ee55849e08f71248"
+    },
     "BOM-summary.csv": {
       "bytes": 396,
       "sha256": "31502f2e8dc33c7a5023a4c0f1997ecb5af57a2b637dfaab2232f315707672d3"
@@ -28,8 +32,8 @@
       "sha256": "44d8b3944b155018623691dffdd61d95e4502bf926a5503cc1f89ef0ad4c5311"
     },
     "BOM.ja.md": {
-      "bytes": 13528,
-      "sha256": "e95db6e6ee207c0a3576efd0f2583fa321d61effaabec47f22e34449ab20136a"
+      "bytes": 17826,
+      "sha256": "28ea4d16900e64d0f12d8fc3946cca7907cc6acd5c1979269feb439d4c6f8a9b"
     },
     "COMPUTER_BARRIER.ja.md": {
       "bytes": 6321,
@@ -44,8 +48,8 @@
       "sha256": "53d66ff079424127cbd8e6a2e8b4c87b1529409e18ba229edfc0db25470db12a"
     },
     "D6-first-floor-print-files.zip": {
-      "bytes": 5163521,
-      "sha256": "5e07c912f22293ed8d2faecb7d2d53aa34de1ad5224b178e0c5936d6b4f26a87"
+      "bytes": 5163555,
+      "sha256": "49de4315461f70177895b5af5623570629dfe8887618f6c5554b61ebd9baef29"
     },
     "FLOOR_REVIEW.ja.md": {
       "bytes": 7301,
@@ -76,8 +80,8 @@
       "sha256": "2e11c355a34a18a3a460b65b0835d808c9374e0d8fa7fbab43dae3a489c7e566"
     },
     "README.ja.md": {
-      "bytes": 6761,
-      "sha256": "62c687ee68e0c9c56ad9a1574af228040bded873c1a8bb1886562a711b4aad88"
+      "bytes": 6872,
+      "sha256": "b3e250ea2415ee582f9526d642d3bc1531ce42fa73a575501d2d5c7afba2cec5"
     },
     "REFERENCE_DESIGNS.ja.md": {
       "bytes": 4206,
@@ -96,8 +100,8 @@
       "sha256": "f8fb94a32d7287c169b98dd78c15660845f046e7d16241f28879d598fd4df4dc"
     },
     "build_bom_view.py": {
-      "bytes": 10683,
-      "sha256": "db2dfcddc2f294bd1d99a703561c4ad2283e46dc173ee1a78f61933629fca960"
+      "bytes": 13894,
+      "sha256": "7b882b84213ec71dddcaa9cdefa38807f08bb554ad8d9dad8d071046a3edd3c3"
     },
     "build_computer_barrier_doc.py": {
       "bytes": 6990,
@@ -108,8 +112,8 @@
       "sha256": "9401feb4d736da4a3803f60898fb581350c1ede68407ebd137482809992ff7c0"
     },
     "build_docs.py": {
-      "bytes": 27476,
-      "sha256": "e17500fad9d55af9ade35004f96a31e4e031fab74976407e6d4dd673c6c478e5"
+      "bytes": 27587,
+      "sha256": "17cc55a137995c7997490c7ab96ed51b7d20a2f663972d443dfb0e513f86a84c"
     },
     "cad-screen-assembled.png": {
       "bytes": 213134,

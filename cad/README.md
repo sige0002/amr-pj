@@ -1,6 +1,6 @@
 # FreeCAD + Codex MCP
 
-AMRの現行案は[M0601C_111のA6-D2](amr07/README.ja.md)です。格子穴アルミ荷台とPLA小物、干渉検査、荷台の線形シェル解析を追加しました。3030と低床電池を維持し、公開ブラケットの受け形状を参照した専用金属金具へ変更しました。FCStd・STEP・実CAD画面・見積用寸法図・BOM・検証結果を収録しています。[実CADによる加工サイト自動見積](amr07/MACHINING_QUOTE.ja.md)も取得済み。正式な加工審査と実機のはめあい・荷重検証は未完了。[A3](amr04/README.ja.md)、[A2](amr03/README.ja.md)、[第一案A](amr01/README.ja.md)、[第二案B・ベルト案C](amr02/README.ja.md)は比較履歴です。
+AMRの現行案は[2階建てD6.5](amr07/two-story/README.ja.md)です。BOMは[Markdown概要](amr07/two-story/BOM.ja.md)／[全明細Markdown](amr07/two-story/BOM-details.ja.md)／[CSV](amr07/two-story/BOM.csv)で確認できます。FCStd・STEP・実CAD画面・見積用寸法図・BOM・検証結果を収録しています。[実CADによる加工サイト自動見積](amr07/MACHINING_QUOTE.ja.md)も取得済み。正式な加工審査と実機のはめあい・荷重検証は未完了。[A6-D2](amr07/README.ja.md)、[A3](amr04/README.ja.md)、[A2](amr03/README.ja.md)、[第一案A](amr01/README.ja.md)、[第二案B・ベルト案C](amr02/README.ja.md)は比較履歴です。
 
 導入日: 2026-09-20。Ubuntu 24.04 / ARM64。
 

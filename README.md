@@ -2,7 +2,7 @@
 
 **電池・計算機・電源回路を基礎フレーム上の1階へ、格子穴アルミ荷台を2階へ配置しました。** 計算機を床下へ吊る案を撤回。RoboMaster、学生ロボコン、公開ロボットの設計資料を参照し、4支柱支持と部品ごとの交換経路を設計しています。
 
-**[費用の割合と読みやすいBOM](cad/amr07/two-story/BOM.ja.md)** — 部位別の金額・購入数・購入先・未計上品を確認できます。
+**BOM：[Markdownで見る](cad/amr07/two-story/BOM.ja.md) ／ [全明細Markdown](cad/amr07/two-story/BOM-details.ja.md) ／ [CSV](cad/amr07/two-story/BOM.csv)** — 費用の割合・購入数・型番・購入先・備考を確認できます。全明細を同じCSVからMarkdownへ生成しています。
 
 **[Isaac Sim 5向けURDF・取込手順](sim/isaac_sim/README.ja.md)** — 空車／積載10kg、左右駆動輪と受動キャスター。 [データ一式ZIP](sim/isaac_sim/amr_d65_isaac5.zip)。URDF検査とMuJoCo補助走行は実施済み、Isaac Sim本体での実行は未確認です。
 
@@ -32,7 +32,7 @@ MuJoCoでの走行GIF（空車・16秒・等速）：直進→停止→左旋回
 - [現行D6：配置・固定・交換・費用・検証範囲](cad/amr07/two-story/README.ja.md)
 - [参照したロボコン機体と設計理由](cad/amr07/two-story/REFERENCE_DESIGNS.ja.md)
 - [組立FCStd](cad/amr07/two-story/AMR01_TwoStorey_D6.FCStd)／[機器外形付きSTEP](cad/amr07/two-story/AMR01_TwoStorey_D6-with-equipment-envelopes.step)
-- [全車BOM](cad/amr07/two-story/BOM.csv)／[費用・未確定分](cad/amr07/two-story/cost_summary.json)
+- [全車BOM：Markdown](cad/amr07/two-story/BOM.ja.md)／[全明細Markdown](cad/amr07/two-story/BOM-details.ja.md)／[CSV](cad/amr07/two-story/BOM.csv)／[費用・未確定分](cad/amr07/two-story/cost_summary.json)
 - [電装床4枚＋支持梁＋カバーの印刷ZIP](cad/amr07/two-story/D6-first-floor-print-files.zip)／[保存物再検査](cad/amr07/two-story/saved_artifact_validation.json)
 - [設計要件](cad/amr07/requirements.json)／[電源・停止・回生と試験仕様](cad/amr07/ELECTRICAL_AND_VALIDATION.ja.md)
 - [同じ天板の実加工見積](cad/amr07/aluminum-direct-deck/README.ja.md)／[モーター金具の実見積](cad/amr07/MACHINING_QUOTE.ja.md)

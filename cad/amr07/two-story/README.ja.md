@@ -6,7 +6,9 @@
 
 [計算機の接触防止・カバー検査・取付条件](COMPUTER_BARRIER.ja.md)
 
-[床の見直し・座標・組立順](FLOOR_REVIEW.ja.md)／[重量・積載の計算](PAYLOAD_REVIEW.ja.md)／[読みやすいBOM](BOM.ja.md)
+[床の見直し・座標・組立順](FLOOR_REVIEW.ja.md)／[重量・積載の計算](PAYLOAD_REVIEW.ja.md)
+
+**BOM：[Markdownで見る](BOM.ja.md) ／ [全明細Markdown](BOM-details.ja.md) ／ [CSV](BOM.csv)**
 
 ![床の16固定点・FreeCAD実画面](cad-screen-floor-fixings-top.png)
 
@@ -58,7 +60,7 @@
 
 - [FreeCAD](AMR01_TwoStorey_D6.FCStd)／[構造STEP](AMR01_TwoStorey_D6.step)／[電池・PC外形付きSTEP](AMR01_TwoStorey_D6-with-equipment-envelopes.step)
 - [床4枚＋支持梁＋カバーの印刷ZIP](D6-first-floor-print-files.zip)／[寸法・材料体積・印刷注意](print_manifest.json)
-- [BOM・費用割合](BOM.ja.md)／[全明細CSV](BOM.csv)／[費用JSON](cost_summary.json)
+- [BOM・費用割合](BOM.ja.md)／[全明細Markdown](BOM-details.ja.md)／[全明細CSV](BOM.csv)／[費用JSON](cost_summary.json)
 - [CAD検査](validation.json)／[保存物再検査](saved_artifact_validation.json)／[床支持検査](floor_support_review.json)
 - [設計要件](../requirements.json)／[電源選定](../makita-power/power_selection.json)／[成果物ハッシュ](release_manifest.json)
 - [D6.5 URDF・Isaac Sim5向け手順とMuJoCo走行GIF](../../../sim/isaac_sim/README.ja.md)
