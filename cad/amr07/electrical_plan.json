@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
-  "design": "AMR01_DirectHinge_D68",
+  "design": "AMR01_FixedDeck_D69",
   "date": "2026-09-23",
   "status": "electrical_architecture_and_acceptance_plan_not_implemented",
-  "requirements_file": "direct-hinge/requirements.json",
+  "requirements_file": "fixed-deck/requirements.json",
   "document": "ELECTRICAL_AND_VALIDATION.ja.md",
   "operation_release": {
     "flat_floor": false,
@@ -585,7 +585,7 @@
         "translation_energy_J": 0.9674999999999999
       }
     ],
-    "requirements_sha256": "9bfd9a1c9579691c50ccd99efa05abee253657f75075a34a7fca48afff624372"
+    "requirements_sha256": "6603b2fecfff3f74b622b22038a66c8c52e09374c7cfde5134e45bd9e778ab26"
   },
   "validation": {
     "all_results": "not_run",
@@ -730,8 +730,8 @@
     "D65_candidate_price_subtotal_JPY": 7584
   },
   "selected_power_file": "makita-power/power_selection.json",
-  "current_CAD": "direct-hinge/AMR01_DirectHinge_D68.FCStd",
-  "current_layout_revision": "D6.8",
+  "current_CAD": "fixed-deck/AMR01_FixedDeck_D69.FCStd",
+  "current_layout_revision": "D6.9",
   "current_controls_layout": {
     "estop": {
       "part": "IDEC XA1E-BV302R",
@@ -761,7 +761,7 @@
       "purchase_JPY": 621
     },
     "pico_purchase_JPY": 0,
-    "price_scope": "Current electrical part prices above; complete current purchase quantities and costs in direct-hinge/BOM.csv.",
+    "price_scope": "Current electrical part prices above; complete current purchase quantities and costs in fixed-deck/BOM.csv.",
     "power_order": "Battery→sourceF0→rearconnector→main3214→independentUVLO→branches",
     "unreleased": [
       "PCB",

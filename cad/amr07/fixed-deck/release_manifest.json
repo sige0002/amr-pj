@@ -1,0 +1,161 @@
+{
+  "revision": "D6.9",
+  "date": "2026-09-23",
+  "files": {
+    "AMR01_FixedDeck_D69-structure.step": {
+      "bytes": 9345183,
+      "sha256": "a463d2dc35c3ee06dd91652ca5c5729e053717dc6dda7e4b268c030f07166809"
+    },
+    "AMR01_FixedDeck_D69.FCStd": {
+      "bytes": 1854340,
+      "sha256": "94706242a3aa065c0a76274cea251137c8296fa577529de38461b949668b02b6"
+    },
+    "AMR01_FixedDeck_D69.step": {
+      "bytes": 9389947,
+      "sha256": "85272fab15e63fbfa5f030ec5fd41d814a22ccac61723c614edcf063386c7d9b"
+    },
+    "BOM-costs.json": {
+      "bytes": 2793,
+      "sha256": "a197143b5ac275e9b79baed1beb90e2bf0cfc2d2850c1c81eae68a3ab94b6a24"
+    },
+    "BOM-details.ja.md": {
+      "bytes": 51214,
+      "sha256": "a7b09c152d8fe938555fb2b626f505fa658112b53dd461576ce2ea1e6636466f"
+    },
+    "BOM-summary.csv": {
+      "bytes": 372,
+      "sha256": "ffa28be8307d4c965bca9618fc17337cd3485056c7d46591efd9d3ddf22bbe6b"
+    },
+    "BOM.csv": {
+      "bytes": 25709,
+      "sha256": "015621d0d5a9acab64f1c1709dddde8ac2399a5037d0c69bd0db7a9fd0dc00dd"
+    },
+    "BOM.ja.md": {
+      "bytes": 9494,
+      "sha256": "bcb7076ef62c8670c779d0a60761477ba57044f499f52e12493eab028ce34df7"
+    },
+    "D69-print-prototypes.zip": {
+      "bytes": 227997,
+      "sha256": "d6dca48f9485873389273e5c5811404e46a0885ada8f4b10e35319fa2dab6790"
+    },
+    "MACHINING_QUOTE.ja.md": {
+      "bytes": 2889,
+      "sha256": "ee02cecf5ce270d2c1e127377afa3364759f2d666ecc46ca28ee69d23f0d48c6"
+    },
+    "PAYLOAD_REVIEW.ja.md": {
+      "bytes": 4525,
+      "sha256": "c78181d5d2e11ab1cf41e882ad40355aa43780f5df21c5ac1bdf0d25bd3eb4f1"
+    },
+    "README.ja.md": {
+      "bytes": 6705,
+      "sha256": "066f2a8ee2c1ac1353a70688a44b32a235860f72ba9f24eba21af5f6f4ec6fc5"
+    },
+    "build_bom.py": {
+      "bytes": 5467,
+      "sha256": "47418fd4977d317fe8c13bdc47632ef44d9e1f66a12d296e6980d89693fe62c1"
+    },
+    "build_bom_view.py": {
+      "bytes": 4768,
+      "sha256": "2b06bffb29cbda837cc8aee21309935e968bcd9492796eb50ad49eec8ff91530"
+    },
+    "build_d69.py": {
+      "bytes": 6225,
+      "sha256": "568585b85f10a46801c49331c4f0a3094b8121065d2bd32252530935fee0ff3a"
+    },
+    "cad-screen-battery-service.png": {
+      "bytes": 131097,
+      "sha256": "d97cf9e945bc935f4759c38af790623ac247a1aa44f2bddff89cdb732d64d317"
+    },
+    "cad-screen-deck-removal.png": {
+      "bytes": 141044,
+      "sha256": "9adfa2993651e1f931c74d461f9e2c87384164fa4613463c50e64ed430454da6"
+    },
+    "cad-screen-fixings.png": {
+      "bytes": 147880,
+      "sha256": "152867dfe5f6f1e3d72037405ca34e4cc5ff99c0f447d53571f1354d3d83e7ab"
+    },
+    "cad-screen-overall.png": {
+      "bytes": 136755,
+      "sha256": "66bc8c3060d51d4fd582402753ee773c5c6405dfe10356e0e85a076f30d7da09"
+    },
+    "cad-screen-top.png": {
+      "bytes": 104265,
+      "sha256": "f25128a027597fb66c0100b180d73c3f03e0f7b7d14aac001ac56622fdca35cc"
+    },
+    "capture_screens.py": {
+      "bytes": 4737,
+      "sha256": "075d4217889a39064ffaadbed56f872a3d2a2ad17bca17ac62f6413ebf6f4c05"
+    },
+    "check_design.py": {
+      "bytes": 5214,
+      "sha256": "323b95983d707e88e0779d3f8ead241ed754dbcd3a10463b512e8f88f124a5e0"
+    },
+    "cost_summary.json": {
+      "bytes": 1859,
+      "sha256": "6f3b0f367b57cb88227e7eb2e6de9a6c2533d0ce91cd436e635415284135db09"
+    },
+    "export_and_check.py": {
+      "bytes": 4571,
+      "sha256": "6ec0b5487f9fc1a0180a0a20b6fa79a563c070b9f5163977f5fb97f68a355714"
+    },
+    "geometry.json": {
+      "bytes": 22004,
+      "sha256": "836a481ab7486ca967832e864e79a7f95d5c01e336c2a3cf5cf9f467432af027"
+    },
+    "parameters.json": {
+      "bytes": 1619,
+      "sha256": "c22889a75f10f9eea5473eeda92ed10c6da7fd983d0b76f722cf494fac3a8142"
+    },
+    "payload_budget.json": {
+      "bytes": 11876,
+      "sha256": "3a9bdb43aa1e2685fa02ee6e103de58f2c6425d6cdab9f30fa71740ed57a51a5"
+    },
+    "print_manifest.json": {
+      "bytes": 4268,
+      "sha256": "f2fd1642c681c4e6ea65f66dbfd4027017e090bba02344f26707d89656b76d63"
+    },
+    "release.py": {
+      "bytes": 5955,
+      "sha256": "080c88fab0559cbffc746bdfa23956b7f56e974ec2d4e8ee4f7eccf61ac14dbe"
+    },
+    "requirements.json": {
+      "bytes": 13782,
+      "sha256": "6603b2fecfff3f74b622b22038a66c8c52e09374c7cfde5134e45bd9e778ab26"
+    },
+    "saved_artifact_validation.json": {
+      "bytes": 8983,
+      "sha256": "1b3a28f610c375438a8bbfbfb93d4028ce5e73c80c9b806a5d0ba82ff0d1b09a"
+    },
+    "sync_electrical.py": {
+      "bytes": 4241,
+      "sha256": "b5f4cd9ecef23900f451948f235bb23140a3024aefc2c2275f0a2ac7e1faeb4d"
+    },
+    "validate.py": {
+      "bytes": 5179,
+      "sha256": "23fcaefcef6fae4b310fd9d267a2b2dab14507dcc3acb8d4ff601786563474b8"
+    },
+    "validation.json": {
+      "bytes": 32926,
+      "sha256": "1a8276fa881f732b2b233d37ddbf17c1b6e0f4bcd4b97487187858efb7adb5cb"
+    }
+  },
+  "physical_parts": 329,
+  "PLA_print_parts": 14,
+  "FreeCAD_GUI_screenshots": 5,
+  "checked_local_links": 131,
+  "shared_electrical_plan_sha256": "58cb997382fa33e6fa03d5c8beed0fd1cdb5ae504d63f96a3cc10409b86d2a98",
+  "scope": "Fixed-deck design update; existing actual machining quote reused for equivalent geometry. Prototype review, not production release.",
+  "checks": [
+    "Changed-part static and reserved-envelope collision check",
+    "Continuous battery/computer service envelopes with deck installed",
+    "Six-bolt top tool access and vertical deck removal",
+    "Floor-supported rear control access",
+    "36 grid fixing envelopes",
+    "Saved native and STEP solids/volumes",
+    "Historical quoted plate STEP/PDF hashes and native shape equivalence",
+    "14 closed STL meshes and256mm printer envelope",
+    "BOM purchase packs, currencies and linked current requirements"
+  ],
+  "production_released": false,
+  "physical_strength_tests_complete": false
+}

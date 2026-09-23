@@ -1,6 +1,6 @@
 # AMR-01 A6-D2：格子穴アルミ荷台とPLA小物
 
-> **現行案は[D6.7：開閉天板・後方操作部](hinged-deck/README.ja.md)。BOMは[Markdown概要](hinged-deck/BOM.ja.md)／[全明細Markdown](hinged-deck/BOM-details.ja.md)／[CSV](hinged-deck/BOM.csv)を参照。** 通常積載目標10kg。車体10kgは厳密上限ではなく、現行の荷重計算は車体11.5kgまでの範囲。以下は旧D2の設計記録。
+> **現行案は[D6.9：6点固定のアルミ天板・後方操作部](fixed-deck/README.ja.md)。BOMは[Markdown概要](fixed-deck/BOM.ja.md)／[全明細Markdown](fixed-deck/BOM-details.ja.md)／[CSV](fixed-deck/BOM.csv)を参照。** 通常積載目標10kg。車体10kgは厳密上限ではなく、現行の荷重計算は車体11.5kgまでの範囲。以下は旧D2の設計記録。
 
 > **2026-09-22の方針変更：角棒の切断・穴あけを要する荷台支持案は不採用。** P0の支持棒に加え、D2の支持ブロック・ストッパーも同じ加工を要するため見直す。以下のCAD・費用・解析は変更前のD2記録。置換後の構成へ強度結果・干渉結果・見積を流用しない。[製作条件](requirements.json)
 

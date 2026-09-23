@@ -1,0 +1,402 @@
+{
+  "schema_version": "1.0",
+  "design": "AMR01_FixedDeck_D69",
+  "date": "2026-09-23",
+  "supersedes_current_requirements_in": "../direct-hinge/requirements.json",
+  "status": "design_requirements_accepted_hardware_qualification_pending",
+  "battery_service": {
+    "date": "2026-09-22",
+    "revision": "D6.9",
+    "CAD": "fixed-deck/AMR01_FixedDeck_D69.FCStd",
+    "design_intent_ja": "1階へ電池・計算機・電源を配置し、2階を格子穴アルミ荷台とする。電池は8mm持上げ後に後方220mmへ抜く。荷台と荷物は残す。",
+    "battery_product_selected": true,
+    "battery_part": "Makita BL1860B A-60464",
+    "charger_part": "Makita DC18RF",
+    "adapter_part": "Netkey diy-adapter03",
+    "battery_catalog_LWH_mm": [
+      113,
+      75,
+      62
+    ],
+    "battery_installed_XYZ_mm": [
+      113,
+      75,
+      62
+    ],
+    "battery_origin_xyz_mm": [
+      -193,
+      -37.5,
+      104
+    ],
+    "additional_metal_machining": false,
+    "retention": "1F padded seat and25mm belt. Four panels, each3 dispersed M6 to outer/end3030 rails plus1 ordinary M4 cap with OD12 top/bottom washers through central PLA beam; beam has2 M6 at each end. Outer corners are continuous; auxiliary flat gussets removed. Existing8 HBLFSN6 joints retain the metal frame independently; no frame bracing credit is assigned to PLA.",
+    "ground_clearance_mm": 25,
+    "disconnect_before_withdrawal": true,
+    "prototype_retention_test_force_N": 45,
+    "prototype_retention_test_done": false,
+    "actual_latched_adapter_envelope_measured": false,
+    "loaded_use_released": false,
+    "service_waypoints_xyz_mm": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        8
+      ],
+      [
+        -220,
+        0,
+        8
+      ]
+    ]
+  },
+  "deck_manufacturing_constraints": {
+    "date": "2026-09-22",
+    "self_cut_and_drill_solid_square_bar_accepted": false,
+    "decision_ja": "15mm角の中実アルミ棒を自宅で切断・穴あけする荷台支持案は不採用。既製の穴・溝と対応金具で締結できる構成を優先する。",
+    "affected_designs": [
+      "P0 four support bars",
+      "D2 six support blocks and four cargo stops from the same square stock"
+    ],
+    "replacement_selected": true,
+    "selected_revision": "D6.9 fixed plate: six M6x12 screws onto two existing upper3030 rails",
+    "user_clarification_ja": "計算機を下へ吊る案を撤回。1階に電池・計算機、2階に荷台。ロボコン機体等の構成を参考にする。",
+    "replacement_ja": "100mm溝付き支柱4本、300mm上段レール2本、金属端面で支持。荷台上面233mm。棚の4分割PLAは電装専用。",
+    "replacement_CAD": "fixed-deck/AMR01_FixedDeck_D69.FCStd",
+    "loaded_use_released": false,
+    "scope_note": "This rejection concerns the deck's square-bar fabrication. Previously quoted custom motor mounts remain separately specified."
+  },
+  "operation_scope": {
+    "environment": "Level, smooth indoor floors only; ramps and slope parking are outside the first prototype scope.",
+    "additional_mechanical_brake_selected": false,
+    "power_off_slope_holding_required": false,
+    "slope_operation_in_scope": false,
+    "normal_stopping": "Motor-controlled deceleration and stopping, subject to flat-floor acceptance tests.",
+    "emergency_stop": "Retain independent motor power isolation and verify the resulting flat-floor stopping distance.",
+    "decision_basis": "User explicitly declined the additional brake after the flat-floor-first proposal. This changes scope, not proof of unpowered holding."
+  },
+  "mass": {
+    "base_max_kg": 11.5,
+    "normal_payload_kg": 10,
+    "structural_payload_kg": 15,
+    "structural_gross_kg": 26.5,
+    "interpretation": "Cargo only:normal10kg;staticstructuralcomparison15kg. Vehicle review11.5kg means21.5/26.5kg gross.",
+    "future_arm": "Include any arm, gripper, sensors and additions in measured vehicle mass/CG and re-evaluate wheel loads.10kg is a soft vehicle target.",
+    "user_confirmation": "User explicitly relaxed the strict10kg vehicle limit. Keep necessary floor/frame support; retain normal cargo10kg and structural cargo15kg/SF2 targets.",
+    "base_target_kg": 10,
+    "base_target_is_hard_limit": false,
+    "base_max_basis": "D6.9 calculation envelope, not a hard user mass limit; re-evaluate actual mass/CG outsidebounds."
+  },
+  "geometry": {
+    "frame_outer_LW_mm": [
+      460,
+      300
+    ],
+    "frame_bottom_top_z_mm": [
+      69,
+      99
+    ],
+    "stock_3030_lengths_mm": [
+      400,
+      400,
+      400,
+      400,
+      300,
+      300,
+      300,
+      300,
+      100,
+      100,
+      100,
+      100
+    ],
+    "drive_axis_x_mm": 90,
+    "drive_track_mm": 349,
+    "wheel_diameter_mm": 100.7,
+    "drive_axis_z_mm": 50.35,
+    "caster_pivot_xy_mm": [
+      -150,
+      0
+    ],
+    "caster_trail_mm": 16,
+    "caster_mounting_height_mm": 65,
+    "caster_mounting_height_tolerance_plus_minus_mm": 1.5,
+    "caster_trail_tolerance_plus_minus_mm": 1.5,
+    "caster_tolerance_note": "Nominal rigid-body calculations retain16mm trail. Received height/trail tolerances, tire compression and exact fork sweep require acceptance checks; nominal equality is not operating release.",
+    "caster_samples": 720,
+    "minimum_fixed_ground_clearance_mm": 25,
+    "motor_mount_spacer_count": 0,
+    "tire_axial_stack_confirmed": false,
+    "historical_D3_direct_deck": {
+      "LWT_mm": [
+        300,
+        300,
+        4
+      ],
+      "bottom_top_z_mm": [
+        99,
+        103
+      ],
+      "upper_frame_count": 0,
+      "under_deck_spacer_count": 0,
+      "frame_fastener_count": 6,
+      "grid_pitch_mm": 50,
+      "grid_count": 36,
+      "grid_y_offset_mm": 10,
+      "battery_cradle_floor_z_mm": 25
+    },
+    "historical_D5_power_module": {
+      "battery_bottom_top_z_mm": [
+        112,
+        174
+      ],
+      "adapter_conservative_top_z_mm": 204,
+      "buckle_rear_x_mm": -272,
+      "frame_rear_x_mm": -230,
+      "computer_origin_LWH_mm": [
+        -45,
+        -40,
+        30,
+        70,
+        80,
+        40
+      ]
+    },
+    "D6_two_storey": {
+      "floor_bottom_top_z_mm": [
+        99,
+        101.4
+      ],
+      "equipment_seat_z_mm": 104,
+      "upright_length_mm": 100,
+      "upright_qty": 4,
+      "upper_rail_qty": 2,
+      "upper_rail_length_mm": 300,
+      "deck_bottom_top_z_mm": [
+        229,
+        233
+      ],
+      "battery_bottom_top_z_mm": [
+        104,
+        166
+      ],
+      "adapter_top_z_mm": 196,
+      "computer_origin_LWH_mm": [
+        -60,
+        -50,
+        110,
+        120,
+        100,
+        60
+      ],
+      "grid_plain_nut_count": 30,
+      "grid_slotnut_count": 6,
+      "computer_service_waypoints_xyz_mm": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          8
+        ],
+        [
+          0,
+          -230,
+          8
+        ]
+      ],
+      "post_joints": {
+        "revision": "D6.1",
+        "lower_brackets_per_post": 2,
+        "upper_brackets_per_post": 1,
+        "HBLFSN6_qty": 12,
+        "M6x12_qty": 24,
+        "HNTT6_6_qty": 24,
+        "decision_ja": "根元4箇所の両側固定を維持。通常積載10kg。D6.2で車体10kgは目安へ変更。方向別剛性・実物試験は未完了。"
+      },
+      "floor_fixing_revision": "D6.4: four fixings per panel; central M4 plain holes, standard cap screws and OD12 washers on both faces. PC on four integral10x10x5.6mm hard supports,1mm liners, seat108mm. Outer M6 corner screws and independent metal frame joints retained. D6.5: continuous removable PLA barrier over all four seam screws/washers, no component-side through holes; PC case seat110mm.",
+      "computer_seat_z_mm": 110,
+      "computer_supports": {
+        "quantity": 4,
+        "integral_PLA_size_mm": [
+          10,
+          10,
+          5.6
+        ],
+        "liner_t_mm": 1,
+        "centers_XY_mm": [
+          [
+            -50,
+            -40
+          ],
+          [
+            -50,
+            40
+          ],
+          [
+            50,
+            -40
+          ],
+          [
+            50,
+            40
+          ]
+        ],
+        "plain_M4_hole_mm": 4.5,
+        "top_and_bottom_washer_OD_mm": 12
+      },
+      "computer_barrier": {
+        "material": "nonconductive unfilled PLA",
+        "part": "ComputerBarrierPLA",
+        "outer_mm": [
+          123.4,
+          103.4,
+          12.4
+        ],
+        "continuous_floor_mm": 2,
+        "floor_z_mm": [
+          107,
+          109
+        ],
+        "through_holes": 0,
+        "printed": false,
+        "dielectric_strength_qualified": false,
+        "retention": "captured inside floor locators and under installed case/retaining belt",
+        "bare_PCB_mounting": "Product-specific insulating enclosure or mounting-hole standoffs required. Board underside clearance, mounting screws, cooling and mass remain to select; no bare board strapped to case pads."
+      }
+    }
+  },
+  "load_placement": {
+    "reviewed_base_mass_interval_kg": [
+      6,
+      11.5
+    ],
+    "base_cg_x_interval_mm": [
+      -25,
+      25
+    ],
+    "base_cg_y_interval_mm": [
+      -20,
+      20
+    ],
+    "base_cg_max_z_mm": 160,
+    "payload_cg_x_interval_mm": [
+      -30,
+      30
+    ],
+    "payload_cg_y_interval_mm": [
+      -30,
+      30
+    ],
+    "payload_cg_max_z_mm": 330,
+    "status": "D6.9 fixed-deck acceptance bounds. Conditional CAD model recorded inpayload_budget.json; actual cases/wiring/printmass not measured. Deck removal requires unloading, power isolation and six screw removal.",
+    "change_control": "Recalculate before operating outside any reviewed mass, CG, support, tire or acceleration limit."
+  },
+  "drive": {
+    "motor": "M0601C_111 x 2",
+    "rated_torque_Nm_each": 0.96,
+    "rated_speed_rpm": 115,
+    "rated_voltage_V": 18,
+    "acceleration_and_service_deceleration_max_m_s2": 0.2,
+    "initial_speed_m_s": 0.15,
+    "initial_yaw_rate_rad_s": 0.3,
+    "later_speed_m_s": 0.3,
+    "later_yaw_rate_rad_s": 0.6,
+    "lateral_acceleration_comparison_m_s2": 0.18,
+    "rolling_resistance_assumption": 0.03,
+    "continuous_torque_sizing_margin": 1.5,
+    "gravity_m_s2": 9.80665,
+    "motor_spec_source": "https://shop.directdrive.com/pages/m0601c-111-specs",
+    "rated_low_speed_torque_verified": false,
+    "speed_note": "The initial limits apply first. Later limits require the thermal, stopping and handling checks. Stall torque is not used for continuous sizing."
+  },
+  "cases": [
+    {
+      "id": "normal",
+      "payload_kg": 10,
+      "slope_deg": 0,
+      "acceleration_m_s2": 0.2,
+      "lateral_acceleration_m_s2": 0.18,
+      "purpose": "normal flat-floor operating design"
+    },
+    {
+      "id": "structure",
+      "payload_kg": 15,
+      "slope_deg": 0,
+      "acceleration_m_s2": 0,
+      "lateral_acceleration_m_s2": 0,
+      "purpose": "static structural verification, not a 15 kg operating rating"
+    }
+  ],
+  "reference_cases": [
+    {
+      "id": "slope",
+      "payload_kg": 8,
+      "slope_deg": 5,
+      "acceleration_m_s2": 0.2,
+      "lateral_acceleration_m_s2": 0.18,
+      "purpose": "historical slope comparison only; outside current prototype operation and required qualification",
+      "in_current_operation_scope": false
+    }
+  ],
+  "strength": {
+    "target_static_safety_factor": 2,
+    "mount_comparison_vertical_N": 250.069575,
+    "mount_comparison_torque_Nm": 0.96,
+    "mount_comparison_lateral_N": 30,
+    "comparison_note": "Entire25.5kg reviewed gross weight on one isolated mount is a conservative fixture comparison, not a permissible motor wheel load or impact qualification.",
+    "certified_material_yield_MPa": null,
+    "procurement_minimum_yield_MPa": 240,
+    "achieved": false,
+    "motor_female_thread_material_confirmed": false,
+    "frame_slot_pullout_verified": false,
+    "contact_and_preload_verified": false
+  },
+  "catalog_comparison_only": {
+    "motor_radial_N": 120,
+    "motor_axial_N": 60,
+    "motor_load_datum_and_revision_confirmed": false,
+    "motor_combined_load_rule_known": false,
+    "caster_allowable_N": 300,
+    "caster_model": "TRUSCO TYG-50",
+    "caster_source": "https://image.trusco-sterra2.com/pdf/zumen/TYG50_4600__ZM.pdf",
+    "note": "Catalog allowable loads are not yield loads and are not divided by the structural safety factor."
+  },
+  "operation_release": {
+    "released": false,
+    "initial_test_floor": "Level, smooth indoor floor, contained test area, initially unloaded.",
+    "step_crossing": "No intentional step crossing; impact factor and tire compliance are unqualified.",
+    "cargo_restraint_required": true,
+    "slope_operation_in_scope": false,
+    "slope_hold_verified": false,
+    "regeneration_handling_verified": false,
+    "minimum_bus_voltage_performance_verified": false,
+    "thermal_duration_verified": false,
+    "note": "Flat-floor cargo 10 kg is released only after the linked hardware acceptance tests. Slope operation and power-off slope holding are outside this prototype scope, rather than pending mandatory brake procurement."
+  },
+  "design_revision": "D6.9",
+  "current_layout": {
+    "revision": "D6.9",
+    "CAD": "AMR01_FixedDeck_D69.FCStd",
+    "controls": "parameters.json",
+    "fixed_deck": "parameters.json",
+    "old_D65_requirements_preserved_for_FEM": true
+  },
+  "fixed_deck_requirements": {
+    "fastener": "M6x12 socket cap + HNTT6-6",
+    "fastener_qty": 6,
+    "three_fixings_per_side": true,
+    "hinges": false,
+    "additional_machined_angles": false,
+    "deck_service": "Unload, isolate power, remove six screws, lift deck vertically",
+    "battery_service_requires_deck_removal": false,
+    "actual_joint_preload_and_pullout_verified": false
+  }
+}

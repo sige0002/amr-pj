@@ -1,0 +1,1024 @@
+{
+  "parameters": {
+    "battery_harness_points": [
+      [
+        -160,
+        45,
+        181
+      ],
+      [
+        -160,
+        95,
+        181
+      ],
+      [
+        -178,
+        95,
+        181
+      ],
+      [
+        -178,
+        100,
+        181
+      ],
+      [
+        -195,
+        100,
+        181
+      ],
+      [
+        -195,
+        100,
+        172
+      ],
+      [
+        -195,
+        82,
+        172
+      ]
+    ],
+    "operator_side": "rear -X",
+    "estop": {
+      "part": "IDEC XA1E-BV302R",
+      "panel_center_mm": [
+        -197,
+        -103,
+        160.4
+      ]
+    },
+    "arm": {
+      "part": "amon 3212",
+      "panel_center_mm": [
+        -201,
+        -69,
+        160.4
+      ]
+    },
+    "main_power": {
+      "part": "amon 3214",
+      "panel_center_mm": [
+        -201,
+        64,
+        156.4
+      ]
+    },
+    "revision": "D6.9",
+    "date": "2026-09-23",
+    "attachment": "fixed bolted deck",
+    "plate_size_mm": [
+      300,
+      300,
+      4
+    ],
+    "plate_z_mm": [
+      229,
+      233
+    ],
+    "fastener": "M6x12 socket cap + HNTT6-6 slot nut",
+    "fastener_qty": 6,
+    "mounting_xy_mm": [
+      [
+        -105,
+        -135
+      ],
+      [
+        -105,
+        135
+      ],
+      [
+        0,
+        -135
+      ],
+      [
+        0,
+        135
+      ],
+      [
+        105,
+        -135
+      ],
+      [
+        105,
+        135
+      ]
+    ],
+    "support": "Two existing upper 3030 rails; three fasteners on each rail",
+    "washers": false,
+    "countersinks": false,
+    "hinges": false,
+    "additional_machined_angles": false,
+    "battery_service_requires_deck_removal": false,
+    "unload_before_deck_removal": true,
+    "deck_service_waypoints_xyz_mm": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        120
+      ]
+    ],
+    "production_release": false
+  },
+  "new_objects": [
+    "DeckBolt0",
+    "DeckBolt1",
+    "DeckBolt2",
+    "DeckBolt3",
+    "DeckBolt4",
+    "DeckBolt5",
+    "DeckSlotNut1",
+    "DeckSlotNut2",
+    "DeckSlotNut3",
+    "DeckSlotNut5"
+  ],
+  "changed_objects": [
+    "AluminumDeckD3",
+    "DeckSlotNut0",
+    "DeckSlotNut4"
+  ],
+  "removed_objects": [
+    "LidAngle_0",
+    "HingeFrameBolt_0_0",
+    "HingeFrameWasher_0_0",
+    "HingeFrameNut_0_0",
+    "HingeLidBolt_0_0",
+    "HingeLidTopWasher_0_0",
+    "HingeLidNut_0_0",
+    "AngleDeckBolt_0_0",
+    "AngleDeckWasher_0_0",
+    "AngleDeckNut_0_0",
+    "HingeFrameBolt_0_1",
+    "HingeFrameWasher_0_1",
+    "HingeFrameNut_0_1",
+    "HingeLidBolt_0_1",
+    "HingeLidTopWasher_0_1",
+    "HingeLidNut_0_1",
+    "AngleDeckBolt_0_1",
+    "AngleDeckWasher_0_1",
+    "AngleDeckNut_0_1",
+    "HGTP20_Fixed_0",
+    "HGTP20_Moving_0",
+    "LidAngle_1",
+    "HingeFrameBolt_1_0",
+    "HingeFrameWasher_1_0",
+    "HingeFrameNut_1_0",
+    "HingeLidBolt_1_0",
+    "HingeLidTopWasher_1_0",
+    "HingeLidNut_1_0",
+    "AngleDeckBolt_1_0",
+    "AngleDeckWasher_1_0",
+    "AngleDeckNut_1_0",
+    "HingeFrameBolt_1_1",
+    "HingeFrameWasher_1_1",
+    "HingeFrameNut_1_1",
+    "HingeLidBolt_1_1",
+    "HingeLidTopWasher_1_1",
+    "HingeLidNut_1_1",
+    "AngleDeckBolt_1_1",
+    "AngleDeckWasher_1_1",
+    "AngleDeckNut_1_1",
+    "HGTP20_Fixed_1",
+    "HGTP20_Moving_1",
+    "HatchLockWasher_0_0",
+    "HatchLockWasher_0_1",
+    "HatchLockWasher_0_2",
+    "HatchLockWingBolt_0",
+    "HatchLockWasher_1_0",
+    "HatchLockWasher_1_1",
+    "HatchLockWasher_1_2",
+    "HatchLockWingBolt_1"
+  ],
+  "restored_D65_objects": [
+    "AluminumDeckD3",
+    "DeckBolt0",
+    "DeckBolt1",
+    "DeckBolt2",
+    "DeckBolt3",
+    "DeckBolt4",
+    "DeckBolt5",
+    "DeckSlotNut0",
+    "DeckSlotNut1",
+    "DeckSlotNut2",
+    "DeckSlotNut3",
+    "DeckSlotNut4",
+    "DeckSlotNut5"
+  ],
+  "retained_shapes_BRep_equal": true,
+  "source_native_sha256": "1f5e727fdc878121e95d0011455152ecff6c780f6d5115b8264334074d5cf68c",
+  "restoration_source_sha256": "7a9798e5f8c0f5045029e37143bbb3b625a548ea4855cb096cd126c6e4862bf8",
+  "physical_parts": 329,
+  "deck_mounts": [
+    {
+      "bolt": "DeckBolt0",
+      "nut": "DeckSlotNut0",
+      "xy_mm": [
+        -105,
+        -135
+      ],
+      "plate_thickness_mm": 4,
+      "slot_projection_mm": 8,
+      "slot_floor_clearance_mm": 1
+    },
+    {
+      "bolt": "DeckBolt1",
+      "nut": "DeckSlotNut1",
+      "xy_mm": [
+        -105,
+        135
+      ],
+      "plate_thickness_mm": 4,
+      "slot_projection_mm": 8,
+      "slot_floor_clearance_mm": 1
+    },
+    {
+      "bolt": "DeckBolt2",
+      "nut": "DeckSlotNut2",
+      "xy_mm": [
+        0,
+        -135
+      ],
+      "plate_thickness_mm": 4,
+      "slot_projection_mm": 8,
+      "slot_floor_clearance_mm": 1
+    },
+    {
+      "bolt": "DeckBolt3",
+      "nut": "DeckSlotNut3",
+      "xy_mm": [
+        0,
+        135
+      ],
+      "plate_thickness_mm": 4,
+      "slot_projection_mm": 8,
+      "slot_floor_clearance_mm": 1
+    },
+    {
+      "bolt": "DeckBolt4",
+      "nut": "DeckSlotNut4",
+      "xy_mm": [
+        105,
+        -135
+      ],
+      "plate_thickness_mm": 4,
+      "slot_projection_mm": 8,
+      "slot_floor_clearance_mm": 1
+    },
+    {
+      "bolt": "DeckBolt5",
+      "nut": "DeckSlotNut5",
+      "xy_mm": [
+        105,
+        135
+      ],
+      "plate_thickness_mm": 4,
+      "slot_projection_mm": 8,
+      "slot_floor_clearance_mm": 1
+    }
+  ],
+  "case_mounts": [
+    {
+      "case": "RearStop",
+      "panel": "FloorPLA_0_0",
+      "bolt": "RearStopFloorBolt_0",
+      "xy_mm": [
+        -220,
+        -107
+      ],
+      "thread_engagement_mm": 3.2,
+      "tip_z_mm": 101.4,
+      "roof_above_pocket_mm": 3.5
+    },
+    {
+      "case": "RearStop",
+      "panel": "FloorPLA_0_0",
+      "bolt": "RearStopFloorBolt_1",
+      "xy_mm": [
+        -172,
+        -107
+      ],
+      "thread_engagement_mm": 3.2,
+      "tip_z_mm": 101.4,
+      "roof_above_pocket_mm": 3.5
+    },
+    {
+      "case": "RearStop",
+      "panel": "FloorPLA_0_0",
+      "bolt": "RearStopFloorBolt_2",
+      "xy_mm": [
+        -220,
+        -63
+      ],
+      "thread_engagement_mm": 3.2,
+      "tip_z_mm": 101.4,
+      "roof_above_pocket_mm": 3.5
+    },
+    {
+      "case": "RearStop",
+      "panel": "FloorPLA_0_0",
+      "bolt": "RearStopFloorBolt_3",
+      "xy_mm": [
+        -172,
+        -63
+      ],
+      "thread_engagement_mm": 3.2,
+      "tip_z_mm": 101.4,
+      "roof_above_pocket_mm": 3.5
+    },
+    {
+      "case": "RearPower",
+      "panel": "FloorPLA_0_1",
+      "bolt": "RearPowerFloorBolt_0",
+      "xy_mm": [
+        -220,
+        58
+      ],
+      "thread_engagement_mm": 3.2,
+      "tip_z_mm": 101.4,
+      "roof_above_pocket_mm": 3.5
+    },
+    {
+      "case": "RearPower",
+      "panel": "FloorPLA_0_1",
+      "bolt": "RearPowerFloorBolt_1",
+      "xy_mm": [
+        -172,
+        58
+      ],
+      "thread_engagement_mm": 3.2,
+      "tip_z_mm": 101.4,
+      "roof_above_pocket_mm": 3.5
+    },
+    {
+      "case": "RearPower",
+      "panel": "FloorPLA_0_1",
+      "bolt": "RearPowerFloorBolt_2",
+      "xy_mm": [
+        -220,
+        70
+      ],
+      "thread_engagement_mm": 3.2,
+      "tip_z_mm": 101.4,
+      "roof_above_pocket_mm": 3.5
+    },
+    {
+      "case": "RearPower",
+      "panel": "FloorPLA_0_1",
+      "bolt": "RearPowerFloorBolt_3",
+      "xy_mm": [
+        -172,
+        70
+      ],
+      "thread_engagement_mm": 3.2,
+      "tip_z_mm": 101.4,
+      "roof_above_pocket_mm": 3.5
+    }
+  ],
+  "moving_deck_parts": [
+    "PrintedStopXN",
+    "PrintedStopXP",
+    "PrintedStopYN",
+    "PrintedStopYP",
+    "StopBolt0",
+    "StopWasher0",
+    "StopNut0",
+    "StopBolt1",
+    "StopWasher1",
+    "StopNut1",
+    "StopBolt2",
+    "StopWasher2",
+    "StopNut2",
+    "StopBolt3",
+    "StopWasher3",
+    "StopNut3",
+    "StopBolt4",
+    "StopWasher4",
+    "StopNut4",
+    "StopBolt5",
+    "StopWasher5",
+    "StopNut5",
+    "StopBolt6",
+    "StopWasher6",
+    "StopNut6",
+    "StopBolt7",
+    "StopWasher7",
+    "StopNut7",
+    "AluminumDeckD3"
+  ],
+  "released_before_deck_removal": [
+    "DeckBolt0",
+    "DeckBolt1",
+    "DeckBolt2",
+    "DeckBolt3",
+    "DeckBolt4",
+    "DeckBolt5",
+    "StrapRouteX",
+    "StrapRouteY",
+    "CargoEnvelopeD3"
+  ],
+  "mass": {
+    "estimated_base_kg": 10.383805922890572,
+    "source_kg": 10.615076958402836,
+    "ledger": [
+      {
+        "name": "remove LidAngle_0",
+        "mass_kg": -0.03629367491813202,
+        "center_mm": [
+          -105.0,
+          131.23954754046343,
+          237.86103134136226
+        ]
+      },
+      {
+        "name": "remove HingeFrameBolt_0_0",
+        "mass_kg": -0.0021948737074305095,
+        "center_mm": [
+          -120.0,
+          151.85393258426967,
+          214.0
+        ]
+      },
+      {
+        "name": "remove HingeFrameWasher_0_0",
+        "mass_kg": -0.000762965228355408,
+        "center_mm": [
+          -120.00000000000003,
+          152.5,
+          213.99999999999997
+        ]
+      },
+      {
+        "name": "remove HingeFrameNut_0_0",
+        "mass_kg": -0.0046998450878849365,
+        "center_mm": [
+          -120.0,
+          145.26653020328175,
+          214.0
+        ]
+      },
+      {
+        "name": "remove HingeLidBolt_0_0",
+        "mass_kg": -0.0027867497633668266,
+        "center_mm": [
+          -120.0,
+          149.33628318584073,
+          246.0
+        ]
+      },
+      {
+        "name": "remove HingeLidTopWasher_0_0",
+        "mass_kg": -0.000762965228355408,
+        "center_mm": [
+          -120.00000000000003,
+          152.5,
+          245.99999999999994
+        ]
+      },
+      {
+        "name": "remove HingeLidNut_0_0",
+        "mass_kg": -0.0007179502281196346,
+        "center_mm": [
+          -120.0,
+          144.4,
+          246.00000000000003
+        ]
+      },
+      {
+        "name": "remove AngleDeckBolt_0_0",
+        "mass_kg": -0.002786749763366825,
+        "center_mm": [
+          -120.00000000000001,
+          109.00000000000001,
+          233.3362831858407
+        ]
+      },
+      {
+        "name": "remove AngleDeckWasher_0_0",
+        "mass_kg": -0.0007629652283554084,
+        "center_mm": [
+          -119.99999999999997,
+          108.99999999999999,
+          228.49999999999994
+        ]
+      },
+      {
+        "name": "remove AngleDeckNut_0_0",
+        "mass_kg": -0.0007179502281196347,
+        "center_mm": [
+          -120.0,
+          109.00000000000001,
+          226.40000000000003
+        ]
+      },
+      {
+        "name": "remove HingeFrameBolt_0_1",
+        "mass_kg": -0.0021948737074305095,
+        "center_mm": [
+          -90.00000000000001,
+          151.85393258426967,
+          214.0
+        ]
+      },
+      {
+        "name": "remove HingeFrameWasher_0_1",
+        "mass_kg": -0.000762965228355408,
+        "center_mm": [
+          -90.0,
+          152.5,
+          213.99999999999997
+        ]
+      },
+      {
+        "name": "remove HingeFrameNut_0_1",
+        "mass_kg": -0.0046998450878849365,
+        "center_mm": [
+          -90.0,
+          145.26653020328175,
+          214.0
+        ]
+      },
+      {
+        "name": "remove HingeLidBolt_0_1",
+        "mass_kg": -0.0027867497633668266,
+        "center_mm": [
+          -90.00000000000001,
+          149.33628318584073,
+          246.0
+        ]
+      },
+      {
+        "name": "remove HingeLidTopWasher_0_1",
+        "mass_kg": -0.000762965228355408,
+        "center_mm": [
+          -90.0,
+          152.5,
+          245.99999999999994
+        ]
+      },
+      {
+        "name": "remove HingeLidNut_0_1",
+        "mass_kg": -0.0007179502281196344,
+        "center_mm": [
+          -90.0,
+          144.4,
+          246.00000000000003
+        ]
+      },
+      {
+        "name": "remove AngleDeckBolt_0_1",
+        "mass_kg": -0.002786749763366825,
+        "center_mm": [
+          -90.0,
+          109.00000000000001,
+          233.3362831858407
+        ]
+      },
+      {
+        "name": "remove AngleDeckWasher_0_1",
+        "mass_kg": -0.0007629652283554084,
+        "center_mm": [
+          -90.00000000000001,
+          108.99999999999999,
+          228.49999999999994
+        ]
+      },
+      {
+        "name": "remove AngleDeckNut_0_1",
+        "mass_kg": -0.0007179502281196347,
+        "center_mm": [
+          -90.0,
+          109.00000000000001,
+          226.40000000000003
+        ]
+      },
+      {
+        "name": "remove HGTP20_Fixed_0",
+        "mass_kg": -0.03,
+        "center_mm": [
+          -104.99999999999993,
+          153.06453790286332,
+          221.2071155417495
+        ]
+      },
+      {
+        "name": "remove HGTP20_Moving_0",
+        "mass_kg": -0.03,
+        "center_mm": [
+          -105.00000000000003,
+          154.39153318766296,
+          234.50987535351504
+        ]
+      },
+      {
+        "name": "remove LidAngle_1",
+        "mass_kg": -0.03629367491813202,
+        "center_mm": [
+          105.0,
+          131.23954754046343,
+          237.86103134136226
+        ]
+      },
+      {
+        "name": "remove HingeFrameBolt_1_0",
+        "mass_kg": -0.0021948737074305095,
+        "center_mm": [
+          90.00000000000001,
+          151.85393258426967,
+          214.0
+        ]
+      },
+      {
+        "name": "remove HingeFrameWasher_1_0",
+        "mass_kg": -0.000762965228355408,
+        "center_mm": [
+          90.0,
+          152.5,
+          213.99999999999997
+        ]
+      },
+      {
+        "name": "remove HingeFrameNut_1_0",
+        "mass_kg": -0.0046998450878849365,
+        "center_mm": [
+          90.0,
+          145.26653020328175,
+          214.0
+        ]
+      },
+      {
+        "name": "remove HingeLidBolt_1_0",
+        "mass_kg": -0.0027867497633668266,
+        "center_mm": [
+          90.00000000000001,
+          149.33628318584073,
+          246.0
+        ]
+      },
+      {
+        "name": "remove HingeLidTopWasher_1_0",
+        "mass_kg": -0.000762965228355408,
+        "center_mm": [
+          90.0,
+          152.5,
+          245.99999999999994
+        ]
+      },
+      {
+        "name": "remove HingeLidNut_1_0",
+        "mass_kg": -0.0007179502281196346,
+        "center_mm": [
+          90.0,
+          144.4,
+          246.00000000000003
+        ]
+      },
+      {
+        "name": "remove AngleDeckBolt_1_0",
+        "mass_kg": -0.002786749763366825,
+        "center_mm": [
+          90.00000000000001,
+          109.00000000000001,
+          233.3362831858407
+        ]
+      },
+      {
+        "name": "remove AngleDeckWasher_1_0",
+        "mass_kg": -0.0007629652283554084,
+        "center_mm": [
+          90.0,
+          108.99999999999999,
+          228.49999999999994
+        ]
+      },
+      {
+        "name": "remove AngleDeckNut_1_0",
+        "mass_kg": -0.0007179502281196348,
+        "center_mm": [
+          90.0,
+          109.0,
+          226.39999999999998
+        ]
+      },
+      {
+        "name": "remove HingeFrameBolt_1_1",
+        "mass_kg": -0.0021948737074305095,
+        "center_mm": [
+          120.0,
+          151.85393258426967,
+          214.0
+        ]
+      },
+      {
+        "name": "remove HingeFrameWasher_1_1",
+        "mass_kg": -0.000762965228355408,
+        "center_mm": [
+          120.00000000000003,
+          152.5,
+          213.99999999999997
+        ]
+      },
+      {
+        "name": "remove HingeFrameNut_1_1",
+        "mass_kg": -0.0046998450878849365,
+        "center_mm": [
+          120.0,
+          145.26653020328175,
+          214.0
+        ]
+      },
+      {
+        "name": "remove HingeLidBolt_1_1",
+        "mass_kg": -0.0027867497633668266,
+        "center_mm": [
+          120.0,
+          149.33628318584073,
+          246.0
+        ]
+      },
+      {
+        "name": "remove HingeLidTopWasher_1_1",
+        "mass_kg": -0.000762965228355408,
+        "center_mm": [
+          120.00000000000003,
+          152.5,
+          245.99999999999994
+        ]
+      },
+      {
+        "name": "remove HingeLidNut_1_1",
+        "mass_kg": -0.0007179502281196346,
+        "center_mm": [
+          120.0,
+          144.4,
+          246.00000000000003
+        ]
+      },
+      {
+        "name": "remove AngleDeckBolt_1_1",
+        "mass_kg": -0.002786749763366825,
+        "center_mm": [
+          120.00000000000001,
+          109.00000000000001,
+          233.3362831858407
+        ]
+      },
+      {
+        "name": "remove AngleDeckWasher_1_1",
+        "mass_kg": -0.0007629652283554084,
+        "center_mm": [
+          119.99999999999999,
+          108.99999999999999,
+          228.49999999999994
+        ]
+      },
+      {
+        "name": "remove AngleDeckNut_1_1",
+        "mass_kg": -0.0007179502281196347,
+        "center_mm": [
+          120.0,
+          109.00000000000001,
+          226.40000000000003
+        ]
+      },
+      {
+        "name": "remove HGTP20_Fixed_1",
+        "mass_kg": -0.03,
+        "center_mm": [
+          105.00000000000006,
+          153.0645379028633,
+          221.20711554174943
+        ]
+      },
+      {
+        "name": "remove HGTP20_Moving_1",
+        "mass_kg": -0.03,
+        "center_mm": [
+          104.99999999999999,
+          154.39153318766296,
+          234.50987535351504
+        ]
+      },
+      {
+        "name": "remove HatchLockWasher_0_0",
+        "mass_kg": -0.0017370945704172631,
+        "center_mm": [
+          -104.99999999999997,
+          -135.0,
+          233.5
+        ]
+      },
+      {
+        "name": "remove HatchLockWasher_0_1",
+        "mass_kg": -0.0017370945704172631,
+        "center_mm": [
+          -104.99999999999997,
+          -135.0,
+          234.50000000000006
+        ]
+      },
+      {
+        "name": "remove HatchLockWasher_0_2",
+        "mass_kg": -0.0017370945704172631,
+        "center_mm": [
+          -104.99999999999997,
+          -135.0,
+          235.5
+        ]
+      },
+      {
+        "name": "remove HatchLockWingBolt_0",
+        "mass_kg": -0.013342915489442773,
+        "center_mm": [
+          -105.00000000000003,
+          -135.00000000000003,
+          239.23142629034143
+        ]
+      },
+      {
+        "name": "remove HatchLockWasher_1_0",
+        "mass_kg": -0.0017370945704172631,
+        "center_mm": [
+          105.0,
+          -135.0,
+          233.5
+        ]
+      },
+      {
+        "name": "remove HatchLockWasher_1_1",
+        "mass_kg": -0.0017370945704172631,
+        "center_mm": [
+          105.0,
+          -135.0,
+          234.50000000000006
+        ]
+      },
+      {
+        "name": "remove HatchLockWasher_1_2",
+        "mass_kg": -0.0017370945704172631,
+        "center_mm": [
+          105.0,
+          -135.0,
+          235.5
+        ]
+      },
+      {
+        "name": "remove HatchLockWingBolt_1",
+        "mass_kg": -0.013342915489442773,
+        "center_mm": [
+          105.00000000000003,
+          -135.00000000000003,
+          239.23142629034143
+        ]
+      },
+      {
+        "name": "remove AluminumDeckD3",
+        "mass_kg": -0.9540960190451614,
+        "center_mm": [
+          -0.23400950455165787,
+          -0.16430295432594483,
+          231.00000000000006
+        ]
+      },
+      {
+        "name": "remove DeckSlotNut0",
+        "mass_kg": -0.006083424664393648,
+        "center_mm": [
+          -105.0,
+          -135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "remove DeckSlotNut4",
+        "mass_kg": -0.006083424664393648,
+        "center_mm": [
+          105.0,
+          -135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "restore AluminumDeckD3",
+        "mass_kg": 0.9547830853585014,
+        "center_mm": [
+          -0.23384111023251825,
+          -0.08574781826484722,
+          231.0
+        ]
+      },
+      {
+        "name": "restore DeckBolt0",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          -105.00000000000001,
+          -135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "restore DeckBolt1",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          -105.00000000000001,
+          135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "restore DeckBolt2",
+        "mass_kg": 0.006362667601315407,
+        "center_mm": [
+          -1.1396302734615186e-16,
+          -135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "restore DeckBolt3",
+        "mass_kg": 0.006362667601315407,
+        "center_mm": [
+          -1.1396302734615186e-16,
+          135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "restore DeckBolt4",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          105.0,
+          -135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "restore DeckBolt5",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          105.0,
+          135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "restore DeckSlotNut0",
+        "mass_kg": 0.006083424664393648,
+        "center_mm": [
+          -105.0,
+          -135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "restore DeckSlotNut1",
+        "mass_kg": 0.006083424664393648,
+        "center_mm": [
+          -105.0,
+          135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "restore DeckSlotNut2",
+        "mass_kg": 0.006083424664393648,
+        "center_mm": [
+          -1.5572240440709017e-15,
+          -135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "restore DeckSlotNut3",
+        "mass_kg": 0.006083424664393649,
+        "center_mm": [
+          -1.6571056853401438e-15,
+          135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "restore DeckSlotNut4",
+        "mass_kg": 0.006083424664393648,
+        "center_mm": [
+          105.0,
+          -135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "restore DeckSlotNut5",
+        "mass_kg": 0.006083424664393648,
+        "center_mm": [
+          105.0,
+          135.0,
+          224.83480988292342
+        ]
+      }
+    ],
+    "total_solid_PLA_kg": 0.887496598898364,
+    "actually_weighed": false
+  }
+}
