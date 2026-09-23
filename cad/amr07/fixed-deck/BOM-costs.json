@@ -1,7 +1,7 @@
 {
   "revision": "D6.9",
-  "BOM_sha256": "015621d0d5a9acab64f1c1709dddde8ac2399a5037d0c69bd0db7a9fd0dc00dd",
-  "denominator_JPY_reference": 98536.60313315927,
+  "BOM_sha256": "f5a774c2225e221a246d9aafa43f53041839c9de660027f721cc22dba5c88ffc",
+  "denominator_JPY_reference": 92017.60313315927,
   "categories": [
     {
       "category": "電池・充電器・アダプター",
@@ -12,7 +12,7 @@
         "POWER_ADAPTER",
         "POWER_ADAPTER_SHIP"
       ],
-      "percent_of_priced_subtotal": 23.727223444474742
+      "percent_of_priced_subtotal": 25.408181917286687
     },
     {
       "category": "フレーム・締結材・共通送料",
@@ -38,7 +38,7 @@
         "D64_FLOOR_WASHERS",
         "D64_FASTENER_SHIP"
       ],
-      "percent_of_priced_subtotal": 20.29702604317771
+      "percent_of_priced_subtotal": 21.73497169998861
     },
     {
       "category": "モーター",
@@ -46,7 +46,7 @@
       "source_ids": [
         "D01"
       ],
-      "percent_of_priced_subtotal": 14.207918230224397
+      "percent_of_priced_subtotal": 15.214480189992027
     },
     {
       "category": "モーター専用金具",
@@ -55,7 +55,7 @@
         "Q01",
         "S08"
       ],
-      "percent_of_priced_subtotal": 13.127331237758137
+      "percent_of_priced_subtotal": 14.057338860485563
     },
     {
       "category": "タイヤ・キャスター",
@@ -67,30 +67,7 @@
         "S02",
         "S06"
       ],
-      "percent_of_priced_subtotal": 10.567646609380475
-    },
-    {
-      "category": "制御・電源",
-      "JPY_reference": 8475.0,
-      "source_ids": [
-        "E02",
-        "ELEC_S1",
-        "ELEC_K1_K2",
-        "ELEC_U1",
-        "ELEC_U2",
-        "ELEC_U3",
-        "ELEC_PS1",
-        "ELEC_U4",
-        "ELEC_RDUMP",
-        "ELEC_U5",
-        "ELEC_U6",
-        "ELEC_QCLAMP",
-        "ELEC_PS2",
-        "ELEC_D0",
-        "ELEC_ARM",
-        "ELEC_MAIN"
-      ],
-      "percent_of_priced_subtotal": 8.600864785796555
+      "percent_of_priced_subtotal": 11.31631301559907
     },
     {
       "category": "天板（固定ボルトは共通締結材）",
@@ -99,7 +76,7 @@
         "DECK_plate",
         "DECK_CNC_SHIP"
       ],
-      "percent_of_priced_subtotal": 6.168648660660814
+      "percent_of_priced_subtotal": 6.6056674402160125
     },
     {
       "category": "PLA・ベルト",
@@ -112,7 +89,18 @@
         "POWER_PADS",
         "POWER_LOW_STRAPS"
       ],
-      "percent_of_priced_subtotal": 3.3033409885271725
+      "percent_of_priced_subtotal": 3.5373666441731464
+    },
+    {
+      "category": "操作部・USB線（電装主要部は未計上）",
+      "JPY_reference": 1956.0,
+      "source_ids": [
+        "E02",
+        "ELEC_U1",
+        "ELEC_ARM",
+        "ELEC_MAIN"
+      ],
+      "percent_of_priced_subtotal": 2.125680232258886
     }
   ],
   "complete_purchase_total": false

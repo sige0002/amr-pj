@@ -2,21 +2,36 @@
   "revision": "D6.9",
   "date": "2026-09-23",
   "subtotal": {
-    "JPY": 79523.0,
+    "JPY": 73004.0,
     "USD": 120.9
   },
   "FX_reference_JPY_per_USD": 157.26718885987816,
   "FX_date": "2026-09-21",
   "FX_basis": "Recorded 2026-09-21 reference, not current settlement rate",
-  "full_running_subtotal_JPY_reference": 98536.60313315927,
-  "difference_from_D68_JPY_reference": -15663.321148825067,
+  "full_running_subtotal_JPY_reference": 92017.60313315927,
+  "difference_from_D68_JPY_reference": -22182.321148825067,
+  "mechanical_difference_from_D68_JPY_reference": -15663.321148825067,
+  "withdrawn_electrical_reference_JPY": 6519.0,
+  "electrical_withdrawal_is_cost_saving": false,
   "removed_purchase_ids": [
     "HATCH_HINGES",
     "HATCH_METAL_ANGLES",
     "HATCH_FRAME_M4_NUT",
     "HATCH_FRAME_M4_BOLT",
     "HATCH_LOCKS",
-    "ELEC_CASE_WASHER"
+    "ELEC_CASE_WASHER",
+    "ELEC_S1",
+    "ELEC_K1_K2",
+    "ELEC_U2",
+    "ELEC_U3",
+    "ELEC_PS1",
+    "ELEC_U4",
+    "ELEC_RDUMP",
+    "ELEC_U5",
+    "ELEC_U6",
+    "ELEC_QCLAMP",
+    "ELEC_PS2",
+    "ELEC_D0"
   ],
   "machining_quote": {
     "source": "../aluminum-direct-deck/quote-evidence/D3-observed.json",
@@ -34,6 +49,8 @@
     "manual_review_complete": false,
     "order_placed": false
   },
+  "electrical_buildability_requirements": "../electrical-buildability/requirements.json",
+  "electrical_buildability_sha256": "aed8e4a2856bb2a51c17544890e21978f755150a4e807b4742b71bb884a9c8cf",
   "unpriced_rows": [
     "S04",
     "S07",
@@ -59,8 +76,11 @@
     "U17",
     "U18",
     "U19",
-    "U20"
+    "U20",
+    "U21",
+    "U22",
+    "U23"
   ],
   "complete_purchase_total": false,
-  "note": "途中小計。PC・基板・配線・税等未計上。モーター価格は仮予算。Prime最終カート未確認。購入パック全額、余剰を按分しない。"
+  "note": "途中小計。完成済み電装・代替非常停止・ハーネス・PC・税等未計上。旧電装部品の除外は節約ではない。モーター価格は仮予算。Prime最終カート未確認。購入パック全額、余剰を按分しない。"
 }

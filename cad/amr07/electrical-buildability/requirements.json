@@ -1,0 +1,45 @@
+{
+  "revision": "E1",
+  "date": "2026-09-23",
+  "status": "manufacturing_constraint_corrected_replacement_design_incomplete",
+  "user_constraint": "回路を作る設備がない。完成回路図も提供されていない。",
+  "default_implementation": "purchased_assembled_modules_and_preterminated_harnesses",
+  "user_PCB_fabrication_required": false,
+  "user_soldering_required": false,
+  "user_connector_crimping_assumed_available": false,
+  "custom_PCBA_is_selected": false,
+  "outsourcing_quote_obtained": false,
+  "wiring_diagram_complete": false,
+  "replacement_electrical_BOM_complete": false,
+  "cost_saving_claimed": false,
+  "withdrawn_BOM_ids": [
+    "ELEC_S1", "ELEC_K1_K2", "ELEC_U2", "ELEC_U3", "ELEC_PS1",
+    "ELEC_U4", "ELEC_RDUMP", "ELEC_U5", "ELEC_U6", "ELEC_QCLAMP",
+    "ELEC_PS2", "ELEC_D0"
+  ],
+  "functions_to_preserve": [
+    "manual_main_disconnect",
+    "hardware_motor_power_disconnect_on_estop",
+    "deliberate_manual_rearm_after_fault_or_power_recovery",
+    "control_and_communication_timeout_response",
+    "battery_protection_and_all_load_undervoltage_disconnect",
+    "motor_bus_regeneration_and_transient_protection"
+  ],
+  "required_design_deliverables": [
+    "exact_module_models_and_mating_connector_part_numbers",
+    "terminal_numbered_wiring_diagram_including_all_returns_and_fuses",
+    "harness_pinout_wire_size_length_and_pretermination_source",
+    "operating_voltage_current_inrush_and_thermal_compatibility",
+    "purchase_pack_shipping_and_required_assembly_costs",
+    "CAD_with_actual_module_dimensions_and_cable_tool_access",
+    "assembled_unit_inspection_and_fault_test_procedure"
+  ],
+  "CAD_scope": "D6.9 mechanical layout is retained; electrical boxes and volumes do not establish a buildable circuit. XA1E-BV302R geometry is retained only as an obsolete placement reference pending replacement.",
+  "retained_choices": ["M0601C_111", "Makita_BL1860B", "fixed_aluminum_deck", "rear_floor_supported_controls", "no_additional_mechanical_brake"],
+  "notes": [
+    "No circuit fabrication equipment is the user's stated condition. Avoiding user soldering and assuming no crimp tools is a conservative design response, not an inventory claim.",
+    "Do not declare assembled modules incompatible with the budget, unavailable, or sufficient for all functions without evidence.",
+    "Custom fabrication, if ultimately necessary, needs a completed design and a real quote including assembly and inspection; it is not the default solution.",
+    "The user is not being asked to design a circuit, create manufacturing data, or debug an unfinished board."
+  ]
+}

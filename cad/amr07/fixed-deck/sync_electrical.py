@@ -30,9 +30,37 @@ for id,number,price,url,note in [
     if not any(x['id']==id for x in e['candidate_parts']):
         e['candidate_parts'].append(dict(id=id,part_number=number,used_quantity=1,purchased_quantity=1,
             purchase_price_jpy_incl_tax=price,source=url,note=note,status='selected_not_purchased'))
+policy_path = BASE/'electrical-buildability/requirements.json'
+policy = json.loads(policy_path.read_text())
+withdrawn_ids = {x.removeprefix('ELEC_') for x in policy['withdrawn_BOM_ids']}
+old_candidates = e['reference_only'].setdefault('E1_withdrawn_candidates', [])
+for part in e['candidate_parts']:
+    if part['id'] in withdrawn_ids and not any(x['id'] == part['id'] for x in old_candidates):
+        old_candidates.append(deepcopy(part))
+e['candidate_parts'] = [x for x in e['candidate_parts'] if x['id'] not in withdrawn_ids]
+for part in e['candidate_parts']:
+    if part['id'] == 'U1':
+        part['note'] = 'User owns Pico, but variant and headers are unconfirmed. Do not require user soldering. This is not a complete controller.'
+    elif part['id'] in ['S_ARM', 'S_MAIN']:
+        part['status'] = 'mechanical_candidate_wiring_not_designed'
+e['status'] = 'custom_PCB_recommendation_withdrawn_assembled_replacement_not_designed'
+e['manufacturing_requirements_file'] = 'electrical-buildability/requirements.json'
+e['manufacturing_requirements_sha256'] = hashlib.sha256(policy_path.read_bytes()).hexdigest()
+e['implementation_disposition'] = 'power/restart_and_watchdog/control/regeneration retain the withdrawn implementation proposal for comparison; none is a complete or released wiring design. Required functions are in manufacturing_requirements_file.'
+for key in ['power', 'restart_and_watchdog', 'control', 'regeneration']:
+    e[key]['implementation_status'] = 'withdrawn_legacy_custom_circuit_proposal'
+e['operation_release']['wiring_diagram_complete'] = False
+e['operation_release']['replacement_electrical_BOM_complete'] = False
 e['cost']['priced_purchase_subtotal_jpy_incl_tax']=sum(x['purchase_price_jpy_incl_tax'] for x in e['candidate_parts'])
-assert e['cost']['priced_purchase_subtotal_jpy_incl_tax']==7975
-e['cost']['scope']='Selected electrical parts only; USB lead500 JPY is in current BOM, giving8475 JPY. Shared washers and shipping excluded here; current BOM is authoritative.'
+assert e['cost']['priced_purchase_subtotal_jpy_incl_tax']==1456
+e['cost']['scope']='Remaining ARM/main-switch candidate prices only; owned Pico0 and USB lead500 JPY give1956 JPY in the current BOM. Replacement E-stop, assembled modules and harnesses are unpriced. Withdrawal is not a saving.'
+e['cost']['withdrawn_electrical_reference_JPY'] = sum(x['purchase_price_jpy_incl_tax'] for x in old_candidates)
+e['cost']['withdrawal_is_cost_saving'] = False
+e['cost']['unpriced'] = ['assembled communications and controller', 'assembled drive cutoff and manual rearm',
+    'independent control/communication fault response', 'battery protection and all-load disconnect',
+    'assembled regeneration protection', 'no-solder E-stop replacement', 'assembled DC/DC and fuses',
+    'preterminated harnesses and connectors', 'required harness assembly and inspection',
+    'voltage/current/temperature monitoring', 'heatsink fixing and guarding', 'shipping', 'main computer and its converter']
 e['cost']['unpriced']=[x for x in e['cost']['unpriced'] if x not in ['ARM pushbutton','battery and charger']]
 e['cad_reservations']=[x for x in e['cad_reservations'] if x['id']!='EmergencyStopAccess']
 for x in e['cad_reservations']:
@@ -42,7 +70,11 @@ e['current_layout_revision']='D6.9'
 params=json.loads((HERE/'parameters.json').read_text())
 for key in ['estop','arm','main_power']:
     e['current_controls_layout'][key].update(params[key])
-e['current_controls_layout']['price_scope']='Current electrical part prices above; complete current purchase quantities and costs in fixed-deck/BOM.csv.'
+e['current_controls_layout']['price_scope']='Mechanical placement candidates only; current BOM explicitly leaves replacement electrical hardware and wiring unpriced.'
+e['current_controls_layout']['estop'].update(purchase_JPY=None, historical_candidate_JPY=3153,
+    procurement_status='withdrawn_solder_terminal_model', CAD_geometry_is_obsolete_placement_reference=True)
+e['current_controls_layout']['unreleased']=['assembled_electrical_replacement_selection', 'terminal_numbered_wiring_diagram',
+    'PC_product_and_DCDC', 'preterminated_harnesses', 'actual_module_CAD_layout', 'electrical_qualification']
 e['calculations']['requirements_sha256']=hashlib.sha256((HERE/'requirements.json').read_bytes()).hexdigest()
 t=v['torque']
 e['calculations']['load_cases']=[dict(id='normal',gross_mass_kg=t['gross_mass_kg'],slope_deg=0,
@@ -55,4 +87,4 @@ e['validation']['thermal_test_torques_Nm']=[t['with_margin_Nm_each']]
 e['validation']['thermal_matrix_strategy']=e['validation']['thermal_matrix_strategy'].replace('0.383 Nm','0.401 Nm')
 e['validation']['reviewed_gross_mass_kg']=t['gross_mass_kg']
 p.write_text(json.dumps(e,ensure_ascii=False,indent=2)+'\n')
-print('Shared electrical plan: D6.9 loads, rear controls, owned Pico and current prices.')
+print('Shared electrical plan: D6.9 mechanical layout; E1 no-fabrication constraint and incomplete replacement electronics.')

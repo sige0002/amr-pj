@@ -15,28 +15,28 @@
       "sha256": "85272fab15e63fbfa5f030ec5fd41d814a22ccac61723c614edcf063386c7d9b"
     },
     "BOM-costs.json": {
-      "bytes": 2793,
-      "sha256": "a197143b5ac275e9b79baed1beb90e2bf0cfc2d2850c1c81eae68a3ab94b6a24"
+      "bytes": 2589,
+      "sha256": "877a875727def9c4be9c6af55d0cd3bb033c0d84f8939fcb3345846d3af40630"
     },
     "BOM-details.ja.md": {
-      "bytes": 51214,
-      "sha256": "a7b09c152d8fe938555fb2b626f505fa658112b53dd461576ce2ea1e6636466f"
+      "bytes": 44485,
+      "sha256": "46aed1bc2c74224c17846366844104b395b17321316dd76dcfdaf7d79a232813"
     },
     "BOM-summary.csv": {
-      "bytes": 372,
-      "sha256": "ffa28be8307d4c965bca9618fc17337cd3485056c7d46591efd9d3ddf22bbe6b"
+      "bytes": 411,
+      "sha256": "2a5b5a5725106cf3475b92b0f930d12b7fb3eeea12012ee973c80da9ff578991"
     },
     "BOM.csv": {
-      "bytes": 25709,
-      "sha256": "015621d0d5a9acab64f1c1709dddde8ac2399a5037d0c69bd0db7a9fd0dc00dd"
+      "bytes": 23251,
+      "sha256": "f5a774c2225e221a246d9aafa43f53041839c9de660027f721cc22dba5c88ffc"
     },
     "BOM.ja.md": {
-      "bytes": 9494,
-      "sha256": "bcb7076ef62c8670c779d0a60761477ba57044f499f52e12493eab028ce34df7"
+      "bytes": 9609,
+      "sha256": "545187af0b11daea80586e4710a56820eb9cac32d50040d9a3a6116872fde442"
     },
     "D69-print-prototypes.zip": {
-      "bytes": 227997,
-      "sha256": "d6dca48f9485873389273e5c5811404e46a0885ada8f4b10e35319fa2dab6790"
+      "bytes": 228282,
+      "sha256": "acf395480d450f627a95d51256ce6efee1ce95a5bae02f9ecbe3d4ed36d68077"
     },
     "MACHINING_QUOTE.ja.md": {
       "bytes": 2889,
@@ -47,16 +47,16 @@
       "sha256": "c78181d5d2e11ab1cf41e882ad40355aa43780f5df21c5ac1bdf0d25bd3eb4f1"
     },
     "README.ja.md": {
-      "bytes": 6705,
-      "sha256": "066f2a8ee2c1ac1353a70688a44b32a235860f72ba9f24eba21af5f6f4ec6fc5"
+      "bytes": 7272,
+      "sha256": "7216faf464dee6c2ccf69e5449d347868ce6f8e31919643d170ac3fdf36c237a"
     },
     "build_bom.py": {
-      "bytes": 5467,
-      "sha256": "47418fd4977d317fe8c13bdc47632ef44d9e1f66a12d296e6980d89693fe62c1"
+      "bytes": 11348,
+      "sha256": "2c50d754afeb65737155d78fd6cbe8bb519ce9a39ac3c00234220a1903724f86"
     },
     "build_bom_view.py": {
-      "bytes": 4768,
-      "sha256": "2b06bffb29cbda837cc8aee21309935e968bcd9492796eb50ad49eec8ff91530"
+      "bytes": 5729,
+      "sha256": "0a415551783affac81ee2cdecbef6c5ae0f8e628942d8246d232dee21bd16aed"
     },
     "build_d69.py": {
       "bytes": 6225,
@@ -91,8 +91,8 @@
       "sha256": "323b95983d707e88e0779d3f8ead241ed754dbcd3a10463b512e8f88f124a5e0"
     },
     "cost_summary.json": {
-      "bytes": 1859,
-      "sha256": "6f3b0f367b57cb88227e7eb2e6de9a6c2533d0ce91cd436e635415284135db09"
+      "bytes": 2533,
+      "sha256": "c3156b9c15c19113a2df9c679ab05d835be7efc384cbb68c191219d6b3122a97"
     },
     "export_and_check.py": {
       "bytes": 4571,
@@ -115,8 +115,8 @@
       "sha256": "f2fd1642c681c4e6ea65f66dbfd4027017e090bba02344f26707d89656b76d63"
     },
     "release.py": {
-      "bytes": 5955,
-      "sha256": "080c88fab0559cbffc746bdfa23956b7f56e974ec2d4e8ee4f7eccf61ac14dbe"
+      "bytes": 7719,
+      "sha256": "25162e37f1766c152434687b6057e0ae7d51afdff30d452f5c12be35751354ee"
     },
     "requirements.json": {
       "bytes": 13782,
@@ -127,8 +127,8 @@
       "sha256": "1b3a28f610c375438a8bbfbfb93d4028ce5e73c80c9b806a5d0ba82ff0d1b09a"
     },
     "sync_electrical.py": {
-      "bytes": 4241,
-      "sha256": "b5f4cd9ecef23900f451948f235bb23140a3024aefc2c2275f0a2ac7e1faeb4d"
+      "bytes": 7117,
+      "sha256": "a253d666ba80891e4dd7c4277eaf1488970dbd306588b0a668e133d36788d478"
     },
     "validate.py": {
       "bytes": 5179,
@@ -142,9 +142,27 @@
   "physical_parts": 329,
   "PLA_print_parts": 14,
   "FreeCAD_GUI_screenshots": 5,
-  "checked_local_links": 131,
-  "shared_electrical_plan_sha256": "58cb997382fa33e6fa03d5c8beed0fd1cdb5ae504d63f96a3cc10409b86d2a98",
-  "scope": "Fixed-deck design update; existing actual machining quote reused for equivalent geometry. Prototype review, not production release.",
+  "checked_local_links": 147,
+  "shared_electrical_plan_sha256": "4eebd14d01f28200b41c46c465c9a9265c753d378e5a516cb54ebd29889d34c9",
+  "electrical_buildability_files": {
+    "electrical-buildability/README.ja.md": {
+      "bytes": 6813,
+      "sha256": "3a617dbe831d0ff6f1dcfed09c66c94b5ac03b2e2b7b0c6306e8705dc2881ece"
+    },
+    "electrical-buildability/requirements.json": {
+      "bytes": 2616,
+      "sha256": "aed8e4a2856bb2a51c17544890e21978f755150a4e807b4742b71bb884a9c8cf"
+    },
+    "electrical-buildability/withdrawn-parts.csv": {
+      "bytes": 4350,
+      "sha256": "f6a198f557b47935594efb68bd9c3296559711360d904f9c1da8696bf7b4e55c"
+    },
+    "electrical-buildability/withdrawn-parts.ja.md": {
+      "bytes": 1973,
+      "sha256": "8eb437f3f7895de99760cec7efb63612fa61b17be9b24a5eadc3334b46fe51ba"
+    }
+  },
+  "scope": "Fixed-deck mechanical prototype review; E1 corrects electrical fabrication assumptions. Replacement electrical design and wiring are incomplete. Existing actual machining quote reused for equivalent geometry. Not production release.",
   "checks": [
     "Changed-part static and reserved-envelope collision check",
     "Continuous battery/computer service envelopes with deck installed",
@@ -154,8 +172,11 @@
     "Saved native and STEP solids/volumes",
     "Historical quoted plate STEP/PDF hashes and native shape equivalence",
     "14 closed STL meshes and256mm printer envelope",
-    "BOM purchase packs, currencies and linked current requirements"
+    "BOM purchase packs, currencies and linked current requirements",
+    "Withdrawn custom-circuit and solder-terminal candidates excluded from purchase BOM; replacement costs unpriced"
   ],
   "production_released": false,
-  "physical_strength_tests_complete": false
+  "physical_strength_tests_complete": false,
+  "electrical_wiring_design_complete": false,
+  "electrical_replacement_CAD_validated": false
 }

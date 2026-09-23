@@ -1,5 +1,7 @@
 # AMR-01 A6-D2：格子穴アルミ荷台とPLA小物
 
+> **電装はE1で再設計へ戻した。** 回路製作設備なしの条件に合わせ、専用基板とはんだ端子E-stopの購入案を撤回。完成回路図・配線図は未作成。[製作条件と現行BOMの訂正](electrical-buildability/README.ja.md)。
+
 > **現行案は[D6.9：6点固定のアルミ天板・後方操作部](fixed-deck/README.ja.md)。BOMは[Markdown概要](fixed-deck/BOM.ja.md)／[全明細Markdown](fixed-deck/BOM-details.ja.md)／[CSV](fixed-deck/BOM.csv)を参照。** 通常積載目標10kg。車体10kgは厳密上限ではなく、現行の荷重計算は車体11.5kgまでの範囲。以下は旧D2の設計記録。
 
 > **2026-09-22の方針変更：角棒の切断・穴あけを要する荷台支持案は不採用。** P0の支持棒に加え、D2の支持ブロック・ストッパーも同じ加工を要するため見直す。以下のCAD・費用・解析は変更前のD2記録。置換後の構成へ強度結果・干渉結果・見積を流用しない。[製作条件](requirements.json)

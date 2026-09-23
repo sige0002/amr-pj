@@ -39,10 +39,23 @@ assert not q['re_queried_this_revision']
 electrical = json.loads((BASE / 'electrical_plan.json').read_text())
 assert electrical['current_CAD'] == 'fixed-deck/AMR01_FixedDeck_D69.FCStd'
 assert electrical['calculations']['requirements_sha256'] == load['requirements_sha256']
+buildability_dir = BASE / 'electrical-buildability'
+buildability_path = buildability_dir / 'requirements.json'
+buildability = json.loads(buildability_path.read_text())
+assert electrical['manufacturing_requirements_sha256'] == digest(buildability_path)
+assert read('cost_summary.json')['electrical_buildability_sha256'] == digest(buildability_path)
+assert not buildability['user_soldering_required'] and not buildability['custom_PCBA_is_selected']
+assert not electrical['operation_release']['wiring_diagram_complete']
 for item in saved['exports']:
     assert item['sha256'] == digest(HERE / item['file'])
 by = {r['ID']: r for r in csv.DictReader((HERE / 'BOM.csv').open(encoding='utf-8-sig'))}
 assert not any(id.startswith('HATCH_') or id == 'ELEC_CASE_WASHER' for id in by)
+withdrawn = list(csv.DictReader((buildability_dir / 'withdrawn-parts.csv').open(encoding='utf-8-sig')))
+assert {r['ID'] for r in withdrawn} == set(buildability['withdrawn_BOM_ids'])
+assert not set(buildability['withdrawn_BOM_ids']).intersection(by)
+assert sum(float(r['明細金額']) for r in withdrawn) == read('cost_summary.json')['withdrawn_electrical_reference_JPY']
+assert not read('cost_summary.json')['electrical_withdrawal_is_cost_saving']
+assert all(not by[id]['明細金額'] for id in ['U01', 'U08', 'U09', 'U10', 'U11', 'U12', 'U13', 'U21', 'U22', 'U23'])
 for id, use, buy in [('D3_M6', 50, 70), ('F04', 70, 100), ('D62_FLOOR_SCREWS', 20, 60),
                      ('D3_STOP_NUTS', 28, 40), ('D64_FLOOR_WASHERS', 24, 40)]:
     assert int(by[id]['使用数']) == use and int(by[id]['購入予定数']) == buy and int(by[id]['余剰数']) == buy-use, id
@@ -69,7 +82,7 @@ with zipfile.ZipFile(HERE / 'D69-print-prototypes.zip', 'w', zipfile.ZIP_DEFLATE
 
 # Local links in the current landing page and newly delivered documentation.
 checked_links = 0
-for p in [ROOT / 'README.md'] + list(HERE.glob('*.md')):
+for p in [ROOT / 'README.md', BASE / 'ELECTRICAL_AND_VALIDATION.ja.md', BASE / 'control-layout/ELECTRONICS_OPTIONS.ja.md'] + list(HERE.glob('*.md')) + list(buildability_dir.glob('*.md')):
     for target in re.findall(r'\]\(([^\s)]+)\)', p.read_text()):
         if '://' in target or target.startswith('#'):
             continue
@@ -82,7 +95,9 @@ for p in sorted(HERE.rglob('*')):
 out = dict(revision='D6.9', date='2026-09-23', files=files, physical_parts=329,
            PLA_print_parts=14, FreeCAD_GUI_screenshots=5, checked_local_links=checked_links,
            shared_electrical_plan_sha256=digest(BASE / 'electrical_plan.json'),
-           scope='Fixed-deck design update; existing actual machining quote reused for equivalent geometry. Prototype review, not production release.',
+           electrical_buildability_files={str(p.relative_to(BASE)): dict(bytes=p.stat().st_size, sha256=digest(p))
+                                         for p in sorted(buildability_dir.iterdir()) if p.is_file()},
+           scope='Fixed-deck mechanical prototype review; E1 corrects electrical fabrication assumptions. Replacement electrical design and wiring are incomplete. Existing actual machining quote reused for equivalent geometry. Not production release.',
            checks=['Changed-part static and reserved-envelope collision check',
                    'Continuous battery/computer service envelopes with deck installed',
                    'Six-bolt top tool access and vertical deck removal',
@@ -91,7 +106,9 @@ out = dict(revision='D6.9', date='2026-09-23', files=files, physical_parts=329,
                    'Saved native and STEP solids/volumes',
                    'Historical quoted plate STEP/PDF hashes and native shape equivalence',
                    '14 closed STL meshes and256mm printer envelope',
-                   'BOM purchase packs, currencies and linked current requirements'],
-           production_released=False, physical_strength_tests_complete=False)
+                   'BOM purchase packs, currencies and linked current requirements',
+                   'Withdrawn custom-circuit and solder-terminal candidates excluded from purchase BOM; replacement costs unpriced'],
+           production_released=False, physical_strength_tests_complete=False,
+           electrical_wiring_design_complete=False, electrical_replacement_CAD_validated=False)
 (HERE / 'release_manifest.json').write_text(json.dumps(out, ensure_ascii=False, indent=2)+'\n')
 print('D6.9 bound artifacts', len(files), 'local links', checked_links)
