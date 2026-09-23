@@ -1,0 +1,116 @@
+{
+  "revision": "E3",
+  "checked_pairs": 17125,
+  "new_interferences": [],
+  "inherited_contact_pairs": 0,
+  "intentional_nominal_thread_pairs": [
+    [
+      "PicoFloorBolt_0",
+      "PicoFloorNut_0",
+      2.1865484868985323
+    ],
+    [
+      "PicoLidBolt_0",
+      "PicoLidNut_0",
+      2.186548486898534
+    ],
+    [
+      "PicoFloorBolt_1",
+      "PicoFloorNut_1",
+      2.1865484868984932
+    ],
+    [
+      "PicoLidBolt_1",
+      "PicoLidNut_1",
+      2.1865484868984932
+    ],
+    [
+      "PicoFloorBolt_2",
+      "PicoFloorNut_2",
+      2.1865484868985323
+    ],
+    [
+      "PicoLidBolt_2",
+      "PicoLidNut_2",
+      2.186548486898534
+    ],
+    [
+      "PicoFloorBolt_3",
+      "PicoFloorNut_3",
+      2.1865484868984932
+    ],
+    [
+      "PicoLidBolt_3",
+      "PicoLidNut_3",
+      2.1865484868984932
+    ]
+  ],
+  "battery_service_hits": [],
+  "passed": true,
+  "meshes": [
+    {
+      "file": "FloorPLA_1_1.stl",
+      "closed": true,
+      "print_bounds_mm": [
+        229.8000030517578,
+        149.8000030517578,
+        24.0
+      ]
+    },
+    {
+      "file": "PicoTrayLidPLA.stl",
+      "closed": true,
+      "print_bounds_mm": [
+        70.0,
+        45.0,
+        13.600000381469727
+      ]
+    },
+    {
+      "file": "PicoTrayPLA.stl",
+      "closed": true,
+      "print_bounds_mm": [
+        70.0,
+        45.0,
+        32.0
+      ]
+    },
+    {
+      "file": "RearStopCasePLA.stl",
+      "closed": true,
+      "print_bounds_mm": [
+        66.0,
+        76.0,
+        66.0
+      ]
+    },
+    {
+      "file": "RearStopLidPLA.stl",
+      "closed": true,
+      "print_bounds_mm": [
+        66.0,
+        76.0,
+        17.0
+      ]
+    }
+  ],
+  "lid_review": {
+    "press_N": 150,
+    "span_mm": 38,
+    "effective_width_mm": 48.5,
+    "thickness_mm": 5,
+    "assumed_E_MPa": 1800,
+    "stress_MPa": 7.051546391752577,
+    "deflection_mm": 0.1885635738831615,
+    "assumed_short_term_allowable_MPa": 10,
+    "passes_preliminary_strip_model": true,
+    "printed_strength_validated": false
+  },
+  "excludes": [
+    "actual cables and connector bends",
+    "received PCB keepouts and header stack",
+    "electrical ratings and operation",
+    "complete new Linux PC dimensions"
+  ],
+  "native_sha256": "e1bf029a1e561db21e92fb612d61351cf53859e1ed97b6490797612825c05d55"
+}

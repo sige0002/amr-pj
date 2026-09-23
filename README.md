@@ -1,45 +1,34 @@
-# AMR-01：D6.9 6点固定のアルミ天板
+# AMR-01：E3 Pico＋2CH RS485構成
 
-**天板を左右の上段3030へ、M6×12ボルト3本ずつ・計6本で固定しました。** 300×300×4mmの格子穴アルミ板を直接載せ、ヒンジと専用L金具は廃止。後方の非常停止・主電源箱はPLA床で支持し、各4本のM4で固定します。
+**車載LinuxミニPCからUSBで手持ちPicoへ指令し、完成済み2CH RS485基板で左右M0601C_111を動かす設計へ更新しました。** 後方の非常停止は2NC接点で左右のモーター電源をそれぞれ遮断する案とし、ケースを変更。PicoケースはPLA床へ四隅固定、専用ARMボタンは撤去しました。計算機も切れる主電源スイッチは残します。
 
-**電装は車載Linux計算機を含む最小手動走行構成E2.1へ縮小しました。** 車載LinuxミニPC＋USB–RS485と必要な給電部材、電池＋ヒューズ＋非常停止による駆動電源遮断を基本にします。二重リレー・独立監視・ARM・追加センサーは初回必須から除外。部品型番と配線は選定中です。CADの旧非常停止・ARM・主スイッチと電装容積は配置参考のままです。[最小構成とBOM](cad/amr07/electrical-buildability/README.ja.md)。
+**[設計・CAD画像](cad/amr07/pico-control/README.ja.md) ／ [配線構成](cad/amr07/pico-control/WIRING.ja.md) ／ [BOM・費用割合](cad/amr07/fixed-deck/BOM.ja.md) ／ [全明細Markdown](cad/amr07/fixed-deck/BOM-details.ja.md) ／ [CSV](cad/amr07/fixed-deck/BOM.csv)**
 
-**BOM：[費用割合・購入リスト](cad/amr07/fixed-deck/BOM.ja.md) ／ [全明細Markdown](cad/amr07/fixed-deck/BOM-details.ja.md) ／ [CSV](cad/amr07/fixed-deck/BOM.csv)**
-
-![FreeCAD実画面：固定天板の全体](cad/amr07/fixed-deck/cad-screen-overall.png)
+![FreeCAD実画面：E3全体](cad/amr07/pico-control/cad-screen-overall.png)
 
 | 項目 | 現行構成 |
 |---|---|
-| 荷台 | アルミ300×300×4mm、上面233mm。36格子穴を維持 |
-| 固定 | M6×12＋HNTT6-6を各6個、左右3点ずつ。上段3030へ直接固定 |
-| 組立・整備 | 上から六角レンチで締結。天板全体は6本を抜いて持ち上げる |
-| 電池交換 | 天板を残したまま、8mm持ち上げて後方へ220mm抜く |
-| 操作部 | 後方のPLA箱を床の一体座へ各4本のM4で固定 |
-| 重量・積載 | 車体推計10.384kg（ヒンジ案から−0.231kg）。通常荷物10kg、静的比較15kg／SF2の設計条件、実機確認前 |
-| 費用 | 計上済み小計71,548円＋120.90 USD＝参考90,562円＋未計上分。Linux計算機・電源・通信・非常停止・配線等は未計上 |
-| 天板加工 | 元のD3と同じ製造形状。既存実自動見積28.67 USD＋日本送料9.98 USDを再使用 |
+| 荷台 | アルミ300×300×4mm、36格子穴。上段3030へM6で左右3点ずつ直接固定 |
+| 電池交換 | 天板を残して8mm持ち上げ、後方へ220mm抜く |
+| 電装 | 1階に電池・Linux計算機・Pico/HAT。後方に非常停止と主電源 |
+| 重量・積載 | 車体推計10.456kg。通常積載10kg、静的比較15kg／安全率2。実機確認前 |
+| 計上済み費用 | 75,452円＋120.90 USD＝参考94,466円＋未計上分 |
+| 未計上 | Linux計算機・給電部材・HAT・一部締結材・最終ヒューズと配線等 |
+| 確認済み範囲 | 変更部17,125組と電池取り出し経路で新規干渉なし。16個のPLA試作STLを用意 |
 
-橙色が固定ボルト6本です。固定部を見やすくするため、次の画像では天板とレールを半透明にしています。
+![FreeCAD実画面：天板を非表示にした電装配置](cad/amr07/pico-control/cad-screen-electronics.png)
 
-![FreeCAD実画面：左右3点ずつの固定部](cad/amr07/fixed-deck/cad-screen-fixings.png)
+HAT/Pico積層寸法は仮合わせ前。非常停止のDC定格を確認していますが、モータードライバー入力の突入適合は未確認です。ファームウェアは動作仕様のみで未実装、実配線・走行試験も未実施です。費用は既存の2026-09-21参考為替を継承した途中小計で、完成車価格ではありません。
 
-変更部を含む静的干渉、電池・計算機・天板の取り外し、ボルトの工具空間、操作部への接近をCADで確認。格子穴36か所の取付空間、保存FCStdとSTEP、既存PLA試作14個も照合済みです。実品公差・締付・印刷強度・走行試験は未完了です。
-
-費用は記録済みの2026-09-21参考為替で換算し、既計上価格は今回再取得していません。Linux計算機本体・電源、通信・非常停止・配線等は未計上、モーターとUSB線は仮予算を含みます。追加監視等は後工程へ移しました。購入パック全額を計上した途中小計です。機械部分でのヒンジ撤去による約15,663円減と、電装を未選定へ戻したことによる減額は区別します。
-
-- [設計理由・固定方法・組立順序・CAD画像](cad/amr07/fixed-deck/README.ja.md)
-- [重量・荷重計算と検証範囲](cad/amr07/fixed-deck/PAYLOAD_REVIEW.ja.md)
-- [再使用した実加工見積・投入STEP・証拠画面](cad/amr07/fixed-deck/MACHINING_QUOTE.ja.md)
-- [FCStd](cad/amr07/fixed-deck/AMR01_FixedDeck_D69.FCStd) ／ [機器外形付きSTEP](cad/amr07/fixed-deck/AMR01_FixedDeck_D69.step) ／ [PLA試作14個ZIP](cad/amr07/fixed-deck/D69-print-prototypes.zip)
-- [要件](cad/amr07/fixed-deck/requirements.json) ／ [干渉検査](cad/amr07/fixed-deck/validation.json) ／ [保存物検査](cad/amr07/fixed-deck/saved_artifact_validation.json)
-- [現在の最小電装構成](cad/amr07/electrical-buildability/README.ja.md) ／ [旧回路案の履歴](cad/amr07/ELECTRICAL_AND_VALIDATION.ja.md) ／ [旧比較](cad/amr07/control-layout/ELECTRONICS_OPTIONS.ja.md)
-- [旧ヒンジ案D6.8](cad/amr07/direct-hinge/README.ja.md) ／ [ヒンジ直付け調査の履歴](cad/amr07/hinge-search/README.ja.md)
+- [FreeCAD](cad/amr07/pico-control/AMR01_PicoControl_E3.FCStd) ／ [機器外形付きSTEP](cad/amr07/pico-control/AMR01_PicoControl_E3.step) ／ [PLA試作16部品ZIP](cad/amr07/pico-control/E3-print-prototypes.zip)
+- [干渉検査](cad/amr07/pico-control/validation.json) ／ [電装要件](cad/amr07/electrical-buildability/requirements.json)
+- [継承したD6.9天板設計](cad/amr07/fixed-deck/README.ja.md) ／ [荷重計算](cad/amr07/fixed-deck/PAYLOAD_REVIEW.ja.md) ／ [既存の実加工見積](cad/amr07/fixed-deck/MACHINING_QUOTE.ja.md)
 
 ## 継承した機械構成とシミュレーション
 
 D6.5の各床4点固定、中央支持梁、四隅の連続したPLA床、計算機下の絶縁用カバーは維持しています。[床の設計](cad/amr07/two-story/README.ja.md)／[PLA床解析と限界](cad/amr07/two-story/pla-strength/README.ja.md)／[ロボコン等の参考設計](cad/amr07/two-story/REFERENCE_DESIGNS.ja.md)。
 
-[Isaac Sim 5向けURDF・取込手順](sim/isaac_sim/README.ja.md)と[データZIP](sim/isaac_sim/amr_d65_isaac5.zip)は**D6.5時点**のモデルです。D6.9の後方操作部・最新重量は未反映。URDF検査とMuJoCo補助走行は実施済み、Isaac Sim本体での実行は未確認です。
+[Isaac Sim 5向けURDF・取込手順](sim/isaac_sim/README.ja.md)と[データZIP](sim/isaac_sim/amr_d65_isaac5.zip)は**D6.5時点**のモデルです。E3の後方操作部・Picoケース・最新重量は未反映。URDF検査とMuJoCo補助走行は実施済み、Isaac Sim本体での実行は未確認です。
 
 ![旧D6.5の走行シミュレーション（MuJoCo）](sim/isaac_sim/amr_d65_motion_mujoco.gif)
 

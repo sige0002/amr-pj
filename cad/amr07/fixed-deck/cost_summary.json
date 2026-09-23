@@ -1,19 +1,19 @@
 {
-  "revision": "D6.9",
+  "revision": "E3 on D6.9 chassis",
   "date": "2026-09-23",
   "subtotal": {
-    "JPY": 71548.0,
+    "JPY": 75452.0,
     "USD": 120.9
   },
   "FX_reference_JPY_per_USD": 157.26718885987816,
   "FX_date": "2026-09-21",
   "FX_basis": "Recorded 2026-09-21 reference, not current settlement rate",
-  "full_running_subtotal_JPY_reference": 90561.60313315927,
-  "difference_from_D68_JPY_reference": -23638.321148825067,
-  "mechanical_difference_from_D68_JPY_reference": -15663.321148825067,
+  "full_running_subtotal_JPY_reference": 94465.60313315927,
+  "difference_from_D68_JPY_reference": -19734.321148825067,
+  "mechanical_difference_from_D68_JPY_reference": -15547.321148825067,
   "withdrawn_electrical_reference_JPY": 6519.0,
-  "deferred_electrical_reference_JPY": 1456.0,
-  "electrical_scope_revision": "E2.1",
+  "deferred_electrical_reference_JPY": 835.0,
+  "electrical_scope_revision": "E3",
   "electrical_withdrawal_is_cost_saving": false,
   "removed_purchase_ids": [
     "HATCH_HINGES",
@@ -34,9 +34,7 @@
     "ELEC_QCLAMP",
     "ELEC_PS2",
     "ELEC_D0",
-    "ELEC_U1",
     "ELEC_ARM",
-    "ELEC_MAIN",
     "U01",
     "U09",
     "U10",
@@ -64,7 +62,7 @@
     "order_placed": false
   },
   "electrical_buildability_requirements": "../electrical-buildability/requirements.json",
-  "electrical_buildability_sha256": "b6825014531bc8371b02838e3b0880808f0c065413e5a230582ec8dde80b46a8",
+  "electrical_buildability_sha256": "438ab2c3ad5a667b6e55d1aff748e9b9e34d969f27ddb9f3d7a2ca06dc9391aa",
   "unpriced_rows": [
     "S04",
     "S07",
@@ -84,8 +82,8 @@
     "U17",
     "U18",
     "U20",
-    "U22"
+    "U24"
   ],
   "complete_purchase_total": false,
-  "note": "車載Linux計算機を含む最小手動走行構成の途中小計。Linux計算機・電源・通信・非常停止・配線等未計上。追加監視等は必須から除外。部品除外は完成車の節約額ではない。モーター・USB線は仮予算。Prime最終カート未確認。購入パック全額、余剰を按分しない。"
+  "note": "E3途中小計。PC・給電・Pico用RS485基板・ヒューズ・配線等未計上。主電源621円復帰、非常停止2387円＋東京向け送料780円。旧部品の除外は完成車の節約額ではない。モーター・USB線は仮予算。Prime未確認。"
 }

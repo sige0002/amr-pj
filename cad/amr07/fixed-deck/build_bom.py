@@ -34,6 +34,7 @@ history += ['', f'旧価格合計：{withdrawn_JPY:,.0f}円。価格確認日・
 rows = [r for r in rows if r['ID'] not in withdrawn_ids]
 by = {r['ID']: r for r in rows}
 v = json.loads((HERE / 'validation.json').read_text())
+e3_geometry = json.loads((BASE / 'pico-control/geometry.json').read_text())
 observed_path = BASE / 'aluminum-direct-deck/quote-evidence/D3-observed.json'
 q = json.loads(observed_path.read_text())
 economic = next(x for x in q['records'] if x['speed'] == 'economic')
@@ -49,10 +50,10 @@ quantity('D3_M6', 50, 備考='天板M6×12を6本復帰。共通使用50本／�
 quantity('D62_FLOOR_SCREWS', 20, 部品名='床・ケース用M4×16', 備考='床継ぎ目4＋ケース底8＋ケース蓋8＝20本。購入60本の内数。')
 quantity('D3_STOP_NUTS', 28, 備考='荷物止め8＋床4＋ケース底8＋蓋8＝28個。20個273円×2。')
 quantity('D64_FLOOR_WASHERS', 24, 部品名='床・ケース用M4 OD12×t1座金', 備考='床上下8＋ケース底8＋ケース蓋8＝24枚。20枚430円×2。')
-grams = math.ceil(v['mass']['total_solid_PLA_kg']*1000)
-by['P04'].update(使用数=str(grams), 明細金額=str(2*grams), CAD形状数='14',
+grams = math.ceil(e3_geometry['mass']['total_solid_PLA_kg']*1000)
+by['P04'].update(使用数=str(grams), 明細金額=str(2*grams), CAD形状数=str(e3_geometry['PLA_parts']),
                 部品名='床・PCカバー・荷物止め・操作ケース',
-                **{'仕様・型番': 'D6.9全14個、D6.8から形状変更なし。床4、支持梁1、PCカバー1、荷物止め4、操作ケースと蓋4'},
+                **{'仕様・型番': 'E3全16個。非常停止箱・蓋と前方床1枚を変更、Picoケースと蓋を追加。他はD6.9を継承'},
                 備考='2円/g、中実CADの材料消費参考。非導電PLA。スライス支持材・失敗・電気・工賃別。')
 by['DECK_plate'].update(部品名='固定式格子穴アルミ天板',
                        **{'仕様・型番': '300×300×4 / 6061-T6 / AMR_GridDeck_C45_D3 / qty1'},
@@ -65,7 +66,7 @@ by['DECK_CNC_SHIP'].update(部品名='アルミ天板1枚の日本宛送料',
                           備考='天板1枚の日本・国単位表示。住所別未検証。モーター金具は別配送。税・決済費用別、今回の送料再取得なし。')
 replacements = {
     'U01': ('完成済みの電池保護・全負荷低電圧遮断', 'BL1860Bとの保護適合・復帰条件を確認する', '2線アダプターだけでセル・温度保護が成立するとは扱わない。完成済みユニットと配線を選定する。'),
-    'U08': ('完成済みUSB–RS485変換器', '車載LinuxミニPCから左右M0601C_111へ接続する1台', 'Picoと別のUART変換器を重複追加しない。Linux対応・速度・信号基準・端子・終端を確認して選定。'),
+    'U08': ('Pico用2チャンネルRS485完成基板', 'ユーザー提示Amazon B0GKHKCZV3／Pico-2CH-RS485型', '手持ちPico＋本基板を使用。別のUSB–RS485変換器・裸ICは買わない。価格・ピン実装・現物改訂は未確認。'),
     'U09': ('駆動遮断・コイル保護の完成済みユニット', '非常停止による独立遮断、実DC負荷・突入へ適合', '基板実装用リレーと未設計ドライバの組合せを撤回。完成済み品の端子・保護・定格を確認する。'),
     'U10': ('手動再許可・独立監視の完成済みユニット', '故障・復電後の自動再始動防止と通信／制御停止監視', '旧ラッチIC・外部WD ICの個別実装は撤回。必要動作を完成品構成として確認する。'),
     'U11': ('回生吸収・逆流保護の完成済みユニット', 'M0601C_111・電池・遮断構成に適合', '旧比較器・MOSFET・抵抗等の未設計回路を撤回。電圧・吸収エネルギー・発熱を確認する。'),
@@ -85,16 +86,34 @@ for id, name, spec, note in [
                価格根拠='未見積', 選定状況='完成品構成へ再選定・未計上', 備考=note)
     rows.append(row); by[id] = row
 by['ELEC_U1']['備考'] += ' 製作設備なしの条件により、未実装ヘッダーのはんだ付けをユーザーへ要求しない。'
-by['ELEC_ARM']['選定状況'] = '型式・配置は候補、接続先・配線設計は未完'
-by['ELEC_MAIN']['選定状況'] = '型式・配置は候補、加工済み端子配線・負荷適合は未確認'
+by['ELEC_ARM']['選定状況'] = '初号機では不採用'
+by['ELEC_MAIN']['選定状況'] = '全電源操作用として維持、加工済み配線・負荷適合は要確認'
+by['ELEC_MAIN']['備考'] = 'Linux終了後の全電源遮断用。モーターのみを切る非常停止とは別機能。旧価格621円を再使用、今回再取得なし。総電流・突入と250型端子の接続を確認。'
 by['U15']['備考'] += ' 完成済みモジュールの寸法・配線確定後にCADを再配置する。'
-by['E02'].update(部品名='通信変換器用USBデータケーブル',
+by['E02'].update(部品名='LinuxミニPC–Pico用USBデータケーブル',
                  URL='',
-                 **{'仕様・型番': 'USB–RS485変換器と操作用PCの端子確定後に選ぶ'},
+                 **{'仕様・型番': '手持ちPicoのUSB端子とLinuxミニPCに合わせる'},
                  選定状況='500円は既存仮予算、型番未選定', 価格根拠='旧USB線の仮予算を保持、今回の価格取得なし',
-                 備考='変換器に付属すれば重複購入しない。Pico用micro-Bには固定しない。')
+                 備考='USB通信とPico/HAT給電用。手持ち／付属線があれば重複購入しない。')
+by['U08']['URL']='https://www.amazon.co.jp/dp/B0GKHKCZV3'
+by['ELEC_U1']['備考']='手持ちPicoを通信・周期制御に使用、購入0円。型番・ヘッダー有無は回答待ち。ヘッダー未実装なら、はんだ不要の接続方法を確定してから製作する。'
+by['ELEC_U1']['選定状況']='手持ち使用、型番・ピン実装状態は未確認'
+by['U22'].update(部品名='非常停止スイッチ HW1B-V402R',
+                 **{'仕様・型番': 'IDEC／2NC／M3.5ねじ端子／φ40頭／左右モーターを別接点で遮断'},
+                 使用数='1',単位='個',購入予定数='1',購入単位='1個',購入口数='1',余剰数='0',購入単位単価='2387',明細金額='2387',CAD形状数='1',
+                 価格根拠='2026-09-23 Yahoo ANGEL HAM SHOP JAPAN表示、税込、送料別',選定状況='配置設計に採用、モーター入力突入・実遮断適合は未検証',
+                 URL=policy['estop']['price_source'],備考='1接点に左右の電流を合算しない。メーカーDC24V DC-12 10A/DC-13 5Aは試験負荷別で、モーター入力の適合保証ではない。Amazon同型Prime未確認。')
+for id,name,amount,specification,note in [
+    ('E3_ESTOP_SHIP','非常停止スイッチ送料（住所未照合）','780','Yahoo表示・東京都向け','実住所への送料・Primeではない。送料込み参考3167円。'),
+    ('U24','Picoケース固定用M3締結材','','M3×12 8本、M3ナット8個、OD7座金12枚','床固定4点＋蓋4点。使用数確定、購入パック価格は未計上。'),
+]:
+    row={field:'' for field in fields}
+    row.update(ID=id,分類='電装取付',部品名=name,**{'仕様・型番':specification},通貨='JPY',明細金額=amount,
+               価格根拠='2026-09-23販売ページ表示' if amount else '未見積',選定状況='計上・配送先確認待ち' if amount else '必要数確定・価格未計上',備考=note)
+    if amount:row.update(使用数='1',単位='式',購入予定数='1',購入単位='1配送',購入口数='1',余剰数='0',購入単位単価=amount,URL=policy['estop']['price_source'])
+    rows.append(row);by[id]=row
 by['U06'].update(部品名='電源着脱・分岐コネクタ', **{'仕様・型番': '電池アダプターと左右モーターの電源配線用'},
-                 備考='付属端子・配線を確認して不足分だけ計上。別の主電源スイッチは初回必須から外す。ヒューズはU07、ケーブルはU13。')
+                 備考='主電源スイッチの250型端子を含む。付属端子・配線を確認して不足分だけ計上。ヒューズはU07、ケーブルはU13。')
 by['U07'].update(**{'仕様・型番': '電源直近のヒューズとホルダー。DC定格・容量・必要数を配線から決定'},
                  備考='旧5回路の構成・数値を引き継がない。線径、分岐、負荷電流・突入と付属ヒューズを確認して必要分だけ選定。')
 by['U15'].update(**{'仕様・型番': '最小の通信変換器・非常停止部品の固定と端子絶縁'},
@@ -111,9 +130,7 @@ by['U04'].update(部品名='車載LinuxミニPC用の給電部材',
 
 # E2: conditional additions and later features are not mandatory unpriced items.
 deferral = {
-    'ELEC_U1': ('後工程', '手持ち品として保持。初回USB–RS485接続には不要。ローカル制御が必要になった時に使用。'),
     'ELEC_ARM': ('初回不採用', '専用ARM回路と追加ボタンを設けない。'),
-    'ELEC_MAIN': ('初回不採用', '非常停止用遮断と着脱コネクタに加えた別の主スイッチを必須にしない。'),
     'U01': ('条件付き', '電池・アダプターの既存保護を確認し、不足があれば追加。未確認のまま不要とは断定しない。'),
     'U09': ('条件付き', '非常停止ボタンのDC接点で直接切れない場合のみリレー1個とソケット／完成品を選定。'),
     'U10': ('初回不採用', '専用再許可回路・独立監視ユニットは初回必須にしない。'),
@@ -135,7 +152,7 @@ with (buildability / 'deferred-parts.csv').open('w', encoding='utf-8-sig', newli
     writer = csv.DictWriter(f, fields, lineterminator='\n')
     writer.writeheader(); writer.writerows(deferred)
 deferred_JPY = sum(float(r['明細金額']) for r in deferred if r['明細金額'])
-lines = ['# E2：初回購入の必須から外した部品', '',
+lines = ['# E3：初回購入の必須から外した部品', '',
          'この表は購入指示ではない。条件付き項目は必要性を確認してから追加する。旧価格は履歴で、今の見積ではない。', '',
          '[最小構成](README.ja.md) ／ [現行BOM](../fixed-deck/BOM.ja.md) ／ [CSV](deferred-parts.csv)', '',
          '| ID | 部品 | 段階 | 理由 |', '|---|---|---|---|']
@@ -158,12 +175,12 @@ quote = dict(source='../aluminum-direct-deck/quote-evidence/D3-observed.json',
              total_USD=economic['total_USD'], quantity=1, step_sha256=q['step_sha256'], pdf_sha256=q['pdf_sha256'],
              geometry_equivalence_check='saved_artifact_validation.json', automatic_not_manual=True,
              manual_review_complete=False, order_placed=False)
-summary = dict(revision='D6.9', date='2026-09-23', subtotal=subtotal,
+summary = dict(revision='E3 on D6.9 chassis', date='2026-09-23', subtotal=subtotal,
                FX_reference_JPY_per_USD=rate, FX_date=old['FX_date'],
                FX_basis='Recorded 2026-09-21 reference, not current settlement rate',
                full_running_subtotal_JPY_reference=total,
                difference_from_D68_JPY_reference=total-old['full_running_subtotal_JPY_reference'],
-               mechanical_difference_from_D68_JPY_reference=total+withdrawn_JPY+deferred_JPY-old['full_running_subtotal_JPY_reference'],
+               mechanical_difference_from_D68_JPY_reference=total+withdrawn_JPY+deferred_JPY-3167-old['full_running_subtotal_JPY_reference'],
                withdrawn_electrical_reference_JPY=withdrawn_JPY,
                deferred_electrical_reference_JPY=deferred_JPY, electrical_scope_revision=policy['revision'],
                electrical_withdrawal_is_cost_saving=False,
@@ -171,7 +188,7 @@ summary = dict(revision='D6.9', date='2026-09-23', subtotal=subtotal,
                electrical_buildability_requirements='../electrical-buildability/requirements.json',
                electrical_buildability_sha256=hashlib.sha256((buildability / 'requirements.json').read_bytes()).hexdigest(),
                unpriced_rows=[r['ID'] for r in rows if not r['明細金額']], complete_purchase_total=False,
-               note='車載Linux計算機を含む最小手動走行構成の途中小計。Linux計算機・電源・通信・非常停止・配線等未計上。追加監視等は必須から除外。部品除外は完成車の節約額ではない。モーター・USB線は仮予算。Prime最終カート未確認。購入パック全額、余剰を按分しない。')
+               note='E3途中小計。PC・給電・Pico用RS485基板・ヒューズ・配線等未計上。主電源621円復帰、非常停止2387円＋東京向け送料780円。旧部品の除外は完成車の節約額ではない。モーター・USB線は仮予算。Prime未確認。')
 (HERE / 'cost_summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2)+'\n')
 print(json.dumps(dict(subtotal=subtotal, total_JPY_reference=total,
                       difference_from_D68=summary['difference_from_D68_JPY_reference'])))

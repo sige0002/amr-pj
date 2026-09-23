@@ -1,7 +1,7 @@
 {
   "revision": "D6.9",
-  "BOM_sha256": "df3cae44c73dbd0aa68fb872d9b4624a07cba7b5cc99771e27c822a3ead15bd4",
-  "denominator_JPY_reference": 90561.60313315927,
+  "BOM_sha256": "7f63545419bf6b3cf67c0d6844ee44ac08af7e5a0a532931e09549d1399e2824",
+  "denominator_JPY_reference": 94465.60313315927,
   "categories": [
     {
       "category": "電池・充電器・アダプター",
@@ -12,7 +12,7 @@
         "POWER_ADAPTER",
         "POWER_ADAPTER_SHIP"
       ],
-      "percent_of_priced_subtotal": 25.816680790889595
+      "percent_of_priced_subtotal": 24.74974935272833
     },
     {
       "category": "フレーム・締結材・共通送料",
@@ -38,7 +38,7 @@
         "D64_FLOOR_WASHERS",
         "D64_FASTENER_SHIP"
       ],
-      "percent_of_priced_subtotal": 22.084414705636952
+      "percent_of_priced_subtotal": 21.171727418929283
     },
     {
       "category": "モーター",
@@ -46,7 +46,7 @@
       "source_ids": [
         "D01"
       ],
-      "percent_of_priced_subtotal": 15.459090293945867
+      "percent_of_priced_subtotal": 14.820209193250498
     },
     {
       "category": "モーター専用金具",
@@ -55,7 +55,7 @@
         "Q01",
         "S08"
       ],
-      "percent_of_priced_subtotal": 14.283345078051877
+      "percent_of_priced_subtotal": 13.693054249059744
     },
     {
       "category": "タイヤ・キャスター",
@@ -67,7 +67,7 @@
         "S02",
         "S06"
       ],
-      "percent_of_priced_subtotal": 11.498250516489879
+      "percent_of_priced_subtotal": 11.023059880665532
     },
     {
       "category": "天板（固定ボルトは共通締結材）",
@@ -76,11 +76,25 @@
         "DECK_plate",
         "DECK_CNC_SHIP"
       ],
-      "percent_of_priced_subtotal": 6.7118697540024925
+      "percent_of_priced_subtotal": 6.434486890287648
+    },
+    {
+      "category": "操作部・USB線（電装主要部は未計上）",
+      "JPY_reference": 4288.0,
+      "source_ids": [
+        "E02",
+        "U08",
+        "U22",
+        "U24",
+        "E3_ESTOP_SHIP",
+        "ELEC_U1",
+        "ELEC_MAIN"
+      ],
+      "percent_of_priced_subtotal": 4.539218358618438
     },
     {
       "category": "PLA・ベルト",
-      "JPY_reference": 3255.0,
+      "JPY_reference": 3371.0,
       "source_ids": [
         "P04",
         "H02",
@@ -89,15 +103,7 @@
         "POWER_PADS",
         "POWER_LOW_STRAPS"
       ],
-      "percent_of_priced_subtotal": 3.594238493342414
-    },
-    {
-      "category": "操作部・USB線（電装主要部は未計上）",
-      "JPY_reference": 500.0,
-      "source_ids": [
-        "E02"
-      ],
-      "percent_of_priced_subtotal": 0.5521103676409238
+      "percent_of_priced_subtotal": 3.5684946564605307
     }
   ],
   "complete_purchase_total": false

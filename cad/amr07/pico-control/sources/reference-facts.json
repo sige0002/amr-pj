@@ -1,0 +1,26 @@
+{
+  "catalog_SHA256": "932f8210353af267321be846fbff19230f1b9881091a207d509e18db12603d09",
+  "catalog_source": "https://www.tdcjapan.com/wp-content/uploads/2017/06/P5204A-HW-with-RemovableContactBlock.pdf",
+  "manufacturer": "IDEC",
+  "catalog_pages_used": [
+    1,
+    3
+  ],
+  "dimensions_and_ratings": {
+    "head_diameter_mm": 40,
+    "panel_hole_mm": 22.5,
+    "contact_DC24V_DC12_A": 10,
+    "contact_DC24V_DC13_A": 5
+  },
+  "nominal_rear_depth_mm": 49.4,
+  "nominal_head_projection_mm": 32,
+  "prices": {
+    "estop_JPY": 2387,
+    "shipping_to_Tokyo_JPY": 780,
+    "source": "https://store.shopping.yahoo.co.jp/angelhamshopjapan/hw1b-v402r.html",
+    "observed_date": "2026-09-23",
+    "stock": "orderable with supplier lead time; delivery to actual address unconfirmed",
+    "Amazon_Prime_verified": false,
+    "Amazon_HAT_price_verified": false
+  }
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "part": "PrintedStopXN",
+    "file": "aluminum-direct-deck/PrintedStopXN.stl",
+    "sha256": "cd006a55c410dbbd67363afc5b3f99bf272233af9b20dae8da64726743e6f495",
+    "closed": true,
+    "size_mm": [
+      15.0,
+      40.0,
+      15.0
+    ],
+    "solid_CAD_volume_mm3": 8522.87061573605
+  },
+  {
+    "part": "PrintedStopXP",
+    "file": "aluminum-direct-deck/PrintedStopXP.stl",
+    "sha256": "cd006a55c410dbbd67363afc5b3f99bf272233af9b20dae8da64726743e6f495",
+    "closed": true,
+    "size_mm": [
+      15.0,
+      40.0,
+      15.0
+    ],
+    "solid_CAD_volume_mm3": 8522.87061573605
+  },
+  {
+    "part": "PrintedStopYN",
+    "file": "aluminum-direct-deck/PrintedStopYN.stl",
+    "sha256": "8c2ca453a009985d83a387c09cb786c5e47f347a5d06eb929e81e357e26fba7d",
+    "closed": true,
+    "size_mm": [
+      40.0,
+      15.0,
+      15.0
+    ],
+    "solid_CAD_volume_mm3": 8522.87061573605
+  },
+  {
+    "part": "PrintedStopYP",
+    "file": "aluminum-direct-deck/PrintedStopYP.stl",
+    "sha256": "8c2ca453a009985d83a387c09cb786c5e47f347a5d06eb929e81e357e26fba7d",
+    "closed": true,
+    "size_mm": [
+      40.0,
+      15.0,
+      15.0
+    ],
+    "solid_CAD_volume_mm3": 8522.87061573605
+  },
+  {
+    "part": "SeamBeamPLA",
+    "file": "two-story/SeamBeamPLA.stl",
+    "sha256": "22c911c5e03481453e4d1d892e9b4deadf5ea37b063eaa758556505c8ab0b727",
+    "closed": true,
+    "size_mm": [
+      64.0,
+      100.0,
+      25.0
+    ],
+    "solid_CAD_volume_mm3": 45701.60086065484
+  },
+  {
+    "part": "FloorPLA_0_0",
+    "file": "direct-hinge/FloorPLA_0_0.stl",
+    "sha256": "6d8f8ba530c34cd903494adb0f7c3527ead20faf64847360f8f96ec6418fc226",
+    "closed": true,
+    "size_mm": [
+      229.8000030517578,
+      149.8000030517578,
+      26.0
+    ],
+    "solid_CAD_volume_mm3": 141384.864758597
+  },
+  {
+    "part": "FloorPLA_0_1",
+    "file": "direct-hinge/FloorPLA_0_1.stl",
+    "sha256": "18351c25ffb71331c06bd421054e0ca449c95d5ddc2cf29895f992dc1af1c0f5",
+    "closed": true,
+    "size_mm": [
+      229.8000030517578,
+      149.8000030517578,
+      26.0
+    ],
+    "solid_CAD_volume_mm3": 124488.86475859549
+  },
+  {
+    "part": "FloorPLA_1_0",
+    "file": "two-story/FloorPLA_1_0.stl",
+    "sha256": "116dec555820a7520c4a421e30c8877ee79d20778fc724c4155d6fc39724f890",
+    "closed": true,
+    "size_mm": [
+      229.8000030517578,
+      149.8000030517578,
+      23.999999999999986
+    ],
+    "solid_CAD_volume_mm3": 99715.27965247638
+  },
+  {
+    "part": "FloorPLA_1_1",
+    "file": "pico-control/FloorPLA_1_1.stl",
+    "sha256": "25fe89009e3e2468c20c692d7bb55da54df6ceb53b004bbed7784d5127db0da8",
+    "closed": true,
+    "size_mm": [
+      229.8000030517578,
+      149.8000030517578,
+      24.0
+    ],
+    "solid_CAD_volume_mm3": 99320.9193058952
+  },
+  {
+    "part": "ComputerBarrierPLA",
+    "file": "two-story/ComputerBarrierPLA.stl",
+    "sha256": "53d66ff079424127cbd8e6a2e8b4c87b1529409e18ba229edfc0db25470db12a",
+    "closed": true,
+    "size_mm": [
+      123.4000015258789,
+      103.4000015258789,
+      12.399999618530273
+    ],
+    "solid_CAD_volume_mm3": 31120.144000000022
+  },
+  {
+    "part": "RearStopCasePLA",
+    "file": "pico-control/RearStopCasePLA.stl",
+    "sha256": "e4ba9d87512dfea2598fe0b131685cf08bb9e89b01c0e919c4fdd14ed597ab5b",
+    "closed": true,
+    "size_mm": [
+      66.0,
+      76.0,
+      66.0
+    ],
+    "solid_CAD_volume_mm3": 76183.39329525024
+  },
+  {
+    "part": "RearStopLidPLA",
+    "file": "pico-control/RearStopLidPLA.stl",
+    "sha256": "9fcd6f7fa2cdda13b1472cb2ddda4fc14d96b9c2549029faa9593dd6defed304",
+    "closed": true,
+    "size_mm": [
+      66.0,
+      76.0,
+      17.0
+    ],
+    "solid_CAD_volume_mm3": 29571.29427728519
+  },
+  {
+    "part": "RearPowerCasePLA",
+    "file": "direct-hinge/RearPowerCasePLA.stl",
+    "sha256": "69df6059c4cd94a394781acf1121d681c08f5c41d0b12e1b3384dedf8991f095",
+    "closed": true,
+    "size_mm": [
+      66.0,
+      44.0,
+      44.0
+    ],
+    "solid_CAD_volume_mm3": 40749.65159034765
+  },
+  {
+    "part": "RearPowerLidPLA",
+    "file": "direct-hinge/RearPowerLidPLA.stl",
+    "sha256": "c9aa5ff39901d2dce938f09df046a4c1cbe874f7a2e3b8223d0117ba074b1eb4",
+    "closed": true,
+    "size_mm": [
+      66.0,
+      44.0,
+      15.0
+    ],
+    "solid_CAD_volume_mm3": 11914.452258374185
+  },
+  {
+    "part": "PicoTrayPLA",
+    "file": "pico-control/PicoTrayPLA.stl",
+    "sha256": "3b1fc0eccf6b78a620e2a474a8f6e8a7319256f9f45d0433a9d20f10789ecacd",
+    "closed": true,
+    "size_mm": [
+      70.0,
+      45.0,
+      32.0
+    ],
+    "solid_CAD_volume_mm3": 20857.139432144268
+  },
+  {
+    "part": "PicoTrayLidPLA",
+    "file": "pico-control/PicoTrayLidPLA.stl",
+    "sha256": "217c167387ebbc1450adc0cdacdff4a6db039a31333c6f045766cf8664fba67e",
+    "closed": true,
+    "size_mm": [
+      70.0,
+      45.0,
+      13.600000381469727
+    ],
+    "solid_CAD_volume_mm3": 7789.512192900673
+  }
+]

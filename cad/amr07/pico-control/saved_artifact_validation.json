@@ -1,0 +1,13 @@
+{
+  "native_sha256": "e1bf029a1e561db21e92fb612d61351cf53859e1ed97b6490797612825c05d55",
+  "source_native_sha256": "94706242a3aa065c0a76274cea251137c8296fa577529de38461b949668b02b6",
+  "validation_sha256": "ecef197fc74368565be9b1326363b425fe970539aca67c3b2e10778f09284483",
+  "step_sha256": "9e1935f851579eee7ed822c231f3e8317a496c119cc9561a48e3080355734317",
+  "step_solids": 373,
+  "step_volume_mm3": 5217874.325850621,
+  "physical_parts": 359,
+  "prototype_meshes": 16,
+  "unchanged_shapes_rechecked": 335,
+  "passed": true,
+  "production_release": false
+}

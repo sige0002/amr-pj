@@ -37,7 +37,7 @@ assert q['source_sha256'] == digest((HERE / q['source']).resolve())
 assert q['step_sha256'] == saved['quote_geometry'][0]['sha256']
 assert not q['re_queried_this_revision']
 electrical = json.loads((BASE / 'electrical_plan.json').read_text())
-assert electrical['current_CAD'] == 'fixed-deck/AMR01_FixedDeck_D69.FCStd'
+assert electrical['current_CAD'] == 'pico-control/AMR01_PicoControl_E3.FCStd'
 assert electrical['calculations']['requirements_sha256'] == load['requirements_sha256']
 buildability_dir = BASE / 'electrical-buildability'
 buildability_path = buildability_dir / 'requirements.json'
@@ -59,13 +59,16 @@ deferred = list(csv.DictReader((buildability_dir / 'deferred-parts.csv').open(en
 assert {r['ID'] for r in deferred} == set(buildability['deferred_BOM_ids'])
 assert not set(buildability['deferred_BOM_ids']).intersection(by)
 assert sum(float(r['明細金額']) for r in deferred if r['明細金額']) == read('cost_summary.json')['deferred_electrical_reference_JPY']
-assert all(not by[id]['明細金額'] for id in ['U03', 'U04', 'U06', 'U07', 'U08', 'U13', 'U22'])
+assert all(not by[id]['明細金額'] for id in ['U03', 'U04', 'U06', 'U07', 'U08', 'U13', 'U24'])
 assert electrical['status'] == buildability['status']
 assert electrical['control']['baseline'] == buildability['baseline_communication']
 assert electrical['control']['computer']['platform'] == 'Linux mini PC'
 assert electrical['control']['computer']['model'] is None
 assert electrical['control']['onboard_computer_required_for_first_test']
 assert not electrical['power']['estop_cuts_computer_supply']
+assert electrical['control']['Pico_required_for_first_test']
+assert 'ELEC_U1' in by and 'ELEC_MAIN' in by and 'ELEC_ARM' not in by
+assert float(by['U22']['明細金額']) == 2387
 for id, use, buy in [('D3_M6', 50, 70), ('F04', 70, 100), ('D62_FLOOR_SCREWS', 20, 60),
                      ('D3_STOP_NUTS', 28, 40), ('D64_FLOOR_WASHERS', 24, 40)]:
     assert int(by[id]['使用数']) == use and int(by[id]['購入予定数']) == buy and int(by[id]['余剰数']) == buy-use, id
@@ -107,7 +110,7 @@ out = dict(revision='D6.9', date='2026-09-23', files=files, physical_parts=329,
            shared_electrical_plan_sha256=digest(BASE / 'electrical_plan.json'),
            electrical_buildability_files={str(p.relative_to(BASE)): dict(bytes=p.stat().st_size, sha256=digest(p))
                                          for p in sorted(buildability_dir.iterdir()) if p.is_file()},
-           scope='Fixed-deck mechanical prototype review; E2 limits electronics to initial manual drive and physical motor-power E-stop. Conditional/later electronics are outside the purchase BOM. Parts and wiring remain incomplete; CAD geometry unchanged. Existing actual machining quote reused for equivalent geometry. Not production release.',
+           scope='Archived D6.9 mechanical source, 14-part print package and images; current BOM/shared electrical plan refer to E3 in pico-control. E3 has its own CAD, 16-part print package and validation. Final electrical parts and wiring remain incomplete. Existing actual machining quote reused for unchanged deck geometry. Not production release.',
            checks=['Changed-part static and reserved-envelope collision check',
                    'Continuous battery/computer service envelopes with deck installed',
                    'Six-bolt top tool access and vertical deck removal',
@@ -118,7 +121,7 @@ out = dict(revision='D6.9', date='2026-09-23', files=files, physical_parts=329,
                    '14 closed STL meshes and256mm printer envelope',
                    'BOM purchase packs, currencies and linked current requirements',
                    'Withdrawn custom-circuit and solder-terminal candidates excluded from purchase BOM; replacement costs unpriced',
-                   'E2 conditional/later parts excluded from baseline BOM; scope and costs agree'],
+                   'E3 conditional/later parts excluded from baseline BOM; scope and costs agree'],
            production_released=False, physical_strength_tests_complete=False,
            electrical_wiring_design_complete=False, electrical_replacement_CAD_validated=False)
 (HERE / 'release_manifest.json').write_text(json.dumps(out, ensure_ascii=False, indent=2)+'\n')

@@ -1,0 +1,122 @@
+{
+  "revision": "E3",
+  "date": "2026-09-23",
+  "files": {
+    "AMR01_PicoControl_E3.FCStd": {
+      "bytes": 1950545,
+      "sha256": "e1bf029a1e561db21e92fb612d61351cf53859e1ed97b6490797612825c05d55"
+    },
+    "AMR01_PicoControl_E3.step": {
+      "bytes": 9883140,
+      "sha256": "9e1935f851579eee7ed822c231f3e8317a496c119cc9561a48e3080355734317"
+    },
+    "E3-print-prototypes.zip": {
+      "bytes": 270212,
+      "sha256": "e469ba7e0228a422bfd415736641a04ec268c89aa7b42241240542eb6e582f52"
+    },
+    "FloorPLA_1_1.stl": {
+      "bytes": 91084,
+      "sha256": "25fe89009e3e2468c20c692d7bb55da54df6ceb53b004bbed7784d5127db0da8"
+    },
+    "PicoTrayLidPLA.stl": {
+      "bytes": 83084,
+      "sha256": "217c167387ebbc1450adc0cdacdff4a6db039a31333c6f045766cf8664fba67e"
+    },
+    "PicoTrayPLA.stl": {
+      "bytes": 147084,
+      "sha256": "3b1fc0eccf6b78a620e2a474a8f6e8a7319256f9f45d0433a9d20f10789ecacd"
+    },
+    "README.ja.md": {
+      "bytes": 6152,
+      "sha256": "973e5a799a7532c7c8455582a2c67b2103b6fcd6c35e1f760b9b997adbebbd9d"
+    },
+    "RearStopCasePLA.stl": {
+      "bytes": 139284,
+      "sha256": "e4ba9d87512dfea2598fe0b131685cf08bb9e89b01c0e919c4fdd14ed597ab5b"
+    },
+    "RearStopLidPLA.stl": {
+      "bytes": 54484,
+      "sha256": "9fcd6f7fa2cdda13b1472cb2ddda4fc14d96b9c2549029faa9593dd6defed304"
+    },
+    "WIRING.ja.md": {
+      "bytes": 6108,
+      "sha256": "3be46d3461620e82ffb9602a7c5e9f14104b63b72ab657436d901e419a6b49c7"
+    },
+    "build_e3.py": {
+      "bytes": 11058,
+      "sha256": "483faf76692be912f4e0f07a1dcd0a5851f63bd02a6a658f72e018f1cb38d675"
+    },
+    "cad-screen-controls.png": {
+      "bytes": 110632,
+      "sha256": "83c2ed39b8d3e33df4409b415f1feefbdc10bef131c389a6405249e0c35e25e2"
+    },
+    "cad-screen-electronics.png": {
+      "bytes": 153132,
+      "sha256": "41e12d57f43419316a6af335eb34d77360e0f555c35c7316a6d3e7c19fd65085"
+    },
+    "cad-screen-overall.png": {
+      "bytes": 134186,
+      "sha256": "1fc99bf13fe4e3af2666360e216cc3478e099ba55897d9d34ca793e06d119e22"
+    },
+    "cad-screen-pico.png": {
+      "bytes": 152075,
+      "sha256": "9abd9ce5855563f6124ecd6dda9e91287c4fbe43db974622e110103bd84411e3"
+    },
+    "capture_e3.py": {
+      "bytes": 3067,
+      "sha256": "ecba0c56e2560bcfbe7561ec9f8aa207ffb918c899d4c7d5f9bd4a629815f604"
+    },
+    "check_e3.py": {
+      "bytes": 3888,
+      "sha256": "450fc5b1fbc130519ef68733c4dbb596a3a3a7756eee953a396392c3fbc6e5da"
+    },
+    "export_e3.py": {
+      "bytes": 2926,
+      "sha256": "90cde3d85a05cfcaf0564d6704eee1cf51fe1f2070318d6ca2b8fb1c6b19abc8"
+    },
+    "geometry.json": {
+      "bytes": 11448,
+      "sha256": "4a2deb98c4223038918a246067679d6d2b3b8cef2c7c6df0d480ea0a9f599d9c"
+    },
+    "print_manifest.json": {
+      "bytes": 4865,
+      "sha256": "01c395c175cb702f37a309ea0d635e679257ed7293aa47f02e854a51ba28489d"
+    },
+    "release_e3.py": {
+      "bytes": 4046,
+      "sha256": "d63bc28664620660b17de88160dd22e3df28f214fd63a0cb3618eb5bea61c224"
+    },
+    "saved_artifact_validation.json": {
+      "bytes": 559,
+      "sha256": "732ebaad24aa8fbddf746e3eb66c2306d7888a7935a654cbe005d6b18581136c"
+    },
+    "sources/IDEC-HW-source.txt": {
+      "bytes": 169,
+      "sha256": "3280afeaf37e5b559ee409ef683ac7ce90b238fe709e3ff92f240691c037ba15"
+    },
+    "sources/reference-facts.json": {
+      "bytes": 860,
+      "sha256": "857ee4868b4e170b1308456b2238bae6070bb5792725c9f7b650ad67aba7d528"
+    },
+    "validation.json": {
+      "bytes": 2291,
+      "sha256": "ecef197fc74368565be9b1326363b425fe970539aca67c3b2e10778f09284483"
+    }
+  },
+  "shared": {
+    "electrical_plan.json": "686bdd38c68f6528fe7d454910adb3a8a8a943b32ff997d5342071fead3e6f1c",
+    "electrical-buildability/requirements.json": "438ab2c3ad5a667b6e55d1aff748e9b9e34d969f27ddb9f3d7a2ca06dc9391aa",
+    "fixed-deck/BOM.csv": "7f63545419bf6b3cf67c0d6844ee44ac08af7e5a0a532931e09549d1399e2824",
+    "fixed-deck/BOM.ja.md": "9a8e0c964aae05b5a72293bdd9f1b6cf890b1d3a689a113166f5c110b96ca73d",
+    "fixed-deck/BOM-details.ja.md": "0c01dd00eb108cf905a7464d9529c666e68008fd02ede198a2bb8bf6f0b9a64c",
+    "fixed-deck/BOM-costs.json": "0e0b158a4b2ecd2129abe2d3388d15d742a2694a4005f07256437be78aa667a4"
+  },
+  "physical_parts": 359,
+  "PLA_parts": 16,
+  "FreeCAD_GUI_screenshots": 4,
+  "checked_local_links": 59,
+  "geometry_checks_passed": true,
+  "electrical_hardware_validated": false,
+  "firmware_implemented": false,
+  "production_release": false
+}

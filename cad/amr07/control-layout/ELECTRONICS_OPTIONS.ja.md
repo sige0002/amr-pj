@@ -1,6 +1,6 @@
 # 手持ちPicoを使う制御・電源保護の旧比較
 
-**E2では、この機能一式を完成品で揃える前提も撤回した。** 現行E2.1では車載LinuxミニPCからUSB–RS485で手動走行し、非常停止でモーター電源を切る。[現在の最小構成](../electrical-buildability/README.ja.md)を参照。以下は旧比較の履歴。
+**現行はE3：LinuxミニPC → USB → Pico → 2CH RS485基板です。** 後方の2NC非常停止で左右モーター電源を直接遮断する案へ変更し、主電源は残しています。[最新設計](../pico-control/README.ja.md)／[配線構成](../pico-control/WIRING.ja.md)。以下は旧案の履歴で、現行の必須機能や部品表ではありません。
 
 <details>
 <summary>旧比較の記録を開く</summary>

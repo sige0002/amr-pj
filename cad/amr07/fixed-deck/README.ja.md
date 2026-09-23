@@ -2,7 +2,7 @@
 
 **天板を左右の上段3030へM6×12で3本ずつ、計6本固定する構成へ変更しました。** ヒンジ、専用L金具、蝶ボルトは廃止。後方の非常停止・主電源箱は、D6.8の床支持・各4本固定を維持しています。
 
-**電装は車載Linux計算機を含む最小手動走行構成E2.1へ縮小しました。** 車載LinuxミニPC＋USB–RS485と必要な給電部材、電池＋ヒューズ＋非常停止による駆動電源遮断を基本にします。二重リレー・独立監視・ARM・追加センサーは初回必須から除外。部品型番と配線は選定中です。CADの旧非常停止・ARM・主スイッチと電装容積は配置参考のままです。[最小構成とBOM](../electrical-buildability/README.ja.md)。
+**このページのCAD・画像・重量はE3の変更元D6.9です。** 最新の電装配置・Picoケース・非常停止は[E3設計](../pico-control/README.ja.md)を参照。以下は天板・骨格の継承資料で、旧ARMや非常停止外形を現行採用品として扱いません。BOMはE3へ更新しています。
 
 [BOM・費用割合](BOM.ja.md) ／ [全明細Markdown](BOM-details.ja.md) ／ [CSV](BOM.csv)
 
@@ -20,7 +20,7 @@
 | 整備 | 電池は天板を外さず後方へ。天板全体は6本を外して上へ持ち上げる |
 | 車体推計 | 10.384kg。D6.8比−0.231kg、実測前 |
 | 積載条件 | 通常10kgの設計目標、静的構造比較15kg・安全率2。実機確認前 |
-| 費用 | 計上済み小計71,548円＋120.90 USD＝参考90,562円＋未計上分。Linux計算機・電源・通信・非常停止・配線等は未計上 |
+| 現行E3の費用 | 75,452円＋120.90 USD＝参考94,466円＋未計上分。詳細は[BOM](BOM.ja.md) |
 
 ## 固定方法と設計理由
 
@@ -63,7 +63,7 @@ M6×12は板厚4mmを貫通し、溝内への公称突出は8mm、モデルの�
 
 - [組立FCStd](AMR01_FixedDeck_D69.FCStd) ／ [機器外形付きSTEP](AMR01_FixedDeck_D69.step) ／ [構造STEP](AMR01_FixedDeck_D69-structure.step)
 - [天板の製造STEP](../aluminum-direct-deck/AMR_GridDeck_C45_D3.step) ／ [寸法図PDF](../aluminum-direct-deck/AMR_GridDeck_C45_D3.pdf)
-- [現行PLA試作14個ZIP](D69-print-prototypes.zip) ／ [元STLの照合表](print_manifest.json)
+- [旧D6.9 PLA試作14個ZIP](D69-print-prototypes.zip) ／ [元STLの照合表](print_manifest.json)
 - [要件](requirements.json) ／ [配置パラメータ](parameters.json) ／ [干渉・整備検査](validation.json) ／ [保存物検査](saved_artifact_validation.json)
 - [電源・停止回路と試験条件](../ELECTRICAL_AND_VALIDATION.ja.md)
 

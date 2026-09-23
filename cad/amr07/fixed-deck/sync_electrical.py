@@ -1,4 +1,4 @@
-"""Bind the minimum E2 scope to the existing D6.9 mechanical reference."""
+"""Bind the E3 Pico/HAT scope and CAD packaging to the shared electrical plan."""
 from pathlib import Path
 from copy import deepcopy
 import json, hashlib
@@ -15,25 +15,25 @@ for key in ['power', 'restart_and_watchdog', 'control', 'regeneration', 'validat
         ref['pre_E2_' + key] = deepcopy(e[key])
 if 'E2_deferred_candidates' not in ref:
     ref['E2_deferred_candidates'] = deepcopy(e['candidate_parts'])
-e['candidate_parts'] = []  # Replacement baseline parts have not been selected.
-e.update(design='AMR01_FixedDeck_D69', date=policy['date'],
+e['candidate_parts'] = [dict(id='U1',part_number='User-owned Pico',purchase_price_jpy_incl_tax=0),dict(id='S_MAIN',part_number='amon3214',purchase_price_jpy_incl_tax=621),dict(id='S1',part_number='HW1B-V402R',purchase_price_jpy_incl_tax=2387)]
+e.update(design='AMR01_PicoControl_E3', date=policy['date'],
          status=policy['status'], requirements_file='fixed-deck/requirements.json',
          manufacturing_requirements_file='electrical-buildability/requirements.json',
          manufacturing_requirements_sha256=hashlib.sha256(policy_path.read_bytes()).hexdigest(),
-         implementation_disposition='E2 minimum manual-drive scope. Previous custom circuits, multi-relay monitoring and thresholds are archived in reference_only; they are not baseline requirements.')
+         implementation_disposition='E3 Pico/HAT scope. Previous custom circuits, multi-relay monitoring and thresholds are archived in reference_only; they are not baseline requirements.')
 e['power'] = dict(baseline=policy['baseline_power'],
-    positive_path=['battery', 'source_fuse', 'DC_rated_estop_disconnect', 'left_and_right_motor_power_inputs'],
-    computer_branch=['source_fuse_output', 'appropriate_branch_protection_TBD', 'compatible_computer_supply_converter_if_needed', 'Linux_mini_PC', 'USB_RS485'],
+    positive_path=['battery','source_fuse','main_switch','left_or_right_branch_fuse','respective_Estop_NC','respective_motor'],
+    computer_branch=['main_switch_output','computer_branch_fuse','compatible_computer_supply','Linux_mini_PC','USB_Pico','UART_RS485_HAT'],
     estop_cuts_computer_supply=False,
     return_and_signal_ground_wiring='pending terminal-numbered diagram',
     additional_relay='conditional_one_only_if_direct_switching_is_unsuitable',
     battery_protection='check_existing_battery_adapter_protection_before_adding_hardware',
     part_selection_complete=False)
-e['control'] = dict(baseline=policy['baseline_communication'], bus_masters=1,
+e['control'] = dict(baseline=policy['baseline_communication'], bus_masters=1, separate_RS485_channels=2,
     motor='M0601C_111_with_integrated_driver',
-    onboard_computer_required_for_first_test=True, Pico_required_for_first_test=False,
+    onboard_computer_required_for_first_test=True, Pico_required_for_first_test=True,
     computer=deepcopy(policy['baseline_computer']),
-    USB_RS485_part_selected=False, operating_host_interface_confirmed=False,
+    additional_USB_RS485_required=False, pico_interface=deepcopy(policy['pico_interface']), software_design=deepcopy(policy['software_design']), operating_host_interface_confirmed=False,
     protocol_and_software_validation_complete=False)
 e['stopping_behavior'] = deepcopy(policy['stopping_behavior'])
 e['restart_and_watchdog'] = dict(dedicated_ARM_button_required=False,
@@ -53,28 +53,24 @@ e['validation'] = dict(scope='Initial manual drive on the existing flat-floor op
                      'power restoration and communication loss behavior',
                      'low-speed manual drive and stop on flat floor'],
     hardware_tests_complete=False)
-e['cost'].update(priced_purchase_subtotal_jpy_incl_tax=0,
-    scope='No baseline electrical models newly selected. USB cable retains a 500 JPY provisional allowance in the BOM. ARM/main switch prices are deferred, not a finished-system saving.',
-    deferred_electrical_reference_JPY=1456,
+e['cost'].update(priced_purchase_subtotal_jpy_incl_tax=3008,
+    scope='Main switch621 + E-stop2387 =3008 JPY; USB provisional500 and default-Tokyo shipping780 are separate BOM lines. HAT, fuses and harness remain unpriced.',
+    deferred_electrical_reference_JPY=835,
     withdrawal_is_cost_saving=False,
     unpriced=['Linux mini PC, storage and necessary cooling', 'compatible computer supply connection/converter if needed',
-              'assembled USB-RS485 interface', 'latching DC-rated E-stop disconnect',
+              'assembled Pico UART-RS485 HAT',
               'source fuse and holder', 'power/signal connectors and suitable cables',
               'necessary mounting and terminal insulation', 'shipping'],
     conditional_or_later=policy['optional_or_conditional'])
-e['current_CAD'] = 'fixed-deck/AMR01_FixedDeck_D69.FCStd'
-e['current_layout_revision'] = 'D6.9_geometry_E2_electrical_scope_pending_layout'
-params = json.loads((HERE / 'parameters.json').read_text())
-for key in ['estop', 'arm', 'main_power']:
-    e['current_controls_layout'][key].update(params[key])
-    e['current_controls_layout'][key]['purchase_JPY'] = None
-    e['current_controls_layout'][key]['CAD_geometry_is_obsolete_placement_reference'] = True
-e['current_controls_layout']['estop']['procurement_status'] = 'replacement_DC_rated_no_solder_part_pending'
-for key in ['arm', 'main_power']:
-    e['current_controls_layout'][key]['procurement_status'] = 'not_required_for_first_build'
-e['current_controls_layout']['price_scope'] = 'Old control geometry only; initial build does not require ARM or the separate main rocker.'
-e['current_controls_layout']['unreleased'] = ['minimum_part_selection', 'terminal_numbered_wiring',
-    'actual_module_and_control_CAD_layout', 'motion_and_stop_verification']
+e['current_CAD'] = policy['current_CAD']
+e['current_layout_revision'] = 'E3_on_D6.9_chassis'
+g=json.loads((BASE/'pico-control/geometry.json').read_text())
+e['current_controls_layout'] = dict(estop=g['estop'], main_power=g['main_power'], arm=dict(installed=False),
+    pico=g['pico'], limitations=g['checks_pending'], vehicle_estimate_with_existing_electrical_allowance_kg=g['mass']['estimated_base_kg'])
+e['operation_release']['functional_wiring_diagram_complete'] = True
+e['power']['budget'] = deepcopy(policy['power_budget'])
+e['power']['estop'] = deepcopy(policy['estop'])
+e['power']['main_switch'] = deepcopy(policy['main_switch'])
 e['calculations']['requirements_sha256'] = hashlib.sha256((HERE / 'requirements.json').read_bytes()).hexdigest()
 p.write_text(json.dumps(e, ensure_ascii=False, indent=2) + '\n')
-print('Shared electrical plan: E2 minimum manual-drive scope; D6.9 mechanical reference unchanged.')
+print('Shared electrical plan: E3 Pico/HAT, independent direct motor cutoff, all-load main switch.')
