@@ -1,0 +1,61 @@
+{
+  "revision": "D6.6",
+  "date": "2026-09-23",
+  "front_axis": "+X",
+  "operator_side": "rear -X",
+  "estop": {
+    "part": "IDEC XA1E-BV302R",
+    "panel_center_mm": [
+      -213,
+      -119,
+      206
+    ],
+    "axis": [
+      0,
+      0,
+      1
+    ],
+    "head_diameter_mm": 29,
+    "head_height_mm": 20.6,
+    "rear_envelope_mm": [
+      30.4,
+      29.4,
+      30.4
+    ],
+    "mount_hole_mm": 16.2,
+    "key_width_mm": 1.7,
+    "key_overall_height_mm": 17.9,
+    "panel_thickness_mm": 3,
+    "note": "Manufacturer catalogue p6; conservative rear envelope includes terminal-cover space. Yellow printed lid, no added thick nameplate."
+  },
+  "arm": {
+    "part": "amon 3212",
+    "panel_center_mm": [
+      -213,
+      -71,
+      206
+    ],
+    "hole_mm": 12.2,
+    "button_color": "black",
+    "function": "momentary manual re-arm only; never a motion command"
+  },
+  "main_power": {
+    "part": "amon 3214",
+    "panel_center_mm": [
+      -203,
+      120,
+      237
+    ],
+    "hole_mm": 12.2,
+    "function": "manual all-load disconnect after source fuse, before independent UVLO; E-stop cuts motors only",
+    "catalog_limit": "DC24V10A; source10A fuse is an initial coordination value, not a validated inrush rating"
+  },
+  "source_hash": "7a9798e5f8c0f5045029e37143bbb3b625a548ea4855cb096cd126c6e4862bf8",
+  "source_revision": "D6.5",
+  "pico_owned": true,
+  "pico_variant_known": false,
+  "nominal_purchased_envelopes": true,
+  "production_print_release": false,
+  "new_frame_holes": 0,
+  "new_cargo_plate_holes": 0
+}

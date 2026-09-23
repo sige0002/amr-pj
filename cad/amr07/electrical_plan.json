@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
-  "design": "AMR01_TwoStorey_D6",
-  "date": "2026-09-22",
+  "design": "AMR01_HingedDeck_D67",
+  "date": "2026-09-23",
   "status": "electrical_architecture_and_acceptance_plan_not_implemented",
-  "requirements_file": "requirements.json",
+  "requirements_file": "hinged-deck/requirements.json",
   "document": "ELECTRICAL_AND_VALIDATION.ja.md",
   "operation_release": {
     "flat_floor": false,
@@ -85,10 +85,11 @@
     "transient_acceptance_max_V": 23.5,
     "positive_path": [
       "battery",
-      "adapter_manual_switch",
+      "adapter_manual_switch_if_present",
       "F0_near_source",
+      "rear_main_connector",
+      "main_switch_amon3214",
       "independent_latching_UV_temperature_disconnect",
-      "main_connector",
       "Fdrv",
       "D0",
       "K1_NO",
@@ -159,10 +160,16 @@
       "circuit_implemented": false,
       "protection_components_selected": false
     },
-    "note_D5": "The battery/charger/adapter are selected. This does not complete the protection circuit or validate motor supply transients. Charging and regenerative current into the battery are not permitted through the two-wire adapter."
+    "note_D5": "The battery/charger/adapter are selected. This does not complete the protection circuit or validate motor supply transients. Charging and regenerative current into the battery are not permitted through the two-wire adapter.",
+    "main_manual_switch": {
+      "part": "amon3214",
+      "DC24V_catalog_A": 10,
+      "inrush_and_transient_qualification_complete": false,
+      "source": "https://www.amon.jp/products2/detail.php?product_code=3214"
+    }
   },
   "restart_and_watchdog": {
-    "controller": "Pico H",
+    "controller": "owned Raspberry Pi Pico family; variant/headers pending",
     "rs485_sole_master": true,
     "previous_USB_RS485B": "Not paralleled as a second bus master; may be kept as a disconnected service tool.",
     "heartbeat_period_ms": 20,
@@ -317,8 +324,8 @@
       "part_number": "IDEC XA1E-BV302R",
       "used_quantity": 1,
       "purchased_quantity": 1,
-      "purchase_price_jpy_incl_tax": 3298,
-      "source": "https://www.monotaro.com/p/6051/3817/",
+      "purchase_price_jpy_incl_tax": 3153,
+      "source": "https://www.amazon.co.jp/dp/B077Y8DN8G",
       "note": "2 NC emergency-stop switch; panel hole 16.2 mm",
       "status": "candidate_not_purchased"
     },
@@ -334,13 +341,13 @@
     },
     {
       "id": "U1",
-      "part_number": "Raspberry Pi Pico H SC0917",
+      "part_number": "Raspberry Pi Pico, user-owned; variant and headers unconfirmed",
       "used_quantity": 1,
-      "purchased_quantity": 1,
-      "purchase_price_jpy_incl_tax": 920,
-      "source": "https://akizukidenshi.com/catalog/g/g118085/",
-      "note": "51 x 21 mm board, sole RS485 master; firmware not implemented",
-      "status": "candidate_not_purchased"
+      "purchased_quantity": 0,
+      "purchase_price_jpy_incl_tax": 0,
+      "source": null,
+      "note": "Confirm variant, pin headers and supply interface before PCB pinout; USB lead remains separately budgeted.",
+      "status": "user_owned_variant_unconfirmed"
     },
     {
       "id": "U2",
@@ -441,16 +448,35 @@
       "source": "https://akizukidenshi.com/catalog/g/g116378/",
       "note": "One used; mandatory purchase pack contains 10; reverse current block",
       "status": "candidate_not_purchased"
+    },
+    {
+      "id": "S_ARM",
+      "part_number": "amon3212",
+      "used_quantity": 1,
+      "purchased_quantity": 1,
+      "purchase_price_jpy_incl_tax": 835,
+      "source": "https://www.amazon.co.jp/dp/B075SQ41JN",
+      "note": "Momentary NO; new press needed after fault recovery.",
+      "status": "selected_not_purchased"
+    },
+    {
+      "id": "S_MAIN",
+      "part_number": "amon3214",
+      "used_quantity": 1,
+      "purchased_quantity": 1,
+      "purchase_price_jpy_incl_tax": 621,
+      "source": "https://www.amazon.co.jp/dp/B075SW22KP",
+      "note": "Manual all-load switch; DC24V10A catalog, actual motor/DC-DC inrush unqualified.",
+      "status": "selected_not_purchased"
     }
   ],
   "cost": {
-    "priced_purchase_subtotal_jpy_incl_tax": 7584,
+    "priced_purchase_subtotal_jpy_incl_tax": 7975,
     "shipping_included": false,
     "completed_electrical_system_total_jpy": null,
     "purchased": false,
     "old_BOM_delta_determined": true,
     "unpriced": [
-      "ARM pushbutton",
       "debounce and power-on reset",
       "logic level translation",
       "relay coil drivers and suppression",
@@ -460,7 +486,6 @@
       "voltage/current/temperature measurement",
       "heatsink fixing and guarding",
       "wiring and shipping",
-      "battery and charger",
       "main computer and its converter"
     ],
     "excluded_by_design": [
@@ -471,7 +496,8 @@
         "deduction_JPY": 0
       }
     ],
-    "old_USB_RS485B_and_shipping_removed_JPY": 5060
+    "old_USB_RS485B_and_shipping_removed_JPY": 5060,
+    "scope": "Selected electrical parts only; USB lead500 JPY is in current BOM, giving8475 JPY. Shared washers and shipping excluded here; current BOM is authoritative."
   },
   "cad_reservations": [
     {
@@ -500,19 +526,6 @@
       "note": "HS50 long direction along Y; metal mounting, keep power electronics away from hot resistor"
     },
     {
-      "id": "EmergencyStopAccess",
-      "xyz_LWH_mm": [
-        175,
-        65,
-        112,
-        40,
-        40,
-        60
-      ],
-      "status": "reservation_not_validated_assembly",
-      "panel_hole_diameter_mm": 16.2
-    },
-    {
       "id": "SupervisorAndRS485",
       "xyz_LWH_mm": [
         5,
@@ -529,7 +542,7 @@
       "xyz_LWH_mm": [
         -60,
         -50,
-        104,
+        110,
         120,
         100,
         60
@@ -543,10 +556,10 @@
     "load_cases": [
       {
         "id": "normal",
-        "gross_mass_kg": 20.5,
+        "gross_mass_kg": 21.5,
         "slope_deg": 0,
-        "torque_Nm_per_wheel": 0.25505018445625,
-        "torque_with_margin_1p5_Nm_per_wheel": 0.38257527668437497,
+        "torque_Nm_per_wheel": 0.26749165686875,
+        "torque_with_margin_1p5_Nm_per_wheel": 0.401237485303125,
         "status": "calculation_not_hardware_validation"
       }
     ],
@@ -558,8 +571,8 @@
         "inner_rpm": 18.52013528451668,
         "outer_rpm": 38.37736174932872,
         "ideal_stop_m": 0.08625,
-        "reviewed_gross_mass_kg": 20.5,
-        "translation_energy_J": 0.230625
+        "reviewed_gross_mass_kg": 21.5,
+        "translation_energy_J": 0.24187499999999998
       },
       {
         "id": "later",
@@ -568,11 +581,11 @@
         "inner_rpm": 37.04027056903336,
         "outer_rpm": 76.75472349865744,
         "ideal_stop_m": 0.285,
-        "reviewed_gross_mass_kg": 20.5,
-        "translation_energy_J": 0.9225
+        "reviewed_gross_mass_kg": 21.5,
+        "translation_energy_J": 0.9674999999999999
       }
     ],
-    "requirements_sha256": "597ff0baceb6b59960a058a42b5e635481e651b72591de364a3ee8a48089445a"
+    "requirements_sha256": "05e32c03418806f063894d85eecbd903abd2fb0884f92e529dbf2a0616dcf51f"
   },
   "validation": {
     "all_results": "not_run",
@@ -584,7 +597,7 @@
     "inrush_cycles_per_corner": 20,
     "stop_and_comm_fault_cycles_each": 10,
     "thermal_test_torques_Nm": [
-      0.38257527668437497
+      0.401237485303125
     ],
     "thermal_initial_rpm": [
       18.52013528451668,
@@ -601,13 +614,14 @@
     "initial_wheel_path_after_trip_max_m": 0.16,
     "acceptance_applies_to": "Maximum observed result, not mean; only actual tested load/voltage/ambient/duration are released.",
     "thermal_screening_duration_min": 10,
-    "thermal_matrix_strategy": "Stage from unloaded to the flat-floor case 0.383 Nm. Screen 15.5/18/21 V x 18.52/38.38 rpm for 10 min each and straight-line 28.45 rpm; then run 60 min at the thermally severe point and both initial-speed endpoints at 18 V. Release only the actual tested voltage/ambient/duration; screening is not continuous qualification.",
+    "thermal_matrix_strategy": "Stage from unloaded to the flat-floor case 0.401 Nm. Screen 15.5/18/21 V x 18.52/38.38 rpm for 10 min each and straight-line 28.45 rpm; then run 60 min at the thermally severe point and both initial-speed endpoints at 18 V. Release only the actual tested voltage/ambient/duration; screening is not continuous qualification.",
     "temperature_sensor_note": "70 C is the reported stator-temperature trip, not proof of winding temperature or sensor lag. Also log housing temperature.",
     "mechanical_hold": {
       "required_for_current_prototype": false,
       "status": "out_of_scope_after_user_declined_added_brake",
       "qualification_claimed": false
-    }
+    },
+    "reviewed_gross_mass_kg": 21.5
   },
   "sources": {
     "motor_current": "https://shop.directdrive.com/pages/m0601c-111-specs",
@@ -676,8 +690,84 @@
       "chocks": "Parking and fixture preparation only, not automatic stopping/holding."
     },
     "previous_slope_thermal_test_torque_Nm": 0.9161237346465019,
-    "status": "Historical calculations and test plans only; not required qualification or permission for the current flat-floor prototype."
+    "status": "Historical calculations and test plans only; not required qualification or permission for the current flat-floor prototype.",
+    "D65_calculations": {
+      "formula_torque": "m*(a+g*(sin(theta)+Crr*cos(theta)))*r/2; then x1.5",
+      "load_cases": [
+        {
+          "id": "normal",
+          "gross_mass_kg": 20.5,
+          "slope_deg": 0,
+          "torque_Nm_per_wheel": 0.25505018445625,
+          "torque_with_margin_1p5_Nm_per_wheel": 0.38257527668437497,
+          "status": "calculation_not_hardware_validation"
+        }
+      ],
+      "kinematics_and_energy": [
+        {
+          "id": "initial",
+          "speed_m_s": 0.15,
+          "yaw_rate_rad_s": 0.3,
+          "inner_rpm": 18.52013528451668,
+          "outer_rpm": 38.37736174932872,
+          "ideal_stop_m": 0.08625,
+          "reviewed_gross_mass_kg": 20.5,
+          "translation_energy_J": 0.230625
+        },
+        {
+          "id": "later",
+          "speed_m_s": 0.3,
+          "yaw_rate_rad_s": 0.6,
+          "inner_rpm": 37.04027056903336,
+          "outer_rpm": 76.75472349865744,
+          "ideal_stop_m": 0.285,
+          "reviewed_gross_mass_kg": 20.5,
+          "translation_energy_J": 0.9225
+        }
+      ],
+      "requirements_sha256": "597ff0baceb6b59960a058a42b5e635481e651b72591de364a3ee8a48089445a"
+    },
+    "D65_candidate_price_subtotal_JPY": 7584
   },
   "selected_power_file": "makita-power/power_selection.json",
-  "current_CAD": "two-story/AMR01_TwoStorey_D6.FCStd"
+  "current_CAD": "hinged-deck/AMR01_HingedDeck_D67.FCStd",
+  "current_layout_revision": "D6.7",
+  "current_controls_layout": {
+    "estop": {
+      "part": "XA1E-BV302R",
+      "panel_center_mm": [
+        -213,
+        -119,
+        206
+      ],
+      "purchase_JPY": 3153
+    },
+    "arm": {
+      "part": "amon3212",
+      "panel_center_mm": [
+        -213,
+        -71,
+        206
+      ],
+      "purchase_JPY": 835
+    },
+    "main_power": {
+      "part": "amon3214",
+      "panel_center_mm": [
+        -203,
+        120,
+        237
+      ],
+      "purchase_JPY": 621
+    },
+    "pico_purchase_JPY": 0,
+    "price_scope": "Current electrical part prices above; complete current purchase quantities and costs in hinged-deck/BOM.csv.",
+    "power_order": "Battery→sourceF0→rearconnector→main3214→independentUVLO→branches",
+    "unreleased": [
+      "PCB",
+      "PCproductandDC/DC",
+      "harnessandterminals",
+      "electricalqualification"
+    ]
+  }
 }

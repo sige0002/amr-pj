@@ -1,44 +1,53 @@
-# AMR-01：D6.5 1階電装・2階荷台
+# AMR-01：D6.7 開閉天板・後方操作部
 
-**電池・計算機・電源回路を基礎フレーム上の1階へ、格子穴アルミ荷台を2階へ配置しました。** 計算機を床下へ吊る案を撤回。RoboMaster、学生ロボコン、公開ロボットの設計資料を参照し、4支柱支持と部品ごとの交換経路を設計しています。
+**格子穴のアルミ天板をトルクヒンジで横へ0〜90°開き、閉じたら蝶ボルト2本で固定する構成にしました。** 非常停止・手動ARM・主電源は後方へ配置。1階に電池・計算機、2階に荷物を置きます。
 
-**BOM：[Markdownで見る](cad/amr07/two-story/BOM.ja.md) ／ [全明細Markdown](cad/amr07/two-story/BOM-details.ja.md) ／ [CSV](cad/amr07/two-story/BOM.csv)** — 費用の割合・購入数・型番・購入先・備考を確認できます。全明細を同じCSVからMarkdownへ生成しています。
+**BOM：[Markdown概要](cad/amr07/hinged-deck/BOM.ja.md) ／ [全明細Markdown](cad/amr07/hinged-deck/BOM-details.ja.md) ／ [CSV](cad/amr07/hinged-deck/BOM.csv)** — 費用割合、購入パック、使用数、購入先を同じCSVから生成しています。
 
-**[Isaac Sim 5向けURDF・取込手順](sim/isaac_sim/README.ja.md)** — 空車／積載10kg、左右駆動輪と受動キャスター。 [データ一式ZIP](sim/isaac_sim/amr_d65_isaac5.zip)。URDF検査とMuJoCo補助走行は実施済み、Isaac Sim本体での実行は未確認です。
+![FreeCAD実画面：天板を90°開いた状態](cad/amr07/hinged-deck/cad-screen-open-90.png)
 
-MuJoCoでの走行GIF（空車・16秒・等速）：直進→停止→左旋回→直進→停止。
+![FreeCAD実画面による開閉GIF](cad/amr07/hinged-deck/cad-opening.gif)
 
-![AMR D6.5の走行シミュレーション（MuJoCo）](sim/isaac_sim/amr_d65_motion_mujoco.gif)
+このGIFはCADの配置アニメーションです。動力学・強度・実機試験ではありません。
 
-![FreeCAD実画面：計算機下の金属を覆うカバー](cad/amr07/two-story/cad-screen-pc-isolation.png)
+| 項目 | 現行構成 |
+|---|---|
+| 天板 | 6061-T6、300×300×4mm、上面233mm。見積済み加工形状を維持 |
+| 開閉 | スガツネHG-TS15×2。溝固定用PLAアダプター、90°開き止め。空の天板のみ開く |
+| 閉鎖固定 | M6×15蝶ボルト2本＋金属座金。工具なしで外すねじ式。荷重は既存アルミレールで受ける |
+| 拡張用の穴 | 50mmピッチ36穴。ヒンジ取付が4穴を使用、2穴を覆い、30穴を残す |
+| 後方操作部 | IDEC XA1E-BV302R、amon3212 ARM、amon3214主電源。各ケースを4点固定 |
+| 電池交換 | 天板を閉じたまま、8mm持上げ後に後方220mm抜出し |
+| 計算機 | 1階の120×100×60mm・0.5kg予約。機種は未選定、取付面110mm |
+| 車体重量 | 推計10.927kg。10kgは目安。通常荷物10kgの設計目標を維持 |
+| 開閉天板の追加費用 | D6.6から4,188円増。ヒンジ、蝶ボルトと追加購入パック、PLA材料参考を含む |
+| 車体の途中小計 | 83,868円＋120.90 USD、記録済み参考為替で約102,882円＋未計上分 |
 
-![FreeCAD実画面：カバーを外した中央固定の整備状態](cad/amr07/two-story/cad-screen-floor-seam-joint.png)
+空の天板一式約1.302kgに対し、最大重力モーメント1.923N·m、ヒンジ2個の初期下限2.4N·mを比較しています。荷物・固定ベルト・ロックを外して開閉します。PLA取付部の強度、クリープ、経年の保持力は実機検証前のため、印刷データは試作版です。
 
-![FreeCAD実画面：各床4点・計16点の固定](cad/amr07/two-story/cad-screen-floor-fixings-top.png)
+CADの0〜90°の開閉、荷物・配線予約、電池と計算機の交換、操作する手・工具の経路を検査しました。保存FCStd・STEP・18個のSTLも再検査済み。通常荷物10kg＋車体11.5kgまでの比較計算で、必要トルクは余裕込み0.401N·m/輪。平坦な屋内床、追加機械ブレーキなし。実機の積載走行・電源保護・停止試験は未実施です。
 
-![FreeCAD実画面：D6.5組立](cad/amr07/two-story/cad-screen-assembled.png)
+Picoは手持ちを流用。Amazonを優先しつつ送料込みで比較し、他店が安い品は残しました。Primeの個別適用は会員カートで未確認です。PC・専用基板・配線などは未計上、モーター価格も仮予算を含むため、小計を完成車の確定額とは扱いません。
 
-![FreeCAD実画面：1階の電池・計算機・回路](cad/amr07/two-story/cad-screen-first-floor.png)
-
-荷台は300×300×4mm・上面233mm。100mm溝付き支柱4本と、購入予定4本セットに含まれる300mmレール2本を使います。電池は8mm持上げ後に後方へ220mm、計算機は側方へ230mm抜き出せます。荷台を残した交換経路と干渉をCADで検査しました。接続金具の拡大画面も保存しています。
-
-車体は**推計10.068kg**。D6.5で計算機下の金属ねじ・座金を、2mm厚の連続PLAカバーで覆いました。ケースの座面は110mm。裸基板は機種に合うケース／絶縁スペーサーで別途固定します。各床4点固定と中央支持梁・裏リブを維持します。車体10kgは目安とし、必要な支持を優先します。**通常荷物10kgの設計目標は維持**し、車体10.5kgまでの範囲で足回りを再計算しています。[四隅の設計比較](cad/amr07/two-story/CORNER_REVIEW.ja.md)／[重量と積載](cad/amr07/two-story/PAYLOAD_REVIEW.ja.md)
-
-構造比較15kg・静的安全率2も設計目標で、実物の固定・剛性・電源保護・走行試験前です。電池はBL1860B6Ah＋接続アダプターを選定済み、PCは120×100×60mm・0.5kgの予約モデルです。
-
-全車の途中小計は75,548円＋120.90USD＋未計上分、記録済み参考為替では約94,562円。今回はカバーのPLA材料参考76円を追加、金属部品や加工の追加はありません。機種別のケース・基板固定部は未計上です。従来からの未計上品は残り、完成車購入総額ではありません。
-
-- [PLA床の実形状解析・たわみ画像・締付けの課題](cad/amr07/two-story/pla-strength/README.ja.md)
-- [現行D6：配置・固定・交換・費用・検証範囲](cad/amr07/two-story/README.ja.md)
-- [参照したロボコン機体と設計理由](cad/amr07/two-story/REFERENCE_DESIGNS.ja.md)
-- [組立FCStd](cad/amr07/two-story/AMR01_TwoStorey_D6.FCStd)／[機器外形付きSTEP](cad/amr07/two-story/AMR01_TwoStorey_D6-with-equipment-envelopes.step)
-- [全車BOM：Markdown](cad/amr07/two-story/BOM.ja.md)／[全明細Markdown](cad/amr07/two-story/BOM-details.ja.md)／[CSV](cad/amr07/two-story/BOM.csv)／[費用・未確定分](cad/amr07/two-story/cost_summary.json)
-- [電装床4枚＋支持梁＋カバーの印刷ZIP](cad/amr07/two-story/D6-first-floor-print-files.zip)／[保存物再検査](cad/amr07/two-story/saved_artifact_validation.json)
-- [設計要件](cad/amr07/requirements.json)／[電源・停止・回生と試験仕様](cad/amr07/ELECTRICAL_AND_VALIDATION.ja.md)
+- [設計理由・保持トルク・操作手順・追加費用](cad/amr07/hinged-deck/README.ja.md)
+- [重量・輪荷重・天板とPLAの計算範囲](cad/amr07/hinged-deck/PAYLOAD_REVIEW.ja.md)
+- [FCStd](cad/amr07/hinged-deck/AMR01_HingedDeck_D67.FCStd)／[機器外形付きSTEP](cad/amr07/hinged-deck/AMR01_HingedDeck_D67.step)／[試作STL一式ZIP](cad/amr07/hinged-deck/D67-print-prototypes.zip)
+- [設計要件](cad/amr07/hinged-deck/requirements.json)／[干渉検査](cad/amr07/hinged-deck/validation.json)／[保存物再検査](cad/amr07/hinged-deck/saved_artifact_validation.json)
+- [後方操作部・取付と配線経路](cad/amr07/control-layout/README.ja.md)
+- [Amazonと送料込み比較・価格証拠](cad/amr07/control-layout/PROCUREMENT.ja.md)／[既製モジュールと専用基板の製造比較](cad/amr07/control-layout/ELECTRONICS_OPTIONS.ja.md)
+- [制御・電源保護・停止試験](cad/amr07/ELECTRICAL_AND_VALIDATION.ja.md)
 - [同じ天板の実加工見積](cad/amr07/aluminum-direct-deck/README.ja.md)／[モーター金具の実見積](cad/amr07/MACHINING_QUOTE.ja.md)
-- [電源選定と旧D5配置](cad/amr07/makita-power/README.ja.md)／[旧D4：薄型電池の横引出し](cad/amr07/battery-drawer/README.ja.md)
+
+## 継承した機械構成とシミュレーション
+
+D6.5の各床4点固定、中央支持梁、四隅の連続したPLA床、計算機下の絶縁用カバーは維持しています。[床の設計](cad/amr07/two-story/README.ja.md)／[PLA床解析と限界](cad/amr07/two-story/pla-strength/README.ja.md)／[ロボコン等の参考設計](cad/amr07/two-story/REFERENCE_DESIGNS.ja.md)。
+
+[Isaac Sim 5向けURDF・取込手順](sim/isaac_sim/README.ja.md)と[データZIP](sim/isaac_sim/amr_d65_isaac5.zip)は**D6.5時点**のモデルです。今回の後方操作部・ヒンジ・重量増は未反映。URDF検査とMuJoCo補助走行は実施済み、Isaac Sim本体での実行は未確認です。
+
+![旧D6.5の走行シミュレーション（MuJoCo）](sim/isaac_sim/amr_d65_motion_mujoco.gif)
 
 ## 比較履歴・共通資料
+
 
 - [A5：5案の実加工費・強度比較](cad/amr06/README.ja.md) / [修正元の設計レビュー](cad/amr06/DESIGN_REVIEW_2026-09-21.ja.md)
 - [A4：M0601C_111と専用低背金具](cad/amr05/README.ja.md)

@@ -1,0 +1,1069 @@
+{
+  "parameters": {
+    "revision": "D6.6",
+    "date": "2026-09-23",
+    "front_axis": "+X",
+    "operator_side": "rear -X",
+    "estop": {
+      "part": "IDEC XA1E-BV302R",
+      "panel_center_mm": [
+        -213,
+        -119,
+        206
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "head_diameter_mm": 29,
+      "head_height_mm": 20.6,
+      "rear_envelope_mm": [
+        30.4,
+        29.4,
+        30.4
+      ],
+      "mount_hole_mm": 16.2,
+      "key_width_mm": 1.7,
+      "key_overall_height_mm": 17.9,
+      "panel_thickness_mm": 3,
+      "note": "Manufacturer catalogue p6; conservative rear envelope includes terminal-cover space. Yellow printed lid, no added thick nameplate."
+    },
+    "arm": {
+      "part": "amon 3212",
+      "panel_center_mm": [
+        -213,
+        -71,
+        206
+      ],
+      "hole_mm": 12.2,
+      "button_color": "black",
+      "function": "momentary manual re-arm only; never a motion command"
+    },
+    "main_power": {
+      "part": "amon 3214",
+      "panel_center_mm": [
+        -203,
+        120,
+        237
+      ],
+      "hole_mm": 12.2,
+      "function": "manual all-load disconnect after source fuse, before independent UVLO; E-stop cuts motors only",
+      "catalog_limit": "DC24V10A; source10A fuse is an initial coordination value, not a validated inrush rating"
+    },
+    "source_hash": "7a9798e5f8c0f5045029e37143bbb3b625a548ea4855cb096cd126c6e4862bf8",
+    "source_revision": "D6.5",
+    "pico_owned": true,
+    "pico_variant_known": false,
+    "nominal_purchased_envelopes": true,
+    "production_print_release": false,
+    "new_frame_holes": 0,
+    "new_cargo_plate_holes": 0
+  },
+  "physical_parts": 329,
+  "physical_pairs": 53956,
+  "collisions": [],
+  "reference_collisions": {},
+  "reference_pairs": [],
+  "battery_service": [
+    {
+      "part": "BatteryBL1860B",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryBL1860B",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryAdapter03",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryAdapter03",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryBeltTopPad",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryBeltTopPad",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryModuleHarness",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryModuleHarness",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryServiceConnector",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryServiceConnector",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "hits": []
+    }
+  ],
+  "computer_service": [
+    {
+      "part": "Reserved_Computer",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "Reserved_Computer",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        0,
+        -230,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "ComputerTopPad",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "ComputerTopPad",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        0,
+        -230,
+        8
+      ],
+      "hits": []
+    }
+  ],
+  "operator_approach": [
+    {
+      "control": "EStop",
+      "diameter_mm": 70,
+      "hits": []
+    },
+    {
+      "control": "ARM",
+      "diameter_mm": 32,
+      "hits": []
+    },
+    {
+      "control": "MainPower",
+      "diameter_mm": 36,
+      "hits": []
+    }
+  ],
+  "frame_fastener_tools": [
+    {
+      "bolt": "RearStopFrameBolt_0_rear",
+      "hits": []
+    },
+    {
+      "bolt": "RearStopFrameBolt_0_under",
+      "hits": []
+    },
+    {
+      "bolt": "RearStopFrameBolt_1_rear",
+      "hits": []
+    },
+    {
+      "bolt": "RearStopFrameBolt_1_under",
+      "hits": []
+    },
+    {
+      "bolt": "RearPowerFrameBolt_0_rear",
+      "hits": []
+    },
+    {
+      "bolt": "RearPowerFrameBolt_0_under",
+      "hits": []
+    },
+    {
+      "bolt": "RearPowerFrameBolt_1_rear",
+      "hits": []
+    },
+    {
+      "bolt": "RearPowerFrameBolt_1_under",
+      "hits": []
+    }
+  ],
+  "tire_service": [
+    {
+      "side": -1,
+      "hits": []
+    },
+    {
+      "side": 1,
+      "hits": []
+    }
+  ],
+  "caster_sweep": [],
+  "retained_base_objects": 302,
+  "retained_shapes_BRep_equal": true,
+  "removed_references": [
+    "Reserved_EmergencyStop",
+    "BatteryVehicleHarness"
+  ],
+  "new_objects": [
+    "RearStopFrameBolt_0_rear",
+    "RearStopFrameWasher_0_rear",
+    "RearStopFrameNut_0_rear",
+    "RearStopFrameBolt_0_under",
+    "RearStopFrameWasher_0_under",
+    "RearStopFrameNut_0_under",
+    "RearStopFrameBolt_1_rear",
+    "RearStopFrameWasher_1_rear",
+    "RearStopFrameNut_1_rear",
+    "RearStopFrameBolt_1_under",
+    "RearStopFrameWasher_1_under",
+    "RearStopFrameNut_1_under",
+    "RearStopLidBolt_0",
+    "RearStopLidWasher_0",
+    "RearStopLidNut_0",
+    "RearStopLidBolt_1",
+    "RearStopLidWasher_1",
+    "RearStopLidNut_1",
+    "RearStopLidBolt_2",
+    "RearStopLidWasher_2",
+    "RearStopLidNut_2",
+    "RearStopLidBolt_3",
+    "RearStopLidWasher_3",
+    "RearStopLidNut_3",
+    "RearStopCasePLA",
+    "RearStopLidPLA",
+    "RearPowerFrameBolt_0_rear",
+    "RearPowerFrameWasher_0_rear",
+    "RearPowerFrameNut_0_rear",
+    "RearPowerFrameBolt_0_under",
+    "RearPowerFrameWasher_0_under",
+    "RearPowerFrameNut_0_under",
+    "RearPowerFrameBolt_1_rear",
+    "RearPowerFrameWasher_1_rear",
+    "RearPowerFrameNut_1_rear",
+    "RearPowerFrameBolt_1_under",
+    "RearPowerFrameWasher_1_under",
+    "RearPowerFrameNut_1_under",
+    "RearPowerLidBolt_0",
+    "RearPowerLidWasher_0",
+    "RearPowerLidNut_0",
+    "RearPowerLidBolt_1",
+    "RearPowerLidWasher_1",
+    "RearPowerLidNut_1",
+    "RearPowerLidBolt_2",
+    "RearPowerLidWasher_2",
+    "RearPowerLidNut_2",
+    "RearPowerLidBolt_3",
+    "RearPowerLidWasher_3",
+    "RearPowerLidNut_3",
+    "RearPowerCasePLA",
+    "RearPowerLidPLA",
+    "EStop_XA1E_BV302R",
+    "ARM_3212",
+    "MainPower_3214",
+    "EStopTerminalSpace",
+    "ARMLeadSpace",
+    "MainPowerTerminalSpace",
+    "RearStopSignalRoute",
+    "MainPowerInputRoute",
+    "MainPowerOutputRoute"
+  ],
+  "frame_mounts": [
+    {
+      "case": "RearStop",
+      "face": "rear",
+      "surface_mm": [
+        -230,
+        -100,
+        84
+      ],
+      "bolt": "RearStopFrameBolt_0_rear",
+      "nominal_thread_overlap_mm": 5.3,
+      "tip_to_nominal_slot_bottom_mm": 2.5
+    },
+    {
+      "case": "RearStop",
+      "face": "under",
+      "surface_mm": [
+        -215,
+        -100,
+        69
+      ],
+      "bolt": "RearStopFrameBolt_0_under",
+      "nominal_thread_overlap_mm": 5.3,
+      "tip_to_nominal_slot_bottom_mm": 2.5
+    },
+    {
+      "case": "RearStop",
+      "face": "rear",
+      "surface_mm": [
+        -230,
+        -65,
+        84
+      ],
+      "bolt": "RearStopFrameBolt_1_rear",
+      "nominal_thread_overlap_mm": 5.3,
+      "tip_to_nominal_slot_bottom_mm": 2.5
+    },
+    {
+      "case": "RearStop",
+      "face": "under",
+      "surface_mm": [
+        -215,
+        -65,
+        69
+      ],
+      "bolt": "RearStopFrameBolt_1_under",
+      "nominal_thread_overlap_mm": 5.3,
+      "tip_to_nominal_slot_bottom_mm": 2.5
+    },
+    {
+      "case": "RearPower",
+      "face": "rear",
+      "surface_mm": [
+        -230,
+        119,
+        84
+      ],
+      "bolt": "RearPowerFrameBolt_0_rear",
+      "nominal_thread_overlap_mm": 5.3,
+      "tip_to_nominal_slot_bottom_mm": 2.5
+    },
+    {
+      "case": "RearPower",
+      "face": "under",
+      "surface_mm": [
+        -215,
+        119,
+        69
+      ],
+      "bolt": "RearPowerFrameBolt_0_under",
+      "nominal_thread_overlap_mm": 5.3,
+      "tip_to_nominal_slot_bottom_mm": 2.5
+    },
+    {
+      "case": "RearPower",
+      "face": "rear",
+      "surface_mm": [
+        -230,
+        137,
+        84
+      ],
+      "bolt": "RearPowerFrameBolt_1_rear",
+      "nominal_thread_overlap_mm": 5.3,
+      "tip_to_nominal_slot_bottom_mm": 2.5
+    },
+    {
+      "case": "RearPower",
+      "face": "under",
+      "surface_mm": [
+        -215,
+        137,
+        69
+      ],
+      "bolt": "RearPowerFrameBolt_1_under",
+      "nominal_thread_overlap_mm": 5.3,
+      "tip_to_nominal_slot_bottom_mm": 2.5
+    }
+  ],
+  "lid_fixings": [
+    {
+      "case": "RearStop",
+      "bolt": "RearStopLidBolt_0",
+      "xy_mm": [
+        -234,
+        -141
+      ],
+      "thread_overlap_mm": 3.2
+    },
+    {
+      "case": "RearStop",
+      "bolt": "RearStopLidBolt_1",
+      "xy_mm": [
+        -193,
+        -141
+      ],
+      "thread_overlap_mm": 3.2
+    },
+    {
+      "case": "RearStop",
+      "bolt": "RearStopLidBolt_2",
+      "xy_mm": [
+        -234,
+        -57
+      ],
+      "thread_overlap_mm": 3.2
+    },
+    {
+      "case": "RearStop",
+      "bolt": "RearStopLidBolt_3",
+      "xy_mm": [
+        -193,
+        -57
+      ],
+      "thread_overlap_mm": 3.2
+    },
+    {
+      "case": "RearPower",
+      "bolt": "RearPowerLidBolt_0",
+      "xy_mm": [
+        -220,
+        101
+      ],
+      "thread_overlap_mm": 3.2
+    },
+    {
+      "case": "RearPower",
+      "bolt": "RearPowerLidBolt_1",
+      "xy_mm": [
+        -186,
+        101
+      ],
+      "thread_overlap_mm": 3.2
+    },
+    {
+      "case": "RearPower",
+      "bolt": "RearPowerLidBolt_2",
+      "xy_mm": [
+        -220,
+        139
+      ],
+      "thread_overlap_mm": 3.2
+    },
+    {
+      "case": "RearPower",
+      "bolt": "RearPowerLidBolt_3",
+      "xy_mm": [
+        -186,
+        139
+      ],
+      "thread_overlap_mm": 3.2
+    }
+  ],
+  "mass": {
+    "source_D65_kg": 10.067687656632284,
+    "new_prints_and_fasteners_kg": 0.341489186576901,
+    "estimated_base_kg": 10.409176843209185,
+    "new_PLA_kg": 0.19388237012915538,
+    "ledger": [
+      {
+        "name": "RearStopFrameBolt_0_rear",
+        "mass_kg": 0.006362667601315407,
+        "center_mm": [
+          -234.7325581395349,
+          -100.0,
+          84.0
+        ]
+      },
+      {
+        "name": "RearStopFrameWasher_0_rear",
+        "mass_kg": 0.001737094570417264,
+        "center_mm": [
+          -234.99999999999997,
+          -100.0,
+          84.0
+        ]
+      },
+      {
+        "name": "RearStopFrameNut_0_rear",
+        "mass_kg": 0.006083424664393651,
+        "center_mm": [
+          -225.83480988292342,
+          -100.0,
+          84.0
+        ]
+      },
+      {
+        "name": "RearStopFrameBolt_0_under",
+        "mass_kg": 0.006362667601315406,
+        "center_mm": [
+          -215.0,
+          -100.0,
+          64.26744186046511
+        ]
+      },
+      {
+        "name": "RearStopFrameWasher_0_under",
+        "mass_kg": 0.0017370945704172638,
+        "center_mm": [
+          -215.0,
+          -99.99999999999999,
+          64.00000000000001
+        ]
+      },
+      {
+        "name": "RearStopFrameNut_0_under",
+        "mass_kg": 0.006083424664393646,
+        "center_mm": [
+          -215.0,
+          -100.0,
+          73.16519011707659
+        ]
+      },
+      {
+        "name": "RearStopFrameBolt_1_rear",
+        "mass_kg": 0.006362667601315407,
+        "center_mm": [
+          -234.73255813953486,
+          -65.0,
+          84.0
+        ]
+      },
+      {
+        "name": "RearStopFrameWasher_1_rear",
+        "mass_kg": 0.001737094570417264,
+        "center_mm": [
+          -234.99999999999997,
+          -65.0,
+          84.0
+        ]
+      },
+      {
+        "name": "RearStopFrameNut_1_rear",
+        "mass_kg": 0.006083424664393651,
+        "center_mm": [
+          -225.83480988292342,
+          -65.0,
+          84.0
+        ]
+      },
+      {
+        "name": "RearStopFrameBolt_1_under",
+        "mass_kg": 0.006362667601315405,
+        "center_mm": [
+          -215.00000000000003,
+          -65.0,
+          64.26744186046511
+        ]
+      },
+      {
+        "name": "RearStopFrameWasher_1_under",
+        "mass_kg": 0.0017370945704172636,
+        "center_mm": [
+          -215.00000000000003,
+          -65.0,
+          64.00000000000001
+        ]
+      },
+      {
+        "name": "RearStopFrameNut_1_under",
+        "mass_kg": 0.006083424664393646,
+        "center_mm": [
+          -215.0,
+          -65.0,
+          73.16519011707659
+        ]
+      },
+      {
+        "name": "RearStopLidBolt_0",
+        "mass_kg": 0.002786749763366827,
+        "center_mm": [
+          -234.00000000000006,
+          -141.0,
+          203.33628318584076
+        ]
+      },
+      {
+        "name": "RearStopLidWasher_0",
+        "mass_kg": 0.0007629652283554084,
+        "center_mm": [
+          -234.0,
+          -141.0,
+          206.5
+        ]
+      },
+      {
+        "name": "RearStopLidNut_0",
+        "mass_kg": 0.0007179502281196373,
+        "center_mm": [
+          -233.99999999999997,
+          -141.00000000000006,
+          195.39999999999992
+        ]
+      },
+      {
+        "name": "RearStopLidBolt_1",
+        "mass_kg": 0.002786749763366827,
+        "center_mm": [
+          -193.00000000000003,
+          -141.0,
+          203.33628318584076
+        ]
+      },
+      {
+        "name": "RearStopLidWasher_1",
+        "mass_kg": 0.0007629652283554084,
+        "center_mm": [
+          -193.0,
+          -141.0,
+          206.5
+        ]
+      },
+      {
+        "name": "RearStopLidNut_1",
+        "mass_kg": 0.0007179502281196373,
+        "center_mm": [
+          -193.0,
+          -141.0,
+          195.4
+        ]
+      },
+      {
+        "name": "RearStopLidBolt_2",
+        "mass_kg": 0.0027867497633668275,
+        "center_mm": [
+          -234.0,
+          -57.0,
+          203.33628318584073
+        ]
+      },
+      {
+        "name": "RearStopLidWasher_2",
+        "mass_kg": 0.0007629652283554081,
+        "center_mm": [
+          -234.0,
+          -57.0,
+          206.49999999999997
+        ]
+      },
+      {
+        "name": "RearStopLidNut_2",
+        "mass_kg": 0.0007179502281196372,
+        "center_mm": [
+          -234.00000000000006,
+          -56.99999999999999,
+          195.4
+        ]
+      },
+      {
+        "name": "RearStopLidBolt_3",
+        "mass_kg": 0.0027867497633668275,
+        "center_mm": [
+          -193.0,
+          -57.0,
+          203.33628318584073
+        ]
+      },
+      {
+        "name": "RearStopLidWasher_3",
+        "mass_kg": 0.0007629652283554081,
+        "center_mm": [
+          -193.00000000000003,
+          -57.0,
+          206.49999999999997
+        ]
+      },
+      {
+        "name": "RearStopLidNut_3",
+        "mass_kg": 0.0007179502281196371,
+        "center_mm": [
+          -193.00000000000003,
+          -57.000000000000014,
+          195.40000000000006
+        ]
+      },
+      {
+        "name": "RearStopCasePLA",
+        "mass_kg": 0.10090789836979601,
+        "center_mm": [
+          -217.6766108546479,
+          -93.22967339565353,
+          147.37420912892483
+        ]
+      },
+      {
+        "name": "RearStopLidPLA",
+        "mass_kg": 0.017478229824591653,
+        "center_mm": [
+          -213.5346852631241,
+          -98.8123909759075,
+          204.50000000000003
+        ]
+      },
+      {
+        "name": "RearPowerFrameBolt_0_rear",
+        "mass_kg": 0.006362667601315407,
+        "center_mm": [
+          -234.7325581395349,
+          119.0,
+          84.0
+        ]
+      },
+      {
+        "name": "RearPowerFrameWasher_0_rear",
+        "mass_kg": 0.001737094570417264,
+        "center_mm": [
+          -234.99999999999997,
+          118.99999999999999,
+          84.0
+        ]
+      },
+      {
+        "name": "RearPowerFrameNut_0_rear",
+        "mass_kg": 0.006083424664393651,
+        "center_mm": [
+          -225.83480988292342,
+          119.0,
+          84.0
+        ]
+      },
+      {
+        "name": "RearPowerFrameBolt_0_under",
+        "mass_kg": 0.006362667601315406,
+        "center_mm": [
+          -215.0,
+          119.00000000000001,
+          64.26744186046511
+        ]
+      },
+      {
+        "name": "RearPowerFrameWasher_0_under",
+        "mass_kg": 0.0017370945704172638,
+        "center_mm": [
+          -215.0,
+          118.99999999999999,
+          64.00000000000001
+        ]
+      },
+      {
+        "name": "RearPowerFrameNut_0_under",
+        "mass_kg": 0.006083424664393646,
+        "center_mm": [
+          -215.0,
+          119.00000000000001,
+          73.16519011707659
+        ]
+      },
+      {
+        "name": "RearPowerFrameBolt_1_rear",
+        "mass_kg": 0.006362667601315408,
+        "center_mm": [
+          -234.73255813953486,
+          137.0,
+          84.00000000000001
+        ]
+      },
+      {
+        "name": "RearPowerFrameWasher_1_rear",
+        "mass_kg": 0.0017370945704172631,
+        "center_mm": [
+          -234.99999999999997,
+          137.0,
+          84.00000000000001
+        ]
+      },
+      {
+        "name": "RearPowerFrameNut_1_rear",
+        "mass_kg": 0.006083424664393649,
+        "center_mm": [
+          -225.83480988292342,
+          137.0,
+          84.0
+        ]
+      },
+      {
+        "name": "RearPowerFrameBolt_1_under",
+        "mass_kg": 0.006362667601315406,
+        "center_mm": [
+          -215.0,
+          137.0,
+          64.26744186046511
+        ]
+      },
+      {
+        "name": "RearPowerFrameWasher_1_under",
+        "mass_kg": 0.001737094570417263,
+        "center_mm": [
+          -215.00000000000006,
+          137.00000000000003,
+          64.00000000000001
+        ]
+      },
+      {
+        "name": "RearPowerFrameNut_1_under",
+        "mass_kg": 0.006083424664393646,
+        "center_mm": [
+          -215.0,
+          137.0,
+          73.16519011707659
+        ]
+      },
+      {
+        "name": "RearPowerLidBolt_0",
+        "mass_kg": 0.0027867497633668266,
+        "center_mm": [
+          -220.00000000000003,
+          101.0,
+          234.33628318584073
+        ]
+      },
+      {
+        "name": "RearPowerLidWasher_0",
+        "mass_kg": 0.000762965228355408,
+        "center_mm": [
+          -220.0,
+          101.0,
+          237.5
+        ]
+      },
+      {
+        "name": "RearPowerLidNut_0",
+        "mass_kg": 0.0007179502281196375,
+        "center_mm": [
+          -219.99999999999997,
+          100.99999999999996,
+          226.39999999999995
+        ]
+      },
+      {
+        "name": "RearPowerLidBolt_1",
+        "mass_kg": 0.0027867497633668266,
+        "center_mm": [
+          -186.00000000000006,
+          101.0,
+          234.33628318584073
+        ]
+      },
+      {
+        "name": "RearPowerLidWasher_1",
+        "mass_kg": 0.000762965228355408,
+        "center_mm": [
+          -185.99999999999997,
+          101.0,
+          237.5
+        ]
+      },
+      {
+        "name": "RearPowerLidNut_1",
+        "mass_kg": 0.0007179502281196372,
+        "center_mm": [
+          -186.00000000000003,
+          101.00000000000003,
+          226.40000000000003
+        ]
+      },
+      {
+        "name": "RearPowerLidBolt_2",
+        "mass_kg": 0.002786749763366827,
+        "center_mm": [
+          -219.99999999999997,
+          139.0,
+          234.3362831858407
+        ]
+      },
+      {
+        "name": "RearPowerLidWasher_2",
+        "mass_kg": 0.0007629652283554084,
+        "center_mm": [
+          -220.0,
+          139.00000000000003,
+          237.49999999999997
+        ]
+      },
+      {
+        "name": "RearPowerLidNut_2",
+        "mass_kg": 0.0007179502281196374,
+        "center_mm": [
+          -219.99999999999997,
+          139.0,
+          226.39999999999998
+        ]
+      },
+      {
+        "name": "RearPowerLidBolt_3",
+        "mass_kg": 0.002786749763366827,
+        "center_mm": [
+          -186.00000000000003,
+          139.0,
+          234.3362831858407
+        ]
+      },
+      {
+        "name": "RearPowerLidWasher_3",
+        "mass_kg": 0.0007629652283554084,
+        "center_mm": [
+          -185.99999999999997,
+          139.00000000000003,
+          237.49999999999997
+        ]
+      },
+      {
+        "name": "RearPowerLidNut_3",
+        "mass_kg": 0.0007179502281196373,
+        "center_mm": [
+          -186.00000000000003,
+          139.0,
+          226.4
+        ]
+      },
+      {
+        "name": "RearPowerCasePLA",
+        "mass_kg": 0.0676117611343837,
+        "center_mm": [
+          -217.01186852588424,
+          124.30123338651302,
+          162.80911126126438
+        ]
+      },
+      {
+        "name": "RearPowerLidPLA",
+        "mass_kg": 0.007884480800383998,
+        "center_mm": [
+          -203.00000000000006,
+          120.0,
+          235.50000000000006
+        ]
+      }
+    ],
+    "actually_weighed": false,
+    "note": "Existing0.4kg electrical protection allowance retained, including switches;0.4kg harness and0.05kg Pico allowance retained. No mass saving for owned parts."
+  },
+  "conditional_cg_xyz_ranges_mm": [
+    [
+      -15.58381288476564,
+      0.2606029958147848
+    ],
+    [
+      -6.848998459815142,
+      8.995417420765284
+    ],
+    [
+      123.37589425914099,
+      143.18141410986652
+    ]
+  ],
+  "explicit_limits": [
+    "PC product, Pico variant/headers, protection PCB and wiring terminals remain unselected/unreleased.",
+    "Case strength, printed hole tolerances, switch retention and contact/routing temperature require prototype checks.",
+    "D6.5 floor FEM remains a floor-only historical analysis; no new case FEM or electrical protection qualification claimed.",
+    "Existing battery adapter latch and connector are catalogue reservations; receiving dimensions still required."
+  ]
+}

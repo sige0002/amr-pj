@@ -11,9 +11,10 @@ import hashlib
 import html
 import io
 import json
+import sys
 from urllib.parse import quote
 
-HERE = Path(__file__).resolve().parent
+HERE = Path(sys.argv[1]).resolve() if len(sys.argv)>1 else Path(__file__).resolve().parent
 raw = (HERE/'BOM.csv').read_bytes()
 reader = csv.DictReader(io.StringIO(raw.decode('utf-8-sig')))
 rows = list(reader)
@@ -30,10 +31,12 @@ groups = [
     ('タイヤ・キャスター', ['D02','C01','P01','S02','S06']),
     ('フレーム・締結材', ['F01','F02','D6_POSTS','F03','F04','H01','MW','D3_M6','D3_STOP_BOLTS','D3_STOP_NUTS','D3_STOP_WASHERS','D62_FLOOR_SCREWS','D62_BEAM_WASHERS','D64_FLOOR_WASHERS']),
     ('アルミ天板', ['DECK_plate','DECK_CNC_SHIP']),
+    ('開閉天板の金具', [r['ID'] for r in rows if r['ID'].startswith('HATCH_')]),
     ('制御・電源保護', ['E02']+[r['ID'] for r in rows if r['ID'].startswith('ELEC_')]),
     ('PLA・ベルト・保護材', ['P04','H02','DECK_cargo_straps','DECK_edge_protection_and_slack_retention','POWER_PADS','POWER_LOW_STRAPS']),
     ('その他送料', ['S03','D3_STRAP_SHIP','S04','S07','D64_FASTENER_SHIP']),
 ]
+groups=[g for g in groups if g[1]]
 by_id = {r['ID']: r for r in rows}
 ids = [i for _, members in groups for i in members]
 assert len(ids) == len(set(ids))
@@ -49,6 +52,7 @@ def yen(row):
 
 def evidence(row):
     if yen(row) is None: return '未計上'
+    if row['購入先']=='手持ち': return '手持ち流用'
     if row['価格根拠'] in ['予算枠','ユーザー仮枠']: return '仮予算'
     if row['価格根拠'] == '材料消費参考': return '材料消費'
     if '自動見積' in row['価格根拠']: return '自動見積'
@@ -99,9 +103,10 @@ lines += [f'| **途中小計** | **{jpy(total)}** | **100%** |', '',
     f'割合の分母は計上済み小計。未計上品を0円とは扱わない。円換算は記録済みの1 USD＝{rate:.4f}円（{summary["FX_date"]}参考値）で、現在の決済レートではない。元の小計は{summary["subtotal"]["JPY"]:,.0f}円＋{summary["subtotal"]["USD"]:.2f} USD。行ごとの四捨五入で端数差が出る。', '',
     '電池・モーター金具・天板の欄には、それぞれ記録された送料を含む。共通送料は「その他送料」へ置き、二重計上しない。購入パック全額で集計し、使用数による按分はしていない。', '',
     '## 金額の確かさ', '', '| 根拠 | 計上額 |', '|---|---:|']
-for label in ['価格記録','自動見積','仮予算','材料消費']:
+for label in ['価格記録','自動見積','仮予算','材料消費','手持ち流用']:
     lines.append(f'| {label} | {jpy(states[label])} |')
 lines += ['', f'価格記録は既存の販売ページ確認・引継価格。自動見積はJLCCNCの実サイト記録で、未発注・担当者審査前。**モーター14,000円は仮予算**。PLA{by_id["P04"]["明細金額"]}円は材料消費参考で、新規スプールの購入額ではない。', '',
+    'Pico本体はユーザー所有のため購入0円。型番・ピン有無・USB線の所有までは未確認。[既製モジュールと専用基板の比較](../control-layout/ELECTRONICS_OPTIONS.ja.md)／[Amazonと送料込み比較](../control-layout/PROCUREMENT.ja.md)。', '',
     '## 購入リスト', '',
     '「使用／購入」は使用数と買う数で、購入予定数が未確定の項目は未定と表示する。品名から購入先、各品目の「仕様・備考」から型番・購入単位・価格根拠などの[全明細Markdown](BOM-details.ja.md)を開ける。同じ内容の[CSV](BOM.csv)も用意している。', '']
 short_names = {'D01':'M0601C_111 モーター','Q01':'専用モーター金具 A6-R1',
@@ -128,9 +133,9 @@ for c in category_rows:
         if amount is not None and r['通貨']=='USD':price+='（$'+r['明細金額']+'）'
         lines.append(f'| {name} | {qty} | {price} | {evidence(r)} |')
     lines += ['']
-lines += [f'**今回D6.5は、金属接触を防ぐPLAカバー1個を追加。追加金属部品・加工なし、PLA材料消費参考は{summary["barrier_change_from_D64"]["PLA_material_reference_increase_JPY"]:,.0f}円増。** 機種別の基板ケース／絶縁スペーサーは未選定・未計上。[カバーと取付条件](COMPUTER_BARRIER.ja.md)。', '',
-    f'**前回D6.4では中央4本を通常のM4×16に変更し、上下のOD12座金を計8枚にした。** 新たな物理部品は上側座金4枚、下側4枚は交換。ねじ60本770円・座金50枚288円・2店舗送料参考775円、合計1833円を購入パック全額で計上した。使用する4本＋8枚の按分参考は約97円だが、購入額には使わない。従来の中央ねじ代は未計上だったため、旧ねじ代を差し引いた節約額は作らない。PLA材料消費参考は前版より{summary["plain_hole_rework_from_D63"]["PLA_material_reference_increase_JPY"]:,.0f}円増。', '',
-    '上記送料は北海道・沖縄を除く掲載条件の参考で、まとめ買い・店頭小袋購入では再計上する。[販売ページ確認記録](plain_hole_fastener_observations.json)。各床4点固定と支柱根元両側補強は継続する。追加金属加工は不要。', '',
+lines += [f'**機械基礎D6.5では、金属接触を防ぐPLAカバー1個を追加。追加金属部品・加工なし、PLA材料消費参考は{summary["barrier_change_from_D64"]["PLA_material_reference_increase_JPY"]:,.0f}円増。** 機種別の基板ケース／絶縁スペーサーは未選定・未計上。[カバーと取付条件](../two-story/COMPUTER_BARRIER.ja.md)。', '',
+    f'**履歴：D6.4では中央4本を通常のM4×16に変更し、上下のOD12座金を計8枚にした。** 新たな物理部品は上側座金4枚、下側4枚は交換。ねじ60本770円・座金50枚288円・2店舗送料参考775円、合計1833円を購入パック全額で計上した。使用する4本＋8枚の按分参考は約97円だが、購入額には使わない。従来の中央ねじ代は未計上だったため、旧ねじ代を差し引いた節約額は作らない。PLA材料消費参考は前版より{summary["plain_hole_rework_from_D63"]["PLA_material_reference_increase_JPY"]:,.0f}円増。', '',
+    'D6.4の上記価格は変更履歴。現行の購入先・金額・パック数は上表と明細を参照。上記送料は北海道・沖縄を除く掲載条件の参考で、まとめ買い・店頭小袋購入では再計上する。[販売ページ確認記録](../two-story/plain_hole_fastener_observations.json)。各床4点固定と支柱根元両側補強は継続する。追加金属加工は不要。', '',
     '## これから金額が増える項目', '',
     '主計算機の0.5kgは重量の予約であり、購入費の計上ではない。未計上品は次のとおり。', '',
     '| 未計上品 | 状態 |','|---|---|']
@@ -140,8 +145,10 @@ lines += ['', '## 見直すと効果の大きい費用', '',
     '- 電池・充電器・アダプター：約23,380円。未所有のため充電器も含む。',
     '- 専用モーター金具2個：約12,935円（送料込みの実自動見積）。形状や加工条件を変更する場合は実見積を取り直す。',
     '- タイヤキット2個：9,240円。Taobaoのモーターに同じキットが付くと確認できた場合のみ、別購入を外せる。',
-    '- 溝ナット100個：5,112円、使用70個。20個の接合金具本体1,834円より大きい。安価な互換品へ置換する場合は寸法・締結条件を照合する。', '',
-    '[CADと設計の説明](README.ja.md)／[重量と積載](PAYLOAD_REVIEW.ja.md)／[全明細Markdown](BOM-details.ja.md)／[全明細CSV](BOM.csv)／[費用集計CSV](BOM-summary.csv)／[計算値JSON](BOM-costs.json)', '']
+    f'- 溝ナット100個：5,112円、使用{by_id["F04"]["使用数"]}個。20個の接合金具本体1,834円より大きい。安価な互換品へ置換する場合は寸法・締結条件を照合する。', '',
+    '[CADと設計の説明](README.ja.md)／[重量と積載](../two-story/PAYLOAD_REVIEW.ja.md)／[全明細Markdown](BOM-details.ja.md)／[全明細CSV](BOM.csv)／[費用集計CSV](BOM-summary.csv)／[計算値JSON](BOM-costs.json)', '']
+if revision=='D6.7':
+    lines=[s.replace('../two-story/PAYLOAD_REVIEW.ja.md','PAYLOAD_REVIEW.ja.md') for s in lines]
 (HERE/'BOM.ja.md').write_text('\n'.join(lines))
 
 

@@ -8,6 +8,16 @@ v=json.loads((HERE/'validation.json').read_text())
 obs={a['asin']:a for a in json.loads((HERE/'purchase_observations.json').read_text())}
 grams=math.ceil(v['mass']['total_solid_PLA_kg']*1000)
 for row in rows:
+    if row['ID']=='ELEC_U1':row.update({'部品名':'手持ちRaspberry Pi Pico',
+        '仕様・型番':'Raspberry Pi Pico系列、所有確認済み。型番・ヘッダーピン有無は未確認。',
+        '使用数':'1','購入予定数':'0','購入単位':'本体を手持ち流用','購入口数':'0','余剰数':'0',
+        '購入単位単価':'0','明細金額':'0','価格根拠':'2026-09-23 ユーザー所有申告',
+        '選定状況':'本体は手持ち、型番・ピン有無確認待ち','購入先':'手持ち','URL':'',
+        '備考':'旧Pico H購入920円を除外。ヘッダー、USB線、周辺回路まで所有とは仮定しない。搭載質量は減らさない。'})
+    if row['ID']=='ELEC_S1':row.update({'購入単位単価':'3153','明細金額':'3153',
+        '価格根拠':'2026-09-23 Amazon商品ページ、税込3153円',
+        '購入先':'Amazon.co.jp（販売・発送Amazon）','URL':'https://www.amazon.co.jp/dp/B077Y8DN8G',
+        '備考':'同じIDEC XA1E-BV302Rの購入先を変更し145円減。Amazon発送まとめ買い3500円以上の無料配送表示を確認。個別のPrime会員適用・決済送料は未確認。後方操作部の現行配置はcontrol-layout参照。'})
     if row['ID']=='F02':row.update({'使用数':'4','余剰数':'0','CAD形状数':'4',
         '備考':'下段2本＋上段2本。購入予定4本セットを全て使用し、D5から追加購入なし。価格1467円は同日P1/D5の観測を継承。'})
     if row['ID']=='F03':row.update({'使用数':'20','購入予定数':'20','購入口数':'2','余剰数':'0','明細金額':'1834','CAD形状数':'20',
@@ -61,19 +71,19 @@ for row in rows:
         '備考':'4本使用。皿穴を廃止、上下面OD12座金と既存M4ナットで締結。送料別行。小袋や手持ち同等品なら全パック購入は不要。'})
 for data in [
     dict(ID='D64_FLOOR_WASHERS',分類='D6.4 1階床支持',部品名='床継ぎ目の上下大径平座金',
-         **{'仕様・型番':'nejiya.jp 4104012104、4×12×1ステンレス丸ワッシャー','使用数':'8','単位':'枚',
-            '購入予定数':'50','購入単位':'50枚/パック','購入口数':'1','余剰数':'42','購入単位単価':'288','明細金額':'288',
-            '通貨':'JPY','価格根拠':'2026-09-23 出店者商品ページ288円/50枚',
-            '選定状況':'汎用規格品の購入候補、寸法受入確認前','購入先':'nejiya.jp Yahoo店',
-            'URL':'https://store.shopping.yahoo.co.jp/nejiya-jp/4104012104.html','CAD形状数':'8',
-            '備考':'上4枚追加＋下4枚をOD9から交換。CAD内径4.1は公称モデル。販売店は呼び4で工場独自公差と記載、軸との嵌合・外径・厚みを受入確認。送料別行。'}),
+         **{'仕様・型番':'Ysintl JP、M4用OD12×t1、SUS304平座金20枚、ASIN B0H8RT271F','使用数':'8','単位':'枚',
+            '購入予定数':'20','購入単位':'20枚/パック','購入口数':'1','余剰数':'12','購入単位単価':'430','明細金額':'430',
+            '通貨':'JPY','価格根拠':'2026-09-23 Amazon商品ページ430円/20枚、税込',
+            '選定状況':'同寸法の購入先変更、寸法受入確認前','購入先':'Ysintl JP／Amazon発送',
+            'URL':'https://www.amazon.co.jp/dp/B0H8RT271F','CAD形状数':'8',
+            '備考':'M4用OD12×t1の同寸法。旧288円＋390円送料から430円へ248円減。送料0は他のAmazon発送品と3500円以上まとめ買いの条件。CAD内径4.1は公称モデルで実測未確認。'}),
     dict(ID='D64_FASTENER_SHIP',分類='送料',部品名='中央ねじ・座金の別店舗送料',
-         **{'仕様・型番':'オノカツ385円＋nejiya.jp390円、北海道・沖縄を除く掲載条件',
-            '使用数':'1','単位':'式','購入予定数':'1','購入単位':'2店舗分','購入口数':'1','余剰数':'0',
-            '購入単位単価':'775','明細金額':'775','通貨':'JPY',
-            '価格根拠':'2026-09-23 両店の送料表示','選定状況':'配送先未指定の参考送料','購入先':'各販売店',
+         **{'仕様・型番':'オノカツ385円、北海道・沖縄を除く掲載条件。座金の別店舗送料を削除。',
+            '使用数':'1','単位':'式','購入予定数':'1','購入単位':'1店舗分','購入口数':'1','余剰数':'0',
+            '購入単位単価':'385','明細金額':'385','通貨':'JPY',
+            '価格根拠':'2026-09-23 直販送料表示','選定状況':'配送先未指定の参考送料','購入先':'オノカツ',
             'URL':'https://store.onokatsu.co.jp/pages/user-guide',
-            '備考':'オノカツ3300円未満385円、北海道・沖縄900円。nejiya5500円未満390円、条件により異なる。まとめ買い・店頭購入なら再計上し二重加算しない。'})]:
+            '備考':'M4×16は直販770＋送料385＝1155円。Amazon同品1180円より25円安いので直販維持。座金はAmazonへ変更。まとめ買い時は送料を一度だけ計上。'})]:
     row={k:'' for k in fields};row.update(data);rows.append(row)
 # Keep the currently unpriced scope visible in the same BOM. The historical
 # battery/charger rows are superseded; only independent battery protection is
@@ -126,12 +136,15 @@ out=dict(revision=v['parameters']['revision'],date='2026-09-23',subtotal=totals,
     barrier_change_from_D64=dict(added_printed_parts=1,added_metal_parts=0,added_machining=False,
         barrier_mass_kg=next(e['mass_kg'] for e in v['cg_difference']['ledger'] if e['name']=='add ComputerBarrierPLA'),
         PLA_material_reference_increase_JPY=grams*2-1204,
-        priced_subtotal_change_JPY=totals['JPY']-before64['subtotal']['JPY'],
+        priced_subtotal_change_JPY=grams*2-1204,
         PCB_specific_mount_price=None,scope='Nonconductive PLA contact barrier only; actual case/PCB mounting and printing support/failure/electricity cost remain unpriced.'),
     selected_power_delivered_Tokyo_reference_JPY=23380,
     source_D3_plate_and_mount_quotes_unchanged=True,new_metal_quote_needed=False,
     unpriced_rows=[r['ID'] for r in rows if not r['明細金額']],
     complete_purchase_total=False,
+    procurement_change_20260923=dict(owned_Pico_saving_JPY=920,same_EStop_supplier_saving_JPY=145,
+        same_size_washer_delivered_saving_JPY=248,total_saving_JPY=1313,
+        prime_checkout_verified=False,amazon_shipping_basis='Selected Amazon-fulfilled combined basket exceeds displayed3500JPY free standard shipping threshold; final destination/offer not checked out.'),
     note='継承予算枠込みの途中小計。D6.4で中央M4ねじ・座金の購入パック全額と2店舗送料参考1833円を新たに計上。旧ねじ代は未計上。追加M6ねじ・電装未選定品・他の未確定送料・税/決済料などは別。')
 (HERE/'cost_summary.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps(out,ensure_ascii=False))

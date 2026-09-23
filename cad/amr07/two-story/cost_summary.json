@@ -2,13 +2,13 @@
   "revision": "D6.5",
   "date": "2026-09-23",
   "subtotal": {
-    "JPY": 75548.0,
+    "JPY": 74235.0,
     "USD": 120.9
   },
-  "full_running_subtotal_JPY_reference": 94561.60313315927,
+  "full_running_subtotal_JPY_reference": 93248.60313315927,
   "FX_reference_JPY_per_USD": 157.26718885987816,
   "FX_date": "2026-09-21",
-  "difference_from_D5_JPY": 5915.0,
+  "difference_from_D5_JPY": 4602.0,
   "added_known_purchased_metal_JPY": 3968,
   "added_purchase": {
     "posts4_JPY": 495,
@@ -72,7 +72,7 @@
     "added_machining": false,
     "barrier_mass_kg": 0.03858897856000003,
     "PLA_material_reference_increase_JPY": 76,
-    "priced_subtotal_change_JPY": 76.0,
+    "priced_subtotal_change_JPY": 76,
     "PCB_specific_mount_price": null,
     "scope": "Nonconductive PLA contact barrier only; actual case/PCB mounting and printing support/failure/electricity cost remain unpriced."
   },
@@ -110,5 +110,13 @@
     "U20"
   ],
   "complete_purchase_total": false,
+  "procurement_change_20260923": {
+    "owned_Pico_saving_JPY": 920,
+    "same_EStop_supplier_saving_JPY": 145,
+    "same_size_washer_delivered_saving_JPY": 248,
+    "total_saving_JPY": 1313,
+    "prime_checkout_verified": false,
+    "amazon_shipping_basis": "Selected Amazon-fulfilled combined basket exceeds displayed3500JPY free standard shipping threshold; final destination/offer not checked out."
+  },
   "note": "継承予算枠込みの途中小計。D6.4で中央M4ねじ・座金の購入パック全額と2店舗送料参考1833円を新たに計上。旧ねじ代は未計上。追加M6ねじ・電装未選定品・他の未確定送料・税/決済料などは別。"
 }

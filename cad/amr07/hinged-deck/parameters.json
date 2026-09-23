@@ -1,0 +1,50 @@
+{
+  "revision": "D6.7",
+  "date": "2026-09-23",
+  "hinge": "Sugatsune HG-TS15",
+  "hinge_qty": 2,
+  "hinge_centers_x_mm": [
+    -126,
+    126
+  ],
+  "hinge_axis_yz_mm": [
+    172.5,
+    249.5
+  ],
+  "opening_deg": [
+    0,
+    90
+  ],
+  "opens_toward": "+Y",
+  "operator_side": "rear -X",
+  "hinge_torque_each_Nm": 1.5,
+  "initial_torque_tolerance": [
+    -0.2,
+    0.4
+  ],
+  "hinge_catalog_mass_each_kg": 0.0641,
+  "plate_LWT_mm": [
+    300,
+    300,
+    4
+  ],
+  "plate_bottom_top_z_mm": [
+    229,
+    233
+  ],
+  "quoted_plate_unchanged": true,
+  "closed_locks": "TRUSCO B36-0615 M6x15 butterfly bolts x2, each with3 M6 OD18 t1 steel washers",
+  "closed_lock_xy_mm": [
+    [
+      -105,
+      -135
+    ],
+    [
+      105,
+      -135
+    ]
+  ],
+  "unload_before_open": true,
+  "remove_cargo_straps_before_open": true,
+  "production_print_release": false
+}

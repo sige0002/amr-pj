@@ -1,0 +1,1361 @@
+{
+  "parameters": {
+    "revision": "D6.7",
+    "date": "2026-09-23",
+    "hinge": "Sugatsune HG-TS15",
+    "hinge_qty": 2,
+    "hinge_centers_x_mm": [
+      -126,
+      126
+    ],
+    "hinge_axis_yz_mm": [
+      172.5,
+      249.5
+    ],
+    "opening_deg": [
+      0,
+      90
+    ],
+    "opens_toward": "+Y",
+    "operator_side": "rear -X",
+    "hinge_torque_each_Nm": 1.5,
+    "initial_torque_tolerance": [
+      -0.2,
+      0.4
+    ],
+    "hinge_catalog_mass_each_kg": 0.0641,
+    "plate_LWT_mm": [
+      300,
+      300,
+      4
+    ],
+    "plate_bottom_top_z_mm": [
+      229,
+      233
+    ],
+    "quoted_plate_unchanged": true,
+    "closed_locks": "TRUSCO B36-0615 M6x15 butterfly bolts x2, each with3 M6 OD18 t1 steel washers",
+    "closed_lock_xy_mm": [
+      [
+        -105,
+        -135
+      ],
+      [
+        105,
+        -135
+      ]
+    ],
+    "unload_before_open": true,
+    "remove_cargo_straps_before_open": true,
+    "production_print_release": false
+  },
+  "source_sha256": "f2844df6435b332cea59b74f3b0629ecd00a8d3a58c1e89ab932f4222dda1dd6",
+  "physical_parts": 383,
+  "new_closed_pairs_checked": 22432,
+  "closed_collisions": [],
+  "reference_collisions": {},
+  "battery_service": [
+    {
+      "part": "BatteryBL1860B",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryBL1860B",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryAdapter03",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryAdapter03",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryBeltTopPad",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryBeltTopPad",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryModuleHarness",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryModuleHarness",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryServiceConnector",
+      "from_mm": [
+        0,
+        0,
+        0
+      ],
+      "to_mm": [
+        0,
+        0,
+        8
+      ],
+      "hits": []
+    },
+    {
+      "part": "BatteryServiceConnector",
+      "from_mm": [
+        0,
+        0,
+        8
+      ],
+      "to_mm": [
+        -220,
+        0,
+        8
+      ],
+      "hits": []
+    }
+  ],
+  "continuous_opening_bbox_hits": [],
+  "continuous_radial_clearance_proofs": [
+    {
+      "part": "HatchMovingAdapter_0",
+      "barrel_radial_clearance_mm": 2.5146931829632013,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 167.0
+    },
+    {
+      "part": "HatchDeckFix_0_0Bolt",
+      "barrel_radial_clearance_mm": 128.15755662652776,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 166.0
+    },
+    {
+      "part": "HatchDeckFix_0_0Washer",
+      "barrel_radial_clearance_mm": 127.08831654206165,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 152.0
+    },
+    {
+      "part": "HatchDeckFix_0_0Nut",
+      "barrel_radial_clearance_mm": 129.71385338277003,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 151.0
+    },
+    {
+      "part": "HatchDeckFix_0_1Bolt",
+      "barrel_radial_clearance_mm": 78.25111275229544,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 166.0
+    },
+    {
+      "part": "HatchDeckFix_0_1Washer",
+      "barrel_radial_clearance_mm": 78.03868156985806,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 152.0
+    },
+    {
+      "part": "HatchDeckFix_0_1Nut",
+      "barrel_radial_clearance_mm": 80.70784278253035,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 151.0
+    },
+    {
+      "part": "HatchHingeMovingFix_0_0Bolt",
+      "barrel_radial_clearance_mm": 6.509996003196804,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 172.0
+    },
+    {
+      "part": "HatchHingeMovingFix_0_0Washer",
+      "barrel_radial_clearance_mm": 10.007810593582121,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 162.5
+    },
+    {
+      "part": "HatchHingeMovingFix_0_0Nut",
+      "barrel_radial_clearance_mm": 12.398369492974098,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 160.0
+    },
+    {
+      "part": "HatchHingeMovingFix_0_1Bolt",
+      "barrel_radial_clearance_mm": 6.509996003196804,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 172.0
+    },
+    {
+      "part": "HatchHingeMovingFix_0_1Washer",
+      "barrel_radial_clearance_mm": 10.007810593582121,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 162.5
+    },
+    {
+      "part": "HatchHingeMovingFix_0_1Nut",
+      "barrel_radial_clearance_mm": 12.398369492974098,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 160.0
+    },
+    {
+      "part": "HatchMovingAdapter_1",
+      "barrel_radial_clearance_mm": 2.5146931829632013,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 167.0
+    },
+    {
+      "part": "HatchDeckFix_1_0Bolt",
+      "barrel_radial_clearance_mm": 128.15755662652776,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 166.0
+    },
+    {
+      "part": "HatchDeckFix_1_0Washer",
+      "barrel_radial_clearance_mm": 127.08831654206165,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 152.0
+    },
+    {
+      "part": "HatchDeckFix_1_0Nut",
+      "barrel_radial_clearance_mm": 129.71385338277003,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 151.0
+    },
+    {
+      "part": "HatchDeckFix_1_1Bolt",
+      "barrel_radial_clearance_mm": 78.25111275229544,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 166.0
+    },
+    {
+      "part": "HatchDeckFix_1_1Washer",
+      "barrel_radial_clearance_mm": 78.03868156985806,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 152.0
+    },
+    {
+      "part": "HatchDeckFix_1_1Nut",
+      "barrel_radial_clearance_mm": 80.70784278253035,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 151.0
+    },
+    {
+      "part": "HatchHingeMovingFix_1_0Bolt",
+      "barrel_radial_clearance_mm": 6.509996003196804,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 172.0
+    },
+    {
+      "part": "HatchHingeMovingFix_1_0Washer",
+      "barrel_radial_clearance_mm": 10.007810593582121,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 162.5
+    },
+    {
+      "part": "HatchHingeMovingFix_1_0Nut",
+      "barrel_radial_clearance_mm": 12.398369492974098,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 160.0
+    },
+    {
+      "part": "HatchHingeMovingFix_1_1Bolt",
+      "barrel_radial_clearance_mm": 6.509996003196804,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 172.0
+    },
+    {
+      "part": "HatchHingeMovingFix_1_1Washer",
+      "barrel_radial_clearance_mm": 10.007810593582121,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 162.5
+    },
+    {
+      "part": "HatchHingeMovingFix_1_1Nut",
+      "barrel_radial_clearance_mm": 12.398369492974098,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 160.0
+    },
+    {
+      "part": "AluminumDeckD3",
+      "barrel_radial_clearance_mm": 21.90161285660741,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 156.0
+    },
+    {
+      "part": "PrintedStopXN",
+      "barrel_radial_clearance_mm": 171.50633791501645,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 171.0
+    },
+    {
+      "part": "PrintedStopXP",
+      "barrel_radial_clearance_mm": 171.50633791501645,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 171.0
+    },
+    {
+      "part": "PrintedStopYN",
+      "barrel_radial_clearance_mm": 268.50409833006137,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 171.0
+    },
+    {
+      "part": "PrintedStopYP",
+      "barrel_radial_clearance_mm": 49.520266569965244,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 171.0
+    },
+    {
+      "part": "StopWasher0",
+      "barrel_radial_clearance_mm": 202.01261980947214,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 152.0
+    },
+    {
+      "part": "StopNut0",
+      "barrel_radial_clearance_mm": 203.0877566956038,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 151.2
+    },
+    {
+      "part": "StopWasher1",
+      "barrel_radial_clearance_mm": 174.17005855579887,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 152.0
+    },
+    {
+      "part": "StopNut1",
+      "barrel_radial_clearance_mm": 175.2558688705003,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 151.2
+    },
+    {
+      "part": "StopWasher2",
+      "barrel_radial_clearance_mm": 202.01261980947214,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 152.0
+    },
+    {
+      "part": "StopNut2",
+      "barrel_radial_clearance_mm": 203.0877566956038,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 151.2
+    },
+    {
+      "part": "StopWasher3",
+      "barrel_radial_clearance_mm": 174.17005855579887,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 152.0
+    },
+    {
+      "part": "StopNut3",
+      "barrel_radial_clearance_mm": 175.2558688705003,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 151.2
+    },
+    {
+      "part": "StopWasher4",
+      "barrel_radial_clearance_mm": 272.25617693054005,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 152.0
+    },
+    {
+      "part": "StopNut4",
+      "barrel_radial_clearance_mm": 273.31333659530117,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 151.19999999999996
+    },
+    {
+      "part": "StopWasher5",
+      "barrel_radial_clearance_mm": 55.98790204547981,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 152.0
+    },
+    {
+      "part": "StopNut5",
+      "barrel_radial_clearance_mm": 57.19762653771105,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 151.2
+    },
+    {
+      "part": "StopWasher6",
+      "barrel_radial_clearance_mm": 272.25617693054005,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 152.0
+    },
+    {
+      "part": "StopNut6",
+      "barrel_radial_clearance_mm": 273.31333659530117,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 151.19999999999996
+    },
+    {
+      "part": "StopWasher7",
+      "barrel_radial_clearance_mm": 55.98790204547981,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 152.0
+    },
+    {
+      "part": "StopNut7",
+      "barrel_radial_clearance_mm": 57.19762653771105,
+      "minimum_fixed_bridge_Y_mm": 175,
+      "maximum_sweep_Y_mm": 151.2
+    }
+  ],
+  "internal_hinge_sample_hits": [],
+  "frame_tool_checks": [
+    {
+      "bolt": "HatchFrameBolt_0_0",
+      "hits": []
+    },
+    {
+      "bolt": "HatchFrameBolt_0_1",
+      "hits": []
+    },
+    {
+      "bolt": "HatchFrameBolt_1_0",
+      "hits": []
+    },
+    {
+      "bolt": "HatchFrameBolt_1_1",
+      "hits": []
+    }
+  ],
+  "lock_hand_checks": [
+    {
+      "lock": 0,
+      "hits": []
+    },
+    {
+      "lock": 1,
+      "hits": []
+    }
+  ],
+  "retained_shapes_BRep_equal": true,
+  "new_objects": [
+    "HatchMovingAdapter_0",
+    "HatchDeckFix_0_0Bolt",
+    "HatchDeckFix_0_0Washer",
+    "HatchDeckFix_0_0Nut",
+    "HatchDeckFix_0_1Bolt",
+    "HatchDeckFix_0_1Washer",
+    "HatchDeckFix_0_1Nut",
+    "HatchFrameBolt_0_0",
+    "HatchFrameWasher_0_0",
+    "HatchFrameNut_0_0",
+    "HatchFrameBolt_0_1",
+    "HatchFrameWasher_0_1",
+    "HatchFrameNut_0_1",
+    "HatchFixedAdapter_0",
+    "HGTS15_Moving_0",
+    "HatchHingeMovingFix_0_0Bolt",
+    "HatchHingeMovingFix_0_0Washer",
+    "HatchHingeMovingFix_0_0Nut",
+    "HatchHingeMovingFix_0_1Bolt",
+    "HatchHingeMovingFix_0_1Washer",
+    "HatchHingeMovingFix_0_1Nut",
+    "HGTS15_Fixed_0",
+    "HatchHingeFixedFix_0_0Bolt",
+    "HatchHingeFixedFix_0_0Washer",
+    "HatchHingeFixedFix_0_0Nut",
+    "HatchHingeFixedFix_0_1Bolt",
+    "HatchHingeFixedFix_0_1Washer",
+    "HatchHingeFixedFix_0_1Nut",
+    "HatchMovingAdapter_1",
+    "HatchDeckFix_1_0Bolt",
+    "HatchDeckFix_1_0Washer",
+    "HatchDeckFix_1_0Nut",
+    "HatchDeckFix_1_1Bolt",
+    "HatchDeckFix_1_1Washer",
+    "HatchDeckFix_1_1Nut",
+    "HatchFrameBolt_1_0",
+    "HatchFrameWasher_1_0",
+    "HatchFrameNut_1_0",
+    "HatchFrameBolt_1_1",
+    "HatchFrameWasher_1_1",
+    "HatchFrameNut_1_1",
+    "HatchFixedAdapter_1",
+    "HGTS15_Moving_1",
+    "HatchHingeMovingFix_1_0Bolt",
+    "HatchHingeMovingFix_1_0Washer",
+    "HatchHingeMovingFix_1_0Nut",
+    "HatchHingeMovingFix_1_1Bolt",
+    "HatchHingeMovingFix_1_1Washer",
+    "HatchHingeMovingFix_1_1Nut",
+    "HGTS15_Fixed_1",
+    "HatchHingeFixedFix_1_0Bolt",
+    "HatchHingeFixedFix_1_0Washer",
+    "HatchHingeFixedFix_1_0Nut",
+    "HatchHingeFixedFix_1_1Bolt",
+    "HatchHingeFixedFix_1_1Washer",
+    "HatchHingeFixedFix_1_1Nut",
+    "HatchLockWasher_0_0",
+    "HatchLockWasher_0_1",
+    "HatchLockWasher_0_2",
+    "HatchLockWingBolt_0",
+    "HatchLockWasher_1_0",
+    "HatchLockWasher_1_1",
+    "HatchLockWasher_1_2",
+    "HatchLockWingBolt_1"
+  ],
+  "removed_objects": [
+    "DeckBolt0",
+    "DeckBolt1",
+    "DeckBolt2",
+    "DeckBolt3",
+    "DeckBolt4",
+    "DeckBolt5",
+    "DeckSlotNut1",
+    "DeckSlotNut2",
+    "DeckSlotNut3",
+    "DeckSlotNut5"
+  ],
+  "moving_parts": [
+    "HatchMovingAdapter_0",
+    "HatchDeckFix_0_0Bolt",
+    "HatchDeckFix_0_0Washer",
+    "HatchDeckFix_0_0Nut",
+    "HatchDeckFix_0_1Bolt",
+    "HatchDeckFix_0_1Washer",
+    "HatchDeckFix_0_1Nut",
+    "HGTS15_Moving_0",
+    "HatchHingeMovingFix_0_0Bolt",
+    "HatchHingeMovingFix_0_0Washer",
+    "HatchHingeMovingFix_0_0Nut",
+    "HatchHingeMovingFix_0_1Bolt",
+    "HatchHingeMovingFix_0_1Washer",
+    "HatchHingeMovingFix_0_1Nut",
+    "HatchMovingAdapter_1",
+    "HatchDeckFix_1_0Bolt",
+    "HatchDeckFix_1_0Washer",
+    "HatchDeckFix_1_0Nut",
+    "HatchDeckFix_1_1Bolt",
+    "HatchDeckFix_1_1Washer",
+    "HatchDeckFix_1_1Nut",
+    "HGTS15_Moving_1",
+    "HatchHingeMovingFix_1_0Bolt",
+    "HatchHingeMovingFix_1_0Washer",
+    "HatchHingeMovingFix_1_0Nut",
+    "HatchHingeMovingFix_1_1Bolt",
+    "HatchHingeMovingFix_1_1Washer",
+    "HatchHingeMovingFix_1_1Nut",
+    "AluminumDeckD3",
+    "PrintedStopXN",
+    "PrintedStopXP",
+    "PrintedStopYN",
+    "PrintedStopYP",
+    "StopBolt0",
+    "StopWasher0",
+    "StopNut0",
+    "StopBolt1",
+    "StopWasher1",
+    "StopNut1",
+    "StopBolt2",
+    "StopWasher2",
+    "StopNut2",
+    "StopBolt3",
+    "StopWasher3",
+    "StopNut3",
+    "StopBolt4",
+    "StopWasher4",
+    "StopNut4",
+    "StopBolt5",
+    "StopWasher5",
+    "StopNut5",
+    "StopBolt6",
+    "StopWasher6",
+    "StopNut6",
+    "StopBolt7",
+    "StopWasher7",
+    "StopNut7"
+  ],
+  "released_before_open": [
+    "HatchLockWasher_0_0",
+    "HatchLockWasher_0_1",
+    "HatchLockWasher_0_2",
+    "HatchLockWingBolt_0",
+    "HatchLockWasher_1_0",
+    "HatchLockWasher_1_1",
+    "HatchLockWasher_1_2",
+    "HatchLockWingBolt_1",
+    "StrapRouteX",
+    "StrapRouteY",
+    "CargoEnvelopeD3"
+  ],
+  "torque": {
+    "empty_lid_mass_kg": 1.301798648323854,
+    "closed_gravity_moment_Nm": 1.9123427965760587,
+    "vertical_CG_gravity_moment_component_Nm": 0.20632875062216285,
+    "maximum_gravity_moment_Nm": 1.923441323500575,
+    "maximum_gravity_moment_angle_deg": 6.158002752765622,
+    "minimum_initial_pair_Nm": 2.4,
+    "maximum_initial_pair_Nm": 4.2,
+    "minimum_initial_hold_ratio": 1.2477635635029978,
+    "extra_mass_at_center_limit_kg": 0.2801066053631806,
+    "extra_mass_reference_center_z_mm": 231,
+    "max_tangential_opening_hand_force_N": 18.956251211809203,
+    "hand_force_scope": "Tangential force at far plate edge; hand follows lid arc.",
+    "qualify_hot_worn_condition": true
+  },
+  "mass": {
+    "estimated_base_kg": 10.926703712110001,
+    "source_kg": 10.409176843209185,
+    "added_kg": 0.580036573166284,
+    "removed_kg": 0.06250970426546704,
+    "new_PLA_kg": 0.3067834447822872,
+    "ledger": [
+      {
+        "name": "HatchMovingAdapter_0",
+        "mass_kg": 0.08444707276616738,
+        "center_mm": [
+          -126.0094682588759,
+          96.25585366857584,
+          238.0267786810109
+        ]
+      },
+      {
+        "name": "HatchDeckFix_0_0Bolt",
+        "mass_kg": 0.002786749763366826,
+        "center_mm": [
+          -125.00000000000001,
+          35.0,
+          235.33628318584073
+        ]
+      },
+      {
+        "name": "HatchDeckFix_0_0Washer",
+        "mass_kg": 0.0007629652283554085,
+        "center_mm": [
+          -125.00000000000001,
+          35.0,
+          228.5
+        ]
+      },
+      {
+        "name": "HatchDeckFix_0_0Nut",
+        "mass_kg": 0.000717950228119637,
+        "center_mm": [
+          -124.99999999999999,
+          35.00000000000001,
+          226.4
+        ]
+      },
+      {
+        "name": "HatchDeckFix_0_1Bolt",
+        "mass_kg": 0.0027867497633668253,
+        "center_mm": [
+          -125.00000000000001,
+          85.0,
+          235.33628318584073
+        ]
+      },
+      {
+        "name": "HatchDeckFix_0_1Washer",
+        "mass_kg": 0.0007629652283554084,
+        "center_mm": [
+          -124.99999999999999,
+          85.00000000000001,
+          228.49999999999994
+        ]
+      },
+      {
+        "name": "HatchDeckFix_0_1Nut",
+        "mass_kg": 0.000717950228119637,
+        "center_mm": [
+          -124.99999999999996,
+          84.99999999999999,
+          226.39999999999995
+        ]
+      },
+      {
+        "name": "HatchFrameBolt_0_0",
+        "mass_kg": 0.006362667601315406,
+        "center_mm": [
+          -141.0,
+          154.7325581395349,
+          214.00000000000003
+        ]
+      },
+      {
+        "name": "HatchFrameWasher_0_0",
+        "mass_kg": 0.001737094570417263,
+        "center_mm": [
+          -141.0,
+          155.0,
+          214.00000000000003
+        ]
+      },
+      {
+        "name": "HatchFrameNut_0_0",
+        "mass_kg": 0.006083424664393647,
+        "center_mm": [
+          -141.0,
+          145.83480988292342,
+          214.00000000000003
+        ]
+      },
+      {
+        "name": "HatchFrameBolt_0_1",
+        "mass_kg": 0.006362667601315406,
+        "center_mm": [
+          -111.0,
+          154.7325581395349,
+          214.00000000000003
+        ]
+      },
+      {
+        "name": "HatchFrameWasher_0_1",
+        "mass_kg": 0.0017370945704172638,
+        "center_mm": [
+          -110.99999999999999,
+          155.0,
+          214.0
+        ]
+      },
+      {
+        "name": "HatchFrameNut_0_1",
+        "mass_kg": 0.006083424664393647,
+        "center_mm": [
+          -111.00000000000001,
+          145.83480988292342,
+          214.00000000000003
+        ]
+      },
+      {
+        "name": "HatchFixedAdapter_0",
+        "mass_kg": 0.06894464962497622,
+        "center_mm": [
+          -125.99999999999999,
+          188.92956749065416,
+          254.45412253303616
+        ]
+      },
+      {
+        "name": "HGTS15_Moving_0",
+        "mass_kg": 0.03205,
+        "center_mm": [
+          -130.27389779652196,
+          166.662947208122,
+          247.29773948288442
+        ]
+      },
+      {
+        "name": "HatchHingeMovingFix_0_0Bolt",
+        "mass_kg": 0.002786749763366827,
+        "center_mm": [
+          -144.00000000000003,
+          156.49999999999997,
+          241.33628318584076
+        ]
+      },
+      {
+        "name": "HatchHingeMovingFix_0_0Washer",
+        "mass_kg": 0.0007629652283554084,
+        "center_mm": [
+          -144.0,
+          156.5,
+          236.5
+        ]
+      },
+      {
+        "name": "HatchHingeMovingFix_0_0Nut",
+        "mass_kg": 0.0007179502281196373,
+        "center_mm": [
+          -144.0,
+          156.50000000000006,
+          234.40000000000003
+        ]
+      },
+      {
+        "name": "HatchHingeMovingFix_0_1Bolt",
+        "mass_kg": 0.002786749763366825,
+        "center_mm": [
+          -108.0,
+          156.50000000000003,
+          241.33628318584073
+        ]
+      },
+      {
+        "name": "HatchHingeMovingFix_0_1Washer",
+        "mass_kg": 0.0007629652283554088,
+        "center_mm": [
+          -108.0,
+          156.5,
+          236.49999999999997
+        ]
+      },
+      {
+        "name": "HatchHingeMovingFix_0_1Nut",
+        "mass_kg": 0.0007179502281196368,
+        "center_mm": [
+          -108.0,
+          156.50000000000006,
+          234.4
+        ]
+      },
+      {
+        "name": "HGTS15_Fixed_0",
+        "mass_kg": 0.03205,
+        "center_mm": [
+          -121.90463304069603,
+          178.10360773818795,
+          247.3797491519904
+        ]
+      },
+      {
+        "name": "HatchHingeFixedFix_0_0Bolt",
+        "mass_kg": 0.002786749763366827,
+        "center_mm": [
+          -144.00000000000003,
+          188.50000000000003,
+          241.33628318584076
+        ]
+      },
+      {
+        "name": "HatchHingeFixedFix_0_0Washer",
+        "mass_kg": 0.0007629652283554084,
+        "center_mm": [
+          -144.0,
+          188.5,
+          236.5
+        ]
+      },
+      {
+        "name": "HatchHingeFixedFix_0_0Nut",
+        "mass_kg": 0.0007179502281196373,
+        "center_mm": [
+          -144.0,
+          188.5,
+          234.40000000000003
+        ]
+      },
+      {
+        "name": "HatchHingeFixedFix_0_1Bolt",
+        "mass_kg": 0.002786749763366825,
+        "center_mm": [
+          -108.0,
+          188.50000000000003,
+          241.33628318584073
+        ]
+      },
+      {
+        "name": "HatchHingeFixedFix_0_1Washer",
+        "mass_kg": 0.0007629652283554088,
+        "center_mm": [
+          -108.0,
+          188.5,
+          236.49999999999997
+        ]
+      },
+      {
+        "name": "HatchHingeFixedFix_0_1Nut",
+        "mass_kg": 0.0007179502281196368,
+        "center_mm": [
+          -108.0,
+          188.5,
+          234.4
+        ]
+      },
+      {
+        "name": "HatchMovingAdapter_1",
+        "mass_kg": 0.08444707276616738,
+        "center_mm": [
+          126.00946825887596,
+          96.25585366857584,
+          238.02677868101094
+        ]
+      },
+      {
+        "name": "HatchDeckFix_1_0Bolt",
+        "mass_kg": 0.002786749763366825,
+        "center_mm": [
+          125.00000000000001,
+          35.00000000000001,
+          235.33628318584073
+        ]
+      },
+      {
+        "name": "HatchDeckFix_1_0Washer",
+        "mass_kg": 0.0007629652283554085,
+        "center_mm": [
+          125.00000000000001,
+          35.0,
+          228.5
+        ]
+      },
+      {
+        "name": "HatchDeckFix_1_0Nut",
+        "mass_kg": 0.0007179502281196369,
+        "center_mm": [
+          125.00000000000001,
+          35.0,
+          226.40000000000006
+        ]
+      },
+      {
+        "name": "HatchDeckFix_1_1Bolt",
+        "mass_kg": 0.002786749763366824,
+        "center_mm": [
+          125.00000000000001,
+          85.0,
+          235.33628318584076
+        ]
+      },
+      {
+        "name": "HatchDeckFix_1_1Washer",
+        "mass_kg": 0.0007629652283554084,
+        "center_mm": [
+          124.99999999999999,
+          85.00000000000001,
+          228.49999999999994
+        ]
+      },
+      {
+        "name": "HatchDeckFix_1_1Nut",
+        "mass_kg": 0.0007179502281196368,
+        "center_mm": [
+          125.00000000000001,
+          85.00000000000003,
+          226.40000000000006
+        ]
+      },
+      {
+        "name": "HatchFrameBolt_1_0",
+        "mass_kg": 0.006362667601315406,
+        "center_mm": [
+          111.0,
+          154.7325581395349,
+          214.00000000000003
+        ]
+      },
+      {
+        "name": "HatchFrameWasher_1_0",
+        "mass_kg": 0.0017370945704172638,
+        "center_mm": [
+          110.99999999999999,
+          155.0,
+          214.0
+        ]
+      },
+      {
+        "name": "HatchFrameNut_1_0",
+        "mass_kg": 0.006083424664393647,
+        "center_mm": [
+          111.00000000000001,
+          145.83480988292342,
+          214.00000000000003
+        ]
+      },
+      {
+        "name": "HatchFrameBolt_1_1",
+        "mass_kg": 0.006362667601315406,
+        "center_mm": [
+          141.0,
+          154.7325581395349,
+          214.00000000000003
+        ]
+      },
+      {
+        "name": "HatchFrameWasher_1_1",
+        "mass_kg": 0.001737094570417263,
+        "center_mm": [
+          141.0,
+          155.0,
+          214.00000000000003
+        ]
+      },
+      {
+        "name": "HatchFrameNut_1_1",
+        "mass_kg": 0.006083424664393647,
+        "center_mm": [
+          141.0,
+          145.83480988292342,
+          214.00000000000003
+        ]
+      },
+      {
+        "name": "HatchFixedAdapter_1",
+        "mass_kg": 0.06894464962497622,
+        "center_mm": [
+          125.99999999999994,
+          188.92956749065416,
+          254.45412253303616
+        ]
+      },
+      {
+        "name": "HGTS15_Moving_1",
+        "mass_kg": 0.03205,
+        "center_mm": [
+          121.72610220347802,
+          166.662947208122,
+          247.29773948288442
+        ]
+      },
+      {
+        "name": "HatchHingeMovingFix_1_0Bolt",
+        "mass_kg": 0.002786749763366825,
+        "center_mm": [
+          108.00000000000001,
+          156.50000000000003,
+          241.33628318584073
+        ]
+      },
+      {
+        "name": "HatchHingeMovingFix_1_0Washer",
+        "mass_kg": 0.0007629652283554088,
+        "center_mm": [
+          108.0,
+          156.5,
+          236.49999999999997
+        ]
+      },
+      {
+        "name": "HatchHingeMovingFix_1_0Nut",
+        "mass_kg": 0.0007179502281196368,
+        "center_mm": [
+          108.0,
+          156.50000000000006,
+          234.4
+        ]
+      },
+      {
+        "name": "HatchHingeMovingFix_1_1Bolt",
+        "mass_kg": 0.002786749763366827,
+        "center_mm": [
+          144.0,
+          156.49999999999997,
+          241.33628318584076
+        ]
+      },
+      {
+        "name": "HatchHingeMovingFix_1_1Washer",
+        "mass_kg": 0.0007629652283554084,
+        "center_mm": [
+          144.0,
+          156.5,
+          236.5
+        ]
+      },
+      {
+        "name": "HatchHingeMovingFix_1_1Nut",
+        "mass_kg": 0.0007179502281196373,
+        "center_mm": [
+          144.00000000000003,
+          156.50000000000006,
+          234.40000000000003
+        ]
+      },
+      {
+        "name": "HGTS15_Fixed_1",
+        "mass_kg": 0.03205,
+        "center_mm": [
+          130.095366959304,
+          178.10360773818795,
+          247.3797491519904
+        ]
+      },
+      {
+        "name": "HatchHingeFixedFix_1_0Bolt",
+        "mass_kg": 0.002786749763366825,
+        "center_mm": [
+          108.00000000000001,
+          188.50000000000003,
+          241.33628318584073
+        ]
+      },
+      {
+        "name": "HatchHingeFixedFix_1_0Washer",
+        "mass_kg": 0.0007629652283554088,
+        "center_mm": [
+          108.0,
+          188.5,
+          236.49999999999997
+        ]
+      },
+      {
+        "name": "HatchHingeFixedFix_1_0Nut",
+        "mass_kg": 0.0007179502281196368,
+        "center_mm": [
+          108.0,
+          188.5,
+          234.4
+        ]
+      },
+      {
+        "name": "HatchHingeFixedFix_1_1Bolt",
+        "mass_kg": 0.002786749763366827,
+        "center_mm": [
+          144.0,
+          188.50000000000003,
+          241.33628318584076
+        ]
+      },
+      {
+        "name": "HatchHingeFixedFix_1_1Washer",
+        "mass_kg": 0.0007629652283554084,
+        "center_mm": [
+          144.0,
+          188.5,
+          236.5
+        ]
+      },
+      {
+        "name": "HatchHingeFixedFix_1_1Nut",
+        "mass_kg": 0.0007179502281196373,
+        "center_mm": [
+          144.00000000000003,
+          188.5,
+          234.40000000000003
+        ]
+      },
+      {
+        "name": "HatchLockWasher_0_0",
+        "mass_kg": 0.0017370945704172631,
+        "center_mm": [
+          -104.99999999999997,
+          -135.0,
+          233.5
+        ]
+      },
+      {
+        "name": "HatchLockWasher_0_1",
+        "mass_kg": 0.0017370945704172631,
+        "center_mm": [
+          -104.99999999999997,
+          -135.0,
+          234.50000000000006
+        ]
+      },
+      {
+        "name": "HatchLockWasher_0_2",
+        "mass_kg": 0.0017370945704172631,
+        "center_mm": [
+          -104.99999999999997,
+          -135.0,
+          235.5
+        ]
+      },
+      {
+        "name": "HatchLockWingBolt_0",
+        "mass_kg": 0.013342915489442773,
+        "center_mm": [
+          -105.00000000000003,
+          -135.00000000000003,
+          239.23142629034143
+        ]
+      },
+      {
+        "name": "HatchLockWasher_1_0",
+        "mass_kg": 0.0017370945704172631,
+        "center_mm": [
+          105.0,
+          -135.0,
+          233.5
+        ]
+      },
+      {
+        "name": "HatchLockWasher_1_1",
+        "mass_kg": 0.0017370945704172631,
+        "center_mm": [
+          105.0,
+          -135.0,
+          234.50000000000006
+        ]
+      },
+      {
+        "name": "HatchLockWasher_1_2",
+        "mass_kg": 0.0017370945704172631,
+        "center_mm": [
+          105.0,
+          -135.0,
+          235.5
+        ]
+      },
+      {
+        "name": "HatchLockWingBolt_1",
+        "mass_kg": 0.013342915489442773,
+        "center_mm": [
+          105.00000000000003,
+          -135.00000000000003,
+          239.23142629034143
+        ]
+      },
+      {
+        "name": "remove DeckBolt0",
+        "mass_kg": -0.006362667601315408,
+        "center_mm": [
+          -105.00000000000001,
+          -135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "remove DeckBolt1",
+        "mass_kg": -0.006362667601315408,
+        "center_mm": [
+          -105.00000000000001,
+          135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "remove DeckBolt2",
+        "mass_kg": -0.006362667601315407,
+        "center_mm": [
+          -1.1396302734615186e-16,
+          -135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "remove DeckBolt3",
+        "mass_kg": -0.006362667601315407,
+        "center_mm": [
+          -1.1396302734615186e-16,
+          135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "remove DeckBolt4",
+        "mass_kg": -0.006362667601315408,
+        "center_mm": [
+          105.0,
+          -135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "remove DeckBolt5",
+        "mass_kg": -0.006362667601315408,
+        "center_mm": [
+          105.0,
+          135.0,
+          232.2325581395349
+        ]
+      },
+      {
+        "name": "remove DeckSlotNut1",
+        "mass_kg": -0.006083424664393647,
+        "center_mm": [
+          -105.0,
+          135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "remove DeckSlotNut2",
+        "mass_kg": -0.006083424664393648,
+        "center_mm": [
+          -1.6536419226180935e-15,
+          -135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "remove DeckSlotNut3",
+        "mass_kg": -0.006083424664393648,
+        "center_mm": [
+          -1.6878943335799887e-15,
+          135.0,
+          224.83480988292342
+        ]
+      },
+      {
+        "name": "remove DeckSlotNut5",
+        "mass_kg": -0.006083424664393647,
+        "center_mm": [
+          105.0,
+          135.0,
+          224.83480988292342
+        ]
+      }
+    ],
+    "actually_weighed": false
+  },
+  "limits": [
+    "Hinges andwingbolts are drawing-based nominal models; receivinginspection remains.",
+    "Onlyempty lid mayopen. Closedcargo load bears onunchangedmetalrails; cargo belts remainrequired.",
+    "Noformalhinge-adapterFEM or lifetime torquequalification. PLAadapters are prototypeonly.",
+    "PreviousclampeddeckFEA is notvalidationofnewtwo-lockboundary. See newconservativehandcalculation."
+  ]
+}

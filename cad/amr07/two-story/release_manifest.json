@@ -16,44 +16,44 @@
       "sha256": "e0779d28ac79150ff246beabf9e2a3cb12c046ccf289b34fe0d52a0744c724e7"
     },
     "BOM-costs.json": {
-      "bytes": 8119,
-      "sha256": "546c603680ab6ae3a41b72bef3ddd219b2c715daae72c4d7d4a4fb299a51cf6f"
+      "bytes": 8148,
+      "sha256": "1f92faa47e605ed74451c6f5e4a6a95d33dc8d3ad8834246fcff1659d71606b5"
     },
     "BOM-details.ja.md": {
-      "bytes": 65432,
-      "sha256": "30a0f7885797ff8669b67b43766a294c08b09896290fef78ee55849e08f71248"
+      "bytes": 65657,
+      "sha256": "7a3a9176b7b2d4fd8b7f11d5b3d23476e88dfb0fbba4e299224bd785756b7964"
     },
     "BOM-summary.csv": {
       "bytes": 396,
-      "sha256": "31502f2e8dc33c7a5023a4c0f1997ecb5af57a2b637dfaab2232f315707672d3"
+      "sha256": "c1be670520fd37021b05aa470195befb6c36c5fd15fef9e1a12964d628287dff"
     },
     "BOM.csv": {
-      "bytes": 24518,
-      "sha256": "44d8b3944b155018623691dffdd61d95e4502bf926a5503cc1f89ef0ad4c5311"
+      "bytes": 24790,
+      "sha256": "839e45dab4a7e2933ce957cd0826da7233ca39630e3bd840d5722a9fdf52a714"
     },
     "BOM.ja.md": {
-      "bytes": 17826,
-      "sha256": "28ea4d16900e64d0f12d8fc3946cca7907cc6acd5c1979269feb439d4c6f8a9b"
+      "bytes": 18211,
+      "sha256": "a3e12a68b1f90aa627ae959ffa35fe6441d109ef7fef7ae677659810bc3daa97"
     },
     "COMPUTER_BARRIER.ja.md": {
       "bytes": 6321,
       "sha256": "313925ac392ce6be8c73c73b00c65bdd7d498f16a54ca8a78ef0d47fa008d274"
     },
     "CORNER_REVIEW.ja.md": {
-      "bytes": 5560,
-      "sha256": "53ee18bed02974fad75a195c2ec869567acd7c6b434782bb7a26fc1ce811dd53"
+      "bytes": 5768,
+      "sha256": "459ca2daf67b69768771806d70d4aec1aad109780ae2318d55c8685bdbf3a04a"
     },
     "ComputerBarrierPLA.stl": {
       "bytes": 2284,
       "sha256": "53d66ff079424127cbd8e6a2e8b4c87b1529409e18ba229edfc0db25470db12a"
     },
     "D6-first-floor-print-files.zip": {
-      "bytes": 5163555,
-      "sha256": "49de4315461f70177895b5af5623570629dfe8887618f6c5554b61ebd9baef29"
+      "bytes": 5163941,
+      "sha256": "57e51edc992d22e7d3f37145654aa817df1bbdcda48e53b8db21c3188c265be8"
     },
     "FLOOR_REVIEW.ja.md": {
-      "bytes": 7301,
-      "sha256": "309ec9bdba5d19240ed093ae267bf070942572a2381f9a68951b6bf1ca90cd23"
+      "bytes": 7509,
+      "sha256": "e8c2e7121c6efa8d756d545782f530f3744742b8ce734f25ada8ab544c3567ea"
     },
     "FloorPLA_0_0.stl": {
       "bytes": 50684,
@@ -76,12 +76,12 @@
       "sha256": "8d7b6827756d6c64830b887eb1a1e7b58b7848c0ef4406cb3ca2af46566bc53b"
     },
     "PAYLOAD_REVIEW.ja.md": {
-      "bytes": 2993,
-      "sha256": "2e11c355a34a18a3a460b65b0835d808c9374e0d8fa7fbab43dae3a489c7e566"
+      "bytes": 3201,
+      "sha256": "4a0bf9e40f7d1c1a128bbb857725896be97807b542c0e26a72892cb8a63ed865"
     },
     "README.ja.md": {
-      "bytes": 6872,
-      "sha256": "b3e250ea2415ee582f9526d642d3bc1531ce42fa73a575501d2d5c7afba2cec5"
+      "bytes": 7158,
+      "sha256": "a856cd5cdaca61aaab04fac62a404da4aec19ae1ebc006e537dc56b05721e39a"
     },
     "REFERENCE_DESIGNS.ja.md": {
       "bytes": 4206,
@@ -96,12 +96,12 @@
       "sha256": "22c911c5e03481453e4d1d892e9b4deadf5ea37b063eaa758556505c8ab0b727"
     },
     "build_bom.py": {
-      "bytes": 14857,
-      "sha256": "f8fb94a32d7287c169b98dd78c15660845f046e7d16241f28879d598fd4df4dc"
+      "bytes": 16464,
+      "sha256": "62cb067f9b6f6f211c41301175c2fc9b646293c8bf5d601905632ed6c893e4e9"
     },
     "build_bom_view.py": {
-      "bytes": 13894,
-      "sha256": "7b882b84213ec71dddcaa9cdefa38807f08bb554ad8d9dad8d071046a3edd3c3"
+      "bytes": 14754,
+      "sha256": "041f07f2eb50496e053610dc441b3e89b37edaa216f85d8c3636103f1284b39d"
     },
     "build_computer_barrier_doc.py": {
       "bytes": 6990,
@@ -112,8 +112,8 @@
       "sha256": "9401feb4d736da4a3803f60898fb581350c1ede68407ebd137482809992ff7c0"
     },
     "build_docs.py": {
-      "bytes": 27587,
-      "sha256": "17cc55a137995c7997490c7ab96ed51b7d20a2f663972d443dfb0e513f86a84c"
+      "bytes": 25517,
+      "sha256": "50dc9b4dfbcd1b8d47d02562c7219f789344523431df5ffd4dd3f09edd2f6f5d"
     },
     "cad-screen-assembled.png": {
       "bytes": 213134,
@@ -200,8 +200,8 @@
       "sha256": "9a695f702938295d5d55276c1f2955d40aedd07d2ecd58e30d8298b43671d5d0"
     },
     "cost_summary.json": {
-      "bytes": 3545,
-      "sha256": "9c4dfd50661a061845ab3ca74268a4dd06b447a6ef516a28a20fbec7546e0ecb"
+      "bytes": 3951,
+      "sha256": "b08ab42f78096707af7bec9784cd03b4077b2d822cac4d9575c132824b201f71"
     },
     "floor_support_review.json": {
       "bytes": 13476,
@@ -434,7 +434,7 @@
   },
   "linked_design_files": {
     "requirements.json": "b0168fa2975845f947b2ef785d93379e9b8b143a7e49d22c2d46bf46d3717d0c",
-    "electrical_plan.json": "b3f70bc5a26fc68b5ceb43585d8a00053b6fa430ca5898c5fb1a1db7fcda1964",
+    "electrical_plan.json": "189d11ce5c37ad6ffdf67c7251043adbea631770ac940c4a42adef31fff08951",
     "load_calculations.json": "c452e56bb1e7f7a4d084b692497d3c837ca5f79eede5cb3515dcf9794f5141a1",
     "caster_load_check.json": "a4f96c7fbe9221c8f3f27a3d56499307f670c7ffbad4ff634d6756fb8f21f900",
     "hardware_geometry.py": "8de0af5acc2be8ec73cd61c30ea8f8ae9771afa46edc94d7c3c3fbd5411f7e56",

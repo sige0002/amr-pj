@@ -2,7 +2,7 @@
 
 **[全明細をMarkdownで読む](BOM-details.ja.md) ／ [CSVを開く・保存する](BOM.csv)**
 
-**途中小計 約94,562円 ＋ 未計上分**。通常積載目標10kg、車体推計10.068kg（10kgは目安）の現行構成。
+**途中小計 約93,249円 ＋ 未計上分**。通常積載目標10kg、車体推計10.068kg（10kgは目安）の現行構成。
 
 **主計算機・その電源・配線／基板／ケース・追加ねじなどは未計上。LiDARやカメラ等の将来センサーも含まない。** 完成車の総額ではない。
 
@@ -10,18 +10,18 @@
 
 | 部位 | 金額の目安 | 割合 |
 |---|---:|---:|
-| 電池・充電器・アダプター | 23,380円 | 24.7% |
-| フレーム・締結材 | 14,537円 | 15.4% |
-| モーター2個 | 14,000円 | 14.8% |
-| 専用モーター金具2個 | 12,935円 | 13.7% |
-| タイヤ・キャスター | 10,413円 | 11.0% |
-| 制御・電源保護 | 8,084円 | 8.5% |
-| アルミ天板 | 6,078円 | 6.4% |
-| PLA・ベルト・保護材 | 2,759円 | 2.9% |
-| その他送料 | 2,375円 | 2.5% |
-| **途中小計** | **94,562円** | **100%** |
+| 電池・充電器・アダプター | 23,380円 | 25.1% |
+| フレーム・締結材 | 14,679円 | 15.7% |
+| モーター2個 | 14,000円 | 15.0% |
+| 専用モーター金具2個 | 12,935円 | 13.9% |
+| タイヤ・キャスター | 10,413円 | 11.2% |
+| 制御・電源保護 | 7,019円 | 7.5% |
+| アルミ天板 | 6,078円 | 6.5% |
+| PLA・ベルト・保護材 | 2,759円 | 3.0% |
+| その他送料 | 1,985円 | 2.1% |
+| **途中小計** | **93,249円** | **100%** |
 
-割合の分母は計上済み小計。未計上品を0円とは扱わない。円換算は記録済みの1 USD＝157.2672円（2026-09-21参考値）で、現在の決済レートではない。元の小計は75,548円＋120.90 USD。行ごとの四捨五入で端数差が出る。
+割合の分母は計上済み小計。未計上品を0円とは扱わない。円換算は記録済みの1 USD＝157.2672円（2026-09-21参考値）で、現在の決済レートではない。元の小計は74,235円＋120.90 USD。行ごとの四捨五入で端数差が出る。
 
 電池・モーター金具・天板の欄には、それぞれ記録された送料を含む。共通送料は「その他送料」へ置き、二重計上しない。購入パック全額で集計し、使用数による按分はしていない。
 
@@ -29,12 +29,15 @@
 
 | 根拠 | 計上額 |
 |---|---:|
-| 価格記録 | 55,268円 |
+| 価格記録 | 53,955円 |
 | 自動見積 | 19,014円 |
 | 仮予算 | 19,000円 |
 | 材料消費 | 1,280円 |
+| 手持ち流用 | 0円 |
 
 価格記録は既存の販売ページ確認・引継価格。自動見積はJLCCNCの実サイト記録で、未発注・担当者審査前。**モーター14,000円は仮予算**。PLA1280円は材料消費参考で、新規スプールの購入額ではない。
+
+Pico本体はユーザー所有のため購入0円。型番・ピン有無・USB線の所有までは未確認。[既製モジュールと専用基板の比較](../control-layout/ELECTRONICS_OPTIONS.ja.md)／[Amazonと送料込み比較](../control-layout/PROCUREMENT.ja.md)。
 
 ## 購入リスト
 
@@ -49,7 +52,7 @@
 | [電池アダプター diy-adapter03](https://store.shopping.yahoo.co.jp/netkey-store/diy-adapter03.html)<br>[POWER_ADAPTER・仕様・備考](BOM-details.ja.md#item-power_adapter) | 1式／1式 | 2,180円 | 価格記録 |
 | [アダプター送料](https://store.shopping.yahoo.co.jp/netkey-store/diy-adapter03.html)<br>[POWER_ADAPTER_SHIP・仕様・備考](BOM-details.ja.md#item-power_adapter_ship) | 送料1式 | 800円 | 価格記録 |
 
-### フレーム・締結材 — 14,537円
+### フレーム・締結材 — 14,679円
 
 | 品目 | 使用／購入 | 金額 | 根拠 |
 |---|---|---:|---|
@@ -66,7 +69,7 @@
 | ストッパ用座金<br>[D3_STOP_WASHERS・仕様・備考](BOM-details.ja.md#item-d3_stop_washers) | 8枚／未定 | 未計上 | 未計上 |
 | [床継ぎ目の通常六角穴付きねじ](https://store.onokatsu.co.jp/products/133-00-04)<br>[D62_FLOOR_SCREWS・仕様・備考](BOM-details.ja.md#item-d62_floor_screws) | 4個／60個 | 770円 | 価格記録 |
 | 継ぎ目支持梁端の大径平座金<br>[D62_BEAM_WASHERS・仕様・備考](BOM-details.ja.md#item-d62_beam_washers) | 4個／未定 | 未計上 | 未計上 |
-| [床継ぎ目の上下大径平座金](https://store.shopping.yahoo.co.jp/nejiya-jp/4104012104.html)<br>[D64_FLOOR_WASHERS・仕様・備考](BOM-details.ja.md#item-d64_floor_washers) | 8枚／50枚 | 288円 | 価格記録 |
+| [床継ぎ目の上下大径平座金](https://www.amazon.co.jp/dp/B0H8RT271F)<br>[D64_FLOOR_WASHERS・仕様・備考](BOM-details.ja.md#item-d64_floor_washers) | 8枚／20枚 | 430円 | 価格記録 |
 
 ### モーター2個 — 14,000円
 
@@ -91,14 +94,14 @@
 | [キャスター送料](https://www.aboutamazon.jp/news/guide/answer-to-7-questions-about-shopping-at-amazon)<br>[S02・仕様・備考](BOM-details.ja.md#item-s02) | 送料1式 | 0円 | 価格記録 |
 | [タイヤ国内通常送料](https://www.switch-science.com/policies/shipping-policy)<br>[S06・仕様・備考](BOM-details.ja.md#item-s06) | 送料1式 | 0円 | 価格記録 |
 
-### 制御・電源保護 — 8,084円
+### 制御・電源保護 — 7,019円
 
 | 品目 | 使用／購入 | 金額 | 根拠 |
 |---|---|---:|---|
 | Pico接続用USBデータケーブル<br>[E02・仕様・備考](BOM-details.ja.md#item-e02) | 1本／未定 | 500円 | 仮予算 |
-| [非常停止スイッチ](https://www.monotaro.com/p/6051/3817/)<br>[ELEC_S1・仕様・備考](BOM-details.ja.md#item-elec_s1) | 1個／1個 | 3,298円 | 価格記録 |
+| [非常停止スイッチ](https://www.amazon.co.jp/dp/B077Y8DN8G)<br>[ELEC_S1・仕様・備考](BOM-details.ja.md#item-elec_s1) | 1個／1個 | 3,153円 | 価格記録 |
 | [駆動電源遮断リレー](https://jp.rs-online.com/web/p/power-relays/0369466)<br>[ELEC_K1_K2・仕様・備考](BOM-details.ja.md#item-elec_k1_k2) | 2個／2個 | 770円 | 価格記録 |
-| [モーター制御・監視マイコン](https://akizukidenshi.com/catalog/g/g118085/)<br>[ELEC_U1・仕様・備考](BOM-details.ja.md#item-elec_u1) | 1個／1個 | 920円 | 価格記録 |
+| 手持ちRaspberry Pi Pico<br>[ELEC_U1・仕様・備考](BOM-details.ja.md#item-elec_u1) | 1個／0個 | 0円 | 手持ち流用 |
 | [外部ウォッチドッグIC](https://eleshop.jp/shop/g/gT11488/)<br>[ELEC_U2・仕様・備考](BOM-details.ja.md#item-elec_u2) | 1個／1個 | 140円 | 価格記録 |
 | [手動再始動ラッチIC](https://eleshop.jp/shop/g/gT11476/)<br>[ELEC_U3・仕様・備考](BOM-details.ja.md#item-elec_u3) | 1個／1個 | 33円 | 価格記録 |
 | [監視回路用DC/DC](https://akizukidenshi.com/catalog/g/g113536/)<br>[ELEC_PS1・仕様・備考](BOM-details.ja.md#item-elec_ps1) | 1個／1個 | 850円 | 価格記録 |
@@ -128,7 +131,7 @@
 | 電池・電装の軟質当て材<br>[POWER_PADS・仕様・備考](BOM-details.ja.md#item-power_pads) | 1式／1式 | 未計上 | 未計上 |
 | 1階計算機・監視回路の保持ベルト<br>[POWER_LOW_STRAPS・仕様・備考](BOM-details.ja.md#item-power_low_straps) | 2本／未定 | 未計上 | 未計上 |
 
-### その他送料 — 2,375円
+### その他送料 — 1,985円
 
 | 品目 | 使用／購入 | 金額 | 根拠 |
 |---|---|---:|---|
@@ -136,13 +139,13 @@
 | 荷物固定ベルト送料参考<br>[D3_STRAP_SHIP・仕様・備考](BOM-details.ja.md#item-d3_strap_ship) | 送料1式 | 600円 | 価格記録 |
 | 純正接合部・溝ナットの送料枠<br>[S04・仕様・備考](BOM-details.ja.md#item-s04) | 送料1式 | 未計上 | 未計上 |
 | Taobao送料・輸入諸費<br>[S07・仕様・備考](BOM-details.ja.md#item-s07) | 送料1式 | 未計上 | 未計上 |
-| [中央ねじ・座金の別店舗送料](https://store.onokatsu.co.jp/pages/user-guide)<br>[D64_FASTENER_SHIP・仕様・備考](BOM-details.ja.md#item-d64_fastener_ship) | 送料1式 | 775円 | 価格記録 |
+| [中央ねじ・座金の別店舗送料](https://store.onokatsu.co.jp/pages/user-guide)<br>[D64_FASTENER_SHIP・仕様・備考](BOM-details.ja.md#item-d64_fastener_ship) | 送料1式 | 385円 | 価格記録 |
 
-**今回D6.5は、金属接触を防ぐPLAカバー1個を追加。追加金属部品・加工なし、PLA材料消費参考は76円増。** 機種別の基板ケース／絶縁スペーサーは未選定・未計上。[カバーと取付条件](COMPUTER_BARRIER.ja.md)。
+**機械基礎D6.5では、金属接触を防ぐPLAカバー1個を追加。追加金属部品・加工なし、PLA材料消費参考は76円増。** 機種別の基板ケース／絶縁スペーサーは未選定・未計上。[カバーと取付条件](../two-story/COMPUTER_BARRIER.ja.md)。
 
-**前回D6.4では中央4本を通常のM4×16に変更し、上下のOD12座金を計8枚にした。** 新たな物理部品は上側座金4枚、下側4枚は交換。ねじ60本770円・座金50枚288円・2店舗送料参考775円、合計1833円を購入パック全額で計上した。使用する4本＋8枚の按分参考は約97円だが、購入額には使わない。従来の中央ねじ代は未計上だったため、旧ねじ代を差し引いた節約額は作らない。PLA材料消費参考は前版より6円増。
+**履歴：D6.4では中央4本を通常のM4×16に変更し、上下のOD12座金を計8枚にした。** 新たな物理部品は上側座金4枚、下側4枚は交換。ねじ60本770円・座金50枚288円・2店舗送料参考775円、合計1833円を購入パック全額で計上した。使用する4本＋8枚の按分参考は約97円だが、購入額には使わない。従来の中央ねじ代は未計上だったため、旧ねじ代を差し引いた節約額は作らない。PLA材料消費参考は前版より6円増。
 
-上記送料は北海道・沖縄を除く掲載条件の参考で、まとめ買い・店頭小袋購入では再計上する。[販売ページ確認記録](plain_hole_fastener_observations.json)。各床4点固定と支柱根元両側補強は継続する。追加金属加工は不要。
+D6.4の上記価格は変更履歴。現行の購入先・金額・パック数は上表と明細を参照。上記送料は北海道・沖縄を除く掲載条件の参考で、まとめ買い・店頭小袋購入では再計上する。[販売ページ確認記録](../two-story/plain_hole_fastener_observations.json)。各床4点固定と支柱根元両側補強は継続する。追加金属加工は不要。
 
 ## これから金額が増える項目
 
@@ -186,4 +189,4 @@
 - タイヤキット2個：9,240円。Taobaoのモーターに同じキットが付くと確認できた場合のみ、別購入を外せる。
 - 溝ナット100個：5,112円、使用70個。20個の接合金具本体1,834円より大きい。安価な互換品へ置換する場合は寸法・締結条件を照合する。
 
-[CADと設計の説明](README.ja.md)／[重量と積載](PAYLOAD_REVIEW.ja.md)／[全明細Markdown](BOM-details.ja.md)／[全明細CSV](BOM.csv)／[費用集計CSV](BOM-summary.csv)／[計算値JSON](BOM-costs.json)
+[CADと設計の説明](README.ja.md)／[重量と積載](../two-story/PAYLOAD_REVIEW.ja.md)／[全明細Markdown](BOM-details.ja.md)／[全明細CSV](BOM.csv)／[費用集計CSV](BOM-summary.csv)／[計算値JSON](BOM-costs.json)

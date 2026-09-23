@@ -1,0 +1,320 @@
+{
+  "revision": "D6.7",
+  "date": "2026-09-23",
+  "BOM_sha256": "a9091c94fa53d522872a4fcbc50ebea68d09fe5927764435522f0c80aa9ebb57",
+  "denominator_JPY_reference": 102881.60313315927,
+  "denominator_scope": "Existing priced lines, provisional budgets and PLA consumption; excludes all unpriced items.",
+  "FX_reference_JPY_per_USD": 157.26718885987816,
+  "FX_date": "2026-09-21",
+  "categories": [
+    {
+      "category": "電池・充電器・アダプター",
+      "JPY_reference": 23380.0,
+      "percent_of_priced_subtotal": 22.72515132733629,
+      "source_ids": [
+        "POWER_KIT",
+        "POWER_KIT_SHIP",
+        "POWER_ADAPTER",
+        "POWER_ADAPTER_SHIP"
+      ],
+      "unpriced_ids": []
+    },
+    {
+      "category": "フレーム・締結材",
+      "JPY_reference": 18015.0,
+      "percent_of_priced_subtotal": 17.510419211375677,
+      "source_ids": [
+        "F01",
+        "F02",
+        "D6_POSTS",
+        "F03",
+        "F04",
+        "H01",
+        "MW",
+        "D3_M6",
+        "D3_STOP_BOLTS",
+        "D3_STOP_NUTS",
+        "D3_STOP_WASHERS",
+        "D62_FLOOR_SCREWS",
+        "D62_BEAM_WASHERS",
+        "D64_FLOOR_WASHERS"
+      ],
+      "unpriced_ids": [
+        "D3_STOP_BOLTS",
+        "D3_STOP_WASHERS",
+        "D62_BEAM_WASHERS"
+      ]
+    },
+    {
+      "category": "モーター2個",
+      "JPY_reference": 14000.0,
+      "percent_of_priced_subtotal": 13.607875046309157,
+      "source_ids": [
+        "D01"
+      ],
+      "unpriced_ids": []
+    },
+    {
+      "category": "専用モーター金具2個",
+      "JPY_reference": 12935.226283724978,
+      "percent_of_priced_subtotal": 12.572924497475961,
+      "source_ids": [
+        "Q01",
+        "S08"
+      ],
+      "unpriced_ids": []
+    },
+    {
+      "category": "タイヤ・キャスター",
+      "JPY_reference": 10413.0,
+      "percent_of_priced_subtotal": 10.121343061229803,
+      "source_ids": [
+        "D02",
+        "C01",
+        "P01",
+        "S02",
+        "S06"
+      ],
+      "unpriced_ids": []
+    },
+    {
+      "category": "制御・電源保護",
+      "JPY_reference": 9443.0,
+      "percent_of_priced_subtotal": 9.178511718735527,
+      "source_ids": [
+        "E02",
+        "ELEC_S1",
+        "ELEC_K1_K2",
+        "ELEC_U1",
+        "ELEC_U2",
+        "ELEC_U3",
+        "ELEC_PS1",
+        "ELEC_U4",
+        "ELEC_RDUMP",
+        "ELEC_U5",
+        "ELEC_U6",
+        "ELEC_QCLAMP",
+        "ELEC_PS2",
+        "ELEC_D0",
+        "ELEC_ARM",
+        "ELEC_MAIN",
+        "ELEC_CASE_WASHER"
+      ],
+      "unpriced_ids": []
+    },
+    {
+      "category": "アルミ天板",
+      "JPY_reference": 6078.376849434291,
+      "percent_of_priced_subtotal": 5.908128046534297,
+      "source_ids": [
+        "DECK_plate",
+        "DECK_CNC_SHIP"
+      ],
+      "unpriced_ids": []
+    },
+    {
+      "category": "PLA・ベルト・保護材",
+      "JPY_reference": 3761.0,
+      "percent_of_priced_subtotal": 3.6556584320834813,
+      "source_ids": [
+        "P04",
+        "H02",
+        "DECK_cargo_straps",
+        "DECK_edge_protection_and_slack_retention",
+        "POWER_PADS",
+        "POWER_LOW_STRAPS"
+      ],
+      "unpriced_ids": [
+        "POWER_PADS",
+        "POWER_LOW_STRAPS"
+      ]
+    },
+    {
+      "category": "開閉天板の金具",
+      "JPY_reference": 2871.0,
+      "percent_of_priced_subtotal": 2.7905863755681137,
+      "source_ids": [
+        "HATCH_HINGES",
+        "HATCH_LOCKS"
+      ],
+      "unpriced_ids": []
+    },
+    {
+      "category": "その他送料",
+      "JPY_reference": 1985.0,
+      "percent_of_priced_subtotal": 1.9294022833516913,
+      "source_ids": [
+        "S03",
+        "D3_STRAP_SHIP",
+        "S04",
+        "S07",
+        "D64_FASTENER_SHIP"
+      ],
+      "unpriced_ids": [
+        "S04",
+        "S07"
+      ]
+    }
+  ],
+  "by_price_basis_JPY": {
+    "価格記録": 62586.0,
+    "仮予算": 19000.0,
+    "自動見積": 19013.60313315927,
+    "手持ち流用": 0.0,
+    "材料消費": 2282.0
+  },
+  "unpriced_rows": [
+    {
+      "id": "S04",
+      "name": "純正接合部・溝ナットの送料枠",
+      "status": "送料未確定",
+      "cost": null
+    },
+    {
+      "id": "S07",
+      "name": "Taobao送料・輸入諸費",
+      "status": "未見積",
+      "cost": null
+    },
+    {
+      "id": "D3_STOP_BOLTS",
+      "name": "印刷ストッパ固定ねじ",
+      "status": "寸法選定済・実機検証前",
+      "cost": null
+    },
+    {
+      "id": "D3_STOP_WASHERS",
+      "name": "ストッパ用座金",
+      "status": "寸法選定済・実機検証前",
+      "cost": null
+    },
+    {
+      "id": "POWER_PADS",
+      "name": "電池・電装の軟質当て材",
+      "status": "型式選定・現物／電気検証前",
+      "cost": null
+    },
+    {
+      "id": "POWER_LOW_STRAPS",
+      "name": "1階計算機・監視回路の保持ベルト",
+      "status": "型式選定・現物／電気検証前",
+      "cost": null
+    },
+    {
+      "id": "D62_BEAM_WASHERS",
+      "name": "継ぎ目支持梁端の大径平座金",
+      "status": "寸法選定済・購入パック未確定",
+      "cost": null
+    },
+    {
+      "id": "U01",
+      "name": "独立した電池低電圧保護回路",
+      "status": "走行台車／未選定",
+      "cost": null
+    },
+    {
+      "id": "U03",
+      "name": "上位計算機・記憶媒体・冷却",
+      "status": "走行台車／未選定",
+      "cost": null
+    },
+    {
+      "id": "U04",
+      "name": "上位計算機用DC/DC",
+      "status": "走行台車／未選定",
+      "cost": null
+    },
+    {
+      "id": "U06",
+      "name": "電源着脱コネクタ・ヒューズ等の配電部品",
+      "status": "走行台車／未選定",
+      "cost": null
+    },
+    {
+      "id": "U07",
+      "name": "ヒューズ・ホルダー",
+      "status": "走行台車／未選定",
+      "cost": null
+    },
+    {
+      "id": "U08",
+      "name": "制御・分配基板とコネクタ",
+      "status": "走行台車／未選定",
+      "cost": null
+    },
+    {
+      "id": "U09",
+      "name": "リレーコイル駆動・保護部品",
+      "status": "走行台車／未選定",
+      "cost": null
+    },
+    {
+      "id": "U10",
+      "name": "レベル変換・デバウンス・電源投入リセット",
+      "status": "走行台車／未選定",
+      "cost": null
+    },
+    {
+      "id": "U11",
+      "name": "抵抗・コンデンサ・終端抵抗",
+      "status": "走行台車／未選定",
+      "cost": null
+    },
+    {
+      "id": "U12",
+      "name": "電圧・電流計測部品",
+      "status": "走行台車／未選定",
+      "cost": null
+    },
+    {
+      "id": "U13",
+      "name": "電源線・信号線・圧着端子・結束材",
+      "status": "走行台車／未選定",
+      "cost": null
+    },
+    {
+      "id": "U14",
+      "name": "放熱固定具・ガード・絶縁材",
+      "status": "走行台車／未選定",
+      "cost": null
+    },
+    {
+      "id": "U15",
+      "name": "電装固定板・ケース・スタンドオフ",
+      "status": "走行台車／未選定",
+      "cost": null
+    },
+    {
+      "id": "U16",
+      "name": "未確定送料・税・決済換算",
+      "status": "走行台車／未選定",
+      "cost": null
+    },
+    {
+      "id": "U17",
+      "name": "加工工具・作業費・残る自加工品の外注費",
+      "status": "走行台車／未選定",
+      "cost": null
+    },
+    {
+      "id": "U18",
+      "name": "PLA仮合わせモックの材料消費",
+      "status": "製作補助／未選定",
+      "cost": null
+    },
+    {
+      "id": "U19",
+      "name": "自律移動用LiDAR・IMU・カメラ等",
+      "status": "将来自律移動／未選定",
+      "cost": null
+    },
+    {
+      "id": "U20",
+      "name": "荷物容器・敷板",
+      "status": "積載物／未選定",
+      "cost": null
+    }
+  ],
+  "purchase_quantities_not_usage_prorating": true,
+  "incomplete_vehicle_total": true
+}

@@ -1,8 +1,8 @@
 {
   "revision": "D6.5",
   "date": "2026-09-23",
-  "BOM_sha256": "44d8b3944b155018623691dffdd61d95e4502bf926a5503cc1f89ef0ad4c5311",
-  "denominator_JPY_reference": 94561.60313315927,
+  "BOM_sha256": "839e45dab4a7e2933ce957cd0826da7233ca39630e3bd840d5722a9fdf52a714",
+  "denominator_JPY_reference": 93248.60313315927,
   "denominator_scope": "Existing priced lines, provisional budgets and PLA consumption; excludes all unpriced items.",
   "FX_reference_JPY_per_USD": 157.26718885987816,
   "FX_date": "2026-09-21",
@@ -10,7 +10,7 @@
     {
       "category": "電池・充電器・アダプター",
       "JPY_reference": 23380.0,
-      "percent_of_priced_subtotal": 24.7246231296194,
+      "percent_of_priced_subtotal": 25.072761644068056,
       "source_ids": [
         "POWER_KIT",
         "POWER_KIT_SHIP",
@@ -21,8 +21,8 @@
     },
     {
       "category": "フレーム・締結材",
-      "JPY_reference": 14537.0,
-      "percent_of_priced_subtotal": 15.373047324006725,
+      "JPY_reference": 14679.0,
+      "percent_of_priced_subtotal": 15.741790768745721,
       "source_ids": [
         "F01",
         "F02",
@@ -50,7 +50,7 @@
     {
       "category": "モーター2個",
       "JPY_reference": 14000.0,
-      "percent_of_priced_subtotal": 14.805163550670299,
+      "percent_of_priced_subtotal": 15.01362972698686,
       "source_ids": [
         "D01"
       ],
@@ -59,7 +59,7 @@
     {
       "category": "専用モーター金具2個",
       "JPY_reference": 12935.226283724978,
-      "percent_of_priced_subtotal": 13.679152906819821,
+      "percent_of_priced_subtotal": 13.87176413275965,
       "source_ids": [
         "Q01",
         "S08"
@@ -69,7 +69,7 @@
     {
       "category": "タイヤ・キャスター",
       "JPY_reference": 10413.0,
-      "percent_of_priced_subtotal": 11.011869146652131,
+      "percent_of_priced_subtotal": 11.166923310508155,
       "source_ids": [
         "D02",
         "C01",
@@ -81,8 +81,8 @@
     },
     {
       "category": "制御・電源保護",
-      "JPY_reference": 8084.0,
-      "percent_of_priced_subtotal": 8.548924438829907,
+      "JPY_reference": 7019.0,
+      "percent_of_priced_subtotal": 7.527190503837198,
       "source_ids": [
         "E02",
         "ELEC_S1",
@@ -104,7 +104,7 @@
     {
       "category": "アルミ天板",
       "JPY_reference": 6078.376849434291,
-      "percent_of_priced_subtotal": 6.427954527034481,
+      "percent_of_priced_subtotal": 6.518464239892529,
       "source_ids": [
         "DECK_plate",
         "DECK_CNC_SHIP"
@@ -114,7 +114,7 @@
     {
       "category": "PLA・ベルト・保護材",
       "JPY_reference": 2759.0,
-      "percent_of_priced_subtotal": 2.9176747311642397,
+      "percent_of_priced_subtotal": 2.9587574583397673,
       "source_ids": [
         "P04",
         "H02",
@@ -130,8 +130,8 @@
     },
     {
       "category": "その他送料",
-      "JPY_reference": 2375.0,
-      "percent_of_priced_subtotal": 2.511590245202997,
+      "JPY_reference": 1985.0,
+      "percent_of_priced_subtotal": 2.1287182148620656,
       "source_ids": [
         "S03",
         "D3_STRAP_SHIP",
@@ -146,9 +146,10 @@
     }
   ],
   "by_price_basis_JPY": {
-    "価格記録": 55268.0,
+    "価格記録": 53955.0,
     "仮予算": 19000.0,
     "自動見積": 19013.60313315927,
+    "手持ち流用": 0.0,
     "材料消費": 1280.0
   },
   "unpriced_rows": [

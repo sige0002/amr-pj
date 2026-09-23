@@ -1,0 +1,46 @@
+[
+  {
+    "file": "HatchMovingAdapter_0.stl",
+    "size_mm": [
+      50.0,
+      140.0,
+      10.0
+    ],
+    "solid_mass_g": 84.44707276616738,
+    "prototype_only": true,
+    "orientation": "Moving adapter flatXY; fixedadapter onX side, root/shelf/ribs inlayerplane. Solidloadpaths; slicer/receivedfitqualificationrequired."
+  },
+  {
+    "file": "HatchFixedAdapter_0.stl",
+    "size_mm": [
+      64.0,
+      60.0,
+      84.0
+    ],
+    "solid_mass_g": 68.94464962497622,
+    "prototype_only": true,
+    "orientation": "Moving adapter flatXY; fixedadapter onX side, root/shelf/ribs inlayerplane. Solidloadpaths; slicer/receivedfitqualificationrequired."
+  },
+  {
+    "file": "HatchMovingAdapter_1.stl",
+    "size_mm": [
+      50.0,
+      140.0,
+      10.0
+    ],
+    "solid_mass_g": 84.44707276616738,
+    "prototype_only": true,
+    "orientation": "Moving adapter flatXY; fixedadapter onX side, root/shelf/ribs inlayerplane. Solidloadpaths; slicer/receivedfitqualificationrequired."
+  },
+  {
+    "file": "HatchFixedAdapter_1.stl",
+    "size_mm": [
+      64.0,
+      60.0,
+      84.0
+    ],
+    "solid_mass_g": 68.94464962497622,
+    "prototype_only": true,
+    "orientation": "Moving adapter flatXY; fixedadapter onX side, root/shelf/ribs inlayerplane. Solidloadpaths; slicer/receivedfitqualificationrequired."
+  }
+]

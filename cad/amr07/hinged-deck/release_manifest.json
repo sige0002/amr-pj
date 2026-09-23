@@ -1,0 +1,231 @@
+{
+  "revision": "D6.7",
+  "date": "2026-09-23",
+  "files": {
+    "AMR01_HingedDeck_D67-structure.step": {
+      "bytes": 9924866,
+      "sha256": "9445202fa55429ddeb909738fb12bd73dd11f99faa8ccb9fdc85df3f40e612b5"
+    },
+    "AMR01_HingedDeck_D67.FCStd": {
+      "bytes": 1952523,
+      "sha256": "fdfa5b5f159110ff74633022645e311a8bdab460a5a8cec088f45af7b63d076b"
+    },
+    "AMR01_HingedDeck_D67.step": {
+      "bytes": 9969610,
+      "sha256": "429783a3d19bd7bedb660db47656cdd46d6453cd5f5b3f49bcb4809a0ac44e21"
+    },
+    "BOM-costs.json": {
+      "bytes": 7980,
+      "sha256": "97b41ebbe72e517663e52c403991a056eb23a663cdceef3719a1e4dd41ed521a"
+    },
+    "BOM-details.ja.md": {
+      "bytes": 70860,
+      "sha256": "4a29eb56d0168360aef47b1e9ad8f2f29ab72c13a31c38b2a958653ea2196845"
+    },
+    "BOM-summary.csv": {
+      "bytes": 430,
+      "sha256": "dfc4d9f97e15ff4c7ee26dd3aeae3ef7a6b9d975c61f9939ccd2fcdfd9657642"
+    },
+    "BOM.csv": {
+      "bytes": 27637,
+      "sha256": "a9091c94fa53d522872a4fcbc50ebea68d09fe5927764435522f0c80aa9ebb57"
+    },
+    "BOM.ja.md": {
+      "bytes": 19071,
+      "sha256": "77ad95f645e919593c2eaf098bf6106212574dd71b1f1a825290f0e1c657d7ac"
+    },
+    "D67-print-prototypes.zip": {
+      "bytes": 214379,
+      "sha256": "0e561ad85bdbe857c17c10e3de2a6534383eb0d72fa28acb3a0f0cf67542c2f7"
+    },
+    "HatchFixedAdapter_0.stl": {
+      "bytes": 45084,
+      "sha256": "cd57de6a7a729ac38fdb29fe1ddabe4730228e0a6c09a850321705128b26cb65"
+    },
+    "HatchFixedAdapter_1.stl": {
+      "bytes": 45084,
+      "sha256": "75d8d06e0e20e491645496fef29164e1cd7906c09886b5e3b778e57b1c3ed57e"
+    },
+    "HatchMovingAdapter_0.stl": {
+      "bytes": 83084,
+      "sha256": "e6d3faaeeff7515489a116abc69f8cb98938b0d4976eeeda28ec2f59be0f1066"
+    },
+    "HatchMovingAdapter_1.stl": {
+      "bytes": 83084,
+      "sha256": "3b691ad9ae844f99d15d06a2ba9434ad522e46a62db2f8055b4949a52abf6ed8"
+    },
+    "PAYLOAD_REVIEW.ja.md": {
+      "bytes": 4457,
+      "sha256": "9e5936b9c5fd0c496df5c4e936640ec9faab75257dbbf1ec397a9a31c37ec470"
+    },
+    "README.ja.md": {
+      "bytes": 8541,
+      "sha256": "02023c8700c73dbac9e20c23ffb96d9d949da5970ba9c73df90690d74a5f9b14"
+    },
+    "build_bom.py": {
+      "bytes": 5441,
+      "sha256": "489685ae38f8c07ba27eeef01389db4e42de0794f71c0ef95e6911b08169b294"
+    },
+    "build_docs.py": {
+      "bytes": 14503,
+      "sha256": "b169a3efb032afa6b0b657102050aa2ce101949575f21269fe6da5eaf32a2c00"
+    },
+    "build_hatch.py": {
+      "bytes": 17457,
+      "sha256": "b567ff226f67b23b5b42fa9d855d6bff6cbce800d89ae1e99410b0e44050fa66"
+    },
+    "cad-opening.gif": {
+      "bytes": 2648513,
+      "sha256": "c7718f950badc505e7aec6fe5a353078fa2409c950385d8c5aa414a60712704f"
+    },
+    "cad-screen-battery-service.png": {
+      "bytes": 202284,
+      "sha256": "52c3601d30550c97c1b74c4532f0ea9ed01b07631992fbd3ec69cce19675131d"
+    },
+    "cad-screen-closed.png": {
+      "bytes": 217845,
+      "sha256": "c71d8867bae2847552e89dcb07dfa0a89e53b2dbcc793e34c100b9c7cc69c245"
+    },
+    "cad-screen-computer-service.png": {
+      "bytes": 198866,
+      "sha256": "b7b68898bf26c480701cbb77472044d147a4822f03be2b66e44cf4a750257def"
+    },
+    "cad-screen-hinge-detail.png": {
+      "bytes": 192781,
+      "sha256": "0e15d0d7845d263e337f60fd9e8880c1eb0b7e93ac8d9e441ce5c2917af439d3"
+    },
+    "cad-screen-lock-detail.png": {
+      "bytes": 186391,
+      "sha256": "c7892c2c4385f4dfab505082dc0c639209de0c53d56bc55de21df4ddab7e450b"
+    },
+    "cad-screen-open-45.png": {
+      "bytes": 214433,
+      "sha256": "174b3fc0cd4dc76781d46218e8a8d34445671cc140c1d7032121e396f51b3912"
+    },
+    "cad-screen-open-90.png": {
+      "bytes": 207159,
+      "sha256": "71e139675eb057971b298460b9a1a6480a992b61a86148b1e4da65a0dc7432fb"
+    },
+    "cad-screen-rear-controls.png": {
+      "bytes": 269483,
+      "sha256": "0e1d67677b1406bc33efd32119ba722a5054e5886ae86df9ceb5d3e393563346"
+    },
+    "capture_screens.py": {
+      "bytes": 6077,
+      "sha256": "ece1bad50fb86fb4babd1b2c3904be7cfe08a0601363eeb6e3d2a27cd3a35d5e"
+    },
+    "check_design.py": {
+      "bytes": 4397,
+      "sha256": "cd715d346b6af87e5d17f8e96840b19eef40b239dd6839993e8fbddcad29e0be"
+    },
+    "cost_summary.json": {
+      "bytes": 4432,
+      "sha256": "a9d677fb0492256eb7e1761df20aea2c38dadae90bc215246555dfe7f5bed559"
+    },
+    "make_animation.py": {
+      "bytes": 885,
+      "sha256": "68c34786d03578f69ecd44c63501ad8861c96fe3d9d6556c59c425edc562d5ac"
+    },
+    "parameters.json": {
+      "bytes": 859,
+      "sha256": "862f182144df78d959c90fd8399c19fc0240ad3010b873f8909f28cce4030741"
+    },
+    "payload_budget.json": {
+      "bytes": 12457,
+      "sha256": "a82322f95be4532dc7f7ad9772565813b26629a6e230c18b2545bffbe2486687"
+    },
+    "print_manifest.json": {
+      "bytes": 1319,
+      "sha256": "3abd23f051e9f6db456e50f74d3742b289aadbec0fa60a4ef1829041f6b47224"
+    },
+    "release.py": {
+      "bytes": 6152,
+      "sha256": "6d57bcf6d13cbce7eeb8a4305eaf66070545c77f0ba55d9eeb7c422b11404767"
+    },
+    "requirements.json": {
+      "bytes": 13696,
+      "sha256": "05e32c03418806f063894d85eecbd903abd2fb0884f92e529dbf2a0616dcf51f"
+    },
+    "saved_artifact_validation.json": {
+      "bytes": 15243,
+      "sha256": "498c30671ea28b114570a469b779df6e36ea330e9f817ef1c7293c844e3dda78"
+    },
+    "sync_electrical.py": {
+      "bytes": 3997,
+      "sha256": "6cfe9e7068fe855864015c75ea64c86465d81a674a17af34a0d191037536946b"
+    },
+    "validate_saved.py": {
+      "bytes": 8078,
+      "sha256": "7f1fca5bb94e3e7177c3544b7ed623afefa760153c5430c5d9b6a80455af3120"
+    },
+    "validation.json": {
+      "bytes": 32530,
+      "sha256": "7ac9ce4eed0f33fce69c3430d6d81da7193cd15e053af48acd77eec5bcd70bd9"
+    }
+  },
+  "linked_design_files": {
+    "electrical_plan.json": "189d11ce5c37ad6ffdf67c7251043adbea631770ac940c4a42adef31fff08951",
+    "ELECTRICAL_AND_VALIDATION.ja.md": "daf6903159de88c3e0f392c20070e50c7fd407784507585282e6cdd4849e9c5f",
+    "two-story/release_manifest.json": "d859103ab40c9948934c20872871bb0a50098f38039371a6951ff8d24e519c96",
+    "control-layout/AMR01_RearControls_D66-structure.step": "ea28c3968fc25cf4d77946bbce13aeeef52eff01e55f9b62c0f00bca8e160377",
+    "control-layout/AMR01_RearControls_D66.FCStd": "f2844df6435b332cea59b74f3b0629ecd00a8d3a58c1e89ab932f4222dda1dd6",
+    "control-layout/AMR01_RearControls_D66.step": "b42dab71267989e56ba0038aea5ebccf4e1b3cc4f928f156631ffa12555336a4",
+    "control-layout/BOM-costs.json": "2584c0c27c8775327ad060371b885fd1b467c6185ad1d0ccae97deb05bc5100d",
+    "control-layout/BOM-details.ja.md": "ad0804634405deefa7343e02d31ff65d8da6006ab8987912154767d2fee4f9c7",
+    "control-layout/BOM-summary.csv": "8fef359c00ad3276bc717972d5dc3e99db80801df226cf56c28aab3f8cf5c0fe",
+    "control-layout/BOM.csv": "226d9f994bed7f03948022dd06989e288926e115f4a429d33ad63d078339789b",
+    "control-layout/BOM.ja.md": "96de25606b464396e709858bca42484a20f145c7ad54a4b19df393fbfcc570ca",
+    "control-layout/ELECTRONICS_OPTIONS.ja.md": "3b2da40e2c5d1577e75da6c0da148efd7dbadcda848f1ac273f9e4f067867cf0",
+    "control-layout/PROCUREMENT.ja.md": "47a020edc5091f51410792e4d1465f6797650831b8405189b99f1268fcb3f76f",
+    "control-layout/README.ja.md": "9f33be8ee75b876122ec408fe65febfb763092b006ff21e28571e32d22b98eeb",
+    "control-layout/RearPowerCasePLA.stl": "c529fc760f1750565c8e1a3a6cf1846f3931e77583b03dfe18c6b5cd079bf3ab",
+    "control-layout/RearPowerLidPLA.stl": "413c308d6c2072163acd098089fbbf840c26e523580748c83c8a9f6ba83388d0",
+    "control-layout/RearStopCasePLA.stl": "2ec59250eff883ec1347acc11199c931e63e7386e6889204dee0811745b86556",
+    "control-layout/RearStopLidPLA.stl": "464f2e98afc148d8f3ffaf8b02f89bd6b7a5f9d29a16b10ef3089da6c552bb2d",
+    "control-layout/amazon_observations.json": "a013746c84d8969e8a8fbe88d757e9f4ef39585b7de5a1438dbc2c3fe1379fb0",
+    "control-layout/build_bom.py": "533a6c68b3d1fe2501cecdac8f5b2462ac061c9ac6aabc8ef58af4eedc877f4d",
+    "control-layout/build_controls.py": "cddb5b612d0715a9a2159f0e9d070c4fd798abc965a0cacdbdab3066e60da3bc",
+    "control-layout/cad-screen-rear-controls.png": "167f233526627ad22a29577e22078c364b47d0fe35cf9bd82955f6b21ef0f2ea",
+    "control-layout/capture_controls.py": "66b243736bbb487f02a84d1be167dbdc7abbd7d63337b5c874e944523167cccf",
+    "control-layout/cost_summary.json": "95452b053446b52b6d0eab746a26343e716c26abb1db1af4fc7d51463d84e297",
+    "control-layout/evidence/B002A5PVN4.png": "28d6708b43ae3af514e5c7d3179741b9925c2ce85b6b99f4345a2a00912a5b32",
+    "control-layout/evidence/B007628W3W.png": "a13a5d15740bd1df9b90846a6057e728e25c38dc4f41689e873cf2fda47cf7b3",
+    "control-layout/evidence/B01N3BIIMO.png": "6111911da1fc6845e9146e0d4f7f6848d26b6f1bcccd5081cf044e188ce70fe7",
+    "control-layout/evidence/B075SQ41JN.png": "9402d951b87c1e0365d0f11afed5c9549cdf1947347dae92df686c9d859c7faf",
+    "control-layout/evidence/B075SW22KP.png": "5071623c25a898927bc8002490f11b4b59d09e7f3053159eea5254b4388aed97",
+    "control-layout/evidence/B077Y8DN8G.png": "05db97d0ca8c63f90aaf252492e3e0846f1c9ee18694d6973a402f1e6bbc1b8d",
+    "control-layout/evidence/B0BVQJS1D2.png": "ccdddc761e9c8f87a60ab212a3c85c4453e13c3c7e97380fa7037a951521ace1",
+    "control-layout/evidence/B0DZVCSRXG.png": "7f8796b72d0d41da28b66d32c94d7694068330274c67d07a30c5323669e400cc",
+    "control-layout/evidence/B0H8RT271F.png": "97934998ac1d0253f89502e6f19eab04e61eaae5a4303c9d30bda6b0daca9c37",
+    "control-layout/hinge_amazon_observations.json": "77dc2ef1a579179dbbbe8750e7ca7e46b090ff0030accbf2a25895b7bb8067c6",
+    "control-layout/lock_amazon_observations.json": "3b50b86a3136849e72d6625f7e25f403b0bcd4e76ff968e85d83d1d46c6015f2",
+    "control-layout/parameters.json": "6b8577c5760f138aabc325f938de68bd64b5d38a37871f9027649bc6d00312b5",
+    "control-layout/print_manifest.json": "46affa655a132404f0b01aeffc942aff2cd0067392bf54fb4bdaf23a5bd68a26",
+    "control-layout/validation.json": "1a846b0c44996d37e67acd7c12a37dded1064e4c74ad5cc16f97751760fec80d"
+  },
+  "quoted_files_unchanged": {
+    "AMR_GridDeck_C45_D3.step": "c38862f7ac33c2f30bba198fce54ff1bcb22bd75820bd994dd8b4a5e7f5c0d4c",
+    "AMR_GridDeck_C45_D3.pdf": "e1428bb6273c0ab40b53fd2bbdb0904d620a0ff47ee51243ff735e6c8cf034bb"
+  },
+  "physical_parts": 383,
+  "prototype_prints": 18,
+  "actual_FreeCAD_GUI_screenshots": 8,
+  "animation": "Actual FreeCAD GUI captures; not a physics simulation",
+  "main_checks_passed": [
+    "Saved native/STEP consistency",
+    "Closed interference involving new geometry",
+    "Continuous 0..90 degree opening envelope",
+    "90 degree stop contact / 91 degree interference",
+    "Battery and computer service, closed and open",
+    "Rear controls and hinge tool access",
+    "Quoted plate unchanged",
+    "BOM sums and shared hardware purchase quantities"
+  ],
+  "legacy_D65_shape_and_analysis_scope": "Unchanged floor and frame; old six-clamp deck FEA is not evidence for the new two-lock boundary.",
+  "bought_hardware_models": "Catalogue-dimension envelopes; not supplier STEP",
+  "loaded_operation_released": false,
+  "printed_strength_and_creep_qualified": false,
+  "electrical_protection_implemented": false,
+  "Prime_account_checkout_verified": false,
+  "cost_scope": "Partially priced procurement; PC/PCB/wiring unknown, motor price provisional."
+}

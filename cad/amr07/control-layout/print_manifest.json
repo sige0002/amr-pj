@@ -1,0 +1,50 @@
+[
+  {
+    "file": "RearStopCasePLA.stl",
+    "size_mm": [
+      53.0,
+      96.0,
+      138.5
+    ],
+    "solid_mass_g": 100.90789836979603,
+    "prototype_only": true,
+    "sliced": false,
+    "orientation": "Lids flat; case orientation/supports to choose in slicer. Preserve captive nut pockets and slot mounting faces. Unfilled nonconductive PLA."
+  },
+  {
+    "file": "RearStopLidPLA.stl",
+    "size_mm": [
+      53.0,
+      96.0,
+      3.0
+    ],
+    "solid_mass_g": 17.47822982459165,
+    "prototype_only": true,
+    "sliced": false,
+    "orientation": "Lids flat; case orientation/supports to choose in slicer. Preserve captive nut pockets and slot mounting faces. Unfilled nonconductive PLA."
+  },
+  {
+    "file": "RearPowerCasePLA.stl",
+    "size_mm": [
+      54.5,
+      53.0,
+      169.5
+    ],
+    "solid_mass_g": 67.61176113438373,
+    "prototype_only": true,
+    "sliced": false,
+    "orientation": "Lids flat; case orientation/supports to choose in slicer. Preserve captive nut pockets and slot mounting faces. Unfilled nonconductive PLA."
+  },
+  {
+    "file": "RearPowerLidPLA.stl",
+    "size_mm": [
+      46.0,
+      50.0,
+      3.0
+    ],
+    "solid_mass_g": 7.884480800383998,
+    "prototype_only": true,
+    "sliced": false,
+    "orientation": "Lids flat; case orientation/supports to choose in slicer. Preserve captive nut pockets and slot mounting faces. Unfilled nonconductive PLA."
+  }
+]

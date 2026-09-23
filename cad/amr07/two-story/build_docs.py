@@ -170,7 +170,7 @@ readme=f'''# D6.5：計算機と床の金属ねじをPLAカバーで隔てる
 
 ## 費用・データ
 
-全車の途中小計は**{c['subtotal']['JPY']:,.0f}円＋{c['subtotal']['USD']:.2f}USD＋未計上分**、記録済み参考為替では約{c['full_running_subtotal_JPY_reference']:,.0f}円。今回のPLA材料消費参考は前版より{filament_delta:,}円増。金属ねじ・座金の購入数とパック価格はD6.4から変わらず、追加の金属加工も不要。機種別ケース・基板固定スペーサーは未選定・未計上。PLA単価2円/gは材料消費基準で、実スライス・サポート・失敗分・工賃は含まない。
+全車の途中小計は**{c['subtotal']['JPY']:,.0f}円＋{c['subtotal']['USD']:.2f}USD＋未計上分**、記録済み参考為替では約{c['full_running_subtotal_JPY_reference']:,.0f}円。D6.4→D6.5当時の変更はPLA材料参考{filament_delta:,}円増で、金属部品の追加はなかった。表示するBOMには2026-09-23のPico流用・購入先比較も反映しており、その価格改定と機械構成変更の差額は分ける。機種別ケース・基板固定スペーサーは未選定・未計上。PLA単価2円/gは材料消費基準で、実スライス・サポート・失敗分・工賃は含まない。
 
 荷台の製造STEP/PDFは既存D3と同一。JLCCNCの天板38.65USD、モーター金具82.25USDという実サイト見積記録を、同じ加工品として継承する（送料込み、未発注・担当者審査前）。今回の床支持で追加金属加工は不要。
 
@@ -243,23 +243,11 @@ D6.2→D6.3ではPLA材料消費参考90円増（従来基準2円/g、中実体�
 '''
 (HERE/'CORNER_REVIEW.ja.md').write_text(corner_text)
 
-root=ROOT/'README.md';s=root.read_text()
-start=s.index('車体は**');end=s.index('\n構造比較',start)
-s=s[:start]+f'車体は**推計{mass:.3f}kg**。D6.5で計算機下の金属ねじ・座金を、2mm厚の連続PLAカバーで覆いました。ケースの座面は110mm。裸基板は機種に合うケース／絶縁スペーサーで別途固定します。各床4点固定と中央支持梁・裏リブを維持します。車体10kgは目安とし、必要な支持を優先します。**通常荷物10kgの設計目標は維持**し、車体10.5kgまでの範囲で足回りを再計算しています。[四隅の設計比較](cad/amr07/two-story/CORNER_REVIEW.ja.md)／[重量と積載](cad/amr07/two-story/PAYLOAD_REVIEW.ja.md)\n'+s[end:]
-start=s.index('D5からの小計増は') if 'D5からの小計増は' in s else s.index('全車の途中小計は')
-end=s.index('\n- [現行',start)
-s=s[:start]+f'全車の途中小計は{c["subtotal"]["JPY"]:,.0f}円＋{c["subtotal"]["USD"]:.2f}USD＋未計上分、記録済み参考為替では約{c["full_running_subtotal_JPY_reference"]:,.0f}円。今回はカバーのPLA材料参考{filament_delta:,}円を追加、金属部品や加工の追加はありません。機種別のケース・基板固定部は未計上です。従来からの未計上品は残り、完成車購入総額ではありません。\n'+s[end:]
-s=s.replace('電装床4枚の印刷ZIP','電装床4枚＋支持梁の印刷ZIP')
-s=s.replace('電装床4枚＋支持梁の印刷ZIP','電装床4枚＋支持梁＋カバーの印刷ZIP')
-if 'pla-strength/README.ja.md' not in s:
-    s=s.replace('- [現行D6：', '- [PLA床の実形状解析・たわみ画像・締付けの課題](cad/amr07/two-story/pla-strength/README.ja.md)\n- [現行D6：')
-if 'cad-screen-floor-fixings-top.png' not in s:
-    s=s.replace('![FreeCAD実画面：D6.3組立]', '![FreeCAD実画面：各床4点・計16点の固定](cad/amr07/two-story/cad-screen-floor-fixings-top.png)\n\n![FreeCAD実画面：D6.3組立]')
-s=s.replace('D6.4','D6.5').replace('amr_d64','amr_d65')
-s=s.replace('FreeCAD実画面：皿穴をなくした中央固定','FreeCAD実画面：カバーを外した中央固定の整備状態')
-if 'cad-screen-pc-isolation.png' not in s:
-    s=s.replace('![FreeCAD実画面：皿穴', '![FreeCAD実画面：計算機下の金属を覆うカバー](cad/amr07/two-story/cad-screen-pc-isolation.png)\n\n![FreeCAD実画面：皿穴')
-if 'cad-screen-floor-seam-joint.png' not in s:
-    s=s.replace('![FreeCAD実画面：各床4点', '![FreeCAD実画面：皿穴をなくした中央固定](cad/amr07/two-story/cad-screen-floor-seam-joint.png)\n\n![FreeCAD実画面：各床4点')
-root.write_text(s)
-print('D6.5 design, floor review, payload review and root summaries regenerated.')
+# D6.5 is a preserved mechanical foundation. Do not overwrite the current root
+# summary when regenerating historical reports.
+banner='> **D6.5の機械構成記録。現行は[D6.7：開閉天板・後方操作部](../hinged-deck/README.ja.md)。[現行BOM](../hinged-deck/BOM.ja.md)を参照。以下の重量・解析はD6.5の範囲。**\n\n'
+for filename in ['README.ja.md','PAYLOAD_REVIEW.ja.md','FLOOR_REVIEW.ja.md','CORNER_REVIEW.ja.md']:
+    p=HERE/filename
+    text=p.read_text();title,body=text.split('\n',1)
+    p.write_text(title+'\n\n'+banner+body.lstrip('\n'))
+print('Historical D6.5 reports regenerated; current root README preserved.')
