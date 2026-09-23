@@ -4,6 +4,8 @@
 
 **BOM：[費用割合・購入リスト](cad/amr07/direct-hinge/BOM.ja.md) ／ [全明細Markdown](cad/amr07/direct-hinge/BOM-details.ja.md) ／ [CSV](cad/amr07/direct-hinge/BOM.csv)**
 
+[追加接続金具を省くヒンジの調査・取付CAD検証](cad/amr07/hinge-search/README.ja.md)：3030対応品の比較。天板側まで金具なしで取り付く代替品は未確定で、D6.8のCAD/BOMは継続検討の基準。
+
 ![FreeCAD実画面：全体](cad/amr07/direct-hinge/cad-screen-closed.png)
 
 ![FreeCAD実画面：フレームへ直接固定するヒンジ](cad/amr07/direct-hinge/cad-screen-hinge-detail.png)

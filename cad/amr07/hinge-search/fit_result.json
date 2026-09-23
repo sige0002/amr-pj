@@ -1,0 +1,33 @@
+{
+  "date": "2026-09-23",
+  "status": "rejected",
+  "source": "../direct-hinge/AMR01_DirectHinge_D68.FCStd",
+  "source_sha256": "1f5e727fdc878121e95d0011455152ecff6c780f6d5115b8264334074d5cf68c",
+  "candidate": "HG-TP20, moving leaf horizontal, dedicated angle removed",
+  "frame_top_z_mm": 229,
+  "frame_slot_center_z_mm": 214,
+  "lid_bottom_z_mm": 229,
+  "lid_top_z_mm": 233,
+  "hinge_axis_yz_mm": [
+    156,
+    230
+  ],
+  "axis_to_mounting_back_plane_mm": 6,
+  "axis_to_fixed_hole_row_mm": 16,
+  "horizontal_moving_leaf_back_plane_z_mm": 224,
+  "back_plane_to_lid_top_mismatch_mm": 9,
+  "moving_leaf_frame_intersection_mm3": 714.8,
+  "moving_leaf_plate_intersection_mm3": 0.0,
+  "scope": "One specific mounting arrangement, no claim that all direct-mount hinges are impossible",
+  "limitations": [
+    "Nominal D6.8 reconstruction; assumed leaf thickness 2 mm.",
+    "No new production design or BOM selection.",
+    "Other candidate products received catalog/dimension screening only."
+  ],
+  "saved_artifact_check": {
+    "source_read_from_disk": true,
+    "source_file_unchanged": true,
+    "saved_clash_volume_matches_mm3": 714.8,
+    "all_saved_shapes_valid": true
+  }
+}
