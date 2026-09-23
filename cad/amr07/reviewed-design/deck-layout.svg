@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" width="880" height="880"><rect width="440" height="440" fill="white"/><g fill="none" stroke="black" stroke-width="0.6"><rect x="70" y="65" width="300" height="300"/>
+<circle cx="120" cy="315" r="2.25"/>
+<circle cx="120" cy="265" r="2.25"/>
+<circle cx="120" cy="215" r="2.25"/>
+<circle cx="120" cy="165" r="2.25"/>
+<circle cx="120" cy="115" r="2.25"/>
+<circle cx="170" cy="315" r="2.25"/>
+<circle cx="170" cy="265" r="2.25"/>
+<circle cx="170" cy="215" r="2.25"/>
+<circle cx="170" cy="165" r="2.25"/>
+<circle cx="170" cy="115" r="2.25"/>
+<circle cx="220" cy="315" r="2.25"/>
+<circle cx="220" cy="265" r="2.25"/>
+<circle cx="220" cy="215" r="2.25"/>
+<circle cx="220" cy="165" r="2.25"/>
+<circle cx="220" cy="115" r="2.25"/>
+<circle cx="270" cy="315" r="2.25"/>
+<circle cx="270" cy="265" r="2.25"/>
+<circle cx="270" cy="215" r="2.25"/>
+<circle cx="270" cy="165" r="2.25"/>
+<circle cx="270" cy="115" r="2.25"/>
+<circle cx="320" cy="315" r="2.25"/>
+<circle cx="320" cy="265" r="2.25"/>
+<circle cx="320" cy="215" r="2.25"/>
+<circle cx="320" cy="165" r="2.25"/>
+<circle cx="320" cy="115" r="2.25"/>
+<circle cx="95" cy="350" r="3.3" stroke="#d17400"/>
+<circle cx="95" cy="80" r="3.3" stroke="#d17400"/>
+<circle cx="220" cy="350" r="3.3" stroke="#d17400"/>
+<circle cx="220" cy="80" r="3.3" stroke="#d17400"/>
+<circle cx="345" cy="350" r="3.3" stroke="#d17400"/>
+<circle cx="345" cy="80" r="3.3" stroke="#d17400"/>
+<rect x="77.0" y="200.0" width="6" height="30" rx="3"/>
+<rect x="357.0" y="200.0" width="6" height="30" rx="3"/>
+<rect x="205.0" y="322.0" width="30" height="6" rx="3"/>
+<rect x="205.0" y="102.0" width="30" height="6" rx="3"/>
+</g><g font-family="sans-serif" font-size="10" fill="black"><text x="40" y="25">E4 DECK / 6061-T6 / 300 x 300 x 4 mm</text><text x="40" y="43">25 x D4.5 on centered50mm grid / 6 x D6.6 peripheral fixings</text><text x="40" y="390">4 x30x6 slots R3 / through holes only / NO countersink</text><text x="40" y="408">Use STEP geometry. No machining quote for this revision yet.</text><text x="195" y="60">+Y</text><text x="375" y="218">+X</text></g></svg>

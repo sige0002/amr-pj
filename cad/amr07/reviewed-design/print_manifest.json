@@ -1,0 +1,134 @@
+[
+  {
+    "part": "SeamBeamPLA",
+    "file": "two-story/SeamBeamPLA.stl",
+    "sha256": "22c911c5e03481453e4d1d892e9b4deadf5ea37b063eaa758556505c8ab0b727",
+    "closed": true,
+    "bounds_mm": [
+      64.0,
+      100.0,
+      25.0
+    ]
+  },
+  {
+    "part": "FloorPLA_0_0",
+    "file": "direct-hinge/FloorPLA_0_0.stl",
+    "sha256": "6d8f8ba530c34cd903494adb0f7c3527ead20faf64847360f8f96ec6418fc226",
+    "closed": true,
+    "bounds_mm": [
+      229.8000030517578,
+      149.8000030517578,
+      26.0
+    ]
+  },
+  {
+    "part": "FloorPLA_0_1",
+    "file": "direct-hinge/FloorPLA_0_1.stl",
+    "sha256": "18351c25ffb71331c06bd421054e0ca449c95d5ddc2cf29895f992dc1af1c0f5",
+    "closed": true,
+    "bounds_mm": [
+      229.8000030517578,
+      149.8000030517578,
+      26.0
+    ]
+  },
+  {
+    "part": "FloorPLA_1_0",
+    "file": "two-story/FloorPLA_1_0.stl",
+    "sha256": "116dec555820a7520c4a421e30c8877ee79d20778fc724c4155d6fc39724f890",
+    "closed": true,
+    "bounds_mm": [
+      229.8000030517578,
+      149.8000030517578,
+      23.999999999999986
+    ]
+  },
+  {
+    "part": "FloorPLA_1_1",
+    "file": "pico-control/FloorPLA_1_1.stl",
+    "sha256": "25fe89009e3e2468c20c692d7bb55da54df6ceb53b004bbed7784d5127db0da8",
+    "closed": true,
+    "bounds_mm": [
+      229.8000030517578,
+      149.8000030517578,
+      24.0
+    ]
+  },
+  {
+    "part": "ComputerBarrierPLA",
+    "file": "two-story/ComputerBarrierPLA.stl",
+    "sha256": "53d66ff079424127cbd8e6a2e8b4c87b1529409e18ba229edfc0db25470db12a",
+    "closed": true,
+    "bounds_mm": [
+      123.4000015258789,
+      103.4000015258789,
+      12.399999618530273
+    ]
+  },
+  {
+    "part": "RearStopCasePLA",
+    "file": "reviewed-design/RearStopCasePLA.stl",
+    "sha256": "ad79d333a7604a0783e923c164aed33b4c08dff94666af671451d216a22f3681",
+    "closed": true,
+    "bounds_mm": [
+      66.0,
+      76.0,
+      66.0
+    ]
+  },
+  {
+    "part": "RearStopLidPLA",
+    "file": "pico-control/RearStopLidPLA.stl",
+    "sha256": "9fcd6f7fa2cdda13b1472cb2ddda4fc14d96b9c2549029faa9593dd6defed304",
+    "closed": true,
+    "bounds_mm": [
+      66.0,
+      76.0,
+      17.0
+    ]
+  },
+  {
+    "part": "RearPowerCasePLA",
+    "file": "reviewed-design/RearPowerCasePLA.stl",
+    "sha256": "30ad084696a927755cbdbc7626eebb2cd47cbd826a513f5f731dd2611dec0ef5",
+    "closed": true,
+    "bounds_mm": [
+      66.0,
+      44.0,
+      44.0
+    ]
+  },
+  {
+    "part": "RearPowerLidPLA",
+    "file": "reviewed-design/RearPowerLidPLA.stl",
+    "sha256": "79eeb2e83bb20b0449da43ec486c1665e94a8513e5c70ebe01ed603b94b07e0b",
+    "closed": true,
+    "bounds_mm": [
+      66.0,
+      44.0,
+      15.0
+    ]
+  },
+  {
+    "part": "PicoTrayPLA",
+    "file": "pico-control/PicoTrayPLA.stl",
+    "sha256": "3b1fc0eccf6b78a620e2a474a8f6e8a7319256f9f45d0433a9d20f10789ecacd",
+    "closed": true,
+    "bounds_mm": [
+      70.0,
+      45.0,
+      32.0
+    ]
+  },
+  {
+    "part": "PicoTrayLidPLA",
+    "file": "pico-control/PicoTrayLidPLA.stl",
+    "sha256": "217c167387ebbc1450adc0cdacdff4a6db039a31333c6f045766cf8664fba67e",
+    "closed": true,
+    "bounds_mm": [
+      70.0,
+      45.0,
+      13.600000381469727
+    ]
+  }
+]

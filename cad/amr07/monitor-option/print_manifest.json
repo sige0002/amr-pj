@@ -1,0 +1,46 @@
+[
+  {
+    "part": "OptSideSupportL",
+    "file": "monitor-option/OptSideSupportL.stl",
+    "sha256": "22192b1c7400ba4e7b388718ae4833508712ab3de18771589bfcf3823872cb4a",
+    "closed": true,
+    "bounds_mm": [
+      85.0,
+      38.0,
+      100.0
+    ]
+  },
+  {
+    "part": "OptSideSupportR",
+    "file": "monitor-option/OptSideSupportR.stl",
+    "sha256": "db299bd9ea1ba7257382bd04ed98a3cec46ae40049f88a72f9b77fc90e7bf657",
+    "closed": true,
+    "bounds_mm": [
+      85.0,
+      38.0,
+      100.0
+    ]
+  },
+  {
+    "part": "OptMonitorTrayPLA",
+    "file": "monitor-option/OptMonitorTrayPLA.stl",
+    "sha256": "c706b4b1602e7b6775a6190c3b4eef1cf219a5bd4a73122479abbfc95cd44eb8",
+    "closed": true,
+    "bounds_mm": [
+      220.0,
+      155.0,
+      57.87292861938488
+    ]
+  },
+  {
+    "part": "OptMonitorBezelPLA",
+    "file": "monitor-option/OptMonitorBezelPLA.stl",
+    "sha256": "cd1ac7a2070ada95929355521e248f42132f96ec06c247cf666a91316e7216e3",
+    "closed": true,
+    "bounds_mm": [
+      220.0,
+      155.00000000000003,
+      2.4000000953674885
+    ]
+  }
+]

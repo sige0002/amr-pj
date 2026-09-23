@@ -1,0 +1,37 @@
+{
+  "revision": "E4",
+  "subtotal": {
+    "JPY": 75625.0,
+    "USD": 82.25
+  },
+  "FX_reference_JPY_per_USD": 157.26718885987816,
+  "FX_date": "2026-09-21",
+  "priced_subtotal_JPY_reference": 88560.22628372497,
+  "complete_purchase_total": false,
+  "new_deck_quote_complete": false,
+  "optional_monitor_included": false,
+  "unpriced_ids": [
+    "S04",
+    "S07",
+    "DECK_plate",
+    "DECK_CNC_SHIP",
+    "POWER_PADS",
+    "POWER_LOW_STRAPS",
+    "D62_BEAM_WASHERS",
+    "U03",
+    "U04",
+    "U06",
+    "U07",
+    "U08",
+    "U13",
+    "U15",
+    "U16",
+    "U17",
+    "U18",
+    "U20",
+    "U24",
+    "E4_TERMINAL_RETENTION",
+    "E4_LOWHEAD_SHIP"
+  ],
+  "BOM_sha256": "f6cc5117357e951490ff6857e025b5515c9ae9d8cb5e9b7235704533c532cb50"
+}

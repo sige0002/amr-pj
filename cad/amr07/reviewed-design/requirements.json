@@ -1,0 +1,214 @@
+{
+  "revision": "E4",
+  "date": "2026-09-23",
+  "status": "pico_hat_direct_two_pole_estop_design_review",
+  "user_constraint": "動くのに必要な最小限の構成から広げる。既製品は非常停止周りを指す。回路製作設備なし。計算機は車載LinuxミニPC。Raspberry Pi 5に限定しない。非常停止はDC定格が合うスイッチでの直接遮断を第一候補とする。",
+  "default_implementation": "onboard_Linux_USB_Pico_UART_RS485_and_direct_motor_disconnect",
+  "user_PCB_fabrication_required": false,
+  "user_soldering_required": false,
+  "user_connector_crimping_assumed_available": false,
+  "custom_PCBA_is_selected": false,
+  "outsourcing_quote_obtained": false,
+  "wiring_diagram_complete": false,
+  "replacement_electrical_BOM_complete": false,
+  "cost_saving_claimed": false,
+  "withdrawn_BOM_ids": [
+    "ELEC_S1",
+    "ELEC_K1_K2",
+    "ELEC_U2",
+    "ELEC_U3",
+    "ELEC_PS1",
+    "ELEC_U4",
+    "ELEC_RDUMP",
+    "ELEC_U5",
+    "ELEC_U6",
+    "ELEC_QCLAMP",
+    "ELEC_PS2",
+    "ELEC_D0"
+  ],
+  "functions_to_preserve": [
+    "manual_drive_and_normal_stop_over_RS485",
+    "hardware_motor_power_disconnect_on_latching_estop",
+    "source_fusing_and_suitable_wiring",
+    "power_and_motor_operation_within_component_ratings"
+  ],
+  "required_design_deliverables": [
+    "exact_minimum_part_models_and_current_costs",
+    "terminal_numbered_wiring_including_returns_fuse_and_estop",
+    "assembly_with_ready_made_modules_and_suitable_cables",
+    "actual_part_CAD_and_basic_motion_stop_checks"
+  ],
+  "CAD_scope": "E4 after two independent reviews. Centered25-hole deck and peripheral low heads; cargo stops optional; switch mounting/terminal envelopes and cable tie bridges. Actual electrical hardware and wiring qualification pending.",
+  "retained_choices": [
+    "M0601C_111",
+    "Makita_BL1860B",
+    "fixed_aluminum_deck",
+    "rear_floor_supported_controls",
+    "no_additional_mechanical_brake"
+  ],
+  "notes": [
+    "User-proposed assembled Pico RS485 HAT is the selected architecture. Do not also purchase USB-RS485 or a bare transceiver. Main power and E-stop have different functions.",
+    "No custom PCB, user soldering, industrial safety relay or comprehensive robot power controller is required by default.",
+    "Conditional compatibility checks are not automatic purchase requirements. Do not claim battery or regeneration compatibility without evidence.",
+    "No additional mechanical brake. Removing motor power removes drive torque and may allow coasting; stationary holding on slopes is outside the existing flat-floor scope.",
+    "E3 includes revised packaging, functional wiring and software behavior. It is not a purchase/production release: PC supply, cable terminations, board stack, battery protection and motor-input transients remain to qualify."
+  ],
+  "baseline_goal": "手動指令で前後進・旋回・通常停止を行い、非常停止で左右モーターの給電を物理的に切る。",
+  "deferred_BOM_ids": [
+    "ELEC_ARM",
+    "U01",
+    "U09",
+    "U10",
+    "U11",
+    "U12",
+    "U14",
+    "U19",
+    "U21",
+    "U23"
+  ],
+  "baseline_communication": "Onboard Linux mini PC -> USB CDC -> user-owned Pico -> Pico-2CH-RS485-compatible assembled board -> CH0 left motor / CH1 right motor. No additional USB-RS485 converter.",
+  "baseline_power": "Battery -> source fuse -> main switch -> branches: left fuse -> E-stop NC1 -> left motor; right fuse -> E-stop NC2 -> right motor; computer fuse -> suitable computer supply -> Linux computer -> USB Pico/HAT. Common power return. E-stop cuts motors only; main switch cuts all branches.",
+  "optional_or_conditional": [
+    "One relay and its coil supply if direct E-stop DC switching is unsuitable",
+    "Additional battery protection only after assessing the battery/adapter protection already present",
+    "Regeneration absorption only if motor/power-source compatibility requires it; no custom clamp circuit selected",
+    "Cable assembly service only if available cables cannot meet the wiring specification"
+  ],
+  "not_required_for_first_build": [
+    "dual_series_relays",
+    "contact_weld_diagnostic_circuit",
+    "external_watchdog_circuit",
+    "dedicated_hardware_ARM_latch_and_button",
+    "additional_voltage_current_temperature_sensor_boards",
+    "industrial_safety_controller",
+    "autonomous_navigation_sensors",
+    "additional_USB_RS485_converter",
+    "bare_RS485_transceiver_IC_and_custom_PCB"
+  ],
+  "electrical_compatibility_checks": [
+    "E-stop/contact DC voltage, breaking current and motor-input inrush; AC or thermal ratings alone are insufficient",
+    "Source fuse and wire/connector current capability; do not inherit the old five-fuse layout without justification",
+    "Battery/adapter protection and motor bus voltage during braking and power interruption",
+    "Motor behavior after power restoration and communication loss; verify with selected protocol/software, without assuming an independent hardware guarantee"
+  ],
+  "baseline_computer": {
+    "platform": "Linux mini PC",
+    "example_not_selected": "Raspberry Pi 5",
+    "model": null,
+    "onboard": true,
+    "required_for_first_build": true,
+    "ownership_confirmed": false,
+    "power_interface_selected": false,
+    "power_requirement": "Match the selected computer input range to battery voltage over charge/discharge. Add an assembled DC/DC only if needed; no universal 5 V supply or Pi-specific RAM/USB requirement is imposed."
+  },
+  "stopping_behavior": {
+    "normal_stop": "Powered velocity control: reduce commanded speed toward zero. Tune and verify response on actual motors.",
+    "built_in_electrical_brake": {
+      "supported_by_manual": true,
+      "mode": "velocity",
+      "command_hex": "0x64",
+      "byte_zero_based": 7,
+      "value_hex": "0xFF",
+      "requires_power_and_communication": true,
+      "hardware_test_complete": false,
+      "braking_torque_and_stop_distance_specified": false
+    },
+    "direct_power_cut": "Removes the drive supply. Do not credit commanded electrical braking or standstill holding after supply removal; stopping distance remains unmeasured.",
+    "brake_then_disconnect": "Not implemented by a simple direct power switch. Requires a separate controlled sequence if later requested; not added to the baseline.",
+    "source": "https://d2air1d4eqhwg2.cloudfront.net/media/files/a48110eb-432c-4083-a159-9e0f35913b23.pdf",
+    "source_pages": [
+      5,
+      9,
+      10
+    ]
+  },
+  "current_CAD": "reviewed-design/AMR01_Reviewed_E4.FCStd",
+  "functional_wiring_diagram_complete": true,
+  "pico_interface": {
+    "owned": true,
+    "purchase_JPY": 0,
+    "variant": null,
+    "headers_confirmed": false,
+    "board": "Pico-2CH-RS485 type",
+    "amazon_ASIN": "B0GKHKCZV3",
+    "product_match_basis": "User reports the photograph matches; exact delivered circuit revision unverified",
+    "voltage_logic_V": 3.3,
+    "baud": 115200,
+    "format": "8N1",
+    "channels": [
+      {
+        "motor": "left",
+        "UART": 0,
+        "TX_GPIO": 0,
+        "RX_GPIO": 1,
+        "ID": 1
+      },
+      {
+        "motor": "right",
+        "UART": 1,
+        "TX_GPIO": 4,
+        "RX_GPIO": 5,
+        "ID": 2
+      }
+    ],
+    "power": "USB from Linux computer only; no battery connection to Pico/RS485 signal pins",
+    "source": "https://www.waveshare.com/wiki/Pico-2CH-RS485",
+    "price_JPY": null,
+    "firmware_implemented": false
+  },
+  "estop": {
+    "model": "IDEC HW1B-V402R",
+    "contacts": "2NC, one independently switched positive supply per motor",
+    "connection": "M3.5 screw terminals, completed crimp leads or permitted bare-wire connection per manufacturer instructions",
+    "direct_switching_selected_for_design": true,
+    "contact_DC24V_DC12_A": 10,
+    "contact_DC24V_DC13_A": 5,
+    "motor_reference_stall_A_each": 2.7,
+    "motor_bus_protection_A_approx_each": 3,
+    "inrush_and_breaking_qualification_complete": false,
+    "head_diameter_mm": 40,
+    "panel_hole_mm": 22.5,
+    "panel_thickness_mm": 5,
+    "purchase_JPY": 2387,
+    "shipping_JPY_reference": 780,
+    "shipping_destination_basis": "Yahoo page default Tokyo, actual address/Prime unverified",
+    "price_source": "https://store.shopping.yahoo.co.jp/angelhamshopjapan/hw1b-v402r.html",
+    "rating_source": "https://www.tdcjapan.com/wp-content/uploads/2017/06/P5204A-HW-with-RemovableContactBlock.pdf"
+  },
+  "main_switch": {
+    "model": "amon3214",
+    "purpose": "normal all-load disconnection after Linux shutdown; E-stop is separate",
+    "catalog_DC24V_A": 10,
+    "historical_price_JPY": 621,
+    "inrush_qualified": false
+  },
+  "power_budget": {
+    "minimum_battery_for_budget_V": 16.5,
+    "computer_input_budget_W": 30,
+    "converter_efficiency_assumption": 0.85,
+    "motor_bus_current_reference_A_each": 3,
+    "total_current_reference_A": 8.13903743315508,
+    "main_fuse_A_provisional": 10,
+    "left_right_branch_fuse_A_provisional": 3,
+    "computer_branch_fuse_A_provisional": 3,
+    "qualification": "Fuse curves, motor inrush and actual wire/connector ratings determine final values; no claim that 3A fuse opens at3A or that motor current limits suppress inrush."
+  },
+  "software_design": {
+    "motor_send_Hz_each": 100,
+    "host_timeout_ms": 200,
+    "boot_motion_command": "zero; require deliberate run command",
+    "loss_response": "Pico requests zero speed and inhibits drive commands after host timeout or motor-response fault; new run command required after recovery",
+    "power_reset_observability": "No separate E-stop sensing contact: loss of replies detects sustained supply interruption, not every short interruption. No hardware restart-prevention claim.",
+    "normal_stop": "ramp speed command toward zero while powered",
+    "electrical_brake": "0x64 DATA[7]=0xFF in velocity mode, test before use",
+    "pico_failure": "No external watchdog/cutoff path; physical E-stop remains independent of software",
+    "implementation_status": "design_only_not_firmware",
+    "stale_commands": "Discard queued USB/motor commands after stop, startup and any fault; do not replay the last nonzero target",
+    "both_wheels": "Either motor communication/driver fault inhibits both wheel commands",
+    "reconnect": "Reconnect both motors with zero commands; require a fresh explicit RUN action",
+    "estop_recovery_operator": "Cancel RUN at Linux PC before releasing E-stop; missing short power interruptions remains an unresolved limitation"
+  },
+  "standard_monitor_included": false,
+  "geometry_requirements": "geometry.json",
+  "baseline_mechanical_requirements": "../fixed-deck/requirements.json"
+}

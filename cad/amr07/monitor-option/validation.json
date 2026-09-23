@@ -1,0 +1,80 @@
+{
+  "checked_pairs": 18225,
+  "new_interferences": [],
+  "services": {
+    "estop_above_hand_r35": [],
+    "estop_rear_hand": [],
+    "main_rear_hand": [],
+    "cargo": [],
+    "battery_service": [],
+    "25_grid_short_fixing_envelopes": [],
+    "deck_lift_with_option_installed": [
+      "OptBridgeBoltL0",
+      "OptBridgeNutL0",
+      "OptBridgeBoltL1",
+      "OptBridgeNutL1",
+      "OptSideSupportL",
+      "OptBridgeBoltR0",
+      "OptBridgeNutR0",
+      "OptBridgeBoltR1",
+      "OptBridgeNutR1",
+      "OptSideSupportR"
+    ]
+  },
+  "meshes": [
+    {
+      "file": "OptSideSupportR.stl",
+      "closed": true,
+      "single_CAD_solid": true,
+      "size_mm": [
+        85.0,
+        38.0,
+        100.0
+      ]
+    },
+    {
+      "file": "OptMonitorBezelPLA.stl",
+      "closed": true,
+      "single_CAD_solid": true,
+      "size_mm": [
+        220.0,
+        155.00000000000003,
+        2.4000000953674885
+      ]
+    },
+    {
+      "file": "OptMonitorTrayPLA.stl",
+      "closed": true,
+      "single_CAD_solid": true,
+      "size_mm": [
+        220.0,
+        155.0,
+        57.87292861938488
+      ]
+    },
+    {
+      "file": "OptSideSupportL.stl",
+      "closed": true,
+      "single_CAD_solid": true,
+      "size_mm": [
+        85.0,
+        38.0,
+        100.0
+      ]
+    }
+  ],
+  "preliminary_strength": {
+    "option_3g_plus10N_push_moment_Nm": 5.4638456189446885,
+    "PLA_two_webs_stress_MPa": 8.537258779601077,
+    "assumed_PLA_allowable_MPa": 10,
+    "metal_bridge10N_stress_MPa": 7.5,
+    "metal_bridge10N_deflection_mm": 0.44021739130434784,
+    "actual_material_and_joint_testing": false
+  },
+  "optional_mass_budget_kg": 1.3468724495224902,
+  "base_plus_option_budget_kg": 11.710078439708095,
+  "payload_for_existing21_5kg_gross_kg": 9.789921560291905,
+  "passed": true,
+  "native_sha256": "535414992ca874896bd019732217f9754aa432da75cf317fe3483ae58647c4c0",
+  "production_release": false
+}

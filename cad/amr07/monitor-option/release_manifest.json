@@ -1,0 +1,95 @@
+{
+  "revision": "O1 optional",
+  "files": {
+    "AMR01_OptionalMonitor_O1.FCStd": {
+      "bytes": 2009195,
+      "sha256": "535414992ca874896bd019732217f9754aa432da75cf317fe3483ae58647c4c0"
+    },
+    "AMR01_OptionalMonitor_O1.step": {
+      "bytes": 10419179,
+      "sha256": "30234982af103bb0417d68036e243b4d9cabfd6a4a59f4d4ec13112bea4e0435"
+    },
+    "BOM.csv": {
+      "bytes": 1033,
+      "sha256": "2209ea8bf344e375dd143d4336b916f964fdec4c86185930edbd025e6181c20f"
+    },
+    "BOM.ja.md": {
+      "bytes": 1473,
+      "sha256": "e647f25bdd34b0d500718776839bcb9f6cb615dcee13e0a10759194b5636505e"
+    },
+    "O1-print-prototypes.zip": {
+      "bytes": 75656,
+      "sha256": "c67e3ce17da2c9244ff644933c84d384f864bfce275e06249ceb668867a68186"
+    },
+    "OptMonitorBezelPLA.stl": {
+      "bytes": 43284,
+      "sha256": "cd1ac7a2070ada95929355521e248f42132f96ec06c247cf666a91316e7216e3"
+    },
+    "OptMonitorTrayPLA.stl": {
+      "bytes": 146084,
+      "sha256": "c706b4b1602e7b6775a6190c3b4eef1cf219a5bd4a73122479abbfc95cd44eb8"
+    },
+    "OptSideSupportL.stl": {
+      "bytes": 44384,
+      "sha256": "22192b1c7400ba4e7b388718ae4833508712ab3de18771589bfcf3823872cb4a"
+    },
+    "OptSideSupportR.stl": {
+      "bytes": 44384,
+      "sha256": "db299bd9ea1ba7257382bd04ed98a3cec46ae40049f88a72f9b77fc90e7bf657"
+    },
+    "OptionalMonitorBridge_300x60x3.step": {
+      "bytes": 18867,
+      "sha256": "f80a475da587557ff074cb98b547aecd478a72ae76b7eaba20207e814d77844d"
+    },
+    "README.ja.md": {
+      "bytes": 3925,
+      "sha256": "28827800619308c0c9e42c8ce346018e64fcee36ea567cde9e8753e6f1d8ebcb"
+    },
+    "build_o1.py": {
+      "bytes": 9421,
+      "sha256": "28b104eb29e4636d241ab70b54caf4754ec6397d7bf574c3c34a664af550af5f"
+    },
+    "cad-screen-mount.png": {
+      "bytes": 138314,
+      "sha256": "ee762639104864cf073b28a32d3063080ec11c40caa4a9eb83ffd54b6c25269b"
+    },
+    "cad-screen-overall.png": {
+      "bytes": 128857,
+      "sha256": "3c3886462210a45dd7c976e1dda81d196a19f97a9012144c0109e6bc31bd04a8"
+    },
+    "capture_o1.py": {
+      "bytes": 2347,
+      "sha256": "7a33ef185775c7b7378679110ab2ff549185543c98545fa819b0fa81757d0d61"
+    },
+    "check_o1.py": {
+      "bytes": 4269,
+      "sha256": "cb99ffebdd0072e328ddecd59e7fa427ca0c161964d73da5cf4401d8196dacc9"
+    },
+    "print_manifest.json": {
+      "bytes": 1067,
+      "sha256": "867567b5aeeac2224858265a135f1578dd09532f24211464fa1a234fc3501b64"
+    },
+    "requirements.json": {
+      "bytes": 2442,
+      "sha256": "34fcb510d0ffa35f82643480313438df48bdbc034e9ad3440866fb26551c93c9"
+    },
+    "saved_artifact_validation.json": {
+      "bytes": 554,
+      "sha256": "7061df4b9ca47d2587f40f8f7ec5e273d80de13aded1b42bb64cce381f7d2b0f"
+    },
+    "validation.json": {
+      "bytes": 1918,
+      "sha256": "5f8da7a5da1af140776f3d9e32fb353cd640cf65254746c5395a89769782a417"
+    }
+  },
+  "checked_local_links": 132,
+  "standard_monitor_included": false,
+  "manufacturing_release": false,
+  "review_reports": {
+    "DECK_REVISION_CHECK.ja.md": "e673618b46393997723d40c40fa2d0efec82af1248b038b3bd245539a3494be8",
+    "MECHANICAL_REVIEW.ja.md": "b37d5dacb7a6710c5d7f6091bdcc32874fd7be1015f6b78f7a234d721618f444",
+    "README.ja.md": "508f0ee46dc81950673a5aebc73e4ea2e5c774f2544b6c5354845afc2118f6e2",
+    "ROBOTICS_RECHECK.ja.md": "fa81a41781bb9f9980bcb577ef6efbc1430e859bb924c248a0befe8c8f391515",
+    "ROBOTICS_REVIEW.ja.md": "bd7b3956c0f0ff201184d51f39ecbaf1f9fb787f536fb06846fe7e802d9645a3"
+  }
+}

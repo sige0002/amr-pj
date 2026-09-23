@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
-  "design": "AMR01_PicoControl_E3",
+  "design": "AMR01_Reviewed_E4",
   "date": "2026-09-23",
   "status": "pico_hat_direct_two_pole_estop_design_review",
-  "requirements_file": "fixed-deck/requirements.json",
+  "requirements_file": "reviewed-design/requirements.json",
   "document": "ELECTRICAL_AND_VALIDATION.ja.md",
   "operation_release": {
     "wiring_diagram_complete": false,
@@ -181,7 +181,11 @@
       "normal_stop": "ramp speed command toward zero while powered",
       "electrical_brake": "0x64 DATA[7]=0xFF in velocity mode, test before use",
       "pico_failure": "No external watchdog/cutoff path; physical E-stop remains independent of software",
-      "implementation_status": "design_only_not_firmware"
+      "implementation_status": "design_only_not_firmware",
+      "stale_commands": "Discard queued USB/motor commands after stop, startup and any fault; do not replay the last nonzero target",
+      "both_wheels": "Either motor communication/driver fault inhibits both wheel commands",
+      "reconnect": "Reconnect both motors with zero commands; require a fresh explicit RUN action",
+      "estop_recovery_operator": "Cancel RUN at Linux PC before releasing E-stop; missing short power interruptions remains an unresolved limitation"
     },
     "operating_host_interface_confirmed": false,
     "protocol_and_software_validation_complete": false
@@ -918,11 +922,79 @@
         "note": "Manual all-load switch; DC24V10A catalog, actual motor/DC-DC inrush unqualified.",
         "status": "mechanical_candidate_wiring_not_designed"
       }
-    ]
+    ],
+    "E3_controls_layout": {
+      "estop": {
+        "part": "HW1B-V402R",
+        "panel_center_mm": [
+          -196,
+          -85,
+          180.4
+        ],
+        "head_max_z": 212.4,
+        "body_depth_mm": 49.4,
+        "contact_assignment": "NC1 left motor; NC2 right motor; never parallel contacts"
+      },
+      "main_power": {
+        "part": "amon3214",
+        "restored_to_BOM": true,
+        "center_mm": [
+          -201,
+          64,
+          156.4
+        ]
+      },
+      "arm": {
+        "installed": false
+      },
+      "pico": {
+        "case_bounds_mm": [
+          5,
+          77,
+          101.4,
+          70,
+          45,
+          34.4
+        ],
+        "floor_mount_xy_mm": [
+          [
+            11,
+            85
+          ],
+          [
+            69,
+            85
+          ],
+          [
+            11,
+            114
+          ],
+          [
+            69,
+            114
+          ]
+        ],
+        "mount_count": 4,
+        "board_footprint_mm": [
+          52.5,
+          21
+        ],
+        "stack_height_unverified": true,
+        "print_release": false
+      },
+      "limitations": [
+        "received HAT/Pico support/connector positions",
+        "E-stop motor-input inrush qualification",
+        "final Linux computer and supply dimensions",
+        "finished harness collision check"
+      ],
+      "vehicle_estimate_with_existing_electrical_allowance_kg": 10.363205990185605,
+      "revision": "E4: nut/terminal spaces; main rib relief and cable tie bridges"
+    }
   },
   "selected_power_file": "makita-power/power_selection.json",
-  "current_CAD": "pico-control/AMR01_PicoControl_E3.FCStd",
-  "current_layout_revision": "E3_on_D6.9_chassis",
+  "current_CAD": "reviewed-design/AMR01_Reviewed_E4.FCStd",
+  "current_layout_revision": "E4_after_independent_reviews",
   "current_controls_layout": {
     "estop": {
       "part": "HW1B-V402R",
@@ -988,10 +1060,11 @@
       "final Linux computer and supply dimensions",
       "finished harness collision check"
     ],
-    "vehicle_estimate_with_existing_electrical_allowance_kg": 10.456266639892878
+    "vehicle_estimate_with_existing_electrical_allowance_kg": 10.363205990185605,
+    "revision": "E4: nut/terminal spaces; main rib relief and cable tie bridges"
   },
-  "manufacturing_requirements_file": "electrical-buildability/requirements.json",
-  "manufacturing_requirements_sha256": "438ab2c3ad5a667b6e55d1aff748e9b9e34d969f27ddb9f3d7a2ca06dc9391aa",
+  "manufacturing_requirements_file": "reviewed-design/requirements.json",
+  "manufacturing_requirements_sha256": "9fc9cea6ba9a385610688992ace99f6c39e2eaa907ea4f0e124b4bd2648eb1e8",
   "implementation_disposition": "E3 Pico/HAT scope. Previous custom circuits, multi-relay monitoring and thresholds are archived in reference_only; they are not baseline requirements.",
   "stopping_behavior": {
     "normal_stop": "Powered velocity control: reduce commanded speed toward zero. Tune and verify response on actual motors.",
@@ -1013,5 +1086,6 @@
       9,
       10
     ]
-  }
+  },
+  "optional_monitor_included": false
 }

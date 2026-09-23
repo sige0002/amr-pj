@@ -1,0 +1,98 @@
+{
+  "revision": "E4",
+  "checked_pairs": 8697,
+  "new_interferences": [],
+  "services": {
+    "grid_tool_-100_-100": [],
+    "grid_tool_-100_-50": [],
+    "grid_tool_-100_0": [],
+    "grid_tool_-100_50": [],
+    "grid_tool_-100_100": [],
+    "grid_tool_-50_-100": [],
+    "grid_tool_-50_-50": [],
+    "grid_tool_-50_0": [],
+    "grid_tool_-50_50": [],
+    "grid_tool_-50_100": [],
+    "grid_tool_0_-100": [],
+    "grid_tool_0_-50": [],
+    "grid_tool_0_0": [],
+    "grid_tool_0_50": [],
+    "grid_tool_0_100": [],
+    "grid_tool_50_-100": [],
+    "grid_tool_50_-50": [],
+    "grid_tool_50_0": [],
+    "grid_tool_50_50": [],
+    "grid_tool_50_100": [],
+    "grid_tool_100_-100": [],
+    "grid_tool_100_-50": [],
+    "grid_tool_100_0": [],
+    "grid_tool_100_50": [],
+    "grid_tool_100_100": [],
+    "deck_top_tool_0": [],
+    "deck_top_tool_1": [],
+    "deck_top_tool_2": [],
+    "deck_top_tool_3": [],
+    "deck_top_tool_4": [],
+    "deck_top_tool_5": [],
+    "estop_above_hand_r35": [],
+    "estop_rear_hand": [],
+    "main_rear_hand": [],
+    "estop_nut_tool_lid_only": [],
+    "main_nut_tool_lid_only": [],
+    "stop_lid_lift50_sampled5mm": [],
+    "power_lid_lift50_sampled5mm": [],
+    "battery": [],
+    "deck_lift": [],
+    "250square_cargo_example": []
+  },
+  "meshes": [
+    {
+      "file": "RearStopCasePLA.stl",
+      "closed": true,
+      "size_mm": [
+        66.0,
+        76.0,
+        66.0
+      ]
+    },
+    {
+      "file": "RearPowerLidPLA.stl",
+      "closed": true,
+      "size_mm": [
+        66.0,
+        44.0,
+        15.0
+      ]
+    },
+    {
+      "file": "RearPowerCasePLA.stl",
+      "closed": true,
+      "size_mm": [
+        66.0,
+        44.0,
+        44.0
+      ]
+    }
+  ],
+  "passed": true,
+  "installed_grid_constraints": {
+    "-100,-50": [
+      "BatteryAdapter03"
+    ],
+    "-100,0": [
+      "BatteryAdapter03"
+    ],
+    "-100,50": [
+      "BatteryAdapter03"
+    ]
+  },
+  "maintenance_condition": "Remove battery module before grid underside tool work and switch-lid servicing",
+  "native_sha256": "90c4ce81887846e0a1c087b61c11449b3620cc434e3700fee7789fc692a6b29e",
+  "actual_hardware_wiring_and_PLA_tests_complete": false,
+  "limitations": [
+    "Main power nut/terminal dimensions are allocated envelopes, not measured products",
+    "Harness route service check is sampled2mm, not continuous or cable-flex qualification; service loop100mm initial allowance",
+    "Electrical transients and restart software untested",
+    "No physical strength/creep tests"
+  ]
+}
