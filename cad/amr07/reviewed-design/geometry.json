@@ -416,7 +416,6 @@
     "RearStopLidBolt_3",
     "RearStopLidWasher_3",
     "RearStopLidNut_3",
-    "RearStopLidPLA",
     "RearPowerFloorNut_0",
     "RearPowerFloorBolt_0",
     "RearPowerFloorWasher_0",
@@ -515,6 +514,7 @@
     "MainPower_3214",
     "EStop_HW1B_V402R",
     "RearPowerLidPLA",
+    "RearStopLidPLA",
     "RearStopCasePLA",
     "RearPowerCasePLA",
     "DeckBolt0",
@@ -545,9 +545,9 @@
   "physical_parts": 331,
   "PLA_parts": 12,
   "mass": {
-    "estimated_base_kg": 10.363205990185605,
-    "delta_from_E3_kg": -0.09306064970727146,
-    "total_solid_PLA_kg": 0.904277927534848,
+    "estimated_base_kg": 10.363191373935368,
+    "delta_from_E3_kg": -0.09307526595751003,
+    "total_solid_PLA_kg": 0.9042633112846097,
     "electrical_allowance_not_reduced": true,
     "actually_weighed": false
   },

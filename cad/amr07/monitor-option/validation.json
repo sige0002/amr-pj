@@ -72,9 +72,9 @@
     "actual_material_and_joint_testing": false
   },
   "optional_mass_budget_kg": 1.3468724495224902,
-  "base_plus_option_budget_kg": 11.710078439708095,
-  "payload_for_existing21_5kg_gross_kg": 9.789921560291905,
+  "base_plus_option_budget_kg": 11.710063823457858,
+  "payload_for_existing21_5kg_gross_kg": 9.789936176542142,
   "passed": true,
-  "native_sha256": "535414992ca874896bd019732217f9754aa432da75cf317fe3483ae58647c4c0",
+  "native_sha256": "296fffe053f20a6e24b574ede290c80ad2a9594997997214c030c01cbdd45b86",
   "production_release": false
 }

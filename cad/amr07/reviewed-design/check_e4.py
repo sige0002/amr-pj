@@ -69,8 +69,19 @@ check('250square_cargo_example',Part.makeBox(250,250,100,App.Vector(-125,-125,23
 meshes=[]
 for f in HERE.glob('*.stl'):
  m=Mesh.Mesh(str(f));bb=m.BoundBox;meshes.append(dict(file=f.name,closed=m.isSolid(),size_mm=[bb.XLength,bb.YLength,bb.ZLength]))
-out=dict(revision='E4',checked_pairs=checks,new_interferences=hits,services=services,meshes=meshes,passed=not hits and not any(services.values()) and all(x['closed'] and max(x['size_mm'])<256 for x in meshes),
+# Independent checks against the manufacturer dimension audit, not mesh appearance.
+audit=json.loads((HERE/'switch-dimensions.json').read_text())
+a=audit['main_switch'];front_z=a['mounting_face_Z_mm'];main=d.getObject('MainPower_3214').Shape
+front_shape=main.common(Part.makeBox(100,100,50,App.Vector(-250,14,front_z)))
+bb=front_shape.BoundBox
+assert abs(bb.XLength-a['front_width_mm'])<1e-6 and abs(bb.YLength-a['front_length_mm'])<1e-6
+assert abs(bb.ZLength-a['front_projection_from_mounting_face_mm'])<1e-6
+lid=d.getObject('RearStopLidPLA').Shape
+# Manufacturer key tip lies13.05 from center with the chosen22.5/24.3 cut.
+assert lid.common(Part.makeBox(3.28,.15,5,App.Vector(-197.64,-72.1,175.4))).Volume<1e-6
+catalog_checks={'main_front_dimensions':True,'estop_key_tip_clear':True,'rear_tab_limit_Z_mm':a['rear_tab_limit_Z_mm']}
+out=dict(catalog_dimension_checks=catalog_checks,revision='E4',checked_pairs=checks,new_interferences=hits,services=services,meshes=meshes,passed=not hits and not any(services.values()) and all(x['closed'] and max(x['size_mm'])<256 for x in meshes),
  installed_grid_constraints={k:v for k,v in installed_grid_constraints.items() if v},maintenance_condition='Remove battery module before grid underside tool work and switch-lid servicing',
  native_sha256=hashlib.sha256(p.read_bytes()).hexdigest(),actual_hardware_wiring_and_PLA_tests_complete=False,
- limitations=['Main power nut/terminal dimensions are allocated envelopes, not measured products','Harness route service check is sampled2mm, not continuous or cable-flex qualification; service loop100mm initial allowance','Electrical transients and restart software untested','No physical strength/creep tests'])
+ limitations=['Main nut dimensions unpublished in consulted source; mating terminal/finished lead SKU not selected. Published3214 front dimensions are applied; hidden body remains allocated.','Harness route service check is sampled2mm, not continuous or cable-flex qualification; service loop100mm initial allowance','Electrical transients and restart software untested','No physical strength/creep tests'])
 (HERE/'validation.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out,indent=2),flush=True)

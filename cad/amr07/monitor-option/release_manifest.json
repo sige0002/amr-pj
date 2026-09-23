@@ -2,12 +2,12 @@
   "revision": "O1 optional",
   "files": {
     "AMR01_OptionalMonitor_O1.FCStd": {
-      "bytes": 2009195,
-      "sha256": "535414992ca874896bd019732217f9754aa432da75cf317fe3483ae58647c4c0"
+      "bytes": 2010090,
+      "sha256": "296fffe053f20a6e24b574ede290c80ad2a9594997997214c030c01cbdd45b86"
     },
     "AMR01_OptionalMonitor_O1.step": {
-      "bytes": 10419179,
-      "sha256": "30234982af103bb0417d68036e243b4d9cabfd6a4a59f4d4ec13112bea4e0435"
+      "bytes": 10425411,
+      "sha256": "20310a2d0fa13d69426d45f87a2a2be205761246f927c2ddce1261acdea8726c"
     },
     "BOM.csv": {
       "bytes": 1033,
@@ -18,8 +18,8 @@
       "sha256": "e647f25bdd34b0d500718776839bcb9f6cb615dcee13e0a10759194b5636505e"
     },
     "O1-print-prototypes.zip": {
-      "bytes": 75656,
-      "sha256": "c67e3ce17da2c9244ff644933c84d384f864bfce275e06249ceb668867a68186"
+      "bytes": 75658,
+      "sha256": "21368aee53feec266f081eb0a1e3b10192519662382297c3673a374c07fa0a26"
     },
     "OptMonitorBezelPLA.stl": {
       "bytes": 43284,
@@ -39,7 +39,7 @@
     },
     "OptionalMonitorBridge_300x60x3.step": {
       "bytes": 18867,
-      "sha256": "f80a475da587557ff074cb98b547aecd478a72ae76b7eaba20207e814d77844d"
+      "sha256": "526bd6d9ad56708e26454a66eb3dae9dc497adef478e317630c20e71879b3028"
     },
     "README.ja.md": {
       "bytes": 3925,
@@ -50,12 +50,12 @@
       "sha256": "28b104eb29e4636d241ab70b54caf4754ec6397d7bf574c3c34a664af550af5f"
     },
     "cad-screen-mount.png": {
-      "bytes": 138314,
-      "sha256": "ee762639104864cf073b28a32d3063080ec11c40caa4a9eb83ffd54b6c25269b"
+      "bytes": 138009,
+      "sha256": "c2dca4dd06ac60847c3ab3bac29219830d88bd2d530daf3a68d665d1e83553f2"
     },
     "cad-screen-overall.png": {
-      "bytes": 128857,
-      "sha256": "3c3886462210a45dd7c976e1dda81d196a19f97a9012144c0109e6bc31bd04a8"
+      "bytes": 128647,
+      "sha256": "1895ce574e7409d6e2835f05cb2c3821df06c87b37d078592ca33919ace61f82"
     },
     "capture_o1.py": {
       "bytes": 2347,
@@ -71,24 +71,24 @@
     },
     "requirements.json": {
       "bytes": 2442,
-      "sha256": "34fcb510d0ffa35f82643480313438df48bdbc034e9ad3440866fb26551c93c9"
+      "sha256": "97b0417537fd5da8dc8a599cd8d461bace2d313c61c56efd5ba7c34f9714094d"
     },
     "saved_artifact_validation.json": {
       "bytes": 554,
-      "sha256": "7061df4b9ca47d2587f40f8f7ec5e273d80de13aded1b42bb64cce381f7d2b0f"
+      "sha256": "2e88a8d9bd56ed43aef4c24940e5ead8fdde9cf0bec51f928365c118e422c2ee"
     },
     "validation.json": {
       "bytes": 1918,
-      "sha256": "5f8da7a5da1af140776f3d9e32fb353cd640cf65254746c5395a89769782a417"
+      "sha256": "857880f2edfdf8d8a590e588dfe77e893017603c2b5377465ed47a1707f59720"
     }
   },
-  "checked_local_links": 132,
+  "checked_local_links": 135,
   "standard_monitor_included": false,
   "manufacturing_release": false,
   "review_reports": {
     "DECK_REVISION_CHECK.ja.md": "e673618b46393997723d40c40fa2d0efec82af1248b038b3bd245539a3494be8",
     "MECHANICAL_REVIEW.ja.md": "b37d5dacb7a6710c5d7f6091bdcc32874fd7be1015f6b78f7a234d721618f444",
-    "README.ja.md": "508f0ee46dc81950673a5aebc73e4ea2e5c774f2544b6c5354845afc2118f6e2",
+    "README.ja.md": "12ff76371cced870647885a9b3dc612db2abebfc0b4251dc393e5fc32980cab9",
     "ROBOTICS_RECHECK.ja.md": "fa81a41781bb9f9980bcb577ef6efbc1430e859bb924c248a0befe8c8f391515",
     "ROBOTICS_REVIEW.ja.md": "bd7b3956c0f0ff201184d51f39ecbaf1f9fb787f536fb06846fe7e802d9645a3"
   }

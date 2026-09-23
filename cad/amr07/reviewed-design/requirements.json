@@ -173,14 +173,45 @@
     "shipping_JPY_reference": 780,
     "shipping_destination_basis": "Yahoo page default Tokyo, actual address/Prime unverified",
     "price_source": "https://store.shopping.yahoo.co.jp/angelhamshopjapan/hw1b-v402r.html",
-    "rating_source": "https://www.tdcjapan.com/wp-content/uploads/2017/06/P5204A-HW-with-RemovableContactBlock.pdf"
+    "rating_source": "https://www.tdcjapan.com/wp-content/uploads/2017/06/P5204A-HW-with-RemovableContactBlock.pdf",
+    "catalog_mounting_cut": {
+      "diameter": 22.5,
+      "key_width": 3.3,
+      "overall": 24.3
+    }
   },
   "main_switch": {
     "model": "amon3214",
     "purpose": "normal all-load disconnection after Linux shutdown; E-stop is separate",
     "catalog_DC24V_A": 10,
     "historical_price_JPY": 621,
-    "inrush_qualified": false
+    "inrush_qualified": false,
+    "catalog_dimensions": {
+      "model": "amon3214",
+      "source": "https://www.amon.jp/upload/save_image/3214_SUB2_L.jpg",
+      "source_sha256": "84f15e691771a6403b3949b4b4894198aedaa02d2a8b1ccfdcfed8686483600c",
+      "front_width_mm": 19.5,
+      "front_length_mm": 30.5,
+      "front_projection_from_mounting_face_mm": 21.5,
+      "rear_length_including_tabs_mm": 28,
+      "hole_mm": 12,
+      "panel_range_mm": [
+        1,
+        4
+      ],
+      "female_terminal_series": "250",
+      "mounting_face_Z_mm": 156.4,
+      "rear_tab_limit_Z_mm": 128.4,
+      "CAD_front": "bounding box, not exact rocker surface",
+      "not_dimensioned_in_consulted_sources": [
+        "resin nut OD and thickness",
+        "hidden body profile",
+        "blade pitch and length separately"
+      ],
+      "unselected": [
+        "insulated female terminal or finished lead SKU"
+      ]
+    }
   },
   "power_budget": {
     "minimum_battery_for_budget_V": 16.5,
@@ -210,5 +241,6 @@
   },
   "standard_monitor_included": false,
   "geometry_requirements": "geometry.json",
-  "baseline_mechanical_requirements": "../fixed-deck/requirements.json"
+  "baseline_mechanical_requirements": "../fixed-deck/requirements.json",
+  "switch_dimension_audit": "switch-dimensions.json"
 }

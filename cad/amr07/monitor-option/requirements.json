@@ -2,7 +2,7 @@
   "revision": "O1",
   "optional": true,
   "standard_CAD": "reviewed-design/AMR01_Reviewed_E4.FCStd",
-  "standard_native_sha256": "90c4ce81887846e0a1c087b61c11449b3620cc434e3700fee7789fc692a6b29e",
+  "standard_native_sha256": "801b38c000d900f8903c181ca6a6a0efa949189a634007b71bae5d8bcc42c644",
   "source_objects_unchanged": true,
   "monitor_envelope_mm": [
     200,
@@ -35,7 +35,7 @@
   "PLA_solid_mass_kg": 0.3846311019946257,
   "cable_padding_allowance_kg": 0.08,
   "max_option_mass_kg": 1.3468724495224902,
-  "base_mass_kg": 10.363205990185605,
+  "base_mass_kg": 10.363191373935368,
   "additional_parts": [
     "OptBridgePlate",
     "OptFrameWasherL0",

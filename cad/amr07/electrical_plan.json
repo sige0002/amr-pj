@@ -1014,7 +1014,9 @@
         -201,
         64,
         156.4
-      ]
+      ],
+      "catalog_dimensions_file": "reviewed-design/switch-dimensions.json",
+      "head_max_z_mm": 177.9
     },
     "arm": {
       "installed": false
@@ -1060,11 +1062,11 @@
       "final Linux computer and supply dimensions",
       "finished harness collision check"
     ],
-    "vehicle_estimate_with_existing_electrical_allowance_kg": 10.363205990185605,
-    "revision": "E4: nut/terminal spaces; main rib relief and cable tie bridges"
+    "vehicle_estimate_with_existing_electrical_allowance_kg": 10.363191373935368,
+    "revision": "E4 with catalog-dimension correction:3214 front envelope,HW contact envelope and keyed cutout"
   },
   "manufacturing_requirements_file": "reviewed-design/requirements.json",
-  "manufacturing_requirements_sha256": "9fc9cea6ba9a385610688992ace99f6c39e2eaa907ea4f0e124b4bd2648eb1e8",
+  "manufacturing_requirements_sha256": "ffc04e2bab7290a5f657f4cbcf380af8394d081bf2129895b4102e49f1404254",
   "implementation_disposition": "E3 Pico/HAT scope. Previous custom circuits, multi-relay monitoring and thresholds are archived in reference_only; they are not baseline requirements.",
   "stopping_behavior": {
     "normal_stop": "Powered velocity control: reduce commanded speed toward zero. Tune and verify response on actual motors.",
@@ -1087,5 +1089,6 @@
       10
     ]
   },
-  "optional_monitor_included": false
+  "optional_monitor_included": false,
+  "switch_dimension_audit": "reviewed-design/switch-dimensions.json"
 }

@@ -7,7 +7,7 @@ HERE=Path(__file__).resolve().parent;BASE=HERE.parent;SOURCE=BASE/'pico-control/
 spec=importlib.util.spec_from_file_location('old',BASE/'direct-hinge/build_d68.py');b=importlib.util.module_from_spec(spec);spec.loader.exec_module(b)
 V=App.Vector;box=b.box;cyl=b.cyl;fuse=b.fuse;NAME='AMR01_Reviewed_E4'
 REMOVED=['PrintedStopXN','PrintedStopXP','PrintedStopYN','PrintedStopYP']+[f'{prefix}{i}' for prefix in ['StopBolt','StopWasher','StopNut'] for i in range(8)]
-CHANGED=['AluminumDeckD3','MainPower_3214','EStop_HW1B_V402R','RearPowerLidPLA','RearStopCasePLA','RearPowerCasePLA']+[f'{p}{i}' for p in ['DeckBolt','DeckSlotNut'] for i in range(6)]+['StrapRouteX','StrapRouteY']
+CHANGED=['AluminumDeckD3','MainPower_3214','EStop_HW1B_V402R','RearPowerLidPLA','RearStopLidPLA','RearStopCasePLA','RearPowerCasePLA']+[f'{p}{i}' for p in ['DeckBolt','DeckSlotNut'] for i in range(6)]+['StrapRouteX','StrapRouteY']
 def main():
  old=App.openDocument(str(SOURCE));d=App.newDocument(NAME);d.Label='AMR E4 | REVIEWED SWITCH PACKAGING | CENTERED25-HOLE DECK'
  for o in old.Objects:
@@ -42,13 +42,24 @@ def main():
  lid.Shape=lid.Shape.cut(cyl(15.5,13,(-201,64,140.4))).fuse(cyl(17,3,(-201,64,150.4)).cut(cyl(15.5,3,(-201,64,150.4)))).removeSplitter()
  lid.ModelNote+=' E4 main centerX=-201 retained; D31 rib clearance and D34 reinforcement ring. D26x5 nut and D30 tool are design-space reservations, not measured supplier dimensions.'
  # Separate nominal body/neck from nut and terminal reservations to expose their interfaces.
- d.getObject('MainPower_3214').Shape=fuse([cyl(11,8,(-201,64,140.4)),cyl(5.9,11,(-201,64,148.4)),cyl(11,16,(-201,64,159.4))])
- d.getObject('MainPower_3214').ModelNote='amon3214 nominal layout split into body/neck/head; actual body/nut/tab dimensions unmeasured. Need supplied part to qualify.'
+ # Official3214 packaging drawing: front19.5x30.5, projection21.5 from
+ # mounting face, rear length28 including tabs. Do not scale its illustration
+ # to invent nut diameter, tab pitch or hidden body dimensions.
+ head=box(-201-19.5/2,64-30.5/2,156.4,19.5,30.5,21.5)
+ d.getObject('MainPower_3214').Shape=fuse([cyl(11,8,(-201,64,140.4)),cyl(5.9,8,(-201,64,148.4)),head])
+ d.getObject('MainPower_3214').ModelNote='3214_SUB2_L manufacturer drawing: front19.5x30.5; front projection21.5 from mounting faceZ156.4; rear total28 incl tabs. Front is conservative BOX envelope, not exact rocker surface. Hidden body/nut/tab pitch remain allocated, unpublished in consulted documents.'
  add('MainPowerNutReservation',cyl(13,5,(-201,64,148.4)).cut(cyl(6.2,5,(-201,64,148.4))),'reference','D26x5 assumed resin-nut space. Supplier confirms resin nut, D12 hole,1-4mm panel only; dimension unverified.')
  for k,x in enumerate([-207,-195]):add('MainPowerTerminalReservation'+str(k),box(x-4.5,61,123.4,9,6,17),'reference','Space for250 insulated female terminal/tab assembly, not selected vendor part. Includes blade mating volume. Actual crimp/insulation/bend fit pending.')
  cx,cy,front=-196,-85,180.4
- d.getObject('EStop_HW1B_V402R').Shape=fuse([box(cx-14.7,cy-26.5,front-49.4,29.4,41.4,36.4),cyl(10.9,26,(cx,cy,front-13)),cyl(15,4,(cx,cy,front)),cyl(20,19,(cx,cy,front+13))])
- d.getObject('EStop_HW1B_V402R').ModelNote+=' E4 neck/contact envelope partitioned to show actual separate locknut. Contact latch/terminal detail remains simplified.'
+ # Contact width41.4 is centered; lock lever extends26.5 toward TOP(+Y).
+ # Previously the41.4 envelope was shifted off center, missing one side.
+ d.getObject('EStop_HW1B_V402R').Shape=fuse([box(cx-14.7,cy-20.7,front-49.4,29.4,47.2,36.4),cyl(10.9,26,(cx,cy,front-13)),cyl(15,4,(cx,cy,front)),cyl(20,19,(cx,cy,front+13))])
+ d.getObject('EStop_HW1B_V402R').ModelNote='HW catalogue p3: D40,front32,rear49.4 for2contacts; contact width41.4 centered,29.4 across; lever reaches26.5 towardTOP(+Y). Conservative contact/lever envelope, not detailed vendor CAD. Nut separate. Terminal screw centers are not dimensioned in consulted catalogue.'
+ # Panel drawing dimensions are22.3+0.4/0, key3.2+0.2/0 and overall
+ # circle-bottom to key-top24.1+0.4/0. Select tolerance midpoints.
+ stoplid=d.getObject('RearStopLidPLA')
+ stoplid.Shape=stoplid.Shape.fuse(box(cx-1.7,cy+10,175.4,3.4,2.3,5)).cut(cyl(11.25,20,(cx,cy,167.4))).cut(box(cx-1.65,cy+10,167.4,3.3,3.05,20)).removeSplitter()
+ stoplid.ModelNote='HW catalogue panel cut: D22.5,key3.3,overall24.3(circle bottom to key tip); key toward+Y. Panel5mm. Printed dimensions require process tolerance calibration, not unknown purchased-part dimensions.'
  add('EStopLockNut',cyl(14.2,5,(cx,cy,170.4)).cut(cyl(11,5,(cx,cy,170.4))),'reference','HW9Z-LN catalogD28.4x5, supplied mounting nut; not additional purchase. Not a detailed groove/thread model.')
  # Four distinct terminal approach pockets below block. Exact screw/lead direction unverified.
  for k,(x,y) in enumerate([(-203,-98),(-189,-98),(-203,-76),(-189,-76)]):add('EStopLeadReservation'+str(k),box(x-4,y-4,121,8,8,10),'reference','Reserved8x8x10 space below contact block; not purchased lug geometry. Verify actual terminal direction, insulation and cable bend.')
@@ -74,7 +85,7 @@ def main():
   deck_quote_valid=False,standard_monitor_included=False,optional_cargo_stops_included=False,manufacturing_release=False)
  (HERE/'geometry.json').write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n')
  d.saveAs(str(HERE/(NAME+'.FCStd')))
- for name in ['RearPowerLidPLA','RearStopCasePLA','RearPowerCasePLA']:
+ for name in ['RearPowerLidPLA','RearStopLidPLA','RearStopCasePLA','RearPowerCasePLA']:
   s=d.getObject(name).Shape.copy();bb=s.BoundBox;s.translate(V(-bb.XMin,-bb.YMin,-bb.ZMin))
   MeshPart.meshFromShape(Shape=s,LinearDeflection=.06,AngularDeflection=.25,Relative=False).write(str(HERE/(name+'.stl')))
  Part.export([d.getObject('AluminumDeckD3')],str(HERE/'E4_Deck_300x300x4.step'))

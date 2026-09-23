@@ -13,7 +13,7 @@ status={'overall':'E4 | 25 CENTERED HOLES | 6 PERIPHERAL LOW HEAD FIXINGS | NO S
 'electronics':'E3 ELECTRONICS | deck hidden | HAT/Pico stack and PC supply are nominal envelopes; received-part fit pending',
 'controls':'E3 REAR CONTROLS | RED: motor cutoff, one NC per motor | BLACK: all-load main | 4 floor fixings each',
 'deck':'E4 DECK | 300 x 300 x 4 | 25 x D4.5 / 50mm | 6 x M6 D10 head h1.5 | 4 symmetric belt slots',
-'switches':'E4 SWITCH ASSEMBLY | housings hidden / lids transparent | nut and terminal reservations | real part fit pending',
+'switches':'E4 SWITCH ASSEMBLY | housings hidden / lids transparent | catalog front dimensions | nut / mating terminals partly allocated',
 'pico':'E3 PICO MOCK | 4 floor bolts clear both rails | removable cover | board retention/stack fit pending'}
 def setup(kind):
  for o in doc.Objects:

@@ -78,8 +78,8 @@
   },
   {
     "part": "RearStopLidPLA",
-    "file": "pico-control/RearStopLidPLA.stl",
-    "sha256": "9fcd6f7fa2cdda13b1472cb2ddda4fc14d96b9c2549029faa9593dd6defed304",
+    "file": "reviewed-design/RearStopLidPLA.stl",
+    "sha256": "17aaa2c40ec83d38b037d8a684ab8bc21c7f26ca0b210d04b280316ddabd5497",
     "closed": true,
     "bounds_mm": [
       66.0,

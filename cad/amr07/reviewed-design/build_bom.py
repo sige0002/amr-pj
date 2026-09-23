@@ -13,6 +13,8 @@ for id in ['DECK_plate','DECK_CNC_SHIP']:
  by[id].update(明細金額='',購入単位単価='',価格根拠='E4変更後の実加工見積未取得',選定状況='旧D3見積は現形状に適用不可',備考='新STEP: reviewed-design/E4_Deck_300x300x4.step。旧28.67USD＋送料9.98USDを転記しない。未計上を節約額としない。')
 by['DECK_plate']['仕様・型番']='6061-T6 300×300×4、25φ4.5＋6φ6.6＋4長穴30×6R3、タップ/皿加工なし'
 by['POWER_LOW_STRAPS'].update(部品名='1階計算機の保持ベルト',使用数='1',**{'仕様・型番':'幅15mm、車載PC用1本'},備考='監視回路用ベルトは撤去済み。Picoケースは4点ボルト固定。')
+by['ELEC_MAIN']['備考']+=' 公開寸法：正面19.5×30.5、表21.5／裏端子先28mm。ナット詳細は参照台紙に未掲載。接続メス端子/加工済みリードは別型番の選定が必要。SWITCH-DIMENSIONS.ja.md参照。'
+by['U22']['備考']+=' 取付図照合：穴φ22.5、キー幅3.3、円下端〜キー先24.3mmをCAD/STLへ反映。'
 for id,name,spec,qty,pack,price,note,url in [
  ('E4_LOWHEAD','天板用極低頭M6×12','NBK SSH-M6-12、頭径10／高さ1.5／六角3mm',6,10,528,'メーカー10本入税込参考。6本使用、4本余り。個人購入先・AmazonPrime・送料は未確定。一般M6の締付値を流用しない。','https://www.nbk1560.com/products/specialscrew/nedzicom/socketheadcapscrew/SSH/'),
  ('E4_TERMINAL_RETENTION','ケース内配線の保持・表示用品','結束バンド、縁保護、MOTOR STOP/MAIN POWER表示',1,None,None,'ケースの結束橋を使用。現物ハーネスに合わせて数と寸法を決定。',''),
